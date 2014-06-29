@@ -1,0 +1,8 @@
+2014-03-27  James D. Callahan III  <jcallahan@curse.com>
+
+[66b136635f6b] [5.4.7-1]
+* Constants.lua, Main.lua:
+
+Fixes for "Disguise" and tradeskill spells.
+
+

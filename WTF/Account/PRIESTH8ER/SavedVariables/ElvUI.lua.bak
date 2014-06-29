@@ -1,0 +1,246 @@
+
+ElvDB = {
+	["profileKeys"] = {
+		["Spih - Arthas"] = "Spih - Arthas",
+	},
+	["gold"] = {
+		["Arthas"] = {
+			["Spih"] = 144494906,
+		},
+	},
+	["namespaces"] = {
+		["LibDualSpec-1.0"] = {
+		},
+	},
+	["profiles"] = {
+		["Spih - Arthas"] = {
+			["movers"] = {
+				["ElvUF_Raid40Mover"] = "BOTTOMRIGHTElvUIParentBOTTOMLEFT660.00004196167450",
+				["BossButton"] = "BOTTOMElvUIParentBOTTOM0275",
+				["ElvUF_PlayerCastbarMover"] = "BOTTOMElvUIParentBOTTOM076",
+				["ElvUF_FocusMover"] = "BOTTOMElvUIParentBOTTOM310432",
+				["ElvAB_2"] = "BOTTOMElvUIParentBOTTOM038",
+				["ElvUF_TargetTargetMover"] = "BOTTOMElvUIParentBOTTOM0132",
+				["ElvUF_PetMover"] = "BOTTOMElvUIParentBOTTOM0176",
+				["ElvUF_PlayerMover"] = "BOTTOMElvUIParentBOTTOM-278132",
+				["ElvUF_Raid10Mover"] = "BOTTOMRIGHTElvUIParentBOTTOMLEFT660.00004196167450",
+				["ElvUF_Raid25Mover"] = "BOTTOMRIGHTElvUIParentBOTTOMLEFT660.00004196167450",
+				["ElvUF_PartyMover"] = "BOTTOMRIGHTElvUIParentBOTTOMLEFT660.00004196167450",
+				["ElvAB_5"] = "BOTTOMElvUIParentBOTTOM-3124",
+				["ElvAB_3"] = "BOTTOMElvUIParentBOTTOM3124",
+				["ElvUF_TargetMover"] = "BOTTOMElvUIParentBOTTOM278132",
+			},
+			["general"] = {
+				["valuecolor"] = {
+					["b"] = 0.99,
+					["g"] = 0.99,
+					["r"] = 0.99,
+				},
+				["bordercolor"] = {
+					["b"] = 0.31,
+					["g"] = 0.31,
+					["r"] = 0.31,
+				},
+			},
+			["unitframe"] = {
+				["units"] = {
+					["raid10"] = {
+						["horizontalSpacing"] = 9,
+						["debuffs"] = {
+							["xOffset"] = -4,
+							["yOffset"] = -7,
+							["anchorPoint"] = "TOPRIGHT",
+							["sizeOverride"] = 16,
+							["enable"] = true,
+						},
+						["rdebuffs"] = {
+							["enable"] = false,
+						},
+						["growthDirection"] = "LEFT_UP",
+						["health"] = {
+							["frequentUpdates"] = true,
+						},
+						["verticalSpacing"] = 9,
+						["positionOverride"] = "BOTTOMRIGHT",
+						["healPrediction"] = true,
+						["height"] = 45,
+						["buffs"] = {
+							["xOffset"] = 50,
+							["yOffset"] = -6,
+							["clickThrough"] = true,
+							["useBlacklist"] = false,
+							["noDuration"] = false,
+							["playerOnly"] = false,
+							["perrow"] = 1,
+							["useFilter"] = "TurtleBuffs",
+							["sizeOverride"] = 22,
+							["noConsolidated"] = false,
+							["enable"] = true,
+						},
+					},
+					["raid40"] = {
+						["growthDirection"] = "LEFT_UP",
+						["health"] = {
+							["frequentUpdates"] = true,
+						},
+						["healPrediction"] = true,
+						["height"] = 30,
+					},
+					["player"] = {
+						["debuffs"] = {
+							["attachTo"] = "BUFFS",
+						},
+						["aurabar"] = {
+							["enable"] = false,
+						},
+						["castbar"] = {
+							["width"] = 406,
+							["height"] = 28,
+						},
+						["buffs"] = {
+							["noDuration"] = false,
+							["attachTo"] = "FRAME",
+							["enable"] = true,
+						},
+					},
+					["raid25"] = {
+						["horizontalSpacing"] = 9,
+						["debuffs"] = {
+							["xOffset"] = -4,
+							["yOffset"] = -7,
+							["anchorPoint"] = "TOPRIGHT",
+							["sizeOverride"] = 16,
+							["enable"] = true,
+						},
+						["rdebuffs"] = {
+							["enable"] = false,
+						},
+						["growthDirection"] = "LEFT_UP",
+						["verticalSpacing"] = 9,
+						["health"] = {
+							["frequentUpdates"] = true,
+						},
+						["healPrediction"] = true,
+						["height"] = 45,
+						["buffs"] = {
+							["xOffset"] = 50,
+							["yOffset"] = -6,
+							["clickThrough"] = true,
+							["useBlacklist"] = false,
+							["noDuration"] = false,
+							["playerOnly"] = false,
+							["perrow"] = 1,
+							["useFilter"] = "TurtleBuffs",
+							["sizeOverride"] = 22,
+							["noConsolidated"] = false,
+							["enable"] = true,
+						},
+					},
+					["party"] = {
+						["horizontalSpacing"] = 9,
+						["debuffs"] = {
+							["sizeOverride"] = 16,
+							["yOffset"] = -7,
+							["anchorPoint"] = "TOPRIGHT",
+							["xOffset"] = -4,
+						},
+						["growthDirection"] = "LEFT_UP",
+						["verticalSpacing"] = 9,
+						["health"] = {
+							["frequentUpdates"] = true,
+							["position"] = "BOTTOM",
+							["text_format"] = "[healthcolor][health:deficit]",
+						},
+						["width"] = 80,
+						["power"] = {
+							["text_format"] = "",
+						},
+						["roleIcon"] = {
+							["position"] = "BOTTOMRIGHT",
+						},
+						["GPSArrow"] = {
+							["size"] = 40,
+						},
+						["healPrediction"] = true,
+						["name"] = {
+							["position"] = "TOP",
+							["text_format"] = "[namecolor][name:short]",
+						},
+						["height"] = 45,
+						["buffs"] = {
+							["xOffset"] = 50,
+							["yOffset"] = -6,
+							["clickThrough"] = true,
+							["useBlacklist"] = false,
+							["noDuration"] = false,
+							["playerOnly"] = false,
+							["perrow"] = 1,
+							["useFilter"] = "TurtleBuffs",
+							["sizeOverride"] = 22,
+							["noConsolidated"] = false,
+							["enable"] = true,
+						},
+					},
+					["target"] = {
+						["aurabar"] = {
+							["enable"] = false,
+						},
+					},
+				},
+				["colors"] = {
+					["auraBarBuff"] = {
+						["b"] = 0.99,
+						["g"] = 0.99,
+						["r"] = 0.99,
+					},
+					["healthclass"] = true,
+					["castClassColor"] = true,
+					["health"] = {
+						["b"] = 0.1,
+						["g"] = 0.1,
+						["r"] = 0.1,
+					},
+					["castColor"] = {
+						["b"] = 0.1,
+						["g"] = 0.1,
+						["r"] = 0.1,
+					},
+				},
+			},
+			["datatexts"] = {
+				["panels"] = {
+					["LeftChatDataPanel"] = {
+						["right"] = "Haste",
+						["left"] = "Spell/Heal Power",
+					},
+				},
+			},
+			["actionbar"] = {
+				["bar3"] = {
+					["buttons"] = 12,
+				},
+				["bar2"] = {
+					["enabled"] = true,
+				},
+				["bar5"] = {
+					["buttons"] = 12,
+				},
+				["bar4"] = {
+					["enabled"] = false,
+				},
+			},
+			["layoutSet"] = "healer",
+		},
+	},
+}
+ElvPrivateDB = {
+	["profileKeys"] = {
+		["Spih - Arthas"] = "Spih - Arthas",
+	},
+	["profiles"] = {
+		["Spih - Arthas"] = {
+			["theme"] = "class",
+			["install_complete"] = "6.9996",
+		},
+	},
+}

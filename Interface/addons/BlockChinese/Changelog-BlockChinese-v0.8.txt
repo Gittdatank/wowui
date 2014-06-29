@@ -1,0 +1,12 @@
+tag v0.8
+703e69f9e7d58f493f2173751b9c0bd49c9ff380
+Ketho <ngsc1@live.cn>
+2013-12-15 17:50:10 +0100
+
+Tagging as v0.8
+
+
+--------------------
+
+Ketho:
+	- Now only blocks Chinese, and not Japanese/Korean chat

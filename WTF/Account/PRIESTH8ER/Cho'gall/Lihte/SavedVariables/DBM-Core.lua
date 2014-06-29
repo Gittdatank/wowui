@@ -1,0 +1,180 @@
+
+DBM_SavedOptions = {
+	["SpecialWarningFontSize"] = 50,
+	["LastRevision"] = 11242,
+	["CountdownVoice2"] = "Kolt",
+	["AutoAcceptGuildInvite"] = false,
+	["SpecialWarningFlashAlph2"] = 0.3,
+	["ArrowPosX"] = 0,
+	["BlockVersionUpdateNotice"] = false,
+	["HealthFrameLocked"] = false,
+	["SpecialWarningFlashDura3"] = 1,
+	["ShowSWarningsInChat"] = true,
+	["HPFramePoint"] = "CENTER",
+	["UseMasterVolume"] = true,
+	["RangeFrameRadarY"] = -100,
+	["StatusEnabled"] = true,
+	["HelpMessageShown"] = true,
+	["InfoFrameX"] = 75,
+	["AutologBosses"] = false,
+	["AprilFools"] = true,
+	["AFKHealthWarning"] = true,
+	["RangeFrameX"] = 50,
+	["SpecialWarningFlashCol3"] = {
+		1, -- [1]
+		0, -- [2]
+		0, -- [3]
+	},
+	["WarningColors"] = {
+		{
+			["b"] = 0.9411764705882353,
+			["g"] = 0.8,
+			["r"] = 0.4117647058823529,
+		}, -- [1]
+		{
+			["b"] = 0,
+			["g"] = 0.9490196078431372,
+			["r"] = 0.9490196078431372,
+		}, -- [2]
+		{
+			["b"] = 0,
+			["g"] = 0.5019607843137255,
+			["r"] = 1,
+		}, -- [3]
+		{
+			["b"] = 0.1019607843137255,
+			["g"] = 0.1019607843137255,
+			["r"] = 1,
+		}, -- [4]
+	},
+	["AlwaysShowSpeedKillTimer"] = true,
+	["RangeFrameY"] = -50,
+	["FilterSayAndYell"] = false,
+	["HPFrameMaxEntries"] = 5,
+	["EnableModels"] = true,
+	["SpecialWarningFlashAlph3"] = 0.4,
+	["ArrowPoint"] = "TOP",
+	["ModelSoundValue"] = "Short",
+	["HideTooltips"] = false,
+	["SpecialWarningSound2"] = "Sound\\Creature\\AlgalonTheObserver\\UR_Algalon_BHole01.wav",
+	["InfoFramePoint"] = "CENTER",
+	["RangeFrameRadarPoint"] = "CENTER",
+	["SpecialWarningY"] = 75,
+	["AdvancedAutologBosses"] = false,
+	["SpecialWarningFlashCol2"] = {
+		1, -- [1]
+		0.5, -- [2]
+		0, -- [3]
+	},
+	["RangeFrameUpdates"] = "Average",
+	["SpecialWarningPoint"] = "CENTER",
+	["DontSendBossWhispers"] = false,
+	["RaidWarningSound"] = "Sound\\Doodad\\BellTollNightElf.wav",
+	["ChatFrame"] = "DEFAULT_CHAT_FRAME",
+	["SpecialWarningFlashCol1"] = {
+		1, -- [1]
+		1, -- [2]
+		0, -- [3]
+	},
+	["ShowTranscriptorMessage"] = true,
+	["SpecialWarningX"] = 0,
+	["WhisperStats"] = true,
+	["RaidWarningPosition"] = {
+		["Y"] = -185,
+		["X"] = 0,
+		["Point"] = "TOP",
+	},
+	["WorldBossAlert"] = false,
+	["DontPlayPTCountdown"] = false,
+	["LFDEnhance"] = true,
+	["ShowKillMessage"] = true,
+	["HealthFrameWidth"] = 200,
+	["MovieFilter"] = "Never",
+	["WarningIconLeft"] = true,
+	["RangeFrameSound1"] = "none",
+	["HPFrameY"] = 50,
+	["HideWatchFrame"] = false,
+	["DontShowFarWarnings"] = true,
+	["ShowMinimapButton"] = false,
+	["MoviesSeen"] = {
+	},
+	["CRT_Enabled"] = false,
+	["SettingsMessageShown"] = true,
+	["DontShowInfoFrame"] = false,
+	["DebugMode"] = false,
+	["SpecialWarningFlashDura2"] = 0.4,
+	["ShowWarningsInChat"] = true,
+	["DontSetIcons"] = false,
+	["BigBrotherAnnounceToRaid"] = false,
+	["SpecialWarningFontCol"] = {
+		1, -- [1]
+		0.7, -- [2]
+		0, -- [3]
+	},
+	["CountdownVoice"] = "Corsica",
+	["SpecialWarningFlashAlph1"] = 0.3,
+	["DontShowPT"] = true,
+	["DontShowPTCountdownText"] = false,
+	["InfoFrameY"] = -75,
+	["SpecialWarningSound"] = "Sound\\Spells\\PVPFlagTaken.wav",
+	["WarningIconRight"] = true,
+	["HealthFrameGrowUp"] = false,
+	["ShowCountdownText"] = false,
+	["HideBossEmoteFrame"] = false,
+	["RangeFrameRadarX"] = 100,
+	["ShowBigBrotherOnCombatStart"] = false,
+	["SpecialWarningFlashDura1"] = 0.4,
+	["DontShowFlexMessage"] = false,
+	["PTCountThreshold"] = 5,
+	["ShowCombatLogMessage"] = true,
+	["SpecialWarningSound3"] = "Sound\\Creature\\KilJaeden\\KILJAEDEN02.ogg",
+	["DontShowRangeFrame"] = false,
+	["ShowAdvSWSound"] = true,
+	["InfoFrameShowSelf"] = false,
+	["SpecialWarningFont"] = "Fonts\\FRIZQT__.TTF",
+	["RoleSpecAlert"] = true,
+	["ForumsMessageShown"] = 11193,
+	["SpamBlockRaidWarning"] = true,
+	["ShowFakedRaidWarnings"] = false,
+	["LatencyThreshold"] = 200,
+	["ShowLoadMessage"] = true,
+	["DontShowHealthFrame"] = false,
+	["WorldBossNearAlert"] = false,
+	["DontShowBossAnnounces"] = false,
+	["DontShowPTNoID"] = false,
+	["AutoAcceptFriendInvite"] = false,
+	["RangeFramePoint"] = "CENTER",
+	["WarningIconChat"] = true,
+	["ShowEngageMessage"] = true,
+	["ShowRecoveryMessage"] = true,
+	["DontShowCTCount"] = false,
+	["AutoRespond"] = true,
+	["ShowPizzaMessage"] = true,
+	["RangeFrameSound2"] = "none",
+	["ShowLHFrame"] = true,
+	["DontSendBossAnnounces"] = false,
+	["DontShowPTText"] = false,
+	["Enabled"] = true,
+	["ShowSpecialWarnings"] = true,
+	["RangeFrameFrames"] = "radar",
+	["DisableCinematics"] = false,
+	["MovieFilters"] = {
+	},
+	["RangeFrameLocked"] = false,
+	["ShowWipeMessage"] = true,
+	["LogOnlyRaidBosses"] = false,
+	["StripServerName"] = true,
+	["ArrowPosY"] = -150,
+	["AlwaysShowHealthFrame"] = false,
+	["HPFrameX"] = -50,
+	["ChallengeBest"] = "Realm",
+	["SpamBlockBossWhispers"] = false,
+	["SpecialWarningFontColor"] = {
+		0, -- [1]
+		0, -- [2]
+		1, -- [3]
+	},
+	["ShowFlashFrame"] = true,
+}
+DBT_SavedOptions = {
+}

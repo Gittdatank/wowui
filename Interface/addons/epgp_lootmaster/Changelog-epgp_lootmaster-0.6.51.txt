@@ -1,0 +1,129 @@
+------------------------------------------------------------------------
+r264 | mackatack | 2014-06-20 16:00:57 +0000 (Fri, 20 Jun 2014) | 1 line
+Changed paths:
+   A /tags/0.6.51 (from /trunk:263)
+
+see prev message
+------------------------------------------------------------------------
+r263 | mackatack | 2014-06-20 16:00:32 +0000 (Fri, 20 Jun 2014) | 3 lines
+Changed paths:
+   M /trunk/lootmaster_core.lua
+   M /trunk/ml/lootmaster_ml.lua
+   M /trunk/ml/lootmaster_ml_ui.lua
+   A /trunk/tools
+   A /trunk/tools/tokens.html
+
+- Big change to the current equipment list. Now showing all items that correspond to a Token. So we're now showing up to 5 items on the master looter interface per candidate. Besides that now also the difference in itemlevel compared to the current item is displayed.
+- Another fix - though shotgun style - attempt for the EP/GP/PR ratings not showing for xrealm candidates.
+- Also added the tool to the repos for generating the token lookup array
+------------------------------------------------------------------------
+r261 | mackatack | 2014-05-29 14:51:18 +0000 (Thu, 29 May 2014) | 1 line
+Changed paths:
+   M /trunk/lootmaster_player.lua
+   M /trunk/ml/lootmaster_ml.lua
+   M /trunk/ml/lootmaster_ml_ui.lua
+
+Now using out private Ambiguate function in all places
+------------------------------------------------------------------------
+r260 | mackatack | 2014-05-29 14:46:03 +0000 (Thu, 29 May 2014) | 1 line
+Changed paths:
+   M /trunk/lootmaster_core.lua
+
+Ambiguate seriously broken. RealmNames with spaces or dashes in them seriously break functionality. Created a local patch for Ambiguate to filter out spaces and dashes
+------------------------------------------------------------------------
+r258 | mackatack | 2014-05-25 23:05:46 +0000 (Sun, 25 May 2014) | 1 line
+Changed paths:
+   M /trunk/lootmaster_core.lua
+   M /trunk/lootmaster_player.lua
+   M /trunk/lootmaster_player_ui.lua
+   M /trunk/ml/lootmaster_ml.lua
+   M /trunk/ml/lootmaster_ml_ui.lua
+   M /trunk/ml/lootmaster_options.lua
+
+Fixed a few bugs with many thanks to Jyrden for taking some time to test a few things! note to self: cross-realm addon whispers without having a connected realms is no-go.
+------------------------------------------------------------------------
+r256 | mackatack | 2014-05-23 15:30:48 +0000 (Fri, 23 May 2014) | 1 line
+Changed paths:
+   M /trunk/lootmaster_core.lua
+
+it seems Ambiguate all removes the servername, while we actually do want it...
+------------------------------------------------------------------------
+r254 | mackatack | 2014-05-23 09:22:47 +0000 (Fri, 23 May 2014) | 1 line
+Changed paths:
+   M /trunk/lootmaster_core.lua
+   M /trunk/lootmaster_player.lua
+   M /trunk/lootmaster_player_ui.lua
+   M /trunk/ml/lootmaster_ml.lua
+   M /trunk/ml/lootmaster_ml_ui.lua
+
+Built-in wow client function UnitInRaid, UnitInParty, UnitClass, UnitIsUnit etc don't support full player names that include the servername. Created an overload that always calls Ambiguate first and handled all the other cases that might break because of the full names
+------------------------------------------------------------------------
+r252 | mackatack | 2014-05-22 16:20:07 +0000 (Thu, 22 May 2014) | 1 line
+Changed paths:
+   M /trunk/ml/lootmaster_ml.lua
+   M /trunk/ml/lootmaster_ml_ui.lua
+
+Ambiguated all calls to EPGP
+------------------------------------------------------------------------
+r250 | mackatack | 2014-05-22 13:29:13 +0000 (Thu, 22 May 2014) | 1 line
+Changed paths:
+   M /trunk/ml/lootmaster_ml.lua
+
+UnAmbiguate after checking if it's a proper loot message, not before
+------------------------------------------------------------------------
+r248 | mackatack | 2014-05-22 13:26:20 +0000 (Thu, 22 May 2014) | 1 line
+Changed paths:
+   M /trunk/lootmaster_core.lua
+   M /trunk/ml/lootmaster_ml.lua
+
+Graceful error when trying to parse loot messages
+------------------------------------------------------------------------
+r246 | mackatack | 2014-05-22 09:00:56 +0000 (Thu, 22 May 2014) | 1 line
+Changed paths:
+   M /trunk/lootmaster_core.lua
+
+also filter outgoing whispers to prevent mass whispers
+------------------------------------------------------------------------
+r245 | mackatack | 2014-05-22 08:52:22 +0000 (Thu, 22 May 2014) | 1 line
+Changed paths:
+   M /trunk/lootmaster_core.lua
+   M /trunk/ml/lootmaster_ml.lua
+
+Fixed a couple more UnAmbiguated player names, hopefully stopping mass whispers
+------------------------------------------------------------------------
+r243 | mackatack | 2014-05-22 08:32:27 +0000 (Thu, 22 May 2014) | 1 line
+Changed paths:
+   A /trunk/Libs/LibBase64-1.0
+   A /trunk/Libs/LibBase64-1.0/Changelog-LibBase64-1.0-v1.txt
+   A /trunk/Libs/LibBase64-1.0/LibBase64-1.0.lua
+   A /trunk/Libs/LibBase64-1.0/LibBase64-1.0.toc
+   A /trunk/Libs/LibBase64-1.0/lib.xml
+   M /trunk/epgp_lootmaster.toc
+   M /trunk/lootmaster_core.lua
+   M /trunk/ml/lootmaster_ml.lua
+
+Also use the full player name to find the correct candidate to hand out the loot to
+------------------------------------------------------------------------
+r241 | mackatack | 2014-05-21 11:08:07 +0000 (Wed, 21 May 2014) | 1 line
+Changed paths:
+   M /trunk/lootmaster_player_ui.lua
+   M /trunk/ml/lootmaster_ml_ui.lua
+
+allow higher scales
+------------------------------------------------------------------------
+r239 | mackatack | 2014-05-21 11:01:10 +0000 (Wed, 21 May 2014) | 1 line
+Changed paths:
+   M /trunk/ml/lootmaster_ml.lua
+
+added fix for whisper system
+------------------------------------------------------------------------
+r238 | mackatack | 2014-05-21 10:57:30 +0000 (Wed, 21 May 2014) | 1 line
+Changed paths:
+   M /trunk/lootmaster_core.lua
+   M /trunk/lootmaster_player.lua
+   M /trunk/lootmaster_player_ui.lua
+   M /trunk/ml/lootmaster_ml.lua
+   M /trunk/ml/lootmaster_ml_ui.lua
+
+Possible fix for crossrealm groups by always using the full player name behind the scenes. Only on the grid will we use the Ambiguate to remove the local RealmName
+------------------------------------------------------------------------

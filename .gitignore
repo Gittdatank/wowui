@@ -1,0 +1,26 @@
+######################
+## Warcraft Game Files
+######################
+Cache/*
+Data/*
+Logs/*
+Interface/Addons/Blizzard_*
+Updates/*
+Errors/*
+Utils/*
+BlizzardInterfaceArt/*
+BlizzardInterfaceCode/*
+*.curseclient
+*.exe
+*.dll
+*.*fil
+*.db
+*cache*
+*.mpq
+*.manifest
+*CUFProfiles.txt
+*Blizzard_CombatLog.lua
+Screenshots/*
+Interface/addons/DerpEP/*
+
+*.DS_STORE
