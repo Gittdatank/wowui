@@ -22,6 +22,9 @@ BlizzardInterfaceCode/*
 *Blizzard_CombatLog.lua
 Screenshots/*
 Interface/addons/DerpEP/*
+<<<<<<< HEAD
 .patch.result
+=======
+>>>>>>> 3a63853ad19bd164d2824ab1180d52961bb4a691
 
 *.DS_STORE

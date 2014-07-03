@@ -1,0 +1,94 @@
+
+TrinityBars2SavedState = {
+	["cooldownAlpha"] = 1,
+	["bag"] = {
+	},
+	["firstRun"] = false,
+	["options"] = {
+		["CheckButtons"] = {
+			[101] = 1,
+			[202] = 1,
+			[104] = 1,
+			[301] = 1,
+			[302] = 1,
+			[303] = 1,
+			[102] = 1,
+		},
+	},
+	["class"] = {
+	},
+	["buttonStyle"] = 3,
+	["selfCastOption"] = 1,
+	["buttonGridShow"] = false,
+	["bindingTextHidden"] = false,
+	["containerOffsetY"] = 70,
+	["spellBindings"] = {
+	},
+	["macroBindings"] = {
+	},
+	["containerOffsetX"] = 0,
+	["showButtonTooltips"] = true,
+	["autocastAlpha"] = 1,
+	["skinPlugins"] = {
+	},
+	["registerForClicks"] = "up",
+	["debug"] = {
+	},
+	["buttons"] = {
+		[0] = {
+			{
+				["HotKey1"] = "",
+				["action"] = 0,
+				["spellranktext"] = "()",
+				["scale"] = 1,
+				["XOffset"] = 0,
+				["itemlink"] = "",
+				["YOffset"] = 0,
+				["dockpos"] = 0,
+				["spell counts"] = false,
+				["item"] = "",
+				["stored"] = true,
+				["target"] = "none",
+				["click anchor"] = false,
+				["counts"] = false,
+				["slot"] = 1,
+				["macronote"] = "",
+				["macrousenote"] = false,
+				["spell"] = "",
+				["clicktype"] = "up",
+				["showstate"] = 0,
+				["anchordelay"] = "0.1",
+				["macroname"] = "",
+				["macro"] = "",
+				["spellrank"] = 0,
+				["macroicon"] = 1,
+				["dock"] = "dummy",
+				["HotKeyText1"] = "",
+				["type"] = "spell",
+				["mouseover anchor"] = false,
+				["laststate"] = "",
+				["anchoredheader"] = "",
+			}, -- [1]
+		},
+	},
+	["containerScale"] = 1,
+	["savedVersion"] = "20400.7",
+	["pet"] = {
+	},
+	["convertBindings"] = true,
+	["globalColor"] = {
+		1, -- [1]
+		1, -- [2]
+		1, -- [3]
+	},
+	["docks"] = {
+	},
+	["menu"] = {
+	},
+	["classBar"] = {
+	},
+	["playerClass"] = "Rogue",
+	["modifierButtonLock"] = false,
+	["fadeSpeed"] = 0.5,
+	["buttonLock"] = false,
+}

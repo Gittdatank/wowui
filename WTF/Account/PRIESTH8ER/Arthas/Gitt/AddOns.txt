@@ -1,0 +1,9 @@
+RaidBuffStatus: enabled
+RaidSlackCheck: disabled
+TrainAlert: enabled
+TomTom: enabled
+GarajalAnnounce: disabled
+GCD: enabled
+BigWigs_Ra-denAssist: enabled
+ElvUI_Config: disabled
+ElvUI: disabled

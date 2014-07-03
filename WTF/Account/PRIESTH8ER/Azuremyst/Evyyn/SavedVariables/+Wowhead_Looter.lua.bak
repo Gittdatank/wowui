@@ -1,0 +1,11 @@
+
+wlScans = {
+	["archaeology"] = "-1",
+	["timePlayedTotal"] = 161885,
+	["glyphs"] = "392,394,398,409,391,410,411,924,468,393,402,404,467",
+	["guid"] = "0x07000000045CFAFC",
+}
+wlSetting = {
+}
+wlPetBlacklist = nil
+wlUIReloaded = nil
