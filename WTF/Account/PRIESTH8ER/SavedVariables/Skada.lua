@@ -36,77 +36,77 @@ SkadaDB = {
 	},
 	["profiles"] = {
 		["Default"] = {
+			["report"] = {
+				["number"] = 4,
+				["mode"] = "Healing",
+				["target"] = "Tydesin",
+				["channel"] = "guild",
+			},
+			["tooltiprows"] = 10,
 			["windows"] = {
 				{
 					["barheight"] = 11,
+					["bartexture"] = "Minimalist",
+					["barwidth"] = 267.6577453613281,
+					["barfontsize"] = 7,
+					["y"] = -0,
+					["barfont"] = "DorisPP",
 					["barslocked"] = true,
+					["x"] = 402.417236328125,
+					["mode"] = "Damage",
 					["background"] = {
 						["height"] = 258.0458374023438,
 					},
-					["y"] = -0,
-					["barfont"] = "DorisPP",
+					["point"] = "BOTTOM",
 					["title"] = {
+						["height"] = 14,
 						["font"] = "DorisPP",
 						["fontsize"] = 9,
-						["height"] = 14,
 						["texture"] = "Flat",
 					},
-					["mode"] = "Healing",
-					["barwidth"] = 267.6577453613281,
-					["point"] = "BOTTOM",
-					["barfontsize"] = 7,
-					["bartexture"] = "Minimalist",
-					["x"] = 402.417236328125,
 				}, -- [1]
 			},
 			["icon"] = {
 				["hide"] = true,
 			},
-			["report"] = {
-				["number"] = 18,
-				["channel"] = "guild",
-				["target"] = "Tydesin",
-			},
-			["tooltiprows"] = 10,
 			["reset"] = {
 				["join"] = 2,
 			},
 		},
 		["Git - Mar 2014"] = {
-			["report"] = {
-				["number"] = 3,
-				["channel"] = "raid",
-				["target"] = "Aprilseventh",
-				["mode"] = "Enemy damage taken",
-				["set"] = 2,
-			},
-			["tooltiprows"] = 10,
 			["windows"] = {
 				{
 					["barheight"] = 11,
-					["bartexture"] = "Minimalist",
-					["barwidth"] = 267.6577453613281,
-					["barfontsize"] = 7,
-					["y"] = -0,
-					["x"] = 402.417236328125,
 					["barslocked"] = true,
-					["title"] = {
-						["height"] = 14,
-						["font"] = "DorisPP",
-						["fontsize"] = 9,
-						["texture"] = "Flat",
-					},
-					["point"] = "BOTTOM",
-					["mode"] = "Damage",
 					["background"] = {
 						["height"] = 258.0458374023438,
 					},
+					["y"] = -0,
+					["x"] = 402.417236328125,
+					["title"] = {
+						["font"] = "DorisPP",
+						["fontsize"] = 9,
+						["height"] = 14,
+						["texture"] = "Flat",
+					},
+					["mode"] = "Deaths",
+					["barwidth"] = 267.6577453613281,
+					["point"] = "BOTTOM",
+					["barfontsize"] = 7,
+					["bartexture"] = "Minimalist",
 					["barfont"] = "DorisPP",
 				}, -- [1]
 			},
 			["icon"] = {
 				["hide"] = true,
 			},
+			["report"] = {
+				["number"] = 7,
+				["channel"] = "instance_chat",
+				["target"] = "Aprilseventh",
+				["mode"] = "Dispels",
+			},
+			["tooltiprows"] = 10,
 			["reset"] = {
 				["join"] = 2,
 			},
@@ -159,12 +159,12 @@ SkadaDB = {
 						["fontsize"] = 9,
 						["texture"] = "Flat",
 					},
-					["point"] = "LEFT",
+					["x"] = 4.58843469619751,
 					["mode"] = "Healing",
 					["background"] = {
 						["height"] = 111.0456314086914,
 					},
-					["x"] = 4.58843469619751,
+					["point"] = "LEFT",
 				}, -- [1]
 				{
 					["titleset"] = true,

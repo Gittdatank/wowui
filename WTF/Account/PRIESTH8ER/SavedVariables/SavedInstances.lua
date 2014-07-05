@@ -115,7 +115,7 @@ SavedInstancesDB = {
 			["Skills"] = {
 			},
 			["ILe"] = 0.25,
-			["DailyResetTime"] = 1404468002,
+			["DailyResetTime"] = 1404554403,
 			["Quests"] = {
 			},
 			["LastSeen"] = 1403993960,
@@ -230,245 +230,127 @@ SavedInstancesDB = {
 			["Show"] = "saved",
 			["WeeklyResetTime"] = 1404813602,
 			["PlayedLevel"] = 244667,
-			["DailyResetTime"] = 1404468002,
+			["DailyResetTime"] = 1404554403,
 			["ILe"] = 396.1333618164063,
 			["Skills"] = {
 			},
 			["Quests"] = {
 			},
 			["Zone"] = "Orgrimmar",
-		},
-		["Got - Arthas"] = {
-			["WeeklyResetTime"] = 1404813602,
-			["LastSeen"] = 1404426203,
-			["Class"] = "DRUID",
-			["currency"] = {
-				[395] = {
-					["earnedThisWeek"] = 0,
-					["weeklyMax"] = 0,
-					["totalMax"] = 4000,
-					["amount"] = 4000,
-				},
-				[396] = {
-					["earnedThisWeek"] = 0,
-					["weeklyMax"] = 1000,
-					["totalMax"] = 3000,
-					["amount"] = 0,
-				},
-				[777] = {
-					["earnedThisWeek"] = 0,
-					["weeklyMax"] = 0,
-					["totalMax"] = 0,
-					["amount"] = 0,
-				},
-				[391] = {
-					["earnedThisWeek"] = 0,
-					["weeklyMax"] = 0,
-					["totalMax"] = 0,
-					["amount"] = 0,
-				},
-				[416] = {
-					["earnedThisWeek"] = 0,
-					["weeklyMax"] = 0,
-					["totalMax"] = 0,
-					["amount"] = 0,
-				},
-				[738] = {
-					["earnedThisWeek"] = 0,
-					["weeklyMax"] = 0,
-					["totalMax"] = 0,
-					["amount"] = 0,
-				},
-				[515] = {
-					["earnedThisWeek"] = 0,
-					["weeklyMax"] = 0,
-					["totalMax"] = 0,
-					["amount"] = 0,
-				},
-				[697] = {
-					["earnedThisWeek"] = 0,
-					["weeklyMax"] = 0,
-					["totalMax"] = 0,
-					["amount"] = 0,
-				},
-				[789] = {
-					["earnedThisWeek"] = 0,
-					["weeklyMax"] = 0,
-					["totalMax"] = 0,
-					["amount"] = 0,
-				},
-				[776] = {
-					["earnedThisWeek"] = 0,
-					["weeklyMax"] = 0,
-					["totalMax"] = 0,
-					["amount"] = 0,
-				},
-				[390] = {
-					["earnedThisWeek"] = 0,
-					["weeklyMax"] = 20200,
-					["totalMax"] = 0,
-					["amount"] = 0,
-				},
-				[241] = {
-					["earnedThisWeek"] = 0,
-					["weeklyMax"] = 0,
-					["totalMax"] = 0,
-					["amount"] = 0,
-				},
-				[752] = {
-					["earnedThisWeek"] = 0,
-					["weeklyMax"] = 0,
-					["totalMax"] = 0,
-					["amount"] = 0,
-				},
-				[81] = {
-					["earnedThisWeek"] = 0,
-					["weeklyMax"] = 0,
-					["totalMax"] = 0,
-					["amount"] = 0,
-				},
-				[402] = {
-					["earnedThisWeek"] = 0,
-					["weeklyMax"] = 0,
-					["totalMax"] = 0,
-					["amount"] = 0,
-				},
-				[392] = {
-					["earnedThisWeek"] = 0,
-					["weeklyMax"] = 0,
-					["totalMax"] = 4000,
-					["amount"] = 8,
-				},
-			},
-			["Level"] = 85,
-			["LClass"] = "Druid",
-			["RBGrating"] = 0,
-			["PlayedTotal"] = 680880,
-			["Money"] = 286423933,
-			["Show"] = "saved",
-			["Zone"] = "Orgrimmar",
-			["PlayedLevel"] = 244711,
-			["IL"] = 399.1333618164063,
-			["ILe"] = 396.1333618164063,
-			["Skills"] = {
-			},
-			["Quests"] = {
-			},
-			["DailyResetTime"] = 1404468002,
 		},
 		["Git - Arthas"] = {
-			["lastbossyell"] = "Uncle Gao: Heroic",
+			["lastbossyell"] = "Lorewalker Cho: Looking For Raid",
 			["IL"] = 586.25,
-			["LastSeen"] = 1404358093,
+			["LastSeen"] = 1404531250,
 			["Class"] = "WARRIOR",
 			["currency"] = {
 				[395] = {
-					["weeklyMax"] = 0,
-					["earnedThisWeek"] = 0,
-					["totalMax"] = 4000,
 					["amount"] = 4000,
+					["weeklyMax"] = 0,
+					["totalMax"] = 4000,
+					["earnedThisWeek"] = 0,
 				},
 				[396] = {
-					["weeklyMax"] = 1000,
-					["earnedThisWeek"] = 1000,
-					["totalMax"] = 3000,
 					["amount"] = 2640,
+					["weeklyMax"] = 1000,
+					["totalMax"] = 3000,
+					["earnedThisWeek"] = 1000,
 				},
 				[777] = {
-					["weeklyMax"] = 0,
-					["earnedThisWeek"] = 0,
-					["totalMax"] = 0,
 					["amount"] = 17465,
+					["weeklyMax"] = 0,
+					["totalMax"] = 0,
+					["earnedThisWeek"] = 0,
 				},
 				[416] = {
-					["weeklyMax"] = 0,
-					["earnedThisWeek"] = 0,
-					["totalMax"] = 0,
 					["amount"] = 45,
+					["weeklyMax"] = 0,
+					["totalMax"] = 0,
+					["earnedThisWeek"] = 0,
 				},
 				[391] = {
-					["weeklyMax"] = 0,
-					["earnedThisWeek"] = 0,
-					["totalMax"] = 0,
 					["amount"] = 46,
+					["weeklyMax"] = 0,
+					["totalMax"] = 0,
+					["earnedThisWeek"] = 0,
 				},
 				[738] = {
-					["weeklyMax"] = 0,
-					["earnedThisWeek"] = 0,
-					["totalMax"] = 0,
 					["amount"] = 134,
+					["weeklyMax"] = 0,
+					["totalMax"] = 0,
+					["earnedThisWeek"] = 0,
 				},
 				[515] = {
-					["weeklyMax"] = 0,
-					["earnedThisWeek"] = 0,
-					["totalMax"] = 0,
 					["amount"] = 0,
+					["weeklyMax"] = 0,
+					["totalMax"] = 0,
+					["earnedThisWeek"] = 0,
 				},
 				[697] = {
-					["weeklyMax"] = 0,
-					["earnedThisWeek"] = 0,
-					["totalMax"] = 20,
 					["amount"] = 11,
+					["weeklyMax"] = 0,
+					["totalMax"] = 20,
+					["earnedThisWeek"] = 0,
 				},
 				[789] = {
-					["weeklyMax"] = 0,
-					["earnedThisWeek"] = 0,
-					["totalMax"] = 0,
 					["amount"] = 0,
+					["weeklyMax"] = 0,
+					["totalMax"] = 0,
+					["earnedThisWeek"] = 0,
 				},
 				[776] = {
-					["weeklyMax"] = 0,
-					["earnedThisWeek"] = 0,
-					["totalMax"] = 10,
 					["amount"] = 4,
+					["weeklyMax"] = 0,
+					["totalMax"] = 10,
+					["earnedThisWeek"] = 0,
 				},
 				[390] = {
-					["weeklyMax"] = 20200,
-					["earnedThisWeek"] = 0,
-					["totalMax"] = 0,
 					["amount"] = 0,
+					["weeklyMax"] = 20200,
+					["totalMax"] = 0,
+					["earnedThisWeek"] = 0,
 				},
 				[241] = {
-					["weeklyMax"] = 0,
-					["earnedThisWeek"] = 0,
-					["totalMax"] = 0,
 					["amount"] = 40,
+					["weeklyMax"] = 0,
+					["totalMax"] = 0,
+					["earnedThisWeek"] = 0,
 				},
 				[752] = {
-					["weeklyMax"] = 0,
-					["earnedThisWeek"] = 0,
-					["totalMax"] = 20,
 					["amount"] = 1,
+					["weeklyMax"] = 0,
+					["totalMax"] = 20,
+					["earnedThisWeek"] = 0,
 				},
 				[81] = {
-					["weeklyMax"] = 0,
-					["earnedThisWeek"] = 0,
-					["totalMax"] = 0,
 					["amount"] = 48,
+					["weeklyMax"] = 0,
+					["totalMax"] = 0,
+					["earnedThisWeek"] = 0,
 				},
 				[392] = {
-					["weeklyMax"] = 0,
-					["earnedThisWeek"] = 0,
-					["totalMax"] = 4000,
 					["amount"] = 1309,
+					["weeklyMax"] = 0,
+					["totalMax"] = 4000,
+					["earnedThisWeek"] = 0,
 				},
 				[402] = {
-					["weeklyMax"] = 0,
-					["earnedThisWeek"] = 0,
-					["totalMax"] = 0,
 					["amount"] = 27,
+					["weeklyMax"] = 0,
+					["totalMax"] = 0,
+					["earnedThisWeek"] = 0,
 				},
 			},
 			["Level"] = 90,
 			["LClass"] = "Warrior",
 			["RBGrating"] = 0,
-			["PlayedTotal"] = 20467096,
-			["lastbossyelltime"] = 1404358026,
-			["Money"] = 5092566732,
-			["WeeklyResetTime"] = 1404813606,
+			["DailyResetTime"] = 1404554403,
+			["PlayedTotal"] = 20479565,
 			["Zone"] = "Shrine of Two Moons",
-			["DailyResetTime"] = 1404468002,
-			["lastboss"] = "Paragons of the Klaxxi: Flexible",
+			["lastbossyelltime"] = 1404529366,
+			["Money"] = 5091899851,
+			["WeeklyResetTime"] = 1404813606,
+			["lastboss"] = "Fallen Protectors: Looking For Raid",
 			["BonusRoll"] = {
 				{
 					["money"] = 326079,
@@ -483,15 +365,15 @@ SavedInstancesDB = {
 					["currencyID"] = 776,
 				}, -- [2]
 				{
+					["time"] = 1403660313,
 					["name"] = "Sha of Pride: 25 Player (Heroic)",
 					["item"] = "|cffa335ee|Hitem:105478:0:0:0:0:0:0:1172929792:90:0:491|h[Greaves of Sublime Superiority]|h|r",
-					["time"] = 1403660313,
 					["currencyID"] = 776,
 				}, -- [3]
 			},
-			["PlayedLevel"] = 6047285,
+			["PlayedLevel"] = 6059754,
 			["Show"] = "saved",
-			["ILe"] = 576.125,
+			["ILe"] = 586.25,
 			["Skills"] = {
 			},
 			["Quests"] = {
@@ -502,13 +384,12 @@ SavedInstancesDB = {
 					["Link"] = "|cffffff00|Hquest:33133:90|h[Warforged Seals]|h|r",
 				},
 			},
-			["lastbosstime"] = 1404356165,
+			["lastbosstime"] = 1404529358,
 		},
-		["Gitt - Arthas"] = {
-			["lastbossyell"] = "Doyo'da: 10 Player (Heroic)",
-			["WeeklyResetTime"] = 1404813606,
-			["LastSeen"] = 1404178311,
-			["Class"] = "MONK",
+		["Got - Arthas"] = {
+			["WeeklyResetTime"] = 1404813602,
+			["LastSeen"] = 1404426203,
+			["Class"] = "DRUID",
 			["currency"] = {
 				[395] = {
 					["weeklyMax"] = 0,
@@ -520,34 +401,33 @@ SavedInstancesDB = {
 					["weeklyMax"] = 1000,
 					["earnedThisWeek"] = 0,
 					["totalMax"] = 3000,
-					["amount"] = 2565,
+					["amount"] = 0,
 				},
 				[777] = {
 					["weeklyMax"] = 0,
 					["earnedThisWeek"] = 0,
 					["totalMax"] = 0,
-					["amount"] = 35343,
+					["amount"] = 0,
 				},
-				[402] = {
+				[416] = {
 					["weeklyMax"] = 0,
 					["earnedThisWeek"] = 0,
 					["totalMax"] = 0,
 					["amount"] = 0,
 				},
-				[392] = {
-					["earnedThisWeek"] = 0,
+				[391] = {
 					["weeklyMax"] = 0,
-					["amount"] = 82,
-					["season"] = "Season Total Earned: |cffffffff82",
-					["totalMax"] = 4000,
+					["earnedThisWeek"] = 0,
+					["totalMax"] = 0,
+					["amount"] = 0,
 				},
 				[738] = {
 					["weeklyMax"] = 0,
 					["earnedThisWeek"] = 0,
 					["totalMax"] = 0,
-					["amount"] = 337,
+					["amount"] = 0,
 				},
-				[416] = {
+				[515] = {
 					["weeklyMax"] = 0,
 					["earnedThisWeek"] = 0,
 					["totalMax"] = 0,
@@ -568,16 +448,16 @@ SavedInstancesDB = {
 				[776] = {
 					["weeklyMax"] = 0,
 					["earnedThisWeek"] = 0,
-					["totalMax"] = 10,
-					["amount"] = 7,
+					["totalMax"] = 0,
+					["amount"] = 0,
 				},
 				[390] = {
-					["weeklyMax"] = 19200,
+					["weeklyMax"] = 20200,
 					["earnedThisWeek"] = 0,
 					["totalMax"] = 0,
 					["amount"] = 0,
 				},
-				[391] = {
+				[241] = {
 					["weeklyMax"] = 0,
 					["earnedThisWeek"] = 0,
 					["totalMax"] = 0,
@@ -595,55 +475,181 @@ SavedInstancesDB = {
 					["totalMax"] = 0,
 					["amount"] = 0,
 				},
-				[241] = {
+				[392] = {
 					["weeklyMax"] = 0,
 					["earnedThisWeek"] = 0,
-					["totalMax"] = 0,
-					["amount"] = 0,
+					["totalMax"] = 4000,
+					["amount"] = 8,
 				},
-				[515] = {
+				[402] = {
 					["weeklyMax"] = 0,
 					["earnedThisWeek"] = 0,
 					["totalMax"] = 0,
 					["amount"] = 0,
 				},
 			},
+			["Level"] = 85,
+			["LClass"] = "Druid",
+			["RBGrating"] = 0,
+			["PlayedTotal"] = 680880,
+			["Money"] = 286423933,
+			["Show"] = "saved",
+			["Zone"] = "Orgrimmar",
+			["PlayedLevel"] = 244711,
+			["Skills"] = {
+			},
+			["ILe"] = 396.1333618164063,
+			["DailyResetTime"] = 1404554403,
+			["Quests"] = {
+			},
+			["IL"] = 399.1333618164063,
+		},
+		["Gitt - Arthas"] = {
+			["lastbossyell"] = "Siegecrafter Blackfuse: Flexible",
+			["WeeklyResetTime"] = 1404813606,
+			["LastSeen"] = 1404490482,
+			["Class"] = "MONK",
+			["currency"] = {
+				[395] = {
+					["weeklyMax"] = 0,
+					["amount"] = 4000,
+					["totalMax"] = 4000,
+					["earnedThisWeek"] = 0,
+				},
+				[396] = {
+					["weeklyMax"] = 1000,
+					["amount"] = 1500,
+					["totalMax"] = 3000,
+					["earnedThisWeek"] = 435,
+				},
+				[777] = {
+					["weeklyMax"] = 0,
+					["amount"] = 35343,
+					["totalMax"] = 0,
+					["earnedThisWeek"] = 0,
+				},
+				[402] = {
+					["weeklyMax"] = 0,
+					["amount"] = 0,
+					["totalMax"] = 0,
+					["earnedThisWeek"] = 0,
+				},
+				[392] = {
+					["earnedThisWeek"] = 0,
+					["weeklyMax"] = 0,
+					["amount"] = 82,
+					["season"] = "Season Total Earned: |cffffffff82",
+					["totalMax"] = 4000,
+				},
+				[738] = {
+					["weeklyMax"] = 0,
+					["amount"] = 337,
+					["totalMax"] = 0,
+					["earnedThisWeek"] = 0,
+				},
+				[416] = {
+					["weeklyMax"] = 0,
+					["amount"] = 0,
+					["totalMax"] = 0,
+					["earnedThisWeek"] = 0,
+				},
+				[697] = {
+					["weeklyMax"] = 0,
+					["amount"] = 0,
+					["totalMax"] = 0,
+					["earnedThisWeek"] = 0,
+				},
+				[789] = {
+					["weeklyMax"] = 0,
+					["amount"] = 0,
+					["totalMax"] = 0,
+					["earnedThisWeek"] = 0,
+				},
+				[776] = {
+					["weeklyMax"] = 0,
+					["amount"] = 6,
+					["totalMax"] = 10,
+					["earnedThisWeek"] = 0,
+				},
+				[390] = {
+					["weeklyMax"] = 20200,
+					["amount"] = 0,
+					["totalMax"] = 0,
+					["earnedThisWeek"] = 0,
+				},
+				[391] = {
+					["weeklyMax"] = 0,
+					["amount"] = 0,
+					["totalMax"] = 0,
+					["earnedThisWeek"] = 0,
+				},
+				[752] = {
+					["weeklyMax"] = 0,
+					["amount"] = 0,
+					["totalMax"] = 0,
+					["earnedThisWeek"] = 0,
+				},
+				[81] = {
+					["weeklyMax"] = 0,
+					["amount"] = 0,
+					["totalMax"] = 0,
+					["earnedThisWeek"] = 0,
+				},
+				[241] = {
+					["weeklyMax"] = 0,
+					["amount"] = 0,
+					["totalMax"] = 0,
+					["earnedThisWeek"] = 0,
+				},
+				[515] = {
+					["weeklyMax"] = 0,
+					["amount"] = 0,
+					["totalMax"] = 0,
+					["earnedThisWeek"] = 0,
+				},
+			},
 			["Level"] = 90,
 			["LClass"] = "Monk",
 			["RBGrating"] = 0,
-			["PlayedTotal"] = 528444,
-			["lastbossyelltime"] = 1404178197,
-			["Money"] = 84001675,
-			["IL"] = 567.3125,
+			["PlayedTotal"] = 546729,
+			["lastbossyelltime"] = 1404488633,
+			["Money"] = 79704661,
+			["IL"] = 570.75,
 			["Show"] = "saved",
 			["Skills"] = {
 			},
 			["lastboss"] = "Iron Juggernaut: 10 Player (Heroic)",
 			["BonusRoll"] = {
 				{
+					["time"] = 1404440348,
+					["name"] = "Galakras: 10 Player (Heroic)",
+					["item"] = "|cffa335ee|Hitem:104488:0:0:0:0:0:0:1539656192:90:0:491|h[Unrepentant Heels]|h|r",
+					["currencyID"] = 776,
+				}, -- [1]
+				{
 					["money"] = 779400,
 					["name"] = "Galakras: 10 Player (Heroic)",
 					["time"] = 1403837858,
 					["currencyID"] = 776,
-				}, -- [1]
+				}, -- [2]
 				{
 					["money"] = 180709,
 					["name"] = "Fallen Protectors: 10 Player (Heroic)",
 					["time"] = 1403835199,
 					["currencyID"] = 776,
-				}, -- [2]
+				}, -- [3]
 			},
-			["PlayedLevel"] = 443248,
-			["Zone"] = "Siege of Orgrimmar",
-			["ILe"] = 565.75,
-			["DailyResetTime"] = 1404468002,
+			["PlayedLevel"] = 461533,
+			["Zone"] = "Shrine of Two Moons",
+			["ILe"] = 570.25,
+			["DailyResetTime"] = 1404554403,
 			["Quests"] = {
 			},
-			["lastbosstime"] = 1403838993,
+			["lastbosstime"] = 1404441046,
 		},
 		["Gittdabank - Arthas"] = {
 			["WeeklyResetTime"] = 1404813606,
-			["LastSeen"] = 1404421683,
+			["LastSeen"] = 1404498746,
 			["Class"] = "MAGE",
 			["currency"] = {
 				[395] = {
@@ -746,23 +752,23 @@ SavedInstancesDB = {
 			["Level"] = 1,
 			["LClass"] = "Mage",
 			["RBGrating"] = 0,
-			["PlayedTotal"] = 17599,
-			["Money"] = 50224864,
+			["PlayedTotal"] = 20185,
+			["Money"] = 50949572,
 			["Show"] = "saved",
 			["Zone"] = "Orgrimmar",
-			["PlayedLevel"] = 17599,
+			["PlayedLevel"] = 20185,
 			["Skills"] = {
 			},
 			["ILe"] = 0.2000000178813934,
-			["DailyResetTime"] = 1404468002,
+			["DailyResetTime"] = 1404554403,
 			["Quests"] = {
 			},
-			["IL"] = 6.200000286102295,
+			["IL"] = 0.2000000178813934,
 		},
 		["Spih - Arthas"] = {
-			["lastbossyell"] = "Snurk Bucksquick",
+			["lastbossyell"] = "Siegecrafter Blackfuse: Looking For Raid",
 			["WeeklyResetTime"] = 1404813606,
-			["LastSeen"] = 1404421400,
+			["LastSeen"] = 1404514232,
 			["Class"] = "PRIEST",
 			["currency"] = {
 				[395] = {
@@ -866,17 +872,12 @@ SavedInstancesDB = {
 			["Level"] = 90,
 			["LClass"] = "Priest",
 			["RBGrating"] = 0,
-			["PlayedTotal"] = 3080202,
-			["lastbossyelltime"] = 1404420963,
-			["Money"] = 295023940,
-			["IL"] = 540.3125,
-			["Zone"] = "Orgrimmar",
+			["PlayedTotal"] = 3099958,
+			["lastbossyelltime"] = 1404514189,
+			["Money"] = 231228214,
+			["lastbosstime"] = 1404420084,
+			["Zone"] = "Kun-Lai Summit",
 			["Skills"] = {
-				[125557] = {
-					["Expires"] = 1404468001,
-					["Title"] = "Tailoring: Imperial Silk",
-					["Link"] = "|cffffd000|Henchant:125557|h[Tailoring: Imperial Silk]|h|r",
-				},
 			},
 			["lastboss"] = "Thok the Bloodthirsty: Flexible",
 			["BonusRoll"] = {
@@ -917,13 +918,13 @@ SavedInstancesDB = {
 					["currencyID"] = 776,
 				}, -- [6]
 			},
-			["PlayedLevel"] = 233060,
+			["PlayedLevel"] = 252816,
 			["Show"] = "saved",
 			["ILe"] = 534.2000122070313,
-			["DailyResetTime"] = 1404468002,
+			["DailyResetTime"] = 1404554403,
 			["Quests"] = {
 				[32969] = {
-					["Expires"] = 1404813601,
+					["Expires"] = 1404813600,
 					["Title"] = "Gleaming Treasure Chest",
 					["Zone"] = "Timeless Isle",
 				},
@@ -934,12 +935,12 @@ SavedInstancesDB = {
 					["Link"] = "|cffffff00|Hquest:33133:90|h[Warforged Seals]|h|r",
 				},
 				[32968] = {
-					["Expires"] = 1404813601,
+					["Expires"] = 1404813600,
 					["Title"] = "Rope-Bound Treasure Chest",
 					["Zone"] = "Timeless Isle",
 				},
 			},
-			["lastbosstime"] = 1404420084,
+			["IL"] = 540.3125,
 		},
 	},
 	["Tooltip"] = {
@@ -948,7 +949,7 @@ SavedInstancesDB = {
 		["ShowServer"] = false,
 		["ShowExpired"] = false,
 		["RaidsFirst"] = true,
-		["posy"] = 446.7498168945313,
+		["posy"] = 442.2498779296875,
 		["CombineWorldBosses"] = false,
 		["ShowCategories"] = false,
 		["Currency738"] = true,
@@ -967,15 +968,10 @@ SavedInstancesDB = {
 		["TrackLFG"] = true,
 		["SelfAlways"] = false,
 		["Currency752"] = true,
-		["posx"] = 727.25,
+		["posx"] = 842.7500610351563,
 		["TrackBonus"] = true,
 		["Currency777"] = true,
-		["AltColumnColor"] = {
-			0.2, -- [1]
-			0.2, -- [2]
-			0.2, -- [3]
-			1, -- [4]
-		},
+		["TrackDailyQuests"] = true,
 		["TrackFarm"] = true,
 		["SelfFirst"] = true,
 		["Currency395"] = true,
@@ -991,7 +987,12 @@ SavedInstancesDB = {
 		["TrackSkills"] = true,
 		["ShowRandom"] = true,
 		["ReportResets"] = true,
-		["TrackDailyQuests"] = true,
+		["AltColumnColor"] = {
+			0.2, -- [1]
+			0.2, -- [2]
+			0.2, -- [3]
+			1, -- [4]
+		},
 		["Scale"] = 1,
 	},
 	["spelltip"] = {
@@ -1011,29 +1012,6 @@ SavedInstancesDB = {
 		["Flex: Downfall"] = {
 			["LFDID"] = 730,
 			["Expansion"] = 4,
-			["Spih - Arthas"] = {
-				[2] = {
-					false, -- [1]
-					false, -- [2]
-					false, -- [3]
-					false, -- [4]
-					false, -- [5]
-					false, -- [6]
-					false, -- [7]
-					false, -- [8]
-					false, -- [9]
-					false, -- [10]
-					false, -- [11]
-					false, -- [12]
-					false, -- [13]
-					true, -- [14]
-					["ID"] = -14,
-					["Expires"] = 1404813601,
-				},
-			},
-			["Show"] = "saved",
-			["Raid"] = true,
-			["RecLevel"] = 90,
 			["Git - Arthas"] = {
 				[2] = {
 					false, -- [1]
@@ -1050,6 +1028,29 @@ SavedInstancesDB = {
 					true, -- [12]
 					true, -- [13]
 					false, -- [14]
+					["ID"] = -14,
+					["Expires"] = 1404813601,
+				},
+			},
+			["Show"] = "saved",
+			["RecLevel"] = 90,
+			["Raid"] = true,
+			["Spih - Arthas"] = {
+				[2] = {
+					false, -- [1]
+					false, -- [2]
+					false, -- [3]
+					false, -- [4]
+					false, -- [5]
+					false, -- [6]
+					false, -- [7]
+					false, -- [8]
+					false, -- [9]
+					false, -- [10]
+					false, -- [11]
+					false, -- [12]
+					false, -- [13]
+					true, -- [14]
 					["ID"] = -14,
 					["Expires"] = 1404813600,
 				},
@@ -1200,11 +1201,31 @@ SavedInstancesDB = {
 			["Show"] = "saved",
 		},
 		["LFR: Downfall"] = {
-			["LFDID"] = 725,
-			["Expansion"] = 4,
-			["Raid"] = true,
 			["Show"] = "saved",
+			["Expansion"] = 4,
+			["Git - Arthas"] = {
+				[2] = {
+					false, -- [1]
+					false, -- [2]
+					false, -- [3]
+					false, -- [4]
+					false, -- [5]
+					false, -- [6]
+					false, -- [7]
+					false, -- [8]
+					false, -- [9]
+					false, -- [10]
+					false, -- [11]
+					true, -- [12]
+					true, -- [13]
+					false, -- [14]
+					["ID"] = -14,
+					["Expires"] = 1404813601,
+				},
+			},
+			["LFDID"] = 725,
 			["RecLevel"] = 90,
+			["Raid"] = true,
 			["Spih - Arthas"] = {
 			},
 		},
@@ -1293,21 +1314,12 @@ SavedInstancesDB = {
 			["Show"] = "saved",
 		},
 		["Random Mists of Pandaria Heroic"] = {
-			["Expansion"] = 4,
 			["LFDID"] = 462,
-			["Raid"] = false,
+			["Expansion"] = 4,
 			["Show"] = "saved",
-			["Spih - Arthas"] = {
-				{
-					["Locked"] = false,
-					["Expires"] = 1404468001,
-					["ID"] = -1,
-				}, -- [1]
-			},
 			["RecLevel"] = 0,
+			["Raid"] = false,
 			["Random"] = true,
-			["Git - Arthas"] = {
-			},
 		},
 		["Naxxramas"] = {
 			["LFDID"] = 227,
@@ -1465,8 +1477,8 @@ SavedInstancesDB = {
 			["Gitt - Arthas"] = {
 			},
 			["Show"] = "saved",
-			["RecLevel"] = 90,
 			["Raid"] = true,
+			["RecLevel"] = 90,
 			["Spih - Arthas"] = {
 				[2] = {
 					true, -- [1]
@@ -1484,16 +1496,36 @@ SavedInstancesDB = {
 					false, -- [13]
 					false, -- [14]
 					["ID"] = -14,
-					["Expires"] = 1404813601,
+					["Expires"] = 1404813600,
 				},
 			},
 		},
 		["LFR: Gates of Retribution"] = {
 			["LFDID"] = 717,
 			["Expansion"] = 4,
-			["RecLevel"] = 90,
-			["Show"] = "saved",
+			["Git - Arthas"] = {
+				[2] = {
+					false, -- [1]
+					false, -- [2]
+					false, -- [3]
+					false, -- [4]
+					false, -- [5]
+					true, -- [6]
+					true, -- [7]
+					true, -- [8]
+					false, -- [9]
+					false, -- [10]
+					false, -- [11]
+					false, -- [12]
+					false, -- [13]
+					false, -- [14]
+					["ID"] = -14,
+					["Expires"] = 1404813601,
+				},
+			},
 			["Raid"] = true,
+			["Show"] = "saved",
+			["RecLevel"] = 90,
 			["Spih - Arthas"] = {
 				[2] = {
 					false, -- [1]
@@ -1511,7 +1543,7 @@ SavedInstancesDB = {
 					false, -- [13]
 					false, -- [14]
 					["ID"] = -14,
-					["Expires"] = 1404813601,
+					["Expires"] = 1404813600,
 				},
 			},
 		},
@@ -1785,7 +1817,7 @@ SavedInstancesDB = {
 				[2] = {
 					true, -- [1]
 					["ID"] = -1,
-					["Expires"] = 1404813601,
+					["Expires"] = 1404813600,
 				},
 			},
 		},
@@ -1806,11 +1838,31 @@ SavedInstancesDB = {
 			["RecLevel"] = 0,
 		},
 		["LFR: Vale of Eternal Sorrows"] = {
-			["LFDID"] = 716,
-			["Expansion"] = 4,
-			["RecLevel"] = 90,
 			["Show"] = "saved",
+			["Expansion"] = 4,
+			["Git - Arthas"] = {
+				[2] = {
+					false, -- [1]
+					true, -- [2]
+					false, -- [3]
+					false, -- [4]
+					false, -- [5]
+					false, -- [6]
+					false, -- [7]
+					false, -- [8]
+					false, -- [9]
+					false, -- [10]
+					false, -- [11]
+					false, -- [12]
+					false, -- [13]
+					false, -- [14]
+					["ID"] = -14,
+					["Expires"] = 1404813601,
+				},
+			},
+			["LFDID"] = 716,
 			["Raid"] = true,
+			["RecLevel"] = 90,
 			["Spih - Arthas"] = {
 				[2] = {
 					true, -- [1]
@@ -1828,7 +1880,7 @@ SavedInstancesDB = {
 					false, -- [13]
 					false, -- [14]
 					["ID"] = -14,
-					["Expires"] = 1404813601,
+					["Expires"] = 1404813600,
 				},
 			},
 		},
@@ -1969,7 +2021,7 @@ SavedInstancesDB = {
 					false, -- [13]
 					false, -- [14]
 					["ID"] = -14,
-					["Expires"] = 1404813601,
+					["Expires"] = 1404813600,
 				},
 			},
 		},
@@ -2054,7 +2106,7 @@ SavedInstancesDB = {
 					false, -- [13]
 					false, -- [14]
 					["ID"] = -14,
-					["Expires"] = 1404813601,
+					["Expires"] = 1404813600,
 				},
 			},
 		},
@@ -2258,7 +2310,7 @@ SavedInstancesDB = {
 				[2] = {
 					true, -- [1]
 					["ID"] = -1,
-					["Expires"] = 1404813601,
+					["Expires"] = 1404813600,
 				},
 			},
 		},
@@ -2286,23 +2338,23 @@ SavedInstancesDB = {
 			},
 		},
 		["Siege of Orgrimmar"] = {
-			["Show"] = "saved",
+			["LFDID"] = 715,
 			["Expansion"] = 4,
+			["RecLevel"] = 90,
+			["Show"] = "saved",
 			["Gitt - Arthas"] = {
 				[5] = {
-					["Expires"] = 0,
+					["Expires"] = 1404835201,
 					["Extended"] = false,
 					["Link"] = "|cffff8000|Hinstancelock:02000000085AB16A:1136:5:21160|h[Siege of Orgrimmar]|h|r",
-					["ID"] = 479911147,
-					["Locked"] = false,
+					["ID"] = 482882328,
+					["Locked"] = true,
 				},
 			},
-			["LFDID"] = 715,
 			["Raid"] = true,
-			["RecLevel"] = 90,
 			["Git - Arthas"] = {
 				[6] = {
-					["Expires"] = 1404835200,
+					["Expires"] = 1404835201,
 					["Extended"] = false,
 					["Link"] = "|cffff8000|Hinstancelock:0200000008560956:1136:6:31743|h[Siege of Orgrimmar]|h|r",
 					["ID"] = 482379815,
@@ -2333,7 +2385,7 @@ SavedInstancesDB = {
 					false, -- [13]
 					false, -- [14]
 					["ID"] = -14,
-					["Expires"] = 1404813601,
+					["Expires"] = 1404813600,
 				},
 			},
 		},
@@ -2387,7 +2439,7 @@ SavedInstancesDB = {
 	},
 	["History"] = {
 	},
-	["histGeneration"] = 117,
+	["histGeneration"] = 134,
 	["Broker"] = {
 		["HistoryText"] = false,
 	},
@@ -2403,17 +2455,17 @@ SavedInstancesDB = {
 		["Weekly"] = {
 			[32641] = 862,
 			[33134] = 862,
-			["expires"] = 1404813602,
+			["expires"] = 1404813601,
 			[33334] = 951,
 			[33133] = 811,
 			[33338] = 951,
 			[32640] = 862,
 		},
 		["AccountWeekly"] = {
-			["expires"] = 1404813602,
+			["expires"] = 1404813601,
 		},
 	},
-	["DailyResetTime"] = 1404468002,
+	["DailyResetTime"] = 1404554403,
 	["Quests"] = {
 	},
 	["Indicators"] = {

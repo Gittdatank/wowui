@@ -1,0 +1,11 @@
+## Interface: 50400
+## Title: Friend Groups
+## Notes: Add groups to your friends list
+## Author: Frunk
+## SavedVariablesPerCharacter: FriendGroups_SavedVars
+## X-Curse-Packaged-Version: r28
+## X-Curse-Project-Name: Friend Groups
+## X-Curse-Project-ID: friend-groups
+## X-Curse-Repository-ID: wow/friend-groups/mainline
+
+FriendGroups.lua

@@ -16,9 +16,9 @@ LoggerHeadDB = {
 		["Gitt - Arthas"] = "Default",
 		["Spih - Arthas"] = "Default",
 		["Giit - Cho'gall"] = "Default",
-		["Giitt - Feathermoon"] = "Default",
-		["Git - Azuremyst"] = "Default",
 		["Spih - Cho'gall"] = "Default",
+		["Git - Azuremyst"] = "Default",
+		["Giitt - Feathermoon"] = "Default",
 		["Git - Cho'gall"] = "Default",
 		["Greny - Azuremyst"] = "Default",
 		["Git - Arthas"] = "Default",
@@ -32,12 +32,12 @@ LoggerHeadDB = {
 						false, -- [2]
 						[8] = false,
 					},
-					["Gate of the Setting Sun"] = {
-						true, -- [1]
-						false, -- [2]
-					},
 					["Lost City of the Tol'vir"] = {
 						false, -- [1]
+						false, -- [2]
+					},
+					["Gate of the Setting Sun"] = {
+						true, -- [1]
 						false, -- [2]
 					},
 					["Blackrock Spire"] = {
@@ -81,10 +81,8 @@ LoggerHeadDB = {
 						false, -- [1]
 						false, -- [2]
 					},
-					["Shado-Pan Monastery"] = {
-						false, -- [1]
-						true, -- [2]
-						[8] = false,
+					["Zul'Aman"] = {
+						[2] = false,
 					},
 					["Hellfire Citadel: Ramparts"] = {
 						false, -- [1]
@@ -124,8 +122,10 @@ LoggerHeadDB = {
 					["Blackrock Depths"] = {
 						false, -- [1]
 					},
-					["Zul'Aman"] = {
-						[2] = false,
+					["Shado-Pan Monastery"] = {
+						false, -- [1]
+						true, -- [2]
+						[8] = false,
 					},
 					["Sunken Temple"] = {
 						false, -- [1]

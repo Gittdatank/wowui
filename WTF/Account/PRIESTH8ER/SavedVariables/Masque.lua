@@ -11,8 +11,8 @@ MasqueDB = {
 		["Gitt - Arthas"] = "Default",
 		["Evyyn - Azuremyst"] = "Default",
 		["Greny - Azuremyst"] = "Default",
-		["Got - Arthas"] = "Default",
 		["Spih - Arthas"] = "Default",
+		["Got - Arthas"] = "Default",
 		["Git - Cho'gall"] = "Default",
 		["Git - Arthas"] = "Default",
 	},
@@ -76,9 +76,9 @@ MasqueDB = {
 					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
 				},
-				["GupPet_Action Buttons"] = {
-					["SkinID"] = "Zoomed",
+				["Raven"] = {
 					["Inherit"] = false,
+					["SkinID"] = "Zoomed",
 				},
 				["SBF_Debuffs"] = {
 					["SkinID"] = "Zoomed",
@@ -112,9 +112,9 @@ MasqueDB = {
 				["Bartender4_4"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["Raven"] = {
-					["Inherit"] = false,
+				["GupPet_Action Buttons"] = {
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["DiminishingReturns"] = {
 					["SkinID"] = "Zoomed",

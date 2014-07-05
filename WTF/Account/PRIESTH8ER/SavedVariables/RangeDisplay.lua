@@ -37,10 +37,10 @@ RangeDisplayDB3 = {
 		["Git - Cho'gall"] = "Default",
 		["Burk - Azuremyst"] = "Burk",
 		["Spih - Cho'gall"] = "Spih - DPS",
-		["Git - Azuremyst"] = "Default",
+		["Greny - Azuremyst"] = "Default",
 		["Giitt - Feathermoon"] = "Default",
 		["Lihte - Cho'gall"] = "Default",
-		["Greny - Azuremyst"] = "Default",
+		["Git - Azuremyst"] = "Default",
 		["Git - Arthas"] = "Git - Mar 2014",
 	},
 	["profiles"] = {
@@ -257,28 +257,28 @@ RangeDisplayDB3 = {
 			["mute"] = true,
 			["locked"] = true,
 			["units"] = {
-				["mouseover"] = {
-					["mouseAnchor"] = false,
-					["y"] = -277.7848615289282,
-					["font"] = "SCT Emblem",
-					["point"] = "RIGHT",
-					["x"] = -65.98388042609814,
-					["enabled"] = false,
-					["relPoint"] = "RIGHT",
-				},
 				["arena2"] = {
+				},
+				["playertarget"] = {
+					["y"] = 259.3540432237152,
+					["fontSize"] = 30,
+					["point"] = "BOTTOM",
+					["fontOutline"] = "OUTLINE",
+					["x"] = -0.0001328779709809064,
+					["font"] = "DorisPP",
+					["relPoint"] = "BOTTOM",
 				},
 				["focus"] = {
 					["enabled"] = false,
 				},
-				["playertarget"] = {
-					["fontSize"] = 30,
-					["point"] = "BOTTOM",
-					["x"] = -0.0001328779709809064,
-					["fontOutline"] = "OUTLINE",
-					["y"] = 259.3540432237152,
-					["font"] = "DorisPP",
-					["relPoint"] = "BOTTOM",
+				["mouseover"] = {
+					["y"] = -277.7848615289282,
+					["font"] = "SCT Emblem",
+					["point"] = "RIGHT",
+					["mouseAnchor"] = false,
+					["x"] = -65.98388042609814,
+					["enabled"] = false,
+					["relPoint"] = "RIGHT",
 				},
 				["pet"] = {
 				},
@@ -337,18 +337,18 @@ RangeDisplayDB3 = {
 				["focus"] = {
 					["enabled"] = false,
 				},
+				["arena5"] = {
+				},
 				["mouseover"] = {
 					["y"] = -277.7848615289282,
-					["font"] = "SCT Emblem",
+					["x"] = -65.98388042609814,
 					["point"] = "RIGHT",
 					["mouseAnchor"] = false,
-					["x"] = -65.98388042609814,
-					["enabled"] = false,
 					["relPoint"] = "RIGHT",
+					["enabled"] = false,
+					["font"] = "SCT Emblem",
 				},
 				["pet"] = {
-				},
-				["arena5"] = {
 				},
 				["arena4"] = {
 				},
@@ -358,27 +358,27 @@ RangeDisplayDB3 = {
 			["locked"] = true,
 			["mute"] = true,
 			["units"] = {
-				["playertarget"] = {
-					["y"] = -123.8957748413086,
-					["fontSize"] = 10,
-					["x"] = -6.747709267074242e-005,
-					["font"] = "DorisPP",
+				["mouseover"] = {
+					["mouseAnchor"] = false,
+					["y"] = -277.7848615289282,
+					["x"] = -65.98388042609814,
+					["point"] = "RIGHT",
+					["relPoint"] = "RIGHT",
+					["enabled"] = false,
+					["font"] = "SCT Emblem",
 				},
 				["arena2"] = {
 				},
 				["focus"] = {
 					["enabled"] = false,
 				},
-				["pet"] = {
+				["playertarget"] = {
+					["fontSize"] = 10,
+					["x"] = -6.747709267074242e-005,
+					["y"] = -123.8957748413086,
+					["font"] = "DorisPP",
 				},
-				["mouseover"] = {
-					["y"] = -277.7848615289282,
-					["font"] = "SCT Emblem",
-					["point"] = "RIGHT",
-					["mouseAnchor"] = false,
-					["relPoint"] = "RIGHT",
-					["enabled"] = false,
-					["x"] = -65.98388042609814,
+				["pet"] = {
 				},
 				["arena5"] = {
 				},
@@ -404,31 +404,31 @@ RangeDisplayDB3 = {
 			["locked"] = true,
 			["mute"] = true,
 			["units"] = {
-				["arena2"] = {
-				},
 				["playertarget"] = {
 					["y"] = 131.1032562255859,
 					["fontSize"] = 10,
 					["point"] = "BOTTOM",
-					["relPoint"] = "BOTTOM",
-					["font"] = "DorisPP",
 					["x"] = 127.4999237060547,
+					["font"] = "DorisPP",
+					["relPoint"] = "BOTTOM",
+				},
+				["arena2"] = {
 				},
 				["focus"] = {
 					["enabled"] = false,
+				},
+				["arena5"] = {
+				},
+				["pet"] = {
 				},
 				["mouseover"] = {
 					["y"] = -277.7848615289282,
 					["relPoint"] = "RIGHT",
 					["point"] = "RIGHT",
 					["mouseAnchor"] = false,
-					["font"] = "SCT Emblem",
-					["enabled"] = false,
 					["x"] = -65.98388042609814,
-				},
-				["pet"] = {
-				},
-				["arena5"] = {
+					["enabled"] = false,
+					["font"] = "SCT Emblem",
 				},
 				["arena4"] = {
 				},

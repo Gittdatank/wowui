@@ -1,8 +1,8 @@
 Version: 1
 Frame: LootFrame
 FrameLevel: 9
-Anchor: TOPLEFT
-X: 16
+Anchor: TOP
+X: -287
 Y: -116
 W: 170
 H: 240
@@ -69,13 +69,6 @@ X: -178
 Y: 115
 W: 320
 H: 150
-Frame: oqmarquee
-FrameLevel: 1
-Anchor: TOP
-X: -343
-Y: -219
-W: 135
-H: 50
 Frame: PSFmain1
 FrameLevel: 13
 Anchor: CENTER

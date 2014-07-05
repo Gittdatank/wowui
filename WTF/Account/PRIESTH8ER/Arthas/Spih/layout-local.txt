@@ -4,8 +4,8 @@ FrameLevel: 1
 Anchor: CENTER
 X: -17
 Y: -144
-W: 267
-H: 100
+W: 128
+H: 64
 Frame: ColorPickerFrame
 FrameLevel: 1
 Anchor: CENTER
@@ -21,7 +21,7 @@ Y: -34
 W: 210
 H: 321
 Frame: AskMrRobot_Dialog
-FrameLevel: 95
+FrameLevel: 58
 Anchor: TOPRIGHT
 X: -314
 Y: -142
@@ -44,7 +44,7 @@ H: 50
 Frame: SavedInstancesDetachHeader
 FrameLevel: 1
 Anchor: CENTER
-X: -55
-Y: -7
-W: 354
-H: 320
+X: 66
+Y: 13
+W: 366
+H: 290

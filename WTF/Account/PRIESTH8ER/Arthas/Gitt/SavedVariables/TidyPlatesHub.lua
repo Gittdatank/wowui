@@ -70,7 +70,7 @@ TidyPlatesHubSettings = {
 		["ThreatMode"] = 1,
 		["WidgetsDebuffTrackList"] = "My Rake\nMy Rip\nMy Moonfire\nAll 339\nMy Regrowth\nMy Rejuvenation",
 		["OpacityFiltered"] = 0,
-		["WidgetsAuraMode"] = 1,
+		["ColorEnemyNameMode"] = 1,
 		["ColorFriendlyNameMode"] = 1,
 		["TextColorGuildMember"] = {
 			["a"] = 0.9999977946281433,
@@ -78,7 +78,7 @@ TidyPlatesHubSettings = {
 			["g"] = 0.6588220596313477,
 			["r"] = 0.2352935969829559,
 		},
-		["WidgetsRangeMode"] = 1,
+		["ClassPartyIcon"] = false,
 		["StyleEnemyMode"] = 1,
 		["ClassEnemyIcon"] = false,
 		["ColorPartyAggro"] = {
@@ -90,9 +90,7 @@ TidyPlatesHubSettings = {
 		["OpacitySpotlight"] = 1,
 		["OpacityTarget"] = 1,
 		["WidgetAuraTrackPoison"] = true,
-		["OpacityFilterLookup"] = {
-			["Fanged Pit Viper"] = true,
-		},
+		["HeadlineEnemyColor"] = 4,
 		["TextColorNeutral"] = {
 			["a"] = 0.9999977946281433,
 			["b"] = 0.1058821231126785,
@@ -105,8 +103,8 @@ TidyPlatesHubSettings = {
 			["g"] = 0.1999995559453964,
 			["r"] = 0.9999977946281433,
 		},
-		["ColorEnemyNameMode"] = 1,
-		["ClassPartyIcon"] = false,
+		["WidgetsAuraMode"] = 1,
+		["WidgetsRangeMode"] = 1,
 		["UnitSpotlightScale"] = 1.4,
 		["TextColorHostilePlayer"] = {
 			["a"] = 0.9999977946281433,
@@ -114,7 +112,12 @@ TidyPlatesHubSettings = {
 			["g"] = 0.1999995559453964,
 			["r"] = 0.9999977946281433,
 		},
-		["WidgetAuraTrackMagic"] = true,
+		["ColorAttackingOthers"] = {
+			["a"] = 0.9999977946281433,
+			["b"] = 0.9019588232040405,
+			["g"] = 0.588234007358551,
+			["r"] = 0.05882339924573898,
+		},
 		["ColorAttackingOtherTank"] = {
 			["a"] = 0.9999977946281433,
 			["b"] = 0.7843120098114014,
@@ -224,13 +227,10 @@ TidyPlatesHubSettings = {
 			["r"] = 0.9999977946281433,
 		},
 		["ScaleSpotlight"] = 1.200000047683716,
-		["HeadlineEnemyColor"] = 4,
-		["ColorAttackingOthers"] = {
-			["a"] = 0.9999977946281433,
-			["b"] = 0.9019588232040405,
-			["g"] = 0.588234007358551,
-			["r"] = 0.05882339924573898,
+		["OpacityFilterLookup"] = {
+			["Fanged Pit Viper"] = true,
 		},
+		["WidgetAuraTrackMagic"] = true,
 		["ColorGuildMember"] = {
 			["a"] = 0.9999977946281433,
 			["b"] = 0.9999977946281433,
@@ -315,7 +315,7 @@ TidyPlatesHubSettings = {
 		["ThreatMode"] = 1,
 		["WidgetsDebuffTrackList"] = "My Rake\nMy Rip\nMy Moonfire\nAll 339\nMy Regrowth\nMy Rejuvenation",
 		["OpacityFiltered"] = 0,
-		["WidgetsAuraMode"] = 1,
+		["ColorEnemyNameMode"] = 1,
 		["ColorFriendlyNameMode"] = 1,
 		["TextColorGuildMember"] = {
 			["a"] = 0.9999977946281433,
@@ -323,7 +323,7 @@ TidyPlatesHubSettings = {
 			["g"] = 0.6588220596313477,
 			["r"] = 0.2352935969829559,
 		},
-		["WidgetsRangeMode"] = 1,
+		["ClassPartyIcon"] = false,
 		["StyleEnemyMode"] = 1,
 		["ClassEnemyIcon"] = false,
 		["ColorPartyAggro"] = {
@@ -335,9 +335,7 @@ TidyPlatesHubSettings = {
 		["OpacitySpotlight"] = 1,
 		["OpacityTarget"] = 1,
 		["WidgetAuraTrackPoison"] = true,
-		["OpacityFilterLookup"] = {
-			["Fanged Pit Viper"] = true,
-		},
+		["HeadlineEnemyColor"] = 4,
 		["TextColorNeutral"] = {
 			["a"] = 0.9999977946281433,
 			["b"] = 0.1058821231126785,
@@ -350,8 +348,8 @@ TidyPlatesHubSettings = {
 			["g"] = 0.1999995559453964,
 			["r"] = 0.9999977946281433,
 		},
-		["ColorEnemyNameMode"] = 1,
-		["ClassPartyIcon"] = false,
+		["WidgetsAuraMode"] = 1,
+		["WidgetsRangeMode"] = 1,
 		["UnitSpotlightScale"] = 1.4,
 		["TextColorHostilePlayer"] = {
 			["a"] = 0.9999977946281433,
@@ -359,7 +357,12 @@ TidyPlatesHubSettings = {
 			["g"] = 0.1999995559453964,
 			["r"] = 0.9999977946281433,
 		},
-		["WidgetAuraTrackMagic"] = true,
+		["ColorAttackingOthers"] = {
+			["a"] = 0.9999977946281433,
+			["b"] = 0.9019588232040405,
+			["g"] = 0.588234007358551,
+			["r"] = 0.05882339924573898,
+		},
 		["ColorAttackingOtherTank"] = {
 			["a"] = 0.9999977946281433,
 			["b"] = 0.7843120098114014,
@@ -469,13 +472,10 @@ TidyPlatesHubSettings = {
 			["r"] = 0.9999977946281433,
 		},
 		["ScaleSpotlight"] = 1.200000047683716,
-		["HeadlineEnemyColor"] = 4,
-		["ColorAttackingOthers"] = {
-			["a"] = 0.9999977946281433,
-			["b"] = 0.9019588232040405,
-			["g"] = 0.588234007358551,
-			["r"] = 0.05882339924573898,
+		["OpacityFilterLookup"] = {
+			["Fanged Pit Viper"] = true,
 		},
+		["WidgetAuraTrackMagic"] = true,
 		["ColorGuildMember"] = {
 			["a"] = 0.9999977946281433,
 			["b"] = 0.9999977946281433,

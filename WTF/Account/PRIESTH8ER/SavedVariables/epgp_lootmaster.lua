@@ -18,8 +18,8 @@ EPGPLootMaster = {
 		["Giit - Cho'gall"] = "Giit - Cho'gall",
 		["Git - Azuremyst"] = "Git - Azuremyst",
 		["Git - Cho'gall"] = "Git - Cho'gall",
-		["Spih - Cho'gall"] = "Spih - Cho'gall",
 		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
+		["Spih - Cho'gall"] = "Spih - Cho'gall",
 		["Greny - Azuremyst"] = "Greny - Azuremyst",
 		["Git - Arthas"] = "Git - Arthas",
 	},
@@ -38,38 +38,17 @@ EPGPLootMaster = {
 			["button2_gp"] = "0",
 			["buttonNum"] = 2,
 			["button2_fallback"] = "OFFSPEC",
-			["button2_gpValue"] = 0,
+			["button3_fallback"] = "",
 			["button2_color"] = "ffd93c",
 			["button2_gpIsPercentage"] = false,
 			["button2"] = "Offspec",
-			["button3_fallback"] = "",
+			["button2_gpValue"] = 0,
 		},
 		["Giit - Azuremyst"] = {
 		},
 		["Spih - Arthas"] = {
 		},
 		["Gimm - Cho'gall"] = {
-		},
-		["Git - Azuremyst"] = {
-			["button2"] = "Offspec",
-			["mainUIScale"] = 1.06666677792867,
-			["button2_fallback"] = "",
-			["hideMLOnCombat"] = false,
-			["votingSendGuildRankList"] = {
-				nil, -- [1]
-				nil, -- [2]
-				true, -- [3]
-			},
-			["monitorSendAssistantOnly"] = false,
-			["votingSendGuildRank"] = true,
-			["button2_color"] = "836f27",
-			["blizzard_show_offline"] = 1,
-			["buttonNum"] = 2,
-			["votingSendAssistantOnly"] = false,
-		},
-		["Ezyn - Azuremyst"] = {
-		},
-		["Gilt - Azuremyst"] = {
 		},
 		["Git - Cho'gall"] = {
 			["biddingWhen"] = "always",
@@ -90,20 +69,41 @@ EPGPLootMaster = {
 			["button3_gpIsPercentage"] = true,
 			["monitorSendAssistantOnly"] = false,
 		},
-		["Git - Arthas"] = {
+		["Ezyn - Azuremyst"] = {
+		},
+		["Gilt - Azuremyst"] = {
+		},
+		["Git - Azuremyst"] = {
 			["button2"] = "Offspec",
-			["buttonNum"] = 2,
+			["mainUIScale"] = 1.06666677792867,
+			["button2_fallback"] = "",
 			["hideMLOnCombat"] = false,
-			["button2_gpIsPercentage"] = true,
+			["votingSendGuildRankList"] = {
+				nil, -- [1]
+				nil, -- [2]
+				true, -- [3]
+			},
+			["monitorSendAssistantOnly"] = false,
+			["votingSendGuildRank"] = true,
+			["button2_color"] = "836f27",
+			["blizzard_show_offline"] = 1,
+			["buttonNum"] = 2,
+			["votingSendAssistantOnly"] = false,
+		},
+		["Git - Arthas"] = {
+			["hideMLOnCombat"] = false,
 			["button3_gp"] = "0%",
 			["button2_gp"] = "0%",
-			["button3_gpIsPercentage"] = true,
-			["popupUIScale"] = 1.133333388964335,
+			["buttonNum"] = 2,
 			["button2_gpValue"] = 0,
 			["button2_color"] = "686def",
-			["button3_gpValue"] = 0,
-			["button3_fallback"] = "",
 			["button2_fallback"] = "OFFSPEC",
+			["button3_fallback"] = "",
+			["popupUIScale"] = 1.133333388964335,
+			["button2"] = "Offspec",
+			["button2_gpIsPercentage"] = true,
+			["button3_gpValue"] = 0,
+			["button3_gpIsPercentage"] = true,
 		},
 	},
 }

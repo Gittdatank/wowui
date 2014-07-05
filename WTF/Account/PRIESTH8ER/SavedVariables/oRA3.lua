@@ -105,7 +105,6 @@ oRA3DB = {
 				},
 				["Default"] = {
 					["showDisplay"] = false,
-					["lockDisplay"] = true,
 					["spells"] = {
 						[98008] = true,
 						[77761] = false,
@@ -113,11 +112,12 @@ oRA3DB = {
 						[73325] = true,
 						[33206] = true,
 						[29166] = true,
-						[97462] = true,
 						[47788] = true,
+						[97462] = true,
 						[2825] = true,
 					},
 					["neverShowMine"] = true,
+					["lockDisplay"] = true,
 				},
 				["Gilt"] = {
 					["lockDisplay"] = true,
@@ -137,8 +137,8 @@ oRA3DB = {
 					},
 				},
 				["Git - Mar 2014"] = {
-					["neverShowMine"] = true,
 					["showDisplay"] = false,
+					["lockDisplay"] = true,
 					["spells"] = {
 						[98008] = true,
 						[77761] = false,
@@ -146,12 +146,12 @@ oRA3DB = {
 						[2825] = true,
 						[33206] = true,
 						[97462] = true,
-						[47788] = true,
 						[73325] = true,
+						[47788] = true,
 						[29166] = true,
 					},
+					["neverShowMine"] = true,
 					["onlyShowMine"] = true,
-					["lockDisplay"] = true,
 				},
 				["Gitt - Monk"] = {
 					["neverShowMine"] = true,
@@ -268,9 +268,9 @@ oRA3DB = {
 		["Gitt - Arthas"] = "Gitt - Monk",
 		["Spih - Arthas"] = "Default",
 		["Giit - Cho'gall"] = "Giit tank",
-		["Spih - Cho'gall"] = "Default",
-		["Git - Azuremyst"] = "Default",
 		["Giitt - Feathermoon"] = "Default",
+		["Git - Azuremyst"] = "Default",
+		["Spih - Cho'gall"] = "Default",
 		["Git - Cho'gall"] = "Default",
 		["Greny - Azuremyst"] = "Default",
 		["Git - Arthas"] = "Git - Mar 2014",
@@ -313,7 +313,7 @@ oRA3DB = {
 			["lastSelectedList"] = 1,
 		},
 		["Default"] = {
-			["lastSelectedList"] = 1,
+			["lastSelectedPanel"] = "Checks",
 			["positions"] = {
 				["oRA3ReadyCheck"] = {
 					["Height"] = 211,
@@ -328,7 +328,7 @@ oRA3DB = {
 					["PosX"] = 1066.359429290009,
 				},
 			},
-			["lastSelectedPanel"] = "Checks",
+			["lastSelectedList"] = 1,
 		},
 		["Gilt"] = {
 			["lastSelectedPanel"] = "Tanks",
@@ -349,7 +349,7 @@ oRA3DB = {
 			["lastSelectedList"] = 2,
 		},
 		["Git - Mar 2014"] = {
-			["lastSelectedPanel"] = "Promote",
+			["lastSelectedList"] = 1,
 			["positions"] = {
 				["oRA3ReadyCheck"] = {
 					["Height"] = 297,
@@ -364,7 +364,7 @@ oRA3DB = {
 					["Width"] = 210.3385009765625,
 				},
 			},
-			["lastSelectedList"] = 1,
+			["lastSelectedPanel"] = "Promote",
 		},
 		["Gitt - Monk"] = {
 			["lastSelectedPanel"] = "Invite",

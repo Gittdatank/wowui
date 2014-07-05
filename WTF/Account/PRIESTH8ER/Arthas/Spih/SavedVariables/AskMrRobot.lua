@@ -217,16 +217,16 @@ AmrBankItems = {
 	"|cffa335ee|Hitem:42100:3233:0:0:0:0:0:36967458:90:0:0|h[Moonshroud Robe]|h|r", -- [121]
 }
 AmrEquipedItems = {
-	["19"] = "|cffa335ee|Hitem:69210:0:0:0:0:0:0:0:90:0:0|h[Renowned Guild Tabard]|h|r",
+	["5"] = "|cffa335ee|Hitem:104845:4418:4637:4637:4591:0:0:537290880:90:148:505|h[Mantid Vizier's Robes]|h|r",
 	["1"] = "|cffa335ee|Hitem:104673:0:4660:4589:0:0:0:1313721472:90:162:491|h[Hood of Swirling Senses]|h|r",
-	["14"] = "|cffa335ee|Hitem:105109:0:0:0:0:0:0:1577105408:90:0:505|h[Thok's Acid-Grooved Tooth]|h|r",
+	["9"] = "|cffa335ee|Hitem:105093:4414:0:0:0:0:0:622224256:90:162:491|h[Avool's Ancestral Bracers]|h|r",
 	["3"] = "|cffa335ee|Hitem:104672:4806:4591:4589:0:0:0:919176448:90:0:491|h[Ichor-Dripping Shoulderpads]|h|r",
 	["2"] = "|cffa335ee|Hitem:105095:0:0:0:0:0:0:1637686528:90:166:491|h[Lost Necklace of the Mogu Empress]|h|r",
-	["5"] = "|cffa335ee|Hitem:104845:4418:4637:4637:4591:0:0:537290880:90:148:505|h[Mantid Vizier's Robes]|h|r",
+	["19"] = "|cffa335ee|Hitem:69210:0:0:0:0:0:0:0:90:0:0|h[Renowned Guild Tabard]|h|r",
 	["4"] = "|cffffffff|Hitem:53:0:0:0:0:0:0:0:90:0:0|h[Neophyte's Shirt]|h|r",
 	["7"] = "|cffa335ee|Hitem:99025:4826:4591:4591:0:0:0:0:90:166:491|h[Legwraps of the Ternion Glory]|h|r",
 	["6"] = "|cffa335ee|Hitem:98608:0:4637:4637:4589:0:0:1618496384:90:152:491|h[White Cloud Belt]|h|r",
-	["9"] = "|cffa335ee|Hitem:105093:4414:0:0:0:0:0:622224256:90:162:491|h[Avool's Ancestral Bracers]|h|r",
+	["14"] = "|cffa335ee|Hitem:105109:0:0:0:0:0:0:1577105408:90:0:505|h[Thok's Acid-Grooved Tooth]|h|r",
 	["8"] = "|cffa335ee|Hitem:104749:4429:4591:0:0:0:0:1826510976:90:152:491|h[Skydancer Boots]|h|r",
 	["16"] = "|cffa335ee|Hitem:105001:4442:4591:0:0:0:0:773489792:90:166:505|h[Drakebinder Greatstaff]|h|r",
 	["15"] = "|cffa335ee|Hitem:105830:4423:0:0:0:0:0:1254327680:90:152:491|h[Brave Niunai's Cloak]|h|r",
@@ -783,6 +783,6 @@ AmrLogData = {
 	["_autoLog"] = {
 		[1136] = "disabled",
 	},
+	["_lastZone"] = "Pandaria",
 	["_lastDiff"] = 0,
-	["_lastZone"] = "Kalimdor",
 }

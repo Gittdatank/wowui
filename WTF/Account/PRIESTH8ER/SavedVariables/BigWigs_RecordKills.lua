@@ -7,8 +7,8 @@ RKDatabase = {
 		["Gitt - Arthas"] = "Default",
 		["Giit - Azuremyst"] = "Default",
 		["Evyyn - Azuremyst"] = "Default",
-		["Got - Arthas"] = "Default",
 		["Git - Arthas"] = "Default",
+		["Got - Arthas"] = "Default",
 		["Greny - Azuremyst"] = "Default",
 		["Spih - Cho'gall"] = "Default",
 		["Git - Cho'gall"] = "Default",
@@ -29,14 +29,14 @@ RKDatabase = {
 						[6] = 88,
 						[7] = 141,
 					},
-					["Will of the Emperor"] = {
-						[6] = 289,
+					["Feng the Accursed"] = {
+						[6] = 142,
 					},
 					["Elegon"] = {
 						[6] = 170,
 					},
-					["Feng the Accursed"] = {
-						[6] = 142,
+					["Will of the Emperor"] = {
+						[6] = 289,
 					},
 				},
 				["Heart of Fear"] = {
@@ -83,7 +83,7 @@ RKDatabase = {
 						[7] = 500,
 						[3] = 517,
 						[4] = 472,
-						[5] = 578,
+						[5] = 528,
 						[14] = 440,
 					},
 					["Garrosh Hellscream"] = {
@@ -106,7 +106,7 @@ RKDatabase = {
 						[7] = 387,
 						[3] = 253,
 						[4] = 239,
-						[5] = 339,
+						[5] = 322,
 						[14] = 174,
 					},
 					["Norushen"] = {
@@ -126,7 +126,7 @@ RKDatabase = {
 					},
 					["Kor'kron Dark Shaman"] = {
 						[6] = 295,
-						[7] = 230,
+						[7] = 152,
 						[3] = 233,
 						[4] = 252,
 						[14] = 152,
@@ -177,7 +177,7 @@ RKDatabase = {
 					},
 					["The Fallen Protectors"] = {
 						[6] = 268,
-						[7] = 407,
+						[7] = 267,
 						[3] = 268,
 						[4] = 266,
 						[5] = 385,
@@ -230,15 +230,15 @@ RKDatabase = {
 						[4] = 363,
 						[7] = 372,
 					},
-					["Primordius"] = {
-						[5] = 154,
-						[6] = 369,
-						[7] = 292,
-					},
 					["Horridon"] = {
 						[5] = 211,
 						[6] = 584,
 						[7] = 630,
+					},
+					["Primordius"] = {
+						[5] = 154,
+						[6] = 369,
+						[7] = 292,
 					},
 					["Jin'rokh the Breaker"] = {
 						[6] = 194,

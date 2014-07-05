@@ -5,12 +5,12 @@ TomTomDB = {
 		["Gitt - Cho'gall"] = "Default",
 		["Gitt - Arthas"] = "Default",
 		["Evyyn - Azuremyst"] = "Default",
-		["Got - Arthas"] = "Default",
+		["Spih - Arthas"] = "Default",
 		["Git - Cho'gall"] = "Default",
 		["Spih - Cho'gall"] = "Default",
-		["Git - Arthas"] = "Default",
 		["Greny - Azuremyst"] = "Default",
-		["Spih - Arthas"] = "Default",
+		["Got - Arthas"] = "Default",
+		["Git - Arthas"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -24,12 +24,12 @@ TomTomWaypointsMF = {
 		["Gitt - Cho'gall"] = "Gitt - Cho'gall",
 		["Gitt - Arthas"] = "Gitt - Arthas",
 		["Evyyn - Azuremyst"] = "Evyyn - Azuremyst",
-		["Got - Arthas"] = "Got - Arthas",
+		["Spih - Arthas"] = "Spih - Arthas",
 		["Git - Cho'gall"] = "Git - Cho'gall",
 		["Spih - Cho'gall"] = "Spih - Cho'gall",
-		["Git - Arthas"] = "Git - Arthas",
 		["Greny - Azuremyst"] = "Greny - Azuremyst",
-		["Spih - Arthas"] = "Spih - Arthas",
+		["Got - Arthas"] = "Got - Arthas",
+		["Git - Arthas"] = "Git - Arthas",
 	},
 	["profiles"] = {
 		["Dbyx - Arthas"] = {
@@ -38,11 +38,11 @@ TomTomWaypointsMF = {
 		},
 		["Gitt - Arthas"] = {
 			[951] = {
-				["951:0:476000000:873000000:Zesqua"] = {
+				["951:0:497000000:222000000:Archiereus of Flame (Sanctuary)"] = {
 					951, -- [1]
 					0, -- [2]
-					0.476, -- [3]
-					0.873, -- [4]
+					0.4970000000000001, -- [3]
+					0.222, -- [4]
 					["arrivaldistance"] = 15,
 					["callbacks"] = {
 						["distance"] = {
@@ -53,10 +53,10 @@ TomTomWaypointsMF = {
 						},
 					},
 					["persistent"] = true,
-					["desc"] = "Zesqua",
+					["desc"] = "Archiereus of Flame (Sanctuary)",
 					["silent"] = true,
 					["cleardistance"] = 10,
-					["title"] = "Zesqua",
+					["title"] = "Archiereus of Flame (Sanctuary)",
 					["crazy"] = true,
 					["minimap"] = true,
 					["world"] = true,
@@ -84,11 +84,11 @@ TomTomWaypointsMF = {
 					["minimap"] = true,
 					["world"] = true,
 				},
-				["951:0:497000000:222000000:Archiereus of Flame (Sanctuary)"] = {
+				["951:0:476000000:873000000:Zesqua"] = {
 					951, -- [1]
 					0, -- [2]
-					0.4970000000000001, -- [3]
-					0.222, -- [4]
+					0.476, -- [3]
+					0.873, -- [4]
 					["arrivaldistance"] = 15,
 					["callbacks"] = {
 						["distance"] = {
@@ -99,10 +99,10 @@ TomTomWaypointsMF = {
 						},
 					},
 					["persistent"] = true,
-					["desc"] = "Archiereus of Flame (Sanctuary)",
+					["desc"] = "Zesqua",
 					["silent"] = true,
 					["cleardistance"] = 10,
-					["title"] = "Archiereus of Flame (Sanctuary)",
+					["title"] = "Zesqua",
 					["crazy"] = true,
 					["minimap"] = true,
 					["world"] = true,
@@ -134,7 +134,7 @@ TomTomWaypointsMF = {
 		},
 		["Evyyn - Azuremyst"] = {
 		},
-		["Got - Arthas"] = {
+		["Spih - Arthas"] = {
 		},
 		["Git - Cho'gall"] = {
 			[951] = {
@@ -147,9 +147,9 @@ TomTomWaypointsMF = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["minimap"] = {
-						},
 						["world"] = {
+						},
+						["minimap"] = {
 						},
 					},
 					["persistent"] = true,
@@ -170,9 +170,9 @@ TomTomWaypointsMF = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["minimap"] = {
-						},
 						["world"] = {
+						},
+						["minimap"] = {
 						},
 					},
 					["persistent"] = true,
@@ -193,9 +193,9 @@ TomTomWaypointsMF = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["minimap"] = {
-						},
 						["world"] = {
+						},
+						["minimap"] = {
 						},
 					},
 					["persistent"] = true,
@@ -216,9 +216,9 @@ TomTomWaypointsMF = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["minimap"] = {
-						},
 						["world"] = {
+						},
+						["minimap"] = {
 						},
 					},
 					["persistent"] = true,
@@ -239,9 +239,9 @@ TomTomWaypointsMF = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["minimap"] = {
-						},
 						["world"] = {
+						},
+						["minimap"] = {
 						},
 					},
 					["persistent"] = true,
@@ -262,9 +262,9 @@ TomTomWaypointsMF = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["minimap"] = {
-						},
 						["world"] = {
+						},
+						["minimap"] = {
 						},
 					},
 					["persistent"] = true,
@@ -285,9 +285,9 @@ TomTomWaypointsMF = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["minimap"] = {
-						},
 						["world"] = {
+						},
+						["minimap"] = {
 						},
 					},
 					["persistent"] = true,
@@ -308,9 +308,9 @@ TomTomWaypointsMF = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["minimap"] = {
-						},
 						["world"] = {
+						},
+						["minimap"] = {
 						},
 					},
 					["persistent"] = true,
@@ -326,6 +326,10 @@ TomTomWaypointsMF = {
 		},
 		["Spih - Cho'gall"] = {
 		},
+		["Greny - Azuremyst"] = {
+		},
+		["Got - Arthas"] = {
+		},
 		["Git - Arthas"] = {
 			[862] = {
 				["862:0:654000000:700000000:Bufo"] = {
@@ -336,10 +340,18 @@ TomTomWaypointsMF = {
 					["arrivaldistance"] = 15,
 					["callbacks"] = {
 						["distance"] = {
-						},
-						["minimap"] = {
+							[10] = nil --[[ skipped inline function ]],
+							[15] = nil --[[ skipped inline function ]],
 						},
 						["world"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["minimap"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
 						},
 					},
 					["persistent"] = true,
@@ -347,29 +359,6 @@ TomTomWaypointsMF = {
 					["silent"] = true,
 					["cleardistance"] = 10,
 					["title"] = "Bufo",
-					["crazy"] = true,
-					["minimap"] = true,
-					["world"] = true,
-				},
-				["862:0:720000000:400000000:Huolon"] = {
-					862, -- [1]
-					0, -- [2]
-					0.72, -- [3]
-					0.4, -- [4]
-					["arrivaldistance"] = 15,
-					["callbacks"] = {
-						["distance"] = {
-						},
-						["minimap"] = {
-						},
-						["world"] = {
-						},
-					},
-					["persistent"] = true,
-					["desc"] = "Huolon",
-					["silent"] = true,
-					["cleardistance"] = 10,
-					["title"] = "Huolon",
 					["crazy"] = true,
 					["minimap"] = true,
 					["world"] = true,
@@ -382,10 +371,18 @@ TomTomWaypointsMF = {
 					["arrivaldistance"] = 15,
 					["callbacks"] = {
 						["distance"] = {
-						},
-						["minimap"] = {
+							[10] = nil --[[ skipped inline function ]],
+							[15] = nil --[[ skipped inline function ]],
 						},
 						["world"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["minimap"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
 						},
 					},
 					["persistent"] = true,
@@ -393,6 +390,37 @@ TomTomWaypointsMF = {
 					["silent"] = true,
 					["cleardistance"] = 10,
 					["title"] = "Zesqua",
+					["crazy"] = true,
+					["minimap"] = true,
+					["world"] = true,
+				},
+				["862:0:720000000:400000000:Huolon"] = {
+					862, -- [1]
+					0, -- [2]
+					0.72, -- [3]
+					0.4, -- [4]
+					["arrivaldistance"] = 15,
+					["callbacks"] = {
+						["distance"] = {
+							[10] = nil --[[ skipped inline function ]],
+							[15] = nil --[[ skipped inline function ]],
+						},
+						["world"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["minimap"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+					},
+					["persistent"] = true,
+					["desc"] = "Huolon",
+					["silent"] = true,
+					["cleardistance"] = 10,
+					["title"] = "Huolon",
 					["crazy"] = true,
 					["minimap"] = true,
 					["world"] = true,
@@ -407,10 +435,18 @@ TomTomWaypointsMF = {
 					["arrivaldistance"] = 15,
 					["callbacks"] = {
 						["distance"] = {
-						},
-						["minimap"] = {
+							[10] = nil --[[ skipped inline function ]],
+							[15] = nil --[[ skipped inline function ]],
 						},
 						["world"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["minimap"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
 						},
 					},
 					["persistent"] = true,
@@ -430,10 +466,18 @@ TomTomWaypointsMF = {
 					["arrivaldistance"] = 15,
 					["callbacks"] = {
 						["distance"] = {
-						},
-						["minimap"] = {
+							[10] = nil --[[ skipped inline function ]],
+							[15] = nil --[[ skipped inline function ]],
 						},
 						["world"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["minimap"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
 						},
 					},
 					["persistent"] = true,
@@ -453,10 +497,18 @@ TomTomWaypointsMF = {
 					["arrivaldistance"] = 15,
 					["callbacks"] = {
 						["distance"] = {
-						},
-						["minimap"] = {
+							[10] = nil --[[ skipped inline function ]],
+							[15] = nil --[[ skipped inline function ]],
 						},
 						["world"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["minimap"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
 						},
 					},
 					["persistent"] = true,
@@ -476,10 +528,18 @@ TomTomWaypointsMF = {
 					["arrivaldistance"] = 15,
 					["callbacks"] = {
 						["distance"] = {
-						},
-						["minimap"] = {
+							[10] = nil --[[ skipped inline function ]],
+							[15] = nil --[[ skipped inline function ]],
 						},
 						["world"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["minimap"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
 						},
 					},
 					["persistent"] = true,
@@ -492,10 +552,6 @@ TomTomWaypointsMF = {
 					["world"] = true,
 				},
 			},
-		},
-		["Greny - Azuremyst"] = {
-		},
-		["Spih - Arthas"] = {
 		},
 	},
 }

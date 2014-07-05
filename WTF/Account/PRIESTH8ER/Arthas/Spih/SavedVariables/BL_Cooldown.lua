@@ -1,13 +1,5 @@
 
 BLCDrosterReload = {
-	["0x0200000006C9D5A8"] = {
-		["class"] = "DEATHKNIGHT",
-		["name"] = "Kbrunswicki",
-	},
-	["0x040000000577F8EC"] = {
-		["class"] = "WARRIOR",
-		["name"] = "Criona",
-	},
 	["0x0200000008617ABD"] = {
 		["talents"] = {
 			[108920] = {
@@ -18,13 +10,13 @@ BLCDrosterReload = {
 				["icon"] = "Interface\\Icons\\spell_priest_voidtendrils",
 				["column"] = 1,
 			},
-			[110744] = {
-				["idx"] = 17,
-				["name_localized"] = "Divine Star",
-				["tier"] = 6,
-				["spell_id"] = 110744,
-				["icon"] = "Interface\\Icons\\spell_priest_divinestar",
-				["column"] = 2,
+			[108945] = {
+				["idx"] = 12,
+				["name_localized"] = "Angelic Bulwark",
+				["tier"] = 4,
+				["spell_id"] = 108945,
+				["icon"] = "Interface\\Icons\\ability_priest_angelicbulwark",
+				["column"] = 3,
 			},
 			[109142] = {
 				["idx"] = 13,
@@ -34,22 +26,6 @@ BLCDrosterReload = {
 				["icon"] = "Interface\\Icons\\Spell_Shadow_MindTwisting",
 				["column"] = 1,
 			},
-			[121536] = {
-				["idx"] = 5,
-				["name_localized"] = "Angelic Feather",
-				["tier"] = 2,
-				["spell_id"] = 121536,
-				["icon"] = "Interface\\Icons\\ability_priest_angelicfeather",
-				["column"] = 2,
-			},
-			[108945] = {
-				["idx"] = 12,
-				["name_localized"] = "Angelic Bulwark",
-				["tier"] = 4,
-				["spell_id"] = 108945,
-				["icon"] = "Interface\\Icons\\ability_priest_angelicbulwark",
-				["column"] = 3,
-			},
 			[139139] = {
 				["idx"] = 9,
 				["name_localized"] = "Solace and Insanity",
@@ -58,9 +34,25 @@ BLCDrosterReload = {
 				["icon"] = "Interface\\Icons\\ability_priest_flashoflight",
 				["column"] = 3,
 			},
+			[110744] = {
+				["idx"] = 17,
+				["name_localized"] = "Divine Star",
+				["tier"] = 6,
+				["spell_id"] = 110744,
+				["icon"] = "Interface\\Icons\\spell_priest_divinestar",
+				["column"] = 2,
+			},
+			[121536] = {
+				["idx"] = 5,
+				["name_localized"] = "Angelic Feather",
+				["tier"] = 2,
+				["spell_id"] = 121536,
+				["icon"] = "Interface\\Icons\\ability_priest_angelicfeather",
+				["column"] = 2,
+			},
 		},
 		["name"] = "Spih",
-		["spec"] = 256,
 		["class"] = "PRIEST",
+		["spec"] = 256,
 	},
 }

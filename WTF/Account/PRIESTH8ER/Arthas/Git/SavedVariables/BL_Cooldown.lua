@@ -1,7 +1,6 @@
 
 BLCDrosterReload = {
 	["0x0200000008560956"] = {
-		["class"] = "WARRIOR",
 		["talents"] = {
 			[103827] = {
 				["idx"] = 2,
@@ -19,21 +18,13 @@ BLCDrosterReload = {
 				["icon"] = "Interface\\Icons\\Ability_Warrior_Vigilance",
 				["column"] = 3,
 			},
-			[46924] = {
-				["idx"] = 10,
-				["name_localized"] = "Bladestorm",
-				["tier"] = 4,
-				["spell_id"] = 46924,
-				["icon"] = "Interface\\Icons\\Ability_Warrior_Bladestorm",
-				["column"] = 1,
-			},
-			[107570] = {
-				["idx"] = 18,
-				["name_localized"] = "Storm Bolt",
+			[12292] = {
+				["idx"] = 17,
+				["name_localized"] = "Bloodbath",
 				["tier"] = 6,
-				["spell_id"] = 107570,
-				["icon"] = "Interface\\Icons\\warrior_talent_icon_stormbolt",
-				["column"] = 3,
+				["spell_id"] = 12292,
+				["icon"] = "Interface\\Icons\\Ability_Warrior_BloodBath",
+				["column"] = 2,
 			},
 			[55694] = {
 				["idx"] = 4,
@@ -51,8 +42,17 @@ BLCDrosterReload = {
 				["icon"] = "Interface\\Icons\\warrior_disruptingshout",
 				["column"] = 3,
 			},
+			[118000] = {
+				["idx"] = 12,
+				["name_localized"] = "Dragon Roar",
+				["tier"] = 4,
+				["spell_id"] = 118000,
+				["icon"] = "Interface\\Icons\\ability_warrior_dragonroar",
+				["column"] = 3,
+			},
 		},
 		["name"] = "Git",
-		["spec"] = 72,
+		["class"] = "WARRIOR",
+		["spec"] = 73,
 	},
 }

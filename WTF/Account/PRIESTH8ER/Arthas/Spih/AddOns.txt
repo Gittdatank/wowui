@@ -75,3 +75,4 @@ WhoPulled: disabled
 BigWigs_Mogushan: enabled
 BigWigs_HeartOfFear: enabled
 BigWigs_EndlessSpring: enabled
+OpenRaid: enabled

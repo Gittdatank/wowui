@@ -139,14 +139,17 @@ BossNotesPersonalNotesDB = {
 		["Gitt - Arthas"] = {
 			["playerClass"] = "MONK",
 		},
-		["Got - Arthas"] = {
-			["playerClass"] = "DRUID",
+		["Git - Arthas"] = {
+			["playerClass"] = "WARRIOR",
 		},
 		["Evyyn - Azuremyst"] = {
 			["playerClass"] = "ROGUE",
 		},
-		["Git - Arthas"] = {
-			["playerClass"] = "WARRIOR",
+		["Got - Arthas"] = {
+			["playerClass"] = "DRUID",
+		},
+		["Greny - Azuremyst"] = {
+			["playerClass"] = "HUNTER",
 		},
 		["Git - Cho'gall"] = {
 			["playerClass"] = "WARRIOR",
@@ -191,9 +194,6 @@ BossNotesPersonalNotesDB = {
 			},
 			["publicNotesNotificationSeen"] = true,
 		},
-		["Greny - Azuremyst"] = {
-			["playerClass"] = "HUNTER",
-		},
 		["Spih - Cho'gall"] = {
 			["playerClass"] = "PRIEST",
 		},
@@ -216,11 +216,11 @@ BossNotesPersonalNotesDB = {
 		["Gitt - Cho'gall"] = "Default",
 		["Gimm - Cho'gall"] = "Default",
 		["Gitt - Arthas"] = "Default",
-		["Got - Arthas"] = "Default",
-		["Evyyn - Azuremyst"] = "Default",
 		["Git - Arthas"] = "Default",
-		["Git - Cho'gall"] = "Default",
+		["Evyyn - Azuremyst"] = "Default",
+		["Got - Arthas"] = "Default",
 		["Greny - Azuremyst"] = "Default",
+		["Git - Cho'gall"] = "Default",
 		["Spih - Cho'gall"] = "Default",
 		["Giit - Cho'gall"] = "Default",
 		["Worgit - Moon Guard"] = "Default",
