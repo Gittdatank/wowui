@@ -481,7 +481,7 @@ GTFO: enabled
 GuildVote: disabled
 Masque: enabled
 Masque_LiteStep: disabled
-OpenRaid: disabled
+OpenRaid: enabled
 PhoenixStyle_Loader_Cata: enabled
 PitBull4_BattlePet: disabled
 PitBull4_BurningEmbers: disabled

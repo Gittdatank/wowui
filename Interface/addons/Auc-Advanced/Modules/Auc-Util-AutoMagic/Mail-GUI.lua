@@ -1,6 +1,6 @@
 --[[
 	Auctioneer - AutoMagic Utility module
-	Version: 5.19.5445 (QuiescentQuoll)
+	Version: 5.20.5464 (RidiculousRockrat)
 	Revision: $Id: Mail-GUI.lua 5415 2013-06-11 15:18:58Z brykrys $
 	URL: http://auctioneeraddon.com/
 
@@ -556,4 +556,4 @@ end
 
 
 
-AucAdvanced.RegisterRevision("$URL: http://svn.norganna.org/auctioneer/branches/5.19/Auc-Util-AutoMagic/Mail-GUI.lua $", "$Rev: 5415 $")
+AucAdvanced.RegisterRevision("$URL: http://svn.norganna.org/auctioneer/branches/5.20/Auc-Util-AutoMagic/Mail-GUI.lua $", "$Rev: 5415 $")

@@ -31,7 +31,6 @@ GuildBankRepairToggleDB = {
 			},
 		},
 		["Git - Arthas"] = {
-			["logout"] = true,
 			["ranks"] = {
 				true, -- [1]
 				true, -- [2]
@@ -40,6 +39,7 @@ GuildBankRepairToggleDB = {
 				true, -- [5]
 				true, -- [6]
 			},
+			["logout"] = true,
 		},
 		["Git - Cho'gall"] = {
 			["ranks"] = {

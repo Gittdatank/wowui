@@ -76,3 +76,7 @@ BigWigs_Mogushan: enabled
 BigWigs_HeartOfFear: enabled
 BigWigs_EndlessSpring: enabled
 OpenRaid: enabled
+Bagnon_AccountSearch: disabled
+Bagnon_Facade: disabled
+RaidRoll: enabled
+RaidRoll_LootTracker: enabled

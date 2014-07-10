@@ -5,7 +5,7 @@ if GetLocale()=="deDE" or GetLocale()=="ruRU" or GetLocale()=="zhTW" or GetLocal
 rsclocalel()
 end
 
-rscversion=5.427
+rscversion=5.428
 
 
 --zone ID where addon check flasks
@@ -108,6 +108,7 @@ rscfoodtable={
   104280,
   104283, --450 sta
   
+ 
   
   --104281, -- 375 Sta
 
@@ -266,9 +267,12 @@ rscfoodmanytable={
 126496,
 105193,
 104958,
+
+--Noodle Cart
 145166,
 145169,
 145196,
+  
 }
 
 rscfoodmanytable_add={
@@ -301,6 +305,7 @@ rscrobotsid={
 67826,
 22700,
 44389,
+54711,
 }
 
 

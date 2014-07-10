@@ -11,10 +11,10 @@ MasqueDB = {
 		["Gitt - Arthas"] = "Default",
 		["Evyyn - Azuremyst"] = "Default",
 		["Greny - Azuremyst"] = "Default",
-		["Spih - Arthas"] = "Default",
-		["Got - Arthas"] = "Default",
-		["Git - Cho'gall"] = "Default",
 		["Git - Arthas"] = "Default",
+		["Git - Cho'gall"] = "Default",
+		["Got - Arthas"] = "Default",
+		["Spih - Arthas"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -39,8 +39,9 @@ MasqueDB = {
 					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
 				},
-				["Bartender4_6"] = {
+				["SBF_ToT Debuffs"] = {
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["Bartender4_7"] = {
 					["SkinID"] = "Zoomed",
@@ -55,9 +56,9 @@ MasqueDB = {
 				["Bartender4_3"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["SBF_Target Buffs"] = {
-					["SkinID"] = "Zoomed",
+				["Raven_blah"] = {
 					["Inherit"] = false,
+					["SkinID"] = "Zoomed",
 				},
 				["Bartender4_2"] = {
 					["SkinID"] = "Zoomed",
@@ -65,7 +66,8 @@ MasqueDB = {
 				["Masque"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["Bartender4_StanceBar"] = {
+				["Raven"] = {
+					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
 				["Bartender4_BagBar"] = {
@@ -76,16 +78,16 @@ MasqueDB = {
 					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
 				},
-				["Raven"] = {
-					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
-				},
-				["SBF_Debuffs"] = {
+				["GupPet_Action Buttons"] = {
 					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
 				},
-				["Bartender4_PetBar"] = {
+				["Bartender4_4"] = {
 					["SkinID"] = "Zoomed",
+				},
+				["Bartender4_MicroMenu"] = {
+					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["Raven_Buffs"] = {
 					["Inherit"] = false,
@@ -105,32 +107,30 @@ MasqueDB = {
 					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
 				},
-				["Bartender4_MicroMenu"] = {
+				["Bartender4_PetBar"] = {
+					["SkinID"] = "Zoomed",
+				},
+				["SBF_Debuffs"] = {
 					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
 				},
-				["Bartender4_4"] = {
+				["Bartender4_StanceBar"] = {
 					["SkinID"] = "Zoomed",
-				},
-				["GupPet_Action Buttons"] = {
-					["SkinID"] = "Zoomed",
-					["Inherit"] = false,
 				},
 				["DiminishingReturns"] = {
 					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
 				},
-				["Raven_blah"] = {
-					["Inherit"] = false,
+				["SBF_Target Buffs"] = {
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["SBF_Buffs"] = {
 					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
 				},
-				["SBF_ToT Debuffs"] = {
+				["Bartender4_6"] = {
 					["SkinID"] = "Zoomed",
-					["Inherit"] = false,
 				},
 			},
 		},

@@ -24,6 +24,14 @@ GTFO.IgnoreSpellCategory["Fatigue"] = {
 	override = true
 }
 
+GTFO.IgnoreSpellCategory["GarroshDesecrated"] = {
+	-- Garrosh Hellscream
+	spellID = 144762,
+	desc = "Desecrated Axe (Garrosh Phase 1 & 2)",
+	tooltip = "Alert from the Desecrated Axe from Garrosh Hellscream (Phase 1 & 2)",
+	override = true
+}
+
 -- Scanner ignore list
 GTFO.IgnoreScan["124255"] = true; -- Monk's Stagger
 GTFO.IgnoreScan["124275"] = true; -- Monk's Light Stagger

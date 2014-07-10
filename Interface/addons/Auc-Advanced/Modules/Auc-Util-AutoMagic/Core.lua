@@ -1,6 +1,6 @@
 --[[
 	Auctioneer - AutoMagic Utility module
-	Version: 5.19.5445 (QuiescentQuoll)
+	Version: 5.20.5464 (RidiculousRockrat)
 	Revision: $Id: Core.lua 5443 2013-11-28 11:06:26Z brykrys $
 	URL: http://auctioneeraddon.com/
 
@@ -608,4 +608,4 @@ end
 
 
 
-AucAdvanced.RegisterRevision("$URL: http://svn.norganna.org/auctioneer/branches/5.19/Auc-Util-AutoMagic/Core.lua $", "$Rev: 5443 $")
+AucAdvanced.RegisterRevision("$URL: http://svn.norganna.org/auctioneer/branches/5.20/Auc-Util-AutoMagic/Core.lua $", "$Rev: 5443 $")

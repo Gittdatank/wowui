@@ -1,7 +1,7 @@
 --[[
 	Auctioneer Advanced
-	Version: 5.19.5445 (QuiescentQuoll)
-	Revision: $Id: CoreAPI.lua 5435 2013-09-19 01:37:32Z Shirik $
+	Version: 5.20.5464 (RidiculousRockrat)
+	Revision: $Id: CoreAPI.lua 5450 2014-01-15 18:57:22Z brykrys $
 	URL: http://auctioneeraddon.com/
 
 	This is an addon for World of Warcraft that adds statistical history to the auction data that is collected
@@ -114,20 +114,28 @@ do
 	may be curious of a different limit (for example, filter modules). In these cases, pass in a different
 	value for confidence. 0.5 = 50%, 0.75 = 75%, etc.
     ]]
-    function lib.GetMarketValue(itemLink, serverKey, confidence)
-        local _;
-        if type(itemLink) == 'number' then _, itemLink = GetItemInfo(itemLink) end
-	if not itemLink then return end
+	function lib.GetMarketValue(itemLink, serverKey, confidence)
+		local _;
+		if type(itemLink) == 'number' then _, itemLink = GetItemInfo(itemLink) end
+		if not itemLink then return end
 
-	local cacheSig = lib.GetSigFromLink(itemLink)
-	if not cacheSig then return end -- not a valid item link
+		local cacheSig = lib.GetSigFromLink(itemLink)
+		if not cacheSig then return end -- not a valid item link
 
-	-- need to append confidence level so we don't mix them up later
-	-- Rounded to a level that is effectively irrelevant to avoid FP errors
-	confidence = confidence or 0.5;
-	cacheSig = cacheSig .. (confidence == 0.5 and "" or ("-" .. math.floor(confidence * 10000)));
+		if type(confidence) ~= "number" then
+			if confidence then
+				-- invalid parameter - not a number and not nil
+				-- technically an error, but for the time being we will just log it and use default value
+				debugPrint(format("Invalid 'confidence' parameter for GetMarketValue:%s(%s)\nUsing default value.", tostring(confidence), type(confidence)),
+					"CoreAPI", "GetMarketValue invalid parameter", "Error")
+			end
+			confidence = 0.5
+		end
+		-- need to append confidence level to cacheSig so we don't mix them up later
+		-- Rounded to a level that is effectively irrelevant to avoid FP errors
+		cacheSig = cacheSig .. (confidence == 0.5 and "" or ("-" .. floor(confidence * 10000)));
 
-	serverKey = serverKey or GetFaction() -- call GetFaction once here, instead of in every Stat module
+		serverKey = serverKey or GetFaction() -- call GetFaction once here, instead of in every Stat module
 
         local cacheEntry = cache[serverKey][cacheSig]
         if cacheEntry then
@@ -1196,4 +1204,4 @@ do
 end
 
 
-AucAdvanced.RegisterRevision("$URL: http://svn.norganna.org/auctioneer/branches/5.19/Auc-Advanced/CoreAPI.lua $", "$Rev: 5435 $")
+AucAdvanced.RegisterRevision("$URL: http://svn.norganna.org/auctioneer/branches/5.20/Auc-Advanced/CoreAPI.lua $", "$Rev: 5450 $")

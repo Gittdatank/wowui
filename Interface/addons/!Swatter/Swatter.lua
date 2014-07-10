@@ -1,7 +1,7 @@
 --[[
 	Swatter - An AddOn debugging aid for World of Warcraft.
-	Version: 5.19.5445 (QuiescentQuoll)
-	Revision: $Id: Swatter.lua 352 2013-05-14 09:44:41Z brykrys $
+	Version: 5.20.5464 (RidiculousRockrat)
+	Revision: $Id: Swatter.lua 362 2014-05-13 11:22:38Z brykrys $
 	URL: http://auctioneeraddon.com/dl/Swatter/
 	Copyright (C) 2006 Norganna
 
@@ -43,7 +43,7 @@ Swatter = {
 	HISTORY_SIZE = 100,
 }
 
-Swatter.Version="5.19.5445"
+Swatter.Version="5.20.5464"
 if (Swatter.Version == "<%".."version%>") then
 	Swatter.Version = "5.1.DEV"
 end
@@ -77,7 +77,7 @@ hooksecurefunc("SetAddOnDetail", addOnDetail)
 
 -- End SetAddOnDetail function hook.
 
-LibStub("LibRevision"):Set("$URL: http://svn.norganna.org/libs/trunk/!Swatter/Swatter.lua $","$Rev: 352 $","5.1.DEV.", 'auctioneer', 'libs')
+LibStub("LibRevision"):Set("$URL: http://svn.norganna.org/libs/trunk/!Swatter/Swatter.lua $","$Rev: 362 $","5.1.DEV.", 'auctioneer', 'libs')
 
 local function toggle()
 	if Swatter.Error:IsVisible() then
@@ -115,8 +115,15 @@ local function addSlideIcon()
 	end
 end
 
-function Swatter.ChatMsg(msg)
-	DEFAULT_CHAT_FRAME:AddMessage(msg)
+do -- protect chat function, AddMessage can fail during certain events, e.g. at logout
+	local function protectChat(msg)
+		if DEFAULT_CHAT_FRAME then
+			DEFAULT_CHAT_FRAME:AddMessage(msg)
+		end
+	end
+	function Swatter.ChatMsg(msg)
+		pcall(protectChat, msg)
+	end
 end
 
 local chat = Swatter.ChatMsg
@@ -155,19 +162,19 @@ local function SwatterLink(id, context, hex)
 	-- Otherwise it would cause a disconnect {SWAT-12}
 end
 
+local flagBlockReentry -- Prevent re-entering OnError if an error occurs within it
+
 local function OnError(msg, frame, stack, etype, ...)
 	if type(msg) ~= "string" or msg == "" then
 		msg = "Unknown Error"
 	end
+	flagBlockReentry = msg
+
 	if type(frame) == "string" then
 		frame = Swatter.NamedFrame(frame) or Swatter.nilFrame
 	elseif type(frame) ~= "table" or type(frame.GetName) ~= "function" then
 		frame = Swatter.nilFrame
 	end
-	if type(stack) ~= "string" or stack == "" then
-		stack = debugstack(DEBUG_LEVEL, 20, 20)
-	end
-	local locals = debuglocals(DEBUG_LEVEL)
 
 	local context
 	if (not frame.Swatter) then frame.Swatter = {} end
@@ -178,19 +185,26 @@ local function OnError(msg, frame, stack, etype, ...)
 	if not (id and SwatterData.errors[id]) then
 		context = frame:GetName()
 		if type(context) ~= "string" or context == "" then context = "Unknown" end -- paranoia
-		local timestamp = date("%Y-%m-%d %H:%M:%S");
-		local addons = Swatter.GetAddOns()
-		tinsert(SwatterData.errors, {
+		local newentry = {
 			context = context,
-			timestamp = timestamp,
-			addons = addons,
+			timestamp = date("%Y-%m-%d %H:%M:%S"),
 			message = msg,
-			stack = stack,
-			locals = locals,
 			count = 0,
-		})
+		}
+		tinsert(SwatterData.errors, newentry)
 		id = #(SwatterData.errors)
 		frame.Swatter[msg] = id
+		tinsert(Swatter.errorOrder, id)
+
+
+		if type(stack) ~= "string" or stack == "" then
+			stack = debugstack(DEBUG_LEVEL, 20, 20)
+		end
+		newentry.stack = stack
+
+		newentry.locals = debuglocals(DEBUG_LEVEL)
+
+		newentry.addons = Swatter.GetAddOns()
 	else
 		context = SwatterData.errors[id].context
 		for pos, errid in ipairs(Swatter.errorOrder) do
@@ -199,8 +213,8 @@ local function OnError(msg, frame, stack, etype, ...)
 				break
 			end
 		end
+		tinsert(Swatter.errorOrder, id)
 	end
-	tinsert(Swatter.errorOrder, id)
 
 	local err = SwatterData.errors[id]
 	local count = err.count or 0
@@ -219,15 +233,24 @@ local function OnError(msg, frame, stack, etype, ...)
 			chat("|cffffaa11Swatter caught error:|r "..SwatterLink(id, context))
 		end
 	end
+	flagBlockReentry = nil
 end
 
 -- Wrappers around OnError to control which parameters get passed through
 local origHandler = geterrorhandler()
 local function OnErrorHandler(msg)
-	if SwatterData.enabled then
-		OnError(msg)
+	if not SwatterData.enabled then
+		return origHandler(msg) -- tailcall here, to remove this stub from the stack
+	elseif flagBlockReentry then
+		-- simple fallback handler: just report old and new messages to chat
+		-- (we do not call origHandler in case that encounters the same error, causing an infinite loop)
+		chat("Swatter: Error detected within OnError function")
+		chat("Old error: "..flagBlockReentry)
+		chat("New error: "..msg)
+		flagBlockReentry = nil
+		return
 	else
-		return origHandler(msg) -- trying tailcall here, to see if it removes this stub from the stack
+		OnError(msg)
 	end
 end
 seterrorhandler(OnErrorHandler)
@@ -477,12 +500,13 @@ function Swatter.ErrorDisplay(id)
 	local timestamp = err.timestamp or "Unavailable"
 	local addlist = err.addons or "  Unavailable"
 	local context = err.context or "Anonymous"
+	local trace = err.stack or "Unavailable"
 	local locals = err.locals or "None"
 
 	local message = err.message:gsub("(.-):(%d+): ", "%1 line %2:\n   "):gsub("Interface(\\%w+\\)", "..%1"):gsub(": in function `(.-)`", ": %1"):gsub("|", "||"):gsub("{{{", "|cffff8855"):gsub("}}}", "|r")
 	--Hide users account name if it is a saved variable related error
 	message = message:gsub("(.-Account\\)(.-)(\\SavedVariables.*)", "%1BLANK%3")
-	local trace = "   "..err.stack:gsub("Interface\\AddOns\\", ""):gsub("Interface(\\%w+\\)", "..%1"):gsub(": in function `(.-)'", ": %1()"):gsub(": in function <(.-)>", ":\n   %1"):gsub(": in main chunk ", ": "):gsub("\n$",""):gsub("\n", "\n   ")
+	trace = "   "..trace:gsub("Interface\\AddOns\\", ""):gsub("Interface(\\%w+\\)", "..%1"):gsub(": in function `(.-)'", ": %1()"):gsub(": in function <(.-)>", ":\n   %1"):gsub(": in main chunk ", ": "):gsub("\n$",""):gsub("\n", "\n   ")
 	local count = err.count
 	if (count > 999) then count = "\226\136\158" --[[Infinity]] end
 
@@ -691,6 +715,7 @@ SlashCmdList["SWATTER"] = function(msg)
 		Swatter.ErrorShow()
 	elseif (msg == "enable") then
 		SwatterData.enabled = true
+		flagBlockReentry = false
 		chat("Swatter will now catch errors")
 	elseif (msg == "disable") then
 		SwatterData.enabled = false
@@ -719,6 +744,7 @@ SlashCmdList["SWATTER"] = function(msg)
 		Swatter.errorOrder = {}
 		Swatter.loadCount = 0
 		Swatter.lastShown = 0
+		flagBlockReentry = false
 		--Note: we are not killing the frame.Swatter values - I am hoping that they are transient to the game session and aren't saved anywhere
 		--Swatter.ErrorUpdate()
 		chat("Swatter errors have been cleared")

@@ -62,6 +62,7 @@ if (GetLocale() == "esES") then
 	["Reload your User Interface?"] = "¿Recargar la Interfaz de Usuario?",
 	["Remove from current selection"] = "Eliminar de la selección actual",
 	Rename = "Renombrar ",
+	-- ["Resurse-ToolTip"] = "",
 	Save = "Grabar ",
 	["Save the current addon list to [%s]?"] = "¿Grabar la lista actual de accesorios en [%s]?",
 	["Set "] = "Establecido",

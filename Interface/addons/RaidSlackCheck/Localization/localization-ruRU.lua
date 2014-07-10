@@ -144,8 +144,8 @@ rscadditionalstat4    = "Ловк"
 rscadditionalstat5    = "Сила"
 rscadditionalstatbonus = "бонус"
 rscpartanonsfoodadd        = "учитывать %s еду"
-rsceating				= "кушает"
-
+rsceating				= "ест"
+rsceating2				= "ест"
 
 end
 

@@ -1,6 +1,6 @@
 --[[
 	Auctioneer
-	Version: 5.19.5445 (QuiescentQuoll)
+	Version: 5.20.5464 (RidiculousRockrat)
 	Revision: $Id: CoreResources.lua 5285 2012-04-17 15:45:55Z brykrys $
 	URL: http://auctioneeraddon.com/
 

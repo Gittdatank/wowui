@@ -1,14 +1,15 @@
 
 BLCDrosterReload = {
 	["0x02000000085AB16A"] = {
+		["spec"] = 268,
 		["talents"] = {
-			[122783] = {
-				["idx"] = 15,
-				["name_localized"] = "Diffuse Magic",
-				["tier"] = 5,
-				["spell_id"] = 122783,
-				["icon"] = "Interface\\Icons\\spell_monk_diffusemagic",
-				["column"] = 3,
+			[116847] = {
+				["idx"] = 16,
+				["name_localized"] = "Rushing Jade Wind",
+				["tier"] = 6,
+				["spell_id"] = 116847,
+				["icon"] = "Interface\\Icons\\ability_monk_rushingjadewind",
+				["column"] = 1,
 			},
 			[116841] = {
 				["idx"] = 2,
@@ -26,6 +27,14 @@ BLCDrosterReload = {
 				["icon"] = "Interface\\Icons\\ability_monk_ascension",
 				["column"] = 2,
 			},
+			[122278] = {
+				["idx"] = 14,
+				["name_localized"] = "Dampen Harm",
+				["tier"] = 5,
+				["spell_id"] = 122278,
+				["icon"] = "Interface\\Icons\\ability_monk_dampenharm",
+				["column"] = 2,
+			},
 			[119381] = {
 				["idx"] = 12,
 				["name_localized"] = "Leg Sweep",
@@ -33,14 +42,6 @@ BLCDrosterReload = {
 				["spell_id"] = 119381,
 				["icon"] = "Interface\\Icons\\ability_monk_legsweep",
 				["column"] = 3,
-			},
-			[123904] = {
-				["idx"] = 17,
-				["name_localized"] = "Invoke Xuen, the White Tiger",
-				["tier"] = 6,
-				["spell_id"] = 123904,
-				["icon"] = "Interface\\Icons\\ability_monk_summontigerstatue",
-				["column"] = 2,
 			},
 			[115098] = {
 				["idx"] = 4,
@@ -53,6 +54,5 @@ BLCDrosterReload = {
 		},
 		["name"] = "Gitt",
 		["class"] = "MONK",
-		["spec"] = 268,
 	},
 }

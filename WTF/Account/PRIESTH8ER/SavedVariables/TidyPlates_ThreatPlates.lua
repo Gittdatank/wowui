@@ -2,10 +2,9 @@
 ThreatPlatesDB = {
 	["char"] = {
 		["Dbyx - Arthas"] = {
-			["welcome"] = true,
 			["specInfo"] = {
 				{
-					["name"] = "Unknown",
+					["name"] = "Destruction",
 					["role"] = "DAMAGER",
 				}, -- [1]
 				{
@@ -13,6 +12,7 @@ ThreatPlatesDB = {
 					["role"] = "DAMAGER",
 				}, -- [2]
 			},
+			["welcome"] = true,
 			["spec"] = {
 				["primary"] = false,
 			},
@@ -223,10 +223,6 @@ ThreatPlatesDB = {
 			["welcome"] = true,
 		},
 		["Gitt - Arthas"] = {
-			["welcome"] = true,
-			["spec"] = {
-				["secondary"] = true,
-			},
 			["specInfo"] = {
 				{
 					["name"] = "Brewmaster",
@@ -237,21 +233,12 @@ ThreatPlatesDB = {
 					["role"] = "DAMAGER",
 				}, -- [2]
 			},
-		},
-		["Git - Arthas"] = {
 			["welcome"] = true,
-			["specInfo"] = {
-				{
-					["name"] = "Protection",
-					["role"] = "TANK",
-				}, -- [1]
-				{
-					["name"] = "Fury",
-					["role"] = "DAMAGER",
-				}, -- [2]
+			["spec"] = {
+				["secondary"] = true,
 			},
 		},
-		["Git - Cho'gall"] = {
+		["Git - Arthas"] = {
 			["welcome"] = true,
 			["specInfo"] = {
 				{
@@ -278,6 +265,19 @@ ThreatPlatesDB = {
 			["welcome"] = true,
 			["spec"] = {
 				["primary"] = false,
+			},
+		},
+		["Git - Cho'gall"] = {
+			["welcome"] = true,
+			["specInfo"] = {
+				{
+					["name"] = "Protection",
+					["role"] = "TANK",
+				}, -- [1]
+				{
+					["name"] = "Fury",
+					["role"] = "DAMAGER",
+				}, -- [2]
 			},
 		},
 		["Giitt - Feathermoon"] = {
@@ -340,10 +340,10 @@ ThreatPlatesDB = {
 			},
 		},
 		["Lihte - Cho'gall"] = {
-			["welcome"] = true,
 			["spec"] = {
 				["primary"] = false,
 			},
+			["welcome"] = true,
 			["specInfo"] = {
 				{
 					[3] = 14,
@@ -414,8 +414,8 @@ ThreatPlatesDB = {
 		["Gimm - Cho'gall"] = "Default",
 		["Gitt - Arthas"] = "Gitt - Monk",
 		["Git - Arthas"] = "Default",
-		["Git - Cho'gall"] = "Default",
 		["Greny - Azuremyst"] = "Default",
+		["Git - Cho'gall"] = "Default",
 		["Giitt - Feathermoon"] = "Default",
 		["Git - Azuremyst"] = "Default",
 		["Spih - Cho'gall"] = "Spih",
@@ -449,14 +449,6 @@ ThreatPlatesDB = {
 				[34] = {
 				},
 				[48] = {
-				},
-				[38] = {
-				},
-				[40] = {
-				},
-				[42] = {
-				},
-				[49] = {
 				},
 				["list"] = {
 					"Shadow Fiend", -- [1]
@@ -509,6 +501,14 @@ ThreatPlatesDB = {
 					"", -- [48]
 					"", -- [49]
 					"", -- [50]
+				},
+				[40] = {
+				},
+				[42] = {
+				},
+				[49] = {
+				},
+				[38] = {
 				},
 			},
 			["settings"] = {
@@ -565,7 +565,7 @@ ThreatPlatesDB = {
 				},
 				[48] = {
 				},
-				["list"] = {
+				[38] = {
 				},
 				[40] = {
 				},
@@ -573,40 +573,30 @@ ThreatPlatesDB = {
 				},
 				[49] = {
 				},
-				[38] = {
+				["list"] = {
 				},
 			},
 		},
 		["Default"] = {
 			["nameplate"] = {
+				["scale"] = {
+					["Normal"] = 0.5,
+					["Boss"] = 0.8,
+					["Elite"] = 0.6000000238418579,
+					["Neutral"] = 0.6000000238418579,
+				},
 				["toggle"] = {
 					["Totem"] = true,
-				},
-				["scale"] = {
-					["Elite"] = 0.6000000238418579,
-					["Boss"] = 0.8,
-					["Neutral"] = 0.6000000238418579,
-					["Normal"] = 0.5,
 				},
 			},
 			["uniqueSettings"] = {
 				[33] = {
 				},
-				[34] = {
-				},
-				[38] = {
-				},
-				[40] = {
+				[50] = {
 				},
 				[41] = {
 				},
-				[42] = {
-				},
-				[48] = {
-				},
-				[49] = {
-				},
-				[50] = {
+				[34] = {
 				},
 				["list"] = {
 					"Shadow Fiend", -- [1]
@@ -660,6 +650,54 @@ ThreatPlatesDB = {
 					"", -- [49]
 					"", -- [50]
 				},
+				[38] = {
+				},
+				[40] = {
+				},
+				[42] = {
+				},
+				[49] = {
+				},
+				[48] = {
+				},
+			},
+			["settings"] = {
+				["customtext"] = {
+					["typeface"] = "DorisPP",
+					["size"] = 9,
+				},
+				["healthbar"] = {
+					["texture"] = "Smooth",
+				},
+				["spelltext"] = {
+					["typeface"] = "DorisPP",
+					["size"] = 9,
+				},
+				["name"] = {
+					["align"] = "LEFT",
+					["vertical"] = "BOTTOM",
+					["typeface"] = "DorisPP",
+					["size"] = 9,
+				},
+				["level"] = {
+					["typeface"] = "DorisPP",
+					["vertical"] = "CENTER",
+					["size"] = 9,
+				},
+				["healthborder"] = {
+					["texture"] = "TP_HealthBarOverlayThin",
+				},
+				["castbar"] = {
+					["texture"] = "Gloss",
+				},
+			},
+			["cache"] = {
+			},
+			["tankedWidget"] = {
+				["ON"] = true,
+			},
+			["classWidget"] = {
+				["ON"] = false,
 			},
 			["threat"] = {
 				["art"] = {
@@ -674,46 +712,8 @@ ThreatPlatesDB = {
 					},
 				},
 			},
-			["cache"] = {
-			},
-			["settings"] = {
-				["customtext"] = {
-					["typeface"] = "DorisPP",
-					["size"] = 9,
-				},
-				["spelltext"] = {
-					["typeface"] = "DorisPP",
-					["size"] = 9,
-				},
-				["level"] = {
-					["vertical"] = "CENTER",
-					["typeface"] = "DorisPP",
-					["size"] = 9,
-				},
-				["healthbar"] = {
-					["texture"] = "Smooth",
-				},
-				["healthborder"] = {
-					["texture"] = "TP_HealthBarOverlayThin",
-				},
-				["castbar"] = {
-					["texture"] = "Gloss",
-				},
-				["name"] = {
-					["align"] = "LEFT",
-					["vertical"] = "BOTTOM",
-					["typeface"] = "DorisPP",
-					["size"] = 9,
-				},
-			},
 			["targetWidget"] = {
 				["theme"] = "arrows",
-			},
-			["classWidget"] = {
-				["ON"] = false,
-			},
-			["tankedWidget"] = {
-				["ON"] = true,
 			},
 		},
 		["Spih"] = {
@@ -739,14 +739,6 @@ ThreatPlatesDB = {
 				},
 				[48] = {
 				},
-				[38] = {
-				},
-				[40] = {
-				},
-				[42] = {
-				},
-				[49] = {
-				},
 				["list"] = {
 					"Shadow Fiend", -- [1]
 					"Spirit Wolf", -- [2]
@@ -798,6 +790,14 @@ ThreatPlatesDB = {
 					"", -- [48]
 					"", -- [49]
 					"", -- [50]
+				},
+				[40] = {
+				},
+				[42] = {
+				},
+				[49] = {
+				},
+				[38] = {
 				},
 			},
 			["settings"] = {
@@ -844,24 +844,34 @@ ThreatPlatesDB = {
 		},
 		["Gitt - Monk"] = {
 			["nameplate"] = {
-				["scale"] = {
-					["Normal"] = 0.5,
-					["Boss"] = 0.8,
-					["Elite"] = 0.6000000238418579,
-					["Neutral"] = 0.6000000238418579,
-				},
 				["toggle"] = {
 					["Totem"] = true,
+				},
+				["scale"] = {
+					["Elite"] = 0.6000000238418579,
+					["Boss"] = 0.8,
+					["Neutral"] = 0.6000000238418579,
+					["Normal"] = 0.5,
 				},
 			},
 			["uniqueSettings"] = {
 				[33] = {
 				},
-				[50] = {
+				[34] = {
+				},
+				[38] = {
+				},
+				[40] = {
 				},
 				[41] = {
 				},
-				[34] = {
+				[42] = {
+				},
+				[48] = {
+				},
+				[49] = {
+				},
+				[50] = {
 				},
 				["list"] = {
 					"Shadow Fiend", -- [1]
@@ -915,54 +925,6 @@ ThreatPlatesDB = {
 					"", -- [49]
 					"", -- [50]
 				},
-				[38] = {
-				},
-				[40] = {
-				},
-				[42] = {
-				},
-				[49] = {
-				},
-				[48] = {
-				},
-			},
-			["settings"] = {
-				["customtext"] = {
-					["typeface"] = "DorisPP",
-					["size"] = 9,
-				},
-				["healthbar"] = {
-					["texture"] = "Smooth",
-				},
-				["spelltext"] = {
-					["typeface"] = "DorisPP",
-					["size"] = 9,
-				},
-				["name"] = {
-					["align"] = "LEFT",
-					["vertical"] = "BOTTOM",
-					["typeface"] = "DorisPP",
-					["size"] = 9,
-				},
-				["level"] = {
-					["typeface"] = "DorisPP",
-					["vertical"] = "CENTER",
-					["size"] = 9,
-				},
-				["healthborder"] = {
-					["texture"] = "TP_HealthBarOverlayThin",
-				},
-				["castbar"] = {
-					["texture"] = "Gloss",
-				},
-			},
-			["cache"] = {
-			},
-			["tankedWidget"] = {
-				["ON"] = true,
-			},
-			["classWidget"] = {
-				["ON"] = false,
 			},
 			["threat"] = {
 				["art"] = {
@@ -977,8 +939,46 @@ ThreatPlatesDB = {
 					},
 				},
 			},
+			["cache"] = {
+			},
+			["settings"] = {
+				["customtext"] = {
+					["typeface"] = "DorisPP",
+					["size"] = 9,
+				},
+				["spelltext"] = {
+					["typeface"] = "DorisPP",
+					["size"] = 9,
+				},
+				["level"] = {
+					["vertical"] = "CENTER",
+					["typeface"] = "DorisPP",
+					["size"] = 9,
+				},
+				["healthbar"] = {
+					["texture"] = "Smooth",
+				},
+				["healthborder"] = {
+					["texture"] = "TP_HealthBarOverlayThin",
+				},
+				["castbar"] = {
+					["texture"] = "Gloss",
+				},
+				["name"] = {
+					["align"] = "LEFT",
+					["vertical"] = "BOTTOM",
+					["typeface"] = "DorisPP",
+					["size"] = 9,
+				},
+			},
 			["targetWidget"] = {
 				["theme"] = "arrows",
+			},
+			["classWidget"] = {
+				["ON"] = false,
+			},
+			["tankedWidget"] = {
+				["ON"] = true,
 			},
 		},
 		["Arthas"] = {
@@ -993,7 +993,7 @@ ThreatPlatesDB = {
 				},
 				[48] = {
 				},
-				["list"] = {
+				[38] = {
 				},
 				[40] = {
 				},
@@ -1001,7 +1001,7 @@ ThreatPlatesDB = {
 				},
 				[49] = {
 				},
-				[38] = {
+				["list"] = {
 				},
 			},
 		},
@@ -1017,7 +1017,7 @@ ThreatPlatesDB = {
 				},
 				[48] = {
 				},
-				["list"] = {
+				[38] = {
 				},
 				[40] = {
 				},
@@ -1025,7 +1025,7 @@ ThreatPlatesDB = {
 				},
 				[49] = {
 				},
-				[38] = {
+				["list"] = {
 				},
 			},
 		},

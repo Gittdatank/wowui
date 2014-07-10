@@ -254,6 +254,11 @@ GTFO.SpellID["116297"] = {
 	trivialPercent = 0;
 };
 
+GTFO.SpellID["106874"] = {
+	--desc = "Fire Bomb";
+	sound = 1;
+};
+
 GTFO.SpellID["107122"] = {
 	--desc = "Viscous Fluid (Commander Ri'mok)";
 	sound = 1;
@@ -1509,10 +1514,15 @@ GTFO.SpellID["146818"] = {
 	sound = 4;
 };
 
+GTFO.SpellID["144774"] = {
+	--desc = "Reaching Attack (Sha of Pride)";
+	sound = 0;
+	tankSound = 1;
+};
+
 GTFO.SpellID["145219"] = {
 	--desc = "Corruption (Sha of Pride - Heroic)";
 	sound = 1;
-	test = true; -- Verify this is the damage from walls in the Pac-Man room
 };
 
 GTFO.SpellID["147705"] = {
@@ -1621,7 +1631,12 @@ GTFO.SpellID["142759"] = {
 };
 
 -- TODO: Languish (Living Corruption) -- Avoidable/kitable?
--- TODO: Crimson Acid (Modified Anima Golem)
+
+GTFO.SpellID["149280"] = {
+	--desc = "Crimson Acid (Modified Anima Golem)";
+	sound = 1;
+};
+
 
 GTFO.SpellID["145716"] = {
 	--desc = "Gusting Bomb (Sri'thik Bombardier)";
@@ -1705,9 +1720,12 @@ GTFO.SpellID["146452"] = {
 -- TODO: Catalytic Reaction: Yellow (Toxic Cloud) (Xaril the Poisoned Mind) xxxx
 -- TODO: Catalytic Reaction: Purple - Canned Heat (Xaril the Poisoned Mind)
 -- TODO: Catalytic Reaction: Green - Eerie Fog (Xaril the Poisoned Mind) -- People are supposed to stand in this, but how do stacks work?
--- TODO: Vicious Assault (Korven the Prime) 143977?
--- TODO: Insane Calculation: Fiery Edge (Iyyokuk the Lucid) -- Fire beams?
 -- TODO: Whirling (Ka'roz the Locust) 143701 -- Avoidable?  How about when stunned?
+
+GTFO.SpellID["146452"] = {
+	--desc = "Resonating Amber (Xaril the Poisoned Mind)"; 
+	sound = 1;
+};
 
 GTFO.SpellID["142809"] = {
 	--desc = "Fiery Edge (Iyyokuk the Lucid)"; 
@@ -1723,7 +1741,41 @@ GTFO.SpellID["143735"] = {
 };
 
 -- TODO: Rapid Fire (Hisek the Swarmkeeper) 143243
--- TODO: Sonic Projection (Kaz'tik the Manipulator) 143768 - Fail when hit by more than one
+
+GTFO.SpellID["143980"] = {
+	--desc = "Vicious Assault (Korven the Prime)";
+	sound = 1;
+	tankSound = 0;
+};
+
+GTFO.SpellID["143981"] = {
+	--desc = "Vicious Assault (Korven the Prime)";
+	sound = 1;
+	tankSound = 0;
+};
+
+GTFO.SpellID["143982"] = {
+	--desc = "Vicious Assault (Korven the Prime)";
+	sound = 1;
+	tankSound = 0;
+};
+
+GTFO.SpellID["143984"] = {
+	--desc = "Vicious Assault (Korven the Prime)";
+	sound = 1;
+	tankSound = 0;
+};
+
+GTFO.SpellID["143985"] = {
+	--desc = "Vicious Assault (Korven the Prime)";
+	sound = 1;
+	tankSound = 0;
+};
+
+GTFO.SpellID["143576"] = {
+	--desc = "Canned Heat (Xaril the Poisoned Mind)"; 
+	sound = 1;
+};
 
 GTFO.SpellID["144762"] = {
 	--desc = "Desecrated (Garrosh Hellscream)"; 

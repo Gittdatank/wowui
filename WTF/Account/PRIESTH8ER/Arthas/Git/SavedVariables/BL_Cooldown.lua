@@ -1,6 +1,12 @@
 
 BLCDrosterReload = {
+	["0x0200000008617ABD"] = {
+		["extra"] = true,
+		["class"] = "PRIEST",
+		["name"] = "Spih",
+	},
 	["0x0200000008560956"] = {
+		["class"] = "WARRIOR",
 		["talents"] = {
 			[103827] = {
 				["idx"] = 2,
@@ -10,12 +16,12 @@ BLCDrosterReload = {
 				["icon"] = "Interface\\Icons\\INV_Misc_Horn_04",
 				["column"] = 2,
 			},
-			[114030] = {
-				["idx"] = 15,
-				["name_localized"] = "Vigilance",
-				["tier"] = 5,
-				["spell_id"] = 114030,
-				["icon"] = "Interface\\Icons\\Ability_Warrior_Vigilance",
+			[102060] = {
+				["idx"] = 9,
+				["name_localized"] = "Disrupting Shout",
+				["tier"] = 3,
+				["spell_id"] = 102060,
+				["icon"] = "Interface\\Icons\\warrior_disruptingshout",
 				["column"] = 3,
 			},
 			[12292] = {
@@ -34,25 +40,24 @@ BLCDrosterReload = {
 				["icon"] = "Interface\\Icons\\Ability_Warrior_FocusedRage",
 				["column"] = 1,
 			},
-			[102060] = {
-				["idx"] = 9,
-				["name_localized"] = "Disrupting Shout",
-				["tier"] = 3,
-				["spell_id"] = 102060,
-				["icon"] = "Interface\\Icons\\warrior_disruptingshout",
+			[114030] = {
+				["idx"] = 15,
+				["name_localized"] = "Vigilance",
+				["tier"] = 5,
+				["spell_id"] = 114030,
+				["icon"] = "Interface\\Icons\\Ability_Warrior_Vigilance",
 				["column"] = 3,
 			},
-			[118000] = {
-				["idx"] = 12,
-				["name_localized"] = "Dragon Roar",
+			[46968] = {
+				["idx"] = 11,
+				["name_localized"] = "Shockwave",
 				["tier"] = 4,
-				["spell_id"] = 118000,
-				["icon"] = "Interface\\Icons\\ability_warrior_dragonroar",
-				["column"] = 3,
+				["spell_id"] = 46968,
+				["icon"] = "Interface\\Icons\\Ability_Warrior_Shockwave",
+				["column"] = 2,
 			},
 		},
 		["name"] = "Git",
-		["class"] = "WARRIOR",
 		["spec"] = 73,
 	},
 }

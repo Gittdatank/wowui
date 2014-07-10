@@ -1197,7 +1197,7 @@ GTFO.SpellID["144615"] = {
 };
 
 GTFO.SpellID["149031"] = {
-	--desc = "Ethereal Corruption (Sha of Pride)";
+	--desc = "Ethereal Corruption (Sha of Pride - Heroic)";
 	sound = 3;
 };
 
@@ -1206,9 +1206,6 @@ GTFO.SpellID["147198"] = {
 	sound = 3;
 };
 
--- TODO: Instant kill from the add in pac-man room (Sha of Pride)
--- TODO: Projection Explosion (Sha of Pride) -- Friendly Fire Fail
-
 GTFO.SpellID["146743"] = {
 	--desc = "Sniped! (Kor'kron Elite Sniper)";
 	sound = 3;
@@ -1216,6 +1213,11 @@ GTFO.SpellID["146743"] = {
 
 GTFO.SpellID["148506"] = {
 	--desc = "Spike Mine Detonation (Pressure Mine)";
+	sound = 3;
+};
+
+GTFO.SpellID["145752"] = {
+	--desc = "Spike Mine Detonation (Cannon Mine)";
 	sound = 3;
 };
 
@@ -1228,6 +1230,7 @@ GTFO.SpellID["146849"] = {
 	--desc = "Shattering Cleave (High Enforcer Thranok)";
 	soundHeroic = 3;
 	tankSound = 0;
+	tankSoundHeroic = 0;
 };
 
 GTFO.SpellID["147688"] = {
@@ -1260,8 +1263,17 @@ GTFO.SpellID["144919"] = {
 };
 
 -- TODO: Demolisher Cannons (Iron Juggernaut) - Avoidable group AOE? Like Jikun Caw?
--- TODO: Swipe (Darkfang/Bloodclaw) - Tank-only?
--- TODO: Iron Tomb (Earthbreaker Haromm) - Fail on application or necessary? 
+
+GTFO.SpellID["144303"] = {
+	--desc = "Swipe (Darkfang/Bloodclaw)";
+	sound = 3;
+	tankSound = 0;
+};
+
+GTFO.SpellID["144334"] = {
+	--desc = "Iron Tomb (Earthbreaker Haromm)";
+	sound = 3;
+};
 
 GTFO.SpellID["144030"] = {
 	--desc = "Toxic Tornado (Wavebinder Kardris)";
@@ -1475,10 +1487,13 @@ GTFO.SpellID["146605"] = {
 
 -- TODO: Catalytic Reaction: Red (Xaril the Poisoned Mind) - Friendly Fire fail
 -- TODO: Catalytic Reaction: Orange (Ring of Fire) (Xaril the Poisoned Mind) - Rings a one-time hit or multiple hit?
--- TODO: Devour Whole (Hungry Kunchongs) - Ji'kun Snail fail
 -- TODO: Swipe (Mature Kunchong) - Avoidable?
--- TODO: Sonic Projection (Kaz'tik the Manipulator) 143768 - Avoidable by target?
 -- TODO: Swipe (Amber Scorpion) 143378 - Fail for non-tanks or just fail for anyone with Sting 143376 ?
+
+GTFO.SpellID["143240"] = {
+	--desc = "Sonic Pulse (Hisek the Swarmkeeper)";
+	soundHeroic = 3;
+};
 
 GTFO.SpellID["144094"] = {
 	--desc = "Sonic Resonance (Hisek the Swarmkeeper)";

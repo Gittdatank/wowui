@@ -70,6 +70,7 @@ ACP:UpdateLocale( {
 	["Status"] = true;
 	["Dependencies"] = true;
 	["Embeds"] = "Optional Deps";
+    ["Resurse-ToolTip"] = "When enabling an addon, attempt to enable any addons the addon depends on";
 } )
 --@enddebug@
 
@@ -135,6 +136,7 @@ if (GetLocale() == "enUS") then
 	["Reload your User Interface?"] = "Reload your User Interface?",
 	["Remove from current selection"] = "Remove from current selection",
 	Rename = "Rename",
+	["Resurse-ToolTip"] = "When enabling an addon, attempt to enable any addons the addon depends on",
 	Save = "Save",
 	["Save the current addon list to [%s]?"] = "Save the current addon list to [%s]?",
 	["Set "] = "Set ",

@@ -16,21 +16,21 @@ TipTac_Config = {
 	["classification_rareelite"] = "+%s|r (Rare) ",
 	["showDebuffs"] = false,
 	["manaBar"] = true,
-	["barTexture"] = "Interface\\Addons\\SharedMedia\\statusbar\\Flat",
-	["auraSize"] = 8,
-	["barFontFace"] = "Interface\\Addons\\SharedMedia\\fonts\\DORISPP.ttf",
 	["tipBorderColor"] = {
 		0.3019607843137255, -- [1]
 		0.3019607843137255, -- [2]
 		0.4, -- [3]
 		0, -- [4]
 	},
-	["targetYouText"] = "<<YOU>>",
-	["showGuildRank"] = true,
+	["auraSize"] = 8,
+	["barFontFace"] = "Interface\\Addons\\SharedMedia\\fonts\\DORISPP.ttf",
+	["barTexture"] = "Interface\\Addons\\SharedMedia\\statusbar\\Flat",
+	["auraMaxRows"] = 1,
 	["top"] = 284.2500304525512,
+	["showGuildRank"] = true,
 	["classification_normal"] = "%s ",
 	["gradientTip"] = false,
-	["auraMaxRows"] = 1,
+	["targetYouText"] = "<<YOU>>",
 	["classification_minus"] = "-%s ",
 	["barFontSize"] = 8.840890884399414,
 	["fontFace"] = "Interface\\Addons\\SharedMedia\\fonts\\DORISPP.ttf",

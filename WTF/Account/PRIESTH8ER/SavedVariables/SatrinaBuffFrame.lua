@@ -13,13 +13,13 @@ SBFDB = {
 		["Gitt - Cho'gall"] = "Giit - Cho'gall",
 		["Giit - Cho'gall"] = "Giit tank",
 		["Gimm - Cho'gall"] = "Gimm - Cho'gall",
-		["Git - Azuremyst"] = "Git - Azuremyst",
+		["Git - Cho'gall"] = "Git - Cho'gall",
 		["Burk - Azuremyst"] = "Burk - Azuremyst",
 		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
-		["Git - Cho'gall"] = "Git - Cho'gall",
+		["Greny - Azuremyst"] = "Greny - Azuremyst",
 		["Spih - Cho'gall"] = "Spih - Cho'gall",
 		["Lihte - Cho'gall"] = "Lihte - Cho'gall",
-		["Greny - Azuremyst"] = "Greny - Azuremyst",
+		["Git - Azuremyst"] = "Git - Azuremyst",
 		["Git - Arthas"] = "Git - Arthas",
 	},
 	["global"] = {
@@ -33,29 +33,21 @@ SBFDB = {
 				30, -- [1]
 				false, -- [2]
 				20, -- [3]
-				"ANYONE", -- [4]
-				1400028565, -- [5]
+				"WARLOCK", -- [4]
+				1404662793, -- [5]
 				{
 				}, -- [6]
 				"Honorless Target", -- [7]
 			},
-			[97340] = {
+			[161795] = {
 				0, -- [1]
 				true, -- [2]
 				20, -- [3]
-				"PALADIN", -- [4]
-				1400028565, -- [5]
+				"WARLOCK", -- [4]
+				1404662793, -- [5]
 				{
 				}, -- [6]
-				"Guild Champion", -- [7]
-			},
-			[148417] = {
-				0, -- [1]
-				true, -- [2]
-				20, -- [3]
-				"PALADIN", -- [4]
-				1400028657, -- [5]
-				[7] = "Kor'kron Juggernaut",
+				"Heart of the Valorous", -- [7]
 			},
 		},
 	},
@@ -76,6 +68,8 @@ SBFDB = {
 					["backdrop"] = false,
 					["skin"] = "Blizzard",
 				},
+			},
+			["settings"] = {
 			},
 			["frames"] = {
 				{
@@ -240,8 +234,6 @@ SBFDB = {
 					["filters"] = {
 					},
 				}, -- [2]
-			},
-			["settings"] = {
 			},
 			["flow"] = {
 			},
@@ -265,6 +257,8 @@ SBFDB = {
 			},
 			["flow"] = {
 			},
+			["settings"] = {
+			},
 			["frames"] = {
 				{
 					["general"] = {
@@ -428,8 +422,6 @@ SBFDB = {
 					["filters"] = {
 					},
 				}, -- [2]
-			},
-			["settings"] = {
 			},
 		},
 		["Giit - Azuremyst"] = {
@@ -451,6 +443,8 @@ SBFDB = {
 			},
 			["flow"] = {
 			},
+			["settings"] = {
+			},
 			["frames"] = {
 				{
 					["general"] = {
@@ -615,11 +609,11 @@ SBFDB = {
 					},
 				}, -- [2]
 			},
-			["settings"] = {
-			},
 		},
 		["Giit tank"] = {
 			["flow"] = {
+			},
+			["settings"] = {
 			},
 			["frames"] = {
 				{
@@ -1008,8 +1002,6 @@ SBFDB = {
 					},
 				},
 			},
-			["settings"] = {
-			},
 			["buttonFacade"] = {
 				["Debuffs"] = {
 					["colours"] = {
@@ -1061,82 +1053,7 @@ SBFDB = {
 					["backdrop"] = true,
 					["skin"] = "Blizzard",
 				},
-				["Small Notes"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
-				["Target Debuffs"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
 				["Buffs"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
-				["oh shit"] = {
 					["colours"] = {
 						["Gloss"] = {
 							1, -- [1]
@@ -1186,6 +1103,81 @@ SBFDB = {
 					["backdrop"] = true,
 					["skin"] = "Blizzard",
 				},
+				["Small Notes"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+				["oh shit"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+				["Target Debuffs"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
 			},
 		},
 		["Giitt - Silvermoon"] = {
@@ -1204,6 +1196,8 @@ SBFDB = {
 					["backdrop"] = false,
 					["skin"] = "Blizzard",
 				},
+			},
+			["settings"] = {
 			},
 			["frames"] = {
 				{
@@ -1369,15 +1363,11 @@ SBFDB = {
 					},
 				}, -- [2]
 			},
-			["settings"] = {
-			},
 			["flow"] = {
 			},
 		},
 		["Cowbeary - Azuremyst"] = {
 			["flow"] = {
-			},
-			["settings"] = {
 			},
 			["frames"] = {
 				{
@@ -1957,6 +1947,8 @@ SBFDB = {
 					},
 				}, -- [7]
 			},
+			["settings"] = {
+			},
 			["buttonFacade"] = {
 				["Debuffs"] = {
 					["gloss"] = 0,
@@ -1972,28 +1964,7 @@ SBFDB = {
 					["backdrop"] = false,
 					["skin"] = "Blizzard",
 				},
-				["Small Notes"] = {
-					["gloss"] = 0,
-					["colours"] = {
-					},
-					["backdrop"] = false,
-					["skin"] = "Blizzard",
-				},
-				["ToT Debuffs"] = {
-					["gloss"] = 0,
-					["colours"] = {
-					},
-					["backdrop"] = false,
-					["skin"] = "Blizzard",
-				},
 				["Buffs"] = {
-					["gloss"] = 0,
-					["colours"] = {
-					},
-					["backdrop"] = false,
-					["skin"] = "Blizzard",
-				},
-				["oh shit"] = {
 					["gloss"] = 0,
 					["colours"] = {
 					},
@@ -2007,10 +1978,33 @@ SBFDB = {
 					["backdrop"] = false,
 					["skin"] = "Blizzard",
 				},
+				["Small Notes"] = {
+					["gloss"] = 0,
+					["colours"] = {
+					},
+					["backdrop"] = false,
+					["skin"] = "Blizzard",
+				},
+				["oh shit"] = {
+					["gloss"] = 0,
+					["colours"] = {
+					},
+					["backdrop"] = false,
+					["skin"] = "Blizzard",
+				},
+				["ToT Debuffs"] = {
+					["gloss"] = 0,
+					["colours"] = {
+					},
+					["backdrop"] = false,
+					["skin"] = "Blizzard",
+				},
 			},
 		},
 		["Gilt - Azuremyst"] = {
 			["flow"] = {
+			},
+			["settings"] = {
 			},
 			["frames"] = {
 				{
@@ -2611,8 +2605,6 @@ SBFDB = {
 					},
 				}, -- [7]
 			},
-			["settings"] = {
-			},
 			["buttonFacade"] = {
 				["Debuffs"] = {
 					["colours"] = {
@@ -2664,82 +2656,7 @@ SBFDB = {
 					["backdrop"] = true,
 					["skin"] = "Blizzard",
 				},
-				["Buffs"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
-				["Target Debuffs"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
 				["Small Notes"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
-				["oh shit"] = {
 					["colours"] = {
 						["Gloss"] = {
 							1, -- [1]
@@ -2789,10 +2706,87 @@ SBFDB = {
 					["backdrop"] = true,
 					["skin"] = "Blizzard",
 				},
+				["Buffs"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+				["oh shit"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+				["Target Debuffs"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
 			},
 		},
 		["Giit - Tank"] = {
 			["flow"] = {
+			},
+			["settings"] = {
 			},
 			["frames"] = {
 				{
@@ -3391,8 +3385,6 @@ SBFDB = {
 					},
 				}, -- [7]
 			},
-			["settings"] = {
-			},
 			["buttonFacade"] = {
 				["Debuffs"] = {
 					["colours"] = {
@@ -3444,82 +3436,7 @@ SBFDB = {
 					["backdrop"] = true,
 					["skin"] = "Blizzard",
 				},
-				["Buffs"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
-				["Target Debuffs"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
 				["Small Notes"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
-				["oh shit"] = {
 					["colours"] = {
 						["Gloss"] = {
 							1, -- [1]
@@ -3569,6 +3486,81 @@ SBFDB = {
 					["backdrop"] = true,
 					["skin"] = "Blizzard",
 				},
+				["Buffs"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+				["oh shit"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+				["Target Debuffs"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
 			},
 		},
 		["Worgit - Moon Guard"] = {
@@ -3587,8 +3579,6 @@ SBFDB = {
 					["backdrop"] = false,
 					["skin"] = "Blizzard",
 				},
-			},
-			["settings"] = {
 			},
 			["frames"] = {
 				{
@@ -3754,6 +3744,8 @@ SBFDB = {
 					},
 				}, -- [2]
 			},
+			["settings"] = {
+			},
 			["flow"] = {
 			},
 		},
@@ -3811,31 +3803,6 @@ SBFDB = {
 					["backdrop"] = true,
 					["skin"] = "Blizzard",
 				},
-				["Target Debuffs"] = {
-					["gloss"] = 0.35,
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
 				["ToT Debuffs"] = {
 					["gloss"] = 0.35,
 					["colours"] = {
@@ -3861,32 +3828,7 @@ SBFDB = {
 					["backdrop"] = true,
 					["skin"] = "Blizzard",
 				},
-				["Buffs"] = {
-					["gloss"] = 0.35,
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
-				["oh shit"] = {
+				["Target Debuffs"] = {
 					["gloss"] = 0.35,
 					["colours"] = {
 						["Gloss"] = {
@@ -3936,6 +3878,58 @@ SBFDB = {
 					["backdrop"] = true,
 					["skin"] = "Blizzard",
 				},
+				["oh shit"] = {
+					["gloss"] = 0.35,
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+				["Buffs"] = {
+					["gloss"] = 0.35,
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+			},
+			["settings"] = {
 			},
 			["frames"] = {
 				{
@@ -4322,13 +4316,9 @@ SBFDB = {
 					},
 				},
 			},
-			["settings"] = {
-			},
 		},
 		["Giit - Cho'gall"] = {
 			["flow"] = {
-			},
-			["settings"] = {
 			},
 			["frames"] = {
 				{
@@ -4434,10 +4424,10 @@ SBFDB = {
 						},
 						["rows"] = false,
 						["growth"] = 1,
-						["opacity"] = 1,
 						["y"] = 10,
 						["x"] = 0,
 						["sort"] = 1,
+						["opacity"] = 1,
 						["anchor"] = 1,
 						["rowCount"] = 10,
 						["visibility"] = 1,
@@ -4528,9 +4518,9 @@ SBFDB = {
 						},
 						["opacity"] = 1,
 						["growth"] = 2,
-						["sort"] = 6,
 						["y"] = 0,
 						["x"] = 24,
+						["sort"] = 6,
 						["count"] = 10,
 						["anchor"] = 2,
 						["rowCount"] = 10,
@@ -4670,10 +4660,10 @@ SBFDB = {
 						},
 						["opacity"] = 1,
 						["growth"] = 1,
-						["rows"] = true,
 						["y"] = 0,
 						["x"] = 5,
 						["sort"] = 1,
+						["rows"] = true,
 						["anchor"] = 2,
 						["rowCount"] = 10,
 						["visibility"] = 1,
@@ -4757,6 +4747,8 @@ SBFDB = {
 					},
 				},
 			},
+			["settings"] = {
+			},
 			["buttonFacade"] = {
 				["Debuffs"] = {
 					["gloss"] = 0.35,
@@ -4808,31 +4800,6 @@ SBFDB = {
 					["backdrop"] = true,
 					["skin"] = "Blizzard",
 				},
-				["Target Debuffs"] = {
-					["gloss"] = 0.35,
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
 				["ToT Debuffs"] = {
 					["gloss"] = 0.35,
 					["colours"] = {
@@ -4858,7 +4825,32 @@ SBFDB = {
 					["backdrop"] = true,
 					["skin"] = "Blizzard",
 				},
-				["Buffs"] = {
+				["Target Debuffs"] = {
+					["gloss"] = 0.35,
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+				["Small Notes"] = {
 					["gloss"] = 0.35,
 					["colours"] = {
 						["Gloss"] = {
@@ -4908,7 +4900,7 @@ SBFDB = {
 					["backdrop"] = true,
 					["skin"] = "Blizzard",
 				},
-				["Small Notes"] = {
+				["Buffs"] = {
 					["gloss"] = 0.35,
 					["colours"] = {
 						["Gloss"] = {
@@ -4987,82 +4979,7 @@ SBFDB = {
 					["backdrop"] = true,
 					["skin"] = "Blizzard",
 				},
-				["Small Notes"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
-				["ToT Debuffs"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
 				["Buffs"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
-				["oh shit"] = {
 					["colours"] = {
 						["Gloss"] = {
 							1, -- [1]
@@ -5112,8 +5029,85 @@ SBFDB = {
 					["backdrop"] = true,
 					["skin"] = "Blizzard",
 				},
+				["Small Notes"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+				["oh shit"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+				["ToT Debuffs"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
 			},
 			["flow"] = {
+			},
+			["settings"] = {
 			},
 			["frames"] = {
 				{
@@ -5502,8 +5496,6 @@ SBFDB = {
 					},
 				},
 			},
-			["settings"] = {
-			},
 		},
 		["Ezyn - Azuremyst"] = {
 			["flow"] = {
@@ -5523,28 +5515,7 @@ SBFDB = {
 					["backdrop"] = false,
 					["skin"] = "Blizzard",
 				},
-				["Buffs"] = {
-					["gloss"] = 0,
-					["colours"] = {
-					},
-					["backdrop"] = false,
-					["skin"] = "Blizzard",
-				},
-				["Target Debuffs"] = {
-					["gloss"] = 0,
-					["colours"] = {
-					},
-					["backdrop"] = false,
-					["skin"] = "Blizzard",
-				},
 				["Small Notes"] = {
-					["gloss"] = 0,
-					["colours"] = {
-					},
-					["backdrop"] = false,
-					["skin"] = "Blizzard",
-				},
-				["oh shit"] = {
 					["gloss"] = 0,
 					["colours"] = {
 					},
@@ -5558,6 +5529,29 @@ SBFDB = {
 					["backdrop"] = false,
 					["skin"] = "Blizzard",
 				},
+				["Buffs"] = {
+					["gloss"] = 0,
+					["colours"] = {
+					},
+					["backdrop"] = false,
+					["skin"] = "Blizzard",
+				},
+				["oh shit"] = {
+					["gloss"] = 0,
+					["colours"] = {
+					},
+					["backdrop"] = false,
+					["skin"] = "Blizzard",
+				},
+				["Target Debuffs"] = {
+					["gloss"] = 0,
+					["colours"] = {
+					},
+					["backdrop"] = false,
+					["skin"] = "Blizzard",
+				},
+			},
+			["settings"] = {
 			},
 			["frames"] = {
 				{
@@ -6133,11 +6127,935 @@ SBFDB = {
 					},
 				}, -- [7]
 			},
+		},
+		["Greny - Azuremyst"] = {
+			["flow"] = {
+			},
 			["settings"] = {
+			},
+			["frames"] = {
+				{
+					["general"] = {
+						["frameName"] = "Buffs",
+						["interactiveFrame"] = true,
+						["buffs"] = true,
+						["blacklist"] = true,
+						["unit"] = "player",
+					},
+					["alwaysWarn"] = {
+					},
+					["layout"] = {
+						["direction"] = "+",
+						["point"] = {
+							"TOPRIGHT", -- [1]
+							-65, -- [2]
+							-250, -- [3]
+						},
+						["opacity"] = 1,
+						["rowCount"] = 20,
+						["y"] = 0,
+						["x"] = 0,
+						["sort"] = "INDEX",
+						["anchor"] = 1,
+						["count"] = 20,
+						["visibility"] = 1,
+						["growth"] = 3,
+					},
+					["expiry"] = {
+						["minimumDuration"] = 0,
+						["sctColour"] = {
+							["b"] = 0.1,
+							["g"] = 1,
+							["r"] = 0.1,
+						},
+						["warnAtTime"] = 30,
+						["frame"] = "ChatFrame1",
+						["sound"] = "None",
+					},
+					["count"] = {
+						["y"] = -4,
+						["x"] = 0,
+						["justify"] = "CENTER",
+						["frameLevel"] = 4,
+						["fontSize"] = 10,
+						["font"] = "Friz Quadrata TT",
+						["colour"] = {
+							["b"] = 1,
+							["g"] = 1,
+							["r"] = 1,
+						},
+					},
+					["list"] = {
+					},
+					["timer"] = {
+						["fontSize"] = 10,
+						["justify"] = "CENTER",
+						["y"] = -15,
+						["x"] = 0,
+						["regularColour"] = {
+							["b"] = 0,
+							["g"] = 0.82,
+							["r"] = 1,
+						},
+						["frameLevel"] = 4,
+						["format"] = 2,
+						["expiringColour"] = {
+							["b"] = 0,
+							["g"] = 0.82,
+							["r"] = 1,
+						},
+						["font"] = "Friz Quadrata TT",
+					},
+					["icon"] = {
+						["y"] = 0,
+						["x"] = 0,
+						["frameLevel"] = 3,
+						["opacity"] = 1,
+						["size"] = 20,
+					},
+					["filters"] = {
+					},
+				}, -- [1]
+				{
+					["general"] = {
+						["blacklist"] = true,
+						["debuffs"] = true,
+						["frameName"] = "Debuffs",
+						["unit"] = "player",
+					},
+					["alwaysWarn"] = {
+					},
+					["layout"] = {
+						["point"] = {
+							"TOPRIGHT", -- [1]
+							-110, -- [2]
+							-250, -- [3]
+						},
+						["opacity"] = 1,
+						["growth"] = 3,
+						["y"] = 0,
+						["x"] = 0,
+						["sort"] = 1,
+						["anchor"] = 1,
+						["count"] = 16,
+						["visibility"] = 1,
+						["rowCount"] = 16,
+					},
+					["expiry"] = {
+						["minimumDuration"] = 0,
+						["sctColour"] = {
+							["b"] = 0.1,
+							["g"] = 1,
+							["r"] = 0.1,
+						},
+						["warnAtTime"] = 30,
+						["frame"] = "ChatFrame1",
+						["sound"] = "None",
+					},
+					["count"] = {
+						["y"] = -4,
+						["x"] = 0,
+						["justify"] = "CENTER",
+						["frameLevel"] = 4,
+						["fontSize"] = 10,
+						["font"] = "Friz Quadrata TT",
+						["colour"] = {
+							["b"] = 1,
+							["g"] = 1,
+							["r"] = 1,
+						},
+					},
+					["list"] = {
+					},
+					["timer"] = {
+						["fontSize"] = 10,
+						["justify"] = "CENTER",
+						["y"] = -15,
+						["x"] = 0,
+						["regularColour"] = {
+							["b"] = 0,
+							["g"] = 0.82,
+							["r"] = 1,
+						},
+						["frameLevel"] = 4,
+						["format"] = 2,
+						["expiringColour"] = {
+							["b"] = 0,
+							["g"] = 0.82,
+							["r"] = 1,
+						},
+						["font"] = "Friz Quadrata TT",
+					},
+					["icon"] = {
+						["y"] = 0,
+						["x"] = 0,
+						["frameLevel"] = 3,
+						["opacity"] = 1,
+						["size"] = 20,
+					},
+					["filters"] = {
+					},
+				}, -- [2]
+			},
+			["buttonFacade"] = {
+				["Debuffs"] = {
+					["gloss"] = 0,
+					["colours"] = {
+					},
+					["backdrop"] = false,
+					["skin"] = "Blizzard",
+				},
+				["Buffs"] = {
+					["gloss"] = 0,
+					["colours"] = {
+					},
+					["backdrop"] = false,
+					["skin"] = "Blizzard",
+				},
+			},
+		},
+		["Spih - Cho'gall"] = {
+			["flow"] = {
+			},
+			["settings"] = {
+			},
+			["frames"] = {
+				{
+					["general"] = {
+						["frameName"] = "Buffs",
+						["interactiveFrame"] = true,
+						["buffs"] = true,
+						["blacklist"] = true,
+						["unit"] = "player",
+					},
+					["alwaysWarn"] = {
+					},
+					["layout"] = {
+						["direction"] = "+",
+						["point"] = {
+							"TOPRIGHT", -- [1]
+							-65, -- [2]
+							-250, -- [3]
+						},
+						["opacity"] = 1,
+						["rowCount"] = 20,
+						["y"] = 0,
+						["x"] = 0,
+						["sort"] = "INDEX",
+						["anchor"] = 1,
+						["count"] = 20,
+						["visibility"] = 1,
+						["growth"] = 3,
+					},
+					["expiry"] = {
+						["minimumDuration"] = 0,
+						["sctColour"] = {
+							["b"] = 0.1,
+							["g"] = 1,
+							["r"] = 0.1,
+						},
+						["warnAtTime"] = 30,
+						["frame"] = "ChatFrame1",
+						["sound"] = "None",
+					},
+					["count"] = {
+						["y"] = -4,
+						["x"] = 0,
+						["justify"] = "CENTER",
+						["frameLevel"] = 4,
+						["fontSize"] = 10,
+						["font"] = "Friz Quadrata TT",
+						["colour"] = {
+							["b"] = 1,
+							["g"] = 1,
+							["r"] = 1,
+						},
+					},
+					["list"] = {
+					},
+					["timer"] = {
+						["fontSize"] = 10,
+						["justify"] = "CENTER",
+						["y"] = -15,
+						["x"] = 0,
+						["regularColour"] = {
+							["b"] = 0,
+							["g"] = 0.82,
+							["r"] = 1,
+						},
+						["frameLevel"] = 4,
+						["format"] = 2,
+						["expiringColour"] = {
+							["b"] = 0,
+							["g"] = 0.82,
+							["r"] = 1,
+						},
+						["font"] = "Friz Quadrata TT",
+					},
+					["icon"] = {
+						["y"] = 0,
+						["x"] = 0,
+						["frameLevel"] = 3,
+						["opacity"] = 1,
+						["size"] = 20,
+					},
+					["filters"] = {
+					},
+				}, -- [1]
+				{
+					["general"] = {
+						["blacklist"] = true,
+						["debuffs"] = true,
+						["frameName"] = "Debuffs",
+						["unit"] = "player",
+					},
+					["alwaysWarn"] = {
+					},
+					["layout"] = {
+						["point"] = {
+							"TOPRIGHT", -- [1]
+							-110, -- [2]
+							-250, -- [3]
+						},
+						["opacity"] = 1,
+						["growth"] = 3,
+						["y"] = 0,
+						["x"] = 0,
+						["sort"] = 1,
+						["anchor"] = 1,
+						["count"] = 16,
+						["visibility"] = 1,
+						["rowCount"] = 16,
+					},
+					["expiry"] = {
+						["minimumDuration"] = 0,
+						["sctColour"] = {
+							["b"] = 0.1,
+							["g"] = 1,
+							["r"] = 0.1,
+						},
+						["warnAtTime"] = 30,
+						["frame"] = "ChatFrame1",
+						["sound"] = "None",
+					},
+					["count"] = {
+						["y"] = -4,
+						["x"] = 0,
+						["justify"] = "CENTER",
+						["frameLevel"] = 4,
+						["fontSize"] = 10,
+						["font"] = "Friz Quadrata TT",
+						["colour"] = {
+							["b"] = 1,
+							["g"] = 1,
+							["r"] = 1,
+						},
+					},
+					["list"] = {
+					},
+					["timer"] = {
+						["fontSize"] = 10,
+						["justify"] = "CENTER",
+						["y"] = -15,
+						["x"] = 0,
+						["regularColour"] = {
+							["b"] = 0,
+							["g"] = 0.82,
+							["r"] = 1,
+						},
+						["frameLevel"] = 4,
+						["format"] = 2,
+						["expiringColour"] = {
+							["b"] = 0,
+							["g"] = 0.82,
+							["r"] = 1,
+						},
+						["font"] = "Friz Quadrata TT",
+					},
+					["icon"] = {
+						["y"] = 0,
+						["x"] = 0,
+						["frameLevel"] = 3,
+						["opacity"] = 1,
+						["size"] = 20,
+					},
+					["filters"] = {
+					},
+				}, -- [2]
+			},
+		},
+		["Burk - Azuremyst"] = {
+			["flow"] = {
+			},
+			["settings"] = {
+			},
+			["frames"] = {
+				{
+					["general"] = {
+						["blacklist"] = true,
+						["buffs"] = true,
+						["frameName"] = "Buffs",
+						["unit"] = "player",
+					},
+					["alwaysWarn"] = {
+					},
+					["layout"] = {
+						["point"] = {
+							"TOPLEFT", -- [1]
+							2.138573763459483, -- [2]
+							-27.72312884799527, -- [3]
+						},
+						["opacity"] = 1,
+						["growth"] = 3,
+						["y"] = 0,
+						["x"] = -2,
+						["sort"] = 7,
+						["count"] = 60,
+						["anchor"] = 2,
+						["rowCount"] = 1,
+						["visibility"] = 1,
+						["rows"] = false,
+					},
+					["expiry"] = {
+						["minimumDuration"] = 0,
+						["sctColour"] = {
+							["b"] = 0.1,
+							["g"] = 1,
+							["r"] = 0.1,
+						},
+						["warnAtTime"] = 30,
+						["frame"] = "ChatFrame1",
+						["sound"] = "None",
+					},
+					["count"] = {
+						["y"] = -4,
+						["x"] = 0,
+						["frameLevel"] = 4,
+						["justify"] = "CENTER",
+						["fontSize"] = 10,
+						["font"] = "SCT Emblem",
+						["colour"] = {
+							["b"] = 1,
+							["g"] = 1,
+							["r"] = 1,
+						},
+					},
+					["list"] = {
+					},
+					["timer"] = {
+						["fontSize"] = 10,
+						["frameLevel"] = 4,
+						["y"] = -18,
+						["x"] = 1,
+						["regularColour"] = {
+							["b"] = 0,
+							["g"] = 0.82,
+							["r"] = 1,
+						},
+						["justify"] = "CENTER",
+						["format"] = 1,
+						["expiringColour"] = {
+							["b"] = 0,
+							["g"] = 0.82,
+							["r"] = 1,
+						},
+						["font"] = "SCT Emblem",
+					},
+					["icon"] = {
+						["y"] = 0,
+						["x"] = 0,
+						["noBFIconBorder"] = false,
+						["frameLevel"] = 3,
+						["opacity"] = 1,
+						["noIconBorder"] = true,
+						["size"] = 25,
+					},
+					["filters"] = {
+						"n=indestructible", -- [1]
+					},
+				}, -- [1]
+				{
+					["general"] = {
+						["debuffs"] = true,
+						["frameName"] = "Debuffs",
+						["clickthrough"] = false,
+						["blacklist"] = true,
+						["unit"] = "player",
+					},
+					["alwaysWarn"] = {
+					},
+					["layout"] = {
+						["point"] = {
+							"CENTER", -- [1]
+							-221.1695857419784, -- [2]
+							-70.95351411898362, -- [3]
+						},
+						["opacity"] = 1,
+						["growth"] = 1,
+						["y"] = 10,
+						["x"] = 0,
+						["count"] = 16,
+						["sort"] = 1,
+						["anchor"] = 1,
+						["rowCount"] = 16,
+						["visibility"] = 1,
+						["rows"] = false,
+					},
+					["expiry"] = {
+						["minimumDuration"] = 0,
+						["sctColour"] = {
+							["b"] = 0.1,
+							["g"] = 1,
+							["r"] = 0.1,
+						},
+						["warnAtTime"] = 30,
+						["frame"] = "ChatFrame1",
+						["sound"] = "None",
+					},
+					["count"] = {
+						["outline"] = true,
+						["x"] = 7,
+						["justify"] = "RIGHT",
+						["y"] = -10,
+						["fontSize"] = 18,
+						["font"] = "SCT Emblem",
+						["frameLevel"] = 4,
+						["colour"] = {
+							["b"] = 1,
+							["g"] = 1,
+							["r"] = 1,
+						},
+					},
+					["list"] = {
+					},
+					["timer"] = {
+						["fontSize"] = 19,
+						["frameLevel"] = 4,
+						["y"] = 0,
+						["x"] = -61,
+						["regularColour"] = {
+							["b"] = 0,
+							["g"] = 0.82,
+							["r"] = 1,
+						},
+						["justify"] = "RIGHT",
+						["format"] = 1,
+						["expiringColour"] = {
+							["b"] = 0,
+							["g"] = 0.82,
+							["r"] = 1,
+						},
+						["font"] = "SCT Emblem",
+					},
+					["icon"] = {
+						["noBFIconBorder"] = false,
+						["opacity"] = 1,
+						["y"] = 0,
+						["x"] = 0,
+						["reverseCooldown"] = true,
+						["noIconBorder"] = false,
+						["frameLevel"] = 3,
+						["cooldown"] = true,
+						["size"] = 40,
+					},
+					["filters"] = {
+					},
+				}, -- [2]
+				[5] = {
+					["general"] = {
+						["showVehicle"] = false,
+						["debuffs"] = false,
+						["frameName"] = "oh shit",
+						["buffs"] = true,
+						["unit"] = "player",
+						["blacklist"] = false,
+					},
+					["alwaysWarn"] = {
+					},
+					["layout"] = {
+						["point"] = {
+							"BOTTOM", -- [1]
+							12.61111610550915, -- [2]
+							256.7695087337496, -- [3]
+						},
+						["opacity"] = 1,
+						["growth"] = 2,
+						["y"] = 0,
+						["x"] = 56,
+						["count"] = 10,
+						["rows"] = true,
+						["anchor"] = 2,
+						["rowCount"] = 10,
+						["visibility"] = 1,
+						["sort"] = 1,
+					},
+					["expiry"] = {
+						["minimumDuration"] = 0,
+						["sctColour"] = {
+							["r"] = 0.1,
+							["g"] = 1,
+							["b"] = 0.1,
+						},
+						["warnAtTime"] = 30,
+						["frame"] = "ChatFrame1",
+						["sound"] = "None",
+					},
+					["count"] = {
+						["outline"] = true,
+						["x"] = 17,
+						["frameLevel"] = 4,
+						["y"] = -20,
+						["justify"] = "CENTER",
+						["font"] = "SCT Emblem",
+						["fontSize"] = 34,
+						["colour"] = {
+							["r"] = 1,
+							["g"] = 1,
+							["b"] = 1,
+						},
+					},
+					["list"] = {
+					},
+					["timer"] = {
+						["fontSize"] = 25,
+						["frameLevel"] = 4,
+						["y"] = -45,
+						["font"] = "SCT Emblem",
+						["regularColour"] = {
+							["r"] = 1,
+							["g"] = 0.82,
+							["b"] = 0,
+						},
+						["x"] = 1,
+						["format"] = 1,
+						["expiringColour"] = {
+							["r"] = 1,
+							["g"] = 0.82,
+							["b"] = 0,
+						},
+						["justify"] = "CENTER",
+					},
+					["icon"] = {
+						["noBFIconBorder"] = true,
+						["opacity"] = 1,
+						["y"] = 0,
+						["x"] = 0,
+						["reverseCooldown"] = true,
+						["noIconBorder"] = true,
+						["frameLevel"] = 3,
+						["cooldown"] = true,
+						["size"] = 70,
+					},
+					["filters"] = {
+						"n=shield wall", -- [1]
+						"n=last stand", -- [2]
+						"n=enraged regeneration", -- [3]
+						"n=shield block", -- [4]
+						"n=hand of protection", -- [5]
+						"id=33206", -- [6]
+						"n=guardian spirit", -- [7]
+						"n=victorious", -- [8]
+						"n=spell reflection", -- [9]
+						"n=spell block", -- [10]
+						"n=recklessness", -- [11]
+						"n=image of immortality", -- [12]
+						"n=golem's strength", -- [13]
+						"n=landslide", -- [14]
+						"n=slaughter", -- [15]
+						"n=flame wall", -- [16]
+						"n=windwalk", -- [17]
+						"n=dream", -- [18]
+						"n=vampiric brood", -- [19]
+						"n=master tactician", -- [20]
+						"n=lightwell renew", -- [21]
+						"n=preternatural evasion", -- [22]
+						"n=mass regeneration", -- [23]
+						"n=evangelism", -- [24]
+						"n=dark evangelism", -- [25]
+						"n=archangel", -- [26]
+						"n=dark archangel", -- [27]
+						"n=shadow orb", -- [28]
+					},
+				},
+				[6] = {
+					["general"] = {
+						["showVehicle"] = false,
+						["debuffs"] = false,
+						["frameName"] = "Small Notes",
+						["buffs"] = true,
+						["blacklist"] = false,
+						["unit"] = "player",
+					},
+					["alwaysWarn"] = {
+					},
+					["layout"] = {
+						["point"] = {
+							"BOTTOM", -- [1]
+							-274.7078522456973, -- [2]
+							19.53864367253621, -- [3]
+						},
+						["rows"] = true,
+						["growth"] = 1,
+						["y"] = 0,
+						["x"] = 5,
+						["count"] = 10,
+						["sort"] = 1,
+						["anchor"] = 2,
+						["rowCount"] = 10,
+						["visibility"] = 1,
+						["opacity"] = 1,
+					},
+					["expiry"] = {
+						["minimumDuration"] = 0,
+						["sctColour"] = {
+							["b"] = 0.1,
+							["g"] = 1,
+							["r"] = 0.1,
+						},
+						["warnAtTime"] = 30,
+						["frame"] = "ChatFrame1",
+						["sound"] = "None",
+					},
+					["count"] = {
+						["y"] = -6,
+						["x"] = -1,
+						["frameLevel"] = 4,
+						["outline"] = true,
+						["fontSize"] = 17,
+						["font"] = "SCT Emblem",
+						["justify"] = "RIGHT",
+						["colour"] = {
+							["b"] = 1,
+							["g"] = 1,
+							["r"] = 1,
+						},
+					},
+					["list"] = {
+					},
+					["timer"] = {
+						["fontSize"] = 12,
+						["justify"] = "CENTER",
+						["y"] = -23,
+						["font"] = "SCT Emblem",
+						["regularColour"] = {
+							["b"] = 0,
+							["g"] = 0.82,
+							["r"] = 1,
+						},
+						["frameLevel"] = 4,
+						["format"] = 1,
+						["expiringColour"] = {
+							["b"] = 0,
+							["g"] = 0.82,
+							["r"] = 1,
+						},
+						["x"] = 1,
+					},
+					["icon"] = {
+						["noBFIconBorder"] = true,
+						["reverseCooldown"] = true,
+						["y"] = 0,
+						["x"] = 0,
+						["opacity"] = 1,
+						["frameLevel"] = 3,
+						["noIconBorder"] = true,
+						["cooldown"] = true,
+						["size"] = 30,
+					},
+					["filters"] = {
+						"n=thunderstruck", -- [1]
+						"n=enraged regeneration", -- [2]
+						"n=hand of protection", -- [3]
+						"id=18499", -- [4]
+						"n=windwalk", -- [5]
+						"n=turn of the worm", -- [6]
+						"n=lead plating", -- [7]
+						"n=shield of fury", -- [8]
+					},
+				},
+			},
+			["buttonFacade"] = {
+				["Debuffs"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+				["Target Buffs"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+				["Small Notes"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+				["ToT Debuffs"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+				["Buffs"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+				["oh shit"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+				["Target Debuffs"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
 			},
 		},
 		["Git - Cho'gall"] = {
 			["flow"] = {
+			},
+			["settings"] = {
 			},
 			["frames"] = {
 				{
@@ -6547,746 +7465,6 @@ SBFDB = {
 					},
 				},
 			},
-			["settings"] = {
-			},
-			["buttonFacade"] = {
-				["Debuffs"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
-				["Target Buffs"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
-				["Small Notes"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
-				["Target Debuffs"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
-				["Buffs"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
-				["oh shit"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
-				["ToT Debuffs"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
-			},
-		},
-		["Spih - Cho'gall"] = {
-			["flow"] = {
-			},
-			["settings"] = {
-			},
-			["frames"] = {
-				{
-					["general"] = {
-						["frameName"] = "Buffs",
-						["interactiveFrame"] = true,
-						["buffs"] = true,
-						["blacklist"] = true,
-						["unit"] = "player",
-					},
-					["alwaysWarn"] = {
-					},
-					["layout"] = {
-						["direction"] = "+",
-						["point"] = {
-							"TOPRIGHT", -- [1]
-							-65, -- [2]
-							-250, -- [3]
-						},
-						["opacity"] = 1,
-						["rowCount"] = 20,
-						["y"] = 0,
-						["x"] = 0,
-						["sort"] = "INDEX",
-						["anchor"] = 1,
-						["count"] = 20,
-						["visibility"] = 1,
-						["growth"] = 3,
-					},
-					["expiry"] = {
-						["minimumDuration"] = 0,
-						["sctColour"] = {
-							["b"] = 0.1,
-							["g"] = 1,
-							["r"] = 0.1,
-						},
-						["warnAtTime"] = 30,
-						["frame"] = "ChatFrame1",
-						["sound"] = "None",
-					},
-					["count"] = {
-						["y"] = -4,
-						["x"] = 0,
-						["justify"] = "CENTER",
-						["frameLevel"] = 4,
-						["fontSize"] = 10,
-						["font"] = "Friz Quadrata TT",
-						["colour"] = {
-							["b"] = 1,
-							["g"] = 1,
-							["r"] = 1,
-						},
-					},
-					["list"] = {
-					},
-					["timer"] = {
-						["fontSize"] = 10,
-						["justify"] = "CENTER",
-						["y"] = -15,
-						["x"] = 0,
-						["regularColour"] = {
-							["b"] = 0,
-							["g"] = 0.82,
-							["r"] = 1,
-						},
-						["frameLevel"] = 4,
-						["format"] = 2,
-						["expiringColour"] = {
-							["b"] = 0,
-							["g"] = 0.82,
-							["r"] = 1,
-						},
-						["font"] = "Friz Quadrata TT",
-					},
-					["icon"] = {
-						["y"] = 0,
-						["x"] = 0,
-						["frameLevel"] = 3,
-						["opacity"] = 1,
-						["size"] = 20,
-					},
-					["filters"] = {
-					},
-				}, -- [1]
-				{
-					["general"] = {
-						["blacklist"] = true,
-						["debuffs"] = true,
-						["frameName"] = "Debuffs",
-						["unit"] = "player",
-					},
-					["alwaysWarn"] = {
-					},
-					["layout"] = {
-						["point"] = {
-							"TOPRIGHT", -- [1]
-							-110, -- [2]
-							-250, -- [3]
-						},
-						["opacity"] = 1,
-						["growth"] = 3,
-						["y"] = 0,
-						["x"] = 0,
-						["sort"] = 1,
-						["anchor"] = 1,
-						["count"] = 16,
-						["visibility"] = 1,
-						["rowCount"] = 16,
-					},
-					["expiry"] = {
-						["minimumDuration"] = 0,
-						["sctColour"] = {
-							["b"] = 0.1,
-							["g"] = 1,
-							["r"] = 0.1,
-						},
-						["warnAtTime"] = 30,
-						["frame"] = "ChatFrame1",
-						["sound"] = "None",
-					},
-					["count"] = {
-						["y"] = -4,
-						["x"] = 0,
-						["justify"] = "CENTER",
-						["frameLevel"] = 4,
-						["fontSize"] = 10,
-						["font"] = "Friz Quadrata TT",
-						["colour"] = {
-							["b"] = 1,
-							["g"] = 1,
-							["r"] = 1,
-						},
-					},
-					["list"] = {
-					},
-					["timer"] = {
-						["fontSize"] = 10,
-						["justify"] = "CENTER",
-						["y"] = -15,
-						["x"] = 0,
-						["regularColour"] = {
-							["b"] = 0,
-							["g"] = 0.82,
-							["r"] = 1,
-						},
-						["frameLevel"] = 4,
-						["format"] = 2,
-						["expiringColour"] = {
-							["b"] = 0,
-							["g"] = 0.82,
-							["r"] = 1,
-						},
-						["font"] = "Friz Quadrata TT",
-					},
-					["icon"] = {
-						["y"] = 0,
-						["x"] = 0,
-						["frameLevel"] = 3,
-						["opacity"] = 1,
-						["size"] = 20,
-					},
-					["filters"] = {
-					},
-				}, -- [2]
-			},
-		},
-		["Burk - Azuremyst"] = {
-			["flow"] = {
-			},
-			["frames"] = {
-				{
-					["general"] = {
-						["blacklist"] = true,
-						["buffs"] = true,
-						["frameName"] = "Buffs",
-						["unit"] = "player",
-					},
-					["alwaysWarn"] = {
-					},
-					["layout"] = {
-						["point"] = {
-							"TOPLEFT", -- [1]
-							2.138573763459483, -- [2]
-							-27.72312884799527, -- [3]
-						},
-						["opacity"] = 1,
-						["growth"] = 3,
-						["y"] = 0,
-						["x"] = -2,
-						["sort"] = 7,
-						["count"] = 60,
-						["anchor"] = 2,
-						["rowCount"] = 1,
-						["visibility"] = 1,
-						["rows"] = false,
-					},
-					["expiry"] = {
-						["minimumDuration"] = 0,
-						["sctColour"] = {
-							["b"] = 0.1,
-							["g"] = 1,
-							["r"] = 0.1,
-						},
-						["warnAtTime"] = 30,
-						["frame"] = "ChatFrame1",
-						["sound"] = "None",
-					},
-					["count"] = {
-						["y"] = -4,
-						["x"] = 0,
-						["frameLevel"] = 4,
-						["justify"] = "CENTER",
-						["fontSize"] = 10,
-						["font"] = "SCT Emblem",
-						["colour"] = {
-							["b"] = 1,
-							["g"] = 1,
-							["r"] = 1,
-						},
-					},
-					["list"] = {
-					},
-					["timer"] = {
-						["fontSize"] = 10,
-						["frameLevel"] = 4,
-						["y"] = -18,
-						["x"] = 1,
-						["regularColour"] = {
-							["b"] = 0,
-							["g"] = 0.82,
-							["r"] = 1,
-						},
-						["justify"] = "CENTER",
-						["format"] = 1,
-						["expiringColour"] = {
-							["b"] = 0,
-							["g"] = 0.82,
-							["r"] = 1,
-						},
-						["font"] = "SCT Emblem",
-					},
-					["icon"] = {
-						["y"] = 0,
-						["x"] = 0,
-						["noBFIconBorder"] = false,
-						["frameLevel"] = 3,
-						["opacity"] = 1,
-						["noIconBorder"] = true,
-						["size"] = 25,
-					},
-					["filters"] = {
-						"n=indestructible", -- [1]
-					},
-				}, -- [1]
-				{
-					["general"] = {
-						["debuffs"] = true,
-						["frameName"] = "Debuffs",
-						["clickthrough"] = false,
-						["blacklist"] = true,
-						["unit"] = "player",
-					},
-					["alwaysWarn"] = {
-					},
-					["layout"] = {
-						["point"] = {
-							"CENTER", -- [1]
-							-221.1695857419784, -- [2]
-							-70.95351411898362, -- [3]
-						},
-						["opacity"] = 1,
-						["growth"] = 1,
-						["y"] = 10,
-						["x"] = 0,
-						["count"] = 16,
-						["sort"] = 1,
-						["anchor"] = 1,
-						["rowCount"] = 16,
-						["visibility"] = 1,
-						["rows"] = false,
-					},
-					["expiry"] = {
-						["minimumDuration"] = 0,
-						["sctColour"] = {
-							["b"] = 0.1,
-							["g"] = 1,
-							["r"] = 0.1,
-						},
-						["warnAtTime"] = 30,
-						["frame"] = "ChatFrame1",
-						["sound"] = "None",
-					},
-					["count"] = {
-						["outline"] = true,
-						["x"] = 7,
-						["justify"] = "RIGHT",
-						["y"] = -10,
-						["fontSize"] = 18,
-						["font"] = "SCT Emblem",
-						["frameLevel"] = 4,
-						["colour"] = {
-							["b"] = 1,
-							["g"] = 1,
-							["r"] = 1,
-						},
-					},
-					["list"] = {
-					},
-					["timer"] = {
-						["fontSize"] = 19,
-						["frameLevel"] = 4,
-						["y"] = 0,
-						["x"] = -61,
-						["regularColour"] = {
-							["b"] = 0,
-							["g"] = 0.82,
-							["r"] = 1,
-						},
-						["justify"] = "RIGHT",
-						["format"] = 1,
-						["expiringColour"] = {
-							["b"] = 0,
-							["g"] = 0.82,
-							["r"] = 1,
-						},
-						["font"] = "SCT Emblem",
-					},
-					["icon"] = {
-						["noBFIconBorder"] = false,
-						["opacity"] = 1,
-						["y"] = 0,
-						["x"] = 0,
-						["reverseCooldown"] = true,
-						["noIconBorder"] = false,
-						["frameLevel"] = 3,
-						["cooldown"] = true,
-						["size"] = 40,
-					},
-					["filters"] = {
-					},
-				}, -- [2]
-				[5] = {
-					["general"] = {
-						["showVehicle"] = false,
-						["debuffs"] = false,
-						["frameName"] = "oh shit",
-						["buffs"] = true,
-						["unit"] = "player",
-						["blacklist"] = false,
-					},
-					["alwaysWarn"] = {
-					},
-					["layout"] = {
-						["point"] = {
-							"BOTTOM", -- [1]
-							12.61111610550915, -- [2]
-							256.7695087337496, -- [3]
-						},
-						["opacity"] = 1,
-						["growth"] = 2,
-						["y"] = 0,
-						["x"] = 56,
-						["count"] = 10,
-						["rows"] = true,
-						["anchor"] = 2,
-						["rowCount"] = 10,
-						["visibility"] = 1,
-						["sort"] = 1,
-					},
-					["expiry"] = {
-						["minimumDuration"] = 0,
-						["sctColour"] = {
-							["r"] = 0.1,
-							["g"] = 1,
-							["b"] = 0.1,
-						},
-						["warnAtTime"] = 30,
-						["frame"] = "ChatFrame1",
-						["sound"] = "None",
-					},
-					["count"] = {
-						["outline"] = true,
-						["x"] = 17,
-						["frameLevel"] = 4,
-						["y"] = -20,
-						["justify"] = "CENTER",
-						["font"] = "SCT Emblem",
-						["fontSize"] = 34,
-						["colour"] = {
-							["r"] = 1,
-							["g"] = 1,
-							["b"] = 1,
-						},
-					},
-					["list"] = {
-					},
-					["timer"] = {
-						["fontSize"] = 25,
-						["frameLevel"] = 4,
-						["y"] = -45,
-						["font"] = "SCT Emblem",
-						["regularColour"] = {
-							["r"] = 1,
-							["g"] = 0.82,
-							["b"] = 0,
-						},
-						["x"] = 1,
-						["format"] = 1,
-						["expiringColour"] = {
-							["r"] = 1,
-							["g"] = 0.82,
-							["b"] = 0,
-						},
-						["justify"] = "CENTER",
-					},
-					["icon"] = {
-						["noBFIconBorder"] = true,
-						["opacity"] = 1,
-						["y"] = 0,
-						["x"] = 0,
-						["reverseCooldown"] = true,
-						["noIconBorder"] = true,
-						["frameLevel"] = 3,
-						["cooldown"] = true,
-						["size"] = 70,
-					},
-					["filters"] = {
-						"n=shield wall", -- [1]
-						"n=last stand", -- [2]
-						"n=enraged regeneration", -- [3]
-						"n=shield block", -- [4]
-						"n=hand of protection", -- [5]
-						"id=33206", -- [6]
-						"n=guardian spirit", -- [7]
-						"n=victorious", -- [8]
-						"n=spell reflection", -- [9]
-						"n=spell block", -- [10]
-						"n=recklessness", -- [11]
-						"n=image of immortality", -- [12]
-						"n=golem's strength", -- [13]
-						"n=landslide", -- [14]
-						"n=slaughter", -- [15]
-						"n=flame wall", -- [16]
-						"n=windwalk", -- [17]
-						"n=dream", -- [18]
-						"n=vampiric brood", -- [19]
-						"n=master tactician", -- [20]
-						"n=lightwell renew", -- [21]
-						"n=preternatural evasion", -- [22]
-						"n=mass regeneration", -- [23]
-						"n=evangelism", -- [24]
-						"n=dark evangelism", -- [25]
-						"n=archangel", -- [26]
-						"n=dark archangel", -- [27]
-						"n=shadow orb", -- [28]
-					},
-				},
-				[6] = {
-					["general"] = {
-						["showVehicle"] = false,
-						["debuffs"] = false,
-						["frameName"] = "Small Notes",
-						["buffs"] = true,
-						["blacklist"] = false,
-						["unit"] = "player",
-					},
-					["alwaysWarn"] = {
-					},
-					["layout"] = {
-						["point"] = {
-							"BOTTOM", -- [1]
-							-274.7078522456973, -- [2]
-							19.53864367253621, -- [3]
-						},
-						["rows"] = true,
-						["growth"] = 1,
-						["y"] = 0,
-						["x"] = 5,
-						["count"] = 10,
-						["sort"] = 1,
-						["anchor"] = 2,
-						["rowCount"] = 10,
-						["visibility"] = 1,
-						["opacity"] = 1,
-					},
-					["expiry"] = {
-						["minimumDuration"] = 0,
-						["sctColour"] = {
-							["b"] = 0.1,
-							["g"] = 1,
-							["r"] = 0.1,
-						},
-						["warnAtTime"] = 30,
-						["frame"] = "ChatFrame1",
-						["sound"] = "None",
-					},
-					["count"] = {
-						["y"] = -6,
-						["x"] = -1,
-						["frameLevel"] = 4,
-						["outline"] = true,
-						["fontSize"] = 17,
-						["font"] = "SCT Emblem",
-						["justify"] = "RIGHT",
-						["colour"] = {
-							["b"] = 1,
-							["g"] = 1,
-							["r"] = 1,
-						},
-					},
-					["list"] = {
-					},
-					["timer"] = {
-						["fontSize"] = 12,
-						["justify"] = "CENTER",
-						["y"] = -23,
-						["font"] = "SCT Emblem",
-						["regularColour"] = {
-							["b"] = 0,
-							["g"] = 0.82,
-							["r"] = 1,
-						},
-						["frameLevel"] = 4,
-						["format"] = 1,
-						["expiringColour"] = {
-							["b"] = 0,
-							["g"] = 0.82,
-							["r"] = 1,
-						},
-						["x"] = 1,
-					},
-					["icon"] = {
-						["noBFIconBorder"] = true,
-						["reverseCooldown"] = true,
-						["y"] = 0,
-						["x"] = 0,
-						["opacity"] = 1,
-						["frameLevel"] = 3,
-						["noIconBorder"] = true,
-						["cooldown"] = true,
-						["size"] = 30,
-					},
-					["filters"] = {
-						"n=thunderstruck", -- [1]
-						"n=enraged regeneration", -- [2]
-						"n=hand of protection", -- [3]
-						"id=18499", -- [4]
-						"n=windwalk", -- [5]
-						"n=turn of the worm", -- [6]
-						"n=lead plating", -- [7]
-						"n=shield of fury", -- [8]
-					},
-				},
-			},
-			["settings"] = {
-			},
 			["buttonFacade"] = {
 				["Debuffs"] = {
 					["colours"] = {
@@ -7363,7 +7541,7 @@ SBFDB = {
 					["backdrop"] = true,
 					["skin"] = "Blizzard",
 				},
-				["Target Debuffs"] = {
+				["ToT Debuffs"] = {
 					["colours"] = {
 						["Gloss"] = {
 							1, -- [1]
@@ -7438,7 +7616,7 @@ SBFDB = {
 					["backdrop"] = true,
 					["skin"] = "Blizzard",
 				},
-				["ToT Debuffs"] = {
+				["Target Debuffs"] = {
 					["colours"] = {
 						["Gloss"] = {
 							1, -- [1]
@@ -7467,6 +7645,8 @@ SBFDB = {
 		},
 		["Git - Azuremyst"] = {
 			["flow"] = {
+			},
+			["settings"] = {
 			},
 			["frames"] = {
 				{
@@ -8067,8 +8247,6 @@ SBFDB = {
 					},
 				}, -- [7]
 			},
-			["settings"] = {
-			},
 			["buttonFacade"] = {
 				["Debuffs"] = {
 					["gloss"] = 0.35,
@@ -8120,31 +8298,6 @@ SBFDB = {
 					["backdrop"] = true,
 					["skin"] = "Blizzard",
 				},
-				["Target Debuffs"] = {
-					["gloss"] = 0.35,
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
 				["ToT Debuffs"] = {
 					["gloss"] = 0.35,
 					["colours"] = {
@@ -8170,7 +8323,32 @@ SBFDB = {
 					["backdrop"] = true,
 					["skin"] = "Blizzard",
 				},
-				["Small Notes"] = {
+				["Target Debuffs"] = {
+					["gloss"] = 0.35,
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+				["Buffs"] = {
 					["gloss"] = 0.35,
 					["colours"] = {
 						["Gloss"] = {
@@ -8220,7 +8398,7 @@ SBFDB = {
 					["backdrop"] = true,
 					["skin"] = "Blizzard",
 				},
-				["Buffs"] = {
+				["Small Notes"] = {
 					["gloss"] = 0.35,
 					["colours"] = {
 						["Gloss"] = {
@@ -8243,192 +8421,6 @@ SBFDB = {
 						},
 					},
 					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
-			},
-		},
-		["Greny - Azuremyst"] = {
-			["flow"] = {
-			},
-			["frames"] = {
-				{
-					["general"] = {
-						["frameName"] = "Buffs",
-						["interactiveFrame"] = true,
-						["buffs"] = true,
-						["blacklist"] = true,
-						["unit"] = "player",
-					},
-					["alwaysWarn"] = {
-					},
-					["layout"] = {
-						["direction"] = "+",
-						["point"] = {
-							"TOPRIGHT", -- [1]
-							-65, -- [2]
-							-250, -- [3]
-						},
-						["opacity"] = 1,
-						["rowCount"] = 20,
-						["y"] = 0,
-						["x"] = 0,
-						["sort"] = "INDEX",
-						["anchor"] = 1,
-						["count"] = 20,
-						["visibility"] = 1,
-						["growth"] = 3,
-					},
-					["expiry"] = {
-						["minimumDuration"] = 0,
-						["sctColour"] = {
-							["b"] = 0.1,
-							["g"] = 1,
-							["r"] = 0.1,
-						},
-						["warnAtTime"] = 30,
-						["frame"] = "ChatFrame1",
-						["sound"] = "None",
-					},
-					["count"] = {
-						["y"] = -4,
-						["x"] = 0,
-						["justify"] = "CENTER",
-						["frameLevel"] = 4,
-						["fontSize"] = 10,
-						["font"] = "Friz Quadrata TT",
-						["colour"] = {
-							["b"] = 1,
-							["g"] = 1,
-							["r"] = 1,
-						},
-					},
-					["list"] = {
-					},
-					["timer"] = {
-						["fontSize"] = 10,
-						["justify"] = "CENTER",
-						["y"] = -15,
-						["x"] = 0,
-						["regularColour"] = {
-							["b"] = 0,
-							["g"] = 0.82,
-							["r"] = 1,
-						},
-						["frameLevel"] = 4,
-						["format"] = 2,
-						["expiringColour"] = {
-							["b"] = 0,
-							["g"] = 0.82,
-							["r"] = 1,
-						},
-						["font"] = "Friz Quadrata TT",
-					},
-					["icon"] = {
-						["y"] = 0,
-						["x"] = 0,
-						["frameLevel"] = 3,
-						["opacity"] = 1,
-						["size"] = 20,
-					},
-					["filters"] = {
-					},
-				}, -- [1]
-				{
-					["general"] = {
-						["blacklist"] = true,
-						["debuffs"] = true,
-						["frameName"] = "Debuffs",
-						["unit"] = "player",
-					},
-					["alwaysWarn"] = {
-					},
-					["layout"] = {
-						["point"] = {
-							"TOPRIGHT", -- [1]
-							-110, -- [2]
-							-250, -- [3]
-						},
-						["opacity"] = 1,
-						["growth"] = 3,
-						["y"] = 0,
-						["x"] = 0,
-						["sort"] = 1,
-						["anchor"] = 1,
-						["count"] = 16,
-						["visibility"] = 1,
-						["rowCount"] = 16,
-					},
-					["expiry"] = {
-						["minimumDuration"] = 0,
-						["sctColour"] = {
-							["b"] = 0.1,
-							["g"] = 1,
-							["r"] = 0.1,
-						},
-						["warnAtTime"] = 30,
-						["frame"] = "ChatFrame1",
-						["sound"] = "None",
-					},
-					["count"] = {
-						["y"] = -4,
-						["x"] = 0,
-						["justify"] = "CENTER",
-						["frameLevel"] = 4,
-						["fontSize"] = 10,
-						["font"] = "Friz Quadrata TT",
-						["colour"] = {
-							["b"] = 1,
-							["g"] = 1,
-							["r"] = 1,
-						},
-					},
-					["list"] = {
-					},
-					["timer"] = {
-						["fontSize"] = 10,
-						["justify"] = "CENTER",
-						["y"] = -15,
-						["x"] = 0,
-						["regularColour"] = {
-							["b"] = 0,
-							["g"] = 0.82,
-							["r"] = 1,
-						},
-						["frameLevel"] = 4,
-						["format"] = 2,
-						["expiringColour"] = {
-							["b"] = 0,
-							["g"] = 0.82,
-							["r"] = 1,
-						},
-						["font"] = "Friz Quadrata TT",
-					},
-					["icon"] = {
-						["y"] = 0,
-						["x"] = 0,
-						["frameLevel"] = 3,
-						["opacity"] = 1,
-						["size"] = 20,
-					},
-					["filters"] = {
-					},
-				}, -- [2]
-			},
-			["settings"] = {
-			},
-			["buttonFacade"] = {
-				["Debuffs"] = {
-					["gloss"] = 0,
-					["colours"] = {
-					},
-					["backdrop"] = false,
-					["skin"] = "Blizzard",
-				},
-				["Buffs"] = {
-					["gloss"] = 0,
-					["colours"] = {
-					},
-					["backdrop"] = false,
 					["skin"] = "Blizzard",
 				},
 			},
@@ -8450,6 +8442,8 @@ SBFDB = {
 					["skin"] = "Blizzard",
 				},
 			},
+			["settings"] = {
+			},
 			["frames"] = {
 				{
 					["general"] = {
@@ -8614,190 +8608,11 @@ SBFDB = {
 					},
 				}, -- [2]
 			},
-			["settings"] = {
-			},
 			["flow"] = {
 			},
 		},
 		["Lihte - Cho'gall"] = {
 			["flow"] = {
-			},
-			["buttonFacade"] = {
-				["Debuffs"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
-				["Target Buffs"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
-				["Small Notes"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
-				["ToT Debuffs"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
-				["Buffs"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
-				["oh shit"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
-				["Target Debuffs"] = {
-					["colours"] = {
-						["Gloss"] = {
-							1, -- [1]
-							1, -- [2]
-							1, -- [3]
-							1, -- [4]
-						},
-						["Highlight"] = {
-							1, -- [1]
-							0.9254901960784314, -- [2]
-							0.8862745098039215, -- [3]
-							1, -- [4]
-						},
-						["Backdrop"] = {
-							0, -- [1]
-							0, -- [2]
-							0, -- [3]
-							1, -- [4]
-						},
-					},
-					["gloss"] = 0.35,
-					["backdrop"] = true,
-					["skin"] = "Blizzard",
-				},
 			},
 			["settings"] = {
 			},
@@ -8819,10 +8634,10 @@ SBFDB = {
 						},
 						["opacity"] = 1,
 						["growth"] = 3,
+						["count"] = 60,
 						["y"] = 0,
 						["x"] = -2,
 						["sort"] = 7,
-						["count"] = 60,
 						["anchor"] = 2,
 						["rowCount"] = 1,
 						["visibility"] = 1,
@@ -8904,10 +8719,10 @@ SBFDB = {
 						},
 						["opacity"] = 1,
 						["growth"] = 1,
+						["sort"] = 1,
 						["y"] = 10,
 						["x"] = 0,
 						["count"] = 16,
-						["sort"] = 1,
 						["anchor"] = 1,
 						["rowCount"] = 16,
 						["visibility"] = 1,
@@ -8992,14 +8807,14 @@ SBFDB = {
 						},
 						["opacity"] = 1,
 						["growth"] = 2,
+						["rows"] = true,
 						["y"] = 0,
 						["x"] = 56,
-						["count"] = 10,
-						["rows"] = true,
+						["sort"] = 1,
 						["anchor"] = 2,
 						["rowCount"] = 10,
 						["visibility"] = 1,
-						["sort"] = 1,
+						["count"] = 10,
 					},
 					["expiry"] = {
 						["minimumDuration"] = 0,
@@ -9108,10 +8923,10 @@ SBFDB = {
 						},
 						["rows"] = true,
 						["growth"] = 1,
+						["sort"] = 1,
 						["y"] = 0,
 						["x"] = 5,
 						["count"] = 10,
-						["sort"] = 1,
 						["anchor"] = 2,
 						["rowCount"] = 10,
 						["visibility"] = 1,
@@ -9186,6 +9001,183 @@ SBFDB = {
 					},
 				},
 			},
+			["buttonFacade"] = {
+				["Debuffs"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+				["Target Buffs"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+				["Buffs"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+				["Target Debuffs"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+				["Small Notes"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+				["oh shit"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+				["ToT Debuffs"] = {
+					["colours"] = {
+						["Gloss"] = {
+							1, -- [1]
+							1, -- [2]
+							1, -- [3]
+							1, -- [4]
+						},
+						["Highlight"] = {
+							1, -- [1]
+							0.9254901960784314, -- [2]
+							0.8862745098039215, -- [3]
+							1, -- [4]
+						},
+						["Backdrop"] = {
+							0, -- [1]
+							0, -- [2]
+							0, -- [3]
+							1, -- [4]
+						},
+					},
+					["gloss"] = 0.35,
+					["backdrop"] = true,
+					["skin"] = "Blizzard",
+				},
+			},
 		},
 		["Evyyn - Azuremyst"] = {
 			["flow"] = {
@@ -9205,28 +9197,7 @@ SBFDB = {
 					["backdrop"] = false,
 					["skin"] = "Blizzard",
 				},
-				["Buffs"] = {
-					["gloss"] = 0,
-					["colours"] = {
-					},
-					["backdrop"] = false,
-					["skin"] = "Blizzard",
-				},
-				["Target Debuffs"] = {
-					["gloss"] = 0,
-					["colours"] = {
-					},
-					["backdrop"] = false,
-					["skin"] = "Blizzard",
-				},
 				["Small Notes"] = {
-					["gloss"] = 0,
-					["colours"] = {
-					},
-					["backdrop"] = false,
-					["skin"] = "Blizzard",
-				},
-				["oh shit"] = {
 					["gloss"] = 0,
 					["colours"] = {
 					},
@@ -9240,6 +9211,29 @@ SBFDB = {
 					["backdrop"] = false,
 					["skin"] = "Blizzard",
 				},
+				["Buffs"] = {
+					["gloss"] = 0,
+					["colours"] = {
+					},
+					["backdrop"] = false,
+					["skin"] = "Blizzard",
+				},
+				["oh shit"] = {
+					["gloss"] = 0,
+					["colours"] = {
+					},
+					["backdrop"] = false,
+					["skin"] = "Blizzard",
+				},
+				["Target Debuffs"] = {
+					["gloss"] = 0,
+					["colours"] = {
+					},
+					["backdrop"] = false,
+					["skin"] = "Blizzard",
+				},
+			},
+			["settings"] = {
 			},
 			["frames"] = {
 				{
@@ -9815,8 +9809,6 @@ SBFDB = {
 					},
 				}, -- [7]
 			},
-			["settings"] = {
-			},
 		},
 		["Git - Arthas"] = {
 			["buttonFacade"] = {
@@ -9836,8 +9828,6 @@ SBFDB = {
 				},
 			},
 			["flow"] = {
-			},
-			["settings"] = {
 			},
 			["frames"] = {
 				{
@@ -10002,6 +9992,8 @@ SBFDB = {
 					["filters"] = {
 					},
 				}, -- [2]
+			},
+			["settings"] = {
 			},
 		},
 	},

@@ -32,22 +32,24 @@ RangeDisplayDB3 = {
 		["Gitt - Cho'gall"] = "Gitt Tank",
 		["Giit - Cho'gall"] = "Giit tank",
 		["Gitt - Arthas"] = "Gitt - Monk",
-		["Spih - Arthas"] = "Spih - Disc",
-		["Gimm - Cho'gall"] = "Default",
-		["Git - Cho'gall"] = "Default",
-		["Burk - Azuremyst"] = "Burk",
-		["Spih - Cho'gall"] = "Spih - DPS",
-		["Greny - Azuremyst"] = "Default",
-		["Giitt - Feathermoon"] = "Default",
-		["Lihte - Cho'gall"] = "Default",
-		["Git - Azuremyst"] = "Default",
 		["Git - Arthas"] = "Git - Mar 2014",
+		["Git - Azuremyst"] = "Default",
+		["Greny - Azuremyst"] = "Default",
+		["Burk - Azuremyst"] = "Burk",
+		["Giitt - Feathermoon"] = "Default",
+		["Git - Cho'gall"] = "Default",
+		["Spih - Cho'gall"] = "Spih - DPS",
+		["Lihte - Cho'gall"] = "Default",
+		["Gimm - Cho'gall"] = "Default",
+		["Spih - Arthas"] = "Spih - Disc",
 	},
 	["profiles"] = {
 		["Spih - DPS"] = {
 			["locked"] = true,
 			["mute"] = true,
 			["units"] = {
+				["arena2"] = {
+				},
 				["playertarget"] = {
 					["y"] = -99.24993133544922,
 					["fontSize"] = 15,
@@ -55,17 +57,15 @@ RangeDisplayDB3 = {
 					["x"] = -43.50004959106445,
 					["warnEnemyOnly"] = false,
 				},
-				["arena2"] = {
-				},
 				["focus"] = {
 					["enabled"] = false,
 				},
-				["arena5"] = {
+				["mouseover"] = {
+					["enabled"] = false,
 				},
 				["pet"] = {
 				},
-				["mouseover"] = {
-					["enabled"] = false,
+				["arena5"] = {
 				},
 				["arena4"] = {
 				},
@@ -77,324 +77,9 @@ RangeDisplayDB3 = {
 				},
 				["focus"] = {
 				},
-				["arena5"] = {
-				},
-				["pet"] = {
-				},
-				["arena4"] = {
-				},
-			},
-		},
-		["Gilt Heals"] = {
-			["locked"] = true,
-			["mute"] = true,
-			["units"] = {
-				["playertarget"] = {
-					["enabled"] = false,
-				},
-				["mouseover"] = {
-					["y"] = 0,
-					["font"] = "DorisPP",
-					["point"] = "BOTTOM",
-					["x"] = 99.13819885253906,
-					["relPoint"] = "BOTTOM",
-				},
-				["focus"] = {
-					["enabled"] = false,
-					["fontSize"] = 13,
-					["point"] = "TOPRIGHT",
-					["font"] = "DorisPP",
-					["relPoint"] = "TOPRIGHT",
-					["x"] = -399.046875,
-					["frameWidth"] = 44,
-					["y"] = -63.53852462768555,
-				},
-			},
-		},
-		["Healing"] = {
-			["mute"] = true,
-			["locked"] = true,
-			["units"] = {
-				["arena2"] = {
-				},
-				["playertarget"] = {
-					["y"] = 259.3540432237152,
-					["fontSize"] = 30,
-					["point"] = "BOTTOM",
-					["fontOutline"] = "OUTLINE",
-					["x"] = -0.0001328779709809064,
-					["relPoint"] = "BOTTOM",
-					["font"] = "DorisPP",
-				},
-				["focus"] = {
-					["enabled"] = false,
-				},
-				["arena5"] = {
-				},
-				["pet"] = {
-				},
-				["mouseover"] = {
-					["y"] = -277.7848615289282,
-					["x"] = -65.98388042609814,
-					["point"] = "RIGHT",
-					["mouseAnchor"] = false,
-					["relPoint"] = "RIGHT",
-					["enabled"] = false,
-					["font"] = "SCT Emblem",
-				},
-				["arena4"] = {
-				},
-			},
-		},
-		["Gitt Tank"] = {
-			["mute"] = true,
-			["units"] = {
-				["playertarget"] = {
-					["y"] = 259.3540432237152,
-					["fontSize"] = 30,
-					["point"] = "BOTTOM",
-					["fontOutline"] = "OUTLINE",
-					["font"] = "DorisPP",
-					["x"] = -0.0001328779709809064,
-					["relPoint"] = "BOTTOM",
-				},
-				["arena2"] = {
-				},
-				["focus"] = {
-					["enabled"] = false,
-				},
-				["arena5"] = {
-				},
-				["mouseover"] = {
-					["y"] = -277.7848615289282,
-					["relPoint"] = "RIGHT",
-					["point"] = "RIGHT",
-					["mouseAnchor"] = false,
-					["x"] = -65.98388042609814,
-					["enabled"] = false,
-					["font"] = "SCT Emblem",
-				},
-				["pet"] = {
-				},
-				["arena4"] = {
-				},
-			},
-		},
-		["Burk"] = {
-			["locked"] = true,
-			["mute"] = true,
-			["units"] = {
-				["playertarget"] = {
-					["y"] = 221.69284808215,
-					["fontSize"] = 30,
-					["point"] = "BOTTOM",
-					["fontOutline"] = "OUTLINE",
-					["x"] = 353.7230747257461,
-					["relPoint"] = "BOTTOM",
-					["font"] = "DorisPP",
-				},
-				["mouseover"] = {
-					["y"] = -277.7848615289282,
-					["x"] = -65.98388042609814,
-					["point"] = "RIGHT",
-					["mouseAnchor"] = false,
-					["relPoint"] = "RIGHT",
-					["enabled"] = false,
-					["font"] = "SCT Emblem",
-				},
-				["focus"] = {
-					["enabled"] = false,
-				},
-			},
-		},
-		["Giit tank"] = {
-			["locked"] = true,
-			["mute"] = true,
-			["units"] = {
-				["arena2"] = {
-				},
-				["playertarget"] = {
-					["y"] = -123.8957748413086,
-					["fontSize"] = 10,
-					["x"] = -6.747709267074242e-005,
-					["font"] = "DorisPP",
-				},
-				["focus"] = {
-					["enabled"] = false,
-				},
-				["arena5"] = {
-				},
-				["pet"] = {
-				},
-				["mouseover"] = {
-					["y"] = -277.7848615289282,
-					["relPoint"] = "RIGHT",
-					["point"] = "RIGHT",
-					["mouseAnchor"] = false,
-					["x"] = -65.98388042609814,
-					["enabled"] = false,
-					["font"] = "SCT Emblem",
-				},
-				["arena4"] = {
-				},
-			},
-		},
-		["Arthas"] = {
-			["units"] = {
-				["arena2"] = {
-				},
-				["focus"] = {
-				},
-				["arena5"] = {
-				},
-				["pet"] = {
-				},
-				["arena4"] = {
-				},
-			},
-		},
-		["Default"] = {
-			["mute"] = true,
-			["locked"] = true,
-			["units"] = {
-				["arena2"] = {
-				},
-				["playertarget"] = {
-					["y"] = 259.3540432237152,
-					["fontSize"] = 30,
-					["point"] = "BOTTOM",
-					["fontOutline"] = "OUTLINE",
-					["x"] = -0.0001328779709809064,
-					["font"] = "DorisPP",
-					["relPoint"] = "BOTTOM",
-				},
-				["focus"] = {
-					["enabled"] = false,
-				},
-				["mouseover"] = {
-					["y"] = -277.7848615289282,
-					["font"] = "SCT Emblem",
-					["point"] = "RIGHT",
-					["mouseAnchor"] = false,
-					["x"] = -65.98388042609814,
-					["enabled"] = false,
-					["relPoint"] = "RIGHT",
-				},
 				["pet"] = {
 				},
 				["arena5"] = {
-				},
-				["arena4"] = {
-				},
-			},
-		},
-		["Git- Arthas"] = {
-			["mute"] = true,
-			["units"] = {
-				["arena2"] = {
-				},
-				["playertarget"] = {
-					["y"] = 259.3540432237152,
-					["fontSize"] = 30,
-					["point"] = "BOTTOM",
-					["fontOutline"] = "OUTLINE",
-					["x"] = -0.0001328779709809064,
-					["relPoint"] = "BOTTOM",
-					["font"] = "DorisPP",
-				},
-				["focus"] = {
-					["enabled"] = false,
-				},
-				["arena5"] = {
-				},
-				["mouseover"] = {
-					["enabled"] = false,
-					["x"] = -65.98388042609814,
-					["point"] = "RIGHT",
-					["mouseAnchor"] = false,
-					["relPoint"] = "RIGHT",
-					["font"] = "SCT Emblem",
-					["y"] = -277.7848615289282,
-				},
-				["pet"] = {
-				},
-				["arena4"] = {
-				},
-			},
-		},
-		["Gitt - Monk"] = {
-			["locked"] = true,
-			["mute"] = true,
-			["units"] = {
-				["arena2"] = {
-				},
-				["playertarget"] = {
-					["y"] = -123.8957748413086,
-					["fontSize"] = 10,
-					["x"] = -6.747709267074242e-005,
-					["font"] = "DorisPP",
-				},
-				["focus"] = {
-					["enabled"] = false,
-				},
-				["arena5"] = {
-				},
-				["mouseover"] = {
-					["y"] = -277.7848615289282,
-					["x"] = -65.98388042609814,
-					["point"] = "RIGHT",
-					["mouseAnchor"] = false,
-					["relPoint"] = "RIGHT",
-					["enabled"] = false,
-					["font"] = "SCT Emblem",
-				},
-				["pet"] = {
-				},
-				["arena4"] = {
-				},
-			},
-		},
-		["Git - Mar 2014"] = {
-			["locked"] = true,
-			["mute"] = true,
-			["units"] = {
-				["mouseover"] = {
-					["mouseAnchor"] = false,
-					["y"] = -277.7848615289282,
-					["x"] = -65.98388042609814,
-					["point"] = "RIGHT",
-					["relPoint"] = "RIGHT",
-					["enabled"] = false,
-					["font"] = "SCT Emblem",
-				},
-				["arena2"] = {
-				},
-				["focus"] = {
-					["enabled"] = false,
-				},
-				["playertarget"] = {
-					["fontSize"] = 10,
-					["x"] = -6.747709267074242e-005,
-					["y"] = -123.8957748413086,
-					["font"] = "DorisPP",
-				},
-				["pet"] = {
-				},
-				["arena5"] = {
-				},
-				["arena4"] = {
-				},
-			},
-		},
-		["Git - Arthas"] = {
-			["units"] = {
-				["arena2"] = {
-				},
-				["focus"] = {
-				},
-				["arena5"] = {
-				},
-				["pet"] = {
 				},
 				["arena4"] = {
 				},
@@ -417,6 +102,153 @@ RangeDisplayDB3 = {
 				["focus"] = {
 					["enabled"] = false,
 				},
+				["pet"] = {
+				},
+				["mouseover"] = {
+					["y"] = -277.7848615289282,
+					["relPoint"] = "RIGHT",
+					["point"] = "RIGHT",
+					["mouseAnchor"] = false,
+					["x"] = -65.98388042609814,
+					["enabled"] = false,
+					["font"] = "SCT Emblem",
+				},
+				["arena5"] = {
+				},
+				["arena4"] = {
+				},
+			},
+		},
+		["Healing"] = {
+			["mute"] = true,
+			["locked"] = true,
+			["units"] = {
+				["playertarget"] = {
+					["y"] = 259.3540432237152,
+					["fontSize"] = 30,
+					["point"] = "BOTTOM",
+					["fontOutline"] = "OUTLINE",
+					["font"] = "DorisPP",
+					["relPoint"] = "BOTTOM",
+					["x"] = -0.0001328779709809064,
+				},
+				["arena2"] = {
+				},
+				["focus"] = {
+					["enabled"] = false,
+				},
+				["mouseover"] = {
+					["y"] = -277.7848615289282,
+					["x"] = -65.98388042609814,
+					["point"] = "RIGHT",
+					["mouseAnchor"] = false,
+					["font"] = "SCT Emblem",
+					["enabled"] = false,
+					["relPoint"] = "RIGHT",
+				},
+				["pet"] = {
+				},
+				["arena5"] = {
+				},
+				["arena4"] = {
+				},
+			},
+		},
+		["Gitt Tank"] = {
+			["mute"] = true,
+			["units"] = {
+				["arena2"] = {
+				},
+				["playertarget"] = {
+					["y"] = 259.3540432237152,
+					["fontSize"] = 30,
+					["point"] = "BOTTOM",
+					["fontOutline"] = "OUTLINE",
+					["relPoint"] = "BOTTOM",
+					["x"] = -0.0001328779709809064,
+					["font"] = "DorisPP",
+				},
+				["focus"] = {
+					["enabled"] = false,
+				},
+				["pet"] = {
+				},
+				["mouseover"] = {
+					["y"] = -277.7848615289282,
+					["relPoint"] = "RIGHT",
+					["point"] = "RIGHT",
+					["mouseAnchor"] = false,
+					["font"] = "SCT Emblem",
+					["enabled"] = false,
+					["x"] = -65.98388042609814,
+				},
+				["arena5"] = {
+				},
+				["arena4"] = {
+				},
+			},
+		},
+		["Git - Arthas"] = {
+			["units"] = {
+				["arena2"] = {
+				},
+				["focus"] = {
+				},
+				["pet"] = {
+				},
+				["arena5"] = {
+				},
+				["arena4"] = {
+				},
+			},
+		},
+		["Giit tank"] = {
+			["locked"] = true,
+			["mute"] = true,
+			["units"] = {
+				["playertarget"] = {
+					["y"] = -123.8957748413086,
+					["fontSize"] = 10,
+					["font"] = "DorisPP",
+					["x"] = -6.747709267074242e-005,
+				},
+				["arena2"] = {
+				},
+				["focus"] = {
+					["enabled"] = false,
+				},
+				["mouseover"] = {
+					["y"] = -277.7848615289282,
+					["relPoint"] = "RIGHT",
+					["point"] = "RIGHT",
+					["mouseAnchor"] = false,
+					["font"] = "SCT Emblem",
+					["enabled"] = false,
+					["x"] = -65.98388042609814,
+				},
+				["pet"] = {
+				},
+				["arena5"] = {
+				},
+				["arena4"] = {
+				},
+			},
+		},
+		["Git - Mar 2014"] = {
+			["locked"] = true,
+			["mute"] = true,
+			["units"] = {
+				["playertarget"] = {
+					["y"] = -123.8957748413086,
+					["fontSize"] = 10,
+					["font"] = "DorisPP",
+					["x"] = -6.747709267074242e-005,
+				},
+				["arena2"] = {
+				},
+				["focus"] = {
+					["enabled"] = false,
+				},
 				["arena5"] = {
 				},
 				["pet"] = {
@@ -431,6 +263,174 @@ RangeDisplayDB3 = {
 					["font"] = "SCT Emblem",
 				},
 				["arena4"] = {
+				},
+			},
+		},
+		["Default"] = {
+			["mute"] = true,
+			["locked"] = true,
+			["units"] = {
+				["mouseover"] = {
+					["mouseAnchor"] = false,
+					["y"] = -277.7848615289282,
+					["relPoint"] = "RIGHT",
+					["point"] = "RIGHT",
+					["font"] = "SCT Emblem",
+					["enabled"] = false,
+					["x"] = -65.98388042609814,
+				},
+				["arena2"] = {
+				},
+				["focus"] = {
+					["enabled"] = false,
+				},
+				["playertarget"] = {
+					["fontSize"] = 30,
+					["point"] = "BOTTOM",
+					["font"] = "DorisPP",
+					["fontOutline"] = "OUTLINE",
+					["y"] = 259.3540432237152,
+					["x"] = -0.0001328779709809064,
+					["relPoint"] = "BOTTOM",
+				},
+				["pet"] = {
+				},
+				["arena5"] = {
+				},
+				["arena4"] = {
+				},
+			},
+		},
+		["Git- Arthas"] = {
+			["mute"] = true,
+			["units"] = {
+				["playertarget"] = {
+					["y"] = 259.3540432237152,
+					["fontSize"] = 30,
+					["point"] = "BOTTOM",
+					["fontOutline"] = "OUTLINE",
+					["font"] = "DorisPP",
+					["relPoint"] = "BOTTOM",
+					["x"] = -0.0001328779709809064,
+				},
+				["arena2"] = {
+				},
+				["focus"] = {
+					["enabled"] = false,
+				},
+				["pet"] = {
+				},
+				["mouseover"] = {
+					["enabled"] = false,
+					["x"] = -65.98388042609814,
+					["point"] = "RIGHT",
+					["mouseAnchor"] = false,
+					["y"] = -277.7848615289282,
+					["font"] = "SCT Emblem",
+					["relPoint"] = "RIGHT",
+				},
+				["arena5"] = {
+				},
+				["arena4"] = {
+				},
+			},
+		},
+		["Gitt - Monk"] = {
+			["locked"] = true,
+			["mute"] = true,
+			["units"] = {
+				["arena2"] = {
+				},
+				["playertarget"] = {
+					["y"] = -123.8957748413086,
+					["fontSize"] = 10,
+					["font"] = "DorisPP",
+					["x"] = -6.747709267074242e-005,
+				},
+				["focus"] = {
+					["enabled"] = false,
+				},
+				["arena5"] = {
+				},
+				["mouseover"] = {
+					["y"] = -277.7848615289282,
+					["relPoint"] = "RIGHT",
+					["point"] = "RIGHT",
+					["mouseAnchor"] = false,
+					["font"] = "SCT Emblem",
+					["enabled"] = false,
+					["x"] = -65.98388042609814,
+				},
+				["pet"] = {
+				},
+				["arena4"] = {
+				},
+			},
+		},
+		["Arthas"] = {
+			["units"] = {
+				["arena2"] = {
+				},
+				["focus"] = {
+				},
+				["pet"] = {
+				},
+				["arena5"] = {
+				},
+				["arena4"] = {
+				},
+			},
+		},
+		["Burk"] = {
+			["locked"] = true,
+			["mute"] = true,
+			["units"] = {
+				["mouseover"] = {
+					["y"] = -277.7848615289282,
+					["x"] = -65.98388042609814,
+					["point"] = "RIGHT",
+					["mouseAnchor"] = false,
+					["font"] = "SCT Emblem",
+					["enabled"] = false,
+					["relPoint"] = "RIGHT",
+				},
+				["playertarget"] = {
+					["y"] = 221.69284808215,
+					["fontSize"] = 30,
+					["point"] = "BOTTOM",
+					["fontOutline"] = "OUTLINE",
+					["font"] = "DorisPP",
+					["relPoint"] = "BOTTOM",
+					["x"] = 353.7230747257461,
+				},
+				["focus"] = {
+					["enabled"] = false,
+				},
+			},
+		},
+		["Gilt Heals"] = {
+			["locked"] = true,
+			["mute"] = true,
+			["units"] = {
+				["mouseover"] = {
+					["y"] = 0,
+					["font"] = "DorisPP",
+					["point"] = "BOTTOM",
+					["relPoint"] = "BOTTOM",
+					["x"] = 99.13819885253906,
+				},
+				["playertarget"] = {
+					["enabled"] = false,
+				},
+				["focus"] = {
+					["enabled"] = false,
+					["fontSize"] = 13,
+					["point"] = "TOPRIGHT",
+					["y"] = -63.53852462768555,
+					["relPoint"] = "TOPRIGHT",
+					["x"] = -399.046875,
+					["frameWidth"] = 44,
+					["font"] = "DorisPP",
 				},
 			},
 		},

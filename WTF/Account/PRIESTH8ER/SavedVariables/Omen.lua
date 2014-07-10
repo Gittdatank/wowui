@@ -14,7 +14,7 @@ Omen3DB = {
 		["Got - Arthas"] = "Got - Arthas",
 		["Gitt - Cho'gall"] = "Gitt - Cho'gall",
 		["Giit - Cho'gall"] = "Giit - tank",
-		["Gitt - Arthas"] = "Gitt - Arthas",
+		["Gitt - Arthas"] = "Gitt - Tank",
 		["Git - Arthas"] = "Git - Mar 2014",
 		["Git - Azuremyst"] = "Git - Azuremyst",
 		["Greny - Azuremyst"] = "Greny - Azuremyst",
@@ -28,54 +28,54 @@ Omen3DB = {
 	["profiles"] = {
 		["Dbyx - Arthas"] = {
 			["PositionW"] = 199.9999389648438,
+			["PositionH"] = 81.99998474121094,
 			["PositionY"] = 531.0000610351563,
 			["PositionX"] = 392.2499084472656,
-			["PositionH"] = 81.99998474121094,
 		},
 		["Gyit - Area 52"] = {
 			["PositionX"] = 832.7308443612102,
 			["PositionY"] = 665.7692757269233,
 		},
 		["Git - Mar 2014"] = {
+			["MinimapIcon"] = {
+				["hide"] = true,
+			},
 			["PositionW"] = 242.045654296875,
 			["PositionH"] = 161.3500518798828,
+			["ShowWith"] = {
+				["HideWhenOOC"] = true,
+			},
+			["Warnings"] = {
+				["Flash"] = false,
+			},
+			["FrameStrata"] = "4-HIGH",
+			["VGrip1"] = 102.8694640036626,
 			["VGrip2"] = 139.1763336520141,
 			["PositionY"] = 162.1001586914063,
+			["TitleBar"] = {
+				["ShowTitleBar"] = false,
+			},
 			["ClickThrough"] = true,
 			["Locked"] = true,
 			["Background"] = {
-				["EdgeSize"] = 10,
-				["BorderTexture"] = "RothSquare",
 				["Color"] = {
 					["a"] = 0.5400000214576721,
 					["r"] = 0,
 					["g"] = 0,
 					["b"] = 0,
 				},
+				["EdgeSize"] = 10,
+				["BorderTexture"] = "RothSquare",
 				["Texture"] = "Solid",
 			},
-			["MinimapIcon"] = {
-				["hide"] = true,
-			},
-			["ShowWith"] = {
-				["HideWhenOOC"] = true,
-			},
-			["FrameStrata"] = "4-HIGH",
-			["VGrip1"] = 102.8694640036626,
 			["PositionX"] = 459.8497314453125,
-			["Warnings"] = {
-				["Flash"] = false,
-			},
-			["TitleBar"] = {
-				["ShowTitleBar"] = false,
-			},
 			["Bar"] = {
 				["FontSize"] = 8,
-				["ShowHeadings"] = false,
-				["Texture"] = "Minimalist",
-				["Font"] = "DorisPP",
 				["TPSWindow"] = 15,
 				["Height"] = 22,
+				["ShowHeadings"] = false,
+				["Font"] = "DorisPP",
+				["Texture"] = "Minimalist",
 			},
 		},
 		["Ghit - Azuremyst"] = {
@@ -191,8 +191,13 @@ Omen3DB = {
 				["UseMyBarColor"] = false,
 				["ShowValue"] = true,
 				["UseClassColors"] = true,
+				["FadeBarColor"] = {
+					["a"] = 1,
+					["r"] = 0.5,
+					["g"] = 0.5,
+					["b"] = 0.5,
+				},
 				["Spacing"] = 0,
-				["FontOutline"] = "",
 				["MyBarColor"] = {
 					["a"] = 1,
 					["r"] = 1,
@@ -200,7 +205,12 @@ Omen3DB = {
 					["b"] = 0,
 				},
 				["ShowAggroBar"] = true,
-				["AlwaysShowSelf"] = true,
+				["PetBarColor"] = {
+					["a"] = 1,
+					["r"] = 0.77,
+					["g"] = 0,
+					["b"] = 1,
+				},
 				["Texture"] = "Blizzard",
 				["HeadingBGColor"] = {
 					["a"] = 0,
@@ -248,19 +258,9 @@ Omen3DB = {
 				["TPSWindow"] = 10,
 				["UseTankBarColor"] = false,
 				["Height"] = 12,
-				["PetBarColor"] = {
-					["a"] = 1,
-					["r"] = 0.77,
-					["g"] = 0,
-					["b"] = 1,
-				},
-				["FadeBarColor"] = {
-					["a"] = 1,
-					["r"] = 0.5,
-					["g"] = 0.5,
-					["b"] = 0.5,
-				},
 				["UseCustomClassColors"] = true,
+				["FontOutline"] = "",
+				["AlwaysShowSelf"] = true,
 			},
 		},
 		["Giit - Azuremyst"] = {
@@ -415,13 +415,8 @@ Omen3DB = {
 				["UseMyBarColor"] = false,
 				["ShowValue"] = true,
 				["UseClassColors"] = true,
+				["Spacing"] = 0,
 				["FontOutline"] = "",
-				["FadeBarColor"] = {
-					["a"] = 1,
-					["r"] = 0.5,
-					["g"] = 0.5,
-					["b"] = 0.5,
-				},
 				["MyBarColor"] = {
 					["a"] = 1,
 					["r"] = 1,
@@ -429,7 +424,7 @@ Omen3DB = {
 					["b"] = 0,
 				},
 				["ShowAggroBar"] = true,
-				["UseCustomClassColors"] = true,
+				["AlwaysShowSelf"] = true,
 				["Texture"] = "Blizzard",
 				["HeadingBGColor"] = {
 					["a"] = 0,
@@ -477,14 +472,19 @@ Omen3DB = {
 				["TPSWindow"] = 10,
 				["InvertColors"] = false,
 				["Height"] = 12,
-				["AlwaysShowSelf"] = true,
-				["Spacing"] = 0,
 				["PetBarColor"] = {
 					["a"] = 1,
 					["r"] = 0.77,
 					["g"] = 0,
 					["b"] = 1,
 				},
+				["FadeBarColor"] = {
+					["a"] = 1,
+					["r"] = 0.5,
+					["g"] = 0.5,
+					["b"] = 0.5,
+				},
+				["UseCustomClassColors"] = true,
 			},
 		},
 		["Cowbeary - Azuremyst"] = {
@@ -735,48 +735,6 @@ Omen3DB = {
 				["Texture"] = "Minimalist",
 			},
 		},
-		["Gitt - Arthas"] = {
-			["MinimapIcon"] = {
-				["hide"] = true,
-			},
-			["PositionW"] = 242.045654296875,
-			["VGrip1"] = 102.8694640036626,
-			["ShowWith"] = {
-				["HideWhenOOC"] = true,
-			},
-			["TitleBar"] = {
-				["ShowTitleBar"] = false,
-			},
-			["FrameStrata"] = "4-HIGH",
-			["PositionH"] = 161.3500518798828,
-			["VGrip2"] = 139.1763336520141,
-			["PositionY"] = 162.1001586914063,
-			["PositionX"] = 459.8497314453125,
-			["ClickThrough"] = true,
-			["Locked"] = true,
-			["Background"] = {
-				["Color"] = {
-					["a"] = 0.5400000214576721,
-					["r"] = 0,
-					["g"] = 0,
-					["b"] = 0,
-				},
-				["EdgeSize"] = 10,
-				["Texture"] = "Solid",
-				["BorderTexture"] = "RothSquare",
-			},
-			["Warnings"] = {
-				["Flash"] = false,
-			},
-			["Bar"] = {
-				["FontSize"] = 8,
-				["TPSWindow"] = 15,
-				["Height"] = 22,
-				["ShowHeadings"] = false,
-				["Font"] = "DorisPP",
-				["Texture"] = "Minimalist",
-			},
-		},
 		["Gimm - Cho'gall"] = {
 			["MinimapIcon"] = {
 				["hide"] = true,
@@ -818,6 +776,93 @@ Omen3DB = {
 				["AnimateBars"] = false,
 				["Texture"] = "Smooth",
 			},
+		},
+		["Gitt - Arthas"] = {
+			["MinimapIcon"] = {
+				["hide"] = true,
+			},
+			["PositionW"] = 242.045654296875,
+			["PositionH"] = 161.3500518798828,
+			["ShowWith"] = {
+				["HideWhenOOC"] = true,
+			},
+			["Warnings"] = {
+				["Flash"] = false,
+			},
+			["FrameStrata"] = "4-HIGH",
+			["VGrip1"] = 102.8694640036626,
+			["VGrip2"] = 139.1763336520141,
+			["PositionY"] = 162.1001586914063,
+			["PositionX"] = 459.8497314453125,
+			["ClickThrough"] = true,
+			["Locked"] = true,
+			["Background"] = {
+				["Color"] = {
+					["a"] = 0.5400000214576721,
+					["r"] = 0,
+					["g"] = 0,
+					["b"] = 0,
+				},
+				["EdgeSize"] = 10,
+				["Texture"] = "Solid",
+				["BorderTexture"] = "RothSquare",
+			},
+			["TitleBar"] = {
+				["ShowTitleBar"] = false,
+			},
+			["Bar"] = {
+				["FontSize"] = 8,
+				["TPSWindow"] = 15,
+				["Height"] = 22,
+				["ShowHeadings"] = false,
+				["Font"] = "DorisPP",
+				["Texture"] = "Minimalist",
+			},
+		},
+		["Gilt - Azuremyst"] = {
+			["MinimapIcon"] = {
+				["hide"] = true,
+			},
+			["PositionW"] = 197.0460402510682,
+			["ShowWith"] = {
+				["HideWhenOOC"] = true,
+			},
+			["PositionH"] = 139.6000225204788,
+			["Warnings"] = {
+				["Flash"] = false,
+			},
+			["VGrip1"] = 83.74460183105892,
+			["VGrip2"] = 113.3015201243738,
+			["PositionY"] = 200.4389862663738,
+			["PositionX"] = 489.0997871589833,
+			["ClickThrough"] = true,
+			["Locked"] = true,
+			["Background"] = {
+				["Color"] = {
+					["a"] = 0.5400000214576721,
+					["b"] = 0,
+					["g"] = 0,
+					["r"] = 0,
+				},
+				["EdgeSize"] = 10,
+				["BorderTexture"] = "RothSquare",
+				["Texture"] = "Solid",
+			},
+			["TitleBar"] = {
+				["ShowTitleBar"] = false,
+			},
+			["Bar"] = {
+				["Font"] = "SCT Emblem",
+				["TPSWindow"] = 15,
+				["Height"] = 22,
+				["ShowHeadings"] = false,
+				["AnimateBars"] = false,
+				["Texture"] = "Smooth",
+			},
+		},
+		["Giitt - Feathermoon"] = {
+			["PositionX"] = 832.7308349609375,
+			["PositionY"] = 665.769287109375,
 		},
 		["Git - Cho'gall"] = {
 			["MinimapIcon"] = {
@@ -862,10 +907,6 @@ Omen3DB = {
 				["Texture"] = "Minimalist",
 			},
 		},
-		["Giitt - Feathermoon"] = {
-			["PositionX"] = 832.7308349609375,
-			["PositionY"] = 665.769287109375,
-		},
 		["Giit -Tank"] = {
 			["MinimapIcon"] = {
 				["hide"] = true,
@@ -898,47 +939,6 @@ Omen3DB = {
 			["Warnings"] = {
 				["Flash"] = false,
 			},
-			["Bar"] = {
-				["Font"] = "SCT Emblem",
-				["TPSWindow"] = 15,
-				["Height"] = 22,
-				["ShowHeadings"] = false,
-				["AnimateBars"] = false,
-				["Texture"] = "Smooth",
-			},
-		},
-		["Git - Azuremyst"] = {
-			["MinimapIcon"] = {
-				["hide"] = true,
-			},
-			["PositionW"] = 197.0460402510682,
-			["ShowWith"] = {
-				["HideWhenOOC"] = true,
-			},
-			["VGrip1"] = 83.74460183105892,
-			["TitleBar"] = {
-				["ShowTitleBar"] = false,
-			},
-			["PositionH"] = 139.6000225204788,
-			["VGrip2"] = 113.3015201243738,
-			["PositionY"] = 200.4389862663738,
-			["PositionX"] = 489.0997871589833,
-			["Warnings"] = {
-				["Flash"] = false,
-			},
-			["Locked"] = true,
-			["Background"] = {
-				["Color"] = {
-					["a"] = 0.5400000214576721,
-					["b"] = 0,
-					["g"] = 0,
-					["r"] = 0,
-				},
-				["EdgeSize"] = 10,
-				["Texture"] = "Solid",
-				["BorderTexture"] = "RothSquare",
-			},
-			["ClickThrough"] = true,
 			["Bar"] = {
 				["Font"] = "SCT Emblem",
 				["TPSWindow"] = 15,
@@ -983,6 +983,47 @@ Omen3DB = {
 				["Texture"] = "Glamour7",
 			},
 		},
+		["Git - Azuremyst"] = {
+			["MinimapIcon"] = {
+				["hide"] = true,
+			},
+			["PositionW"] = 197.0460402510682,
+			["ShowWith"] = {
+				["HideWhenOOC"] = true,
+			},
+			["VGrip1"] = 83.74460183105892,
+			["TitleBar"] = {
+				["ShowTitleBar"] = false,
+			},
+			["PositionH"] = 139.6000225204788,
+			["VGrip2"] = 113.3015201243738,
+			["PositionY"] = 200.4389862663738,
+			["PositionX"] = 489.0997871589833,
+			["Warnings"] = {
+				["Flash"] = false,
+			},
+			["Locked"] = true,
+			["Background"] = {
+				["Color"] = {
+					["a"] = 0.5400000214576721,
+					["b"] = 0,
+					["g"] = 0,
+					["r"] = 0,
+				},
+				["EdgeSize"] = 10,
+				["Texture"] = "Solid",
+				["BorderTexture"] = "RothSquare",
+			},
+			["ClickThrough"] = true,
+			["Bar"] = {
+				["Font"] = "SCT Emblem",
+				["TPSWindow"] = 15,
+				["Height"] = 22,
+				["ShowHeadings"] = false,
+				["AnimateBars"] = false,
+				["Texture"] = "Smooth",
+			},
+		},
 		["Spih - Cho'gall"] = {
 			["PositionY"] = 1171.269287109375,
 			["PositionX"] = 232.7306823730469,
@@ -996,15 +1037,17 @@ Omen3DB = {
 			["ShowWith"] = {
 				["HideWhenOOC"] = true,
 			},
-			["PositionH"] = 139.6000225204788,
-			["Warnings"] = {
-				["Flash"] = false,
-			},
 			["VGrip1"] = 83.74460183105892,
+			["TitleBar"] = {
+				["ShowTitleBar"] = false,
+			},
+			["PositionH"] = 139.6000225204788,
 			["VGrip2"] = 113.3015201243738,
 			["PositionY"] = 200.4389862663738,
 			["PositionX"] = 489.0997871589833,
-			["ClickThrough"] = true,
+			["Warnings"] = {
+				["Flash"] = false,
+			},
 			["Locked"] = true,
 			["Background"] = {
 				["Color"] = {
@@ -1014,12 +1057,10 @@ Omen3DB = {
 					["b"] = 0,
 				},
 				["EdgeSize"] = 10,
-				["BorderTexture"] = "RothSquare",
 				["Texture"] = "Solid",
+				["BorderTexture"] = "RothSquare",
 			},
-			["TitleBar"] = {
-				["ShowTitleBar"] = false,
-			},
+			["ClickThrough"] = true,
 			["Bar"] = {
 				["Font"] = "SCT Emblem",
 				["TPSWindow"] = 15,
@@ -1029,22 +1070,23 @@ Omen3DB = {
 				["Texture"] = "Smooth",
 			},
 		},
-		["Gilt - Azuremyst"] = {
+		["Gitt - Tank"] = {
 			["MinimapIcon"] = {
 				["hide"] = true,
 			},
-			["PositionW"] = 197.0460402510682,
+			["PositionW"] = 242.045654296875,
+			["VGrip1"] = 102.8694640036626,
 			["ShowWith"] = {
 				["HideWhenOOC"] = true,
 			},
-			["PositionH"] = 139.6000225204788,
-			["Warnings"] = {
-				["Flash"] = false,
+			["PositionX"] = 459.8497314453125,
+			["FrameStrata"] = "4-HIGH",
+			["PositionH"] = 161.3500518798828,
+			["VGrip2"] = 139.1763336520141,
+			["PositionY"] = 162.1001586914063,
+			["TitleBar"] = {
+				["ShowTitleBar"] = false,
 			},
-			["VGrip1"] = 83.74460183105892,
-			["VGrip2"] = 113.3015201243738,
-			["PositionY"] = 200.4389862663738,
-			["PositionX"] = 489.0997871589833,
 			["ClickThrough"] = true,
 			["Locked"] = true,
 			["Background"] = {
@@ -1055,19 +1097,19 @@ Omen3DB = {
 					["r"] = 0,
 				},
 				["EdgeSize"] = 10,
-				["BorderTexture"] = "RothSquare",
 				["Texture"] = "Solid",
+				["BorderTexture"] = "RothSquare",
 			},
-			["TitleBar"] = {
-				["ShowTitleBar"] = false,
+			["Warnings"] = {
+				["Flash"] = false,
 			},
 			["Bar"] = {
-				["Font"] = "SCT Emblem",
+				["FontSize"] = 8,
 				["TPSWindow"] = 15,
 				["Height"] = 22,
 				["ShowHeadings"] = false,
-				["AnimateBars"] = false,
-				["Texture"] = "Smooth",
+				["Font"] = "DorisPP",
+				["Texture"] = "Minimalist",
 			},
 		},
 		["Spih - Arthas"] = {

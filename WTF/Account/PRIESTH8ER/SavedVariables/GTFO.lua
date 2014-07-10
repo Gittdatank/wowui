@@ -7,10 +7,10 @@ GTFOData = {
 		1, -- [4]
 	},
 	["DataCode"] = "4",
-	["Active"] = 1,
+	["Volume"] = 1,
 	["IgnoreOptions"] = {
 	},
-	["Volume"] = 1,
+	["Active"] = 1,
 	["TrivialDamagePercent"] = 5,
 	["TrivialMode"] = 1,
 }

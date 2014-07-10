@@ -15,15 +15,15 @@ if checkforwipe==nil or (checkforwipe and pswasonbossp614 and pswasonbossp614==1
 			reportafterboitwotab(psraidchats3[psraidoptionschat[2][6][14][1]], true, vezaxname, vezaxcrash, 1)
 		end
 		if psraidoptionson[2][6][14][2]==1 then
-			--strochkavezcrash=psiccdmgfrom.." |s4id144969|id ("..psmainmtotal.."): "
-			--reportafterboitwotab(psraidchats3[psraidoptionschat[2][6][14][2]], true, vezaxname2, vezaxcrash2, 1)
+			strochkavezcrash=psiccdmgfrom.." |s4id144969|id ("..psmainmtotal.."): "
+			reportafterboitwotab(psraidchats3[psraidoptionschat[2][6][14][2]], true, vezaxname2, vezaxcrash2, 1)
 		end
 		if psraidoptionson[2][6][14][3]==1 then
 			strochkavezcrash=psiccdmgfrom.." |s4id145033|id ("..psmainmtotal.."): "
 			reportafterboitwotab(psraidchats3[psraidoptionschat[2][6][14][3]], true, vezaxname3, vezaxcrash3, 1)
 		end
 		if psraidoptionson[2][6][14][4]==1 then
-			strochkavezcrash=psiccdmgfrom.." |s4id147733|id ("..psmainmtotal..", >400K): "
+			strochkavezcrash=psiccdmgfrom.." |s4id147235|id ("..psmainmtotal..", >400K): "
 			reportafterboitwotab(psraidchats3[psraidoptionschat[2][6][14][4]], true, vezaxname4, vezaxcrash4, 1)
 		end
 		if psraidoptionson[2][6][14][5]==1 then
@@ -38,11 +38,11 @@ if checkforwipe==nil or (checkforwipe and pswasonbossp614 and pswasonbossp614==1
 
 		strochkavezcrash=psiccdmgfrom.." |s4id144650|id ("..psmainmtotal.."): "
 		reportafterboitwotab("raid", true, vezaxname, vezaxcrash, nil, nil,0,1)
-		--strochkavezcrash=psiccdmgfrom.." |s4id144969|id ("..psmainmtotal.."): "
-		--reportafterboitwotab("raid", true, vezaxname2, vezaxcrash2, nil, nil,0,1)
+		strochkavezcrash=psiccdmgfrom.." |s4id144969|id ("..psmainmtotal.."): "
+		reportafterboitwotab("raid", true, vezaxname2, vezaxcrash2, nil, nil,0,1)
 		strochkavezcrash=psiccdmgfrom.." |s4id145033|id ("..psmainmtotal.."): "
 		reportafterboitwotab("raid", true, vezaxname3, vezaxcrash3, nil, nil,0,1)
-		strochkavezcrash=psiccdmgfrom.." |s4id147733|id ("..psmainmtotal..", >400K): "
+		strochkavezcrash=psiccdmgfrom.." |s4id147235|id ("..psmainmtotal..", >400K): "
 		reportafterboitwotab("raid", true, vezaxname4, vezaxcrash4, nil, nil,0,1)
 		strochkavezcrash=psiccdmgfrom.." |s4id147324|id ("..psmainmtotal.."): "
 		reportafterboitwotab("raid", true, vezaxname5, vezaxcrash5, nil, nil,0,1)
@@ -168,7 +168,7 @@ if arg2=="SPELL_DAMAGE" and spellid==145033 then
 end
 
 
-if arg2=="SPELL_DAMAGE" and spellid==147733 then
+if arg2=="SPELL_DAMAGE" and spellid==147235 then
   if pswasonbossp614==nil then
     pswasonbossp614=1
   end

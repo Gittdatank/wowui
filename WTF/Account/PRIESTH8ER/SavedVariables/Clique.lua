@@ -645,12 +645,12 @@ CliqueDB3 = {
 				["CompactRaidFrame21Buff3"] = true,
 				["CompactRaidFrame9Buff2"] = true,
 				["CompactRaidFrame27Buff2"] = true,
-				["CompactRaidFrame7DispelDebuff2"] = true,
+				["CompactRaidFrame28Buff3"] = true,
 				["CompactRaidFrame29Buff3"] = true,
 				["CompactRaidFrame18"] = true,
 				["CompactRaidFrame3"] = true,
 				["CompactRaidFrame7Debuff1"] = true,
-				["CompactRaidFrame27DispelDebuff2"] = true,
+				["CompactRaidFrame7DispelDebuff2"] = true,
 				["CompactRaidFrame6DispelDebuff3"] = true,
 				["CompactRaidFrame22Debuff1"] = true,
 				["CompactRaidFrame35Buff1"] = true,
@@ -670,7 +670,7 @@ CliqueDB3 = {
 				["CompactRaidFrame6Buff3"] = true,
 				["CompactRaidFrame11Buff2"] = true,
 				["CompactRaidFrame20DispelDebuff3"] = true,
-				["CompactRaidFrame30Debuff3"] = true,
+				["CompactRaidFrame33Debuff3"] = true,
 				["CompactRaidFrame34Debuff3"] = true,
 				["CompactRaidFrame31Buff2"] = true,
 				["CompactRaidFrame23DispelDebuff3"] = true,
@@ -718,14 +718,14 @@ CliqueDB3 = {
 				["CompactRaidFrame18DispelDebuff1"] = true,
 				["CompactRaidFrame12Debuff1"] = true,
 				["CompactRaidFrame20"] = true,
-				["CompactRaidFrame33Debuff3"] = true,
+				["CompactRaidFrame30Debuff3"] = true,
 				["CompactRaidFrame28Buff2"] = true,
 				["CompactRaidFrame11Debuff3"] = true,
 				["CompactRaidFrame25Debuff3"] = true,
 				["CompactRaidFrame28Buff1"] = true,
 				["SUFUnitplayer"] = true,
 				["CompactRaidFrame9Debuff1"] = true,
-				["CompactRaidFrame28Buff3"] = true,
+				["CompactRaidFrame27DispelDebuff2"] = true,
 				["CompactRaidFrame29Debuff1"] = true,
 				["CompactRaidFrame35DispelDebuff2"] = true,
 				["CompactRaidFrame17Debuff1"] = true,
@@ -876,11 +876,11 @@ CliqueDB3 = {
 				["CompactRaidFrame7DispelDebuff2"] = true,
 				["CompactRaidFrame5Debuff2"] = true,
 				["TargetFrameToT"] = true,
-				["CompactRaidFrame4DispelDebuff1"] = true,
+				["CompactRaidFrame7Debuff3"] = true,
 				["FocusFrame"] = true,
 				["CompactRaidFrame9Buff1"] = true,
 				["CompactRaidFrame12Buff2"] = true,
-				["CompactRaidFrame7Debuff3"] = true,
+				["CompactRaidFrame4DispelDebuff1"] = true,
 				["CompactRaidFrame3Buff2"] = true,
 				["CompactRaidFrame3DispelDebuff2"] = true,
 				["CompactRaidFrame6DispelDebuff2"] = true,
@@ -986,19 +986,19 @@ CliqueDB3 = {
 				["CompactPartyFramePet2"] = true,
 				["Boss1TargetFrame"] = true,
 				["CompactPartyFrameMember3Debuff1"] = true,
-				["CompactPartyFrameMember1DispelDebuff1"] = true,
-				["CompactPartyFrameMember4DispelDebuff1"] = true,
+				["CompactPartyFrameMember3DispelDebuff1"] = true,
+				["CompactPartyFrameMember2DispelDebuff1"] = true,
 				["CompactPartyFrameMember1"] = true,
 				["CompactPartyFrameMember1Debuff1"] = true,
 				["CompactPartyFramePet3"] = true,
-				["CompactPartyFrameMember2DispelDebuff1"] = true,
-				["CompactPartyFrameMember4"] = true,
 				["CompactPartyFrameMember5DispelDebuff1"] = true,
+				["CompactPartyFrameMember4"] = true,
+				["CompactPartyFrameMember1DispelDebuff1"] = true,
 				["CompactPartyFrameMember4DispelDebuff2"] = true,
 				["CompactPartyFrameMember1Buff2"] = true,
 				["PitBull4_Frames_target"] = true,
 				["CompactPartyFrameMember4Debuff1"] = true,
-				["CompactPartyFrameMember3DispelDebuff1"] = true,
+				["CompactPartyFrameMember4DispelDebuff1"] = true,
 				["CompactPartyFrameMember4Buff3"] = true,
 				["PartyMemberFrame4PetFrame"] = true,
 				["CompactPartyFramePet4"] = true,
@@ -1012,16 +1012,16 @@ CliqueDB3 = {
 			["alerthidden"] = true,
 		},
 		["Git - Arthas"] = {
+			["alerthidden"] = true,
 			["sec_profileKey"] = "Git - Arthas",
+			["pri_profileKey"] = "Git - Arthas",
 			["fastooc"] = false,
+			["specswap"] = false,
+			["downclick"] = false,
 			["blacklist"] = {
 				["SUFUnittarget"] = true,
 				["SUFUnitplayer"] = true,
 			},
-			["alerthidden"] = true,
-			["downclick"] = false,
-			["pri_profileKey"] = "Git - Arthas",
-			["specswap"] = false,
 		},
 	},
 	["profileKeys"] = {
@@ -1041,11 +1041,11 @@ CliqueDB3 = {
 		["Gitt - Arthas"] = "Gitt - Arthas",
 		["Spih - Arthas"] = "Spih - Arthas",
 		["Gimm - Cho'gall"] = "Gimm - Cho'gall",
+		["Spih - Cho'gall"] = "Spih - Cho'gall",
+		["Git - Azuremyst"] = "Git - Azuremyst",
 		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
 		["Git - Cho'gall"] = "Gitt - Cho'gall",
-		["Spih - Cho'gall"] = "Spih - Cho'gall",
 		["Greny - Azuremyst"] = "Greny - Azuremyst",
-		["Git - Azuremyst"] = "Git - Azuremyst",
 		["Git - Arthas"] = "Git - Cho'gall",
 	},
 	["profiles"] = {
@@ -1408,62 +1408,6 @@ CliqueDB3 = {
 				}, -- [2]
 			},
 		},
-		["Giitt - Feathermoon"] = {
-			["bindings"] = {
-				{
-					["sets"] = {
-						["default"] = true,
-					},
-					["type"] = "target",
-					["key"] = "BUTTON1",
-					["unit"] = "mouseover",
-				}, -- [1]
-				{
-					["type"] = "menu",
-					["key"] = "BUTTON2",
-					["sets"] = {
-						["default"] = true,
-					},
-				}, -- [2]
-			},
-		},
-		["Git - Cho'gall"] = {
-			["bindings"] = {
-				{
-					["type"] = "target",
-					["sets"] = {
-						["default"] = true,
-					},
-					["key"] = "BUTTON1",
-					["unit"] = "mouseover",
-				}, -- [1]
-				{
-					["type"] = "menu",
-					["key"] = "BUTTON2",
-					["sets"] = {
-						["default"] = true,
-					},
-				}, -- [2]
-				{
-					["spell"] = "Vigilance",
-					["key"] = "BUTTON3",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = "Interface\\Icons\\Ability_Warrior_Vigilance",
-					["type"] = "spell",
-				}, -- [3]
-				{
-					["spell"] = "Intervene",
-					["key"] = "BUTTON2",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = "Interface\\Icons\\Ability_Warrior_VictoryRush",
-					["type"] = "spell",
-				}, -- [4]
-			},
-		},
 		["Spih - Cho'gall"] = {
 			["bindings"] = {
 				{
@@ -1471,25 +1415,6 @@ CliqueDB3 = {
 						["default"] = true,
 					},
 					["type"] = "target",
-					["key"] = "BUTTON1",
-					["unit"] = "mouseover",
-				}, -- [1]
-				{
-					["type"] = "menu",
-					["key"] = "BUTTON2",
-					["sets"] = {
-						["default"] = true,
-					},
-				}, -- [2]
-			},
-		},
-		["Greny - Azuremyst"] = {
-			["bindings"] = {
-				{
-					["type"] = "target",
-					["sets"] = {
-						["default"] = true,
-					},
 					["key"] = "BUTTON1",
 					["unit"] = "mouseover",
 				}, -- [1]
@@ -1555,6 +1480,81 @@ CliqueDB3 = {
 					["icon"] = "Interface\\Icons\\Ability_Warrior_VictoryRush",
 					["type"] = "spell",
 				}, -- [6]
+			},
+		},
+		["Giitt - Feathermoon"] = {
+			["bindings"] = {
+				{
+					["sets"] = {
+						["default"] = true,
+					},
+					["type"] = "target",
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["type"] = "menu",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [2]
+			},
+		},
+		["Git - Cho'gall"] = {
+			["bindings"] = {
+				{
+					["type"] = "target",
+					["sets"] = {
+						["default"] = true,
+					},
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["type"] = "menu",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [2]
+				{
+					["spell"] = "Vigilance",
+					["key"] = "BUTTON3",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Ability_Warrior_Vigilance",
+					["type"] = "spell",
+				}, -- [3]
+				{
+					["spell"] = "Intervene",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Ability_Warrior_VictoryRush",
+					["type"] = "spell",
+				}, -- [4]
+			},
+		},
+		["Greny - Azuremyst"] = {
+			["bindings"] = {
+				{
+					["type"] = "target",
+					["sets"] = {
+						["default"] = true,
+					},
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["type"] = "menu",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [2]
 			},
 		},
 		["Git - Arthas"] = {
