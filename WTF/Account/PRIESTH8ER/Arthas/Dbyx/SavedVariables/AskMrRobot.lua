@@ -38,6 +38,6 @@ AmrLogData = {
 	["_autoLog"] = {
 		[1136] = "disabled",
 	},
-	["_lastDiff"] = 0,
 	["_lastZone"] = "Kalimdor",
+	["_lastDiff"] = 0,
 }

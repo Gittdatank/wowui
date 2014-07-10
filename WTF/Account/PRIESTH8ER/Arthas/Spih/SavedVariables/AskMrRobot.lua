@@ -1,18 +1,18 @@
 
 AmrBagItems = {
 	"|cffffffff|Hitem:76093:0:0:0:0:0:0:1067762432:90:0:0|h[Potion of the Jade Serpent]|h|r", -- [1]
-	"|cffffffff|Hitem:5512:0:0:0:0:0:0:80144384:90:0:0|h[Healthstone]|h|r", -- [2]
+	"|cffa335ee|Hitem:74248:0:0:0:0:0:0:1413405440:90:0:0|h[Sha Crystal]|h|r", -- [2]
 	"|cffa335ee|Hitem:105051:0:0:0:0:0:0:886868992:90:0:491|h[Nazgrim's Burnished Insignia]|h|r", -- [3]
 	"|cffffffff|Hitem:81409:0:0:0:0:0:0:612195584:90:0:0|h[Tangy Yogurt]|h|r", -- [4]
-	"|cffa335ee|Hitem:103944:0:0:0:0:0:0:1659524608:90:0:491|h[Mantle of Looming Darkness]|h|r", -- [5]
+	"|cffffffff|Hitem:79249:0:0:0:0:0:0:0:90:0:0|h[Tome of the Clear Mind]|h|r", -- [5]
 	"|cffffffff|Hitem:79249:0:0:0:0:0:0:0:90:0:0|h[Tome of the Clear Mind]|h|r", -- [6]
-	"|cffffffff|Hitem:79249:0:0:0:0:0:0:0:90:0:0|h[Tome of the Clear Mind]|h|r", -- [7]
-	"|cffffffff|Hitem:72988:0:0:0:0:0:0:612195584:90:0:0|h[Windwool Cloth]|h|r", -- [8]
-	"|cffa335ee|Hitem:104275:0:0:0:0:0:0:617226752:90:0:0|h[Twisted Treasures of the Vale]|h|r", -- [9]
-	"|cffffffff|Hitem:76092:0:0:0:0:0:0:1708894848:90:0:0|h[Potion of Focus]|h|r", -- [10]
+	"|cffffffff|Hitem:72988:0:0:0:0:0:0:612195584:90:0:0|h[Windwool Cloth]|h|r", -- [7]
+	"|cff0070dd|Hitem:102218:0:0:0:0:0:0:1413405440:90:0:0|h[Spirit of War]|h|r", -- [8]
+	"|cffffffff|Hitem:76092:0:0:0:0:0:0:1708894848:90:0:0|h[Potion of Focus]|h|r", -- [9]
+	"|cffffffff|Hitem:76093:0:0:0:0:0:0:941576576:90:0:0|h[Potion of the Jade Serpent]|h|r", -- [10]
 	"|cffa335ee|Hitem:104444:0:0:0:0:0:0:217875712:90:0:491|h[Robes of the Tendered Heart]|h|r", -- [11]
-	"|cffa335ee|Hitem:104479:0:0:0:0:0:0:1693705472:90:0:491|h[Gaze of Arrogance]|h|r", -- [12]
-	"|cffa335ee|Hitem:104575:0:0:0:0:0:0:1063908608:90:0:491|h[Robes of Riven Dreams]|h|r", -- [13]
+	"|cffa335ee|Hitem:104575:0:0:0:0:0:0:1063908608:90:0:491|h[Robes of Riven Dreams]|h|r", -- [12]
+	"|cffa335ee|Hitem:104479:0:0:0:0:0:0:1693705472:90:0:491|h[Gaze of Arrogance]|h|r", -- [13]
 	"|cffffffff|Hitem:38577:0:0:0:0:0:0:1621861760:90:0:0|h[Party G.R.E.N.A.D.E.]|h|r", -- [14]
 	"|cffffffff|Hitem:103977:0:0:0:0:0:0:263004544:90:0:0|h[Time-Worn Journal]|h|r", -- [15]
 	"|cffffffff|Hitem:95568:0:0:0:0:0:0:1939797248:90:0:0|h[Sunreaver Beacon]|h|r", -- [16]
@@ -212,7 +212,7 @@ AmrEquipedItems = {
 	["11"] = "|cffa335ee|Hitem:87040:4360:0:0:0:0:0:2064866048:90:119:445|h[Circuit of the Frail Soul]|h|r",
 	["10"] = "|cffa335ee|Hitem:99365:4433:4611:4611:0:0:0:0:90:116:491|h[Handwraps of the Ternion Glory]|h|r",
 }
-AmrGold = 216605463
+AmrGold = 220051982
 AmrRealmName = "Arthas"
 AmrCharacterName = "Spih"
 AmrIconInfo = {
@@ -258,7 +258,7 @@ AmrGlyphs = {
 	}, -- [2]
 }
 AmrTalents = {
-	"123322", -- [1]
+	"123321", -- [1]
 	"122120", -- [2]
 }
 AmrBankItemsAndCounts = {
@@ -752,6 +752,6 @@ AmrLogData = {
 	["_autoLog"] = {
 		[1136] = "disabled",
 	},
-	["_lastDiff"] = 0,
 	["_lastZone"] = "Pandaria",
+	["_lastDiff"] = 0,
 }

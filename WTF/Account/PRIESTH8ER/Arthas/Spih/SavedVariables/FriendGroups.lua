@@ -1,11 +1,11 @@
 
 FriendGroups_SavedVars = {
-	["enable_oqueue"] = true,
+	["hide_offline"] = true,
 	["colour_classes"] = true,
 	["collapsed"] = {
 		["Openraid Solid"] = true,
-		["OpenRaid"] = true,
 		["B"] = false,
+		["OpenRaid"] = true,
 	},
-	["hide_offline"] = true,
+	["enable_oqueue"] = true,
 }

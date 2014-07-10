@@ -1,39 +1,35 @@
 
 OR_db = {
 	["Notes"] = {
-		["zavinn#1156"] = "2014^7^6^Adynne;210370,Lusting's 25 NM Fresh SoO",
+		["data#1246"] = "2014^7^10^Drukor;210731,Lusting's 25 H SoO  - 6/14H",
 		["gauge#1109"] = "2014^7^4^Blooddrakin;210370,Fresh SoO NM 10M",
+		["magic#1967"] = "2014^7^10^Badboymagic;210731,Lusting's 25 H SoO  - 6/14H",
+		["anthony#1574"] = "2014^7^10^Varelice;210731,Lusting's 25 H SoO  - 6/14H",
+		["zavinn#1156"] = "2014^7^6^Adynne;210370,Lusting's 25 NM Fresh SoO",
+		["elzie#1506"] = "2014^7^10^Caylie;210731,Lusting's 25 H SoO  - 6/14H",
+		["alex#14118"] = "2014^7^10^Chalkie;210731,Lusting's 25 H SoO  - 6/14H",
+		["rastafaree#1362"] = "2014^7^10^Hashkilledme;210731,Lusting's 25 H SoO  - 6/14H",
 		["xandrria#1154"] = "2014^7^6^Mayurii;210370,Lusting's 25 NM Fresh SoO",
+		["rahdadm6t9#1290"] = "2014^7^10^Askiastout;210731,Lusting's 25 H SoO  - 6/14H",
 	},
 	["Options"] = {
-		["Auto enable accept"] = true,
+		["Tutorial"] = false,
 		["Automatically send requests"] = true,
 		["Auto enable sent"] = false,
 		["DontCheckForChar"] = false,
-		["Filter joined your group"] = false,
+		["Clean up time"] = 7,
 		["Whisperword"] = false,
-		["Specialnote"] = true,
+		["Auto enable accept"] = true,
 		["Personal send message"] = "Adding you as friend for OpenRaid event %d named %s",
+		["Defaultpage"] = "Index",
+		["Filter have invited"] = true,
+		["Version"] = 2.1,
+		["Filter already in group"] = true,
 		["Ignore when removing"] = {
 		},
-		["Filter already in group"] = true,
-		["Version"] = 2.1,
-		["Filter have invited"] = true,
-		["Defaultpage"] = "Index",
 		["Clear raids after X days"] = false,
-		["Clean up time"] = 7,
-		["Tutorial"] = false,
-	},
-	["String"] = {
-	},
-	["Group"] = {
-	},
-	["Leader"] = {
-	},
-	["Rate"] = {
-		["Raid"] = {
-			["Name"] = "Raid",
-		},
+		["Filter joined your group"] = false,
+		["Specialnote"] = true,
 	},
 	["Raids"] = {
 		["Git-Arthas"] = {
@@ -54,8 +50,28 @@ OR_db = {
 		["Evyyn-Azuremyst"] = {
 		},
 		["Gitt-Arthas"] = {
+			["210731"] = {
+				"Lusting's 25 H SoO  - 6/14H", -- [1]
+				"10", -- [2]
+				"7", -- [3]
+				"2014", -- [4]
+				"07", -- [5]
+				"30", -- [6]
+				"marcusdapimp#1309-Marcuspimp-Cho'gall,TConroy#1952-Klendariah-Hyjal,Primal#1419-Primalfearz-Arthas,Nytsong#1625-Nytbolt-Arthas,Elzie#1506-Caylie-Thaurissan,rahdaDM6t9#1290-Askiastout-Aggramar,gramz#1716-Gramz-Hyjal,phunk#1103-Hopslam-Mug'thol,Joeyf#1783-Mystranama-Blackhand,alex#14118-Chalkie-Maelstrom,DATA#1246-Drukor-Arthas,Wowaddicted#1898-Pandemonia-Steamwheedle Cartel,-Dustya-Arthas,Shiel#1167-Tomsawyer-Arthas,Magic#1967-Badboymagic-Turalyon,irdaq23#1246-Irdaq-Barthilas,wibber#1862-Notdotsfired-Arthas,ktok#1256-Ktok-Tichondrius,anthony#1574-Varelice-Ravencrest,-Hotsfired-Arthas,-Clancey-Arthas,Rastafaree#1362-Hashkilledme-Arthas,-Waze-Arthas", -- [7]
+			},
 		},
 		["Greny-Azuremyst"] = {
 		},
+	},
+	["Group"] = {
+	},
+	["Rate"] = {
+		["Raid"] = {
+			["Name"] = "Raid",
+		},
+	},
+	["Leader"] = {
+	},
+	["String"] = {
 	},
 }

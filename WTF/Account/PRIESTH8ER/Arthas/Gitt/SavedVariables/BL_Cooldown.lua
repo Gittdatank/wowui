@@ -1,7 +1,9 @@
 
 BLCDrosterReload = {
 	["0x02000000085AB16A"] = {
+		["class"] = "MONK",
 		["spec"] = 268,
+		["name"] = "Gitt",
 		["talents"] = {
 			[116847] = {
 				["idx"] = 16,
@@ -52,7 +54,5 @@ BLCDrosterReload = {
 				["column"] = 1,
 			},
 		},
-		["name"] = "Gitt",
-		["class"] = "MONK",
 	},
 }

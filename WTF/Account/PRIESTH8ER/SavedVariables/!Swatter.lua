@@ -5,37 +5,13 @@ SwatterData = {
 	["autoshow"] = true,
 	["errors"] = {
 		{
-			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame2:SetPoint()) during combat lockdown.",
-			["count"] = 22,
-			["addons"] = "  Swatter, v5.20.5464 (RidiculousRockrat)\n  ACP, v3.4.8 \n  AskMrRobot, v1.2.12.0\n  AucAdvanced, v5.20.5464 (RidiculousRockrat)\n  AucFilterBasic, v5.20.5464 (RidiculousRockrat)\n  AucFilterOutlier, v5.20.5464.5459(5.20/embedded)\n  AucMatchUndercut, v5.20.5464.5364(5.20/embedded)\n  AucScanData, v5.20.5464 (RidiculousRockrat)\n  AucStatHistogram, v5.20.5464 (RidiculousRockrat)\n  AucStatiLevel, v5.20.5464 (RidiculousRockrat)\n  AucStatPurchased, v5.20.5464 (RidiculousRockrat)\n  AucStatSales, v5.20.5464.5376(5.20/embedded)\n  AucStatSimple, v5.20.5464 (RidiculousRockrat)\n  AucStatStdDev, v5.20.5464 (RidiculousRockrat)\n  AucStatWOWEcon, v5.20.5464.5323(5.20/embedded)\n  AucUtilAHWindowControl, v5.20.5464.5347(5.20/embedded)\n  AucUtilAppraiser, v5.20.5464.5462(5.20/embedded)\n  AucUtilAskPrice, v5.20.5464.5447(5.20/embedded)\n  AucUtilAutoMagic, v5.20.5464.5443(5.20/embedded)\n  AucUtilCompactUI, v5.20.5464.5444(5.20/embedded)\n  AucUtilEasyBuyout, v5.20.5464.5458(5.20/embedded)\n  AucUtilFixAH, v5.20.5464 (RidiculousRockrat)\n  AucUtilItemSuggest, v5.20.5464.5417(5.20/embedded)\n  AucUtilPriceLevel, v5.20.5464.5458(5.20/embedded)\n  AucUtilScanButton, v5.20.5464.5403(5.20/embedded)\n  AucUtilScanFinish, v5.20.5464.5347(5.20/embedded)\n  AucUtilScanProgress, v5.20.5464.4979(5.20/embedded)\n  AucUtilScanStart, v5.20.5464.5347(5.20/embedded)\n  AucUtilSearchUI, v5.20.5464.5452(5.20/embedded)\n  AucUtilSimpleAuction, v5.20.5464.5452(5.20/embedded)\n  AucUtilVendMarkup, v5.20.5464.4828(5.20/embedded)\n  AutoRez, v\n  Babylonian, v5.1.DEV.332(/embedded)\n  Bartender4, v4.5.13.2\n  BetterPowerBarAlt, v1.4.1\n  BigWigs, v4.450\n  BigWigsCore, v\n  BigWigsPizzaBar, vv1.5.5\n  BigWigsPlugins, v\n  BigWigsRecordKills, v1.26\n  BigWigsSiegeOfOrgrimmar, v\n  BLCooldown, v3.53\n  BossNotes, v1.5.4.10\n  BossNotesPersonalNotes, v\n  Chatter, v1.4.4\n  Clique, vv50400-1.0.0\n  CombatReplay, v\n  CombatReplayLogger, v\n  CombatReplaySavedData, v\n  Configator, v5.1.DEV.359(/embedded)\n  DebugLib, v5.1.DEV.337(/embedded)\n  DerpEP, v\n  eError, v\n  EnsidiaFails, v328\n  epgp, v5.9.22\n  epgplootmaster, v0.6.51\n  epgplootmasterml, v0.6.51\n  FriendGroups, v\n  GCGambler, v0.1\n  Grid, v5.4.7.1653\n  GridManaBars, v1.04\n  GridStatusRaidDebuff, v5.41\n  GridStatusRaidIcons, v50300-1\n  GridStatusRole, v1.7\n  GTFO, v4.31\n  GuildBankRepairToggle, v1.0.1\n  GupPet, v2.104\n  LibExtraTip, v5.12.DEV.363(/embedded)\n  LibSharedMedia30, v3.0-81\n  LibStub, v\n  LoggerHead, v173\n  Malkorok, v\n  Masque, v5.4.396\n  MikScrollingBattleText, v5.7.131\n  Omen, v3.1.8\n  OpenRaid, v2.1\n  oRA3, v\n  PhoenixStyle, v\n  Postal, v3.5.1\n  Quartz, v3.1.4\n  RaidBuffStatus, v5.9.2\n  RaidSlackCheck, v1.49\n  RangeDisplay, vv4.2.4\n  RareCoordinator, v\n  Raven, vr317\n  SavedInstances, v5.8.2\n  Scrap, v12.12\n  ScrapSpotlight, v\n  SexyMap, v2.4.15\n  ShadowedUnitFrames, vv4.0.1\n  SharedMedia, v3.0.5-183\n  SharedMediaAdditionalFonts, v1.0.16\n  SimpleRaidTargetIcons, v1.21\n  Skada, v1.4-19\n  SlashIn, v\n  Stubby, v5.20.5464 (RidiculousRockrat)\n  TauntAware, v2013-03-01\n  TidyPlates, v6.13.4\n  TidyPlatesThreatPlates, v6.008\n  TidyPlatesHub, v\n  TidyPlatesWidgets, v\n  TimeToDie, vv1.5.1\n  TipHelper, v5.12.DEV.351(/embedded)\n  TipTac, v14.05.24\n  TipTacItemRef, v14.05.24\n  TipTacTalents, v13.09.21\n  Titan, v5.2.3.50400\n  TitanBag, v5.2.3.50400\n  TitanClock, v5.2.3.50400\n  TitanDurability, v1.24\n  TitanGold, v5.2.3.50400\n  TitanGuild, v5.4.0.0\n  TitanLocation, v5.2.3.50400\n  TitanLootType, v5.2.3.50400\n  TitanPerformance, v5.2.3.50400\n  TitanRepair, v5.2.3.50400\n  TitanVolume, v5.2.3.50400\n  TitanXP, v5.2.3.50400\n  TomTom, vv50400-1.0.0\n  TrainAlert, v1.12.21\n  WeakAuras, v2.0.7\n  WhoPulled, v1.0.10\n  BlizRuntimeLib_enUS v5.4.8.50400 <us>\n  (ck=e67)\n",
-			["timestamp"] = "2014-07-09 19:59:25",
-			["context"] = "AddOn: TauntAware",
-			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [1]
-		{
-			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame3:ClearAllPoints()) during combat lockdown.",
-			["count"] = 22,
-			["addons"] = "  Swatter, v5.20.5464 (RidiculousRockrat)\n  ACP, v3.4.8 \n  AskMrRobot, v1.2.12.0\n  AucAdvanced, v5.20.5464 (RidiculousRockrat)\n  AucFilterBasic, v5.20.5464 (RidiculousRockrat)\n  AucFilterOutlier, v5.20.5464.5459(5.20/embedded)\n  AucMatchUndercut, v5.20.5464.5364(5.20/embedded)\n  AucScanData, v5.20.5464 (RidiculousRockrat)\n  AucStatHistogram, v5.20.5464 (RidiculousRockrat)\n  AucStatiLevel, v5.20.5464 (RidiculousRockrat)\n  AucStatPurchased, v5.20.5464 (RidiculousRockrat)\n  AucStatSales, v5.20.5464.5376(5.20/embedded)\n  AucStatSimple, v5.20.5464 (RidiculousRockrat)\n  AucStatStdDev, v5.20.5464 (RidiculousRockrat)\n  AucStatWOWEcon, v5.20.5464.5323(5.20/embedded)\n  AucUtilAHWindowControl, v5.20.5464.5347(5.20/embedded)\n  AucUtilAppraiser, v5.20.5464.5462(5.20/embedded)\n  AucUtilAskPrice, v5.20.5464.5447(5.20/embedded)\n  AucUtilAutoMagic, v5.20.5464.5443(5.20/embedded)\n  AucUtilCompactUI, v5.20.5464.5444(5.20/embedded)\n  AucUtilEasyBuyout, v5.20.5464.5458(5.20/embedded)\n  AucUtilFixAH, v5.20.5464 (RidiculousRockrat)\n  AucUtilItemSuggest, v5.20.5464.5417(5.20/embedded)\n  AucUtilPriceLevel, v5.20.5464.5458(5.20/embedded)\n  AucUtilScanButton, v5.20.5464.5403(5.20/embedded)\n  AucUtilScanFinish, v5.20.5464.5347(5.20/embedded)\n  AucUtilScanProgress, v5.20.5464.4979(5.20/embedded)\n  AucUtilScanStart, v5.20.5464.5347(5.20/embedded)\n  AucUtilSearchUI, v5.20.5464.5452(5.20/embedded)\n  AucUtilSimpleAuction, v5.20.5464.5452(5.20/embedded)\n  AucUtilVendMarkup, v5.20.5464.4828(5.20/embedded)\n  AutoRez, v\n  Babylonian, v5.1.DEV.332(/embedded)\n  Bartender4, v4.5.13.2\n  BetterPowerBarAlt, v1.4.1\n  BigWigs, v4.450\n  BigWigsCore, v\n  BigWigsPizzaBar, vv1.5.5\n  BigWigsPlugins, v\n  BigWigsRecordKills, v1.26\n  BigWigsSiegeOfOrgrimmar, v\n  BLCooldown, v3.53\n  BossNotes, v1.5.4.10\n  BossNotesPersonalNotes, v\n  Chatter, v1.4.4\n  Clique, vv50400-1.0.0\n  CombatReplay, v\n  CombatReplayLogger, v\n  CombatReplaySavedData, v\n  Configator, v5.1.DEV.359(/embedded)\n  DebugLib, v5.1.DEV.337(/embedded)\n  DerpEP, v\n  eError, v\n  EnsidiaFails, v328\n  epgp, v5.9.22\n  epgplootmaster, v0.6.51\n  epgplootmasterml, v0.6.51\n  FriendGroups, v\n  GCGambler, v0.1\n  Grid, v5.4.7.1653\n  GridManaBars, v1.04\n  GridStatusRaidDebuff, v5.41\n  GridStatusRaidIcons, v50300-1\n  GridStatusRole, v1.7\n  GTFO, v4.31\n  GuildBankRepairToggle, v1.0.1\n  GupPet, v2.104\n  LibExtraTip, v5.12.DEV.363(/embedded)\n  LibSharedMedia30, v3.0-81\n  LibStub, v\n  LoggerHead, v173\n  Malkorok, v\n  Masque, v5.4.396\n  MikScrollingBattleText, v5.7.131\n  Omen, v3.1.8\n  OpenRaid, v2.1\n  oRA3, v\n  PhoenixStyle, v\n  Postal, v3.5.1\n  Quartz, v3.1.4\n  RaidBuffStatus, v5.9.2\n  RaidSlackCheck, v1.49\n  RangeDisplay, vv4.2.4\n  RareCoordinator, v\n  Raven, vr317\n  SavedInstances, v5.8.2\n  Scrap, v12.12\n  ScrapSpotlight, v\n  SexyMap, v2.4.15\n  ShadowedUnitFrames, vv4.0.1\n  SharedMedia, v3.0.5-183\n  SharedMediaAdditionalFonts, v1.0.16\n  SimpleRaidTargetIcons, v1.21\n  Skada, v1.4-19\n  SlashIn, v\n  Stubby, v5.20.5464 (RidiculousRockrat)\n  TauntAware, v2013-03-01\n  TidyPlates, v6.13.4\n  TidyPlatesThreatPlates, v6.008\n  TidyPlatesHub, v\n  TidyPlatesWidgets, v\n  TimeToDie, vv1.5.1\n  TipHelper, v5.12.DEV.351(/embedded)\n  TipTac, v14.05.24\n  TipTacItemRef, v14.05.24\n  TipTacTalents, v13.09.21\n  Titan, v5.2.3.50400\n  TitanBag, v5.2.3.50400\n  TitanClock, v5.2.3.50400\n  TitanDurability, v1.24\n  TitanGold, v5.2.3.50400\n  TitanGuild, v5.4.0.0\n  TitanLocation, v5.2.3.50400\n  TitanLootType, v5.2.3.50400\n  TitanPerformance, v5.2.3.50400\n  TitanRepair, v5.2.3.50400\n  TitanVolume, v5.2.3.50400\n  TitanXP, v5.2.3.50400\n  TomTom, vv50400-1.0.0\n  TrainAlert, v1.12.21\n  WeakAuras, v2.0.7\n  WhoPulled, v1.0.10\n  BlizRuntimeLib_enUS v5.4.8.50400 <us>\n  (ck=e67)\n",
-			["timestamp"] = "2014-07-09 19:59:25",
-			["context"] = "AddOn: TauntAware",
-			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [2]
-		{
-			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame3:SetPoint()) during combat lockdown.",
-			["count"] = 22,
-			["addons"] = "  Swatter, v5.20.5464 (RidiculousRockrat)\n  ACP, v3.4.8 \n  AskMrRobot, v1.2.12.0\n  AucAdvanced, v5.20.5464 (RidiculousRockrat)\n  AucFilterBasic, v5.20.5464 (RidiculousRockrat)\n  AucFilterOutlier, v5.20.5464.5459(5.20/embedded)\n  AucMatchUndercut, v5.20.5464.5364(5.20/embedded)\n  AucScanData, v5.20.5464 (RidiculousRockrat)\n  AucStatHistogram, v5.20.5464 (RidiculousRockrat)\n  AucStatiLevel, v5.20.5464 (RidiculousRockrat)\n  AucStatPurchased, v5.20.5464 (RidiculousRockrat)\n  AucStatSales, v5.20.5464.5376(5.20/embedded)\n  AucStatSimple, v5.20.5464 (RidiculousRockrat)\n  AucStatStdDev, v5.20.5464 (RidiculousRockrat)\n  AucStatWOWEcon, v5.20.5464.5323(5.20/embedded)\n  AucUtilAHWindowControl, v5.20.5464.5347(5.20/embedded)\n  AucUtilAppraiser, v5.20.5464.5462(5.20/embedded)\n  AucUtilAskPrice, v5.20.5464.5447(5.20/embedded)\n  AucUtilAutoMagic, v5.20.5464.5443(5.20/embedded)\n  AucUtilCompactUI, v5.20.5464.5444(5.20/embedded)\n  AucUtilEasyBuyout, v5.20.5464.5458(5.20/embedded)\n  AucUtilFixAH, v5.20.5464 (RidiculousRockrat)\n  AucUtilItemSuggest, v5.20.5464.5417(5.20/embedded)\n  AucUtilPriceLevel, v5.20.5464.5458(5.20/embedded)\n  AucUtilScanButton, v5.20.5464.5403(5.20/embedded)\n  AucUtilScanFinish, v5.20.5464.5347(5.20/embedded)\n  AucUtilScanProgress, v5.20.5464.4979(5.20/embedded)\n  AucUtilScanStart, v5.20.5464.5347(5.20/embedded)\n  AucUtilSearchUI, v5.20.5464.5452(5.20/embedded)\n  AucUtilSimpleAuction, v5.20.5464.5452(5.20/embedded)\n  AucUtilVendMarkup, v5.20.5464.4828(5.20/embedded)\n  AutoRez, v\n  Babylonian, v5.1.DEV.332(/embedded)\n  Bartender4, v4.5.13.2\n  BetterPowerBarAlt, v1.4.1\n  BigWigs, v4.450\n  BigWigsCore, v\n  BigWigsPizzaBar, vv1.5.5\n  BigWigsPlugins, v\n  BigWigsRecordKills, v1.26\n  BigWigsSiegeOfOrgrimmar, v\n  BLCooldown, v3.53\n  BossNotes, v1.5.4.10\n  BossNotesPersonalNotes, v\n  Chatter, v1.4.4\n  Clique, vv50400-1.0.0\n  CombatReplay, v\n  CombatReplayLogger, v\n  CombatReplaySavedData, v\n  Configator, v5.1.DEV.359(/embedded)\n  DebugLib, v5.1.DEV.337(/embedded)\n  DerpEP, v\n  eError, v\n  EnsidiaFails, v328\n  epgp, v5.9.22\n  epgplootmaster, v0.6.51\n  epgplootmasterml, v0.6.51\n  FriendGroups, v\n  GCGambler, v0.1\n  Grid, v5.4.7.1653\n  GridManaBars, v1.04\n  GridStatusRaidDebuff, v5.41\n  GridStatusRaidIcons, v50300-1\n  GridStatusRole, v1.7\n  GTFO, v4.31\n  GuildBankRepairToggle, v1.0.1\n  GupPet, v2.104\n  LibExtraTip, v5.12.DEV.363(/embedded)\n  LibSharedMedia30, v3.0-81\n  LibStub, v\n  LoggerHead, v173\n  Malkorok, v\n  Masque, v5.4.396\n  MikScrollingBattleText, v5.7.131\n  Omen, v3.1.8\n  OpenRaid, v2.1\n  oRA3, v\n  PhoenixStyle, v\n  Postal, v3.5.1\n  Quartz, v3.1.4\n  RaidBuffStatus, v5.9.2\n  RaidSlackCheck, v1.49\n  RangeDisplay, vv4.2.4\n  RareCoordinator, v\n  Raven, vr317\n  SavedInstances, v5.8.2\n  Scrap, v12.12\n  ScrapSpotlight, v\n  SexyMap, v2.4.15\n  ShadowedUnitFrames, vv4.0.1\n  SharedMedia, v3.0.5-183\n  SharedMediaAdditionalFonts, v1.0.16\n  SimpleRaidTargetIcons, v1.21\n  Skada, v1.4-19\n  SlashIn, v\n  Stubby, v5.20.5464 (RidiculousRockrat)\n  TauntAware, v2013-03-01\n  TidyPlates, v6.13.4\n  TidyPlatesThreatPlates, v6.008\n  TidyPlatesHub, v\n  TidyPlatesWidgets, v\n  TimeToDie, vv1.5.1\n  TipHelper, v5.12.DEV.351(/embedded)\n  TipTac, v14.05.24\n  TipTacItemRef, v14.05.24\n  TipTacTalents, v13.09.21\n  Titan, v5.2.3.50400\n  TitanBag, v5.2.3.50400\n  TitanClock, v5.2.3.50400\n  TitanDurability, v1.24\n  TitanGold, v5.2.3.50400\n  TitanGuild, v5.4.0.0\n  TitanLocation, v5.2.3.50400\n  TitanLootType, v5.2.3.50400\n  TitanPerformance, v5.2.3.50400\n  TitanRepair, v5.2.3.50400\n  TitanVolume, v5.2.3.50400\n  TitanXP, v5.2.3.50400\n  TomTom, vv50400-1.0.0\n  TrainAlert, v1.12.21\n  WeakAuras, v2.0.7\n  WhoPulled, v1.0.10\n  BlizRuntimeLib_enUS v5.4.8.50400 <us>\n  (ck=e67)\n",
-			["timestamp"] = "2014-07-09 19:59:25",
-			["context"] = "AddOn: TauntAware",
-			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [3]
-		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame4:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
 			["addons"] = "  Swatter, v5.20.5464 (RidiculousRockrat)\n  ACP, v3.4.8 \n  AskMrRobot, v1.2.12.0\n  AucAdvanced, v5.20.5464 (RidiculousRockrat)\n  AucFilterBasic, v5.20.5464 (RidiculousRockrat)\n  AucFilterOutlier, v5.20.5464.5459(5.20/embedded)\n  AucMatchUndercut, v5.20.5464.5364(5.20/embedded)\n  AucScanData, v5.20.5464 (RidiculousRockrat)\n  AucStatHistogram, v5.20.5464 (RidiculousRockrat)\n  AucStatiLevel, v5.20.5464 (RidiculousRockrat)\n  AucStatPurchased, v5.20.5464 (RidiculousRockrat)\n  AucStatSales, v5.20.5464.5376(5.20/embedded)\n  AucStatSimple, v5.20.5464 (RidiculousRockrat)\n  AucStatStdDev, v5.20.5464 (RidiculousRockrat)\n  AucStatWOWEcon, v5.20.5464.5323(5.20/embedded)\n  AucUtilAHWindowControl, v5.20.5464.5347(5.20/embedded)\n  AucUtilAppraiser, v5.20.5464.5462(5.20/embedded)\n  AucUtilAskPrice, v5.20.5464.5447(5.20/embedded)\n  AucUtilAutoMagic, v5.20.5464.5443(5.20/embedded)\n  AucUtilCompactUI, v5.20.5464.5444(5.20/embedded)\n  AucUtilEasyBuyout, v5.20.5464.5458(5.20/embedded)\n  AucUtilFixAH, v5.20.5464 (RidiculousRockrat)\n  AucUtilItemSuggest, v5.20.5464.5417(5.20/embedded)\n  AucUtilPriceLevel, v5.20.5464.5458(5.20/embedded)\n  AucUtilScanButton, v5.20.5464.5403(5.20/embedded)\n  AucUtilScanFinish, v5.20.5464.5347(5.20/embedded)\n  AucUtilScanProgress, v5.20.5464.4979(5.20/embedded)\n  AucUtilScanStart, v5.20.5464.5347(5.20/embedded)\n  AucUtilSearchUI, v5.20.5464.5452(5.20/embedded)\n  AucUtilSimpleAuction, v5.20.5464.5452(5.20/embedded)\n  AucUtilVendMarkup, v5.20.5464.4828(5.20/embedded)\n  AutoRez, v\n  Babylonian, v5.1.DEV.332(/embedded)\n  Bartender4, v4.5.13.2\n  BetterPowerBarAlt, v1.4.1\n  BigWigs, v4.450\n  BigWigsCore, v\n  BigWigsPizzaBar, vv1.5.5\n  BigWigsPlugins, v\n  BigWigsRecordKills, v1.26\n  BigWigsSiegeOfOrgrimmar, v\n  BLCooldown, v3.53\n  BossNotes, v1.5.4.10\n  BossNotesPersonalNotes, v\n  Chatter, v1.4.4\n  Clique, vv50400-1.0.0\n  CombatReplay, v\n  CombatReplayLogger, v\n  CombatReplaySavedData, v\n  Configator, v5.1.DEV.359(/embedded)\n  DebugLib, v5.1.DEV.337(/embedded)\n  DerpEP, v\n  eError, v\n  EnsidiaFails, v328\n  epgp, v5.9.22\n  epgplootmaster, v0.6.51\n  epgplootmasterml, v0.6.51\n  FriendGroups, v\n  GCGambler, v0.1\n  Grid, v5.4.7.1653\n  GridManaBars, v1.04\n  GridStatusRaidDebuff, v5.41\n  GridStatusRaidIcons, v50300-1\n  GridStatusRole, v1.7\n  GTFO, v4.31\n  GuildBankRepairToggle, v1.0.1\n  GupPet, v2.104\n  LibExtraTip, v5.12.DEV.363(/embedded)\n  LibSharedMedia30, v3.0-81\n  LibStub, v\n  LoggerHead, v173\n  Malkorok, v\n  Masque, v5.4.396\n  MikScrollingBattleText, v5.7.131\n  Omen, v3.1.8\n  OpenRaid, v2.1\n  oRA3, v\n  PhoenixStyle, v\n  Postal, v3.5.1\n  Quartz, v3.1.4\n  RaidBuffStatus, v5.9.2\n  RaidSlackCheck, v1.49\n  RangeDisplay, vv4.2.4\n  RareCoordinator, v\n  Raven, vr317\n  SavedInstances, v5.8.2\n  Scrap, v12.12\n  ScrapSpotlight, v\n  SexyMap, v2.4.15\n  ShadowedUnitFrames, vv4.0.1\n  SharedMedia, v3.0.5-183\n  SharedMediaAdditionalFonts, v1.0.16\n  SimpleRaidTargetIcons, v1.21\n  Skada, v1.4-19\n  SlashIn, v\n  Stubby, v5.20.5464 (RidiculousRockrat)\n  TauntAware, v2013-03-01\n  TidyPlates, v6.13.4\n  TidyPlatesThreatPlates, v6.008\n  TidyPlatesHub, v\n  TidyPlatesWidgets, v\n  TimeToDie, vv1.5.1\n  TipHelper, v5.12.DEV.351(/embedded)\n  TipTac, v14.05.24\n  TipTacItemRef, v14.05.24\n  TipTacTalents, v13.09.21\n  Titan, v5.2.3.50400\n  TitanBag, v5.2.3.50400\n  TitanClock, v5.2.3.50400\n  TitanDurability, v1.24\n  TitanGold, v5.2.3.50400\n  TitanGuild, v5.4.0.0\n  TitanLocation, v5.2.3.50400\n  TitanLootType, v5.2.3.50400\n  TitanPerformance, v5.2.3.50400\n  TitanRepair, v5.2.3.50400\n  TitanVolume, v5.2.3.50400\n  TitanXP, v5.2.3.50400\n  TomTom, vv50400-1.0.0\n  TrainAlert, v1.12.21\n  WeakAuras, v2.0.7\n  WhoPulled, v1.0.10\n  BlizRuntimeLib_enUS v5.4.8.50400 <us>\n  (ck=e67)\n",
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [4]
+		}, -- [1]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame4:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -43,7 +19,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [5]
+		}, -- [2]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame5:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -51,7 +27,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [6]
+		}, -- [3]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame5:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -59,7 +35,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [7]
+		}, -- [4]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame6:ClearAllPoints()) during combat lockdown.",
 			["count"] = 19,
@@ -67,7 +43,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [8]
+		}, -- [5]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame6:SetPoint()) during combat lockdown.",
 			["count"] = 19,
@@ -75,7 +51,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [9]
+		}, -- [6]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame7:ClearAllPoints()) during combat lockdown.",
 			["count"] = 19,
@@ -83,7 +59,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [10]
+		}, -- [7]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame7:SetPoint()) during combat lockdown.",
 			["count"] = 19,
@@ -91,7 +67,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [11]
+		}, -- [8]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame13:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -99,7 +75,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [12]
+		}, -- [9]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame13:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -107,7 +83,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [13]
+		}, -- [10]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame8:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -115,7 +91,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [14]
+		}, -- [11]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame8:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -123,7 +99,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [15]
+		}, -- [12]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame11:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -131,7 +107,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [16]
+		}, -- [13]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame11:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -139,7 +115,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [17]
+		}, -- [14]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame9:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -147,7 +123,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [18]
+		}, -- [15]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame9:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -155,7 +131,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [19]
+		}, -- [16]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame10:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -163,7 +139,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [20]
+		}, -- [17]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame10:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -171,7 +147,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [21]
+		}, -- [18]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame28:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -179,7 +155,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [22]
+		}, -- [19]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame28:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -187,7 +163,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [23]
+		}, -- [20]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame29:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -195,7 +171,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [24]
+		}, -- [21]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame29:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -203,7 +179,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [25]
+		}, -- [22]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame12:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -211,7 +187,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [26]
+		}, -- [23]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame12:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -219,7 +195,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [27]
+		}, -- [24]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame30:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -227,7 +203,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [28]
+		}, -- [25]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame30:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -235,7 +211,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [29]
+		}, -- [26]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame14:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -243,7 +219,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [30]
+		}, -- [27]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame14:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -251,7 +227,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [31]
+		}, -- [28]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame15:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -259,7 +235,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [32]
+		}, -- [29]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame15:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -267,7 +243,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [33]
+		}, -- [30]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame27:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -275,7 +251,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [34]
+		}, -- [31]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame27:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -283,7 +259,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [35]
+		}, -- [32]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame16:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -291,7 +267,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [36]
+		}, -- [33]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame16:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -299,7 +275,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [37]
+		}, -- [34]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame17:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -307,7 +283,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [38]
+		}, -- [35]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame17:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -315,7 +291,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [39]
+		}, -- [36]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame18:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -323,7 +299,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [40]
+		}, -- [37]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame18:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -331,7 +307,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [41]
+		}, -- [38]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame19:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -339,7 +315,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [42]
+		}, -- [39]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame19:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -347,7 +323,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [43]
+		}, -- [40]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame20:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -355,7 +331,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [44]
+		}, -- [41]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame20:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -363,7 +339,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [45]
+		}, -- [42]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame21:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -371,7 +347,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [46]
+		}, -- [43]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame21:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -379,7 +355,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [47]
+		}, -- [44]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame25:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -387,7 +363,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [48]
+		}, -- [45]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame25:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -395,7 +371,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [49]
+		}, -- [46]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame22:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -403,7 +379,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [50]
+		}, -- [47]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame22:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -411,7 +387,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [51]
+		}, -- [48]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame23:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -419,7 +395,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [52]
+		}, -- [49]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame23:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -427,7 +403,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [53]
+		}, -- [50]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame26:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -435,7 +411,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [54]
+		}, -- [51]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame26:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -443,7 +419,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [55]
+		}, -- [52]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame24:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -451,7 +427,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [56]
+		}, -- [53]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame24:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -459,7 +435,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [57]
+		}, -- [54]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame31:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -467,7 +443,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [58]
+		}, -- [55]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame31:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -475,7 +451,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [59]
+		}, -- [56]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame32:ClearAllPoints()) during combat lockdown.",
 			["count"] = 22,
@@ -483,7 +459,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [60]
+		}, -- [57]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame32:SetPoint()) during combat lockdown.",
 			["count"] = 22,
@@ -491,7 +467,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [61]
+		}, -- [58]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrameManagerContainerResizeFrame:Hide()) during combat lockdown.",
 			["count"] = 22,
@@ -499,7 +475,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Hide'\n...mpactRaidFrames\\Blizzard_CompactRaidFrameManager.lua:559: in function `CompactRaidFrameManager_LockContainer'\n...mpactRaidFrames\\Blizzard_CompactRaidFrameManager.lua:552: in function `CompactRaidFrameManager_UpdateContainerLockVisibility'\n...mpactRaidFrames\\Blizzard_CompactRaidFrameManager.lua:46: in function <...mpactRaidFrames\\Blizzard_CompactRaidFrameManager.lua:39>\n",
-		}, -- [62]
+		}, -- [59]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame2:Show()) during combat lockdown.",
 			["count"] = 22,
@@ -507,7 +483,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [63]
+		}, -- [60]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame5:Show()) during combat lockdown.",
 			["count"] = 22,
@@ -515,7 +491,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [64]
+		}, -- [61]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame8:Show()) during combat lockdown.",
 			["count"] = 28,
@@ -523,7 +499,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [65]
+		}, -- [62]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame9:Show()) during combat lockdown.",
 			["count"] = 42,
@@ -531,7 +507,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [66]
+		}, -- [63]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame10:Show()) during combat lockdown.",
 			["count"] = 22,
@@ -539,7 +515,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [67]
+		}, -- [64]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame11:Show()) during combat lockdown.",
 			["count"] = 40,
@@ -547,7 +523,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [68]
+		}, -- [65]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame12:Show()) during combat lockdown.",
 			["count"] = 22,
@@ -555,7 +531,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [69]
+		}, -- [66]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame13:Show()) during combat lockdown.",
 			["count"] = 22,
@@ -563,7 +539,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [70]
+		}, -- [67]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame14:Show()) during combat lockdown.",
 			["count"] = 22,
@@ -571,7 +547,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [71]
+		}, -- [68]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame15:Show()) during combat lockdown.",
 			["count"] = 22,
@@ -579,7 +555,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [72]
+		}, -- [69]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame16:Show()) during combat lockdown.",
 			["count"] = 22,
@@ -587,7 +563,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [73]
+		}, -- [70]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame17:Show()) during combat lockdown.",
 			["count"] = 22,
@@ -595,7 +571,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [74]
+		}, -- [71]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame18:Show()) during combat lockdown.",
 			["count"] = 22,
@@ -603,7 +579,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [75]
+		}, -- [72]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame19:Show()) during combat lockdown.",
 			["count"] = 22,
@@ -611,7 +587,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [76]
+		}, -- [73]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame20:Show()) during combat lockdown.",
 			["count"] = 22,
@@ -619,7 +595,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [77]
+		}, -- [74]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame21:Show()) during combat lockdown.",
 			["count"] = 22,
@@ -627,7 +603,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [78]
+		}, -- [75]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame22:Show()) during combat lockdown.",
 			["count"] = 48,
@@ -635,7 +611,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [79]
+		}, -- [76]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame23:Show()) during combat lockdown.",
 			["count"] = 24,
@@ -643,7 +619,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [80]
+		}, -- [77]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame24:Show()) during combat lockdown.",
 			["count"] = 48,
@@ -651,7 +627,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [81]
+		}, -- [78]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame25:Show()) during combat lockdown.",
 			["count"] = 22,
@@ -659,7 +635,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [82]
+		}, -- [79]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame26:Show()) during combat lockdown.",
 			["count"] = 22,
@@ -667,7 +643,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [83]
+		}, -- [80]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame27:Show()) during combat lockdown.",
 			["count"] = 22,
@@ -675,7 +651,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [84]
+		}, -- [81]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame28:Show()) during combat lockdown.",
 			["count"] = 22,
@@ -683,7 +659,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [85]
+		}, -- [82]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame29:Show()) during combat lockdown.",
 			["count"] = 22,
@@ -691,7 +667,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [86]
+		}, -- [83]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame30:Show()) during combat lockdown.",
 			["count"] = 22,
@@ -699,7 +675,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [87]
+		}, -- [84]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame31:Show()) during combat lockdown.",
 			["count"] = 49,
@@ -707,7 +683,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [88]
+		}, -- [85]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame32:Show()) during combat lockdown.",
 			["count"] = 40,
@@ -715,7 +691,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 19:59:25",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [89]
+		}, -- [86]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame33:ClearAllPoints()) during combat lockdown.",
 			["count"] = 3,
@@ -723,7 +699,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 20:08:22",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [90]
+		}, -- [87]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame33:SetPoint()) during combat lockdown.",
 			["count"] = 3,
@@ -731,7 +707,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 20:08:22",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [91]
+		}, -- [88]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame34:ClearAllPoints()) during combat lockdown.",
 			["count"] = 3,
@@ -739,7 +715,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 20:08:22",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `ClearAllPoints'\nInterface\\FrameXML\\FlowContainer.lua:157: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [92]
+		}, -- [89]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame34:SetPoint()) during combat lockdown.",
 			["count"] = 3,
@@ -747,7 +723,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 20:08:22",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `SetPoint'\nInterface\\FrameXML\\FlowContainer.lua:161: in function `FlowContainer_DoLayout'\nInterface\\FrameXML\\FlowContainer.lua:17: in function `FlowContainer_ResumeUpdates'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:185: in function `CompactRaidFrameContainer_LayoutFrames'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:130: in function `CompactRaidFrameContainer_TryUpdate'\n...actRaidFrames\\Blizzard_CompactRaidFrameContainer.lua:57: in function `CompactRaidFrameContainer_OnEvent'\n[string \"*:OnEvent\"]:1: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [93]
+		}, -- [90]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame33:Show()) during combat lockdown.",
 			["count"] = 1000,
@@ -755,7 +731,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 20:08:22",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [94]
+		}, -- [91]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame34:Hide()) during combat lockdown.",
 			["count"] = 1000,
@@ -763,7 +739,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 20:08:22",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Hide'\nInterface\\FrameXML\\CompactUnitFrame.lua:287: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:48: in function <Interface\\FrameXML\\CompactUnitFrame.lua:45>\n",
-		}, -- [95]
+		}, -- [92]
 		{
 			["message"] = "Interface\\AddOns\\WeakAuras\\WeakAuras.lua:1864: attempt to compare number with boolean",
 			["count"] = 1000,
@@ -772,7 +748,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 20:08:22",
 			["context"] = "Global",
 			["stack"] = "Interface\\AddOns\\WeakAuras\\WeakAuras.lua:1864: in function `SetEventDynamics'\nInterface\\AddOns\\WeakAuras\\WeakAuras.lua:1835: in function `ActivateEvent'\nInterface\\AddOns\\WeakAuras\\WeakAuras.lua:1816: in function `ScanEvents'\nInterface\\AddOns\\WeakAuras\\WeakAuras.lua:4638: in function <Interface\\AddOns\\WeakAuras\\WeakAuras.lua:4636>\n",
-		}, -- [96]
+		}, -- [93]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame34:Show()) during combat lockdown.",
 			["count"] = 1000,
@@ -780,7 +756,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 20:08:23",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Show'\nInterface\\FrameXML\\CompactUnitFrame.lua:285: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:144: in function <Interface\\FrameXML\\CompactUnitFrame.lua:144>\n",
-		}, -- [97]
+		}, -- [94]
 		{
 			["message"] = "Interface\\AddOns\\WhoPulled\\WhoPulled.lua:243: Usage: UnitIsGroupAssistant(\"unit\")",
 			["count"] = 8,
@@ -789,7 +765,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 20:08:44",
 			["context"] = "Global",
 			["stack"] = "[C]: in function `UnitIsGroupAssistant'\nInterface\\AddOns\\WhoPulled\\WhoPulled.lua:243: in function `WhoPulled_PullBlah'\nInterface\\AddOns\\WhoPulled\\WhoPulled.lua:435: in function `WhoPulled_CheckWho'\n[string \"*:OnEvent\"]:2: in function <[string \"*:OnEvent\"]:1>\n",
-		}, -- [98]
+		}, -- [95]
 		{
 			["message"] = "Note: AddOn TauntAware attempted to call a protected function (CompactRaidFrame33:Hide()) during combat lockdown.",
 			["count"] = 1000,
@@ -797,7 +773,7 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 20:12:55",
 			["context"] = "AddOn: TauntAware",
 			["stack"] = "[C]: in function `Hide'\nInterface\\FrameXML\\CompactUnitFrame.lua:287: in function `CompactUnitFrame_UpdateVisible'\nInterface\\FrameXML\\CompactUnitFrame.lua:243: in function `CompactUnitFrame_UpdateAll'\nInterface\\FrameXML\\CompactUnitFrame.lua:144: in function <Interface\\FrameXML\\CompactUnitFrame.lua:144>\n",
-		}, -- [99]
+		}, -- [96]
 		{
 			["message"] = "Interface\\AddOns\\epgp\\epgp.lua:599: assertion failed!",
 			["count"] = 1,
@@ -806,6 +782,51 @@ SwatterData = {
 			["timestamp"] = "2014-07-09 20:40:08",
 			["context"] = "Global",
 			["stack"] = "[C]: in function `assert'\nInterface\\AddOns\\epgp\\epgp.lua:599: in function `DecayEPGP'\nInterface\\AddOns\\DerpEP\\Core.lua:78: in function `?'\n...ns\\Bartender4\\libs\\AceConsole-3.0\\AceConsole-3.0.lua:94: in function `?'\nInterface\\FrameXML\\ChatFrame.lua:4315: in function `ChatEdit_ParseText'\nInterface\\FrameXML\\ChatFrame.lua:3969: in function `ChatEdit_SendText'\nInterface\\FrameXML\\ChatFrame.lua:4008: in function `ChatEdit_OnEnterPressed'\n[string \"*:OnEnterPressed\"]:1: in function <[string \"*:OnEnterPressed\"]:1>\n",
+		}, -- [97]
+		{
+			["message"] = "Interface\\AddOns\\WeakAuras\\WeakAuras.lua:1914: Event with id \"DB: Archangel CD 2 and trigger number 0 tried to activate, but does not exist",
+			["count"] = 2,
+			["addons"] = "  Swatter, v5.20.5464 (RidiculousRockrat)\n  ACP, v3.4.8 \n  AskMrRobot, v1.2.12.0\n  AucAdvanced, v5.20.5464 (RidiculousRockrat)\n  AucFilterBasic, v5.20.5464 (RidiculousRockrat)\n  AucFilterOutlier, v5.20.5464.5459(5.20/embedded)\n  AucMatchUndercut, v5.20.5464.5364(5.20/embedded)\n  AucStatHistogram, v5.20.5464 (RidiculousRockrat)\n  AucStatiLevel, v5.20.5464 (RidiculousRockrat)\n  AucStatPurchased, v5.20.5464 (RidiculousRockrat)\n  AucStatSales, v5.20.5464.5376(5.20/embedded)\n  AucStatSimple, v5.20.5464 (RidiculousRockrat)\n  AucStatStdDev, v5.20.5464 (RidiculousRockrat)\n  AucStatWOWEcon, v5.20.5464.5323(5.20/embedded)\n  AucUtilAHWindowControl, v5.20.5464.5347(5.20/embedded)\n  AucUtilAppraiser, v5.20.5464.5462(5.20/embedded)\n  AucUtilAskPrice, v5.20.5464.5447(5.20/embedded)\n  AucUtilAutoMagic, v5.20.5464.5443(5.20/embedded)\n  AucUtilCompactUI, v5.20.5464.5444(5.20/embedded)\n  AucUtilEasyBuyout, v5.20.5464.5458(5.20/embedded)\n  AucUtilFixAH, v5.20.5464 (RidiculousRockrat)\n  AucUtilItemSuggest, v5.20.5464.5417(5.20/embedded)\n  AucUtilPriceLevel, v5.20.5464.5458(5.20/embedded)\n  AucUtilScanButton, v5.20.5464.5403(5.20/embedded)\n  AucUtilScanFinish, v5.20.5464.5347(5.20/embedded)\n  AucUtilScanProgress, v5.20.5464.4979(5.20/embedded)\n  AucUtilScanStart, v5.20.5464.5347(5.20/embedded)\n  AucUtilSearchUI, v5.20.5464.5452(5.20/embedded)\n  AucUtilSimpleAuction, v5.20.5464.5452(5.20/embedded)\n  AucUtilVendMarkup, v5.20.5464.4828(5.20/embedded)\n  AutoRez, v\n  Babylonian, v5.1.DEV.332(/embedded)\n  BigWigs, v4.450\n  BigWigsRecordKills, v1.26\n  BLCooldown, v3.53\n  BossNotes, v1.5.4.10\n  BossNotesPersonalNotes, v\n  CombatReplay, v\n  CombatReplayLogger, v\n  CombatReplaySavedData, v\n  Configator, v5.1.DEV.359(/embedded)\n  DebugLib, v5.1.DEV.337(/embedded)\n  DerpEP, v\n  ElvUI, v6.9999\n  ElvUIConfig, v1.01\n  epgp, v5.9.22\n  epgplootmaster, v0.6.51\n  epgplootmasterml, v0.6.51\n  FriendGroups, v\n  GCD, v11.0.1-release \n  GTFO, v4.31\n  GupPet, v2.104\n  LibExtraTip, v5.12.DEV.363(/embedded)\n  LibSharedMedia30, v3.0-81\n  LibStub, v\n  LoggerHead, v173\n  Malkorok, v\n  Masque, v5.4.396\n  MikScrollingBattleText, v5.7.131\n  OpenRaid, v2.1\n  oqueue, v1.8.8\n  oRA3, v\n  PhoenixStyle, v\n  Postal, v3.5.1\n  RaidBuffStatus, v5.9.2\n  RaidRoll, v4.7.12\n  RaidRollLootTracker, v\n  RangeDisplay, vv4.2.4\n  Raven, vr317\n  SavedInstances, v5.8.2\n  Scrap, v12.12\n  ScrapSpotlight, v\n  SharedMedia, v3.0.5-183\n  SharedMediaAdditionalFonts, v1.0.16\n  SimpleRaidTargetIcons, v1.21\n  Skada, v1.4-19\n  SlashIn, v\n  Stubby, v5.20.5464 (RidiculousRockrat)\n  TauntAware, v2013-03-01\n  TipHelper, v5.12.DEV.351(/embedded)\n  TrainAlert, v1.12.21\n  WeakAuras, v2.0.7\n  WeakAurasOptions, v2.0.7\n  BlizRuntimeLib_enUS v5.4.8.50400 <us>\n  (ck=a97)\n",
+			["locals"] = "(*temporary) = \"Event with id \"DB: Archangel CD 2 and trigger number 0 tried to activate, but does not exist\"\n",
+			["timestamp"] = "2014-07-10 15:26:33",
+			["context"] = "Global",
+			["stack"] = "[C]: ?\nInterface\\AddOns\\WeakAuras\\WeakAuras.lua:1914: in function `SetEventDynamics'\nInterface\\AddOns\\WeakAuras\\WeakAuras.lua:1975: in function `EndEvent'\nInterface\\AddOns\\WeakAuras\\WeakAuras.lua:1819: in function `ScanEvents'\nInterface\\AddOns\\WeakAuras\\WeakAuras.lua:883: in function `CheckCooldownReady'\nInterface\\AddOns\\WeakAuras\\WeakAuras.lua:711: in function <Interface\\AddOns\\WeakAuras\\WeakAuras.lua:709>\n",
+		}, -- [98]
+		{
+			["message"] = "Interface\\AddOns\\WeakAuras\\WeakAuras.lua:1914: Event with id \"DB: Penance CD 2 and trigger number 0 tried to activate, but does not exist",
+			["count"] = 1,
+			["addons"] = "  Swatter, v5.20.5464 (RidiculousRockrat)\n  ACP, v3.4.8 \n  AskMrRobot, v1.2.12.0\n  AucAdvanced, v5.20.5464 (RidiculousRockrat)\n  AucFilterBasic, v5.20.5464 (RidiculousRockrat)\n  AucFilterOutlier, v5.20.5464.5459(5.20/embedded)\n  AucMatchUndercut, v5.20.5464.5364(5.20/embedded)\n  AucStatHistogram, v5.20.5464 (RidiculousRockrat)\n  AucStatiLevel, v5.20.5464 (RidiculousRockrat)\n  AucStatPurchased, v5.20.5464 (RidiculousRockrat)\n  AucStatSales, v5.20.5464.5376(5.20/embedded)\n  AucStatSimple, v5.20.5464 (RidiculousRockrat)\n  AucStatStdDev, v5.20.5464 (RidiculousRockrat)\n  AucStatWOWEcon, v5.20.5464.5323(5.20/embedded)\n  AucUtilAHWindowControl, v5.20.5464.5347(5.20/embedded)\n  AucUtilAppraiser, v5.20.5464.5462(5.20/embedded)\n  AucUtilAskPrice, v5.20.5464.5447(5.20/embedded)\n  AucUtilAutoMagic, v5.20.5464.5443(5.20/embedded)\n  AucUtilCompactUI, v5.20.5464.5444(5.20/embedded)\n  AucUtilEasyBuyout, v5.20.5464.5458(5.20/embedded)\n  AucUtilFixAH, v5.20.5464 (RidiculousRockrat)\n  AucUtilItemSuggest, v5.20.5464.5417(5.20/embedded)\n  AucUtilPriceLevel, v5.20.5464.5458(5.20/embedded)\n  AucUtilScanButton, v5.20.5464.5403(5.20/embedded)\n  AucUtilScanFinish, v5.20.5464.5347(5.20/embedded)\n  AucUtilScanProgress, v5.20.5464.4979(5.20/embedded)\n  AucUtilScanStart, v5.20.5464.5347(5.20/embedded)\n  AucUtilSearchUI, v5.20.5464.5452(5.20/embedded)\n  AucUtilSimpleAuction, v5.20.5464.5452(5.20/embedded)\n  AucUtilVendMarkup, v5.20.5464.4828(5.20/embedded)\n  AutoRez, v\n  Babylonian, v5.1.DEV.332(/embedded)\n  BigWigs, v4.450\n  BigWigsRecordKills, v1.26\n  BLCooldown, v3.53\n  BossNotes, v1.5.4.10\n  BossNotesPersonalNotes, v\n  CombatReplay, v\n  CombatReplayLogger, v\n  CombatReplaySavedData, v\n  Configator, v5.1.DEV.359(/embedded)\n  DebugLib, v5.1.DEV.337(/embedded)\n  DerpEP, v\n  ElvUI, v6.9999\n  ElvUIConfig, v1.01\n  epgp, v5.9.22\n  epgplootmaster, v0.6.51\n  epgplootmasterml, v0.6.51\n  FriendGroups, v\n  GCD, v11.0.1-release \n  GTFO, v4.31\n  GupPet, v2.104\n  LibExtraTip, v5.12.DEV.363(/embedded)\n  LibSharedMedia30, v3.0-81\n  LibStub, v\n  LoggerHead, v173\n  Malkorok, v\n  Masque, v5.4.396\n  MikScrollingBattleText, v5.7.131\n  OpenRaid, v2.1\n  oqueue, v1.8.8\n  oRA3, v\n  PhoenixStyle, v\n  Postal, v3.5.1\n  RaidBuffStatus, v5.9.2\n  RaidRoll, v4.7.12\n  RaidRollLootTracker, v\n  RangeDisplay, vv4.2.4\n  Raven, vr317\n  SavedInstances, v5.8.2\n  Scrap, v12.12\n  ScrapSpotlight, v\n  SharedMedia, v3.0.5-183\n  SharedMediaAdditionalFonts, v1.0.16\n  SimpleRaidTargetIcons, v1.21\n  Skada, v1.4-19\n  SlashIn, v\n  Stubby, v5.20.5464 (RidiculousRockrat)\n  TauntAware, v2013-03-01\n  TipHelper, v5.12.DEV.351(/embedded)\n  TrainAlert, v1.12.21\n  WeakAuras, v2.0.7\n  WeakAurasOptions, v2.0.7\n  BlizRuntimeLib_enUS v5.4.8.50400 <us>\n  (ck=a97)\n",
+			["locals"] = "(*temporary) = \"Event with id \"DB: Penance CD 2 and trigger number 0 tried to activate, but does not exist\"\n",
+			["timestamp"] = "2014-07-10 15:36:33",
+			["context"] = "Global",
+			["stack"] = "[C]: ?\nInterface\\AddOns\\WeakAuras\\WeakAuras.lua:1914: in function `SetEventDynamics'\nInterface\\AddOns\\WeakAuras\\WeakAuras.lua:1975: in function `EndEvent'\nInterface\\AddOns\\WeakAuras\\WeakAuras.lua:1819: in function `ScanEvents'\nInterface\\AddOns\\WeakAuras\\WeakAuras.lua:768: in function `func'\n...face\\AddOns\\ElvUI\\libs\\AceTimer-3.0\\AceTimer-3.0.lua:43: in function <...face\\AddOns\\ElvUI\\libs\\AceTimer-3.0\\AceTimer-3.0.lua:36>\n",
+		}, -- [99]
+		{
+			["message"] = "...rface\\AddOns\\ElvUI\\modules\\nameplates\\nameplates.lua:692: attempt to index field 'healthBar' (a nil value)",
+			["count"] = 5,
+			["addons"] = "  Swatter, v5.20.5464 (RidiculousRockrat)\n  ACP, v3.4.8 \n  AskMrRobot, v1.2.12.0\n  AucAdvanced, v5.20.5464 (RidiculousRockrat)\n  AucFilterBasic, v5.20.5464 (RidiculousRockrat)\n  AucFilterOutlier, v5.20.5464.5459(5.20/embedded)\n  AucMatchUndercut, v5.20.5464.5364(5.20/embedded)\n  AucStatHistogram, v5.20.5464 (RidiculousRockrat)\n  AucStatiLevel, v5.20.5464 (RidiculousRockrat)\n  AucStatPurchased, v5.20.5464 (RidiculousRockrat)\n  AucStatSales, v5.20.5464.5376(5.20/embedded)\n  AucStatSimple, v5.20.5464 (RidiculousRockrat)\n  AucStatStdDev, v5.20.5464 (RidiculousRockrat)\n  AucStatWOWEcon, v5.20.5464.5323(5.20/embedded)\n  AucUtilAHWindowControl, v5.20.5464.5347(5.20/embedded)\n  AucUtilAppraiser, v5.20.5464.5462(5.20/embedded)\n  AucUtilAskPrice, v5.20.5464.5447(5.20/embedded)\n  AucUtilAutoMagic, v5.20.5464.5443(5.20/embedded)\n  AucUtilCompactUI, v5.20.5464.5444(5.20/embedded)\n  AucUtilEasyBuyout, v5.20.5464.5458(5.20/embedded)\n  AucUtilFixAH, v5.20.5464 (RidiculousRockrat)\n  AucUtilItemSuggest, v5.20.5464.5417(5.20/embedded)\n  AucUtilPriceLevel, v5.20.5464.5458(5.20/embedded)\n  AucUtilScanButton, v5.20.5464.5403(5.20/embedded)\n  AucUtilScanFinish, v5.20.5464.5347(5.20/embedded)\n  AucUtilScanProgress, v5.20.5464.4979(5.20/embedded)\n  AucUtilScanStart, v5.20.5464.5347(5.20/embedded)\n  AucUtilSearchUI, v5.20.5464.5452(5.20/embedded)\n  AucUtilSimpleAuction, v5.20.5464.5452(5.20/embedded)\n  AucUtilVendMarkup, v5.20.5464.4828(5.20/embedded)\n  AutoRez, v\n  Babylonian, v5.1.DEV.332(/embedded)\n  BigWigs, v4.450\n  BigWigsRecordKills, v1.26\n  BLCooldown, v3.53\n  BossNotes, v1.5.4.10\n  BossNotesPersonalNotes, v\n  CombatReplay, v\n  CombatReplayLogger, v\n  CombatReplaySavedData, v\n  Configator, v5.1.DEV.359(/embedded)\n  DebugLib, v5.1.DEV.337(/embedded)\n  DerpEP, v\n  ElvUI, v6.9999\n  ElvUIConfig, v1.01\n  epgp, v5.9.22\n  epgplootmaster, v0.6.51\n  epgplootmasterml, v0.6.51\n  FriendGroups, v\n  GCD, v11.0.1-release \n  GTFO, v4.31\n  GupPet, v2.104\n  LibExtraTip, v5.12.DEV.363(/embedded)\n  LibSharedMedia30, v3.0-81\n  LibStub, v\n  LoggerHead, v173\n  Malkorok, v\n  Masque, v5.4.396\n  MikScrollingBattleText, v5.7.131\n  OpenRaid, v2.1\n  oqueue, v1.8.8\n  oRA3, v\n  PhoenixStyle, v\n  Postal, v3.5.1\n  RaidBuffStatus, v5.9.2\n  RaidRoll, v4.7.12\n  RaidRollLootTracker, v\n  RangeDisplay, vv4.2.4\n  Raven, vr317\n  SavedInstances, v5.8.2\n  Scrap, v12.12\n  ScrapSpotlight, v\n  SharedMedia, v3.0.5-183\n  SharedMediaAdditionalFonts, v1.0.16\n  SimpleRaidTargetIcons, v1.21\n  Skada, v1.4-19\n  SlashIn, v\n  Stubby, v5.20.5464 (RidiculousRockrat)\n  TauntAware, v2013-03-01\n  TipHelper, v5.12.DEV.351(/embedded)\n  TrainAlert, v1.12.21\n  WeakAuras, v2.0.7\n  WeakAurasOptions, v2.0.7\n  BlizRuntimeLib_enUS v5.4.8.50400 <us>\n  (ck=a97)\n",
+			["locals"] = "self = NamePlate7 {\n 0 = <userdata>\n highlight = <unnamed> {\n }\n nameFrame = <unnamed> {\n }\n border = <unnamed> {\n }\n eliteIcon = <unnamed> {\n }\n castBar = <unnamed> {\n }\n barFrame = <unnamed> {\n }\n level = <unnamed> {\n }\n threat = <unnamed> {\n }\n healthBar = <unnamed> {\n }\n queue = <table> {\n }\n name = <unnamed> {\n }\n bossIcon = <unnamed> {\n }\n raidIcon = <unnamed> {\n }\n}\nmyPlate = <unnamed> {\n 0 = <userdata>\n healthBar = <unnamed> {\n }\n nameText = \"Raider's Training Dummy\"\n cPoints = <unnamed> {\n }\n castBar = <unnamed> {\n }\n DebuffWidget = <unnamed> {\n }\n name = <unnamed> {\n }\n BuffWidget = <unnamed> {\n }\n lowHealth = <unnamed> {\n }\n level = <unnamed> {\n }\n overlay = <unnamed> {\n }\n healerIcon = <unnamed> {\n }\n}\n(*temporary) = <function> defined =[C]:-1\n(*temporary) = <unnamed> {\n 0 = <userdata>\n borderleft = <unnamed> {\n }\n borderbottom = <unnamed> {\n }\n bordertop = <unnamed> {\n }\n text = <unnamed> {\n }\n backdrop = <unnamed> {\n }\n borderright = <unnamed> {\n }\n}\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = nil\n(*temporary) = \"attempt to index field 'healthBar' (a nil value)\"\nNP = <table> {\n BuffCache = <table> {\n }\n CachedAuraDurations = <table> {\n }\n GetReaction = <function> defined @Interface\\AddOns\\ElvUI\\modules\\nameplates\\nameplates.lua:297\n ScanFrames = <function> defined @Interface\\AddOns\\ElvUI\\modules\\nameplates\\nameplates.lua:1078\n modules = <table> {\n }\n CancelTimer = <function> defined @Interface\\AddOns\\ElvUI\\libs\\AceTimer-3.0\\AceTimer-3.0.lua:161\n SecureHook = <function> defined @Interface\\AddOns\\ElvUI\\libs\\AceHook-3.0\\AceHook-3.0.lua:339\n AuraSpellID = <table> {\n }\n HealthBar_OnSizeChanged = <function> defined @Interface\\AddOns\\ElvUI\\modules\\nameplates\\nameplates.lua:756\n AuraType = <table> {\n }\n PLAYER_REGEN_DISABLED = <function> defined @Interface\\AddOns\\ElvUI\\modules\\nameplates\\nameplates.lua:532\n UNIT_COMBO_POINTS = <function> defined @Interface\\AddOns\\ElvUI\\modules\\nameplates\\nameplates.lua:1221\n CheckBGHealers = <function> defined @Interface\\AddOns\\ElvUI\\modules\\nameplates\\nameplates.lua:232\n IsEnabled = <function> defined @Interface\\AddOns\\ElvUI\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:482\n ScheduleTimer = <function> defined @Interface\\AddOns\\ElvUI\\libs\\AceTimer-3.0\\AceTimer-3.0.lua:108\n UpdateIcon = <function> defined @Interface\\AddOns\\ElvUI\\modules\\nameplates\\nameplates.lua:1551\n RegisterMessage = <function> defined @Interface\\AddOns\\AskMrRobot\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:118\n UnregisterMessage = <function> defined @Interface\\AddOns\\AskMrRobot\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:181\n hooks = <table> {\n }\n UpdateLevelAndName = <function> defined @Interface\\AddOns\\ElvUI\\modules\\nameplates\\nameplates.lua:267\n db = <table> {\n }\n SetEnabledState = <function> defined @Interface\\AddOns\\ElvUI\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:455\n Hook = <function> defined @Interface\\AddOns\\ElvUI\\libs\\AceHook-3.0\\AceHook-3.0.lua:277\n RaidIconCoordinate = <table> {\n }\n GetThreatReaction = <function> defined @Interface\\AddOns\\ElvUI\\modules\\nameplates\\nameplates.lua:326\n SetUnitInfo = <function> defined @Interface\\AddOns\\ElvUI\\modules\\nameplates\\nameplates.lua:453\n SearchForFrame = <function> defined @Interface\\AddOns\\ElvUI\\modules\\nameplates\\nameplates.lua:1716\n OnSizeChanged = <function> defined @Interface\\AddOns\\ElvUI\\modules\\nameplates\\nameplates.lua:616\n AuraDuration = <table> {\n }\n NewModule = <function> defined @Interface\\AddOns\\ElvUI\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:266\n SearchNameplateByIconName = <function> defined @Interface\\AddOns\\ElvUI\\modules\\nameplates\\nameplates.lua:1707\n ComboColors = <table> {\n }\n GetName = <function> defined @Interface\\AddOns\\ElvUI\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:310\n name = \"ElvUI_NamePlates\"\n SizeAuraHeader = <function> defined @Interface\\AddOns\\ElvUI\\modules\\nameplates\\nameplates.lua:716\n Disable = <function> defined @Interface\\AddOns\\ElvUI\\libs\\AceAddon-3.0\\AceAddon-3.0.lua:345\n ColorizeAndScale = <function> defined @Interface\\AddOns\\ElvUI\\modules\\nameplates\\nameplates.lua:344\n SearchNameplateByName = <func",
+			["timestamp"] = "2014-07-10 15:52:17",
+			["context"] = "Global",
+			["stack"] = "...rface\\AddOns\\ElvUI\\modules\\nameplates\\nameplates.lua:692: in function <...rface\\AddOns\\ElvUI\\modules\\nameplates\\nameplates.lua:673>\n",
 		}, -- [100]
+		{
+			["message"] = "Interface\\AddOns\\WeakAuras\\WeakAuras.lua:1914: Event with id \"DB:  Purify 2 and trigger number 0 tried to activate, but does not exist",
+			["count"] = 1,
+			["addons"] = "  Swatter, v5.20.5464 (RidiculousRockrat)\n  ACP, v3.4.8 \n  AskMrRobot, v1.2.12.0\n  AucAdvanced, v5.20.5464 (RidiculousRockrat)\n  AucFilterBasic, v5.20.5464 (RidiculousRockrat)\n  AucFilterOutlier, v5.20.5464.5459(5.20/embedded)\n  AucMatchUndercut, v5.20.5464.5364(5.20/embedded)\n  AucStatHistogram, v5.20.5464 (RidiculousRockrat)\n  AucStatiLevel, v5.20.5464 (RidiculousRockrat)\n  AucStatPurchased, v5.20.5464 (RidiculousRockrat)\n  AucStatSales, v5.20.5464.5376(5.20/embedded)\n  AucStatSimple, v5.20.5464 (RidiculousRockrat)\n  AucStatStdDev, v5.20.5464 (RidiculousRockrat)\n  AucStatWOWEcon, v5.20.5464.5323(5.20/embedded)\n  AucUtilAHWindowControl, v5.20.5464.5347(5.20/embedded)\n  AucUtilAppraiser, v5.20.5464.5462(5.20/embedded)\n  AucUtilAskPrice, v5.20.5464.5447(5.20/embedded)\n  AucUtilAutoMagic, v5.20.5464.5443(5.20/embedded)\n  AucUtilCompactUI, v5.20.5464.5444(5.20/embedded)\n  AucUtilEasyBuyout, v5.20.5464.5458(5.20/embedded)\n  AucUtilFixAH, v5.20.5464 (RidiculousRockrat)\n  AucUtilItemSuggest, v5.20.5464.5417(5.20/embedded)\n  AucUtilPriceLevel, v5.20.5464.5458(5.20/embedded)\n  AucUtilScanButton, v5.20.5464.5403(5.20/embedded)\n  AucUtilScanFinish, v5.20.5464.5347(5.20/embedded)\n  AucUtilScanProgress, v5.20.5464.4979(5.20/embedded)\n  AucUtilScanStart, v5.20.5464.5347(5.20/embedded)\n  AucUtilSearchUI, v5.20.5464.5452(5.20/embedded)\n  AucUtilSimpleAuction, v5.20.5464.5452(5.20/embedded)\n  AucUtilVendMarkup, v5.20.5464.4828(5.20/embedded)\n  AutoRez, v\n  Babylonian, v5.1.DEV.332(/embedded)\n  BigWigs, v4.450\n  BigWigsRecordKills, v1.26\n  BLCooldown, v3.53\n  BossNotes, v1.5.4.10\n  BossNotesPersonalNotes, v\n  CombatReplay, v\n  CombatReplayLogger, v\n  CombatReplaySavedData, v\n  Configator, v5.1.DEV.359(/embedded)\n  DebugLib, v5.1.DEV.337(/embedded)\n  DerpEP, v\n  ElvUI, v6.9999\n  epgp, v5.9.22\n  epgplootmaster, v0.6.51\n  epgplootmasterml, v0.6.51\n  FriendGroups, v\n  GCD, v11.0.1-release \n  GTFO, v4.31\n  GupPet, v2.104\n  LibExtraTip, v5.12.DEV.363(/embedded)\n  LibSharedMedia30, v3.0-81\n  LibStub, v\n  LoggerHead, v173\n  Malkorok, v\n  Masque, v5.4.396\n  MikScrollingBattleText, v5.7.131\n  OpenRaid, v2.1\n  oqueue, v1.8.8\n  oRA3, v\n  PhoenixStyle, v\n  Postal, v3.5.1\n  RaidBuffStatus, v5.9.2\n  RaidRoll, v4.7.12\n  RaidRollLootTracker, v\n  RangeDisplay, vv4.2.4\n  Raven, vr317\n  SavedInstances, v5.8.2\n  Scrap, v12.12\n  ScrapSpotlight, v\n  SharedMedia, v3.0.5-183\n  SharedMediaAdditionalFonts, v1.0.16\n  SimpleRaidTargetIcons, v1.21\n  Skada, v1.4-19\n  SlashIn, v\n  Stubby, v5.20.5464 (RidiculousRockrat)\n  TauntAware, v2013-03-01\n  TipHelper, v5.12.DEV.351(/embedded)\n  TrainAlert, v1.12.21\n  WeakAuras, v2.0.7\n  WeakAurasOptions, v2.0.7\n  BlizRuntimeLib_enUS v5.4.8.50400 <us>\n  (ck=a82)\n",
+			["locals"] = "(*temporary) = \"Event with id \"DB:  Purify 2 and trigger number 0 tried to activate, but does not exist\"\n",
+			["timestamp"] = "2014-07-10 15:55:44",
+			["context"] = "Global",
+			["stack"] = "[C]: ?\nInterface\\AddOns\\WeakAuras\\WeakAuras.lua:1914: in function `SetEventDynamics'\nInterface\\AddOns\\WeakAuras\\WeakAuras.lua:1975: in function `EndEvent'\nInterface\\AddOns\\WeakAuras\\WeakAuras.lua:1819: in function `ScanEvents'\nInterface\\AddOns\\WeakAuras\\WeakAuras.lua:768: in function `func'\n...face\\AddOns\\ElvUI\\libs\\AceTimer-3.0\\AceTimer-3.0.lua:43: in function <...face\\AddOns\\ElvUI\\libs\\AceTimer-3.0\\AceTimer-3.0.lua:36>\n",
+		}, -- [101]
+		{
+			["message"] = "...terface\\AddOns\\WeakAurasOptions\\WeakAurasOptions.lua:8115: script ran too long",
+			["count"] = 1,
+			["addons"] = "  Swatter, v5.20.5464 (RidiculousRockrat)\n  ACP, v3.4.8 \n  AskMrRobot, v1.2.12.0\n  AucAdvanced, v5.20.5464 (RidiculousRockrat)\n  AucFilterBasic, v5.20.5464 (RidiculousRockrat)\n  AucFilterOutlier, v5.20.5464.5459(5.20/embedded)\n  AucMatchUndercut, v5.20.5464.5364(5.20/embedded)\n  AucStatHistogram, v5.20.5464 (RidiculousRockrat)\n  AucStatiLevel, v5.20.5464 (RidiculousRockrat)\n  AucStatPurchased, v5.20.5464 (RidiculousRockrat)\n  AucStatSales, v5.20.5464.5376(5.20/embedded)\n  AucStatSimple, v5.20.5464 (RidiculousRockrat)\n  AucStatStdDev, v5.20.5464 (RidiculousRockrat)\n  AucStatWOWEcon, v5.20.5464.5323(5.20/embedded)\n  AucUtilAHWindowControl, v5.20.5464.5347(5.20/embedded)\n  AucUtilAppraiser, v5.20.5464.5462(5.20/embedded)\n  AucUtilAskPrice, v5.20.5464.5447(5.20/embedded)\n  AucUtilAutoMagic, v5.20.5464.5443(5.20/embedded)\n  AucUtilCompactUI, v5.20.5464.5444(5.20/embedded)\n  AucUtilEasyBuyout, v5.20.5464.5458(5.20/embedded)\n  AucUtilFixAH, v5.20.5464 (RidiculousRockrat)\n  AucUtilItemSuggest, v5.20.5464.5417(5.20/embedded)\n  AucUtilPriceLevel, v5.20.5464.5458(5.20/embedded)\n  AucUtilScanButton, v5.20.5464.5403(5.20/embedded)\n  AucUtilScanFinish, v5.20.5464.5347(5.20/embedded)\n  AucUtilScanProgress, v5.20.5464.4979(5.20/embedded)\n  AucUtilScanStart, v5.20.5464.5347(5.20/embedded)\n  AucUtilSearchUI, v5.20.5464.5452(5.20/embedded)\n  AucUtilSimpleAuction, v5.20.5464.5452(5.20/embedded)\n  AucUtilVendMarkup, v5.20.5464.4828(5.20/embedded)\n  AutoRez, v\n  Babylonian, v5.1.DEV.332(/embedded)\n  BigWigs, v4.450\n  BigWigsCore, v\n  BigWigsPizzaBar, vv1.5.5\n  BigWigsPlugins, v\n  BigWigsRecordKills, v1.26\n  BigWigsSiegeOfOrgrimmar, v\n  BLCooldown, v3.53\n  BossNotes, v1.5.4.10\n  BossNotesPersonalNotes, v\n  CombatReplay, v\n  CombatReplayLogger, v\n  CombatReplaySavedData, v\n  Configator, v5.1.DEV.359(/embedded)\n  DebugLib, v5.1.DEV.337(/embedded)\n  DerpEP, v\n  ElvUI, v6.9999\n  ElvUIConfig, v1.01\n  epgp, v5.9.22\n  epgplootmaster, v0.6.51\n  epgplootmasterml, v0.6.51\n  FriendGroups, v\n  GCD, v11.0.1-release \n  GTFO, v4.31\n  GupPet, v2.104\n  LibExtraTip, v5.12.DEV.363(/embedded)\n  LibSharedMedia30, v3.0-81\n  LibStub, v\n  LoggerHead, v173\n  Malkorok, v\n  Masque, v5.4.396\n  MikScrollingBattleText, v5.7.131\n  OpenRaid, v2.1\n  oqueue, v1.8.8\n  oRA3, v\n  PhoenixStyle, v\n  Postal, v3.5.1\n  RaidBuffStatus, v5.9.2\n  RaidRoll, v4.7.12\n  RaidRollLootTracker, v\n  RangeDisplay, vv4.2.4\n  Raven, vr317\n  SavedInstances, v5.8.2\n  Scrap, v12.12\n  ScrapSpotlight, v\n  SharedMedia, v3.0.5-183\n  SharedMediaAdditionalFonts, v1.0.16\n  SimpleRaidTargetIcons, v1.21\n  Skada, v1.4-19\n  SlashIn, v\n  Stubby, v5.20.5464 (RidiculousRockrat)\n  TauntAware, v2013-03-01\n  TipHelper, v5.12.DEV.351(/embedded)\n  TrainAlert, v1.12.21\n  WeakAuras, v2.0.7\n  WeakAurasOptions, v2.0.7\n  BlizRuntimeLib_enUS v5.4.8.50400 <us>\n  (ck=af4)\n",
+			["locals"] = "filter = \"\"\noverrideReset = true\nrecenter = false\nnumLoaded = 0\nto_sort = <table> {\n 1 = <table> {\n }\n 2 = <table> {\n }\n 3 = <table> {\n }\n 4 = <table> {\n }\n 5 = <table> {\n }\n 6 = <table> {\n }\n 7 = <table> {\n }\n 8 = <table> {\n }\n 9 = <table> {\n }\n 10 = <table> {\n }\n 11 = <table> {\n }\n 12 = <table> {\n }\n 13 = <table> {\n }\n 14 = <table> {\n }\n 15 = <table> {\n }\n 16 = <table> {\n }\n 17 = <table> {\n }\n 18 = <table> {\n }\n 19 = <table> {\n }\n 20 = <table> {\n }\n 21 = <table> {\n }\n 22 = <table> {\n }\n 23 = <table> {\n }\n 24 = <table> {\n }\n 25 = <table> {\n }\n 26 = <table> {\n }\n 27 = <table> {\n }\n 28 = <table> {\n }\n 29 = <table> {\n }\n 30 = <table> {\n }\n 31 = <table> {\n }\n 32 = <table> {\n }\n 33 = <table> {\n }\n 34 = <table> {\n }\n 35 = <table> {\n }\n 36 = <table> {\n }\n 37 = <table> {\n }\n 38 = <table> {\n }\n 39 = <table> {\n }\n 40 = <table> {\n }\n 41 = <table> {\n }\n 42 = <table> {\n }\n 43 = <table> {\n }\n 44 = <table> {\n }\n 45 = <table> {\n }\n 46 = <table> {\n }\n 47 = <table> {\n }\n 48 = <table> {\n }\n 49 = <table> {\n }\n 50 = <table> {\n }\n 51 = <table> {\n }\n 52 = <table> {\n }\n 53 = <table> {\n }\n 54 = <table> {\n }\n 55 = <table> {\n }\n 56 = <table> {\n }\n 57 = <table> {\n }\n 58 = <table> {\n }\n 59 = <table> {\n }\n 60 = <table> {\n }\n 61 = <table> {\n }\n 62 = <table> {\n }\n 63 = <table> {\n }\n 64 = <table> {\n }\n 65 = <table> {\n }\n 66 = <table> {\n }\n 67 = <table> {\n }\n 68 = <table> {\n }\n 69 = <table> {\n }\n 70 = <table> {\n }\n}\nchildren = <table> {\n BMCD: 1. Main = <table> {\n }\n Tank CDs 2 = <table> {\n }\n BMB: Shuffl Group = <table> {\n }\n Tank CDs Long = <table> {\n }\n Priest CD Tracker = <table> {\n }\n BM Main: Elusive Brew 2.0 = <table> {\n }\n Tank DPS Buffs = <table> {\n }\n Monk DPS Cooldowns = <table> {\n }\n Shadow Priest = <table> {\n }\n Tank Def Buffs = <table> {\n }\n weakened armor = <table> {\n }\n BM Main: 30 Talents = <table> {\n }\n Chi = <table> {\n }\n Tortos = <table> {\n }\n Track SWP Group = <table> {\n }\n BMCD: Stun Group = <table> {\n }\n Track DP Group = <table> {\n }\n Monk Tank Cooldowns = <table> {\n }\n Tricks of the Trade Group = <table> {\n }\n Garrosh Kiting = <table> {\n }\n Stuns = <table> {\n }\n Priest Mainbar = <table> {\n }\n Tank CDs 3 = <table> {\n }\n BM Main: Stagger 2.0 = <table> {\n }\n Track VT Group = <table> {\n }\n Tank CDs = <table> {\n }\n vengeance = <table> {\n }\n BM Main: Expel Harm 2.0 = <table> {\n }\n r = <table> {\n }\n BM Main: Guard 2.0 = <table> {\n }\n SoO 1st Part = <table> {\n }\n Injection+ = <table> {\n }\n Tricks Group = <table> {\n }\n BMCD: 2. Def Buffs = <table> {\n }\n BM Main: Shuffle 2.0 = <table> {\n }\n HP = <table> {\n }\n Raid Cooldowns Thok = <table> {\n }\n}\ncontainsFilter = false\nnumUnloaded = 0\n(for generator) = <function> defined =[C]:-1\n(for state) = <table> {\n 1 = <table> {\n }\n 2 = <table> {\n }\n 3 = <table> {\n }\n 4 = <table> {\n }\n 5 = <table> {\n }\n 6 = <table> {\n }\n 7 = <table> {\n }\n 8 = <table> {\n }\n 9 = <table> {\n }\n 10 = <table> {\n }\n 11 = <table> {\n }\n 12 = <table> {\n }\n 13 = <table> {\n }\n 14 = <table> {\n }\n 15 = <table> {\n }\n 16 = <table> {\n }\n 17 = <table> {\n }\n 18 = <table> {\n }\n 19 = <table> {\n }\n 20 = <table> {\n }\n 21 = <table> {\n }\n 22 = <table> {\n }\n 23 = <table> {\n }\n 24 = <table> {\n }\n 25 = <table> {\n }\n 26 = <table> {\n }\n 27 = <table> {\n }\n 28 = <table> {\n }\n 29 = <table> {\n }\n 30 = <table> {\n }\n 31 = <table> {\n }\n 32 = <table> {\n }\n 33 = <table> {\n }\n 34 = <table> {\n }\n 35 = <table> {\n }\n 36 = <table> {\n }\n 37 = <table> {\n }\n 38 = <table> {\n }\n 39 = <table> {\n }\n 40 = <table> {\n }\n 41 = <table> {\n }\n 42 = <table> {\n }\n 43 = <table> {\n }\n 44 = <table> {\n }\n 45 = <table> {\n }\n 46 = <table> {\n }\n 47 = <table> {\n }\n 48 = <table> {\n }\n 49 = <table> {\n }\n 50 = <table> {\n }\n 51 = <table> {\n }\n 52 = <table> {\n }\n 53 = <table> {\n }\n 54 = <table> {\n }\n 55 = <table> {\n }\n 56 = <table> {\n }\n 57 = <table> {\n }\n 58 = <table> {\n }\n 59 = <table> {\n }\n 60 = <table> {\n }\n 61 = <table> {\n }\n 62 = <table> {\n }\n 63 = <table> {\n }\n 64 = <table> {\n }\n 65 = <table> {\n }\n 66 = <table> {\n }\n 67 = <table> {\n }\n 68 = <table> {\n }\n 69 = <table> {\n }\n 70 = <table> {\n }\n}\n(for control) = 54\n_ = 54\nchild = <table> {\n GetData = <function> defined @Interface\\AddOns",
+			["timestamp"] = "2014-07-10 16:03:44",
+			["context"] = "Global",
+			["stack"] = "...terface\\AddOns\\WeakAurasOptions\\WeakAurasOptions.lua:8115: in function `SortDisplayButtons'\n...eGUI-Widgets\\AceGUIWidget-WeakAurasDisplayButton.lua:461: in function `func'\n...eGUI-Widgets\\AceGUIWidget-WeakAurasDisplayButton.lua:738: in function `Expand'\n...eGUI-Widgets\\AceGUIWidget-WeakAurasDisplayButton.lua:773: in function `EnableExpand'\n...eGUI-Widgets\\AceGUIWidget-WeakAurasDisplayButton.lua:104: in function `UpdateExpandButton'\n...eGUI-Widgets\\AceGUIWidget-WeakAurasDisplayButton.lua:193: in function `func'\nInterface\\FrameXML\\UIDropDownMenu.lua:730: in function `UIDropDownMenuButton_OnClick'\n[string \"*:OnClick\"]:1: in function <[string \"*:OnClick\"]:1>\n",
+		}, -- [102]
 	},
 }

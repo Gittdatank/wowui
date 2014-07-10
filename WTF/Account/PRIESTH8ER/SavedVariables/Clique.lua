@@ -670,7 +670,7 @@ CliqueDB3 = {
 				["CompactRaidFrame6Buff3"] = true,
 				["CompactRaidFrame11Buff2"] = true,
 				["CompactRaidFrame20DispelDebuff3"] = true,
-				["CompactRaidFrame33Debuff3"] = true,
+				["CompactRaidFrame30Debuff3"] = true,
 				["CompactRaidFrame34Debuff3"] = true,
 				["CompactRaidFrame31Buff2"] = true,
 				["CompactRaidFrame23DispelDebuff3"] = true,
@@ -718,7 +718,7 @@ CliqueDB3 = {
 				["CompactRaidFrame18DispelDebuff1"] = true,
 				["CompactRaidFrame12Debuff1"] = true,
 				["CompactRaidFrame20"] = true,
-				["CompactRaidFrame30Debuff3"] = true,
+				["CompactRaidFrame33Debuff3"] = true,
 				["CompactRaidFrame28Buff2"] = true,
 				["CompactRaidFrame11Debuff3"] = true,
 				["CompactRaidFrame25Debuff3"] = true,
@@ -876,11 +876,11 @@ CliqueDB3 = {
 				["CompactRaidFrame7DispelDebuff2"] = true,
 				["CompactRaidFrame5Debuff2"] = true,
 				["TargetFrameToT"] = true,
-				["CompactRaidFrame7Debuff3"] = true,
+				["CompactRaidFrame4DispelDebuff1"] = true,
 				["FocusFrame"] = true,
 				["CompactRaidFrame9Buff1"] = true,
 				["CompactRaidFrame12Buff2"] = true,
-				["CompactRaidFrame4DispelDebuff1"] = true,
+				["CompactRaidFrame7Debuff3"] = true,
 				["CompactRaidFrame3Buff2"] = true,
 				["CompactRaidFrame3DispelDebuff2"] = true,
 				["CompactRaidFrame6DispelDebuff2"] = true,
@@ -986,19 +986,19 @@ CliqueDB3 = {
 				["CompactPartyFramePet2"] = true,
 				["Boss1TargetFrame"] = true,
 				["CompactPartyFrameMember3Debuff1"] = true,
-				["CompactPartyFrameMember3DispelDebuff1"] = true,
-				["CompactPartyFrameMember2DispelDebuff1"] = true,
+				["CompactPartyFrameMember4DispelDebuff1"] = true,
+				["CompactPartyFrameMember5DispelDebuff1"] = true,
 				["CompactPartyFrameMember1"] = true,
 				["CompactPartyFrameMember1Debuff1"] = true,
 				["CompactPartyFramePet3"] = true,
-				["CompactPartyFrameMember5DispelDebuff1"] = true,
-				["CompactPartyFrameMember4"] = true,
 				["CompactPartyFrameMember1DispelDebuff1"] = true,
+				["CompactPartyFrameMember4"] = true,
+				["CompactPartyFrameMember3DispelDebuff1"] = true,
 				["CompactPartyFrameMember4DispelDebuff2"] = true,
 				["CompactPartyFrameMember1Buff2"] = true,
 				["PitBull4_Frames_target"] = true,
 				["CompactPartyFrameMember4Debuff1"] = true,
-				["CompactPartyFrameMember4DispelDebuff1"] = true,
+				["CompactPartyFrameMember2DispelDebuff1"] = true,
 				["CompactPartyFrameMember4Buff3"] = true,
 				["PartyMemberFrame4PetFrame"] = true,
 				["CompactPartyFramePet4"] = true,
@@ -1041,9 +1041,9 @@ CliqueDB3 = {
 		["Gitt - Arthas"] = "Gitt - Arthas",
 		["Spih - Arthas"] = "Spih - Arthas",
 		["Gimm - Cho'gall"] = "Gimm - Cho'gall",
-		["Spih - Cho'gall"] = "Spih - Cho'gall",
-		["Git - Azuremyst"] = "Git - Azuremyst",
 		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
+		["Git - Azuremyst"] = "Git - Azuremyst",
+		["Spih - Cho'gall"] = "Spih - Cho'gall",
 		["Git - Cho'gall"] = "Gitt - Cho'gall",
 		["Greny - Azuremyst"] = "Greny - Azuremyst",
 		["Git - Arthas"] = "Git - Cho'gall",
@@ -1408,7 +1408,7 @@ CliqueDB3 = {
 				}, -- [2]
 			},
 		},
-		["Spih - Cho'gall"] = {
+		["Giitt - Feathermoon"] = {
 			["bindings"] = {
 				{
 					["sets"] = {
@@ -1482,7 +1482,7 @@ CliqueDB3 = {
 				}, -- [6]
 			},
 		},
-		["Giitt - Feathermoon"] = {
+		["Spih - Cho'gall"] = {
 			["bindings"] = {
 				{
 					["sets"] = {

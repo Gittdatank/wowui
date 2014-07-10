@@ -12,10 +12,10 @@ ThreatPlatesDB = {
 					["role"] = "DAMAGER",
 				}, -- [2]
 			},
-			["welcome"] = true,
 			["spec"] = {
 				["primary"] = false,
 			},
+			["welcome"] = true,
 		},
 		["Gyit - Area 52"] = {
 			["spec"] = {
@@ -61,9 +61,6 @@ ThreatPlatesDB = {
 		},
 		["Evyyn - Azuremyst"] = {
 			["welcome"] = true,
-			["spec"] = {
-				["primary"] = false,
-			},
 			["specInfo"] = {
 				{
 					["name"] = "Combat",
@@ -73,6 +70,9 @@ ThreatPlatesDB = {
 					["name"] = "Subtlety",
 					["role"] = "DAMAGER",
 				}, -- [2]
+			},
+			["spec"] = {
+				["primary"] = false,
 			},
 		},
 		["Giitt - Silvermoon"] = {
@@ -91,8 +91,8 @@ ThreatPlatesDB = {
 				["ON"] = false,
 			},
 			["spec"] = {
-				["secondary"] = false,
 				["primary"] = false,
+				["secondary"] = false,
 			},
 			["auras"] = {
 				true, -- [1]
@@ -120,6 +120,9 @@ ThreatPlatesDB = {
 				"Fury", -- [2]
 				"Protection", -- [3]
 			},
+			["threat"] = {
+			},
+			["welcome"] = true,
 			["shapeshifts"] = {
 				true, -- [1]
 				false, -- [2]
@@ -130,15 +133,12 @@ ThreatPlatesDB = {
 				[0] = false,
 				["ON"] = false,
 			},
-			["welcome"] = true,
-			["threat"] = {
-			},
 		},
 		["Gilt - Azuremyst"] = {
+			["welcome"] = true,
 			["spec"] = {
 				["secondary"] = true,
 			},
-			["welcome"] = true,
 			["specInfo"] = {
 				{
 					nil, -- [1]
@@ -169,7 +169,6 @@ ThreatPlatesDB = {
 			},
 		},
 		["Got - Arthas"] = {
-			["welcome"] = true,
 			["specInfo"] = {
 				{
 					["name"] = "Guardian",
@@ -180,6 +179,7 @@ ThreatPlatesDB = {
 					["role"] = "HEALER",
 				}, -- [2]
 			},
+			["welcome"] = true,
 		},
 		["Gitt - Cho'gall"] = {
 			["welcome"] = true,
@@ -216,13 +216,14 @@ ThreatPlatesDB = {
 					["role"] = "TANK",
 				}, -- [2]
 			},
-			["spec"] = {
-				["primary"] = false,
-				["secondary"] = true,
-			},
 			["welcome"] = true,
+			["spec"] = {
+				["secondary"] = true,
+				["primary"] = false,
+			},
 		},
 		["Gitt - Arthas"] = {
+			["welcome"] = true,
 			["specInfo"] = {
 				{
 					["name"] = "Brewmaster",
@@ -233,132 +234,24 @@ ThreatPlatesDB = {
 					["role"] = "DAMAGER",
 				}, -- [2]
 			},
-			["welcome"] = true,
 			["spec"] = {
 				["secondary"] = true,
 			},
 		},
-		["Git - Arthas"] = {
+		["Spih - Arthas"] = {
 			["welcome"] = true,
 			["specInfo"] = {
 				{
-					["name"] = "Protection",
-					["role"] = "TANK",
-				}, -- [1]
-				{
-					["name"] = "Fury",
-					["role"] = "DAMAGER",
-				}, -- [2]
-			},
-		},
-		["Greny - Azuremyst"] = {
-			["specInfo"] = {
-				{
-					["name"] = "Marksmanship",
-					["role"] = "DAMAGER",
-				}, -- [1]
-				{
-					["name"] = "Unknown",
-					["role"] = "DAMAGER",
-				}, -- [2]
-			},
-			["welcome"] = true,
-			["spec"] = {
-				["primary"] = false,
-			},
-		},
-		["Git - Cho'gall"] = {
-			["welcome"] = true,
-			["specInfo"] = {
-				{
-					["name"] = "Protection",
-					["role"] = "TANK",
-				}, -- [1]
-				{
-					["name"] = "Fury",
-					["role"] = "DAMAGER",
-				}, -- [2]
-			},
-		},
-		["Giitt - Feathermoon"] = {
-			["spec"] = {
-				["primary"] = false,
-			},
-			["welcome"] = true,
-			["specName"] = {
-				"Arms", -- [1]
-				"Fury", -- [2]
-				"Protection", -- [3]
-			},
-		},
-		["Git - Azuremyst"] = {
-			["spec"] = {
-				["secondary"] = true,
-			},
-			["welcome"] = true,
-			["specInfo"] = {
-				{
-					8, -- [1]
-					2, -- [2]
-					31, -- [3]
-				}, -- [1]
-				{
-					4, -- [1]
-					3, -- [2]
-					34, -- [3]
-				}, -- [2]
-			},
-			["specName"] = {
-				"Arms", -- [1]
-				"Fury", -- [2]
-				"Protection", -- [3]
-			},
-		},
-		["Spih - Cho'gall"] = {
-			["welcome"] = true,
-			["spec"] = {
-				["primary"] = false,
-			},
-			["specInfo"] = {
-				{
-					33, -- [1]
-					7, -- [2]
 					["name"] = "Discipline",
 					["role"] = "HEALER",
 				}, -- [1]
 				{
-					9, -- [1]
-					[3] = 31,
-					["role"] = "DAMAGER",
 					["name"] = "Shadow",
+					["role"] = "DAMAGER",
 				}, -- [2]
 			},
-			["specName"] = {
-				"Discipline", -- [1]
-				"Holy", -- [2]
-				"Shadow", -- [3]
-			},
-		},
-		["Lihte - Cho'gall"] = {
 			["spec"] = {
 				["primary"] = false,
-			},
-			["welcome"] = true,
-			["specInfo"] = {
-				{
-					[3] = 14,
-					["role"] = "DAMAGER",
-					["name"] = "Destruction",
-				}, -- [1]
-				{
-					["name"] = "Unknown",
-					["role"] = "DAMAGER",
-				}, -- [2]
-			},
-			["specName"] = {
-				"Affliction", -- [1]
-				"Demonology", -- [2]
-				"Destruction", -- [3]
 			},
 		},
 		["Giit - Cho'gall"] = {
@@ -383,22 +276,132 @@ ThreatPlatesDB = {
 				"Restoration", -- [3]
 			},
 		},
-		["Spih - Arthas"] = {
+		["Git - Azuremyst"] = {
+			["welcome"] = true,
+			["spec"] = {
+				["secondary"] = true,
+			},
+			["specInfo"] = {
+				{
+					8, -- [1]
+					2, -- [2]
+					31, -- [3]
+				}, -- [1]
+				{
+					4, -- [1]
+					3, -- [2]
+					34, -- [3]
+				}, -- [2]
+			},
+			["specName"] = {
+				"Arms", -- [1]
+				"Fury", -- [2]
+				"Protection", -- [3]
+			},
+		},
+		["Spih - Cho'gall"] = {
+			["spec"] = {
+				["primary"] = false,
+			},
+			["welcome"] = true,
+			["specInfo"] = {
+				{
+					33, -- [1]
+					7, -- [2]
+					["name"] = "Discipline",
+					["role"] = "HEALER",
+				}, -- [1]
+				{
+					9, -- [1]
+					[3] = 31,
+					["role"] = "DAMAGER",
+					["name"] = "Shadow",
+				}, -- [2]
+			},
+			["specName"] = {
+				"Discipline", -- [1]
+				"Holy", -- [2]
+				"Shadow", -- [3]
+			},
+		},
+		["Greny - Azuremyst"] = {
+			["specInfo"] = {
+				{
+					["name"] = "Marksmanship",
+					["role"] = "DAMAGER",
+				}, -- [1]
+				{
+					["name"] = "Unknown",
+					["role"] = "DAMAGER",
+				}, -- [2]
+			},
+			["spec"] = {
+				["primary"] = false,
+			},
+			["welcome"] = true,
+		},
+		["Giitt - Feathermoon"] = {
+			["spec"] = {
+				["primary"] = false,
+			},
+			["welcome"] = true,
+			["specName"] = {
+				"Arms", -- [1]
+				"Fury", -- [2]
+				"Protection", -- [3]
+			},
+		},
+		["Lihte - Cho'gall"] = {
 			["welcome"] = true,
 			["spec"] = {
 				["primary"] = false,
 			},
 			["specInfo"] = {
 				{
-					["name"] = "Discipline",
-					["role"] = "HEALER",
+					[3] = 14,
+					["role"] = "DAMAGER",
+					["name"] = "Destruction",
 				}, -- [1]
 				{
-					["name"] = "Shadow",
+					["name"] = "Unknown",
 					["role"] = "DAMAGER",
 				}, -- [2]
 			},
+			["specName"] = {
+				"Affliction", -- [1]
+				"Demonology", -- [2]
+				"Destruction", -- [3]
+			},
 		},
+		["Git - Cho'gall"] = {
+			["specInfo"] = {
+				{
+					["name"] = "Protection",
+					["role"] = "TANK",
+				}, -- [1]
+				{
+					["name"] = "Fury",
+					["role"] = "DAMAGER",
+				}, -- [2]
+			},
+			["welcome"] = true,
+		},
+		["Git - Arthas"] = {
+			["specInfo"] = {
+				{
+					["name"] = "Protection",
+					["role"] = "TANK",
+				}, -- [1]
+				{
+					["name"] = "Fury",
+					["role"] = "DAMAGER",
+				}, -- [2]
+			},
+			["welcome"] = true,
+		},
+	},
+	["global"] = {
+		["version"] = "6.008",
 	},
 	["profileKeys"] = {
 		["Dbyx - Arthas"] = "Default",
@@ -413,18 +416,15 @@ ThreatPlatesDB = {
 		["Gitt - Cho'gall"] = "Default",
 		["Gimm - Cho'gall"] = "Default",
 		["Gitt - Arthas"] = "Gitt - Monk",
-		["Git - Arthas"] = "Default",
-		["Greny - Azuremyst"] = "Default",
-		["Git - Cho'gall"] = "Default",
-		["Giitt - Feathermoon"] = "Default",
+		["Spih - Arthas"] = "Default",
+		["Giit - Cho'gall"] = "Giit tank",
 		["Git - Azuremyst"] = "Default",
 		["Spih - Cho'gall"] = "Spih",
+		["Greny - Azuremyst"] = "Default",
+		["Giitt - Feathermoon"] = "Default",
 		["Lihte - Cho'gall"] = "Default",
-		["Giit - Cho'gall"] = "Giit tank",
-		["Spih - Arthas"] = "Default",
-	},
-	["global"] = {
-		["version"] = "6.008",
+		["Git - Cho'gall"] = "Default",
+		["Git - Arthas"] = "Default",
 	},
 	["profiles"] = {
 		["Giit tank"] = {
@@ -432,8 +432,8 @@ ThreatPlatesDB = {
 				["scale"] = {
 					["Normal"] = 0.6000000238418579,
 					["Boss"] = 0.6000000238418579,
-					["Neutral"] = 0.6000000238418579,
 					["Elite"] = 0.6000000238418579,
+					["Neutral"] = 0.6000000238418579,
 				},
 				["toggle"] = {
 					["Totem"] = true,
@@ -448,7 +448,7 @@ ThreatPlatesDB = {
 				},
 				[34] = {
 				},
-				[48] = {
+				[38] = {
 				},
 				["list"] = {
 					"Shadow Fiend", -- [1]
@@ -508,7 +508,7 @@ ThreatPlatesDB = {
 				},
 				[49] = {
 				},
-				[38] = {
+				[48] = {
 				},
 			},
 			["settings"] = {
@@ -523,8 +523,11 @@ ThreatPlatesDB = {
 					["typeface"] = "DorisPP",
 					["size"] = 9,
 				},
-				["healthborder"] = {
-					["texture"] = "TP_HealthBarOverlayThin",
+				["name"] = {
+					["align"] = "LEFT",
+					["vertical"] = "BOTTOM",
+					["typeface"] = "DorisPP",
+					["size"] = 9,
 				},
 				["level"] = {
 					["typeface"] = "DorisPP",
@@ -534,11 +537,8 @@ ThreatPlatesDB = {
 				["castbar"] = {
 					["texture"] = "Gloss",
 				},
-				["name"] = {
-					["align"] = "LEFT",
-					["vertical"] = "BOTTOM",
-					["typeface"] = "DorisPP",
-					["size"] = 9,
+				["healthborder"] = {
+					["texture"] = "TP_HealthBarOverlayThin",
 				},
 			},
 			["cache"] = {
@@ -563,7 +563,7 @@ ThreatPlatesDB = {
 				},
 				[34] = {
 				},
-				[48] = {
+				["list"] = {
 				},
 				[38] = {
 				},
@@ -573,7 +573,7 @@ ThreatPlatesDB = {
 				},
 				[49] = {
 				},
-				["list"] = {
+				[48] = {
 				},
 			},
 		},
@@ -582,8 +582,8 @@ ThreatPlatesDB = {
 				["scale"] = {
 					["Normal"] = 0.5,
 					["Boss"] = 0.8,
-					["Elite"] = 0.6000000238418579,
 					["Neutral"] = 0.6000000238418579,
+					["Elite"] = 0.6000000238418579,
 				},
 				["toggle"] = {
 					["Totem"] = true,
@@ -597,6 +597,8 @@ ThreatPlatesDB = {
 				[41] = {
 				},
 				[34] = {
+				},
+				[48] = {
 				},
 				["list"] = {
 					"Shadow Fiend", -- [1]
@@ -650,15 +652,13 @@ ThreatPlatesDB = {
 					"", -- [49]
 					"", -- [50]
 				},
-				[38] = {
-				},
 				[40] = {
 				},
 				[42] = {
 				},
 				[49] = {
 				},
-				[48] = {
+				[38] = {
 				},
 			},
 			["settings"] = {
@@ -673,11 +673,8 @@ ThreatPlatesDB = {
 					["typeface"] = "DorisPP",
 					["size"] = 9,
 				},
-				["name"] = {
-					["align"] = "LEFT",
-					["vertical"] = "BOTTOM",
-					["typeface"] = "DorisPP",
-					["size"] = 9,
+				["castbar"] = {
+					["texture"] = "Gloss",
 				},
 				["level"] = {
 					["typeface"] = "DorisPP",
@@ -687,17 +684,17 @@ ThreatPlatesDB = {
 				["healthborder"] = {
 					["texture"] = "TP_HealthBarOverlayThin",
 				},
-				["castbar"] = {
-					["texture"] = "Gloss",
+				["name"] = {
+					["align"] = "LEFT",
+					["vertical"] = "BOTTOM",
+					["typeface"] = "DorisPP",
+					["size"] = 9,
 				},
 			},
 			["cache"] = {
 			},
 			["tankedWidget"] = {
 				["ON"] = true,
-			},
-			["classWidget"] = {
-				["ON"] = false,
 			},
 			["threat"] = {
 				["art"] = {
@@ -706,11 +703,14 @@ ThreatPlatesDB = {
 				["useScale"] = false,
 				["tank"] = {
 					["scale"] = {
-						["MEDIUM"] = 0.8,
 						["LOW"] = 0.9,
+						["MEDIUM"] = 0.8,
 						["HIGH"] = 0.6,
 					},
 				},
+			},
+			["classWidget"] = {
+				["ON"] = false,
 			},
 			["targetWidget"] = {
 				["theme"] = "arrows",
@@ -721,8 +721,8 @@ ThreatPlatesDB = {
 				["scale"] = {
 					["Normal"] = 0.6,
 					["Boss"] = 0.85,
-					["Neutral"] = 0.6,
 					["Elite"] = 0.7,
+					["Neutral"] = 0.6,
 				},
 				["toggle"] = {
 					["Totem"] = true,
@@ -737,7 +737,7 @@ ThreatPlatesDB = {
 				},
 				[34] = {
 				},
-				[48] = {
+				[38] = {
 				},
 				["list"] = {
 					"Shadow Fiend", -- [1]
@@ -797,15 +797,15 @@ ThreatPlatesDB = {
 				},
 				[49] = {
 				},
-				[38] = {
+				[48] = {
 				},
 			},
 			["settings"] = {
 				["customtext"] = {
 					["typeface"] = "DorisPP",
 					["x"] = 1,
-					["width"] = 137,
 					["size"] = 9,
+					["width"] = 137,
 				},
 				["healthbar"] = {
 					["texture"] = "Flat",
@@ -817,41 +817,41 @@ ThreatPlatesDB = {
 				["level"] = {
 					["typeface"] = "DorisPP",
 				},
-				["castbar"] = {
-					["texture"] = "Flat",
-				},
 				["name"] = {
 					["typeface"] = "DorisPP",
-					["width"] = 250,
 					["size"] = 9,
+					["width"] = 250,
+				},
+				["castbar"] = {
+					["texture"] = "Flat",
 				},
 			},
 			["cache"] = {
 			},
+			["debuffWidget"] = {
+				["mode"] = "allMine",
+			},
+			["tidyplatesFade"] = true,
 			["threat"] = {
 				["dps"] = {
 					["scale"] = {
-						["MEDIUM"] = 0.75,
 						["LOW"] = 0.75,
+						["MEDIUM"] = 0.75,
 						["HIGH"] = 0.75,
 					},
 				},
 			},
-			["tidyplatesFade"] = true,
-			["debuffWidget"] = {
-				["mode"] = "allMine",
-			},
 		},
 		["Gitt - Monk"] = {
 			["nameplate"] = {
-				["toggle"] = {
-					["Totem"] = true,
-				},
 				["scale"] = {
-					["Elite"] = 0.6000000238418579,
+					["Normal"] = 0.5,
 					["Boss"] = 0.8,
 					["Neutral"] = 0.6000000238418579,
-					["Normal"] = 0.5,
+					["Elite"] = 0.6000000238418579,
+				},
+				["toggle"] = {
+					["Totem"] = true,
 				},
 			},
 			["uniqueSettings"] = {
@@ -933,8 +933,8 @@ ThreatPlatesDB = {
 				["useScale"] = false,
 				["tank"] = {
 					["scale"] = {
-						["MEDIUM"] = 0.8,
 						["LOW"] = 0.9,
+						["MEDIUM"] = 0.8,
 						["HIGH"] = 0.6,
 					},
 				},
@@ -958,11 +958,11 @@ ThreatPlatesDB = {
 				["healthbar"] = {
 					["texture"] = "Smooth",
 				},
-				["healthborder"] = {
-					["texture"] = "TP_HealthBarOverlayThin",
-				},
 				["castbar"] = {
 					["texture"] = "Gloss",
+				},
+				["healthborder"] = {
+					["texture"] = "TP_HealthBarOverlayThin",
 				},
 				["name"] = {
 					["align"] = "LEFT",
@@ -991,7 +991,7 @@ ThreatPlatesDB = {
 				},
 				[34] = {
 				},
-				[48] = {
+				["list"] = {
 				},
 				[38] = {
 				},
@@ -1001,7 +1001,7 @@ ThreatPlatesDB = {
 				},
 				[49] = {
 				},
-				["list"] = {
+				[48] = {
 				},
 			},
 		},
@@ -1015,7 +1015,7 @@ ThreatPlatesDB = {
 				},
 				[34] = {
 				},
-				[48] = {
+				["list"] = {
 				},
 				[38] = {
 				},
@@ -1025,7 +1025,7 @@ ThreatPlatesDB = {
 				},
 				[49] = {
 				},
-				["list"] = {
+				[48] = {
 				},
 			},
 		},

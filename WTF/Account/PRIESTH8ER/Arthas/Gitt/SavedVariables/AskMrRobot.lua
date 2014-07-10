@@ -137,15 +137,15 @@ AmrBankItems = {
 }
 AmrEquipedItems = {
 	["1"] = "|cffa335ee|Hitem:99142:0:5030:4618:0:0:0:0:90:147:505|h[Crown of Seven Sacred Seals]|h|r",
-	["9"] = "|cffa335ee|Hitem:103909:4875:0:0:0:0:0:1751248768:90:161:491|h[Laser Burn Bracers]|h|r",
+	["14"] = "|cffa335ee|Hitem:104572:0:0:0:0:0:0:2094936192:90:0:493|h[Vial of Living Corruption]|h|r",
 	["3"] = "|cffa335ee|Hitem:104510:4804:4593:4594:0:0:0:1416479232:90:145:505|h[Ricocheting Shoulderguards]|h|r",
 	["2"] = "|cffa335ee|Hitem:104411:0:0:0:0:0:0:229626752:90:0:505|h[Immerseus' Crystalline Eye]|h|r",
 	["5"] = "|cffa335ee|Hitem:99382:4419:4618:4622:4622:0:0:0:90:147:505|h[Chestguard of Seven Sacred Seals]|h|r",
-	["15"] = "|cffff8000|Hitem:102245:4421:4621:0:0:0:0:34382080:90:160:505|h[Qian-Le, Courage of Niuzao]|h|r",
+	["8"] = "|cffa335ee|Hitem:104488:4428:4649:0:0:0:0:528968320:90:161:505|h[Unrepentant Heels]|h|r",
 	["7"] = "|cffa335ee|Hitem:99143:4880:4650:4650:0:0:0:0:90:161:493|h[Legguards of Seven Sacred Seals]|h|r",
 	["6"] = "|cffa335ee|Hitem:98613:0:4622:4622:4649:0:0:676141184:90:138:493|h[Snow Lily Belt]|h|r",
-	["14"] = "|cffa335ee|Hitem:104572:0:0:0:0:0:0:2094936192:90:0:493|h[Vial of Living Corruption]|h|r",
-	["8"] = "|cffa335ee|Hitem:104488:4428:4649:0:0:0:0:528968320:90:161:505|h[Unrepentant Heels]|h|r",
+	["9"] = "|cffa335ee|Hitem:103909:4875:0:0:0:0:0:1751248768:90:161:491|h[Laser Burn Bracers]|h|r",
+	["15"] = "|cffff8000|Hitem:102245:4421:4621:0:0:0:0:34382080:90:160:505|h[Qian-Le, Courage of Niuzao]|h|r",
 	["16"] = "|cffa335ee|Hitem:104434:4444:4621:0:0:0:0:1082518400:90:140:493|h[Softfoot's Last Resort]|h|r",
 	["17"] = "|cffa335ee|Hitem:104434:4444:4617:0:0:0:0:1569132928:90:140:491|h[Softfoot's Last Resort]|h|r",
 	["13"] = "|cffa335ee|Hitem:104442:0:0:0:0:0:0:1082518400:90:0:491|h[Rook's Unlucky Talisman]|h|r",
@@ -367,6 +367,6 @@ AmrLogData = {
 	["_autoLog"] = {
 		[1136] = "disabled",
 	},
-	["_lastZone"] = "Pandaria",
 	["_lastDiff"] = 0,
+	["_lastZone"] = "Pandaria",
 }
