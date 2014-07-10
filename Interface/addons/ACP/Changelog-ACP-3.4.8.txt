@@ -1,0 +1,8 @@
+2014-07-04  sylvanaar  <sylvanaar@mindspring.com>
+
+[27ded020aebc] [3.4.8]
+* ACP.xml, localization-enUS.lua:
+
+Add a tooltip explaining what recursive does
+
+

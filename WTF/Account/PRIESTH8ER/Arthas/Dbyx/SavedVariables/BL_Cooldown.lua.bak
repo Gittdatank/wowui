@@ -1,0 +1,8 @@
+
+BLCDrosterReload = {
+	["0x0200000008DE8E36"] = {
+		["class"] = "WARLOCK",
+		["name"] = "Dbyx",
+		["spec"] = 267,
+	},
+}
