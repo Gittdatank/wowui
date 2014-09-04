@@ -1,7 +1,3 @@
---[[
-TODO:
-
-]]--
 
 --------------------------------------------------------------------------------
 -- Module Declaration
@@ -28,6 +24,7 @@ local waveTimer, waveCounter = nil, 1
 local whirlingCounter = 1
 local mindControl = nil
 local bombardmentCounter, maliceCounter = 1, 1
+local hopeTimer = nil
 
 --------------------------------------------------------------------------------
 -- Localization
@@ -50,7 +47,6 @@ if L then
 	L.bombardment_desc = "Bombards Stormwind, leaving patches of fire on the ground. The Kor'kron Iron Star can only spawn during bombardment."
 	L.bombardment_icon = 147120
 
-	L.intermission = "Intermission"
 	L.empowered_message = "%s is now empowered!"
 
 	L.ironstar_impact = mod:SpellName(144653) -- "Iron Star Impact"
@@ -211,7 +207,7 @@ function mod:Phase3End()
 	maliceCounter = 1
 	self:Bar("stages", 19, CL.phase:format(4), 147126)
 	-- stop bars here too, but since this needs localization we need to do it at the actual pull into the phase 4
-	self:StopBar(L.intermission)
+	self:StopBar(CL.intermission)
 	self:StopBar(CL.count:format(self:SpellName(144985), whirlingCounter)) -- Whirling Corruption
 	self:StopBar(144758) -- Desecrate
 	self:StopBar(67229) -- Mind Control
@@ -432,7 +428,7 @@ do
 end
 
 function mod:PowerIronStar(args)
-	self:Bar(args.spellId, 15)
+	self:Bar(args.spellId, self:Heroic() and 10 or 15)
 end
 
 function mod:IronStarRolling(_, _, _, _, spellId)
@@ -460,12 +456,13 @@ do
 		else
 			mod:Message(144945, "Attention", nil, CL.count:format(mod:SpellName(29125), 0), 149004)
 		end
+		hopeTimer = nil
 	end
 	function mod:YShaarjsProtection(args)
 		if self:MobId(args.destGUID) == 71865 then
 			self:Message(args.spellId, "Positive", "Long", CL.over:format(args.spellName))
 			if not self:LFR() then
-				self:ScheduleTimer(announceHopeless, 6)
+				hopeTimer = self:ScheduleTimer(announceHopeless, 6)
 			end
 		end
 	end
@@ -490,7 +487,7 @@ do
 	function mod:UNIT_SPELLCAST_SUCCEEDED(unitId, spellName, _, _, spellId)
 		if spellId == 145235 then -- throw axe at heart , transition into first intermission
 			if phase == 1 then
-				self:Bar(-8305, 25, L.intermission, "SPELL_HOLY_PRAYEROFSHADOWPROTECTION")
+				self:Bar(-8305, 25, CL.intermission, "SPELL_HOLY_PRAYEROFSHADOWPROTECTION")
 				self:CancelTimer(waveTimer)
 				waveTimer = nil
 				self:StopBar(-8292) -- Kor'kron Warbringer aka add waves
@@ -504,13 +501,14 @@ do
 			self:StopBar(144758) -- Desecrate
 			self:StopBar(67229) -- Mind Control
 			self:StopBar(CL.count:format(self:SpellName(144985), whirlingCounter)) -- Whirling Corruption
-			self:Message(-8305, "Neutral", nil, L.intermission, "SPELL_HOLY_PRAYEROFSHADOWPROTECTION")
-			self:Bar(-8305, 210, L.intermission, "SPELL_HOLY_PRAYEROFSHADOWPROTECTION")
-			self:Bar(-8305, 62, CL.over:format(L.intermission), "SPELL_HOLY_PRAYEROFSHADOWPROTECTION")
+			self:Message(-8305, "Neutral", nil, CL.intermission, "SPELL_HOLY_PRAYEROFSHADOWPROTECTION")
+			self:Bar(-8305, 210, CL.intermission, "SPELL_HOLY_PRAYEROFSHADOWPROTECTION")
+			self:Bar(-8305, 62, CL.over:format(CL.intermission), "SPELL_HOLY_PRAYEROFSHADOWPROTECTION")
 			whirlingCounter = 1
 			annihilateCounter = 1
 		elseif spellId == 144956 then -- Jump To Ground -- exiting intermission
 			if phase == 2 then
+				if hopeTimer then self:CancelTimer(hopeTimer) end
 				desecrateCounter = 1
 				self:Bar(144758, 10) -- Desecrate
 				self:Bar(145065, 15, 67229, 145065) -- Mind Control
@@ -534,7 +532,7 @@ do
 			mcCounter = 1
 			desecrateCounter = 1
 			self:Message("stages", "Neutral", nil, CL.phase:format(phase), false)
-			self:StopBar(L.intermission)
+			self:StopBar(CL.intermission)
 			self:Bar(144985, 48, CL.count:format(self:SpellName(144985), whirlingCounter)) -- Whirling Corruption
 			if self:Heroic() then
 				-- XXX lets try to improve this, because it looks like if it is not cast within 32 sec, then it is going to be closer to 40 than to 30 need more Transcriptor log
@@ -548,7 +546,7 @@ do
 		elseif spellId == 146984 then -- phase 4 Enter Realm of Garrosh
 			phase = 4
 			self:Message("stages", "Neutral", nil, CL.phase:format(phase), false)
-			self:StopBar(L.intermission)
+			self:StopBar(CL.intermission)
 			self:StopBar(CL.count:format(self:SpellName(144985), whirlingCounter)) -- Whirling Corruption
 			self:StopBar(144758) -- Desecrate
 			self:StopBar(67229) -- Mind Control

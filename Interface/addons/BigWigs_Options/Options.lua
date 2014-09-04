@@ -264,14 +264,25 @@ local function translateZoneID(id)
 	if not id or type(id) ~= "number" then return end
 	local name
 	if id < 10 then
-		name = select(id, GetMapContinents())
+		-- XXX compat
+		if BigWigs.isWOD then
+			name = select(id * 2, GetMapContinents())
+		else
+			name = select(id, GetMapContinents())
+		end
 	else
 		name = GetMapNameByID(id)
 	end
-	if not name then
-		print(("Big Wigs: Tried to translate %q as a zone ID, but it could not be resolved into a name."):format(tostring(id)))
+	if not name then -- XXX compat
+		if id == 988 then
+			name = "Blackrock Foundry [BETA]"
+		elseif id == 994 then
+			name = "Highmaul [BETA]"
+		elseif id == 962 then
+			name = "Draenor [BETA]"
+		end
 	end
-	return name
+	return name or tostring(id)
 end
 
 local function findPanel(name, parent)
@@ -1049,9 +1060,13 @@ end
 
 function showToggleOptions(widget, event, group)
 	if widget:GetUserData("zone") then
-		local module = BigWigs:GetBossModule(group)
-		widget:SetUserData("bossIndex", group)
-		populateToggleOptions(widget, module)
+		-- If we don't have any modules registered to the zone then "group" will be nil.
+		-- In this case we skip this step and draw an empty panel.
+		if group then
+			local module = BigWigs:GetBossModule(group)
+			widget:SetUserData("bossIndex", group)
+			populateToggleOptions(widget, module)
+		end
 	else
 		populateToggleOptions(widget, widget:GetUserData("module"))
 	end
@@ -1073,7 +1088,7 @@ local function onZoneShow(frame)
 	end
 
 	local zoneList, zoneSort = {}, {}
-	if moduleList then
+	if type(moduleList) == "table" then
 		for i = 1, #moduleList do
 			local module = moduleList[i]
 			zoneList[module.moduleName] = module.displayName
@@ -1159,7 +1174,8 @@ do
 		BigWigs_BurningCrusade = "Big Wigs ".. EJ_GetTierInfo(2),
 		BigWigs_WrathOfTheLichKing = "Big Wigs ".. EJ_GetTierInfo(3),
 		BigWigs_Cataclysm = "Big Wigs ".. EJ_GetTierInfo(4),
-		BigWigs_MistsOfPandaria = "Big Wigs |cFF62B1F6".. EJ_GetTierInfo(5) .."|r",
+		BigWigs_MistsOfPandaria = BigWigs.isWOD and "Big Wigs ".. EJ_GetTierInfo(5) or "Big Wigs |cFF62B1F6".. EJ_GetTierInfo(5) .."|r", -- XXX compat
+		BigWigs_WarlordsOfDraenor = BigWigs.isWOD and "Big Wigs |cFF62B1F6".. EJ_GetTierInfo(6) .."|r" or false, -- XXX compat
 		LittleWigs = "Little Wigs",
 	}
 
@@ -1206,7 +1222,7 @@ do
 
 	function options:GetZonePanel(zoneId)
 		local zoneName = translateZoneID(zoneId)
-		local parent = BigWigsLoader.zoneTbl[zoneId] and addonNameToHeader[BigWigsLoader.zoneTbl[zoneId]] or addonNameToHeader.BigWigs_MistsOfPandaria
+		local parent = BigWigsLoader.zoneTbl[zoneId] and addonNameToHeader[BigWigsLoader.zoneTbl[zoneId]] or addonNameToHeader.BigWigs_WarlordsOfDraenor or addonNameToHeader.BigWigs_MistsOfPandaria -- XXX compat
 		local panel, created = self:GetPanel(zoneName, parent, zoneId)
 		if created then
 			panel:SetScript("OnShow", onZoneShow)

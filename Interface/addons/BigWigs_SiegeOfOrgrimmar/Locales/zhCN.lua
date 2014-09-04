@@ -91,6 +91,7 @@ if L then
 	L.adds_trigger_extra_wave = "库卡隆，听我的命令，杀了他们！"
 	L.extra_adds = "额外增援部队"
 	L.final_wave = "最后一波"
+	L.add_wave = "%s (%s): %s"
 
 	L.chain_heal_message = "你的焦点正在施放强效治疗链！"
 
@@ -109,6 +110,11 @@ L["enable_zone"] = "遗物仓库"
 L["start_trigger"] = "录像开了吗？开了？很好。地精泰坦控制模块启动，请退后。"
 L["win_trigger"] = "系统重置中。请勿关闭电源，否则将发生爆炸。"
 
+
+	L.crates = "货箱"
+	L.crates_desc = "当还需要多少能量和需要打开多少大中小货箱时发出警报。"
+	L.full_power = "全能量！"
+	L.power_left = "%d 剩余！(%d/%d/%d)"
 end
 
 L = BigWigs:NewBossLocale("Thok the Bloodthirsty", "zhCN")
@@ -182,7 +188,6 @@ L["clump_check_desc"] = "在呼叫轰炸阶段时每3秒检查扎堆的玩家，
 L["clump_check_warning"] = "发现呼叫轰炸，即将 >钢铁之星<！"
 L["empowered_message"] = ">%s< 强化腐蚀！"
 L["farseer_trigger"] = "先知们，为我们治疗！"
-L["intermission"] = "中场休息"
 L["ironstar_impact_desc"] = "当钢铁之星将撞击墙壁另一边时显示计时条。"
 L["ironstar_rolling"] = "钢铁之星翻滚！"
 L["manifest_rage"] = "暴怒具象"

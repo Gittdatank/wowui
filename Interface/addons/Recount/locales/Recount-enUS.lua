@@ -1,14 +1,14 @@
--- Recount Locale 
--- Please use the Localization App on WoWAce to Update this 
+-- Recount Locale
+-- Please use the Localization App on WoWAce to Update this
 -- http://www.wowace.com/projects/recount/localization/
- 
-local debug = false 
---[===[@debug@ 
-debug = true 
---@end-debug@]===] 
- 
-local L = LibStub("AceLocale-3.0"):NewLocale("Recount", "enUS", true, debug) 
- 
+
+local debug = false
+--[===[@debug@
+debug = true
+--@end-debug@]===]
+
+local L = LibStub("AceLocale-3.0"):NewLocale("Recount", "enUS", true, debug)
+
 L["Ability"] = true
 L["Ability Name"] = true
 L["Absorbed"] = true
@@ -201,6 +201,7 @@ L["Mana Sources"] = true
 L["Max"] = true
 L["Melee"] = true
 L["Merge Pets w/ Owners"] = true
+L["Merge Aborbs w/ Heals"] = true
 L["Messages"] = true
 L["Min"] = true
 L["Misc"] = true
@@ -424,5 +425,3 @@ L["Window Scaling"] = true
 L["X Gridlines Represent"] = true
 L["Yds"] = true
 L["Yes"] = true
- 
- 

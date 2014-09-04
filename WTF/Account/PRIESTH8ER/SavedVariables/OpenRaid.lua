@@ -1,35 +1,36 @@
 
 OR_db = {
 	["Notes"] = {
-		["data#1246"] = "2014^7^10^Drukor;210731,Lusting's 25 H SoO  - 6/14H",
-		["gauge#1109"] = "2014^7^4^Blooddrakin;210370,Fresh SoO NM 10M",
-		["magic#1967"] = "2014^7^10^Badboymagic;210731,Lusting's 25 H SoO  - 6/14H",
-		["anthony#1574"] = "2014^7^10^Varelice;210731,Lusting's 25 H SoO  - 6/14H",
-		["zavinn#1156"] = "2014^7^6^Adynne;210370,Lusting's 25 NM Fresh SoO",
-		["elzie#1506"] = "2014^7^10^Caylie;210731,Lusting's 25 H SoO  - 6/14H",
-		["alex#14118"] = "2014^7^10^Chalkie;210731,Lusting's 25 H SoO  - 6/14H",
-		["rastafaree#1362"] = "2014^7^10^Hashkilledme;210731,Lusting's 25 H SoO  - 6/14H",
-		["xandrria#1154"] = "2014^7^6^Mayurii;210370,Lusting's 25 NM Fresh SoO",
-		["rahdadm6t9#1290"] = "2014^7^10^Askiastout;210731,Lusting's 25 H SoO  - 6/14H",
 	},
 	["Options"] = {
-		["Tutorial"] = false,
+		["Specialnote"] = true,
 		["Automatically send requests"] = true,
-		["Auto enable sent"] = false,
+		["Tutorial"] = false,
 		["DontCheckForChar"] = false,
-		["Clean up time"] = 7,
+		["Filter joined your group"] = false,
 		["Whisperword"] = false,
 		["Auto enable accept"] = true,
 		["Personal send message"] = "Adding you as friend for OpenRaid event %d named %s",
-		["Defaultpage"] = "Index",
-		["Filter have invited"] = true,
-		["Version"] = 2.1,
-		["Filter already in group"] = true,
 		["Ignore when removing"] = {
 		},
+		["Filter already in group"] = true,
+		["Version"] = 2.1,
+		["Filter have invited"] = true,
+		["Defaultpage"] = "Index",
 		["Clear raids after X days"] = false,
-		["Filter joined your group"] = false,
-		["Specialnote"] = true,
+		["Clean up time"] = 7,
+		["Auto enable sent"] = false,
+	},
+	["String"] = {
+	},
+	["Group"] = {
+	},
+	["Leader"] = {
+	},
+	["Rate"] = {
+		["Raid"] = {
+			["Name"] = "Raid",
+		},
 	},
 	["Raids"] = {
 		["Git-Arthas"] = {
@@ -62,16 +63,5 @@ OR_db = {
 		},
 		["Greny-Azuremyst"] = {
 		},
-	},
-	["Group"] = {
-	},
-	["Rate"] = {
-		["Raid"] = {
-			["Name"] = "Raid",
-		},
-	},
-	["Leader"] = {
-	},
-	["String"] = {
 	},
 }

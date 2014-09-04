@@ -1265,25 +1265,30 @@ function LootMasterML:RemoveLoot( link )
 end
 
 function LootMasterML:GetEPGP( player )
-    if not EPGP or not EPGP.GetEPGP then return nil, nil, nil, nil end
+    if not EPGP or not EPGP.GetEPGP then return nil, nil, nil, nil, nil end
 
-    local ret, ep, gp, alt = pcall(EPGP.GetEPGP, EPGP, player)
-	if not ret then return nil, nil, nil, nil end
+	local sPlayer = player
+
+    local ret, ep, gp, alt = pcall(EPGP.GetEPGP, EPGP, sPlayer)
+	if not ret then return nil, nil, nil, nil, nil end
 
 	if gp==nil then
-		ret, ep, gp, alt = pcall(EPGP.GetEPGP, EPGP, LootMaster.Ambiguate(player, "guild"))
+		sPlayer = LootMaster.Ambiguate(player, "guild")
+		ret, ep, gp, alt = pcall(EPGP.GetEPGP, EPGP, sPlayer)
 	end
 	if gp==nil then
-		ret, ep, gp, alt = pcall(EPGP.GetEPGP, EPGP, LootMaster.Ambiguate(player, "none"))
+		sPlayer = LootMaster.Ambiguate(player, "none")
+		ret, ep, gp, alt = pcall(EPGP.GetEPGP, EPGP, sPlayer)
 	end
 	if gp==nil then
-		ret, ep, gp, alt = pcall(EPGP.GetEPGP, EPGP, LootMaster.StripServerName(player))
+		sPlayer = LootMaster.StripServerName(player)
+		ret, ep, gp, alt = pcall(EPGP.GetEPGP, EPGP, sPlayer)
 	end
 
     local ret, minEP = pcall(EPGP.GetMinEP, EPGP)
     if not ret or not minEP then minEP=0 end
 
-	return ep, gp, alt, minEP
+	return ep, gp, alt, minEP, sPlayer
 end
 
 function LootMasterML:GetEP( player )
@@ -2065,7 +2070,8 @@ function LootMasterML:CHAT_MSG_LOOT( event, message )
 
     if lootType==LootMaster.LOOTTYPE.GP and lootGP~=0 then
         if CanEditOfficerNote() and EPGP and EPGP.IncGPBy then
-            EPGP.IncGPBy(EPGP, LootMaster.Ambiguate(tostring(sPlayer) or 'nil', "guild"), tostring(sLink) or 'nil', lootGP)
+			local _, _, _, _, epgpPlayer = LootMasterML:GetEPGP(tostring(sPlayer) or 'nil')
+            EPGP.IncGPBy(EPGP, epgpPlayer, tostring(sLink) or 'nil', lootGP)
         else
             self:Print( format(L["<ERROR> Could not increase GP in officernotes for %s %s (EPGP not installed or no rights?!)"], sPlayer or 'unknown player', sLink or 'unknown loot') )
         end

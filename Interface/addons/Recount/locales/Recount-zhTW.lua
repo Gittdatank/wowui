@@ -1,10 +1,10 @@
--- Recount Locale 
--- Please use the Localization App on WoWAce to Update this 
+-- Recount Locale
+-- Please use the Localization App on WoWAce to Update this
 -- http://www.wowace.com/projects/recount/localization/
- 
-local L = LibStub("AceLocale-3.0"):NewLocale("Recount", "zhTW") 
-if not L then return end 
- 
+
+local L = LibStub("AceLocale-3.0"):NewLocale("Recount", "zhTW")
+if not L then return end
+
 L["Ability"] = "技能"
 L["Ability Name"] = "技能名稱"
 L["Absorbed"] = "被吸收"
@@ -420,5 +420,3 @@ L["Window Scaling"] = "視窗縮放"
 L["X Gridlines Represent"] = "X 軸每格代表"
 L["Yds"] = "碼"
 L["Yes"] = "是"
- 
-

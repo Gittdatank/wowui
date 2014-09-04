@@ -555,7 +555,7 @@ _NPCScan: disabled
 _NPCScan.AutoAdd: disabled
 _NPCScan.Overlay: disabled
 _NPCScan.Overlay.Broker: disabled
-BigWigs: enabled
+BigWigs: disabled
 CombatReplay: enabled
 CombatReplay_Logger: enabled
 CombatReplay_SavedData: enabled
@@ -594,7 +594,7 @@ Bazooka_ShowUpdates: disabled
 TidyPlates_ClassicPlates: disabled
 TidyPlates_Simple: disabled
 Fonter: disabled
-Scrap_Spotlight: enabled
+Scrap_Spotlight: disabled
 Raven: enabled
 Raven_Options: enabled
 Scrap: enabled
@@ -607,3 +607,4 @@ BigWigs_ThroneOfThunder: enabled
 ElvUI_Config: disabled
 ElvUI: disabled
 Bagnon_Scrap: disabled
+Bagnon_Facade: disabled

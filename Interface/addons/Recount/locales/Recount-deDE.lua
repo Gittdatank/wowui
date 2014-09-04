@@ -1,11 +1,10 @@
--- Recount Locale 
--- Please use the Localization App on WoWAce to Update this 
+-- Recount Locale
+-- Please use the Localization App on WoWAce to Update this
 -- http://www.wowace.com/projects/recount/localization/
- 
-local L = LibStub("AceLocale-3.0"):NewLocale("Recount", "deDE") 
-if not L then return end 
- 
--- Wer mit deutschem Client englische Texte wünscht, kann einfach alles unterhalb dieser Zeile löschen. (If you prefer English Recount with a German client, just delete everything below in this file.)
+
+local L = LibStub("AceLocale-3.0"):NewLocale("Recount", "deDE")
+if not L then return end
+
 L["Ability"] = "Fähigkeit"
 L["Ability Name"] = "Name der Fähigkeit"
 L["Absorbed"] = "Absorbiert"
@@ -421,5 +420,3 @@ L["Window Scaling"] = "Fensterskalierung"
 L["X Gridlines Represent"] = "X Gridlinien bedeuten"
 L["Yds"] = "m"
 L["Yes"] = "Ja"
- 
-

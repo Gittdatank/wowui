@@ -1,0 +1,855 @@
+------------------------------------------------------------------------
+r11907 | funkydude | 2014-09-01 22:54:25 +0000 (Mon, 01 Sep 2014) | 1 line
+Changed paths:
+   A /tags/r11907-release (from /trunk:11906)
+
+Tagging as r11907-release
+------------------------------------------------------------------------
+r11906 | funkydude | 2014-09-01 22:51:01 +0000 (Mon, 01 Sep 2014) | 1 line
+Changed paths:
+   M /trunk/BigWigs.toc
+
+Bump version
+------------------------------------------------------------------------
+r11905 | Wetxius | 2014-09-01 15:27:17 +0000 (Mon, 01 Sep 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Locales/ruRU.lua
+
+ruRU update.
+------------------------------------------------------------------------
+r11904 | nebula169 | 2014-09-01 14:40:35 +0000 (Mon, 01 Sep 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Blackhand.lua
+   M /trunk/BlackrockFoundry/Locales/deDE.lua
+   M /trunk/BlackrockFoundry/Locales/esES.lua
+   M /trunk/BlackrockFoundry/Locales/frFR.lua
+   M /trunk/BlackrockFoundry/Locales/itIT.lua
+   M /trunk/BlackrockFoundry/Locales/koKR.lua
+   M /trunk/BlackrockFoundry/Locales/ptBR.lua
+   M /trunk/BlackrockFoundry/Locales/ruRU.lua
+   M /trunk/BlackrockFoundry/Locales/zhCN.lua
+   M /trunk/BlackrockFoundry/Locales/zhTW.lua
+
+Blackhand: initial module
+------------------------------------------------------------------------
+r11903 | nebula169 | 2014-09-01 11:08:43 +0000 (Mon, 01 Sep 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Locales/deDE.lua
+   M /trunk/BlackrockFoundry/Locales/esES.lua
+   M /trunk/BlackrockFoundry/Locales/frFR.lua
+   M /trunk/BlackrockFoundry/Locales/itIT.lua
+   M /trunk/BlackrockFoundry/Locales/koKR.lua
+   M /trunk/BlackrockFoundry/Locales/ptBR.lua
+   M /trunk/BlackrockFoundry/Locales/ruRU.lua
+   M /trunk/BlackrockFoundry/Locales/zhCN.lua
+   M /trunk/BlackrockFoundry/Locales/zhTW.lua
+   M /trunk/BlackrockFoundry/TheIronMaidens.lua
+   M /trunk/BlackrockFoundry/Thogar.lua
+
+BlackrockFoundry: update locales
+------------------------------------------------------------------------
+r11902 | nebula169 | 2014-09-01 10:40:15 +0000 (Mon, 01 Sep 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Locales/deDE.lua
+   M /trunk/Highmaul/Locales/esES.lua
+   M /trunk/Highmaul/Locales/frFR.lua
+   M /trunk/Highmaul/Locales/itIT.lua
+   M /trunk/Highmaul/Locales/koKR.lua
+   M /trunk/Highmaul/Locales/ptBR.lua
+   M /trunk/Highmaul/Locales/ruRU.lua
+   M /trunk/Highmaul/Locales/zhCN.lua
+   M /trunk/Highmaul/Locales/zhTW.lua
+   M /trunk/Highmaul/Tectus.lua
+
+Tectus: cleanup and update locales
+------------------------------------------------------------------------
+r11901 | nebula169 | 2014-08-30 09:35:13 +0000 (Sat, 30 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/TwinOgron.lua
+
+TwinOgron: not sure if retuned or LFR timing is different, going with the former. Whirlwind also happens randomly out of order at odd times sometimes, so don't start a timer for Enfeebling Roar if that's the case
+------------------------------------------------------------------------
+r11900 | nebula169 | 2014-08-30 09:08:38 +0000 (Sat, 30 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Tectus.lua
+
+Tectus: merge The Living Mountain into Tectonic Upheaval and simplify, remove Fracture, fix Raving Assault, update add spawn yell triggers and use icons for add bars
+------------------------------------------------------------------------
+r11899 | nebula169 | 2014-08-29 19:18:16 +0000 (Fri, 29 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/TheBlastFurnace.lua
+   M /trunk/BlackrockFoundry/TheIronMaidens.lua
+
+TheIronMaidens: initial module
+------------------------------------------------------------------------
+r11898 | MysticalOS | 2014-08-29 16:20:18 +0000 (Fri, 29 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Loader.lua
+
+Bump DBM version
+------------------------------------------------------------------------
+r11897 | nebula169 | 2014-08-29 15:01:56 +0000 (Fri, 29 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Darmac.lua
+
+Darmac: fix Inferno Breath
+------------------------------------------------------------------------
+r11896 | nebula169 | 2014-08-29 13:20:20 +0000 (Fri, 29 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/TheBlastFurnace.lua
+
+TheBlastFurnace: initial module
+------------------------------------------------------------------------
+r11895 | funkydude | 2014-08-27 23:25:54 +0000 (Wed, 27 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Locales/koKR.lua
+
+Remove extra intermission entry.
+------------------------------------------------------------------------
+r11894 | dreamtears1 | 2014-08-27 23:17:09 +0000 (Wed, 27 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Locales/koKR.lua
+   M /trunk/Highmaul/Locales/koKR.lua
+
+fix koKR encoding problem. (Sorry TT, forgot changing an encooding option)
+------------------------------------------------------------------------
+r11893 | funkydude | 2014-08-27 22:37:46 +0000 (Wed, 27 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Locales/deDE.lua
+   M /trunk/Highmaul/Locales/esES.lua
+   M /trunk/Highmaul/Locales/frFR.lua
+   M /trunk/Highmaul/Locales/itIT.lua
+   M /trunk/Highmaul/Locales/koKR.lua
+   M /trunk/Highmaul/Locales/ptBR.lua
+   M /trunk/Highmaul/Locales/ruRU.lua
+   M /trunk/Highmaul/Locales/zhCN.lua
+   M /trunk/Highmaul/Locales/zhTW.lua
+   M /trunk/Highmaul/Margok.lua
+   M /trunk/Loader.lua
+   M /trunk/Locales/common.enUS.lua
+   M /trunk/SiegeOfOrgrimmar/GarroshHellscream.lua
+   M /trunk/ThroneOfThunder/LeiShen.lua
+   M /trunk/ThroneOfThunder/Locales/deDE.lua
+   M /trunk/ThroneOfThunder/Locales/esES.lua
+   M /trunk/ThroneOfThunder/Locales/frFR.lua
+   M /trunk/ThroneOfThunder/Locales/itIT.lua
+   M /trunk/ThroneOfThunder/Locales/koKR.lua
+   M /trunk/ThroneOfThunder/Locales/ruRU.lua
+   M /trunk/ThroneOfThunder/Locales/zhCN.lua
+   M /trunk/ThroneOfThunder/Locales/zhTW.lua
+
+Move "Intermission" entry to common locale (translate on wowace).
+------------------------------------------------------------------------
+r11892 | funkydude | 2014-08-27 22:13:18 +0000 (Wed, 27 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Locales/koKR.lua
+   M /trunk/Highmaul/Locales/koKR.lua
+   M /trunk/ThroneOfThunder/Locales/deDE.lua
+
+Revert "koKR update" by dreamtears1, you forgot to use UTF-8. Consider using a better text editor.
+------------------------------------------------------------------------
+r11891 | nebula169 | 2014-08-27 08:20:55 +0000 (Wed, 27 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Brackenspore.lua
+
+Brackenspore: take the focus limit off Decay
+------------------------------------------------------------------------
+r11890 | nebula169 | 2014-08-27 05:57:52 +0000 (Wed, 27 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/modules.xml
+
+BlackrockFoundry: fix boss order
+------------------------------------------------------------------------
+r11889 | dreamtears1 | 2014-08-27 05:45:31 +0000 (Wed, 27 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Locales/koKR.lua
+   M /trunk/Highmaul/Locales/koKR.lua
+
+koKR update.
+------------------------------------------------------------------------
+r11888 | nebula169 | 2014-08-27 04:23:12 +0000 (Wed, 27 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/HansgarAndFranzok.lua
+
+HansgarAndFranzok: initial module
+------------------------------------------------------------------------
+r11887 | nebula169 | 2014-08-27 00:45:54 +0000 (Wed, 27 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/ThroneOfThunder/Megaera.lua
+
+Megaera: was a bit overzealous
+------------------------------------------------------------------------
+r11886 | nebula169 | 2014-08-26 14:41:27 +0000 (Tue, 26 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Draenor/Drov.lua
+   M /trunk/Draenor/Rukhmar.lua
+   M /trunk/Draenor/Tarlna.lua
+   M /trunk/Draenor/modules.xml
+
+Draenor world boss stubs
+------------------------------------------------------------------------
+r11885 | Wetxius | 2014-08-26 13:27:20 +0000 (Tue, 26 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Locales/ruRU.lua
+   M /trunk/Highmaul/Locales/ruRU.lua
+   M /trunk/Pandaria/Locales/ruRU.lua
+   M /trunk/ThroneOfThunder/Locales/ruRU.lua
+
+ruRU update.
+------------------------------------------------------------------------
+r11884 | nebula169 | 2014-08-26 13:14:02 +0000 (Tue, 26 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/ThroneOfThunder/Megaera.lua
+
+Megaera: my totally awesome timers rewrite that I never pushed
+------------------------------------------------------------------------
+r11883 | nebula169 | 2014-08-26 13:03:00 +0000 (Tue, 26 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/ThroneOfThunder/Council.lua
+   M /trunk/ThroneOfThunder/Locales/deDE.lua
+   M /trunk/ThroneOfThunder/Locales/esES.lua
+   M /trunk/ThroneOfThunder/Locales/frFR.lua
+   M /trunk/ThroneOfThunder/Locales/itIT.lua
+   M /trunk/ThroneOfThunder/Locales/koKR.lua
+   M /trunk/ThroneOfThunder/Locales/ruRU.lua
+   M /trunk/ThroneOfThunder/Locales/zhCN.lua
+   M /trunk/ThroneOfThunder/Locales/zhTW.lua
+
+Council: boss healed message
+------------------------------------------------------------------------
+r11882 | nebula169 | 2014-08-26 12:53:52 +0000 (Tue, 26 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/ThroneOfThunder/Horridon.lua
+   M /trunk/ThroneOfThunder/Locales/deDE.lua
+   M /trunk/ThroneOfThunder/Locales/esES.lua
+   M /trunk/ThroneOfThunder/Locales/frFR.lua
+   M /trunk/ThroneOfThunder/Locales/itIT.lua
+   M /trunk/ThroneOfThunder/Locales/koKR.lua
+   M /trunk/ThroneOfThunder/Locales/ruRU.lua
+   M /trunk/ThroneOfThunder/Locales/zhCN.lua
+   M /trunk/ThroneOfThunder/Locales/zhTW.lua
+
+Horridon: Control Orb message
+------------------------------------------------------------------------
+r11881 | nebula169 | 2014-08-26 12:40:53 +0000 (Tue, 26 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Pandaria/Locales/deDE.lua
+   M /trunk/Pandaria/Locales/esES.lua
+   M /trunk/Pandaria/Locales/frFR.lua
+   M /trunk/Pandaria/Locales/itIT.lua
+   M /trunk/Pandaria/Locales/koKR.lua
+   M /trunk/Pandaria/Locales/ptBR.lua
+   M /trunk/Pandaria/Locales/ruRU.lua
+   M /trunk/Pandaria/Locales/zhCN.lua
+   M /trunk/Pandaria/Locales/zhTW.lua
+   M /trunk/Pandaria/Ordos.lua
+
+Ordos: commit some old changes! bar text for you having Burning Soul
+------------------------------------------------------------------------
+r11880 | nebula169 | 2014-08-26 12:35:10 +0000 (Tue, 26 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Kromog.lua
+
+Kromog: initial module
+------------------------------------------------------------------------
+r11879 | nebula169 | 2014-08-26 12:31:07 +0000 (Tue, 26 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Margok.lua
+
+Margok: fix Fixate
+------------------------------------------------------------------------
+r11878 | nebula169 | 2014-08-26 12:27:01 +0000 (Tue, 26 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Gruul.lua
+
+Gruul: fix Overhead Smash
+------------------------------------------------------------------------
+r11877 | nebula169 | 2014-08-26 09:27:02 +0000 (Tue, 26 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Thogar.lua
+
+Thogar: initial module
+------------------------------------------------------------------------
+r11876 | Wetxius | 2014-08-25 07:48:02 +0000 (Mon, 25 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/BigWigs_BlackrockFoundry.toc
+   M /trunk/Highmaul/Locales/ruRU.lua
+
+ruRU update.
+------------------------------------------------------------------------
+r11874 | funkydude | 2014-08-23 23:21:11 +0000 (Sat, 23 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Loader.lua
+
+bump DBM faker
+------------------------------------------------------------------------
+r11873 | funkydude | 2014-08-23 22:50:31 +0000 (Sat, 23 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BigWigs.toc
+   M /trunk/Options/Options.lua
+
+Options: Add temp names for WoD zones. If we click on a panel with no modules registered (e.g. clicking beta zones on live) then draw a blank panel rather than erroring.
+------------------------------------------------------------------------
+r11872 | funkydude | 2014-08-23 22:05:10 +0000 (Sat, 23 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/BigWigs_BlackrockFoundry.toc
+   M /trunk/Draenor/BigWigs_Draenor.toc
+   M /trunk/Highmaul/BigWigs_Highmaul.toc
+   M /trunk/SiegeOfOrgrimmar/BigWigs_SiegeOfOrgrimmar.toc
+
+TOC fixes
+------------------------------------------------------------------------
+r11871 | nebula169 | 2014-08-23 21:55:40 +0000 (Sat, 23 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Darmac.lua
+
+Darmac: refactor dismounting
+------------------------------------------------------------------------
+r11870 | nebula169 | 2014-08-23 21:39:53 +0000 (Sat, 23 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Darmac.lua
+
+Darmac: handle mythic dismounting
+------------------------------------------------------------------------
+r11869 | nebula169 | 2014-08-23 20:42:04 +0000 (Sat, 23 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Margok.lua
+
+Margok: remove TANK flag from intermission add warnings
+------------------------------------------------------------------------
+r11868 | nebula169 | 2014-08-23 20:02:17 +0000 (Sat, 23 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Locales/deDE.lua
+   M /trunk/Highmaul/Locales/esES.lua
+   M /trunk/Highmaul/Locales/frFR.lua
+   M /trunk/Highmaul/Locales/itIT.lua
+   M /trunk/Highmaul/Locales/koKR.lua
+   M /trunk/Highmaul/Locales/ptBR.lua
+   M /trunk/Highmaul/Locales/ruRU.lua
+   M /trunk/Highmaul/Locales/zhCN.lua
+   M /trunk/Highmaul/Locales/zhTW.lua
+   M /trunk/Highmaul/TheButcher.lua
+
+TheButcher: add Night-Twisted Cadaver warnings (mythic)
+------------------------------------------------------------------------
+r11867 | nebula169 | 2014-08-23 19:02:26 +0000 (Sat, 23 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Brackenspore.lua
+
+Brackenspore: fix Rot
+------------------------------------------------------------------------
+r11866 | nebula169 | 2014-08-23 18:46:44 +0000 (Sat, 23 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Gruul.lua
+
+Gruul: Flare timer
+------------------------------------------------------------------------
+r11865 | nebula169 | 2014-08-23 17:56:24 +0000 (Sat, 23 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Locales/deDE.lua
+   M /trunk/BlackrockFoundry/Locales/esES.lua
+   M /trunk/BlackrockFoundry/Locales/frFR.lua
+   M /trunk/BlackrockFoundry/Locales/itIT.lua
+   M /trunk/BlackrockFoundry/Locales/koKR.lua
+   M /trunk/BlackrockFoundry/Locales/ptBR.lua
+   M /trunk/BlackrockFoundry/Locales/ruRU.lua
+   M /trunk/BlackrockFoundry/Locales/zhCN.lua
+   M /trunk/BlackrockFoundry/Locales/zhTW.lua
+   M /trunk/Highmaul/Locales/deDE.lua
+   M /trunk/Highmaul/Locales/esES.lua
+   M /trunk/Highmaul/Locales/frFR.lua
+   M /trunk/Highmaul/Locales/itIT.lua
+   M /trunk/Highmaul/Locales/koKR.lua
+   M /trunk/Highmaul/Locales/ptBR.lua
+   M /trunk/Highmaul/Locales/ruRU.lua
+   M /trunk/Highmaul/Locales/zhCN.lua
+   M /trunk/Highmaul/Locales/zhTW.lua
+
+populate locales
+------------------------------------------------------------------------
+r11864 | nebula169 | 2014-08-23 16:48:09 +0000 (Sat, 23 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Brackenspore.lua
+
+Brackenspore: tweak strings
+------------------------------------------------------------------------
+r11863 | nebula169 | 2014-08-23 16:35:45 +0000 (Sat, 23 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/TwinOgron.lua
+
+TwinOgron: add "Warmup" time to first set of abilities, add count to Quake, prescan for Shield Charge target,  add Blaze damage, add Arcane Volatility and marker, add Arcane Wound
+------------------------------------------------------------------------
+r11862 | nebula169 | 2014-08-23 16:18:46 +0000 (Sat, 23 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/KargathBladefist.lua
+
+KargathBladefist: localize Blade Dance bar
+------------------------------------------------------------------------
+r11861 | funkydude | 2014-08-23 15:52:09 +0000 (Sat, 23 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/BigWigs_Highmaul.toc
+
+Fix Highmaul TOC id.
+------------------------------------------------------------------------
+r11860 | nebula169 | 2014-08-23 15:06:18 +0000 (Sat, 23 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Brackenspore.lua
+
+Brackenspore: sound and flash on Creeping Moss if you have a flamethrower
+------------------------------------------------------------------------
+r11859 | nebula169 | 2014-08-23 14:31:33 +0000 (Sat, 23 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Brackenspore.lua
+
+Brackenspore: give the different fungus their own options, remove HEALER from friendly shrooms
+------------------------------------------------------------------------
+r11858 | nebula169 | 2014-08-23 14:10:33 +0000 (Sat, 23 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/KargathBladefist.lua
+
+KargathBladefist: fix Berserker Rush and Impale
+------------------------------------------------------------------------
+r11857 | nebula169 | 2014-08-23 14:09:03 +0000 (Sat, 23 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/TheButcher.lua
+
+TheButcher: fix Frenzy soon message
+------------------------------------------------------------------------
+r11856 | nebula169 | 2014-08-23 10:20:59 +0000 (Sat, 23 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/KargathBladefist.lua
+
+KargathBladefist: fix boss id, add Chain Hurl to options
+------------------------------------------------------------------------
+r11855 | nebula169 | 2014-08-23 10:20:27 +0000 (Sat, 23 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/TheButcher.lua
+
+TheButcher: fixes
+------------------------------------------------------------------------
+r11854 | nebula169 | 2014-08-23 05:58:48 +0000 (Sat, 23 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/TheButcher.lua
+
+TheButcher: add Pale Vitriol and mythic berserk
+------------------------------------------------------------------------
+r11853 | nebula169 | 2014-08-23 05:51:48 +0000 (Sat, 23 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Locales/common.enUS.lua
+
+add "Mythic" common locale string
+------------------------------------------------------------------------
+r11852 | nebula169 | 2014-08-23 05:43:13 +0000 (Sat, 23 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Kagraz.lua
+
+Kagraz: fix Enchanted Armaments spell id and lower the cd in mythic
+------------------------------------------------------------------------
+r11851 | nebula169 | 2014-08-22 15:38:34 +0000 (Fri, 22 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Gruul.lua
+
+Gruul: y logs so broken ;[ initial module
+------------------------------------------------------------------------
+r11850 | nebula169 | 2014-08-21 00:50:22 +0000 (Thu, 21 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Darmac.lua
+
+Darmac: swap Pinned Down and Conflagration icons
+------------------------------------------------------------------------
+r11849 | nebula169 | 2014-08-20 09:48:28 +0000 (Wed, 20 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Core/BossPrototype.lua
+
+BossPrototype: fix :MobId returning nil for nil guids
+------------------------------------------------------------------------
+r11848 | nebula169 | 2014-08-20 09:13:41 +0000 (Wed, 20 Aug 2014) | 2 lines
+Changed paths:
+   M /trunk/BlackrockFoundry/Darmac.lua
+   M /trunk/BlackrockFoundry/Kagraz.lua
+
+Darmac: add count for Tantrum
+Kagraz: tweak Charring Breath
+------------------------------------------------------------------------
+r11847 | nebula169 | 2014-08-20 05:24:04 +0000 (Wed, 20 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Darmac.lua
+
+Darmac: move Conflagration to custom marking
+------------------------------------------------------------------------
+r11846 | nebula169 | 2014-08-19 22:37:10 +0000 (Tue, 19 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Darmac.lua
+
+Darmac: register UPDATE_MOUSEOVER_UNIT
+------------------------------------------------------------------------
+r11845 | nebula169 | 2014-08-19 22:31:15 +0000 (Tue, 19 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Darmac.lua
+
+Darmac: mark the spear instead of pinned players
+------------------------------------------------------------------------
+r11844 | stanzilla | 2014-08-19 21:00:22 +0000 (Tue, 19 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+add WoD modules to the move-folders part
+------------------------------------------------------------------------
+r11843 | nebula169 | 2014-08-19 12:17:07 +0000 (Tue, 19 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Core/BossPrototype.lua
+
+BossPrototype: :Heroic() => true for SoO mythic
+------------------------------------------------------------------------
+r11842 | nebula169 | 2014-08-19 11:36:18 +0000 (Tue, 19 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Blackhand.lua
+   M /trunk/BlackrockFoundry/TheBlastFurnace.lua
+   M /trunk/BlackrockFoundry/TheIronMaidens.lua
+   M /trunk/BlackrockFoundry/Thogar.lua
+
+fix mob ids
+------------------------------------------------------------------------
+r11841 | nebula169 | 2014-08-19 11:16:53 +0000 (Tue, 19 Aug 2014) | 2 lines
+Changed paths:
+   M /trunk/BlackrockFoundry/Darmac.lua
+   M /trunk/BlackrockFoundry/Gruul.lua
+   M /trunk/BlackrockFoundry/HansgarAndFranzok.lua
+   M /trunk/BlackrockFoundry/Kromog.lua
+   M /trunk/BlackrockFoundry/Oregorger.lua
+   M /trunk/Highmaul/KargathBladefist.lua
+   M /trunk/Highmaul/Tectus.lua
+
+Darmac: FLASH on self damage and stub in some Faultline stuff
+cleanup
+------------------------------------------------------------------------
+r11840 | nebula169 | 2014-08-19 10:17:08 +0000 (Tue, 19 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Oregorger.lua
+
+Oregorger: initial dry-coded module
+------------------------------------------------------------------------
+r11839 | nebula169 | 2014-08-17 12:59:42 +0000 (Sun, 17 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/KargathBladefist.lua
+
+KargathBladefist: initial dry-coded module
+------------------------------------------------------------------------
+r11838 | nebula169 | 2014-08-17 09:38:08 +0000 (Sun, 17 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Margok.lua
+
+Margok: initial dry-coded module
+------------------------------------------------------------------------
+r11837 | nebula169 | 2014-08-15 20:08:14 +0000 (Fri, 15 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Koragh.lua
+   M /trunk/Highmaul/Tectus.lua
+
+Koragh: initial dry-coded module
+------------------------------------------------------------------------
+r11836 | nebula169 | 2014-08-15 10:46:28 +0000 (Fri, 15 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Brackenspore.lua
+
+Brackenspore: initial dry-coded module
+------------------------------------------------------------------------
+r11835 | nebula169 | 2014-08-15 07:16:00 +0000 (Fri, 15 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/TwinOgron.lua
+
+TwinOgron: fix range check for Shield Charge and throw FLASH on Interrupting Shout
+------------------------------------------------------------------------
+r11834 | nebula169 | 2014-08-14 20:55:32 +0000 (Thu, 14 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/TwinOgron.lua
+
+TwinOgron: initial dry-coded module
+------------------------------------------------------------------------
+r11833 | nebula169 | 2014-08-14 17:52:03 +0000 (Thu, 14 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Tectus.lua
+
+Tectus: initial dry-coded module
+------------------------------------------------------------------------
+r11832 | nebula169 | 2014-08-13 08:06:17 +0000 (Wed, 13 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/TheButcher.lua
+
+TheButcher: initial dry-coded module
+------------------------------------------------------------------------
+r11831 | cremor | 2014-08-11 16:24:49 +0000 (Mon, 11 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/SiegeOfOrgrimmar/Locales/deDE.lua
+
+deDE update
+------------------------------------------------------------------------
+r11830 | _yusaku_ | 2014-08-08 20:55:46 +0000 (Fri, 08 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/SiegeOfOrgrimmar/Locales/itIT.lua
+
+itIT Locale updates
+------------------------------------------------------------------------
+r11829 | nebula169 | 2014-08-08 07:16:32 +0000 (Fri, 08 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/SiegeOfOrgrimmar/ParagonsOfTheKlaxxi.lua
+
+ParagonsOfTheKlaxxi: longer delay for resuming Death from Above target scanning (+Reave cast time)
+------------------------------------------------------------------------
+r11828 | nebula169 | 2014-08-08 07:07:46 +0000 (Fri, 08 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/SiegeOfOrgrimmar/GarroshHellscream.lua
+
+GarroshHellscream: cancel the Hopeless warning on leaving transition
+------------------------------------------------------------------------
+r11827 | nebula169 | 2014-08-06 16:43:35 +0000 (Wed, 06 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Draenor/BigWigs_Draenor.toc
+   A /trunk/Draenor/Drov.lua (from /trunk/Draenor/Magnaron.lua:11826)
+   M /trunk/Draenor/Locales/deDE.lua
+   M /trunk/Draenor/Locales/esES.lua
+   M /trunk/Draenor/Locales/frFR.lua
+   M /trunk/Draenor/Locales/itIT.lua
+   M /trunk/Draenor/Locales/koKR.lua
+   M /trunk/Draenor/Locales/ptBR.lua
+   M /trunk/Draenor/Locales/ruRU.lua
+   M /trunk/Draenor/Locales/zhCN.lua
+   M /trunk/Draenor/Locales/zhTW.lua
+   D /trunk/Draenor/Magnaron.lua
+   M /trunk/Draenor/Rukhmar.lua
+   M /trunk/Draenor/Tarlna.lua
+   M /trunk/Draenor/modules.xml
+
+Rename Magnaron > Drov and update locales
+------------------------------------------------------------------------
+r11826 | funkydude | 2014-08-06 16:19:16 +0000 (Wed, 06 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Blackhand.lua
+   M /trunk/BlackrockFoundry/Darmac.lua
+   M /trunk/BlackrockFoundry/Gruul.lua
+   M /trunk/BlackrockFoundry/Kagraz.lua
+   M /trunk/BlackrockFoundry/Kromog.lua
+   M /trunk/BlackrockFoundry/Oregorger.lua
+   M /trunk/BlackrockFoundry/TheBlastFurnace.lua
+   M /trunk/BlackrockFoundry/TheIronMaidens.lua
+   M /trunk/BlackrockFoundry/Thogar.lua
+   M /trunk/Draenor/Magnaron.lua
+   M /trunk/Highmaul/Brackenspore.lua
+   M /trunk/Highmaul/KargathBladefist.lua
+   M /trunk/Highmaul/Koragh.lua
+   M /trunk/Highmaul/Margok.lua
+   M /trunk/Highmaul/Tectus.lua
+   M /trunk/Highmaul/TheButcher.lua
+   M /trunk/Highmaul/TwinOgron.lua
+
+Comment out engage id's for 6.x modules for now.
+------------------------------------------------------------------------
+r11825 | nebula169 | 2014-08-06 16:06:56 +0000 (Wed, 06 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Plugins/Proximity.lua
+
+Proximity: 6.x map data for dungeons
+------------------------------------------------------------------------
+r11824 | nebula169 | 2014-08-06 15:55:59 +0000 (Wed, 06 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Darmac.lua
+   M /trunk/Highmaul/Koragh.lua
+
+DAMAGER -> Damager
+------------------------------------------------------------------------
+r11823 | nebula169 | 2014-08-06 15:41:35 +0000 (Wed, 06 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Darmac.lua
+   M /trunk/BlackrockFoundry/Kagraz.lua
+
+Kagraz: initial dry-coded module
+------------------------------------------------------------------------
+r11822 | Wetxius | 2014-08-06 14:22:21 +0000 (Wed, 06 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/BigWigs_BlackrockFoundry.toc
+   M /trunk/Highmaul/BigWigs_Highmaul.toc
+
+ruRU update.
+------------------------------------------------------------------------
+r11821 | nebula169 | 2014-08-06 14:20:38 +0000 (Wed, 06 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Plugins/Proximity.lua
+
+Proximity: 6.x map data
+------------------------------------------------------------------------
+r11820 | Wetxius | 2014-08-06 14:19:23 +0000 (Wed, 06 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Draenor/BigWigs_Draenor.toc
+
+ruRU update.
+------------------------------------------------------------------------
+r11819 | nebula169 | 2014-08-06 12:19:32 +0000 (Wed, 06 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Koragh.lua
+   M /trunk/Highmaul/TheButcher.lua
+
+clean up
+------------------------------------------------------------------------
+r11818 | stanzilla | 2014-08-06 12:10:26 +0000 (Wed, 06 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Koragh.lua
+   M /trunk/Highmaul/TheButcher.lua
+
+add proximity check for Expel Magic: Fire
+------------------------------------------------------------------------
+r11817 | funkydude | 2014-08-05 22:20:45 +0000 (Tue, 05 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/SiegeOfOrgrimmar/GeneralNazgrim.lua
+
+GeneralNazgrim: typo fix
+------------------------------------------------------------------------
+r11816 | funkydude | 2014-08-05 19:34:15 +0000 (Tue, 05 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Loader.lua
+
+Loader: grimrail depot
+------------------------------------------------------------------------
+r11815 | funkydude | 2014-08-05 18:50:07 +0000 (Tue, 05 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Koragh.lua
+   M /trunk/Highmaul/modules.xml
+
+Highmaul/Koragh: fix id
+------------------------------------------------------------------------
+r11814 | funkydude | 2014-08-05 18:47:07 +0000 (Tue, 05 Aug 2014) | 1 line
+Changed paths:
+   D /trunk/Highmaul/FelBreaker.lua
+   A /trunk/Highmaul/Koragh.lua (from /trunk/Highmaul/FelBreaker.lua:11813)
+
+Rename FelBreaker > Koragh
+------------------------------------------------------------------------
+r11813 | funkydude | 2014-08-05 18:14:18 +0000 (Tue, 05 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Core/BossPrototype.lua
+   M /trunk/Loader.lua
+
+Loader: add slag mines
+------------------------------------------------------------------------
+r11812 | funkydude | 2014-08-04 14:32:38 +0000 (Mon, 04 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Core/Core.lua
+
+Core: 6.x compat for enabling modules.
+------------------------------------------------------------------------
+r11811 | funkydude | 2014-08-04 12:00:48 +0000 (Mon, 04 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/SiegeOfOrgrimmar/GarroshHellscream.lua
+   M /trunk/SiegeOfOrgrimmar/GeneralNazgrim.lua
+   M /trunk/SiegeOfOrgrimmar/ParagonsOfTheKlaxxi.lua
+   M /trunk/SiegeOfOrgrimmar/SpoilsOfPandaria.lua
+
+SiegeOfOrgrimmar: remove some todos.
+------------------------------------------------------------------------
+r11810 | funkydude | 2014-08-04 01:02:25 +0000 (Mon, 04 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Loader.lua
+
+Loader: more XXX notes.
+------------------------------------------------------------------------
+r11809 | nebula169 | 2014-08-03 23:29:11 +0000 (Sun, 03 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Darmac.lua
+
+Darmac: initial dry-coded module
+------------------------------------------------------------------------
+r11808 | nebula169 | 2014-08-03 23:28:30 +0000 (Sun, 03 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Blackhand.lua
+   M /trunk/BlackrockFoundry/Gruul.lua
+   M /trunk/BlackrockFoundry/HansgarAndFranzok.lua
+   M /trunk/BlackrockFoundry/Kagraz.lua
+   M /trunk/BlackrockFoundry/Kromog.lua
+   M /trunk/BlackrockFoundry/Oregorger.lua
+   M /trunk/BlackrockFoundry/TheBlastFurnace.lua
+   M /trunk/BlackrockFoundry/TheIronMaidens.lua
+   M /trunk/BlackrockFoundry/Thogar.lua
+   M /trunk/BlackrockFoundry/modules.xml
+   M /trunk/Draenor/BigWigs_Draenor.toc
+   M /trunk/Draenor/Magnaron.lua
+   M /trunk/Draenor/Rukhmar.lua
+   M /trunk/Draenor/Tarlna.lua
+   M /trunk/Highmaul/Brackenspore.lua
+   M /trunk/Highmaul/FelBreaker.lua
+   M /trunk/Highmaul/KargathBladefist.lua
+   M /trunk/Highmaul/Margok.lua
+   M /trunk/Highmaul/Tectus.lua
+   M /trunk/Highmaul/TheButcher.lua
+   M /trunk/Highmaul/TwinOgron.lua
+   M /trunk/Highmaul/modules.xml
+   M /trunk/modules.xml
+
+load 6.x modules (svn only)
+------------------------------------------------------------------------
+r11807 | nebula169 | 2014-08-03 23:05:02 +0000 (Sun, 03 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Core/BossPrototype.lua
+
+BossPrototype: 6.x difficulty support
+------------------------------------------------------------------------
+r11806 | nebula169 | 2014-08-03 15:12:40 +0000 (Sun, 03 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Loader.lua
+
+fix warning about missing BigWigs_MistsOfPandaria
+------------------------------------------------------------------------
+r11805 | funkydude | 2014-08-03 14:54:25 +0000 (Sun, 03 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Loader.lua
+
+Loader: add temp LittleWigs zone.
+------------------------------------------------------------------------
+r11804 | nebula169 | 2014-08-03 14:43:15 +0000 (Sun, 03 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Loader.lua
+   M /trunk/Options/Options.lua
+
+Compat for 6.x raid zones in options
+------------------------------------------------------------------------
+r11803 | funkydude | 2014-08-03 14:31:02 +0000 (Sun, 03 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Options/Options.lua
+
+Options: If a zone id doesn't exist (yet) just use the id as the name rather than erroring.
+------------------------------------------------------------------------
+r11802 | funkydude | 2014-08-03 14:14:19 +0000 (Sun, 03 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Core/Core.lua
+
+Core: Add a temporary .isWOD for modules to look up.
+------------------------------------------------------------------------
+r11801 | stanzilla | 2014-08-03 14:06:56 +0000 (Sun, 03 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Darmac.lua
+   M /trunk/BlackrockFoundry/Kagraz.lua
+
+Kagraz todo
+------------------------------------------------------------------------
+r11800 | funkydude | 2014-08-03 13:38:27 +0000 (Sun, 03 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Core/BossPrototype.lua
+
+BossPrototype: Few more 6.x guid fixes.
+------------------------------------------------------------------------
+r11799 | funkydude | 2014-08-03 13:25:52 +0000 (Sun, 03 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/Core/BossPrototype.lua
+
+BossPrototype: Compat for the new guid format in 6.x
+------------------------------------------------------------------------
+r11798 | stanzilla | 2014-08-01 17:08:04 +0000 (Fri, 01 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/BlackrockFoundry/Darmac.lua
+
+darmac todo
+------------------------------------------------------------------------
+r11797 | shari83 | 2014-07-28 11:44:11 +0000 (Mon, 28 Jul 2014) | 1 line
+Changed paths:
+   M /trunk/SiegeOfOrgrimmar/Locales/koKR.lua
+
+koKR update - Spoils of Pandaria
+------------------------------------------------------------------------

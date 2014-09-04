@@ -1571,7 +1571,7 @@ function MovAny.hSetScale(f)
 			if MovAny:IsProtected(f) and InCombatLockdown() then
 				MovAny.pendingFrames[fn] = API:GetElement(fn)
 			else
-				MovAny:Rescale(f, f:GetScale())
+				MovAny:Rescale(f, f.MAScaled)
 			end
 		end
 	end
@@ -2428,7 +2428,11 @@ function MovAny:ResetFrame(f, dontUpdate, readOnly)
 	if self:ErrorNotInCombat(f) or (InCombatLockdown() and f.UMFP) then
 		return
 	end
-	self:ShowFrame(f)
+	if not readOnly then
+		self:ShowFrame(f)
+	else
+		self:ShowFrame(f, true, true)
+	end
 	self:StopMoving(fn)
 	self.lastFrameName = fn
 	if not f then
@@ -2460,7 +2464,9 @@ function MovAny:ResetFrame(f, dontUpdate, readOnly)
 	end
 	if not dontUpdate then
 		if f:GetObjectType() ~= "Texture" and f:GetObjectType() ~= "FontString" then
+			f:SetMovable(true)
 			f:SetUserPlaced(false)
+			f:SetMovable(false)
 		end
 		self:UpdateGUIIfShown(true)
 	end
@@ -2536,6 +2542,19 @@ function MovAny:HideFrame(f, readOnly)
 	elseif fn == "CompactRaidFrameManager" then
 		f:UnregisterAllEvents()
 		CompactRaidFrameContainer:SetParent(UIParent)
+	elseif fn == "MicroButtonsMover" or fn == "MicroButtonsSplitMover" or fn == "MicroButtonsVerticalMover" or fn == "AchievementMicroButton" then
+		AchievementMicroButton.IsShown = function(self)
+			local opt = MovAny:GetUserData(fn)
+			if opt and opt.hidden then
+				return true
+			else
+				if self:IsShown() then
+					return true
+				else
+					return false
+				end
+			end
+		end
 	end
 	local e = API:GetElement(fn)
 	local mover = self:GetMoverByFrame(f)
@@ -2641,7 +2660,7 @@ function MovAny:ShowFrame(f, readOnly, dontHook)
 	end]]
 	local e = API:GetElement(fn)
 	local opt = e.userData
-	if readOnly == nil and opt then
+	if not readOnly and opt then
 		opt.hidden = nil
 		opt.unit = nil
 	end
@@ -5311,6 +5330,9 @@ function MovAny_OnEvent(self, event, arg1)
 			if MovAny.Load ~= nil then
 				MovAny:Load()
 				MovAny.Load = nil
+				if MovAny:IsModified(LFRParentFrame) then
+					MovAny:ResetFrame(LFRParentFrame)
+				end
 			end
 		elseif arg1 == "Blizzard_TalentUI" and MovAny.hBlizzard_TalentUI then
 			MovAny:hBlizzard_TalentUI()

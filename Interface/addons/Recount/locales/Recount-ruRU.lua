@@ -1,11 +1,10 @@
--- Recount Locale 
--- Please use the Localization App on WoWAce to Update this 
+-- Recount Locale
+-- Please use the Localization App on WoWAce to Update this
 -- http://www.wowace.com/projects/recount/localization/
- 
-local L = LibStub("AceLocale-3.0"):NewLocale("Recount", "ruRU") 
-if not L then return end 
- 
---ruRU by Аrgonavt (update and fix by StingerSoft)
+
+local L = LibStub("AceLocale-3.0"):NewLocale("Recount", "ruRU")
+if not L then return end
+
 L["Ability"] = "Способность"
 L["Ability Name"] = "Название способности"
 L["Absorbed"] = "Поглощено"
@@ -301,7 +300,7 @@ L["Runic Power Gained"] = "Полученная сила рун"
 L["RunicPower Sources"] = "Источники силы рун"
 L["'s Absorbs"] = "Поглощено урона"
 L["Say"] = "Сказать"
--- L["Scenario Instances"] = "Scenario Instances"
+L["Scenario Instances"] = "Сценарии"
 L["'s Dispels"] = " - Рассеивания"
 L["'s DOT Uptime"] = " - Время действия УЗВ"
 L["'s DPS"] = " - УВС"
@@ -421,5 +420,3 @@ L["Window Scaling"] = "Масштабирование окна"
 L["X Gridlines Represent"] = "X линии сетки"
 L["Yds"] = "Метры"
 L["Yes"] = "Да"
- 
-

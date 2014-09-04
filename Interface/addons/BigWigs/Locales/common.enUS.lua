@@ -19,6 +19,7 @@ L.stage = "Stage %d"
 L.normal = "Normal mode"
 L.heroic = "Heroic mode"
 L.hard = "Hard mode"
+L.mythic = "Mythic"
 L.general = "General" -- General settings, i.e. things that apply to both normal and hard mode.
 
 L.duration = "%s for %s sec"
@@ -28,6 +29,7 @@ L.incoming = "%s Incoming!"
 L.interrupted = "%s Interrupted"
 L.spawning = "%s Spawning!"
 L.no = "No %s!"
+L.intermission = "Intermission"
 
 -- Add related
 L.add_spawned = "Add Spawned!"

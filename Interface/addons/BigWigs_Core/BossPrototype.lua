@@ -33,6 +33,9 @@ local updateData = function()
 	UpdateMapData()
 end
 
+-- XXX compat
+local isWOD = core.isWOD
+
 -------------------------------------------------------------------------------
 -- Debug
 --
@@ -237,7 +240,14 @@ do
 	bossUtilityFrame:SetScript("OnEvent", function(_, _, _, event, _, sourceGUID, sourceName, sourceFlags, sourceRaidFlags, destGUID, destName, destFlags, destRaidFlags, spellId, spellName, _, extraSpellId, amount)
 		if allowedEvents[event] then
 			if event == "UNIT_DIED" then
-				local mobId = tonumber(sub(destGUID, 6, 10), 16)
+				-- XXX compat
+				local mobId
+				if isWOD then
+					local _, _, _, _, _, id = strsplit(":", destGUID)
+					mobId = tonumber(id) or -1
+				else
+					mobId = tonumber(sub(destGUID, 6, 10), 16)
+				end
 				for i = #enabledModules, 1, -1 do
 					local self = enabledModules[i]
 					local m = eventMap[self][event]
@@ -391,7 +401,7 @@ do
 		elseif not self.isEngaged and hasBoss then
 			if debug then dbg(self, ":CheckBossStatus Engage called.") end
 			local guid = UnitGUID("boss1") or UnitGUID("boss2") or UnitGUID("boss3") or UnitGUID("boss4") or UnitGUID("boss5")
-			local module = core:GetEnableMobs()[tonumber(sub(guid, 6, 10), 16)]
+			local module = core:GetEnableMobs()[self:MobId(guid)]
 			local modType = type(module)
 			if modType == "string" then
 				if module == self.moduleName then
@@ -431,7 +441,15 @@ do
 		for i, unit in next, t do
 			local guid = UnitGUID(unit)
 			if guid and not UnitIsPlayer(unit) then
-				if type(id) == "number" then guid = tonumber(sub(guid, 6, 10), 16) end
+				if type(id) == "number" then
+					-- XXX compat
+					if isWOD then
+						local _, _, _, _, _, id = strsplit(":", guid)
+						guid = tonumber(id) or -1
+					else
+						guid = tonumber(sub(guid, 6, 10), 16)
+					end
+				end
 				if guid == id then return unit end
 			end
 		end
@@ -568,15 +586,29 @@ function boss:Difficulty()
 end
 
 function boss:LFR()
-	return difficulty == 7
+	return difficulty == 7 or difficulty == 17
 end
 
 function boss:Heroic()
-	return difficulty == 2 or difficulty == 5 or difficulty == 6
+	-- XXX compat so I don't have to change every :Heroic() call initially
+	if self.zoneId == 953 and difficulty == 16 then
+		return true
+	end
+
+	return difficulty == 2 or difficulty == 5 or difficulty == 6 or difficulty == 15
+end
+
+function boss:Mythic()
+	return difficulty == 16
 end
 
 function boss:MobId(guid)
-	return guid and tonumber(sub(guid, 6, 10), 16) or -1
+	if isWOD and guid then -- XXX compat
+		local _, _, _, _, _, id = strsplit(":", guid)
+		return tonumber(id) or -1
+	else
+		return guid and tonumber(sub(guid, 6, 10), 16) or -1
+	end
 end
 
 function boss:SpellName(spellId)
@@ -877,6 +909,10 @@ do
 	}
 	function boss:NewTargetList()
 		return setmetatable({}, mt)
+	end
+
+	function boss:ColorName(player)
+		return coloredNames[player]
 	end
 
 	function boss:StackMessage(key, player, stack, color, sound, text, icon)

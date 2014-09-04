@@ -16,7 +16,7 @@ local phase = 1
 
 local L = mod:NewLocale("enUS", true)
 if L then
-	L.engage_trigger = "My people are addicted to it"
+	L.engage_trigger = "Energy. Power."
 	L.engage_message = "Phase 1"
 
 	L.gaze = "Gaze"
@@ -173,7 +173,7 @@ function mod:GravityLapse(args)
 end
 
 function mod:AddDeaths(args)
-	self:Message("phase", "Attention", nil, L["dead_message"]:format(args.destName))
+	self:Message("phase", "Attention", nil, L["dead_message"]:format(args.destName), false)
 end
 
 function mod:Pyro()
@@ -187,6 +187,7 @@ function mod:CHAT_MSG_MONSTER_EMOTE(_, msg, _, _, _, player)
 		self:TargetBar("gaze", 9, player, L["gaze"], "Spell_Shadow_EvilEye")
 		self:TargetMessage("gaze", player, "Important", nil, L["gaze"], "Spell_Shadow_EvilEye")
 		self:PrimaryIcon("gaze", player)
+		self.gazePlayer = player
 	end
 end
 
@@ -197,7 +198,10 @@ function mod:CHAT_MSG_MONSTER_YELL(_, msg)
 		self:Message("phase", "Positive", nil, L["sanguinar"], false)
 		self:Bar("phase", 13, L["sanguinar"], "Spell_Shadow_Charm")
 		self:PrimaryIcon("gaze")
-		self:StopBar(L["gaze_bar"])
+		if self.gazePlayer then
+			self:StopBar(L["gaze"], self.gazePlayer)
+			self.gazePlayer = nil
+		end
 	elseif msg == L["capernian_inc_trigger"] then
 		self:Message("phase", "Positive", nil, L["capernian"], false)
 		self:Bar("phase", 7, L["capernian"], "Spell_Shadow_Charm")

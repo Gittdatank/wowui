@@ -29,6 +29,12 @@ local SendAddonMessage = BigWigsLoader.SendAddonMessage
 -- Upvalues
 local next, type = next, type
 
+-- XXX compat
+do
+	local _, _, _, toc = GetBuildInfo()
+	addon.isWOD = toc > 59999 and true
+end
+
 -------------------------------------------------------------------------------
 -- Event handling
 --
@@ -143,7 +149,13 @@ end
 
 local function targetCheck(unit)
 	if not UnitName(unit) or UnitIsCorpse(unit) or UnitIsDead(unit) or UnitPlayerControlled(unit) then return end
-	local id = tonumber((UnitGUID(unit)):sub(6, 10), 16)
+	local id
+	if addon.isWOD then -- XXX compat
+		local _, _, _, _, _, mobId = strsplit(":", (UnitGUID(unit)))
+		id = tonumber(mobId) or -1
+	else
+		id = tonumber((UnitGUID(unit)):sub(6, 10), 16)
+	end
 	if id and enablemobs[id] then
 		targetSeen(unit, enablemobs[id], id)
 	end

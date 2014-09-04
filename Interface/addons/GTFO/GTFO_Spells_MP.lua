@@ -1000,11 +1000,21 @@ GTFO.SpellID["141393"] = {
 	sound = 1;
 };
 
+GTFO.SpellID["141001"] = {
+	--desc = "Dreadful Poison (Nibbleh)";
+	sound = 1;
+	applicationOnly = true;
+};
 
--- TODO: Get Off! (Millhouse Manastorm) -- How does melee avoid it?
--- TODO: Get Off! (Zen'shar) -- How does melee avoid it?  Does this boss have this ability?
--- TODO: Laser Disc? (Disruptron)
--- TODO: Destructolaser (Epicus Maximus)
+GTFO.SpellID["133231"] = {
+	--desc = "Destructolaser (Epicus Maximus)";
+	sound = 1;
+};
+
+GTFO.SpellID["132724"] = {
+	--desc = "Lightning Field (Disruptron)";
+	sound = 1;
+};
 
 -- *****************************
 -- * Trove of the Thunder King *
@@ -1718,9 +1728,17 @@ GTFO.SpellID["146452"] = {
 
 -- TODO: Reave (Kil'ruk the Wind-Reaver) xxxx
 -- TODO: Catalytic Reaction: Yellow (Toxic Cloud) (Xaril the Poisoned Mind) xxxx
--- TODO: Catalytic Reaction: Purple - Canned Heat (Xaril the Poisoned Mind)
--- TODO: Catalytic Reaction: Green - Eerie Fog (Xaril the Poisoned Mind) -- People are supposed to stand in this, but how do stacks work?
 -- TODO: Whirling (Ka'roz the Locust) 143701 -- Avoidable?  How about when stunned?
+
+GTFO.SpellID["142945"] = {
+  --desc = "Eerie Fog (Xaril the Poisoned Mind)";
+  sound = 1;
+};
+
+GTFO.SpellID["142803"] = {
+  --desc = "Explosive Ring (Xaril the Poisoned Mind)";
+  sound = 1;
+};
 
 GTFO.SpellID["146452"] = {
 	--desc = "Resonating Amber (Xaril the Poisoned Mind)"; 
@@ -2427,4 +2445,14 @@ GTFO.SpellID["128141"] = {
 GTFO.SpellID["122976"] = {
 	--desc = "Celestial Storm (Shan Bu)";
 	sound = 1;
+};
+
+GTFO.SpellID["133710"] = {
+	--desc = "Flak Fire Impact";
+	sound = 1;
+};
+
+GTFO.SpellID["135868"] = {
+	--desc = "Ignite Fuel";
+	sound = 2;
 };

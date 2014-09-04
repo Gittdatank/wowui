@@ -1,5 +1,7 @@
 
 GTFOData = {
+	["Active"] = 1,
+	["TrivialDamagePercent"] = 5,
 	["Sounds"] = {
 		1, -- [1]
 		1, -- [2]
@@ -7,10 +9,9 @@ GTFOData = {
 		1, -- [4]
 	},
 	["DataCode"] = "4",
-	["Active"] = 1,
+	["Volume"] = 1,
 	["IgnoreOptions"] = {
 	},
-	["Volume"] = 1,
-	["TrivialDamagePercent"] = 5,
+	["SoundChannel"] = "Master",
 	["TrivialMode"] = 1,
 }

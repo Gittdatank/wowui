@@ -91,6 +91,7 @@ if L then
 	L.adds_trigger_extra_wave = "Alle Kor'kron unter meinem Befehl, tötet sie! Jetzt!"
 	L.extra_adds = "Zusätzliche Adds"
 	L.final_wave = "Letzte Welle"
+	L.add_wave = "%s (%s): %s"
 
 	L.chain_heal_message = "Dein Fokusziel wirkt Kettenheilung!"
 
@@ -109,6 +110,11 @@ L["enable_zone"] = "Artefaktlagerraum"
 L["start_trigger"] = "Hallo? Mikrofontest"
 L["win_trigger"] = "System wird neu gestartet. Die Energieversorgung muss stabil bleiben, sonst fliegt die ganze Chose in die Luft."
 
+
+	L.crates = "Kisten"
+	L.crates_desc = "Nachrichten, für wie viel Energie du noch brauchst und wie viele große/mittlere/kleine Kisten das sind."
+	L.full_power = "Volle Energie!"
+	L.power_left = "%d übrig! (%d/%d/%d)"
 end
 
 L = BigWigs:NewBossLocale("Thok the Bloodthirsty", "deDE")
@@ -150,7 +156,7 @@ if L then
 	L.you_ate = "Du hast einen Parasiten gegessen (noch %d)"
 	L.other_ate = "%s hat einen %sParasiten gegessen (noch %d)"
 	L.parasites_up = "%d |4Parasit:Parasiten; vorhanden"
-	L.dance = "%s, Tanzen"
+	L.dance = "%s, Tanzen!"
 	L.prey_message = "Wirke Beute auf Parasiten"
 	L.injection_over_soon = "Injektion bald vorbei (%s)!"
 
@@ -182,7 +188,6 @@ L["clump_check_desc"] = "Prüft alle 3 Sekunden während des Bombardements, ob S
 L["clump_check_warning"] = "Gruppierung gefunden, Stern kommt"
 L["empowered_message"] = "%s ist jetzt mächtig!"
 L["farseer_trigger"] = "Scharfseher, heilt unsere Wunden!"
-L["intermission"] = "Unterbrechung"
 L["ironstar_impact_desc"] = "Zeigt einen Timer für die Explosion der Eisernen Sterne an der jeweils gegenüberliegenden Wand."
 L["ironstar_rolling"] = "Eiserner Stern rollt!"
 L["manifest_rage"] = "Wut manifestieren"

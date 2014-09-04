@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(869, "DBM-SiegeOfOrgrimmar", nil, 369)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 11274 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 11588 $"):sub(12, -3))
 mod:SetCreatureID(71865)
 mod:SetEncounterID(1623)
 mod:SetHotfixNoticeRev(10828)
@@ -104,6 +104,7 @@ local timerTouchOfYShaarjCD			= mod:NewCDCountTimer(45, 145071)
 local timerGrippingDespair			= mod:NewTargetTimer(15, 145183, nil, mod:IsTank())
 --Starge Three: MY WORLD
 --Starge Four: Heroic Hidden Phase
+local timerEnterGarroshRealm		= mod:NewNextTimer(20, 146984, nil, nil, nil, 144945)
 local timerMaliceCD					= mod:NewNextTimer(29.5, 147209)--29.5-33sec variation
 local timerBombardmentCD			= mod:NewNextTimer(55, 147120)
 local timerBombardment				= mod:NewBuffActiveTimer(13, 147120)
@@ -262,13 +263,14 @@ function mod:SPELL_CAST_START(args)
 		soundWhirlingCorrpution:Play()
 	elseif spellId == 147120 then
 		self.vb.bombardCount = self.vb.bombardCount + 1
-		warnBombardment:Show(self.vb.bombardCount)
-		specWarnBombardment:Show(self.vb.bombardCount)
+		local count = self.vb.bombardCount
+		warnBombardment:Show(count)
+		specWarnBombardment:Show(count)
 		specWarnBombardmentOver:Schedule(13)
 		timerBombardment:Start()
 		countdownBombardmentEnd:Start()
-		timerBombardmentCD:Start(bombardCD[self.vb.bombardCount] or 15, self.vb.bombardCount+1)
-		countdownBombardment:Start(bombardCD[self.vb.bombardCount] or 15)
+		timerBombardmentCD:Start(bombardCD[count] or 15, count+1)
+		countdownBombardment:Start(bombardCD[count] or 15)
 		timerClumpCheck:Start()
 --[[		if self.Options.RangeFrame then
 			if self:IsDifficulty("heroic10") then
@@ -472,6 +474,7 @@ function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, _, _, spellId)
 		countdownWhirlingCorruption:Start(44.5)
 	elseif spellId == 146984 then--Phase 4 trigger
 		self.vb.phase = 4
+		self.vb.bombardCount = 0
 		timerEnterRealm:Cancel()
 		timerDesecrateCD:Cancel()
 		timerTouchOfYShaarjCD:Cancel()
@@ -556,6 +559,6 @@ function mod:OnSync(msg, guid)
 		countdownTouchOfYShaarj:Cancel()
 		timerWhirlingCorruptionCD:Cancel()
 		countdownWhirlingCorruption:Cancel()
-		--TODO< maybe one day add an RP timer for phase 3-4 transition. Unfortunately I'm unlikely to see heroic garrosh again until after 6.0
+		timerEnterGarroshRealm:Start()
 	end
 end

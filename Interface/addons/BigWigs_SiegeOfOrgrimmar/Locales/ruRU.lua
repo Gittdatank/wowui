@@ -91,6 +91,7 @@ if L then
 	L.adds_trigger_extra_wave = "Кор'кронцы... все, кто со мной! Убейте их!"
 	L.extra_adds = "Дополнительный отряд"
 	L.final_wave = "Последняя волна"
+	L.add_wave = "%s (%s): %s"
 
 	L.chain_heal_message = "Ваш фокус читает Цепное исцеление!"
 
@@ -109,6 +110,11 @@ L["enable_zone"] = "Хранилище артефактов"
 L["start_trigger"] = "Эй, записываем?"
 L["win_trigger"] = "Система перезагружается. Не выключать питание, иначе возможен взрыв."
 
+
+	L.crates = "Ящики"
+	L.crates_desc = "Сообщать, сколько ещё нужно энергии и сколько надо открыть больших/средних/малых ящиков."
+	L.full_power = "Полная энергия!"
+	L.power_left = "%d осталось! (%d/%d/%d)"
 end
 
 L = BigWigs:NewBossLocale("Thok the Bloodthirsty", "ruRU")
@@ -182,7 +188,6 @@ L["clump_check_desc"] = "Каждые 3 секунды, во время Бомб
 L["clump_check_warning"] = "Проход найден, Звезда на подходе"
 L["empowered_message"] = "%s теперь усилено!"
 L["farseer_trigger"] = "Исцелите наши раны!"
-L["intermission"] = "Перерыв"
 L["ironstar_impact_desc"] = "Таймер, когда Железная звезда ударится о противоположную стену."
 L["ironstar_rolling"] = "Железная звезда катится!"
 L["manifest_rage"] = "Проявить ярость"

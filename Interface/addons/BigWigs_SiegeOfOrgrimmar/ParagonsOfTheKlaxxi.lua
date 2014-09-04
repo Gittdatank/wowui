@@ -1,9 +1,3 @@
---[[
-TODO:
-	-- reported/requested by others
-	could maybe warn one hurl amber target?
-	win sound
-]]--
 
 --------------------------------------------------------------------------------
 -- Module Declaration
@@ -754,7 +748,7 @@ do
 		-- stop scanning for Death from Above during Reave
 		if deathFromAboveTimer or deathFromAboveStartTimer then
 			self:StopDeathFromAboveScan()
-			deathFromAboveStartTimer = self:ScheduleTimer("StartDeathFromAboveScan", 10)
+			deathFromAboveStartTimer = self:ScheduleTimer("StartDeathFromAboveScan", 13)
 		end
 		self:Message(args.spellId, "Urgent", "Long", CL.incoming:format(args.spellName))
 		self:CDBar(args.spellId, 33) -- 33-49

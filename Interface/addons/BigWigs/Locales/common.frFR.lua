@@ -22,6 +22,7 @@ L["general"] = "Général"
 L["hard"] = "Mode difficile"
 L["heroic"] = "Mode héroïque"
 L["incoming"] = "Arrivée |2 %s !"
+L["intermission"] = "Intervalle" -- Needs review
 L["interrupted"] = "%s interrompu"
 L["mob_killed"] = "%s tué ! (%d/%d)"
 L["mob_remaining"] = "%s tué, il en reste %d"

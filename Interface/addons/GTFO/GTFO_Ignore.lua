@@ -42,6 +42,7 @@ GTFO.IgnoreScan["114216"] = true; -- Angelic Bulwark
 GTFO.IgnoreScan["6788"] = true; -- Weakened Soul
 GTFO.IgnoreScan["136193"] = true; -- Arcing Lightning
 GTFO.IgnoreScan["139107"] = true; -- Mind Daggers
+GTFO.IgnoreScan["156152"] = true; -- Gushing Wounds
 
 
 

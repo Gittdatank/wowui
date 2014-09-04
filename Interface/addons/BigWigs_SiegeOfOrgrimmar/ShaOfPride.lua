@@ -110,12 +110,23 @@ end
 --
 
 -- heroic
-function mod:WeakenedResolveOver(args)
-	if self:Me(args.destGUID) then
-		self:Message(args.spellId, "Personal", nil, CL.over:format(args.spellName))
-		wrChecker = self:ScheduleRepeatingTimer("Message", 6, args.spellId, "Personal", nil, CL.no:format(args.spellName))
+do
+	local function warnWeakenedResolve(spellId, spellName)
+		if not UnitAffectingCombat("player") then
+			mod:CancelTimer(wrChecker)
+			wrChecker = nil
+		else
+			mod:Message(spellId, "Personal", nil, CL.no:format(spellName))
+		end
+	end
+	function mod:WeakenedResolveOver(args)
+		if self:Me(args.destGUID) and UnitAffectingCombat("player") then
+			self:Message(args.spellId, "Personal", nil, CL.over:format(args.spellName))
+			wrChecker = self:ScheduleRepeatingTimer(warnWeakenedResolve, 6, args.spellId, args.spellName)
+		end
 	end
 end
+
 function mod:WeakenedResolveBegin(args)
 	if wrChecker and self:Me(args.destGUID) then
 		self:CancelTimer(wrChecker)

@@ -91,6 +91,7 @@ if L then
 	L.adds_trigger_extra_wave = "所有科爾克隆...聽我號令...殺死他們!"
 	L.extra_adds = "額外增援部隊"
 	L.final_wave = "最後一波"
+	L.add_wave = "%s (%s): %s"
 
 	L.chain_heal_message = "你的專注目標正在施放治療鍊！"
 
@@ -109,6 +110,11 @@ L["enable_zone"] = "文物倉庫"
 L["start_trigger"] = "我們在錄音嗎?有嗎?好。哥布林-泰坦控制模組開始運作，請後退。"
 L["win_trigger"] = "系統重置中。請勿關閉電源，否則可能會爆炸。"
 
+
+	--L.crates = "Crates"
+	--L.crates_desc = "Messages for how much power you still need and how many large/medium/small crates it will take."
+	--L.full_power = "Full Power!"
+	--L.power_left = "%d left! (%d/%d/%d)"
 end
 
 L = BigWigs:NewBossLocale("Thok the Bloodthirsty", "zhTW")
@@ -182,7 +188,6 @@ L["clump_check_desc"] = "每3秒檢查是否有玩家過於集中，集中會觸
 L["clump_check_warning"] = "集中警報，鋼鐵之星觸發"
 L["empowered_message"] = ">%s< 強化腐化！"
 L["farseer_trigger"] = "先知們，治療我們的傷口!"
-L["intermission"] = "中場休息"
 L["ironstar_impact_desc"] = "鋼鏡之星衝擊的計時條"
 L["ironstar_rolling"] = "鋼鐵之星衝擊! "
 L["manifest_rage"] = "實體化的狂怒之煞"

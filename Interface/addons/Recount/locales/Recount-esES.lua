@@ -1,10 +1,10 @@
--- Recount Locale 
--- Please use the Localization App on WoWAce to Update this 
+-- Recount Locale
+-- Please use the Localization App on WoWAce to Update this
 -- http://www.wowace.com/projects/recount/localization/
- 
-local L = LibStub("AceLocale-3.0"):NewLocale("Recount", "esES") 
-if not L then return end 
- 
+
+local L = LibStub("AceLocale-3.0"):NewLocale("Recount", "esES")
+if not L then return end
+
 L["Ability"] = "Habilidad"
 L["Ability Name"] = "Nombre de Habilidad"
 L["Absorbed"] = "Absorbido"
@@ -300,7 +300,7 @@ L["Runic Power Gained"] = "Poder Runico Ganado"
 L["RunicPower Sources"] = "Fuentes de Poder Runico"
 L["'s Absorbs"] = "absorvió"
 L["Say"] = "Decir"
--- L["Scenario Instances"] = "Scenario Instances"
+L["Scenario Instances"] = "Gestas" -- Needs review
 L["'s Dispels"] = "-> disipados"
 L["'s DOT Uptime"] = "-> DOT Arriba"
 L["'s DPS"] = "-> DPS"
@@ -420,5 +420,3 @@ L["Window Scaling"] = "Escala de ventana"
 L["X Gridlines Represent"] = "X Representar en Cuadricula"
 L["Yds"] = "Yds"
 L["Yes"] = "Si"
- 
-

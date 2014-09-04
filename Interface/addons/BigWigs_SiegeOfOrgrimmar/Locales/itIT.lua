@@ -91,6 +91,7 @@ if L then
 	L.adds_trigger_extra_wave = "Tutti i Kor'kron... al mio comando... uccideteli... ORA"
 	L.extra_adds = "Armate Aggiuntive"
 	L.final_wave = "Ultima Ondata"
+	L.add_wave = "%s (%s): %s"
 
 	L.chain_heal_message = "Il tuo focus sta lanciando Catena di Guarigione Potenziata!"
 
@@ -109,6 +110,11 @@ L["enable_zone"] = "Immagazzinamento Artefatti"
 L["start_trigger"] = "Stiamo registrando?"
 L["win_trigger"] = "Riavvio del sistema. Non staccare la corrente o potrebbe saltare tutto in aria."
 
+
+	L.crates = "Casse"
+	L.crates_desc = "Messaggio per quanta Potenza è ancora richiesta e quante casse grandi*medie/piccole servono."
+	L.full_power = "Piena Potenza!"
+	L.power_left = "%d rimanenti! (%d/%d/%d)"
 end
 
 L = BigWigs:NewBossLocale("Thok the Bloodthirsty", "itIT")
@@ -179,7 +185,6 @@ L["clump_check_desc"] = "Controlla ogni 3 secondi durante il Bombardamento i gio
 L["clump_check_warning"] = "Rilevato ammucchiamento, Pirostella in arrivo"
 L["empowered_message"] = "%s adesso è potenziato!"
 L["farseer_trigger"] = "Chiaroveggenti, guarite le nostre ferite!"
-L["intermission"] = "Intermezzo"
 L["ironstar_impact_desc"] = "Una barra a tempo per quando la Pirostella si schianterà contro l'altra parte della stanza."
 L["ironstar_rolling"] = "Pirostella in movimento!"
 L["manifest_rage"] = "Manifestazione della Rabbia"

@@ -1,15 +1,18 @@
--- A quick replacement for what RosterLib-2.1 used to do for us.
-
-local revision = tonumber(string.sub("$Revision: 1198 $", 12, -3))
 local Recount = _G.Recount
-if Recount.Version < revision then Recount.Version = revision end
 
-local GetNumRaidMembers = GetNumRaidMembers or GetNumGroupMembers
+local revision = tonumber(string.sub("$Revision: 1254 $", 12, -3))
+if Recount.Version < revision then
+	Recount.Version = revision
+end
+
+local type = type
+
 local GetNumPartyMembers = GetNumPartyMembers or GetNumSubgroupMembers
+local GetNumRaidMembers = GetNumRaidMembers or GetNumGroupMembers
 local UnitAffectingCombat = UnitAffectingCombat
 local UnitExists = UnitExists
-local UnitName = UnitName
 local UnitGUID = UnitGUID
+local UnitName = UnitName
 
 function Recount:CheckPartyCombatWithPets()
 
@@ -47,17 +50,17 @@ function Recount:GetUnitIDFromName(name)
 
 	local realm = name:match("-(.-)")
 	if realm then
---		Recount:DPrint("Found cross-realm: " ..name .. " on realm ".. name:match("-(.-)"))
+		--Recount:DPrint("Found cross-realm: " ..name .. " on realm ".. name:match("-(.-)"))
 		name = name:match("(.-)-") -- strip the realm part for this function
 	end
 	if UnitExists(name) then -- Elsia: Speed boost, yay.
 		--Recount:Print(name)
 		return name
 	else
-		--Recount:Print(name:lower():sub(1,3))
+		--Recount:Print(name:lower():sub(1, 3))
 		local lname = name:lower()
 		--Recount:Print(lname)
-		if lname:sub(1,3)=="pet" or lname:sub(1,4)=="raid" or lname:sub(1,5)=="party" or lname:sub(1,6)=="player" or lname:sub(1,6)=="target" then
+		if lname:sub(1, 3) == "pet" or lname:sub(1, 4) == "raid" or lname:sub(1, 5) == "party" or lname:sub(1, 6) == "player" or lname:sub(1, 6) == "target" then
 			return Recount:GetPetPrefixUnit(name, realm)
 		end
 		return nil
@@ -68,7 +71,7 @@ end
 
 function Recount:GetPetPrefixUnit(name, realm)
 
-	if Recount.PlayerName==name and not realm then
+	if Recount.PlayerName == name and not realm then
 		return "player"
 	end
 
@@ -97,28 +100,28 @@ function Recount:FindTargetedUnit(name)
 	end
 
 	for i = 1, GetNumRaidMembers(), 1 do -- GetNumRaidMembers()
-		if UnitName("raid"..i) ~= nil and name==UnitName("raid"..i.."target") then
+		if UnitName("raid"..i) ~= nil and name == UnitName("raid"..i.."target") then
 			return "raid"..i.."target"
-		elseif UnitName("raidpet"..i.."target") ~= nil and name==UnitName("raidpet"..i.."target") then
+		elseif UnitName("raidpet"..i.."target") ~= nil and name == UnitName("raidpet"..i.."target") then
 			return "raidpet"..i.."target"
 		end
 	end
 	for i = 1, GetNumPartyMembers(), 1 do -- If arrow is correct this is not the case and we are good to use GetNumPartyMembers()
-		if UnitName("party"..i) ~= nil and name==UnitName("party"..i.."target") then
+		if UnitName("party"..i) ~= nil and name == UnitName("party"..i.."target") then
 			return "party"..i.."target"
-		elseif UnitName("partypet"..i) ~= nil and name==UnitName("partypet"..i.."target") then
+		elseif UnitName("partypet"..i) ~= nil and name == UnitName("partypet"..i.."target") then
 			return "partypet"..i.."target"
 		end
 	end
 	
-	if name==UnitName("playertarget") then
+	if name == UnitName("playertarget") then
 		return "playertarget"
-	elseif name==UnitName("focus") then
+	elseif name == UnitName("focus") then
 		return "focus"
 	end
 end
 
-function Recount:FindOwnerPetFromGUID(petName,petGUID)
+function Recount:FindOwnerPetFromGUID(petName, petGUID)
 	local ownerName
 	local ownerGUID
 	local ownerRealm
@@ -144,7 +147,7 @@ function Recount:FindOwnerPetFromGUID(petName,petGUID)
 		end
 	end
 
-	if petGUID==UnitGUID("pet") then
+	if petGUID == UnitGUID("pet") then
 			ownerName = UnitName("player")
 			ownerGUID = UnitGUID("player")
 		return ownerName, ownerGUID

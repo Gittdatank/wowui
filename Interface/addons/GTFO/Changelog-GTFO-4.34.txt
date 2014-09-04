@@ -1,0 +1,166 @@
+------------------------------------------------------------------------
+r106 | zensunim | 2014-08-25 07:48:27 +0000 (Mon, 25 Aug 2014) | 9 lines
+Changed paths:
+   A /tags/4.34 (from /trunk:105)
+
+4.34
+* Fixed realm communication bug in Warlords of Draenor beta
+* Added support for non-caster and caster-only alerts
+* Added Pandaria spells for Brawler's Guild
+* Added WoD spells for Draenor (world)
+* Added WoD spells for Highmaul
+* Added WoD spells for Shadowmoon Burial Grounds
+* Added WoD spells for the Everbloom
+* Added WoD spells for Upper Blackrock Spire
+------------------------------------------------------------------------
+r105 | zensunim | 2014-08-25 07:47:55 +0000 (Mon, 25 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO_Fail_MP.lua
+   M /trunk/GTFO_Spells_MP.lua
+
+Brawler's guild
+------------------------------------------------------------------------
+r104 | zensunim | 2014-08-25 06:14:09 +0000 (Mon, 25 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/GTFO.toc
+
+Fixed TOC that didn't get checked in
+------------------------------------------------------------------------
+r103 | zensunim | 2014-08-25 06:13:17 +0000 (Mon, 25 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO_Fail_WOD.lua
+   M /trunk/GTFO_Spells_WOD.lua
+
+Prepping for 4.34 release
+------------------------------------------------------------------------
+r102 | zensunim | 2014-08-24 14:40:06 +0000 (Sun, 24 Aug 2014) | 4 lines
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO_Fail_WOD.lua
+   M /trunk/GTFO_Spells_WOD.lua
+
+Added WoD spells for Shadowmoon Burial Grounds
+Added WoD spells for the Everbloom
+Added WoD spells for Upper Blackrock Spire
+
+------------------------------------------------------------------------
+r101 | zensunim | 2014-08-24 10:52:29 +0000 (Sun, 24 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/GTFO_Fail_WOD.lua
+   M /trunk/GTFO_Spells_WOD.lua
+
+TODOs for WoD raids
+------------------------------------------------------------------------
+r100 | zensunim | 2014-08-24 08:18:54 +0000 (Sun, 24 Aug 2014) | 3 lines
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO.toc
+   M /trunk/GTFO_Fail_WOD.lua
+   M /trunk/GTFO_Ignore.lua
+   M /trunk/GTFO_Spells_Generic.lua
+   M /trunk/GTFO_Spells_WOD.lua
+
+- Fixed realm communication bug in Warlords of Draenor beta
+- Added WoD spells for Highmaul
+- Added support for non-caster and caster-only alerts
+------------------------------------------------------------------------
+r98 | zensunim | 2014-08-20 15:37:00 +0000 (Wed, 20 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO.toc
+   M /trunk/GTFO_Fail_MP.lua
+   M /trunk/GTFO_Spells_MP.lua
+
+Prepping for 4.33 release
+------------------------------------------------------------------------
+r97 | zensunim | 2014-08-11 15:58:04 +0000 (Mon, 11 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO.toc
+
+Removed sound channel UI dropdown for now
+------------------------------------------------------------------------
+r95 | zensunim | 2014-08-10 16:03:52 +0000 (Sun, 10 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/GTFO.toc
+
+Preparing for 4.32 release
+------------------------------------------------------------------------
+r94 | zensunim | 2014-08-10 16:03:27 +0000 (Sun, 10 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO_Fail_MP.lua
+
+Preparing for  4.32 release
+------------------------------------------------------------------------
+r93 | zensunim | 2014-07-28 00:12:35 +0000 (Mon, 28 Jul 2014) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO_Fail_MP.lua
+   M /trunk/GTFO_Spells_MP.lua
+
+New Pandaria spells
+------------------------------------------------------------------------
+r92 | zensunim | 2014-07-27 21:51:08 +0000 (Sun, 27 Jul 2014) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO_Fail_WOD.lua
+   M /trunk/GTFO_Spells_WOD.lua
+
+Shadowmoon Burial Grounds & Skyreach spells
+------------------------------------------------------------------------
+r91 | zensunim | 2014-07-27 06:19:17 +0000 (Sun, 27 Jul 2014) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO_Fail_WOD.lua
+   M /trunk/GTFO_Spells_WOD.lua
+
+WoD UBRS and Grimrail Depot spells
+------------------------------------------------------------------------
+r90 | zensunim | 2014-07-27 04:38:56 +0000 (Sun, 27 Jul 2014) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO_Fail_WOD.lua
+   M /trunk/GTFO_Spells_WOD.lua
+
+Added WoD spells for Bloodmaul Slag Mines
+------------------------------------------------------------------------
+r89 | zensunim | 2014-07-26 19:25:19 +0000 (Sat, 26 Jul 2014) | 2 lines
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO_Fail_WOD.lua
+   M /trunk/GTFO_Spells_WOD.lua
+   M /trunk/Localization/deDE.lua
+   M /trunk/Localization/enUS.lua
+   M /trunk/Localization/esES.lua
+   M /trunk/Localization/esMX.lua
+   M /trunk/Localization/frFR.lua
+   M /trunk/Localization/koKR.lua
+   M /trunk/Localization/ruRU.lua
+   M /trunk/Localization/zhCN.lua
+   M /trunk/Localization/zhTW.lua
+
+Improved sound channel support to work with unmute
+WOD spells
+------------------------------------------------------------------------
+r88 | zensunim | 2014-07-21 05:58:43 +0000 (Mon, 21 Jul 2014) | 2 lines
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO_Fail_MP.lua
+   M /trunk/GTFO_Spells_WOD.lua
+   M /trunk/Localization/deDE.lua
+   M /trunk/Localization/enUS.lua
+   M /trunk/Localization/esES.lua
+   M /trunk/Localization/esMX.lua
+   M /trunk/Localization/frFR.lua
+   M /trunk/Localization/koKR.lua
+   M /trunk/Localization/ptBR.lua
+   M /trunk/Localization/ruRU.lua
+   M /trunk/Localization/zhCN.lua
+   M /trunk/Localization/zhTW.lua
+
+Added dialog sound channel support in Warlords of Draenor
+Added spells for Draenor (world)
+------------------------------------------------------------------------
