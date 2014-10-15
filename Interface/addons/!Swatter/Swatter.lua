@@ -1,7 +1,7 @@
 --[[
 	Swatter - An AddOn debugging aid for World of Warcraft.
-	Version: 5.20.5464 (RidiculousRockrat)
-	Revision: $Id: Swatter.lua 362 2014-05-13 11:22:38Z brykrys $
+	Version: 5.21.5490 (SanctimoniousSwamprat)
+	Revision: $Id: Swatter.lua 366 2014-09-15 13:10:07Z brykrys $
 	URL: http://auctioneeraddon.com/dl/Swatter/
 	Copyright (C) 2006 Norganna
 
@@ -23,15 +23,26 @@
 local DEBUG_LEVEL = 4
 
 -- Check to see if another debugging aid has been loaded.
-for addon, name in pairs({
+local otherdebug = {
 	['!buggrabber'] = 'BugGrabber',
 	['!improvederrorframe'] = 'ImprovedErrorFrame',
-}) do
-  local enabled = select(4, GetAddOnInfo(addon))
-  if enabled then
-	  DEFAULT_CHAT_FRAME:AddMessage("|cffffaa11Swatter is not loaded, because you are running "..name.."|r")
-	  return
-  end
+}
+if GetAddOnEnableState then -- WoW 6.0 or later
+	for addon, name in pairs(otherdebug) do
+		local enabled = GetAddOnEnableState(UnitName("player"), addon)
+		if enabled and enabled > 0 then
+		  DEFAULT_CHAT_FRAME:AddMessage("|cffffaa11Swatter is not loaded, because you are running "..name.."|r")
+		  return
+		end
+	end
+else -- WoW 5.X - delete this section after 6.0 goes fully live
+	for addon, name in pairs(otherdebug) do
+		local enabled = select(4, GetAddOnInfo(addon))
+		if enabled then
+		  DEFAULT_CHAT_FRAME:AddMessage("|cffffaa11Swatter is not loaded, because you are running "..name.."|r")
+		  return
+		end
+	end
 end
 
 Swatter = {
@@ -43,9 +54,9 @@ Swatter = {
 	HISTORY_SIZE = 100,
 }
 
-Swatter.Version="5.20.5464"
+Swatter.Version="5.21.5490"
 if (Swatter.Version == "<%".."version%>") then
-	Swatter.Version = "5.1.DEV"
+	Swatter.Version = "6.0.DEV"
 end
 SWATTER_VERSION = Swatter.Version
 
@@ -77,7 +88,7 @@ hooksecurefunc("SetAddOnDetail", addOnDetail)
 
 -- End SetAddOnDetail function hook.
 
-LibStub("LibRevision"):Set("$URL: http://svn.norganna.org/libs/trunk/!Swatter/Swatter.lua $","$Rev: 362 $","5.1.DEV.", 'auctioneer', 'libs')
+LibStub("LibRevision"):Set("$URL: http://svn.norganna.org/libs/trunk/!Swatter/Swatter.lua $","$Rev: 366 $","6.0.DEV.", 'auctioneer', 'libs')
 
 local function toggle()
 	if Swatter.Error:IsVisible() then
@@ -298,9 +309,8 @@ function Swatter.GetAddOns()
 
 	local addons = {}
 	for i = 1, GetNumAddOns() do
-		local name, title, notes, enabled, loadable, reason, security = GetAddOnInfo(i)
-		local loaded = IsAddOnLoaded(i)
-		if (loaded) then
+		if IsAddOnLoaded(i) then
+			local name = GetAddOnInfo(i)
 			local version = GetAddOnMetadata(i, "Version")
 			local addition = GetAddOnMetadata(i, "X-Swatter-Extra")
 			if not version then

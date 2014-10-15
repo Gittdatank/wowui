@@ -1,15 +1,15 @@
-## Interface: 50400
+## Interface: 60000
 ## Title: ComboPointsRedux
 ## Notes: Numerical and graphical display of Combo Points and similar buffs/debuffs. Also tracks Holy Power and Soul Shards.
 ## Author: Starinnia
 ## X-Category: Combat
 ## X-Credits: Funkydude (inspiration for the mod)
-## Version: 2.2.19
+## Version: 2.3.0
 ## SavedVariables: CPRDB2
 ## OptionalDeps: Ace3, LibSharedMedia-3.0
 ## LoadManagers: AddonLoader
 ## X-LoadOn-Always: true
-## X-Curse-Packaged-Version: 2.2.19
+## X-Curse-Packaged-Version: 2.3.0
 ## X-Curse-Project-Name: Combo Points Redux
 ## X-Curse-Project-ID: combo-points-redux
 ## X-Curse-Repository-ID: wow/combo-points-redux/mainline

@@ -116,6 +116,18 @@ GTFO.SpellID["166404"] = {
 -- * Iron Docks *
 -- **************
 
+GTFO.SpellID["163276"] = {
+	--desc = "Shredded Tendons (Neesa Nox)";
+	sound = 3;
+	applicationOnly = true;
+};
+
+GTFO.SpellID["161256"] = {
+	--desc = "Primal Assault (Oshir)";
+	sound = 3;
+	tankSound = 0; -- Avoidable by tank?
+};
+
 
 -- *****************************
 -- * Shadowmoon Burial Grounds *
@@ -257,38 +269,86 @@ GTFO.SpellID["155031"] = {
 -- * Blackrock Foundry *
 -- *********************
 
+GTFO.SpellID["175752"] = {
+	--desc = "Slag Breath (Ogron Hauler)";
+	sound = 3;
+	meleeOnly = true;
+	test = true;
+};
+
+GTFO.SpellID["175765"] = {
+	--desc = "Overhead Smash (Ogron Hauler)";
+	sound = 3;
+	tankSound = 0;
+};
+
+
+GTFO.SpellID["159520"] = {
+	--desc = "Acidback Puddle (Darkshard Gnasher)";
+	sound = 3;
+};
+
 -- Gruul
--- TODO: Inferno Slice - fail when hit while debuffed
--- TODO: Crumbling Roar - fail if avoidable
+-- TODO: Inferno Slice - fail when hit while debuffed?
 -- TODO: Overwhelming Blows - non-tank fail?
--- TODO: Flare - fail if avoidable
+-- TODO: Flare (Heroic) - fail if avoidable
 -- TODO: Shatter - fail if you get hit by allies
--- TODO: Overhead Smash - fail if avoidable
+
+GTFO.SpellID["155301"] = {
+	--desc = "Overhead Smash (Gruul)";
+	sound = 3;
+	test = true;
+};
 
 -- Oregorger
--- TODO: Acid Torrent - non-tank fail
--- TODO: Explosive Shard - unsure how this mechanic works
--- TODO: Rolling Fury
 -- TODO: Unstable Slag Explosion - avoidable waves of death
+
+GTFO.SpellID["156374"] = {
+	--desc = "Explosive Shard - Stun (Oregorger)";
+	sound = 3;
+};
+
+GTFO.SpellID["155900"] = {
+	--desc = "Rolling Fury (Oregorger)";
+	sound = 3;
+};
+
+GTFO.SpellID["155187"] = {
+	--desc = "Bomb (Foreman Feldspar)";
+	sound = 3;
+	ignoreSelfInflicted = true;
+};
 
 -- Beastlord Darmac
 -- TODO: Pin Down - spear impact
 -- TODO: Cannonball Barrage - avoidable?
 -- TODO: Heavy Smash - non-tank fail
 
+GTFO.SpellID["163182"] = {
+	--desc = "Crushing Slam (Iron Smith)";
+	sound = 3;
+	tankSound = 0;
+};
+
 -- Flamebender Ka'graz
 -- TODO: Charring Breath - non-tank fail, tank fail if debuffed
 -- TODO: Magma Monsoon - avoidable?
 -- TODO: Devastating Slam - non-tank fail
 
+GTFO.SpellID["158140"] = {
+	--desc = "Pulverize (Hans'gar and Franzok)";
+	sound = 1;
+};
 
--- Hans'gar and Franzok
--- TODO: Searing Plates - fail or fire?
--- TODO: Scorching Burns - fail?
--- TODO: Pulverized - fail?
+GTFO.SpellID["160050"] = {
+	--desc = "Delayed Siege Bomb (Operator Thogar)";
+	sound = 3;
+};
 
--- Operator Thogar
--- TODO: Delayed Siege Bomb
+GTFO.SpellID["156554"] = {
+	--desc = "Moving Train (Operator Thogar)";
+	sound = 3;
+};
 
 -- The Blast Furnace
 -- TODO: Electrocution - when not primary target
@@ -298,20 +358,61 @@ GTFO.SpellID["155031"] = {
 -- TODO: Volatile Fire - Avoidable?
 
 -- Kromog
--- TODO: Slam - fail if too close? 
--- TODO: Rune of Crushing Earth - avoidable?
--- TODO: Reverberations - avoidable?
+
+GTFO.SpellID["156713"] = {
+	--desc = "Thundering Blows (Kromog)";
+	test = true; -- Not sure if this works, untested
+	soundFunction = function() -- Warn only on the first hit
+		if (GTFO_FindEvent("ThunderingFail")) then
+			return 0;
+		end
+		if (GTFO_HasDebuff("player", 157059)) then -- Negate Grasping Earth debuff
+			return 0;
+		end
+		GTFO_AddEvent("ThunderingFail", 15);
+		return 3;
+	end
+};
+
+GTFO.SpellID["161923"] = {
+	--desc = "Rune of Crushing Earth (Kromog)";
+	sound = 3;
+	tankSound = 0; -- Could be off-tank's job to clear these?
+};
+
+-- TODO: Slam 156704 - fail if too close? 
+-- TODO: Reverberations 157247 - avoidable?
 -- TODO: Call of the Mountain
 
 -- The Iron Maidens
--- TODO: Rapid Fire - avoidable?
 -- TODO: Incendiary Device - close impact avoidable?
 -- TODO: Blade Dash - fail if not first target
 -- TODO: Swirling Vortex
 -- TODO: Blood Ritual - avoidable impact spray? Non-Tank fail?
 -- TODO: Volatile Bloodbolt - avoidable?
--- TODO: Bombs - from various bomb patterns
 -- TODO: Grapeshot Blast - avoidable?
+
+GTFO.SpellID["158601"] = {
+	--desc = "Dominator Blast (Turret)";
+	sound = 3;
+	applicationOnly = true;
+};
+
+GTFO.SpellID["160733"] = {
+	--desc = "Bomb Impact";
+	sound = 3;
+};
+
+GTFO.SpellID["157884"] = {
+	--desc = "Detonation Sequence";
+	sound = 3;
+};
+
+GTFO.SpellID["158009"] = {
+	--desc = "Bloodsoaked Heartseeker (Marak the Blooded)";
+	sound = 3;
+	damageMinimum = 100000; 
+};
 
 -- Blackhand
 -- TODO: Demolition - distance fail?
@@ -347,7 +448,7 @@ GTFO.SpellID["160521"] = {
 };
 
 -- Kargath Bladefist
--- TODO: Ravenous Bloodmaw -- Insta-death?
+-- TODO: Ravenous Bloodmaw (Kargath Bladefist, Heroic) -- Insta-death?
 
 GTFO.SpellID["160952"] = {
 	--desc = "Fire Bomb (Iron Bomber)";
@@ -356,26 +457,82 @@ GTFO.SpellID["160952"] = {
 
 -- The Butcher
 -- TODO: Gushing Wounds (The Butcher) -- Definite Fail at 5 stacks (heroic), fail at 4, fail at 6+ on LFR?
--- TODO: Paleobomb (The Butcher) -- Avoidable?
+-- TODO: Paleobomb (The Butcher, Heroic) -- Avoidable?
 
 -- Tectus
--- TODO: Fracture (Tectus) -- Avoidable?
--- TODO: Earthen Pillar (Tectus) -- Instakill
--- TODO: Earthen Flechettes (Tectus) -- Non-tank Avoidable?  
--- TODO: Raving Assault (Tectus) -- Non-tank Avoidable?  
+-- TODO: Raving Assault (Tectus) 163318 -- Non-tank Avoidable?, fail if you're not the mark?2  
+
+
+GTFO.SpellID["162968"] = {
+	--desc = "Earthen Flechettes (Tectus)";
+	sound = 3;
+	tankSound = 0;
+};
+
+GTFO.SpellID["163209"] = {
+	--desc = "Fracture (Tectus)";
+	sound = 3;
+};
+
+GTFO.SpellID["171045"] = {
+	--desc = "Earthen Pillar (Tectus)";
+	sound = 3;
+};
+
 
 -- Brackenspore
--- TODO: Exploding Fungus (Brackenspore) -- Avoidable?
--- TODO: Call of the Tides (Brackenspore) -- Avoidable?
+-- TODO: Exploding Fungus (Brackenspore, Heroic) -- Avoidable?
+-- TODO: Call of the Tides (Brackenspore, Heroic) -- Avoidable?
 
 -- Twin Ogron
--- TODO: Shield Charge (Pol) -- Fail if you're not the target?  Fail if you're too far away?
+GTFO.SpellID["158026"] = {
+	--desc = "Enfeebling Roar (Phemos)";
+	sound = 3;
+};
+
+GTFO.SpellID["158159"] = {
+	--desc = "Shield Charge (Pol)";
+	sound = 3;
+};
+
+GTFO.SpellID["158336"] = {
+	--desc = "Pulverize (Pol) - First hit";
+	soundFunction = function() -- Warn only if you get hit more than once
+		if (GTFO_FindEvent("PulverizeMultiHit")) then
+			return 3;
+		end
+		GTFO_AddEvent("PulverizeMultiHit", 3);
+		return 0;
+	end
+};
+
+GTFO.SpellID["158417"] = {
+	--desc = "Pulverize (Pol) - Second hit";
+	sound = 3;
+};
+
+GTFO.SpellID["158420"] = {
+	--desc = "Pulverize (Pol) - Third hit";
+	sound = 3;
+	damageMinimum = 50000; 
+	test = true; -- Different damage amounts based on raid difficulty (50K for LFR?)
+};
+
+
+-- TODO: Pulverize (Pol) -- Based on damage amount & distance, 3 different types in sequence: #1 spam fail, #2 impact fail, #3 distance fail
 -- TODO: Arcane Charge (Pol) -- Avoidable?
--- TODO: Arcane Volatility (Phemos) -- Avoidable? FF damage?
+-- TODO: Arcane Volatility (Phemos, Heroic) -- Avoidable? FF damage?
 
 -- Ko'ragh
--- TODO: Expel Magic: Fire (Ko'ragh) -- dispel fail, FF damage
--- TODO: Expel Magic: Arcane (Ko'ragh) -- explosion
+GTFO.SpellID["172685"] = {
+	--desc = "Expel Magic: Fire (Ko'ragh)";
+	sound = 3;
+};
+
+GTFO.SpellID["162397"] = {
+	--desc = "Expel Magic: Arcane (Ko'ragh)";
+	sound = 3;
+};
 
 -- Imperator Mar'gok
 -- TODO: Destructive Resonance (Imperator Mar'gok) -- impact explosion from the person that triggers the mine only, supposed to avoid?

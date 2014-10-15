@@ -639,6 +639,12 @@ if ChatEdit_ActivateChat then
 	end)
 end
 
+if InterfaceOptionsFrame then
+	InterfaceOptionsFrame:HookScript("OnShow", function(self)
+		MovAny_OptionsOnShow()
+	end)
+end
+
 if CompactRaidFrameManager_Expand then
 	hooksecurefunc("CompactRaidFrameManager_Expand", function(self)
 		if MovAny:IsModified(self) then
@@ -1628,6 +1634,9 @@ function MovAny:HookFrame(e, f, dontUnanchor, runBeforeInteract)
 			return
 		end
 	end
+	if InCombatLockdown() and MovAny:IsProtected(f) then
+		return
+	end
 	if not self:IsValidObject(f) then
 		return
 	end
@@ -2103,7 +2112,7 @@ function MovAny:ResetFrameAtCursor()
 	end
 	local fn
 	if not self:IsModified(obj:GetName()) and obj.MAParent then
-		fn = type(obj.MAParent== "string") and obj.MAParent or obj.MAParent:GetName()
+		fn = type(obj.MAParent == "string") and obj.MAParent or obj.MAParent:GetName()
 	else
 		fn = self:Translate(obj:GetName(), true, true)
 		if transName ~= obj:GetName() then
@@ -3978,15 +3987,11 @@ function MovAny:UnanchorRelatives(e, f, opt)
 	local num = p:GetNumChildren()
 	--assert((num < 8000), "Too much childrens stuck in owerflow")
 	if p.GetChildren then
-		if p.GetNumChildren then
-			if p:GetNumChildren() > 7999 then
-			-- maPrint("Too much childrens for "..(p:GetName() or UNKNOWN)..".Find-("..p:GetNumChildren()..") childrens. Some of your addon create too much unnecessary frame.")
-			else
-				local children = {p:GetChildren()}
-				if children ~= nil then
-					for i, v in ipairs(children) do
-						self:_AddDependents(relatives, v)
-					end
+		local children = {p:GetChildren()}
+		if children ~= nil then
+			for i, v in ipairs(children) do
+				if not v:IsForbidden() then
+					self:_AddDependents(relatives, v)
 				end
 			end
 		end
@@ -4032,6 +4037,9 @@ function MovAny:UnanchorRelatives(e, f, opt)
 end
 
 function MovAny:_AddDependents(l, f)
+	if MovAny:IsProtected(f) and InCombatLockdown() then
+		return
+	end
 	local _, relativeTo = f:GetPoint(1)
 	if relativeTo and l[relativeTo] then
 		l[f] = f
@@ -5075,7 +5083,11 @@ function MovAny:SetOptions()
 	MADB.noMMMW = MAOptNoMMMW:GetChecked()
 	MADB.playSound = MAOptPlaySound:GetChecked()
 	MADB.tooltips = MAOptShowTooltips:GetChecked()
-	MADB.closeGUIOnEscape = MAOptCloseGUIOnEscape:GetChecked()
+	if MAOptCloseGUIOnEscape:GetChecked() then
+		MADB.closeGUIOnEscape = true
+	else
+		MADB.closeGUIOnEscape = false
+	end
 	MADB.squareMM = MAOptsSquareMM:GetChecked()
 	MADB.dontHookCreateFrame = MAOptDontHookCreateFrame:GetChecked()
 	MADB.dontSyncWhenLeavingCombat = MAOptDontSyncWhenLeavingCombat:GetChecked()
@@ -5583,22 +5595,25 @@ function MovAny_OnEvent(self, event, arg1)
 					--RegisterStateDriver(_G[frame], "visibility", "[@arenapet"..i", exists] show hide")
 				end
 				MovAny.API:SyncElement(frame)
-			end		
+			end
 		end
 		MovAny:SyncFrames()
 	elseif event == "GROUP_ROSTER_UPDATE" then
+		if not MovAny:IsModified(RaidUnitFramesMover) then
+			return
+		end
 		if InCombatLockdown() then
 			return
 		end
-		local f = _G["CompactRaidFrameManager"]
+		--[[local f = _G["CompactRaidFrameManager"]
 		if f then
 			f.MAParent = "RaidUnitFramesManagerMover"
-		end
-		f = _G["CompactRaidFrameContainer"]
+		end]]
+		local f = _G["CompactRaidFrameContainer"]
 		if f then
 			f.MAParent = "RaidUnitFramesMover"
 		end
-		MovAny.API:SyncElement("RaidUnitFramesManagerMover")
+		--MovAny.API:SyncElement("RaidUnitFramesManagerMover")
 		MovAny.API:SyncElement("RaidUnitFramesMover")
 	elseif event == "PET_BATTLE_OPENING_START" then
 		if not MovAny:IsModified(MicroButtonsMover) and not MovAny:IsModified(MicroButtonsSplitMover) and not MovAny:IsModified(MicroButtonsVerticalMover) then

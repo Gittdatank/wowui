@@ -1,6 +1,6 @@
 
 AmrSettings = {
 	["Logins"] = {
-		"Arthas;Git;1409704546", -- [1]
+		"Arthas;Git;1412725587", -- [1]
 	},
 }

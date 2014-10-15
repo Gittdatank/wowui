@@ -1,0 +1,4 @@
+TidyPlates: disabled
+TidyPlatesHub: disabled
+TidyPlatesWidgets: disabled
+ACP: disabled

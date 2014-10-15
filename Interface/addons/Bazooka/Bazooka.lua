@@ -1,6 +1,6 @@
 --[[
 Name: Bazooka
-Revision: $Revision: 259 $
+Revision: $Revision: 261 $
 Author(s): mitch0
 Website: http://www.wowace.com/projects/bazooka/
 SVN: svn://svn.wowace.com/wow/bazooka/mainline/trunk
@@ -10,9 +10,9 @@ License: Public Domain
 
 local AppName, Bazooka = ...
 local OptionsAppName = AppName .. "_Options"
-local VERSION = AppName .. "-v2.4.0"
+local VERSION = AppName .. "-v2.4.1"
 --[===[@debug@
-local VERSION = AppName .. "-r" .. ("$Revision: 259 $"):match("%d+")
+local VERSION = AppName .. "-r" .. ("$Revision: 261 $"):match("%d+")
 --@end-debug@]===]
 
 local LDB = LibStub:GetLibrary("LibDataBroker-1.1")
@@ -1553,11 +1553,13 @@ function Plugin:forceHideFrames(frame, ...)
     if not frame then
         return
     end
-    if not frame.bzkPlugin then
-        -- we assume that if the frame is anchored to us, it's _only_ anchored to us
-        local _, relativeTo = frame:GetPoint()
-        if relativeTo == self.frame then
-            frame:Hide()
+    if not frame:IsForbidden() then
+        if not frame.bzkPlugin then
+            -- we assume that if the frame is anchored to us, it's _only_ anchored to us
+            local _, relativeTo = frame:GetPoint()
+            if relativeTo == self.frame then
+                frame:Hide()
+            end
         end
     end
     return self:forceHideFrames(...)

@@ -40,7 +40,7 @@ if L then
 
 	L.clump_check = mod:SpellName(147126) -- "Clump Check"
 	L.clump_check_desc = "Check every 3 seconds during bombardment for clumped up players, if a clump is found a Kor'kron Iron Star will spawn."
-	L.clump_check_warning = "Clump found, Star inc"
+	L.clump_check_warning = "Clump found: Star Incoming!"
 	L.clump_check_icon = 147126
 
 	L.bombardment = "Bombardment"
@@ -125,6 +125,7 @@ function mod:OnBossEnable()
 	-- Intermissions
 	self:Log("SPELL_CAST_START", "Annihilate", 144969)
 	self:Log("SPELL_AURA_REMOVED", "YShaarjsProtection", 144945)
+	self:Log("SPELL_AURA_APPLIED", "Hope", 149004, 148983, 148994) -- Hope, Courage, Faith
 	-- Phase 1
 	self:Log("SPELL_CAST_START", "Warsong", 144821)
 	self:Log("SPELL_AURA_APPLIED", "AddMarkedMob", 144585) -- Ancestral Fury
@@ -167,32 +168,21 @@ end
 
 -- phase 4
 do
-	local lastMilestone = nil
+	local prev, castTime = 0, 0
 	function mod:UNIT_POWER_FREQUENT(unit)
-		-- let's try to not start a new bar if not necessary. Power gain speed is 1 power ever 0.8 exactly.
 		local power = UnitPower(unit)
+		if power == prev then return end
+		prev = power
+
+		local t = (100 - power) * 0.9 -- 90s
 		if power == 1 then
-			lastMilestone = GetTime()
-			self:Bar("manifest_rage", 79.2, 147011, 147011)
-		elseif power == 25 then
-			lastMilestone = GetTime()
-			if (GetTime() - lastMilestone) < 19.2 then -- there were extra power gain need to update the bar 24*0.8
-				self:Bar("manifest_rage", 60, 147011, 147011)
-			end
-		elseif power == 50 then
-			lastMilestone = GetTime()
-			if (GetTime() - lastMilestone) < 20 then -- there were extra power gain need to update the bar 25*0.8
-				self:Bar("manifest_rage", 40, 147011, 147011)
-			end
-		elseif power == 75 then
-			lastMilestone = GetTime()
-			if (GetTime() - lastMilestone) < 20 then -- there were extra power gain need to update the bar 25*0.8
-				self:Bar("manifest_rage", 20, 147011, 147011)
-			end
-		elseif power == 95 then
-			lastMilestone = GetTime()
-			if (GetTime() - lastMilestone) < 16 then -- there were extra power gain need to update the bar 20*0.8
-				self:Bar("manifest_rage", 4, 147011, 147011) -- 4 should be enough since there is still a 2 sec cast time before the channel
+			self:Bar("manifest_rage", t, 147011)
+			castTime = GetTime() + t
+		elseif power > 1 and power < 100 then
+			local newTime = GetTime() + t
+			if newTime+0.3 < castTime then
+				self:Bar("manifest_rage", t, 147011)
+				castTime = newTime
 			end
 		end
 	end
@@ -221,12 +211,15 @@ end
 do
 	local prev = 0
 	function mod:MaliciousBlastApplied(args)
+		if self:Me(args.destGUID) then
+			self:Message(args.spellId, "Personal", "Alert", CL.you:format(CL.count:format(args.spellName, args.amount or 1)))
+			self:Bar(args.spellId, 2) -- Next tick
+		end
+
 		local t = GetTime()
-		if t-prev > 1 and UnitDebuff("player", self:SpellName(147209)) then -- malice
+		if t-prev > 1 and UnitDebuff("player", self:SpellName(147209)) then -- Malice Debuff
 			prev = t
-			self:Bar(args.spellId, 2)
-		elseif self:Me(args.destGUID) and args.amount and args.amount > 1 then
-			self:StackMessage(args.spellId, args.destName, args.amount) -- so people know they are taking extra damage
+			self:Bar(args.spellId, 2) -- Bar for when you as the player with Malice will spread Malicious Blast to others
 		end
 	end
 end
@@ -238,12 +231,12 @@ end
 function mod:MaliceApplied(args)
 	self:SecondaryIcon(args.spellId, args.destName)
 	self:TargetMessage(args.spellId, args.destName, "Urgent", "Alarm")
-	maliceCounter = maliceCounter + 1
-	self:Bar(args.spellId, 30, CL.count:format(args.spellName, maliceCounter))
+	self:TargetBar(args.spellId, 14, args.destName)
 	if self:Me(args.destGUID) then
-		self:Bar(args.spellId, 14, CL.you:format(args.spellName))
 		self:Flash(args.spellId)
 	end
+	maliceCounter = maliceCounter + 1
+	self:Bar(args.spellId, 30, CL.count:format(args.spellName, maliceCounter))
 end
 
 function mod:IronStarFixateRemoved(args)
@@ -331,7 +324,7 @@ do
 				end
 			end
 		end
-		if not continue or not mod.db.profile.custom_off_shaman_marker then
+		if not continue then
 			mod:CancelTimer(markTimer)
 			markTimer = nil
 		end
@@ -369,7 +362,6 @@ do
 		if args.spellId == 145037 and self.db.profile.custom_off_minion_marker then
 			wipe(markableMobs)
 			wipe(marksUsed)
-			markTimer = nil
 			self:RegisterEvent("UPDATE_MOUSEOVER_UNIT")
 			if not markTimer then
 				markTimer = self:ScheduleRepeatingTimer(markMobs, 0.1)
@@ -389,15 +381,9 @@ do
 	end
 end
 
-do
-	local prev = 0
-	function mod:ChainHeal(args)
-		mod:AddMarkedMob(args)
-		local t = GetTime()
-		if t-prev > 3 and UnitGUID("focus") == args.sourceGUID then -- don't spam
-			prev = t
-			self:Message("chain_heal", "Personal", "Alert", L.chain_heal_message, args.spellId)
-		end
+function mod:ChainHeal(args)
+	if UnitGUID("focus") == args.sourceGUID then
+		self:Message("chain_heal", "Personal", "Alert", L.chain_heal_message, args.spellId)
 	end
 end
 
@@ -458,6 +444,11 @@ do
 		end
 		hopeTimer = nil
 	end
+	function mod:Hope()
+		if hopeTimer == nil then -- Purposely a nil check. Set as false when intermission begins.
+			hopeTimer = self:ScheduleTimer(announceHopeless, 2)
+		end
+	end
 	function mod:YShaarjsProtection(args)
 		if self:MobId(args.destGUID) == 71865 then
 			self:Message(args.spellId, "Positive", "Long", CL.over:format(args.spellName))
@@ -506,6 +497,7 @@ do
 			self:Bar(-8305, 62, CL.over:format(CL.intermission), "SPELL_HOLY_PRAYEROFSHADOWPROTECTION")
 			whirlingCounter = 1
 			annihilateCounter = 1
+			hopeTimer = false
 		elseif spellId == 144956 then -- Jump To Ground -- exiting intermission
 			if phase == 2 then
 				if hopeTimer then self:CancelTimer(hopeTimer) end
@@ -513,10 +505,7 @@ do
 				self:Bar(144758, 10) -- Desecrate
 				self:Bar(145065, 15, 67229, 145065) -- Mind Control
 				self:Bar(144985, 30, CL.count:format(self:SpellName(144985), whirlingCounter)) -- Whirling Corruption
-				local hp = UnitHealth("boss1") / UnitHealthMax("boss1") * 100
-				if hp < 50 then -- XXX might need adjusting
-					self:RegisterUnitEvent("UNIT_HEALTH_FREQUENT", nil, "boss1", "boss2", "boss3") -- don't really need this till 2nd intermission phase
-				end
+				self:RegisterUnitEvent("UNIT_HEALTH_FREQUENT", nil, "boss1", "boss2", "boss3")
 				-- warn for empowered abilities
 				local power = UnitPower("boss1")
 				while power >= warnPower do -- can he hit 100 energy before p3? that would be some shenanigans

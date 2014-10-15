@@ -143,6 +143,62 @@ GTFO.SpellID["161588"] = {
 -- * Iron Docks *
 -- **************
 
+-- Lava Sweep (Makogg Emberblade) - Fail?
+-- TODO: Shattering Blade (Koramar) - avoidable?
+
+-- Barbed Arrow Barrage (Fleshrender Nok'gar)
+-- Burning Arrows (Fleshrender Nok'gar) - fire
+-- Shredding Swipes (Fleshrender Nok'gar) - Fail?
+
+GTFO.SpellID["168540"] = {
+	--desc = "Cannon Barrage (Skulloc)";
+	sound = 1;
+};
+
+GTFO.SpellID["168514"] = {
+	--desc = "Cannon Barrage (Skulloc)";
+	sound = 1;
+};
+
+GTFO.SpellID["173105"] = {
+	--desc = "Whirling Chains";
+	sound = 1;
+};
+
+GTFO.SpellID["173149"] = {
+	--desc = "Flaming Arrows";
+	sound = 1;
+};
+
+GTFO.SpellID["173489"] = {
+	--desc = "Lava Barrage (Ironwing Flamespitter)";
+	sound = 1;
+};
+
+GTFO.SpellID["172963"] = {
+	--desc = "Gatecrasher (Siegemaster Rokra)";
+	sound = 1;
+};
+
+GTFO.SpellID["178156"] = {
+	--desc = "Acid Splash (Rylak Skyterror)";
+	sound = 1;
+};
+
+GTFO.SpellID["168390"] = {
+	--desc = "Cannon Barrage (Skulloc)";
+	sound = 1;
+};
+
+GTFO.SpellID["168348"] = {
+	--desc = "Rapid Fire (Zoggosh)";
+	negatingDebuffSpellID = 168398; -- Rapid Fire Targetting
+	negatingIgnoreTime = 7;
+	sound = 4;
+	test = true; -- A little weird at times
+};
+
+
 -- *****************************
 -- * Shadowmoon Burial Grounds *
 -- *****************************
@@ -282,45 +338,168 @@ GTFO.SpellID["155057"] = {
 -- * Blackrock Foundry *
 -- *********************
 
--- Oregorger
--- TODO: Retched Blackrock
+GTFO.SpellID["175643"] = {
+	--desc = "Spinning Blade (Workshop Guardian)";
+	sound = 1;
+};
 
--- Foreman Feldspar
--- TODO: Rupture
+GTFO.SpellID["159686"] = {
+	--desc = "Acidback Puddle (Darkshard Acidback)";
+	sound = 1;
+};
+
+GTFO.SpellID["159520"] = {
+	--desc = "Gripping Slag (Iron Slag-Shaper)";
+	sound = 4;
+	ignoreSelfInflicted = true;
+};
+
+GTFO.SpellID["175605"] = {
+	--desc = "Gripping Slag (Iron Slag-Shaper)";
+	sound = 4;
+	ignoreSelfInflicted = true;
+};
+
+GTFO.SpellID["173192"] = {
+	--desc = "Cave In (Gruul)";
+	sound = 1;
+};
+
+GTFO.SpellID["156203"] = {
+	--desc = "Retched Blackrock (Oregorger)";
+	sound = 1;
+};
+
+GTFO.SpellID["156388"] = {
+	--desc = "Explosive Shard - Initial Hit (Oregorger)";
+	sound = 3;
+};
+
+GTFO.SpellID["156932"] = {
+	--desc = "Rupture (Foreman Feldspar)";
+	sound = 1;
+};
+
+GTFO.SpellID["155743"] = {
+	--desc = "Slag Pool (Heart of the Mountain)";
+	sound = 1;
+};
+
+GTFO.SpellID["155223"] = {
+	--desc = "Melt (Heart of the Mountain)";
+	sound = 1;
+};
+
+GTFO.SpellID["160260"] = {
+	--desc = "Fire Bomb (Blackrock Enforcer)";
+	sound = 1;
+};
+
+GTFO.SpellID["177806"] = {
+	--desc = "Furnace Flame";
+	sound = 1;
+};
+
+GTFO.SpellID["162663"] = {
+	--desc = "Electrical Storm (Thunderlord Beast-Tender)";
+	sound = 1;
+};
 
 -- Beastlord Darmac
--- TODO: Conflagration - FF damage?
--- TODO: Inferno Breath - Avoidable? Tank?
 -- TODO: Epicenter - avoidable?
+
+GTFO.SpellID["154989"] = {
+	--desc = "Inferno Breath (Beastlord Darmac)";
+	sound = 1;
+	tankSound = 0; -- Avoidable by tank?
+	applicationOnly = true;
+};
+
+GTFO.SpellID["156824"] = {
+	--desc = "Inferno Pyre (Beastlord Darmac)";
+	sound = 1;
+};
+
+GTFO.SpellID["155718"] = {
+	--desc = "Conflagration (Beastlord Darmac)";
+	sound = 4;
+	ignoreSelfInflicted = true;	
+};
+
+GTFO.SpellID["155499"] = {
+	--desc = "Superheated Shrapnel (Beastlord Darmac)";
+	sound = 1;
+	applicationOnly = true;
+};
+
+GTFO.SpellID["156823"] = {
+	--desc = "Superheated Scrap (Beastlord Darmac)";
+	sound = 1;
+};
 
 -- Flamebender Ka'graz
 -- TODO: Singe - too many stacks?
--- TODO: Blazing Radiance - Tank avoidable?
--- TODO: Lava Slash - fire
 
--- Hans'gar and Franzok
--- TODO: Searing Plates - fail or fire?
+GTFO.SpellID["155314"] = {
+	--desc = "Lava Slash (Flamebender Ka'graz)";
+	sound = 1;
+};
+
+GTFO.SpellID["156713"] = {
+	--desc = "Unquenchable Flame (Flamebender Ka'graz)";
+	sound = 1;
+	test = true;
+};
+
+GTFO.SpellID["155484"] = {
+	--desc = "Blazing Radiance (Flamebender Ka'graz)";
+	sound = 4;
+	ignoreSelfInflicted = true;	
+};
+
+GTFO.SpellID["155818"] = {
+	--desc = "Scorching Burns (Hans'gar and Franzok)";
+	sound = 1;
+};
+
+GTFO.SpellID["161570"] = {
+	--desc = "Searing Plates (Hans'gar and Franzok)";
+	sound = 1;
+};
 
 -- Operator Thogar
 -- TODO: Lava Shock - avoidable?
 -- TODO: Obliteration - avoidable?
 -- TODO: Heat Blast - avoidable?
 
--- The Blast Furnace
--- TODO: Rupture (Foreman Feldspar) - avoidable?
--- TODO: Melt
+GTFO.SpellID["156932"] = {
+	--desc = "Rupture (Foreman Feldspar)";
+	sound = 1;
+};
 
--- Kromog
--- TODO: Thundering Blows - survivable or fail?
+GTFO.SpellID["155223"] = {
+	--desc = "Melt (Foreman Feldspar)";
+	sound = 1;
+};
 
 -- The Iron Maidens
--- TODO: Deploy Turret - avoidable attack?
--- TODO: Convulsive Shadows 
--- TODO: Corrupted Blood - pool of fail
+-- TODO: Convulsive Shadows, Lingering Shadows?
+
+GTFO.SpellID["156637"] = {
+	--desc = "Rapid Fire (Admiral Gar'an)";
+	sound = 1;
+};
+
+GTFO.SpellID["158683"] = {
+	--desc = "Corrupted Blood (The Iron Maidens)";
+	sound = 1;
+};
 
 -- Blackhand
--- TODO: Molten Slag - fire
-
+GTFO.SpellID["156401"] = {
+	--desc = "Molten Slag (Blackhand)";
+	sound = 1;
+};
 
 -- ************
 -- * Highmaul *
@@ -353,12 +532,19 @@ GTFO.SpellID["156138"] = {
 };
 
 -- The Butcher
--- TODO: Pale Vitorl (The Butcher) -- Avoidable?
+GTFO.SpellID["163046"] = {
+	--desc = "Pale Vitorl (The Butcher)";
+	sound = 1;
+};
 
 -- Tectus
--- TODO: Crystalline Barrage (Tectus) -- Cloud of death
--- TODO: Tectonic Upheaval (Tectus) -- Avoidable?
 -- TODO: Petrification (Tectus) -- How many stacks is too many?
+
+GTFO.SpellID["162370"] = {
+	--desc = "Crystalline Barrage (Tectus)";
+	sound = 1;
+	test = true; -- Avoidable if you're marked?
+};
 
 GTFO.SpellID["173232"] = {
 	--desc = "Flamethrower (Iron Flame Technician)";
@@ -388,12 +574,27 @@ GTFO.SpellID["160179"] = {
 	test = true;
 };
 
--- Twin Ogron
--- TODO: Whirlwind (Phemos) -- non-tank fail
--- TODO: Blaze (Phemos) -- fire on ground
+GTFO.SpellID["157944"] = {
+	--desc = "Whirlwind (Phemos)";
+	sound = 1;
+	tankSound = 0;
+};
+
+GTFO.SpellID["158241"] = {
+	--desc = "Blaze (Phemos)";
+	sound = 1;
+	applicationOnly = true;
+};
 
 -- Ko'ragh
--- TODO: Expel Magic: Fel (Ko'ragh) -- fire?
+-- TODO: Expel Magic: Fel (Ko'ragh, Heroic) -- fire?
+
+GTFO.SpellID["159220"] = {
+	--desc = "Suppression Field (Ko'ragh)";
+	sound = 1;
+	tankSound = 0;
+	test = true; -- How does this mechanic work strat-wise?  Tanks may have to drag adds into the field to prevent explosions, but does DPS ever need to stand there?
+};
 
 -- Imperator Mar'gok
 -- TODO: Force Nova (Imperator Mar'gok) -- avoidable?

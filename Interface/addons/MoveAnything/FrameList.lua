@@ -57,12 +57,12 @@ local m = {
 		API:AddElement({name = "CriteriaAlertFrame1", displayName = "Criteria Alert 1", create = "CriteriaAlertFrameTemplate"}, c)
 		API:AddElement({name = "CriteriaAlertFrame2", displayName = "Criteria Alert 2", create = "CriteriaAlertFrameTemplate"}, c)
 		local gcaf = API:AddElement({name = "GuildChallengeAlertFrame", displayName = "Guild Challenge Achievement Alert"}, c)
-		API:AddElement({name = "WatchFrameMover", displayName = "Objectives Window", scaleWH = 1, run = function()
-			if not MovAny:IsModified(WatchFrameMover) then
+		API:AddElement({name = "ObjectiveTrackerFrameMover", displayName = "Objectives Window", scaleWH = 1, run = function()
+			--[[if not MovAny:IsModified(WatchFrameMover) then
 				_G["InterfaceOptionsObjectivesPanelWatchFrameWidth"]:SetEnabled(false)
-			end
+			end]]
 		end}, c)
-		API:AddElement({name = "WatchFrame", displayName = "Objectives Window Scale"}, c)
+		API:AddElement({name = "ObjectiveTrackerFrame", displayName = "Objectives Window Scale"}, c)
 		local qldf = API:AddElement({name = "QuestLogDetailFrame", displayName = "Quest Details", runOnce = function()
 			if not QuestLogDetailFrame:IsShown() then
 				ShowUIPanel(QuestLogDetailFrame)
@@ -77,7 +77,9 @@ local m = {
 					HideUIPanel(GossipFrame)
 				end
 			end)
-			hooksecurefunc("DeclineQuest", function() HideUIPanel(GossipFrame) end)
+			hooksecurefunc("DeclineQuest", function()
+				HideUIPanel(GossipFrame)
+			end)
 		end}, c)
 		--API:AddElement({name = "QuestTimerFrame", displayName = "Quest Timer"}, c)
 		c = API:GetCategory("Arena")
@@ -437,6 +439,8 @@ local m = {
 		API:AddElement({name = "TabardFrame", displayName = "Tabard Design"}, c)
 		API:AddElement({name = "PlayerTalentFrame", displayName = "Specialization / Talents / Glyphs", refuseSync = MOVANY.FRAME_ONLY_ONCE_OPENED}, c)
 		API:AddElement({name = "TradeFrame", displayName = "Trade"}, c)
+		API:AddElement({name = "ArchaeologyFrame", displayName = "Archaeology"}, c)
+		API:AddElement({name = "ReforgingFrame", displayName = "Reforge"}, c)
 		API:AddElement({name = "TradeSkillFrame", displayName = "Trade Skills"}, c)
 		API:AddElement({name = "ClassTrainerFrame", displayName = "Trainer Frame"}, c)
 		c = API:GetCategory("Loot")

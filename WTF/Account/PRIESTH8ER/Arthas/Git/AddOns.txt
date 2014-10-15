@@ -1,6 +1,6 @@
 acb_CastBar: disabled
 acb_Mirror: disabled
-ACP: enabled
+ACP: disabled
 ag_Extras: disabled
 ag_Options: disabled
 ag_UnitFrames: disabled
@@ -14,15 +14,15 @@ AtlasLoot_OriginalWoW: disabled
 AtlasLoot_WorldEvents: disabled
 AtlasLoot_WrathoftheLichKing: disabled
 AtlasLootFu: disabled
-Auc-Advanced: enabled
-Auc-Filter-Basic: enabled
-Auc-ScanData: enabled
-Auc-Stat-Histogram: enabled
-Auc-Stat-iLevel: enabled
-Auc-Stat-Purchased: enabled
-Auc-Stat-Simple: enabled
-Auc-Stat-StdDev: enabled
-Auc-Util-FixAH: enabled
+Auc-Advanced: disabled
+Auc-Filter-Basic: disabled
+Auc-ScanData: disabled
+Auc-Stat-Histogram: disabled
+Auc-Stat-iLevel: disabled
+Auc-Stat-Purchased: disabled
+Auc-Stat-Simple: disabled
+Auc-Stat-StdDev: disabled
+Auc-Util-FixAH: disabled
 AVR: disabled
 AVRE: disabled
 AVRE_Icecrown: disabled
@@ -67,7 +67,7 @@ ElitistGroup: disabled
 ElkBuffBars: disabled
 Enchantrix: disabled
 Enchantrix-Barker: disabled
-EnsidiaFails: enabled
+EnsidiaFails: disabled
 epgp: enabled
 epgp_lootmaster: enabled
 epgp_lootmaster_ml: enabled
@@ -256,7 +256,7 @@ TargetForMe: disabled
 TB_Core: disabled
 TB_Misdirector: disabled
 TB_RaidHelper: disabled
-TidyPlates: enabled
+TidyPlates: disabled
 TidyPlates_Grey: disabled
 TidyPlates_Neon: disabled
 TidyPlates_CleanPlates: disabled
@@ -398,7 +398,7 @@ Arh: disabled
 GCD: disabled
 AtlasLoot_Loader: disabled
 GuildMacros: disabled
-TidyPlatesHub: enabled
+TidyPlatesHub: disabled
 AtramedesShieldClicker: disabled
 EclipseBarPlus: disabled
 SellJunk: disabled
@@ -451,7 +451,7 @@ SkadaDamage: enabled
 SkadaDebuffs: enabled
 SkadaDispels: enabled
 SkadaEnemies: enabled
-TidyPlatesWidgets: enabled
+TidyPlatesWidgets: disabled
 VisualCombatTable: disabled
 YorsahjPriority: disabled
 Yorsahj Automatic Raidwarnings: disabled
@@ -481,7 +481,7 @@ GTFO: enabled
 GuildVote: disabled
 Masque: enabled
 Masque_LiteStep: disabled
-OpenRaid: enabled
+OpenRaid: disabled
 PhoenixStyle_Loader_Cata: enabled
 PitBull4_BattlePet: disabled
 PitBull4_BurningEmbers: disabled
@@ -555,8 +555,8 @@ _NPCScan: disabled
 _NPCScan.AutoAdd: disabled
 _NPCScan.Overlay: disabled
 _NPCScan.Overlay.Broker: disabled
-BigWigs: disabled
-CombatReplay: enabled
+BigWigs: enabled
+CombatReplay: disabled
 CombatReplay_Logger: enabled
 CombatReplay_SavedData: enabled
 DiminishingReturns: disabled
@@ -575,7 +575,7 @@ WeakAurasModelPaths: enabled
 WeakAurasOptions: enabled
 GuildBankRepairToggle: enabled
 WhoPulled: enabled
-AutoRez: enabled
+AutoRez: disabled
 AskMrRobot: enabled
 TauntAware: enabled
 CoolLine: disabled
@@ -586,7 +586,7 @@ SlashIn: enabled
 BetterPowerBarAlt: enabled
 RaidBoss: disabled
 hagakure_cooldowns: disabled
-GCGambler: enabled
+GCGambler: disabled
 TrainAlert: enabled
 Bazooka: disabled
 Bazooka_Options: disabled
@@ -608,3 +608,9 @@ ElvUI_Config: disabled
 ElvUI: disabled
 Bagnon_Scrap: disabled
 Bagnon_Facade: disabled
+FriendGroups: disabled
+oqueue: disabled
+LibCandyBar-3.0: enabled
+LibDDI-1.0: enabled
+LibChatAnims: enabled
+LibDualSpec-1.0: enabled

@@ -3443,7 +3443,7 @@ local function LootAlertsTab_Create()
 
  -- Item quality checkboxes.
  local anchor = fontString
- for quality = ITEM_QUALITY_POOR, ITEM_QUALITY_EPIC do
+ for quality = LE_ITEM_QUALITY_POOR, LE_ITEM_QUALITY_EPIC do
   local checkbox = MSBTControls.CreateCheckbox(tabFrame)
   local label = _G["ITEM_QUALITY" .. quality .. "_DESC"]
   local color = ITEM_QUALITY_COLORS[quality]
@@ -3548,7 +3548,7 @@ local function LootAlertsTab_OnShow()
  tabFrame.moneyGainsFontString:SetText(eventSettings.message)
 
  -- Item qualities.
- for quality = ITEM_QUALITY_POOR, ITEM_QUALITY_EPIC do
+ for quality = LE_ITEM_QUALITY_POOR, LE_ITEM_QUALITY_EPIC do
   controls["quality" .. quality .. "Checkbox"]:SetChecked(not currentProfile.qualityExclusions[quality])
  end
  

@@ -790,6 +790,14 @@ Change Log:
 		- Added WoD spells for Shadowmoon Burial Grounds
 		- Added WoD spells for the Everbloom
 		- Added WoD spells for Upper Blackrock Spire
+	v4.34.1
+		- Added Traditional Chinese localization - Thanks BNSSNB
+		- Added Pandaria spells for Siege of Orgrimmar (Heroic)
+		- Added WoD spells for Highmaul
+		- Added WoD spells for Blackrock Foundry
+		- Added WoD spells for Iron Docks
+	v4.35
+		- Updated for patch 6.0
 
 ]]--
 GTFO = {
@@ -807,8 +815,8 @@ GTFO = {
 		IgnoreOptions = { };
 		TrivialDamagePercent = 2; -- Minimum % of HP lost required for an alert to be trivial
 	};
-	Version = "4.34"; -- Version number (text format)
-	VersionNumber = 43400; -- Numeric version number for checking out-of-date clients
+	Version = "4.35"; -- Version number (text format)
+	VersionNumber = 43500; -- Numeric version number for checking out-of-date clients
 	DataLogging = nil; -- Indicate whether or not the addon needs to run the datalogging function (for hooking)
 	DataCode = "4"; -- Saved Variable versioning, change this value to force a reset to default
 	CanTank = nil; -- The active character is capable of tanking
@@ -847,21 +855,23 @@ GTFO = {
 		StackCounter = 0;
 		DisableGTFO = nil;
 	};
-	BetaMode = nil; -- WoW Beta client detection
+	BetaMode = nil; -- WoW Beta/PTR client detection
 	SoundChannels = { 
 		{ Code = "Master", Name = _G.MASTER },
 		{ Code = "SFX", Name = _G.SOUND_VOLUME, CVar = "Sound_EnableSFX" },
 		{ Code = "Ambience", Name = _G.AMBIENCE_VOLUME, CVar = "Sound_EnableAmbience" },
 		{ Code = "Music", Name = _G.MUSIC_VOLUME, CVar = "Sound_EnableMusic" },
+		{ Code = "Dialog", Name = _G.DIALOG_VOLUME },
 	};
 };
 
 GTFOData = {};
 
+--[[
 if (select(4, GetBuildInfo()) >= 60000) then
 	GTFO.BetaMode = true;
-	tinsert(GTFO.SoundChannels, { Code = "Dialog", Name = _G.DIALOG_VOLUME });
 end
+]]--
 
 StaticPopupDialogs["GTFO_POPUP_MESSAGE"] = {
 	preferredIndex = 3,

@@ -80,3 +80,4 @@ Bagnon_AccountSearch: disabled
 Bagnon_Facade: disabled
 RaidRoll: enabled
 RaidRoll_LootTracker: enabled
+ACP: disabled

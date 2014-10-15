@@ -251,19 +251,6 @@ ThreatPlatesDB = {
 				}, -- [2]
 			},
 		},
-		["Git - Cho'gall"] = {
-			["welcome"] = true,
-			["specInfo"] = {
-				{
-					["name"] = "Protection",
-					["role"] = "TANK",
-				}, -- [1]
-				{
-					["name"] = "Fury",
-					["role"] = "DAMAGER",
-				}, -- [2]
-			},
-		},
 		["Greny - Azuremyst"] = {
 			["specInfo"] = {
 				{
@@ -278,6 +265,19 @@ ThreatPlatesDB = {
 			["welcome"] = true,
 			["spec"] = {
 				["primary"] = false,
+			},
+		},
+		["Git - Cho'gall"] = {
+			["welcome"] = true,
+			["specInfo"] = {
+				{
+					["name"] = "Protection",
+					["role"] = "TANK",
+				}, -- [1]
+				{
+					["name"] = "Fury",
+					["role"] = "DAMAGER",
+				}, -- [2]
 			},
 		},
 		["Giitt - Feathermoon"] = {
@@ -414,8 +414,8 @@ ThreatPlatesDB = {
 		["Gimm - Cho'gall"] = "Default",
 		["Gitt - Arthas"] = "Gitt - Monk",
 		["Git - Arthas"] = "Default",
-		["Git - Cho'gall"] = "Default",
 		["Greny - Azuremyst"] = "Default",
+		["Git - Cho'gall"] = "Default",
 		["Giitt - Feathermoon"] = "Default",
 		["Git - Azuremyst"] = "Default",
 		["Spih - Cho'gall"] = "Spih",
@@ -430,10 +430,10 @@ ThreatPlatesDB = {
 		["Giit tank"] = {
 			["nameplate"] = {
 				["scale"] = {
-					["Normal"] = 0.6000000238418579,
-					["Boss"] = 0.6000000238418579,
-					["Neutral"] = 0.6000000238418579,
-					["Elite"] = 0.6000000238418579,
+					["Normal"] = 0.600000023841858,
+					["Boss"] = 0.600000023841858,
+					["Neutral"] = 0.600000023841858,
+					["Elite"] = 0.600000023841858,
 				},
 				["toggle"] = {
 					["Totem"] = true,
@@ -449,14 +449,6 @@ ThreatPlatesDB = {
 				[34] = {
 				},
 				[48] = {
-				},
-				[38] = {
-				},
-				[40] = {
-				},
-				[42] = {
-				},
-				[49] = {
 				},
 				["list"] = {
 					"Shadow Fiend", -- [1]
@@ -509,6 +501,14 @@ ThreatPlatesDB = {
 					"", -- [48]
 					"", -- [49]
 					"", -- [50]
+				},
+				[40] = {
+				},
+				[42] = {
+				},
+				[49] = {
+				},
+				[38] = {
 				},
 			},
 			["settings"] = {
@@ -565,7 +565,7 @@ ThreatPlatesDB = {
 				},
 				[48] = {
 				},
-				["list"] = {
+				[38] = {
 				},
 				[40] = {
 				},
@@ -573,7 +573,7 @@ ThreatPlatesDB = {
 				},
 				[49] = {
 				},
-				[38] = {
+				["list"] = {
 				},
 			},
 		},
@@ -583,9 +583,9 @@ ThreatPlatesDB = {
 					["Totem"] = true,
 				},
 				["scale"] = {
-					["Elite"] = 0.6000000238418579,
+					["Elite"] = 0.600000023841858,
 					["Boss"] = 0.8,
-					["Neutral"] = 0.6000000238418579,
+					["Neutral"] = 0.600000023841858,
 					["Normal"] = 0.5,
 				},
 			},
@@ -739,14 +739,6 @@ ThreatPlatesDB = {
 				},
 				[48] = {
 				},
-				[38] = {
-				},
-				[40] = {
-				},
-				[42] = {
-				},
-				[49] = {
-				},
 				["list"] = {
 					"Shadow Fiend", -- [1]
 					"Spirit Wolf", -- [2]
@@ -798,6 +790,14 @@ ThreatPlatesDB = {
 					"", -- [48]
 					"", -- [49]
 					"", -- [50]
+				},
+				[40] = {
+				},
+				[42] = {
+				},
+				[49] = {
+				},
+				[38] = {
 				},
 			},
 			["settings"] = {
@@ -847,8 +847,8 @@ ThreatPlatesDB = {
 				["scale"] = {
 					["Normal"] = 0.5,
 					["Boss"] = 0.8,
-					["Elite"] = 0.6000000238418579,
-					["Neutral"] = 0.6000000238418579,
+					["Elite"] = 0.600000023841858,
+					["Neutral"] = 0.600000023841858,
 				},
 				["toggle"] = {
 					["Totem"] = true,
@@ -862,6 +862,8 @@ ThreatPlatesDB = {
 				[41] = {
 				},
 				[34] = {
+				},
+				[38] = {
 				},
 				["list"] = {
 					"Shadow Fiend", -- [1]
@@ -914,8 +916,6 @@ ThreatPlatesDB = {
 					"", -- [48]
 					"", -- [49]
 					"", -- [50]
-				},
-				[38] = {
 				},
 				[40] = {
 				},
@@ -993,7 +993,7 @@ ThreatPlatesDB = {
 				},
 				[48] = {
 				},
-				["list"] = {
+				[38] = {
 				},
 				[40] = {
 				},
@@ -1001,7 +1001,7 @@ ThreatPlatesDB = {
 				},
 				[49] = {
 				},
-				[38] = {
+				["list"] = {
 				},
 			},
 		},
@@ -1017,7 +1017,7 @@ ThreatPlatesDB = {
 				},
 				[48] = {
 				},
-				["list"] = {
+				[38] = {
 				},
 				[40] = {
 				},
@@ -1025,7 +1025,7 @@ ThreatPlatesDB = {
 				},
 				[49] = {
 				},
-				[38] = {
+				["list"] = {
 				},
 			},
 		},

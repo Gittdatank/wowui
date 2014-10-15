@@ -36,8 +36,6 @@ BLCDDB = {
 			["hideempty"] = true,
 			["yOffset"] = -70.0499267578125,
 			["cooldown"] = {
-				["PRI_GUSP"] = false,
-				["PAL_HAOFPR"] = true,
 				["DEA_ANMAZO"] = true,
 				["SHA_SPLITO"] = true,
 				["DRU_RE"] = false,
@@ -46,6 +44,8 @@ BLCDDB = {
 				["DRU_IN"] = false,
 				["PRI_HYOFHO"] = false,
 				["WARL_SORE"] = false,
+				["PRI_GUSP"] = false,
+				["PAL_HAOFPR"] = true,
 				["DEA_RAAL"] = false,
 			},
 			["scale"] = 1.32,

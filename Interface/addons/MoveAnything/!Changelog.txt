@@ -3,6 +3,38 @@
 * Reseting bags while the bag is not opened won't reset it's scale to default.
 
 
+**14.0.9**
+* Quick update for 6.0.2 for the US guys out there.
+
+**14.0.8**
+* Fixed a nasty taint.
+* Added frames:
+	* ArchaeologyFrame
+	* ReforgingFrame
+
+**14.0.7**
+* Fixed the issue with saved variables loss.
+* The interface options should properly update on show.
+* Added some extra taint protection.
+* Some other smaller fixes.
+
+**14.0.6**
+* Player buff and debuff frames are now properly scaleable.
+* Consolidate buff fixes.
+* Fixed frames:
+	* Player Buffs Default
+	* Player Buffs From Right to Left
+	* Player Debuffs Default
+	* Player Debuffs From Right to Left
+
+**14.0.5**
+* Force locked buff/debuff frames on unitframes.
+* Fixed frames:
+	* TargetBuffsMover
+	* TargetDebuffsMover
+	* FocusBuffsMover
+	* FocusDebuffsMover
+
 **14.0.4**
 * Fixed an issue which caused massive errors when you hidden your "AchievementMicroButton" by any way.
 * Added frames:

@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(325, "DBM-DragonSoul", nil, 187)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 118 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 131 $"):sub(12, -3))
 mod:SetCreatureID(55312)
 mod:SetEncounterID(1295)
 --mod:DisableRegenDetection()--Uncomment in next dbm release
@@ -242,7 +242,7 @@ function mod:CHAT_MSG_ADDON(prefix, message, channel, sender)
 	if cmd == "CLEAR" then
 		DBM.Arrow:Hide()
 	elseif oozePos[cmd] then
-		DBM.Arrow:ShowRunTo(oozePos[cmd][1]/100,oozePos[cmd][2]/100,nil,20)
+		DBM.Arrow:ShowRunTo(oozePos[cmd][1],oozePos[cmd][2],nil,20,true)
 	end
 end
 

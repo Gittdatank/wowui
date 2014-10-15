@@ -1,5 +1,5 @@
 
-local BIGWIGS_AUTHORS = "rabbit, ammo, 7destiny, pettigrow, ananhaid, mojosdojo, Wetxius, jongt23, tekkub, fenlis, StingerSoft, shyva, _yusaku_, dynaletik, cwdg, gamefaq, yoshimo, sayclub, saroz, nevcairiel, s8095324, handdol, durcyn, chuanhsing, scorpio0920, kebinusan, flyflame, onyxmaster, zhTW, grimwald, Dynaletik, lcf_hell, starinnia, chinkuwaila, arrowmaster, mysticalos, next96, tnt2ray, Leialyn, ackis, moonsorrow, fryguy, xinsonic, jerry, beerke, stanzilla, tsigo, hk2717, cremor, pigmonkey, ulic, Carlos, mecdemort, a9012456, cronan, Cybersea, gnarfoz, nirek, hyperactiveChipmunk, darchon, neriak, mikk, darkwings, hshh, otravi, yhpdoit, kergoth, kjheng, AnarkiQ3, dessa, ethancentaurai, Swix, Sayclub, Gothwin, erwanoops, nymbia, oojoo, kyahx, valdriethien, profalbert, illiaster, oxman, phyber, Traeumer, Anadale, zealotonastick, tazmanyak, tain, archarodim, thiana, ckknight, Adam77, kemayo, coalado, silverwind, Zidomo, lucen."
+local BIGWIGS_AUTHORS = "rabbit, ammo, 7destiny, pettigrow, ananhaid, mojosdojo, Wetxius, jongt23, tekkub, fenlis, _yusaku_, shyva, StingerSoft, dynaletik, cwdg, gamefaq, yoshimo, sayclub, saroz, nevcairiel, s8095324, handdol, durcyn, chuanhsing, scorpio0920, kebinusan, Dynaletik, flyflame, zhTW, stanzilla, onyxmaster, MysticalOS, grimwald, lcf_hell, starinnia, chinkuwaila, arrowmaster, next96, tnt2ray, ackis, Leialyn, cremor, moonsorrow, jerry, fryguy, xinsonic, beerke, shari83, tsigo, hk2717, pigmonkey, ulic, mecdemort, Carlos, gnarfoz, a9012456, Cybersea, cronan, hyperactiveChipmunk, darchon, neriak, nirek, mikk, darkwings, hshh, otravi, yhpdoit, kjheng, AnarkiQ3, kergoth, dessa, ethancentaurai, Sayclub, erwanoops, Swix, Gothwin, illiaster, oojoo, nymbia, kyahx, valdriethien, phyber, oxman, profalbert, Traeumer, Zidomo, Anadale, tazmanyak, tain, thiana, ckknight, kemayo, zealotonastick, archarodim, coalado, silverwind, lucen, Adam77."
 
 local BigWigs = BigWigs
 local options = BigWigs:NewModule("Options")
@@ -213,39 +213,46 @@ local acOptions = {
 			order = 44,
 			width = "full",
 		},
+		slashDescBreak = {
+			type = "description",
+			name = "  ".. L.slashDescBreak,
+			fontSize = "medium",
+			order = 45,
+			width = "full",
+		},
 		slashDescBar = {
 			type = "description",
 			name = "  ".. L.slashDescRaidBar,
 			fontSize = "medium",
-			order = 45,
+			order = 46,
 			width = "full",
 		},
 		slashDescLocalBar = {
 			type = "description",
 			name = "  ".. L.slashDescLocalBar,
 			fontSize = "medium",
-			order = 46,
+			order = 47,
 			width = "full",
 		},
 		slashDescRange = {
 			type = "description",
 			name = "  ".. L.slashDescRange,
 			fontSize = "medium",
-			order = 47,
+			order = 48,
 			width = "full",
 		},
 		slashDescVersion = {
 			type = "description",
 			name = "  ".. L.slashDescVersion,
 			fontSize = "medium",
-			order = 48,
+			order = 49,
 			width = "full",
 		},
 		slashDescConfig = {
 			type = "description",
 			name = "  ".. L.slashDescConfig,
 			fontSize = "medium",
-			order = 49,
+			order = 50,
 			width = "full",
 		},
 	},
@@ -264,25 +271,11 @@ local function translateZoneID(id)
 	if not id or type(id) ~= "number" then return end
 	local name
 	if id < 10 then
-		-- XXX compat
-		if BigWigs.isWOD then
-			name = select(id * 2, GetMapContinents())
-		else
-			name = select(id, GetMapContinents())
-		end
+		name = select(id * 2, GetMapContinents())
 	else
 		name = GetMapNameByID(id)
 	end
-	if not name then -- XXX compat
-		if id == 988 then
-			name = "Blackrock Foundry [BETA]"
-		elseif id == 994 then
-			name = "Highmaul [BETA]"
-		elseif id == 962 then
-			name = "Draenor [BETA]"
-		end
-	end
-	return name or tostring(id)
+	return name
 end
 
 local function findPanel(name, parent)
@@ -334,7 +327,7 @@ function options:OnInitialize()
 		local noteKey = "Notes"
 		if GetAddOnMetadata("BigWigs", "Notes-" .. GetLocale()) then noteKey = "Notes-" .. GetLocale() end
 		local notes = GetAddOnMetadata("BigWigs", noteKey)
-		subtitle:SetText(notes .. " |cff44ff44" .. BigWigsLoader.BIGWIGS_RELEASE_STRING .. "|r")
+		subtitle:SetText(notes .. " |cff44ff44" .. BigWigsLoader:GetReleaseString() .. "|r")
 
 		local anchor = nil
 		for i, field in next, fields do
@@ -388,14 +381,15 @@ function options:OnInitialize()
 end
 
 function options:OnEnable()
+	self:RegisterMessage("BigWigs_BossModuleRegistered", "Register")
+	self:RegisterMessage("BigWigs_PluginRegistered", "Register")
+
 	for name, module in BigWigs:IterateBossModules() do
 		self:Register("BigWigs_BossModuleRegistered", name, module)
 	end
 	for name, module in BigWigs:IteratePlugins() do
 		self:Register("BigWigs_PluginRegistered", name, module)
 	end
-	self:RegisterMessage("BigWigs_BossModuleRegistered", "Register")
-	self:RegisterMessage("BigWigs_PluginRegistered", "Register")
 
 	self:RegisterMessage("BigWigs_SetConfigureTarget")
 	self:RegisterMessage("BigWigs_StartConfigureMode")
@@ -404,8 +398,10 @@ function options:OnEnable()
 	local tmp, tmpZone = {}, {}
 	for k in next, BigWigsLoader:GetZoneMenus() do
 		local zone = translateZoneID(k)
-		tmp[zone] = k
-		tmpZone[#tmpZone+1] = zone
+		if zone then
+			tmp[zone] = k
+			tmpZone[#tmpZone+1] = zone
+		end
 	end
 	sort(tmpZone)
 	for i=1, #tmpZone do
@@ -873,168 +869,295 @@ local function populateToggleOptions(widget, module)
 	if module.encounterId and module.zoneId and BigWigs:GetPlugin("Statistics").db.profile.enabled and sDB and sDB[module.zoneId] and sDB[module.zoneId][module.encounterId] then
 		sDB = sDB[module.zoneId][module.encounterId]
 
-		-- Create statistics table
-		local statGroup = AceGUI:Create("InlineGroup")
-		statGroup:SetTitle(L.statistics)
-		statGroup:SetLayout("Flow")
-		statGroup:SetFullWidth(true)
-		scrollFrame:AddChild(statGroup)
+		if sDB.LFR or sDB.normal or sDB.heroic or sDB.mythic then -- Create NEW statistics table
+			local statGroup = AceGUI:Create("InlineGroup")
+			statGroup:SetTitle(L.statistics)
+			statGroup:SetLayout("Flow")
+			statGroup:SetFullWidth(true)
+			scrollFrame:AddChild(statGroup)
 
-		local statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText("")
-		statGroup:AddChild(statistics)
+			local statistics = AceGUI:Create("Label")
+			statistics:SetWidth(100)
+			statistics:SetText("")
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(L.norm25)
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(100)
+			statistics:SetText(L.lfr)
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(L.heroic25)
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(100)
+			statistics:SetText(L.normal)
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(L.norm10)
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(100)
+			statistics:SetText(L.heroic)
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(L.heroic10)
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(100)
+			statistics:SetText(L.mythic)
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(L.lfr)
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetFullWidth(true)
+			statistics:SetText("")
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(L.flex)
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(100)
+			statistics:SetText(L.wipes)
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetFullWidth(true)
-		statistics:SetText("")
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(100)
+			statistics:SetText(sDB.LFR and sDB.LFR.wipes or "-")
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(L.wipes)
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(100)
+			statistics:SetText(sDB.normal and sDB.normal.wipes or "-")
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(sDB["25"] and sDB["25"].wipes or "-")
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(100)
+			statistics:SetText(sDB.heroic and sDB.heroic.wipes or "-")
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(sDB["25h"] and sDB["25h"].wipes or "-")
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(100)
+			statistics:SetText(sDB.mythic and sDB.mythic.wipes or "-")
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(sDB["10"] and sDB["10"].wipes or "-")
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetFullWidth(true)
+			statistics:SetText("")
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(sDB["10h"] and sDB["10h"].wipes or "-")
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(100)
+			statistics:SetText(L.kills)
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(sDB.lfr and sDB.lfr.wipes or "-")
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(100)
+			statistics:SetText(sDB.LFR and sDB.LFR.kills or "-")
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(sDB.flex and sDB.flex.wipes or "-")
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(100)
+			statistics:SetText(sDB.normal and sDB.normal.kills or "-")
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetFullWidth(true)
-		statistics:SetText("")
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(100)
+			statistics:SetText(sDB.heroic and sDB.heroic.kills or "-")
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(L.kills)
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(100)
+			statistics:SetText(sDB.mythic and sDB.mythic.kills or "-")
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(sDB["25"] and sDB["25"].kills or "-")
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetFullWidth(true)
+			statistics:SetText("")
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(sDB["25h"] and sDB["25h"].kills or "-")
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(100)
+			statistics:SetText(L.best)
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(sDB["10"] and sDB["10"].kills or "-")
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(100)
+			statistics:SetText(sDB.LFR and sDB.LFR.best and SecondsToTime(sDB.LFR.best) or "-")
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(sDB["10h"] and sDB["10h"].kills or "-")
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(100)
+			statistics:SetText(sDB.normal and sDB.normal.best and SecondsToTime(sDB.normal.best) or "-")
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(sDB.lfr and sDB.lfr.kills or "-")
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(100)
+			statistics:SetText(sDB.heroic and sDB.heroic.best and SecondsToTime(sDB.heroic.best) or "-")
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(sDB.flex and sDB.flex.kills or "-")
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(100)
+			statistics:SetText(sDB.mythic and sDB.mythic.best and SecondsToTime(sDB.mythic.best) or "-")
+			statGroup:AddChild(statistics)
+		end -- End NEW statistics table
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetFullWidth(true)
-		statistics:SetText("")
-		statGroup:AddChild(statistics)
+		---------------------------------------------------------------------------
+		---------------------------------------------------------------------------
+		---------------------------------------------------------------------------
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(L.best)
-		statGroup:AddChild(statistics)
+		if sDB["25"] or sDB["25h"] or sDB["10"] or sDB["10h"] or sDB.lfr or sDB.flex then -- Create OLD statistics table
+			local statGroup = AceGUI:Create("InlineGroup")
+			statGroup:SetTitle(L.statistics)
+			statGroup:SetLayout("Flow")
+			statGroup:SetFullWidth(true)
+			scrollFrame:AddChild(statGroup)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(sDB["25"] and sDB["25"].best and SecondsToTime(sDB["25"].best) or "-")
-		statGroup:AddChild(statistics)
+			local statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText("")
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(sDB["25h"] and sDB["25h"].best and SecondsToTime(sDB["25h"].best) or "-")
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(L.norm25)
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(sDB["10"] and sDB["10"].best and SecondsToTime(sDB["10"].best) or "-")
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(L.heroic25)
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(sDB["10h"] and sDB["10h"].best and SecondsToTime(sDB["10h"].best) or "-")
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(L.norm10)
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(sDB.lfr and sDB.lfr.best and SecondsToTime(sDB.lfr.best) or "-")
-		statGroup:AddChild(statistics)
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(L.heroic10)
+			statGroup:AddChild(statistics)
 
-		statistics = AceGUI:Create("Label")
-		statistics:SetWidth(77)
-		statistics:SetText(sDB.flex and sDB.flex.best and SecondsToTime(sDB.flex.best) or "-")
-		statGroup:AddChild(statistics)
-		-- End statistics table
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(L.lfr)
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(L.flex)
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetFullWidth(true)
+			statistics:SetText("")
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(L.wipes)
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(sDB["25"] and sDB["25"].wipes or "-")
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(sDB["25h"] and sDB["25h"].wipes or "-")
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(sDB["10"] and sDB["10"].wipes or "-")
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(sDB["10h"] and sDB["10h"].wipes or "-")
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(sDB.lfr and sDB.lfr.wipes or "-")
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(sDB.flex and sDB.flex.wipes or "-")
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetFullWidth(true)
+			statistics:SetText("")
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(L.kills)
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(sDB["25"] and sDB["25"].kills or "-")
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(sDB["25h"] and sDB["25h"].kills or "-")
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(sDB["10"] and sDB["10"].kills or "-")
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(sDB["10h"] and sDB["10h"].kills or "-")
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(sDB.lfr and sDB.lfr.kills or "-")
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(sDB.flex and sDB.flex.kills or "-")
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetFullWidth(true)
+			statistics:SetText("")
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(L.best)
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(sDB["25"] and sDB["25"].best and SecondsToTime(sDB["25"].best) or "-")
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(sDB["25h"] and sDB["25h"].best and SecondsToTime(sDB["25h"].best) or "-")
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(sDB["10"] and sDB["10"].best and SecondsToTime(sDB["10"].best) or "-")
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(sDB["10h"] and sDB["10h"].best and SecondsToTime(sDB["10h"].best) or "-")
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(sDB.lfr and sDB.lfr.best and SecondsToTime(sDB.lfr.best) or "-")
+			statGroup:AddChild(statistics)
+
+			statistics = AceGUI:Create("Label")
+			statistics:SetWidth(77)
+			statistics:SetText(sDB.flex and sDB.flex.best and SecondsToTime(sDB.flex.best) or "-")
+			statGroup:AddChild(statistics)
+		end -- End OLD statistics table
 	end
 
 	if module.SetupOptions then module:SetupOptions() end
@@ -1223,8 +1346,8 @@ do
 	function options:GetZonePanel(zoneId)
 		local zoneName = translateZoneID(zoneId)
 		local parent = BigWigsLoader.zoneTbl[zoneId] and addonNameToHeader[BigWigsLoader.zoneTbl[zoneId]] or addonNameToHeader.BigWigs_WarlordsOfDraenor or addonNameToHeader.BigWigs_MistsOfPandaria -- XXX compat
-		local panel, created = self:GetPanel(zoneName, parent, zoneId)
-		if created then
+		local panel, justCreated = self:GetPanel(zoneName, parent, zoneId)
+		if justCreated then
 			panel:SetScript("OnShow", onZoneShow)
 			panel:SetScript("OnHide", onZoneHide)
 		end

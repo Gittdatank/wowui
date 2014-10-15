@@ -1,5 +1,4 @@
 local Auras = {}
-local stealableColor = {r = 1, g = 1, b = 1}
 local playerUnits = {player = true, vehicle = true, pet = true}
 local mainHand, offHand, ranged, tempEnchantScan = {time = 0}, {time = 0}, {time = 0}
 local canCure = ShadowUF.Units.canCure
@@ -500,14 +499,22 @@ function Auras:UpdateFilter(frame)
 end
 
 local function categorizeAura(type, curable, auraType, caster, isRemovable, shouldConsolidate, canApplyAura, isBossDebuff)
+	-- Player casted it
 	if( playerUnits[caster] ) then
 		return "player"
+	-- Boss aura
 	elseif( isBossDebuff ) then
 		return "boss"
+	-- Can dispell, curable checks type already
+	elseif( curable and canCure[auraType] ) then
+		return "raid"
+	-- Can apply it ourselves
 	elseif( type == "buffs" and canApplyAura ) then
 		return "raid"
-	elseif( type == "debuffs" and ( isRemovable or ( curable and canCure[auraType] ) ) ) then
+	-- Can be stolen/purged (dispellable)
+	elseif( type == "debuffs" and isRemovable ) then
 		return "raid"
+	-- Consolidatable buff
 	elseif( type == "buffs" and shouldConsolidate ) then
 		return "consolidated"
 	else
@@ -549,8 +556,8 @@ local function renderAura(parent, frame, type, config, displayConfig, index, fil
 		button.cooldown:Hide()
 	end
 	
-	-- Enlarge our own auras
-	if( ( category == "player" and config.enlarge.SELF ) or ( category == "boss" and config.enlarge.BOSS ) or ( category == "raid" and type == "debuffs" and config.enlarge.REMOVABLE ) ) then
+	-- Enlarge auras
+	if( ( category == "player" and config.enlarge.SELF ) or ( category == "boss" and config.enlarge.BOSS ) or ( isRemovable and not isFriendly and config.enlarge.REMOVABLE ) ) then
 		button.isSelfScaled = true
 		button:SetScale(config.selfScale)
 	else
@@ -575,13 +582,14 @@ local function renderAura(parent, frame, type, config, displayConfig, index, fil
 	button:Show()
 end
 
+
 -- Scan for auras
 local function scan(parent, frame, type, config, displayConfig, filter)
 	if( frame.totalAuras >= frame.maxAuras or not config.enabled ) then return end
 	
 	-- UnitIsFriend returns true during a duel, which breaks stealable/curable detection
 	local isFriendly = not UnitIsEnemy(frame.parent.unit, "player")
-	local curable = (isFriendly and type == "debuffs" and config.raid)
+	local curable = (isFriendly and type == "debuffs")
 	local index = 0
 	while( true ) do
 		index = index + 1

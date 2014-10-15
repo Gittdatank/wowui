@@ -88,7 +88,7 @@ GoldSave = {
 	["Git_Arthas::Horde"] = {
 		["show"] = true,
 		["name"] = "Git",
-		["gold"] = 2555057985,
+		["gold"] = 2587530265,
 	},
 	["Dbyx_Arthas::Horde"] = {
 		["show"] = true,

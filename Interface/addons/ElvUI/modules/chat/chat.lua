@@ -121,40 +121,10 @@ local specialChatIcons = {
 		["Tirain"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\tyrone_biggums_chat_logo.tga:16:18|t"
 	},
 	["Spirestone"] = {
-		["Aeriane"] = true,
-
 		["Sinth"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\tyrone_biggums_chat_logo.tga:16:18|t",
-
-		["Sarah"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\ElvUI_Chat_Logo:13:22|t",
-		["Sara"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\helloKittyChatLogo.tga:18:20|t",
-		["Sarâh"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\helloKittyChatLogo.tga:18:20|t",
-		["Dalphia"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\helloKittyChatLogo.tga:18:20|t",
-		["Desani"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\helloKittyChatLogo.tga:18:20|t",
-		["Shootiecutie"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\helloKittyChatLogo.tga:18:20|t",
-		["Belendria"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\helloKittyChatLogo.tga:18:20|t",
-		["Ophelia"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\helloKittyChatLogo.tga:18:20|t",
-		["Suisen"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\helloKittyChatLogo.tga:18:20|t",
-
 		["Itzjonny"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\hulk_head:18:22|t",
-
-		["Elvz"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\ElvUI_Chat_Logo:13:22|t",
-		["Elv"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\ElvUI_Chat_Logo:13:22|t",
-		["Jarvix"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\ElvUI_Chat_Logo:13:22|t",
-		["Elvilas"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\ElvUI_Chat_Logo:13:22|t",
-		["Watermelon"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\ElvUI_Chat_Logo:13:22|t",
-
 		["Incisìon"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\short_bus.tga:16:16|t",
-
 		["Salaen"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\beiber_chat.tga:18:20|t",
-
-		["Misdîrect"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\rainbow_icon.tga:18:20|t",
-		["Mismayhem"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\rainbow_icon.tga:18:20|t",
-		["Misdivine"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\rainbow_icon.tga:18:20|t",
-		["Mislust"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\rainbow_icon.tga:18:20|t",
-		["Mispel"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\rainbow_icon.tga:18:20|t",
-		["Mispanda"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\rainbow_icon.tga:18:20|t",
-		["Misoråcle"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\rainbow_icon.tga:18:20|t",
-		["Powerßottom"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\rainbow_icon.tga:18:20|t",
 	},
 	["Illidan"] = {
 		["Affinichi"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\Bathrobe_Chat_Logo.blp:15:15|t",
@@ -162,20 +132,14 @@ local specialChatIcons = {
 		["Affinitii"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\Bathrobe_Chat_Logo.blp:15:15|t",
 		["Affinity"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\Bathrobe_Chat_Logo.blp:15:15|t"
 	},
-	["Proudmoore"] = {
+	["ShatteredHand"] = {
 		["Elv"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\ElvUI_Chat_Logo:13:22|t",
+		["Sarah"] =  "|TInterface\\AddOns\\ElvUI\\media\\textures\\ElvUI_Chat_Logo:13:22|t",
+		["Sara"] =  "|TInterface\\AddOns\\ElvUI\\media\\textures\\helloKittyChatLogo.tga:18:20|t",
 
-		["Waffles"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\helloKittyChatLogo.tga:18:20|t",
-		["Suisen"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\helloKittyChatLogo.tga:18:20|t",
-		["Sarah"] =  "|TInterface\\AddOns\\ElvUI\\media\\textures\\helloKittyChatLogo.tga:18:20|t",
-		
-		["Dribskram"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\canada_flag.tga:18:20|t",
-		["Marksbird"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\canada_flag.tga:18:20|t",
-		["Chuey"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\canada_flag.tga:18:20|t",
-		["Azazlol"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\canada_flag.tga:18:20|t",
-		["Owen"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\canada_flag.tga:18:20|t",
-		["Seleri"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\canada_flag.tga:18:20|t",
-		["Dunkington"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\canada_flag.tga:18:20|t",		
+		["Vinceypoo"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\logo_illuminati.tga:18:18|t",
+		["Vincey"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\logo_illuminati.tga:18:18|t",
+		["Vinceanity"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\logo_illuminati.tga:18:18|t",	
 	},
 }
 
@@ -791,6 +755,10 @@ local function GetBNFriendColor(name, id)
 end
 
 
+function CH:GetPluginReplacementIcon(nameRealm)
+	return 
+end
+
 E.NameReplacements = {}
 function CH:ChatFrame_MessageEventHandler(event, ...)
 	if ( strsub(event, 1, 8) == "CHAT_MSG" ) then
@@ -1019,42 +987,51 @@ function CH:ChatFrame_MessageEventHandler(event, ...)
 			end
 			
 			-- Add AFK/DND flags
-			local pflag;
-			if(strlen(arg6) > 0) then
-				if ( arg6 == "GM" ) then
-					--If it was a whisper, dispatch it to the GMChat addon.
-					if ( type == "WHISPER" ) then
-						return;
-					end
-					--Add Blizzard Icon, this was sent by a GM
-					pflag = "|TInterface\\ChatFrame\\UI-ChatIcon-Blizz:12:20:0:0:32:16:4:28:0:16|t ";
-				elseif ( arg6 == "DEV" ) then
-					--Add Blizzard Icon, this was sent by a Dev
-					pflag = "|TInterface\\ChatFrame\\UI-ChatIcon-Blizz:12:20:0:0:32:16:4:28:0:16|t ";
-				else					
-					pflag = _G["CHAT_FLAG_"..arg6];
-				end
-			else
-				if(specialChatIcons[PLAYER_REALM] == nil or (specialChatIcons[PLAYER_REALM] and specialChatIcons[PLAYER_REALM][E.myname] ~= true)) then
-					for realm, _ in pairs(specialChatIcons) do
-						for character, texture in pairs(specialChatIcons[realm]) do
-							if arg2 == character.."-"..realm then
-								pflag = texture
-							end		
-						end
-					end		
-				end
-				
-				if(pflag == true) then
-					pflag = nil
-				end
-				
-				if(not pflag and lfgRoles[arg2] and (type == "PARTY_LEADER" or type == "PARTY" or type == "RAID" or type == "RAID_LEADER" or type == "INSTANCE_CHAT" or type == "INSTANCE_CHAT_LEADER")) then
-					pflag = lfgRoles[arg2]
-				end
-
-				pflag = pflag or ""
-			end
+            local pflag;
+            local pluginIcon, flags = CH:GetPluginReplacementIcon(arg2, arg6, type)
+            if(pluginIcon and flags) then
+                pflag = pluginIcon
+            else
+                if(strlen(arg6) > 0) then
+                    if ( arg6 == "GM" ) then
+                        --If it was a whisper, dispatch it to the GMChat addon.
+                        if ( type == "WHISPER" ) then
+                            return;
+                        end
+                        --Add Blizzard Icon, this was sent by a GM
+                        pflag = "|TInterface\\ChatFrame\\UI-ChatIcon-Blizz:12:20:0:0:32:16:4:28:0:16|t ";
+                    elseif ( arg6 == "DEV" ) then
+                        --Add Blizzard Icon, this was sent by a Dev
+                        pflag = "|TInterface\\ChatFrame\\UI-ChatIcon-Blizz:12:20:0:0:32:16:4:28:0:16|t ";
+                    else                    
+                        pflag = _G["CHAT_FLAG_"..arg6];
+                    end
+                else
+                    if(specialChatIcons[PLAYER_REALM] and specialChatIcons[PLAYER_REALM][E.myname] ~= true) then
+                        for realm, _ in pairs(specialChatIcons) do
+                            for character, texture in pairs(specialChatIcons[realm]) do
+                                if arg2 == character.."-"..realm then
+                                    pflag = texture
+                                end        
+                            end
+                        end
+                    else
+                        if(pluginIcon) then
+                            pflag = pluginIcon
+                        end
+                    end
+    
+                    if(pflag == true) then
+                        pflag = nil
+                    end
+                    
+                    if(not pflag and lfgRoles[arg2] and (type == "PARTY_LEADER" or type == "PARTY" or type == "RAID" or type == "RAID_LEADER" or type == "INSTANCE_CHAT" or type == "INSTANCE_CHAT_LEADER")) then
+                        pflag = lfgRoles[arg2]
+                    end
+                end
+                
+                pflag = pflag or ""
+            end
 
 			if ( type == "WHISPER_INFORM" and GMChatFrame_IsGM and GMChatFrame_IsGM(arg2) ) then
 				return;
@@ -1732,9 +1709,9 @@ function CH:Initialize()
 	end)	
 	
 	if self.db.chatHistory then
-		self.SoundPlayed = true;
-		self:DisplayChatHistory()
-		self.SoundPlayed = nil;
+		--self.SoundPlayed = true;
+		--self:DisplayChatHistory()
+		--self.SoundPlayed = nil;
 	end
 		
 	

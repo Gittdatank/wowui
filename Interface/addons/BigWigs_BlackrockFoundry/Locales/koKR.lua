@@ -6,12 +6,17 @@ end
 
 L = BigWigs:NewBossLocale("Oregorger", "koKR")
 if L then
-	L.hunger_drive_power = "%dx %s - %d ore to go!"
+	L.berserk_trigger = "굶주린 광물먹보가 광란에 빠집니다!"
+
+	L.shard_explosion = "폭발성 파편 폭발"
+	L.shard_explosion_desc = "폭발을 대비하기 위한 강조 바를 별도로 표시합니다."
+
+	L.hunger_drive_power = "%d번째 %s - %d의 광석을 더 먹여야 합니다!"
 end
 
 L = BigWigs:NewBossLocale("The Blast Furnace", "koKR")
 if L then
-	--L.heat_increased_message = "Heat increased! Blast every %ss"
+	L.heat_increased_message = "열기가 증가합니다! %s초마다 폭파합니다."
 end
 
 L = BigWigs:NewBossLocale("Hans'gar and Franzok", "koKR")
@@ -44,33 +49,34 @@ end
 
 L = BigWigs:NewBossLocale("Operator Thogar", "koKR")
 if L then
-	--L.cauterizing_bolt_message = "Your focus is casting Cauterizing Bolt!"
+	L.cauterizing_bolt_message = "주시 대상이 소작의 화살을 시전합니다!"
 
-	--L.trains = "Train warnings"
-	--L.trains_desc = "Shows timers and messages for each lane for when the next train is coming. Lanes are numbered from the boss to the entrace, ie, Boss 1 2 3 4 Entrance."
+	L.trains = "기차 경고"
+	L.trains_desc = "각 라인마다 다음 기차가 언제 올 지에 대해서 타이머와 메시지를 표시합니다. 라인은 보스부터 입구쪽으로 '보스 1 2 3 4 입구'로 숫자가 매겨져 있습니다."
 
-	--L.lane = "Lane %d: %s"
-	--L.train = "Train"
-	--L.adds_train = "Adds train"
-	--L.big_add_train = "Big add train"
-	--L.cannon_train = "Cannon train"
+	L.lane = "%s번째 라인 : %s"
+	L.train = "기차"
+	L.adds_train = "쫄 기차"
+	L.big_add_train = "큰 쫄 기차"
+	L.cannon_train = "대포 기차"
+	L.random = "무작위 기차"
 end
 
 L = BigWigs:NewBossLocale("The Iron Maidens", "koKR")
 if L then
-	--L.ship_trigger = "prepares to man the Dreadnaught's Main Cannon!"
+	L.ship_trigger = "무쌍호 주 대포를 쏠 준비를 합니다!"
 
-	--L.ship = "Jump to Ship: %s"
+	L.ship = "배로 점프: %s"
 
-	--L.custom_off_heartseeker_marker = "Bloodsoaked Heartseeker marker"
-	--L.custom_off_heartseeker_marker_desc = "Marks Heartseeker targets with {rt1}{rt2}{rt3}, requires promoted or leader."
+	L.custom_off_heartseeker_marker = "피에 젖은 심장추적자 징표 설정"
+	L.custom_off_heartseeker_marker_desc = "피에 젖은 심장추적자의 대상을 {rt1}{rt2}{rt3}의 징표로 설정합니다. 공격대장이거나 권한이 필요합니다."
 
-	--L.power_message = "%d Iron Fury!"
+	L.power_message = "강철 분노 %d!"
 end
 
 L = BigWigs:NewBossLocale("Blackhand", "koKR")
 if L then
-	--L.custom_off_markedfordeath_marker = "Marked for Death marker"
-	--L.custom_off_markedfordeath_marker_desc = "Mark Marked for Death targets with {rt1}{rt2}, requires promoted or leader."
+	L.custom_off_markedfordeath_marker = "죽음의 표적 징표 설정"
+	L.custom_off_markedfordeath_marker_desc = "죽음의 징표의 대상을 {rt1}{rt2}의 징표로 설정합니다. 공격대장이거나 권한이 필요합니다."
 end
 

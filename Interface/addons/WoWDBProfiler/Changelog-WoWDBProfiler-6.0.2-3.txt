@@ -1,0 +1,8 @@
+2014-10-14  MMOSimca  <MMOSimca@gmail.com>
+
+[cc74264ffd83] [6.0.2-3]
+* .pkgmeta:
+
+Removed tag for LibMapData.
+
+

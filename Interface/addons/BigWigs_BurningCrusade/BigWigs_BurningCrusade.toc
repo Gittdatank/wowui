@@ -1,11 +1,13 @@
-## Interface: 50400
-## X-Curse-Packaged-Version: r33-release
+## Interface: 60000
+## X-Curse-Packaged-Version: r36-release
 ## X-Curse-Project-Name: BigWigs_BurningCrusade
 ## X-Curse-Project-ID: bigwigs_burningcrusade
 ## X-Curse-Repository-ID: wow/bigwigs_burningcrusade/mainline
 
 ## Title: Big Wigs [|cffeda55fBurning Crusade|r]
+## Title-zhCN: Big Wigs [|cffeda55f燃烧的远征|r]
 ## Notes: A collection of Big Wigs modules from the Burning Crusade era.
+## Notes-zhCN: Big Wigs 燃烧的远征模块。
 
 ## LoadOnDemand: 1
 ## Dependencies: BigWigs

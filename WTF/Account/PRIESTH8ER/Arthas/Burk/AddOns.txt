@@ -1,2 +1,6 @@
 ElvUI_Config: disabled
 ElvUI: disabled
+TidyPlates: disabled
+TidyPlatesHub: disabled
+TidyPlatesWidgets: disabled
+ACP: disabled

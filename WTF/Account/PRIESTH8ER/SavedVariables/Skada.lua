@@ -39,11 +39,11 @@ SkadaDB = {
 			["windows"] = {
 				{
 					["y"] = -58.9373779296875,
-					["x"] = -364.0623779296875,
+					["x"] = -364.062377929688,
 					["point"] = "TOPRIGHT",
-					["barwidth"] = 237.0463256835938,
+					["barwidth"] = 237.046325683594,
 					["background"] = {
-						["height"] = 189.9232482910156,
+						["height"] = 189.923248291016,
 					},
 					["mode"] = "Damage",
 				}, -- [1]
@@ -73,9 +73,9 @@ SkadaDB = {
 				{
 					["barheight"] = 11,
 					["bartexture"] = "Minimalist",
-					["barwidth"] = 188.1574249267578,
+					["barwidth"] = 188.157424926758,
 					["barfontsize"] = 7,
-					["y"] = 154.8978881835938,
+					["y"] = 154.897888183594,
 					["barfont"] = "DorisPP",
 					["title"] = {
 						["height"] = 14,
@@ -83,10 +83,10 @@ SkadaDB = {
 						["fontsize"] = 9,
 						["texture"] = "Flat",
 					},
-					["x"] = 5.338437080383301,
+					["x"] = 5.3384370803833,
 					["mode"] = "Healing",
 					["background"] = {
-						["height"] = 154.5457000732422,
+						["height"] = 154.545700073242,
 					},
 					["point"] = "LEFT",
 				}, -- [1]
@@ -99,7 +99,7 @@ SkadaDB = {
 					["wipemode"] = "",
 					["set"] = "current",
 					["hidden"] = false,
-					["y"] = -214.6253814697266,
+					["y"] = -214.625381469727,
 					["barfont"] = "DorisPP",
 					["title"] = {
 						["color"] = {
@@ -114,7 +114,7 @@ SkadaDB = {
 						["fontsize"] = 11,
 						["fontflags"] = "",
 						["height"] = 14,
-						["margin"] = -0,
+						["margin"] = 0,
 						["texture"] = "Aluminium",
 					},
 					["display"] = "bar",
@@ -136,22 +136,22 @@ SkadaDB = {
 					["barorientation"] = 1,
 					["snapto"] = true,
 					["background"] = {
-						["borderthickness"] = -0,
-						["height"] = 202.2496643066406,
+						["borderthickness"] = 0,
+						["height"] = 202.249664306641,
 						["color"] = {
 							["a"] = 0.2,
 							["b"] = 0.5,
-							["g"] = -0,
-							["r"] = -0,
+							["g"] = 0,
+							["r"] = 0,
 						},
 						["bordertexture"] = "None",
-						["margin"] = -0,
+						["margin"] = 0,
 						["texture"] = "Solid",
 					},
 					["name"] = "Damage",
 					["bartexture"] = "Minimalist",
 					["barwidth"] = 270,
-					["barspacing"] = -0,
+					["barspacing"] = 0,
 					["modeincombat"] = "",
 					["buttons"] = {
 						["segment"] = true,
@@ -183,10 +183,10 @@ SkadaDB = {
 					["barheight"] = 11,
 					["barslocked"] = true,
 					["background"] = {
-						["height"] = 258.0458374023438,
+						["height"] = 258.045837402344,
 					},
-					["y"] = -0,
-					["x"] = 402.417236328125,
+					["y"] = 0,
+					["barfont"] = "DorisPP",
 					["title"] = {
 						["font"] = "DorisPP",
 						["fontsize"] = 9,
@@ -194,11 +194,11 @@ SkadaDB = {
 						["texture"] = "Flat",
 					},
 					["mode"] = "Damage",
-					["barwidth"] = 267.6577453613281,
+					["barwidth"] = 267.657745361328,
 					["point"] = "BOTTOM",
 					["barfontsize"] = 7,
 					["bartexture"] = "Minimalist",
-					["barfont"] = "DorisPP",
+					["x"] = 402.417297363281,
 				}, -- [1]
 			},
 			["icon"] = {
@@ -226,9 +226,9 @@ SkadaDB = {
 				{
 					["barheight"] = 11,
 					["bartexture"] = "Minimalist",
-					["barwidth"] = 197.9075469970703,
+					["barwidth"] = 197.90754699707,
 					["barfontsize"] = 7,
-					["y"] = 36.02287292480469,
+					["y"] = 36.0228729248047,
 					["barfont"] = "DorisPP",
 					["title"] = {
 						["height"] = 14,
@@ -239,7 +239,7 @@ SkadaDB = {
 					["point"] = "LEFT",
 					["mode"] = "Damage",
 					["background"] = {
-						["height"] = 111.0456314086914,
+						["height"] = 111.045631408691,
 					},
 					["x"] = 4.58843469619751,
 				}, -- [1]
@@ -252,7 +252,7 @@ SkadaDB = {
 					["wipemode"] = "",
 					["set"] = "current",
 					["hidden"] = false,
-					["y"] = -125.2500457763672,
+					["y"] = -125.250045776367,
 					["barfont"] = "DorisPP",
 					["title"] = {
 						["color"] = {
@@ -267,7 +267,7 @@ SkadaDB = {
 						["borderthickness"] = 2,
 						["height"] = 14,
 						["fontflags"] = "",
-						["margin"] = -0,
+						["margin"] = 0,
 						["texture"] = "Aluminium",
 					},
 					["display"] = "bar",
@@ -285,34 +285,6 @@ SkadaDB = {
 					["snapto"] = true,
 					["mode"] = "Damage",
 					["point"] = "LEFT",
-					["bartexture"] = "Minimalist",
-					["barwidth"] = 203.2499389648438,
-					["barspacing"] = -0,
-					["reversegrowth"] = false,
-					["x"] = -0,
-					["barbgcolor"] = {
-						["a"] = 0.6,
-						["r"] = 0.3,
-						["g"] = 0.3,
-						["b"] = 0.3,
-					},
-					["background"] = {
-						["borderthickness"] = -0,
-						["height"] = 123.5000915527344,
-						["color"] = {
-							["a"] = 0.2,
-							["r"] = -0,
-							["g"] = -0,
-							["b"] = 0.5,
-						},
-						["bordertexture"] = "None",
-						["margin"] = -0,
-						["texture"] = "Solid",
-					},
-					["returnaftercombat"] = false,
-					["classcolorbars"] = true,
-					["enabletitle"] = true,
-					["clickthrough"] = false,
 					["buttons"] = {
 						["report"] = true,
 						["menu"] = true,
@@ -320,6 +292,34 @@ SkadaDB = {
 						["segment"] = true,
 						["reset"] = true,
 					},
+					["barwidth"] = 203.249938964844,
+					["barspacing"] = 0,
+					["reversegrowth"] = false,
+					["x"] = 0,
+					["barbgcolor"] = {
+						["a"] = 0.6,
+						["r"] = 0.3,
+						["g"] = 0.3,
+						["b"] = 0.3,
+					},
+					["background"] = {
+						["borderthickness"] = 0,
+						["height"] = 123.500091552734,
+						["color"] = {
+							["a"] = 0.2,
+							["r"] = 0,
+							["g"] = 0,
+							["b"] = 0.5,
+						},
+						["bordertexture"] = "None",
+						["margin"] = 0,
+						["texture"] = "Solid",
+					},
+					["returnaftercombat"] = false,
+					["classcolorbars"] = true,
+					["enabletitle"] = true,
+					["clickthrough"] = false,
+					["bartexture"] = "Minimalist",
 					["name"] = "Damage",
 				}, -- [2]
 			},
@@ -342,9 +342,9 @@ SkadaDB = {
 				{
 					["barheight"] = 11,
 					["bartexture"] = "Minimalist",
-					["barwidth"] = 267.6577453613281,
+					["barwidth"] = 267.657745361328,
 					["barfontsize"] = 7,
-					["y"] = -0,
+					["y"] = 0,
 					["barfont"] = "DorisPP",
 					["barslocked"] = true,
 					["title"] = {
@@ -354,10 +354,10 @@ SkadaDB = {
 						["texture"] = "Flat",
 					},
 					["point"] = "BOTTOM",
-					["mode"] = "Healing",
 					["background"] = {
-						["height"] = 258.0458374023438,
+						["height"] = 258.045837402344,
 					},
+					["mode"] = "Healing",
 					["x"] = 402.417236328125,
 				}, -- [1]
 			},

@@ -1,11 +1,11 @@
-## Interface: 50400
+## Interface: 60000
 ## Title: ComboPointsRedux [|cffeda55fOptions|r]
 ## Notes: LoD Options for ComboPointsRedux.
 ## LoadOnDemand: 1
 ## Dependencies: ComboPointsRedux
 ## Author: Starinnia
-## Version: 2.2.19
-## X-Curse-Packaged-Version: 2.2.19
+## Version: 2.3.0
+## X-Curse-Packaged-Version: 2.3.0
 ## X-Curse-Project-Name: Combo Points Redux
 ## X-Curse-Project-ID: combo-points-redux
 ## X-Curse-Repository-ID: wow/combo-points-redux/mainline

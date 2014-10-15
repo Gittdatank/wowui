@@ -32,6 +32,7 @@ Sample:
 		ignoreEvent = "IgnoreSpell";
 		category = "TestSpell";
 		casterOnly = true;
+		meleeOnly = true;
 	};
 		
 ]]--

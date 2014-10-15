@@ -459,26 +459,25 @@ function E:SendMessage()
 	end
 end
 
+local myName = E.myname.."-"..E.myrealm;
+myName = myName:gsub("%s+", "")
 local frames = {}
 local devAlts = {
-	['Elv-Proudmoore'] = true,
-	['Elv-Spirestone'] = true,
-	['Elvz-Spirestone'] = true,
-	['Jarvix-Spirestone'] = true,
-	['Elvilas-Spirestone'] = true,
-	['Watermelon-Spirestone'] = true
+	['Elv-ShatteredHand'] = true,
+	['Sarah-ShatteredHand'] = true,
+	['Sara-ShatteredHand'] = true,
 }
 local function SendRecieve(self, event, prefix, message, channel, sender)
 	if event == "CHAT_MSG_ADDON" then
-		if sender == E.myname.."-"..E.myrealm then return end
+		if(sender == myName) then return end
 
-		if prefix == "ELVUI_VERSIONCHK" and devAlts[sender] ~= true and not E.recievedOutOfDateMessage then
-			if E.version ~= 'BETA' and tonumber(message) ~= nil and tonumber(message) > tonumber(E.version) then
+		if prefix == "ELVUI_VERSIONCHK" and devAlts[myName] ~= true and not E.recievedOutOfDateMessage then
+			if(tonumber(message) ~= nil and tonumber(message) > tonumber(E.version)) then
 				E:Print(L["ElvUI is out of date. You can download the newest version from www.tukui.org. Get premium membership and have ElvUI automatically updated with the Tukui Client!"])
 				E:StaticPopup_Show("ELVUI_UPDATE_AVAILABLE")
 				E.recievedOutOfDateMessage = true
 			end
-		elseif (prefix == 'ELVUI_DEV_SAYS' or prefix == 'ELVUI_DEV_CMD') and devAlts[sender] then
+		elseif (prefix == 'ELVUI_DEV_SAYS' or prefix == 'ELVUI_DEV_CMD') and devAlts[sender] == true and devAlts[myName] ~= true then
 			if prefix == 'ELVUI_DEV_SAYS' then
 				local user, channel, msg, sendTo = split("#", message)
 				
@@ -662,7 +661,7 @@ function E:InitializeInitialModules()
 		local module = self:GetModule(module, true)
 		if module and module.Initialize then
 			local _, catch = pcall(module.Initialize, module)
-			if catch and GetCVarBool('scriptErrors') == 1 then
+			if catch and GetCVarBool('scriptErrors') == true then
 				ScriptErrorsFrame_OnError(catch, false)
 			end
 		end
@@ -680,7 +679,8 @@ function E:InitializeModules()
 		local module = self:GetModule(module)
 		if module.Initialize then
 			local _, catch = pcall(module.Initialize, module)
-			if catch and GetCVarBool('scriptErrors') == 1 then
+
+			if catch and GetCVarBool('scriptErrors') == true then
 				ScriptErrorsFrame_OnError(catch, false)
 			end
 		end
@@ -725,6 +725,21 @@ function E:DBConversions()
 			self.db.actionbar.dayscolor = nil
 		end		
 	end
+
+	if E.global.unitframe.aurafilters['Whitelist (Strict)'].spells then
+		for k, v in pairs(E.global.unitframe.aurafilters['Whitelist (Strict)'].spells) do
+			if type(v) == 'table' then
+				for k_,v_ in pairs(v) do
+					if k_ == 'spellID' and type(v_) ~= 'number' then
+						E.global.unitframe.aurafilters['Whitelist (Strict)']['spells'][k][k_] = tonumber(v_)
+					end
+				end
+			end
+		end
+	end
+
+	self.db.unitframe.units.raid10 = nil
+	self.db.unitframe.units.raid25 = nil
 end
 
 function E:StopMassiveShake()

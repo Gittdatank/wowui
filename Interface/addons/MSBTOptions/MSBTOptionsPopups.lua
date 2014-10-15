@@ -468,8 +468,11 @@ local function UpdateFontPreviews()
   fontPath = fonts[frame.critFontDropdown:GetSelectedID()]
   fontSize = frame.critFontSizeSlider:GetValue()
   outline = OUTLINE_MAP[frame.critOutlineDropdown:GetSelectedID()]
-  if (fontPath and outline) then frame.critPreviewFontString:SetFont(fontPath, fontSize, outline) end
-  frame.critPreviewFontString:SetText(L.MSG_CRIT)
+  if (fontPath and outline) then
+   frame.normalPreviewFontString:SetText("")
+   frame.critPreviewFontString:SetFont(fontPath, fontSize, outline)
+   frame.critPreviewFontString:SetText(L.MSG_CRIT)
+  end
   frame.critPreviewFontString:SetAlpha(frame.critFontOpacitySlider:GetValue() / 100)
  end
 end
@@ -3417,7 +3420,6 @@ local function CreateTriggerPopup()
  local warriorStances = {
   [1] = GetSkillName(2457),
   [2] = GetSkillName(71),
-  [3] = GetSkillName(2458),
  }
 
  -- Localized zone types.

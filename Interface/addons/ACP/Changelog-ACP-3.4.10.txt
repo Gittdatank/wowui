@@ -1,0 +1,8 @@
+2014-10-14  sylvanaar  <sylvanaar@mindspring.com>
+
+[570b38ecdd58] [3.4.10]
+* ACP.lua, ACP.toc:
+
+Merge with WoD
+
+

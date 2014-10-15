@@ -1,10 +1,13 @@
 
 TauntAware_Settings = {
+	["FontSize"] = 9,
+	["Enable"] = false,
+	["Links"] = false,
 	["MFAutoScale"] = false,
-	["MF"] = true,
+	["MF"] = false,
 	["MFScale"] = 100,
 	["FadeDelay"] = 8,
-	["FontSize"] = 9,
+	["Scan"] = false,
 	["ScanDelay"] = 30,
 }
 TauntAware_PC = {

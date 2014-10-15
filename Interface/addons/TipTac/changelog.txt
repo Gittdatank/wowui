@@ -1,3 +1,9 @@
+TipTac Changes | 2014 Oct 15
+----------------------------
+- TOC version has been changed to 60000 for the Warlords of Draenor 6.0.2 patch.
+- WoD Issue: Fixed an anchoring issue with the GameTooltip.
+- Added Class Icon option. This will display the class icon of players next to the tooltip. Find the checkbox toggle under the option dialog's "Icon" category.
+
 TipTac Changes | 2014 May 24
 ----------------------------
 - TipTacItemRef: Updated the "GetUpgradedItemLevel.lua" library, to include the new upgrade IDs.

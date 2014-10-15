@@ -1,7 +1,7 @@
-MHExRTopt = {};
-MHExRTopt.panel = CreateFrame( "Frame", "MHExRTbossmods", UIParent);
-MHExRTopt.panel.name = MHExRTL.panelbossmodsmalkorokh;
-InterfaceOptions_AddCategory(MHExRTopt.panel);
+MHExRTopt = {}
+MHExRTopt.panel = CreateFrame( "Frame", "MHExRTbossmods", UIParent)
+MHExRTopt.panel.name = MHExRTL.panelbossmodsmalkorokh
+InterfaceOptions_AddCategory(MHExRTopt.panel)
 
 local MSG_PREFIX = "MHADD"
 
@@ -13,18 +13,18 @@ local malkorok_unitid = 71454
 ExRTmods.defFont = "Interface\\AddOns\\Malkorok\\media\\skurri.ttf"
 ExRTmods.barImg = "Interface\\AddOns\\Malkorok\\media\\bar17.tga"
 
-ExRT_Optpanel.title = CreateFrame("SimpleHTML","MHMHExRToptFrameTxt",MHExRTopt.panel);
-ExRT_Optpanel.title:SetWidth(500);
-ExRT_Optpanel.title:SetHeight(20);
-ExRT_Optpanel.title:SetPoint("TOPLEFT", MHExRTopt.panel, 110,-43);
-ExRT_Optpanel.title:SetFont(ExRTmods.defFont, 16,"OUTLINE");
+ExRT_Optpanel.title = CreateFrame("SimpleHTML",nil,MHExRTopt.panel)
+ExRT_Optpanel.title:SetWidth(500)
+ExRT_Optpanel.title:SetHeight(20)
+ExRT_Optpanel.title:SetPoint("TOPLEFT", MHExRTopt.panel, 110,-43)
+ExRT_Optpanel.title:SetFont(ExRTmods.defFont, 16,"OUTLINE")
 ExRT_Optpanel.title:SetText(MHExRTL.panelbossmodsmalkorokh)
 
-ExRT_Optpanel.image = CreateFrame("FRAME","MHMHExRToptFrameImg",MHExRTopt.panel);
-ExRT_Optpanel.image:SetWidth(64);
-ExRT_Optpanel.image:SetHeight(64);
-ExRT_Optpanel.image:SetBackdrop({bgFile = "Interface\\AddOns\\Malkorok\\media\\Exorsus.tga"});
-ExRT_Optpanel.image:SetPoint("TOPLEFT", MHExRTopt.panel, 32,-20);	
+ExRT_Optpanel.image = CreateFrame("FRAME",nil,MHExRTopt.panel)
+ExRT_Optpanel.image:SetWidth(64)
+ExRT_Optpanel.image:SetHeight(64)
+ExRT_Optpanel.image:SetBackdrop({bgFile = "Interface\\AddOns\\Malkorok\\media\\Exorsus.tga"})
+ExRT_Optpanel.image:SetPoint("TOPLEFT", MHExRTopt.panel, 32,-20)
 
 ExRT_Optpanel.infotxt = MHExRTopt.panel:CreateFontString(nil,"ARTWORK","GameFontNormal")
 do
@@ -32,16 +32,16 @@ do
 	ExRT_Optpanel.infotxt:SetFont(ExRTmods.defFont,14,"OUTLINE")
 end
 ExRT_Optpanel.infotxt:SetTextColor(1,1,1,1)
-ExRT_Optpanel.infotxt:SetSize(550,40);
-ExRT_Optpanel.infotxt:SetPoint("BOTTOMRIGHT", MHExRTopt.panel, -20,125);
+ExRT_Optpanel.infotxt:SetSize(550,40)
+ExRT_Optpanel.infotxt:SetPoint("BOTTOMRIGHT", MHExRTopt.panel, -20,125)
 ExRT_Optpanel.infotxt:SetJustifyH("RIGHT")
 ExRT_Optpanel.infotxt:SetJustifyV("BOTTOM")
 ExRT_Optpanel.infotxt:SetText(MHExRTL.panelsetauthor..": Afiya (Афиа) @ EU-Howling Fjord, e-mail: ykiigor@gmail.com\n"..MHExRTL.panelsettranslate)
 
 ExRT_Optpanel.thankstxt = MHExRTopt.panel:CreateFontString(nil,"ARTWORK","GameFontNormal")
 ExRT_Optpanel.thankstxt:SetTextColor(1,1,1,1)
-ExRT_Optpanel.thankstxt:SetSize(550,40);
-ExRT_Optpanel.thankstxt:SetPoint("BOTTOMRIGHT", MHExRTopt.panel, -20,110);
+ExRT_Optpanel.thankstxt:SetSize(550,40)
+ExRT_Optpanel.thankstxt:SetPoint("BOTTOMRIGHT", MHExRTopt.panel, -20,110)
 ExRT_Optpanel.thankstxt:SetJustifyH("RIGHT")
 ExRT_Optpanel.thankstxt:SetJustifyV("BOTTOM")
 ExRT_Optpanel.thankstxt:SetText(MHExRTL.panelbossmodsThanks..": mysticalos, viouviou, Xnilagor, Krovikan, oscarucb")
@@ -78,7 +78,14 @@ function ExRTmods:SendExMsg(prefix, msg, tochat, touser)
 	end
 end
 
-
+local function GUIDtoID(guid)
+	if not guid then 
+		return 0 
+	else
+		local id = guid:match("[^%-]+%-%d+%-%d+%-%d+%-%d+%-(%d+)%-%w+")
+		return tonumber(id or 0)
+	end
+end
 
 -----------------------------------------
 -- Malkorok
@@ -102,8 +109,8 @@ local malkorok_backdrop = {}
 local malkorok_iconshow = 0
 local malkorok_dangershow = 0
 
-local malkorok_spell = "142842"
-local malkorok_spell_baoe = "142861"
+local malkorok_spell = 142842
+local malkorok_spell_baoe = 142861
 
 local malkorok_baoe_num = 0
 
@@ -338,7 +345,7 @@ local function Malkoroktimerfunc(self,elapsed)
 		if n > 0 and malkorok_raid_marks_e == true then
 			for j=1,n do
 				local name, _,subgroup,_,_,class = GetRaidRosterInfo(j)
-				if name ~= nil and subgroup <= 5 and UnitIsDeadOrGhost(name)~=1 then
+				if name and subgroup <= 6 and not UnitIsDeadOrGhost(name) then
 					local px, py = GetPlayerMapPosition(name)
 
 					if px >= malkorok_main_coord_top_x and px<=malkorok_main_coord_bot_x and py>=malkorok_main_coord_top_y and py<=malkorok_main_coord_bot_y then
@@ -366,8 +373,8 @@ end
 
 local function MalkorokEventHandler(self, event, ...)
 	if event == "COMBAT_LOG_EVENT_UNFILTERED" then
-		local _, event_n, _, _, _, _, _, destGUID , _, _, _, spellId,spellName = ...
-		if event_n == "SPELL_CAST_SUCCESS" and tostring(spellId) == malkorok_spell then
+		local _, event_n, _, _, _, _, _, destGUID , _, _, _, spellId = ...
+		if event_n == "SPELL_CAST_SUCCESS" and spellId == malkorok_spell then
 			for i=1,6 do  
 				malkorok_pie_status[i]=0
 				malkorok_mainframe_pie[i].tex:SetVertexColor(0,1,0,0.8);
@@ -378,7 +385,7 @@ local function MalkorokEventHandler(self, event, ...)
 			else
 				malkorok_baoe_num = 0
 			end
-		elseif event_n == "SPELL_CAST_SUCCESS" and tostring(spellId) == malkorok_spell_baoe then
+		elseif event_n == "SPELL_CAST_SUCCESS" and spellId == malkorok_spell_baoe then
 			malkorok_baoe_num = 0
 			malkorok_mainframe_aoecd.cooldown:SetCooldown(GetTime(), 69)
 			for i=1,6 do  
@@ -387,7 +394,7 @@ local function MalkorokEventHandler(self, event, ...)
 			end
 		elseif event_n == "UNIT_DIED" then
 			if destGUID == nil then return end
-			local unitid =tonumber((destGUID):sub(-13, -9), 16)
+			local unitid =GUIDtoID(destGUID)
 			if unitid == malkorok_unitid then
 				ExRTmods:ExBossmodsCloseAll()
 			end
@@ -442,6 +449,7 @@ local function MalkorokLoad()
 	malkorok_mainframe:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background",edgeFile = "Interface\\AddOns\\Malkorok\\media\\border.tga",tile = false,edgeSize = 8});
 	malkorok_mainframe:SetBackdropColor(0,0,0,0.5);
 	malkorok_mainframe:SetBackdropBorderColor(0.2,0.2,0.2,0.4);
+	malkorok_mainframe:SetFrameStrata("HIGH")
 	malkorok_mainframe:EnableMouse(true);
 	malkorok_mainframe:SetMovable(true);
 	--malkorok_mainframe:SetClampedToScreen(true)
@@ -683,7 +691,7 @@ local malkorok_ai_pie_raid = {}
 local malkorok_ai_pie_yellow = 0
 local malkorok_ai_tmr = 0
 local malkorok_ai_tmr2 = 0
-local malkorok_ai_spell_aoe = "143805"
+local malkorok_ai_spell_aoe = 143805
 --local malkorok_ai_spell_aoe = "20473"
 
 local function MalkorokAItimerfunc2(self,elapsed)
@@ -713,6 +721,17 @@ local function MalkorokAItimerfunc(self,elapsed)
 	end
 end
 
+local function GetMaxGroupsForDiff()
+	local _,_,difficulty = GetInstanceInfo()
+	if difficulty == 14 or difficulty == 15 then
+		return 6
+	elseif difficulty == 16 then
+		return 4
+	else
+		return 5
+	end
+end
+
 local malkorok_ai_mainframe_2 = nil
 local malkorok_ai_tmr_do = 0
 local function MalkorokAItimerfunc_do(self,elapsed)
@@ -725,7 +744,7 @@ local function MalkorokAItimerfunc_do(self,elapsed)
 			for j=1,n do
 				local name, _,subgroup = GetRaidRosterInfo(j)
 				--name = UnitName("player") subgroup = 1
-				if name ~= nil and subgroup <= 5 and UnitIsDeadOrGhost(name)~=1 and UnitIsConnected(name)==1 then
+				if name and subgroup <= GetMaxGroupsForDiff() and not UnitIsDeadOrGhost(name) and UnitIsConnected(name) then
 					local px, py = GetPlayerMapPosition(name)
 					if px >= malkorok_main_coord_top_x and px<=malkorok_main_coord_bot_x and py>=malkorok_main_coord_top_y and py<=malkorok_main_coord_bot_y then
 						local px1 = (px-malkorok_main_coord_top_x)/(malkorok_main_coord_bot_x-malkorok_main_coord_top_x)*(malkorok_width-20)+10-(malkorok_playericonsize/2)
@@ -781,7 +800,7 @@ local function MalkorokAItimerfunc_do(self,elapsed)
 end
 
 local function MalkorokAIEventHandler(self, event, _, event_n, _, _, _, _, _, _, _, _, _, spellId)
-	if event_n == "SPELL_CAST_SUCCESS" and (tostring(spellId) == malkorok_ai_spell_aoe) then
+	if event_n == "SPELL_CAST_SUCCESS" and spellId == malkorok_ai_spell_aoe then
 		for i=1,6 do malkorok_ai_pie[i]=0 end
 		malkorok_ai_tmr_do = 0
 		malkorok_ai_mainframe_2:SetScript("OnUpdate", MalkorokAItimerfunc_do)
@@ -792,7 +811,7 @@ local function MalkorokAILoad()
 	if malkorok_mainframe == nil then return end
 	if malkorok_ai_mainframe ~= nil then return end
 
-	malkorok_ai_mainframe = CreateFrame("Frame","MHmalkorok_ai_mainframe",nil);
+	malkorok_ai_mainframe = CreateFrame("Frame")
 	if malkorok_ai_mainframe_2==nil then malkorok_ai_mainframe_2 = CreateFrame("Frame") end
 
 	malkorok_ai_mainframe:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED") 
@@ -1000,8 +1019,8 @@ local function BossmodseventHandler(self, event, ...)
 	if event == "PLAYER_TARGET_CHANGED" and not malkorok_mainframe then
 		local destGUID = UnitGUID("target")
 		if destGUID then
-			local unitid = tonumber((destGUID):sub(-13, -9), 16)
-			if unitid == malkorok_unitid and UnitIsDead("target")~=1 then
+			local unitid = GUIDtoID(destGUID)
+			if unitid == malkorok_unitid and not UnitIsDead("target") then
 				if not ExRT.Bossmods.autoLoad then 
 					MalkorokLoad() 
 				end
@@ -1012,12 +1031,12 @@ local function BossmodseventHandler(self, event, ...)
 		end
 	elseif event == "CHAT_MSG_ADDON" then
 		local prefix, message, channel, sender = ...
-		if prefix == MSG_PREFIX and (channel=="RAID" or channel=="GUILD" or (channel=="WHISPER" and (UnitIsInMyGuild(sender)==1 or sender == UnitName("player")))) then
+		if prefix == MSG_PREFIX and (channel=="RAID" or channel=="GUILD" or (channel=="WHISPER" and (UnitIsInMyGuild(sender) or sender == UnitName("player")))) then
 			ExRTmods:ExBossmodsGetExMsg(sender, strsplit("\t", message))
 		end 
-	elseif event == "ENCOUNTER_START" and not malkorok_mainframe then
-		local encounterID = ...
-		if encounterID == 1595 and not ExRT.Bossmods.autoLoad then
+	elseif event == "INSTANCE_ENCOUNTER_ENGAGE_UNIT" and not malkorok_mainframe then	--ENCOUNTER_START: id new Malkorok unknown. RIP event
+		local boss1GUID = UnitGUID("boss1")
+		if boss1GUID and GUIDtoID(boss1GUID) == malkorok_unitid and not ExRT.Bossmods.autoLoad then
 			MalkorokLoad() 
 			if not ExRT.Bossmods.autoLoadAI then 
 				MalkorokAILoad() 
@@ -1061,5 +1080,5 @@ local bm = CreateFrame("frame")
 bm:RegisterEvent("ADDON_LOADED") 
 bm:RegisterEvent("CHAT_MSG_ADDON")
 bm:RegisterEvent("PLAYER_TARGET_CHANGED")
-bm:RegisterEvent("ENCOUNTER_START")
+bm:RegisterEvent("INSTANCE_ENCOUNTER_ENGAGE_UNIT")
 bm:SetScript("OnEvent", BossmodseventHandler)

@@ -1,0 +1,19 @@
+------------------------------------------------------------------------
+r36 | funkydude | 2014-10-14 21:48:03 +0000 (Tue, 14 Oct 2014) | 1 line
+Changed paths:
+   A /tags/r36-release (from /trunk:35)
+
+Tagging as r36-release
+------------------------------------------------------------------------
+r35 | funkydude | 2014-10-14 19:49:36 +0000 (Tue, 14 Oct 2014) | 1 line
+Changed paths:
+   M /trunk/BigWigs_BurningCrusade.toc
+
+bump toc
+------------------------------------------------------------------------
+r34 | ananhaid | 2014-09-16 03:11:47 +0000 (Tue, 16 Sep 2014) | 1 line
+Changed paths:
+   M /trunk/BigWigs_BurningCrusade.toc
+
+- zhCN update.
+------------------------------------------------------------------------

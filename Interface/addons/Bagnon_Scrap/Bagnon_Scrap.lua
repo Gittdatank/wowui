@@ -15,34 +15,27 @@ along with the addon. If not, see <http://www.gnu.org/licenses/gpl-3.0.txt>.
 This file is part of Bagnon Scrap.
 --]]
 
--- Glow and Icon
 local Addon = Bagnon
 local ItemSlot = Addon.ItemSlot
 local UpdateBorder = ItemSlot.UpdateBorder
 local r, g, b  = GetItemQualityColor(0)
 
+
+-- Glow and Icon
 local function CreateIcon(slot)
 	local icon = slot:CreateTexture(nil, 'OVERLAY')
 	icon:SetTexture('Interface\\Buttons\\UI-GroupLoot-Coin-Up')
 	icon:SetPoint('TOPLEFT', 2, -2)
 	icon:SetSize(15, 15)
 
-  	slot.scrapIcon = icon
+  	slot.ScrapIcon = icon
 	return icon
 end
 
-local function SetShown(element, shown)
-	if shown then
-		element:Show()
-	else
-		element:Hide()
-	end
-end
 
 function ItemSlot:UpdateBorder()
 	local link = select(7, self:GetInfo())
-	local icon = self.scrapIcon or CreateIcon(self)
-	local isJunk
+	local icon = self.ScrapIcon or CreateIcon(self)
 
 	if link then
 		local id = tonumber(strmatch(link, 'item:(%d+)'))
@@ -52,19 +45,17 @@ function ItemSlot:UpdateBorder()
 			bag, slot = self:GetBag(), self:GetID()
 		end
 		
-		isJunk = Scrap:IsJunk(id, bag, slot)
+		if Scrap:IsJunk(id, bag, slot) then
+			self:HideBorder()
+			self.Border:SetVertexColor(r, g, b, self:GetHighlightAlpha())
+			self.Border:SetShown(Scrap_Glow)
+
+			return icon:SetShown(Scrap_Icons)
+		end
 	end
-	
-	SetShown(self.border, isJunk and Scrap_Glow)
-	SetShown(icon, isJunk and Scrap_Icons)
-	
-	if isJunk then
-		self.questBorder:Hide()
-		self.border:SetVertexColor(r, g, b, self:GetHighlightAlpha())
-		return
-	end
-	
+
 	UpdateBorder(self)
+	icon:Hide()
 end
 
 

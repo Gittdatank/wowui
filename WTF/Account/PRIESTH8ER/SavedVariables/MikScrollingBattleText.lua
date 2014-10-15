@@ -2,6 +2,8 @@
 MSBTProfiles_SavedVars = {
 	["profiles"] = {
 		["Git - Fury"] = {
+			["critFontName"] = "DorisPP",
+			["animationSpeed"] = 30,
 			["triggers"] = {
 				["MSBT_TRIGGER_KILL_SHOT"] = {
 					["disabled"] = true,
@@ -124,14 +126,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 			},
-			["critFontName"] = "DorisPP",
-			["damageThreshold"] = 12000,
-			["animationSpeed"] = 30,
-			["shortenNumbers"] = true,
 			["hideFullOverheals"] = true,
 			["creationVersion"] = "5.7.123",
 			["critFontSize"] = 10,
-			["groupNumbers"] = true,
+			["shortenNumbers"] = true,
 			["events"] = {
 				["NOTIFICATION_BUFF_FADE"] = {
 					["disabled"] = true,
@@ -146,14 +144,14 @@ MSBTProfiles_SavedVars = {
 					["message"] = "%a %n",
 				},
 				["NOTIFICATION_ALT_POWER_LOSS"] = {
-					["fontSize"] = 25.24996566772461,
+					["fontSize"] = 25.2499656677246,
 					["alwaysSticky"] = true,
 					["soundFile"] = "Whisper Ping",
 				},
 				["NOTIFICATION_ALT_POWER_GAIN"] = {
 					["soundFile"] = "Whisper Ping",
 					["alwaysSticky"] = true,
-					["fontSize"] = 24.99496459960938,
+					["fontSize"] = 24.9949645996094,
 				},
 				["NOTIFICATION_SHADOW_ORBS_FULL"] = {
 					["disabled"] = true,
@@ -212,17 +210,17 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_HOLY_POWER_CHANGE"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_EXTRA_ATTACK"] = {
-					["disabled"] = true,
+				["INCOMING_ENVIRONMENTAL"] = {
+					["message"] = "%a %e",
 				},
 				["NOTIFICATION_ENEMY_BUFF"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_COOLDOWN"] = {
+				["NOTIFICATION_BUFF_STACK"] = {
 					["disabled"] = true,
 				},
-				["INCOMING_ENVIRONMENTAL"] = {
-					["message"] = "%a %e",
+				["NOTIFICATION_EXTRA_ATTACK"] = {
+					["disabled"] = true,
 				},
 				["NOTIFICATION_POWER_GAIN"] = {
 					["disabled"] = true,
@@ -237,7 +235,7 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_BUFF"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_BUFF_STACK"] = {
+				["NOTIFICATION_COOLDOWN"] = {
 					["disabled"] = true,
 				},
 				["NOTIFICATION_POWER_LOSS"] = {
@@ -259,14 +257,14 @@ MSBTProfiles_SavedVars = {
 					["stickyBehavior"] = "Normal",
 					["animationStyle"] = "Straight",
 					["direction"] = "Up",
-					["critFontSize"] = 16.66504669189453,
-					["scrollHeight"] = 430.1474304199219,
+					["critFontSize"] = 16.6650466918945,
+					["scrollHeight"] = 430.147430419922,
 					["offsetX"] = 577,
 					["stickyDirection"] = "Up",
 					["iconAlign"] = "Left",
 					["offsetY"] = 128,
 					["textAlignIndex"] = 2,
-					["normalFontSize"] = 14.28503704071045,
+					["normalFontSize"] = 14.2850370407105,
 				},
 				["Static"] = {
 					["offsetX"] = -561,
@@ -275,7 +273,7 @@ MSBTProfiles_SavedVars = {
 				["Custom1"] = {
 					["stickyTextAlignIndex"] = 1,
 					["stickyDirection"] = "Down",
-					["scrollHeight"] = 202.0587921142578,
+					["scrollHeight"] = 202.058792114258,
 					["offsetX"] = 130,
 					["direction"] = "Down",
 					["name"] = "Incoming Heals",
@@ -284,18 +282,18 @@ MSBTProfiles_SavedVars = {
 					["stickyAnimationStyle"] = "Static",
 				},
 				["Incoming"] = {
-					["direction"] = "Up",
 					["stickyTextAlignIndex"] = 1,
+					["direction"] = "Up",
 					["offsetX"] = 141,
 					["textAlignIndex"] = 1,
-					["stickyBehavior"] = "Normal",
+					["behavior"] = "MSBT_NORMAL",
 					["offsetY"] = -178,
 					["animationStyle"] = "Straight",
-					["behavior"] = "MSBT_NORMAL",
+					["stickyBehavior"] = "Normal",
 				},
 			},
 			["normalFontName"] = "DorisPP",
-			["healThreshold"] = 21800,
+			["groupNumbers"] = true,
 			["normalFontSize"] = 8,
 		},
 		["Gitt - Pally"] = {
@@ -304,7 +302,6 @@ MSBTProfiles_SavedVars = {
 			["normalFontSize"] = 10,
 			["creationVersion"] = "5.7.123",
 			["critFontSize"] = 15,
-			["soundsDisabled"] = true,
 			["events"] = {
 				["NOTIFICATION_BUFF_FADE"] = {
 					["disabled"] = true,
@@ -390,8 +387,8 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_BUFF_STACK"] = {
 					["disabled"] = true,
 				},
-				["INCOMING_ENVIRONMENTAL"] = {
-					["message"] = "%a %e",
+				["NOTIFICATION_EXTRA_ATTACK"] = {
+					["disabled"] = true,
 				},
 				["NOTIFICATION_COOLDOWN"] = {
 					["disabled"] = true,
@@ -406,8 +403,8 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_POWER_GAIN"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_EXTRA_ATTACK"] = {
-					["disabled"] = true,
+				["INCOMING_ENVIRONMENTAL"] = {
+					["message"] = "%a %e",
 				},
 				["NOTIFICATION_EXPERIENCE_GAIN"] = {
 					["disabled"] = false,
@@ -416,6 +413,7 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 			},
+			["groupNumbers"] = true,
 			["shortenNumbers"] = true,
 			["scrollAreas"] = {
 				["Notification"] = {
@@ -423,14 +421,14 @@ MSBTProfiles_SavedVars = {
 					["offsetY"] = 103,
 				},
 				["Outgoing"] = {
-					["scrollHeight"] = 350,
 					["direction"] = "Up",
+					["scrollHeight"] = 350,
 					["offsetX"] = 540,
 					["iconAlign"] = "Left",
-					["stickyBehavior"] = "Normal",
+					["behavior"] = "MSBT_NORMAL",
 					["offsetY"] = -294,
 					["animationStyle"] = "Straight",
-					["behavior"] = "MSBT_NORMAL",
+					["stickyBehavior"] = "Normal",
 				},
 				["Static"] = {
 					["disabled"] = true,
@@ -452,7 +450,7 @@ MSBTProfiles_SavedVars = {
 				},
 			},
 			["normalFontName"] = "DorisPP",
-			["groupNumbers"] = true,
+			["soundsDisabled"] = true,
 			["triggers"] = {
 				["MSBT_TRIGGER_KILL_SHOT"] = {
 					["disabled"] = true,
@@ -582,6 +580,11 @@ MSBTProfiles_SavedVars = {
 			["damageThreshold"] = 12000,
 			["animationSpeed"] = 30,
 			["normalFontName"] = "DorisPP",
+			["groupNumbers"] = true,
+			["creationVersion"] = "5.7.123",
+			["critFontSize"] = 10,
+			["soundsDisabled"] = true,
+			["hideFullOverheals"] = true,
 			["events"] = {
 				["NOTIFICATION_BUFF_FADE"] = {
 					["disabled"] = true,
@@ -596,14 +599,14 @@ MSBTProfiles_SavedVars = {
 					["message"] = "%a %n",
 				},
 				["NOTIFICATION_ALT_POWER_LOSS"] = {
-					["fontSize"] = 25.24996566772461,
+					["fontSize"] = 25.2499656677246,
 					["alwaysSticky"] = true,
 					["soundFile"] = "Whisper Ping",
 				},
 				["NOTIFICATION_ALT_POWER_GAIN"] = {
 					["soundFile"] = "Whisper Ping",
 					["alwaysSticky"] = true,
-					["fontSize"] = 24.99496459960938,
+					["fontSize"] = 24.9949645996094,
 				},
 				["NOTIFICATION_SHADOW_ORBS_FULL"] = {
 					["disabled"] = true,
@@ -662,17 +665,17 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_HOLY_POWER_CHANGE"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_COOLDOWN"] = {
+				["NOTIFICATION_BUFF_STACK"] = {
 					["disabled"] = true,
 				},
 				["NOTIFICATION_ENEMY_BUFF"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_BUFF_STACK"] = {
+				["NOTIFICATION_COOLDOWN"] = {
 					["disabled"] = true,
 				},
-				["INCOMING_ENVIRONMENTAL"] = {
-					["message"] = "%a %e",
+				["NOTIFICATION_EXTRA_ATTACK"] = {
+					["disabled"] = true,
 				},
 				["NOTIFICATION_BUFF"] = {
 					["disabled"] = true,
@@ -687,8 +690,8 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_POWER_GAIN"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_EXTRA_ATTACK"] = {
-					["disabled"] = true,
+				["INCOMING_ENVIRONMENTAL"] = {
+					["message"] = "%a %e",
 				},
 				["NOTIFICATION_EXPERIENCE_GAIN"] = {
 					["disabled"] = false,
@@ -697,11 +700,6 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 			},
-			["creationVersion"] = "5.7.123",
-			["critFontSize"] = 10,
-			["hideFullOverheals"] = true,
-			["soundsDisabled"] = true,
-			["groupNumbers"] = true,
 			["scrollAreas"] = {
 				["Outgoing"] = {
 					["stickyTextAlignIndex"] = 3,
@@ -709,20 +707,20 @@ MSBTProfiles_SavedVars = {
 					["stickyDirection"] = "Down",
 					["scrollHeight"] = 205,
 					["offsetX"] = -200,
-					["textAlignIndex"] = 3,
-					["offsetY"] = 394,
 					["animationStyle"] = "Straight",
+					["offsetY"] = 394,
+					["textAlignIndex"] = 3,
 					["stickyBehavior"] = "Normal",
 				},
 				["Incoming"] = {
-					["behavior"] = "MSBT_NORMAL",
-					["stickyTextAlignIndex"] = 1,
+					["stickyBehavior"] = "Normal",
+					["direction"] = "Up",
 					["offsetX"] = 141,
 					["animationStyle"] = "Straight",
-					["stickyBehavior"] = "Normal",
+					["behavior"] = "MSBT_NORMAL",
 					["offsetY"] = -178,
 					["textAlignIndex"] = 1,
-					["direction"] = "Up",
+					["stickyTextAlignIndex"] = 1,
 				},
 				["Static"] = {
 					["offsetX"] = -561,
@@ -731,7 +729,7 @@ MSBTProfiles_SavedVars = {
 				["Custom1"] = {
 					["stickyTextAlignIndex"] = 1,
 					["stickyDirection"] = "Down",
-					["scrollHeight"] = 202.0587921142578,
+					["scrollHeight"] = 202.058792114258,
 					["offsetX"] = 130,
 					["direction"] = "Down",
 					["name"] = "Incoming Heals",
@@ -882,20 +880,20 @@ MSBTProfiles_SavedVars = {
 			["soundsDisabled"] = true,
 			["hotThrottleDuration"] = 0,
 			["scrollAreas"] = {
-				["Outgoing"] = {
-					["offsetX"] = 131,
-					["offsetY"] = -115,
-				},
 				["Notification"] = {
 					["disabled"] = true,
+				},
+				["Incoming"] = {
+					["offsetX"] = -185,
+					["offsetY"] = -112,
 				},
 				["Static"] = {
 					["disabled"] = true,
 					["offsetY"] = 374,
 				},
-				["Incoming"] = {
-					["offsetX"] = -185,
-					["offsetY"] = -112,
+				["Outgoing"] = {
+					["offsetX"] = 131,
+					["offsetY"] = -115,
 				},
 			},
 			["shortenNumbers"] = true,
@@ -1029,10 +1027,9 @@ MSBTProfiles_SavedVars = {
 			["damageThreshold"] = 12000,
 			["animationSpeed"] = 30,
 			["shortenNumbers"] = true,
-			["hideFullOverheals"] = true,
+			["soundsDisabled"] = true,
 			["creationVersion"] = "5.7.123",
 			["critFontSize"] = 10,
-			["groupNumbers"] = true,
 			["events"] = {
 				["NOTIFICATION_BUFF_FADE"] = {
 					["disabled"] = true,
@@ -1047,14 +1044,14 @@ MSBTProfiles_SavedVars = {
 					["message"] = "%a %n",
 				},
 				["NOTIFICATION_ALT_POWER_LOSS"] = {
-					["fontSize"] = 25.24996566772461,
+					["fontSize"] = 25.2499656677246,
 					["alwaysSticky"] = true,
 					["soundFile"] = "Whisper Ping",
 				},
 				["NOTIFICATION_ALT_POWER_GAIN"] = {
 					["soundFile"] = "Whisper Ping",
 					["alwaysSticky"] = true,
-					["fontSize"] = 24.99496459960938,
+					["fontSize"] = 24.9949645996094,
 				},
 				["NOTIFICATION_SHADOW_ORBS_FULL"] = {
 					["disabled"] = true,
@@ -1113,17 +1110,17 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_HOLY_POWER_CHANGE"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_EXTRA_ATTACK"] = {
-					["disabled"] = true,
+				["INCOMING_ENVIRONMENTAL"] = {
+					["message"] = "%a %e",
 				},
 				["NOTIFICATION_ENEMY_BUFF"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_COOLDOWN"] = {
+				["NOTIFICATION_BUFF_STACK"] = {
 					["disabled"] = true,
 				},
-				["INCOMING_ENVIRONMENTAL"] = {
-					["message"] = "%a %e",
+				["NOTIFICATION_EXTRA_ATTACK"] = {
+					["disabled"] = true,
 				},
 				["NOTIFICATION_POWER_GAIN"] = {
 					["disabled"] = true,
@@ -1138,7 +1135,7 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_BUFF"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_BUFF_STACK"] = {
+				["NOTIFICATION_COOLDOWN"] = {
 					["disabled"] = true,
 				},
 				["NOTIFICATION_POWER_LOSS"] = {
@@ -1148,7 +1145,8 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 			},
-			["soundsDisabled"] = true,
+			["groupNumbers"] = true,
+			["hideFullOverheals"] = true,
 			["scrollAreas"] = {
 				["Notification"] = {
 					["offsetX"] = -960,
@@ -1162,8 +1160,8 @@ MSBTProfiles_SavedVars = {
 					["offsetX"] = -200,
 					["stickyBehavior"] = "Normal",
 					["offsetY"] = 394,
-					["textAlignIndex"] = 3,
 					["animationStyle"] = "Straight",
+					["textAlignIndex"] = 3,
 				},
 				["Static"] = {
 					["offsetX"] = -561,
@@ -1172,7 +1170,7 @@ MSBTProfiles_SavedVars = {
 				["Custom1"] = {
 					["stickyTextAlignIndex"] = 1,
 					["stickyDirection"] = "Down",
-					["scrollHeight"] = 202.0587921142578,
+					["scrollHeight"] = 202.058792114258,
 					["name"] = "Incoming Heals",
 					["direction"] = "Down",
 					["offsetX"] = 130,
@@ -1181,14 +1179,14 @@ MSBTProfiles_SavedVars = {
 					["stickyAnimationStyle"] = "Static",
 				},
 				["Incoming"] = {
-					["stickyTextAlignIndex"] = 1,
 					["direction"] = "Up",
+					["stickyTextAlignIndex"] = 1,
 					["offsetX"] = 141,
 					["textAlignIndex"] = 1,
-					["behavior"] = "MSBT_NORMAL",
+					["stickyBehavior"] = "Normal",
 					["offsetY"] = -178,
 					["animationStyle"] = "Straight",
-					["stickyBehavior"] = "Normal",
+					["behavior"] = "MSBT_NORMAL",
 				},
 			},
 			["normalFontName"] = "DorisPP",
@@ -1201,11 +1199,6 @@ MSBTProfiles_SavedVars = {
 			["damageThreshold"] = 12000,
 			["animationSpeed"] = 30,
 			["normalFontName"] = "DorisPP",
-			["groupNumbers"] = true,
-			["creationVersion"] = "5.7.123",
-			["critFontSize"] = 10,
-			["soundsDisabled"] = true,
-			["hideFullOverheals"] = true,
 			["events"] = {
 				["NOTIFICATION_BUFF_FADE"] = {
 					["disabled"] = true,
@@ -1220,14 +1213,14 @@ MSBTProfiles_SavedVars = {
 					["message"] = "%a %n",
 				},
 				["NOTIFICATION_ALT_POWER_LOSS"] = {
-					["fontSize"] = 25.24996566772461,
+					["fontSize"] = 25.2499656677246,
 					["alwaysSticky"] = true,
 					["soundFile"] = "Whisper Ping",
 				},
 				["NOTIFICATION_ALT_POWER_GAIN"] = {
 					["soundFile"] = "Whisper Ping",
 					["alwaysSticky"] = true,
-					["fontSize"] = 24.99496459960938,
+					["fontSize"] = 24.9949645996094,
 				},
 				["NOTIFICATION_SHADOW_ORBS_FULL"] = {
 					["disabled"] = true,
@@ -1286,17 +1279,17 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_HOLY_POWER_CHANGE"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_BUFF_STACK"] = {
+				["NOTIFICATION_COOLDOWN"] = {
 					["disabled"] = true,
 				},
 				["NOTIFICATION_ENEMY_BUFF"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_COOLDOWN"] = {
+				["NOTIFICATION_BUFF_STACK"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_EXTRA_ATTACK"] = {
-					["disabled"] = true,
+				["INCOMING_ENVIRONMENTAL"] = {
+					["message"] = "%a %e",
 				},
 				["NOTIFICATION_PET_COOLDOWN"] = {
 					["disabled"] = true,
@@ -1311,8 +1304,8 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_POWER_GAIN"] = {
 					["disabled"] = true,
 				},
-				["INCOMING_ENVIRONMENTAL"] = {
-					["message"] = "%a %e",
+				["NOTIFICATION_EXTRA_ATTACK"] = {
+					["disabled"] = true,
 				},
 				["NOTIFICATION_EXPERIENCE_GAIN"] = {
 					["disabled"] = false,
@@ -1321,16 +1314,21 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 			},
+			["creationVersion"] = "5.7.123",
+			["critFontSize"] = 10,
+			["hideFullOverheals"] = true,
+			["soundsDisabled"] = true,
+			["groupNumbers"] = true,
 			["scrollAreas"] = {
 				["Incoming"] = {
-					["direction"] = "Up",
 					["stickyTextAlignIndex"] = 1,
+					["direction"] = "Up",
 					["offsetX"] = 141,
 					["animationStyle"] = "Straight",
-					["stickyBehavior"] = "Normal",
+					["behavior"] = "MSBT_NORMAL",
 					["offsetY"] = -178,
 					["textAlignIndex"] = 1,
-					["behavior"] = "MSBT_NORMAL",
+					["stickyBehavior"] = "Normal",
 				},
 				["Notification"] = {
 					["offsetX"] = -960,
@@ -1343,7 +1341,7 @@ MSBTProfiles_SavedVars = {
 				["Custom1"] = {
 					["stickyTextAlignIndex"] = 1,
 					["stickyDirection"] = "Down",
-					["scrollHeight"] = 202.0587921142578,
+					["scrollHeight"] = 202.058792114258,
 					["name"] = "Incoming Heals",
 					["offsetX"] = 130,
 					["direction"] = "Down",
@@ -1356,7 +1354,7 @@ MSBTProfiles_SavedVars = {
 					["stickyBehavior"] = "Normal",
 					["direction"] = "Up",
 					["stickyDirection"] = "Up",
-					["scrollHeight"] = 464.1179504394531,
+					["scrollHeight"] = 464.117950439453,
 					["offsetX"] = -318,
 					["animationStyle"] = "Straight",
 					["iconAlign"] = "Left",
@@ -1617,9 +1615,10 @@ MSBTProfiles_SavedVars = {
 			["damageThreshold"] = 12000,
 			["animationSpeed"] = 30,
 			["shortenNumbers"] = true,
-			["soundsDisabled"] = true,
+			["hideFullOverheals"] = true,
 			["creationVersion"] = "5.7.123",
 			["critFontSize"] = 10,
+			["groupNumbers"] = true,
 			["events"] = {
 				["NOTIFICATION_BUFF_FADE"] = {
 					["disabled"] = true,
@@ -1634,14 +1633,14 @@ MSBTProfiles_SavedVars = {
 					["message"] = "%a %n",
 				},
 				["NOTIFICATION_ALT_POWER_LOSS"] = {
-					["fontSize"] = 25.24996566772461,
+					["fontSize"] = 25.2499656677246,
 					["alwaysSticky"] = true,
 					["soundFile"] = "Whisper Ping",
 				},
 				["NOTIFICATION_ALT_POWER_GAIN"] = {
 					["soundFile"] = "Whisper Ping",
 					["alwaysSticky"] = true,
-					["fontSize"] = 24.99496459960938,
+					["fontSize"] = 24.9949645996094,
 				},
 				["NOTIFICATION_SHADOW_ORBS_FULL"] = {
 					["disabled"] = true,
@@ -1700,8 +1699,8 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_HOLY_POWER_CHANGE"] = {
 					["disabled"] = true,
 				},
-				["INCOMING_ENVIRONMENTAL"] = {
-					["message"] = "%a %e",
+				["NOTIFICATION_EXTRA_ATTACK"] = {
+					["disabled"] = true,
 				},
 				["NOTIFICATION_ENEMY_BUFF"] = {
 					["disabled"] = true,
@@ -1709,8 +1708,8 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_BUFF_STACK"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_EXTRA_ATTACK"] = {
-					["disabled"] = true,
+				["INCOMING_ENVIRONMENTAL"] = {
+					["message"] = "%a %e",
 				},
 				["NOTIFICATION_POWER_GAIN"] = {
 					["disabled"] = true,
@@ -1735,18 +1734,17 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 			},
-			["groupNumbers"] = true,
-			["hideFullOverheals"] = true,
+			["soundsDisabled"] = true,
 			["scrollAreas"] = {
 				["Incoming"] = {
-					["stickyTextAlignIndex"] = 1,
 					["direction"] = "Up",
+					["stickyTextAlignIndex"] = 1,
 					["offsetX"] = 141,
 					["textAlignIndex"] = 1,
-					["stickyBehavior"] = "Normal",
+					["behavior"] = "MSBT_NORMAL",
 					["offsetY"] = -178,
 					["animationStyle"] = "Straight",
-					["behavior"] = "MSBT_NORMAL",
+					["stickyBehavior"] = "Normal",
 				},
 				["Notification"] = {
 					["offsetX"] = -960,
@@ -1759,7 +1757,7 @@ MSBTProfiles_SavedVars = {
 				["Custom1"] = {
 					["stickyTextAlignIndex"] = 1,
 					["stickyDirection"] = "Down",
-					["scrollHeight"] = 202.0587921142578,
+					["scrollHeight"] = 202.058792114258,
 					["name"] = "Incoming Heals",
 					["direction"] = "Down",
 					["offsetX"] = 130,
@@ -1775,8 +1773,8 @@ MSBTProfiles_SavedVars = {
 					["offsetX"] = -200,
 					["stickyBehavior"] = "Normal",
 					["offsetY"] = 394,
-					["animationStyle"] = "Straight",
 					["textAlignIndex"] = 3,
+					["animationStyle"] = "Straight",
 				},
 			},
 			["normalFontName"] = "DorisPP",
@@ -1789,118 +1787,8 @@ MSBTProfiles_SavedVars = {
 			["normalFontSize"] = 10,
 			["creationVersion"] = "5.7.123",
 			["critFontSize"] = 15,
-			["events"] = {
-				["NOTIFICATION_BUFF_FADE"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_DEBUFF_FADE"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_PET_COOLDOWN"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_DAMAGE_CRIT"] = {
-					["message"] = "%a %n",
-				},
-				["NOTIFICATION_ALT_POWER_LOSS"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_ALT_POWER_GAIN"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_SHADOW_ORBS_FULL"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_HEAL"] = {
-					["message"] = "%a %s %n",
-					["scrollArea"] = "Custom1",
-				},
-				["NOTIFICATION_CP_FULL"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_DAMAGE"] = {
-					["message"] = "%a %n",
-				},
-				["NOTIFICATION_CHI_FULL"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_SHADOW_ORBS_CHANGE"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_HOT_CRIT"] = {
-					["message"] = "%a %s %n",
-					["scrollArea"] = "Custom1",
-				},
-				["NOTIFICATION_ITEM_BUFF_FADE"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_HEAL_CRIT"] = {
-					["message"] = "%a %s %n",
-					["scrollArea"] = "Custom1",
-				},
-				["NOTIFICATION_ITEM_COOLDOWN"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_CHI_CHANGE"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_DEBUFF_STACK"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_DEBUFF"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_ABSORB"] = {
-					["message"] = "Absorb! %a",
-				},
-				["NOTIFICATION_HOLY_POWER_FULL"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_MONSTER_EMOTE"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_POWER_LOSS"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_HOLY_POWER_CHANGE"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_BUFF_STACK"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_ENEMY_BUFF"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_COOLDOWN"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_EXTRA_ATTACK"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_BUFF"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_HOT"] = {
-					["message"] = "%a %s %n",
-					["scrollArea"] = "Custom1",
-				},
-				["NOTIFICATION_CP_GAIN"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_POWER_GAIN"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_ENVIRONMENTAL"] = {
-					["message"] = "%a %e",
-				},
-				["NOTIFICATION_EXPERIENCE_GAIN"] = {
-					["disabled"] = false,
-				},
-				["NOTIFICATION_ITEM_BUFF"] = {
-					["disabled"] = true,
-				},
-			},
 			["groupNumbers"] = true,
+			["soundsDisabled"] = true,
 			["shortenNumbers"] = true,
 			["scrollAreas"] = {
 				["Outgoing"] = {
@@ -1943,7 +1831,117 @@ MSBTProfiles_SavedVars = {
 				},
 			},
 			["normalFontName"] = "DorisPP",
-			["soundsDisabled"] = true,
+			["events"] = {
+				["NOTIFICATION_BUFF_FADE"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_DEBUFF_FADE"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_PET_COOLDOWN"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_DAMAGE_CRIT"] = {
+					["message"] = "%a %n",
+				},
+				["NOTIFICATION_ALT_POWER_LOSS"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_ALT_POWER_GAIN"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_SHADOW_ORBS_FULL"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_HEAL"] = {
+					["message"] = "%a %s %n",
+					["scrollArea"] = "Custom1",
+				},
+				["NOTIFICATION_CP_FULL"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_DAMAGE"] = {
+					["message"] = "%a %n",
+				},
+				["NOTIFICATION_CHI_FULL"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_SHADOW_ORBS_CHANGE"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_HOT_CRIT"] = {
+					["message"] = "%a %s %n",
+					["scrollArea"] = "Custom1",
+				},
+				["NOTIFICATION_ITEM_BUFF_FADE"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_HEAL_CRIT"] = {
+					["message"] = "%a %s %n",
+					["scrollArea"] = "Custom1",
+				},
+				["NOTIFICATION_ITEM_COOLDOWN"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_CHI_CHANGE"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_DEBUFF_STACK"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_DEBUFF"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_ABSORB"] = {
+					["message"] = "Absorb! %a",
+				},
+				["NOTIFICATION_HOLY_POWER_FULL"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_MONSTER_EMOTE"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_POWER_LOSS"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_HOLY_POWER_CHANGE"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_COOLDOWN"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_ENEMY_BUFF"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_BUFF_STACK"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_ENVIRONMENTAL"] = {
+					["message"] = "%a %e",
+				},
+				["NOTIFICATION_BUFF"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_HOT"] = {
+					["message"] = "%a %s %n",
+					["scrollArea"] = "Custom1",
+				},
+				["NOTIFICATION_CP_GAIN"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_POWER_GAIN"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_EXTRA_ATTACK"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_EXPERIENCE_GAIN"] = {
+					["disabled"] = false,
+				},
+				["NOTIFICATION_ITEM_BUFF"] = {
+					["disabled"] = true,
+				},
+			},
 			["triggers"] = {
 				["MSBT_TRIGGER_KILL_SHOT"] = {
 					["disabled"] = true,
@@ -2194,44 +2192,7 @@ MSBTProfiles_SavedVars = {
 			},
 			["creationVersion"] = "5.7.123",
 			["critFontSize"] = 15,
-			["groupNumbers"] = true,
 			["soundsDisabled"] = true,
-			["normalFontName"] = "DorisPP",
-			["scrollAreas"] = {
-				["Incoming"] = {
-					["stickyTextAlignIndex"] = 1,
-					["offsetX"] = 115,
-					["behavior"] = "CurvedRight",
-					["offsetY"] = -173,
-					["textAlignIndex"] = 1,
-				},
-				["Notification"] = {
-					["offsetX"] = 560,
-					["offsetY"] = 103,
-				},
-				["Static"] = {
-					["disabled"] = true,
-				},
-				["Custom1"] = {
-					["stickyTextAlignIndex"] = 3,
-					["offsetX"] = 904,
-					["scrollHeight"] = 350,
-					["offsetY"] = -295,
-					["textAlignIndex"] = 3,
-					["name"] = "Incoming Heals",
-				},
-				["Outgoing"] = {
-					["stickyBehavior"] = "Normal",
-					["scrollHeight"] = 350,
-					["offsetX"] = 540,
-					["behavior"] = "MSBT_NORMAL",
-					["iconAlign"] = "Left",
-					["offsetY"] = -294,
-					["animationStyle"] = "Straight",
-					["direction"] = "Up",
-				},
-			},
-			["shortenNumbers"] = true,
 			["events"] = {
 				["NOTIFICATION_BUFF_FADE"] = {
 					["disabled"] = true,
@@ -2308,8 +2269,8 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_HOLY_POWER_CHANGE"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_EXTRA_ATTACK"] = {
-					["disabled"] = true,
+				["INCOMING_ENVIRONMENTAL"] = {
+					["message"] = "%a %e",
 				},
 				["NOTIFICATION_ENEMY_BUFF"] = {
 					["disabled"] = true,
@@ -2317,8 +2278,8 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_BUFF_STACK"] = {
 					["disabled"] = true,
 				},
-				["INCOMING_ENVIRONMENTAL"] = {
-					["message"] = "%a %e",
+				["NOTIFICATION_EXTRA_ATTACK"] = {
+					["disabled"] = true,
 				},
 				["NOTIFICATION_POWER_GAIN"] = {
 					["disabled"] = true,
@@ -2343,6 +2304,43 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 			},
+			["normalFontName"] = "DorisPP",
+			["scrollAreas"] = {
+				["Incoming"] = {
+					["stickyTextAlignIndex"] = 1,
+					["offsetX"] = 115,
+					["behavior"] = "CurvedRight",
+					["offsetY"] = -173,
+					["textAlignIndex"] = 1,
+				},
+				["Notification"] = {
+					["offsetX"] = 560,
+					["offsetY"] = 103,
+				},
+				["Static"] = {
+					["disabled"] = true,
+				},
+				["Custom1"] = {
+					["stickyTextAlignIndex"] = 3,
+					["offsetX"] = 904,
+					["scrollHeight"] = 350,
+					["offsetY"] = -295,
+					["textAlignIndex"] = 3,
+					["name"] = "Incoming Heals",
+				},
+				["Outgoing"] = {
+					["behavior"] = "MSBT_NORMAL",
+					["direction"] = "Up",
+					["offsetX"] = 540,
+					["stickyBehavior"] = "Normal",
+					["iconAlign"] = "Left",
+					["offsetY"] = -294,
+					["animationStyle"] = "Straight",
+					["scrollHeight"] = 350,
+				},
+			},
+			["shortenNumbers"] = true,
+			["groupNumbers"] = true,
 			["normalFontSize"] = 10,
 		},
 	},

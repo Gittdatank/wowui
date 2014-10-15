@@ -1446,22 +1446,22 @@ GTFO.SpellID["146908"] = {
 	tankSound = 0; -- Verify unavoidable by tank
 };
 
--- TODO: Return to Stone (Mogu) - Non-tank fail
--- TODO: Shadow Volley (Jun-Wei) - Ranged avoidable?
--- TODO: Molten Fist (Zu Yin) - Avoidable?
--- TODO: Jade Tempest (Xiang-Lin) - Avoidable?
--- TODO: Fracture (Kun-Da) - Avoidable?
--- TODO: Bombs? (Mantid) - Friendly Fire
--- TODO: Bombs on ground (Mantid) - Avoidable
-
 GTFO.SpellID["145993"] = {
 	--desc = "Set to Blow (Commander Na'kaz)";
 	sound = 3;
 };
 
+GTFO.SpellID["145523"] = {
+	--desc = "Animated Strike (Stone Statue)";
+	sound = 3;
+};
+
+-- TODO: Return to Stone (Mogu) - Non-tank fail
+-- TODO: Shadow Volley (Jun-Wei) - Ranged avoidable?
+-- TODO: Molten Fist (Zu Yin) - Avoidable?
+-- TODO: Jade Tempest (Xiang-Lin) - Avoidable?
+-- TODO: Fracture (Kun-Da) - Avoidable?
 -- TODO: Throw Explosives (Sri'thik Bombardier)
--- TODO: Keg Toss (Ancient Brewmaster Spirit) - Non-tank fail? Avoidable?
--- TODO: Blade of a Hundred Steps (Ancient Brewmaster Spirit) - Avoidable?
 
 GTFO.SpellID["143428"] = {
 	--desc = "Tail Lash (Thok the Bloodthirsty)";

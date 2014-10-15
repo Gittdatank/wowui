@@ -87,7 +87,7 @@ TomTomWaypointsMF = {
 				["951:0:497000000:222000000:Archiereus of Flame (Sanctuary)"] = {
 					951, -- [1]
 					0, -- [2]
-					0.4970000000000001, -- [3]
+					0.497, -- [3]
 					0.222, -- [4]
 					["arrivaldistance"] = 15,
 					["callbacks"] = {
@@ -144,18 +144,10 @@ TomTomWaypointsMF = {
 					["arrivaldistance"] = 15,
 					["callbacks"] = {
 						["distance"] = {
-							[10] = nil --[[ skipped inline function ]],
-							[15] = nil --[[ skipped inline function ]],
-						},
-						["world"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
 						},
 						["minimap"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["world"] = {
 						},
 					},
 					["persistent"] = true,
@@ -175,18 +167,10 @@ TomTomWaypointsMF = {
 					["arrivaldistance"] = 15,
 					["callbacks"] = {
 						["distance"] = {
-							[10] = nil --[[ skipped inline function ]],
-							[15] = nil --[[ skipped inline function ]],
-						},
-						["world"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
 						},
 						["minimap"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["world"] = {
 						},
 					},
 					["persistent"] = true,
@@ -206,18 +190,10 @@ TomTomWaypointsMF = {
 					["arrivaldistance"] = 15,
 					["callbacks"] = {
 						["distance"] = {
-							[10] = nil --[[ skipped inline function ]],
-							[15] = nil --[[ skipped inline function ]],
-						},
-						["world"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
 						},
 						["minimap"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["world"] = {
 						},
 					},
 					["persistent"] = true,
@@ -239,18 +215,10 @@ TomTomWaypointsMF = {
 					["arrivaldistance"] = 15,
 					["callbacks"] = {
 						["distance"] = {
-							[10] = nil --[[ skipped inline function ]],
-							[15] = nil --[[ skipped inline function ]],
-						},
-						["world"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
 						},
 						["minimap"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["world"] = {
 						},
 					},
 					["persistent"] = true,
@@ -270,18 +238,10 @@ TomTomWaypointsMF = {
 					["arrivaldistance"] = 15,
 					["callbacks"] = {
 						["distance"] = {
-							[10] = nil --[[ skipped inline function ]],
-							[15] = nil --[[ skipped inline function ]],
-						},
-						["world"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
 						},
 						["minimap"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["world"] = {
 						},
 					},
 					["persistent"] = true,
@@ -296,23 +256,15 @@ TomTomWaypointsMF = {
 				["951:0:497000000:222000000:Archiereus of Flame (Sanctuary)"] = {
 					951, -- [1]
 					0, -- [2]
-					0.4970000000000001, -- [3]
+					0.497, -- [3]
 					0.222, -- [4]
 					["arrivaldistance"] = 15,
 					["callbacks"] = {
 						["distance"] = {
-							[10] = nil --[[ skipped inline function ]],
-							[15] = nil --[[ skipped inline function ]],
-						},
-						["world"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
 						},
 						["minimap"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["world"] = {
 						},
 					},
 					["persistent"] = true,
@@ -327,23 +279,15 @@ TomTomWaypointsMF = {
 				["951:0:680000000:430000000:Champion of the Black Flame"] = {
 					951, -- [1]
 					0, -- [2]
-					0.6800000000000001, -- [3]
+					0.68, -- [3]
 					0.43, -- [4]
 					["arrivaldistance"] = 15,
 					["callbacks"] = {
 						["distance"] = {
-							[10] = nil --[[ skipped inline function ]],
-							[15] = nil --[[ skipped inline function ]],
-						},
-						["world"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
 						},
 						["minimap"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["world"] = {
 						},
 					},
 					["persistent"] = true,
@@ -386,7 +330,7 @@ TomTomWaypointsMF = {
 					951, -- [1]
 					0, -- [2]
 					0.4341, -- [3]
-					0.5588000000000001, -- [4]
+					0.5588, -- [4]
 					["arrivaldistance"] = 15,
 					["callbacks"] = {
 						["distance"] = {
@@ -431,8 +375,8 @@ TomTomWaypointsMF = {
 				["951:0:661800000:723100000:Croaking Hollow"] = {
 					951, -- [1]
 					0, -- [2]
-					0.6618000000000001, -- [3]
-					0.7231000000000001, -- [4]
+					0.6618, -- [3]
+					0.7231, -- [4]
 					["arrivaldistance"] = 15,
 					["callbacks"] = {
 						["distance"] = {

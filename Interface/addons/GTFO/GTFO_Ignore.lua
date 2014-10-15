@@ -43,6 +43,9 @@ GTFO.IgnoreScan["6788"] = true; -- Weakened Soul
 GTFO.IgnoreScan["136193"] = true; -- Arcing Lightning
 GTFO.IgnoreScan["139107"] = true; -- Mind Daggers
 GTFO.IgnoreScan["156152"] = true; -- Gushing Wounds
-
+GTFO.IgnoreScan["162510"] = true; -- Tectonic Upheavel
+GTFO.IgnoreScan["98021"] = true; -- Spirit Link (Shaman)
+GTFO.IgnoreScan["148760"] = true; -- Pheromone Cloud
+GTFO.IgnoreScan["175982"] = true; -- Rain of Slag
 
 

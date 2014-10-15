@@ -40,7 +40,7 @@ function mod:GetOptions()
 		156937, {175104, "TANK_HEALER"}, {156932, "FLASH"}, -- Foreman Feldspar
 		-10325, -- Primal Elementalist
 		-10324, -- Slag Elemental
-		155186, {176121, "SAY", "FLASH", "ICON"}, -- Firecaller
+		155186, {176121, "SAY", "FLASH"}, -- Firecaller
 		155209, {155242, "TANK"}, {155223, "FLASH"}, 163776, -- Heart of the Mountain
 		"stages", "bosskill"
 	}, {
@@ -65,21 +65,22 @@ function mod:OnBossEnable()
 	-- Furnace Engineer
 	self:Log("SPELL_CAST_START", "Repair", 155179)
 	self:Log("SPELL_AURA_APPLIED", "Bomb", 155192)
+	self:Log("SPELL_AURA_REMOVED", "BombRemoved", 155192)
 	-- Firecaller
 	self:Log("SPELL_CAST_START", "CauterizeWounds", 155186)
 	self:Log("SPELL_AURA_APPLIED", "VolatileFireApplied", 176121)
-	self:Log("SPELL_AURA_REMOVED", "VolatileFireRemoved", 176121)
+	--self:Log("SPELL_AURA_REMOVED", "VolatileFireRemoved", 176121)
 	-- Foreman Feldspar
 	self:Log("SPELL_CAST_START", "Pyroclasm", 156937)
 	self:Log("SPELL_AURA_APPLIED", "MeltArmor", 175104)
 	self:Log("SPELL_AURA_APPLIED_DOSE", "MeltArmor", 175104)
-	--TODO Rupture frequency? warn for cast?
+	--self:Log("SPELL_CAST_START", "Rupture", 156934) -- 22-27.8
 	self:Log("SPELL_PERIODIC_DAMAGE", "RuptureDamage", 156932)
 	self:Log("SPELL_PERIODIC_MISSED", "RuptureDamage", 156932)
 	-- Heart of the Mountain
 	self:Log("SPELL_AURA_APPLIED", "Heat", 155242)
 	self:Log("SPELL_AURA_APPLIED_DOSE", "Heat", 155242)
-	--TODO Melt frequency? warn for cast?
+	--self:Log("SPELL_CAST_SUCCESS", "Melt", 155225) -- 7.2-10.8
 	self:Log("SPELL_PERIODIC_DAMAGE", "MeltDamage", 155223)
 	self:Log("SPELL_PERIODIC_MISSED", "MeltDamage", 155223)
 	self:Log("SPELL_AURA_APPLIED", "CoolingDown", 156880)
@@ -94,8 +95,8 @@ function mod:OnEngage()
 	blastTime = 25 -- 4 energy/s
 	wipe(volatileFireTargets)
 
-	self:Bar(155209, blastTime)
-	self:Bar(-9650, 20) -- Bellows Operator
+	self:Bar(155209, blastTime) -- Blast
+	self:Bar(-9650, 55, nil, 155181) -- Bellows Operator
 	self:RegisterUnitEvent("UNIT_POWER_FREQUENT", nil, "boss1")
 end
 
@@ -110,36 +111,30 @@ do
 	function mod:Loading(args)
 		local t = GetTime()
 		if t-prev > 5 then
-			self:Message(-9650, "Attention", "Info")
-			self:Bar(-9650, 60)
+			self:Message(-9650, "Attention", "Info") -- Bellows Operator
+			self:Bar(-9650, 60, nil, 155181)
 			prev = t
 		end
 	end
 end
 
 function mod:Repair(args)
-	if self:Healer() then return end
-
-	-- warn people near the mob
-	local unit = self:GetUnitIdByGUID(args.sourceGUID)
-	if not unit then return end
-
-	for i=1, GetNumGroupMembers() do
-		local player = ("raid%d"):format(i)
-		if UnitDetailedThreatSituation(player, unit) then
-			if self:Range(player) < 30 then
-				self:Message(args.spellId, "Personal", "Alert", CL.other:format(args.sourceName, args.spellName))
-			end
-			return
-		end
+	if not self:Healer() then
+		self:Message(args.spellId, "Personal", "Alert", CL.other:format(args.sourceName, args.spellName))
 	end
 end
 
 function mod:Bomb(args)
 	if self:Me(args.destGUID) then
-		self:Message(args.spellId, "Positive", "Alert", CL.you:format(args.spellName)) -- is good thing
+		self:Message(args.spellId, "Positive", "Alarm", CL.you:format(args.spellName)) -- is good thing
 		self:TargetBar(args.spellId, 15, args.destName)
 		self:Flash(args.spellId)
+	end
+end
+
+function mod:BombRemoved(args)
+	if self:Me(args.destGUID) then
+		self:StopBar(args.spellId, args.destName)
 	end
 end
 
@@ -172,41 +167,27 @@ end
 do
 	local list, scheduled = mod:NewTargetList(), nil
 	local function warnTargets(spellId)
-		-- not custom so multiple people probably have it enabled (should it be custom?)
-		-- try to have everyone mark the same people primary/secondary
-		table.sort(volatileFireTargets)
-		mod:PrimaryIcon(spellId, volatileFireTargets[1])
-		mod:SecondaryIcon(spellId, volatileFireTargets[2])
 		mod:TargetMessage(spellId, list, "Urgent", "Alarm")
 		scheduled = nil
 	end
 	function mod:VolatileFireApplied(args)
 		if self:Me(args.destGUID) then
-			self:Say(args.spellId)
+			if not self:LFR() then
+				self:Say(args.spellId)
+			end
 			self:Flash(args.spellId)
 		end
-		list[#list] = args.destName
-		volatileFireTargets[#volatileFireTargets] = args.destName
+		list[#list+1] = args.destName
 		if not scheduled then
-			scheduled = self:ScheduleTimer(warnTargets, 0.3, args.spellId)
+			scheduled = self:ScheduleTimer(warnTargets, 0.1, args.spellId)
 		end
-	end
-end
-
-function mod:VolatileFireRemoved(args)
-	if args.destName == volatileFireTargets[1] then
-		self:PrimaryIcon(args.spellId)
-		volatileFireTargets[1] = nil
-	else
-		self:SecondaryIcon(args.spellId)
-		volatileFireTargets[2] = nil
 	end
 end
 
 -- Foreman Feldspar
 
 function mod:Pyroclasm(args)
-	self:Message(args.spellId, "Urgent", not self:Healer() and "Alert", CL.casting:format(args.spellName))
+	self:Message(args.spellId, "Attention", nil, CL.casting:format(args.spellName))
 end
 
 function mod:MeltArmor(args)
@@ -219,7 +200,7 @@ do
 	function mod:RuptureDamage(args)
 		local t = GetTime()
 		if self:Me(args.destGUID) and t-prev > 2 then
-			self:Message(args.spellId, "Personal", "Alarm", CL.underyou:format(args.spellId))
+			self:Message(args.spellId, "Personal", "Alarm", CL.underyou:format(args.spellName))
 			self:Flash(args.spellId)
 			prev = t
 		end
@@ -269,7 +250,7 @@ do
 	function mod:MeltDamage(args)
 		local t = GetTime()
 		if self:Me(args.destGUID) and t-prev > 2 then
-			self:Message(args.spellId, "Personal", "Alarm", CL.underyou:format(args.spellId))
+			self:Message(args.spellId, "Personal", "Alarm", CL.underyou:format(args.spellName))
 			self:Flash(args.spellId)
 			prev = t
 		end
@@ -298,14 +279,14 @@ end
 function mod:Deaths(args)
 	if args.mobId == 76808 then
 		regulatorDeaths = regulatorDeaths + 1
-		self:Message("stages", "Neutral", "Info", CL.mob_killed:format(args.destName, regulatorDeaths, 2))
+		self:Message("stages", "Neutral", "Info", CL.mob_killed:format(args.destName, regulatorDeaths, 2), false)
 		if regulatorDeaths > 1 then
 			-- Primalists spawn
 			self:StopBar(-9650) -- Bellows Operator
 		end
 	elseif args.mobId == 76815 then
 		shamanDeaths = shamanDeaths + 1
-		self:Message("stages", "Neutral", "Info", CL.mob_killed:format(args.destName, shamanDeaths, 4))
+		self:Message("stages", "Neutral", "Info", CL.mob_killed:format(args.destName, shamanDeaths, 4), false)
 		if shamanDeaths > 3 then
 			-- The Fury is free! (after the next Blast cast?)
 		end

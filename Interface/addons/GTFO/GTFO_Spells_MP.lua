@@ -1450,14 +1450,22 @@ GTFO.SpellID["147321"] = {
 
 GTFO.SpellID["143297"] = {
 	--desc = "Sha Splash (Immerseus)";
-	sound = 1;
+	damageMinimum = 1;
+	soundFunction = function() -- Warn only if you get hit more than once to reduce spamming
+		if (GTFO_FindEvent("ShaSplash")) then
+			GTFO_AddEvent("ShaSplash", 3);
+			return 1;
+		end
+		GTFO_AddEvent("ShaSplash", 3);
+		return 0;
+	end
 };
 
 GTFO.SpellID["143460"] = {
 	--desc = "Sha Pool (Immerseus - Heroic)";
 	soundFunction = function() 
 		local stacks = GTFO_DebuffStackCount("player", 143460);
-		if (stacks > 1) then
+		if ((stacks > 1 and not GTFO.TankMode) or (stacks > 4)) then
 			return 1;
 		else
 			return 2;
@@ -1640,7 +1648,11 @@ GTFO.SpellID["142759"] = {
 	sound = 1;
 };
 
--- TODO: Languish (Living Corruption) -- Avoidable/kitable?
+GTFO.SpellID["145999"] = {
+	--desc = "Deteriorate (Arcweaver Reinforcements)";
+	sound = 1;
+	applicationOnly = true;
+};
 
 GTFO.SpellID["149280"] = {
 	--desc = "Crimson Acid (Modified Anima Golem)";
@@ -1680,8 +1692,7 @@ GTFO.SpellID["146226"] = {
 
 GTFO.SpellID["145817"] = {
 	--desc = "Windstorm (Set'thik the Windwalker)";
-	sound = 1;
-	test = true; -- Verify avoidable and not spammy
+	soundHeroic = 1;
 };
 
 GTFO.SpellID["143784"] = {

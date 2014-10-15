@@ -3,34 +3,23 @@ OR_db = {
 	["Notes"] = {
 	},
 	["Options"] = {
-		["Specialnote"] = true,
-		["Automatically send requests"] = true,
 		["Tutorial"] = false,
+		["Automatically send requests"] = true,
+		["Auto enable sent"] = false,
 		["DontCheckForChar"] = false,
-		["Filter joined your group"] = false,
+		["Clean up time"] = 7,
 		["Whisperword"] = false,
 		["Auto enable accept"] = true,
 		["Personal send message"] = "Adding you as friend for OpenRaid event %d named %s",
+		["Defaultpage"] = "Index",
+		["Filter have invited"] = true,
+		["Version"] = 2.1,
+		["Filter already in group"] = true,
 		["Ignore when removing"] = {
 		},
-		["Filter already in group"] = true,
-		["Version"] = 2.1,
-		["Filter have invited"] = true,
-		["Defaultpage"] = "Index",
 		["Clear raids after X days"] = false,
-		["Clean up time"] = 7,
-		["Auto enable sent"] = false,
-	},
-	["String"] = {
-	},
-	["Group"] = {
-	},
-	["Leader"] = {
-	},
-	["Rate"] = {
-		["Raid"] = {
-			["Name"] = "Raid",
-		},
+		["Filter joined your group"] = false,
+		["Specialnote"] = true,
 	},
 	["Raids"] = {
 		["Git-Arthas"] = {
@@ -63,5 +52,16 @@ OR_db = {
 		},
 		["Greny-Azuremyst"] = {
 		},
+	},
+	["Group"] = {
+	},
+	["Rate"] = {
+		["Raid"] = {
+			["Name"] = "Raid",
+		},
+	},
+	["Leader"] = {
+	},
+	["String"] = {
 	},
 }

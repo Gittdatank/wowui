@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(180, "DBM-Party-Cataclysm", 11, 76, 1)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 121 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 131 $"):sub(12, -3))
 mod:SetCreatureID(52286)
 mod:SetZone()
 
@@ -34,12 +34,7 @@ function mod:LightingRushTarget()
 	else
 		local uId = DBM:GetRaidUnitId(targetname)
 		if uId then
-			local x, y = GetPlayerMapPosition(uId)
-			if x == 0 and y == 0 then
-				SetMapToCurrentZone()
-				x, y = GetPlayerMapPosition(uId)
-			end
-			local inRange = DBM.RangeCheck:GetDistance("player", x, y)
+			local inRange = DBM.RangeCheck:GetDistance("player", uId)
 			if inRange and inRange <14 then
 				specWarnRushNear:Show(targetname)
 			end

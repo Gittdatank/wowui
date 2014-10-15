@@ -296,13 +296,17 @@ function Scrap:Repair()
 	local cost = GetRepairAllCost()
 	if cost > 0 then
 		local guildMoney = GetGuildBankWithdrawMoney()
-		local useGuild = Scrap_GuildRepair and CanGuildBankRepair() and (guildMoney == -1 or guildMoney >= cost)
+		local useGuild = self:CanGuildRepair() and (guildMoney == -1 or guildMoney >= cost)
 
 		if useGuild or GetMoney() >= cost then
 			RepairAllItems(useGuild)
 			self:PrintMoney(L.Repaired, cost)
 		end
 	end
+end
+
+function Scrap:CanGuildRepair()
+	return Scrap_GuildRepair and CanGuildBankRepair() and not GetGuildInfoText():find('%[noautorepair%]')
 end
 
 

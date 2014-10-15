@@ -43,7 +43,7 @@ if L then
 	L.custom_on_markpossessed = "標記遭佔據的首領"
 	L.custom_on_markpossessed_desc = "用骷髏標記遭佔據的首領，需要權限。"
 
-	--L.priestess_heal = "%s was healed!"
+	L.priestess_heal = ">%s< 被治療！"
 	L.assault_stun = "坦克暈眩"
 	L.assault_message = "嚴寒之擊！"
 	L.full_power = "全能量"
@@ -207,8 +207,6 @@ end
 
 L = BigWigs:NewBossLocale("Throne of Thunder Trash", "zhTW")
 if L then
-	L.displayname = "小怪"
-
 	L.stormcaller = "贊達拉召雷師"
 	L.stormbringer = "風暴召喚者德拉茲齊"
 	L.monara = "魔娜菈" --(任務)皇后的輓歌

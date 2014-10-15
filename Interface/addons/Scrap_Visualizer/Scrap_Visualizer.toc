@@ -1,4 +1,4 @@
-## Interface: 50400
+## Interface: 60000
 ## Title: Scrap Visualizer
 ## Notes: Load on demand panel for browsing trough junk lists.
 

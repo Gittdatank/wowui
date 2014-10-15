@@ -6,6 +6,11 @@ end
 
 L = BigWigs:NewBossLocale("Oregorger", "esES")
 if L then
+	--L.berserk_trigger = "Oregorger has gone insane from hunger!"
+
+	--L.shard_explosion = "Explosive Shard Explosion"
+	--L.shard_explosion_desc = "Separate emphasized bar for the explosion."
+
 	--L.hunger_drive_power = "%dx %s - %d ore to go!"
 end
 
@@ -49,11 +54,12 @@ if L then
 	--L.trains = "Train warnings"
 	--L.trains_desc = "Shows timers and messages for each lane for when the next train is coming. Lanes are numbered from the boss to the entrace, ie, Boss 1 2 3 4 Entrance."
 
-	--L.lane = "Lane %d: %s"
+	--L.lane = "Lane %s: %s"
 	--L.train = "Train"
 	--L.adds_train = "Adds train"
 	--L.big_add_train = "Big add train"
 	--L.cannon_train = "Cannon train"
+	--L.random = "Random trains"
 end
 
 L = BigWigs:NewBossLocale("The Iron Maidens", "esES")

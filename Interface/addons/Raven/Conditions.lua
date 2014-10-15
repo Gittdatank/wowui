@@ -1,4 +1,4 @@
--- Raven is an addon to monitor auras and cooldowns, providing timer bars, action bar highlights, and helpful notifications.
+-- Raven is an addon to monitor auras and cooldowns, providing timer bars and icons plus helpful notifications.
 
 -- Conditions.lua contains routines to test auras and status info to generate notifications.
 
@@ -12,7 +12,7 @@ local MOD = Raven
 local L = LibStub("AceLocale-3.0"):GetLocale("Raven")
 local LSPELL = MOD.LocalSpellNames
 MOD.status = {} -- global status info cached on every update
-local fishSpell = GetSpellInfo(7620)
+local fishSpell = GetSpellInfo(7620) -- must be valid
 local range_initialized = false
 local timeEvents = {} -- table of times at which to trigger a simulated event during update processing
 local classificationList = { normal = L["Normal"], worldboss = L["Boss"], elite = L["Elite"], rare = L["Rare"], rlite = L["Rare Elite"] }
@@ -168,14 +168,14 @@ local function InitializeRangeSpells()
 	for k, v in pairs(range_tables) do
 		if v[class] then
 			local t = {}
-			for _, sid in pairs(v[class]) do local name = GetSpellInfo(sid); if name then table.insert(t, name) end end
+			for _, sid in pairs(v[class]) do local name = GetSpellInfo(sid); if name and name ~= "" then table.insert(t, name) end end
 			range_spells[k] = t
 		end
 	end
 end
 
 -- Check a table to see if a unit is in range of any of the spells it contains
-local function InRangeSpells(unit, t) if t then for _, s in pairs(t) do if IsSpellInRange(s, unit) == 1 then return true end end end return false end
+local function InRangeSpells(unit, t) if t then for _, s in pairs(t) do if (IsSpellInRange(s, unit) == 1) then return true end end end return false end
 
 -- Return true or false if the unit is in range based on whether it is enemy, friend or pet
 local function UnitRangeCheck(unit)
@@ -330,9 +330,11 @@ end
 -- Return whether the specified talent (either spell name or spell id) is active in current spec
 function MOD.CheckTalent(talent)
 	local id = tonumber(talent)
-	if id then talent = GetSpellInfo(id) end -- translate spell id
-	local t = MOD.talents[talent]
-	if t and t.active then return true end
+	if id then talent = GetSpellInfo(id); if talent == "" then talent = nil end end -- translate spell id
+	if talent then
+		local t = MOD.talents[talent]
+		if t and t.active then return true end
+	end
 	return nil
 end
 
@@ -346,7 +348,7 @@ local function CheckMounted()
 			flying = (fname == LSPELL["Flight Form"]) or (fname == LSPELL["Swift Flight Form"])
 		end
 	end
-	return (IsMounted() ~= nil) or flying
+	return IsMounted() or flying
 end
 
 -- Check balance druid eclipse
@@ -401,9 +403,9 @@ end
 
 -- Check if target matches the specified type
 local function CheckTarget(targetType, unit)
-	local m = UnitExists(unit) == nil
+	local m = not UnitExists(unit)
 	if targetType == "none" then m = not m end
-	if targetType == "player" then m = m or (UnitIsUnit("target", unit) == nil) end
+	if targetType == "player" then m = m or not UnitIsUnit("target", unit) end
 	return not m
 end
 
@@ -432,7 +434,7 @@ end
 local function CheckPetSpec(spec)
 	if not spec then spec = "none" end
 	local currentName = "none"
-	local ferocity = GetSpellInfo(4154) -- hack workaround to localize Ferocity, fingers crossed it works in all languages
+	local ferocity = GetSpellInfo(4154) -- hack workaround to localize Ferocity, fingers crossed it works in all languages, spell id must be valid
 	if UnitExists("pet") then currentName = GetPetTalentTree() or ((MOD.myClass == "HUNTER") and ferocity) or "none" end
 	return spec == currentName
 end
@@ -482,7 +484,7 @@ local function CheckTestAND(ttype, t)
 		if IsOn(t.checkEclipsePower) and (t.checkEclipsePower ~= CheckEclipsePower(t.minEclipsePower)) then return false end
 		if IsOn(t.checkEclipse) and not CheckEclipse(t.checkSolar, t.checkLunar, t.checkSun, t.checkMoon) then return false end
 		if IsOn(t.checkComboPoints) and IsOn(t.minComboPoints) and (t.checkComboPoints ~= (stat.combo >= t.minComboPoints)) then return false end
-		if IsOn(t.hasPet) and (t.hasPet ~= (HasPetUI() ~= nil)) then return false end
+		if IsOn(t.hasPet) and (t.hasPet ~= HasPetUI()) then return false end
 		if IsOn(t.checkStance) and IsOn(t.stance) and (t.stance ~= stat.stance) then return false end
 		if IsOn(t.checkRunes) then
 			if not MOD:IsRuneSpellReady(t.needBlood, t.needFrost, t.needUnholy, t.checkAnyRune, t.checkDeath) then return false end
@@ -590,7 +592,7 @@ local function CheckTestOR(ttype, t)
 		if IsOn(t.checkEclipsePower) and (t.checkEclipsePower == CheckEclipsePower(t.minEclipsePower)) then return true end
 		if IsOn(t.checkEclipse) and CheckEclipse(t.checkSolar, t.checkLunar, t.checkSun, t.checkMoon) then return true end
 		if IsOn(t.checkComboPoints) and IsOn(t.minComboPoints) and (t.checkComboPoints == (stat.combo >= t.minComboPoints)) then return true end
-		if IsOn(t.hasPet) and (t.hasPet == (HasPetUI() ~= nil)) then return true end
+		if IsOn(t.hasPet) and (t.hasPet == HasPetUI()) then return true end
 		if IsOn(t.checkStance) and IsOn(t.stance) and (t.stance == stat.stance) then return true end
 		if IsOn(t.checkRunes) then
 			if MOD:IsRuneSpellReady(t.needBlood, t.needFrost, t.needUnholy, t.checkAnyRune, t.checkDeath) then return true end
@@ -691,18 +693,18 @@ end
 function MOD:UpdateConditions()
 	-- update globally useful conditions
 	local stat = MOD.status
-	stat.inCombat = (UnitAffectingCombat("player") ~= nil)
+	stat.inCombat = UnitAffectingCombat("player")
 	stat.inRaid = IsInRaid()
 	stat.inGroup = GetNumGroupMembers() > 0
 	stat.inParty = stat.inGroup and not stat.inRaid
 	local instance, it = IsInInstance()
 	if instance ~= nil then stat.inInstance = (it == "party") or (it == "raid"); stat.inArena = (it == "arena"); stat.inBattleground = (it == "pvp") else
 		stat.inInstance = false; stat.inArena = false; stat.inBattleground = false end
-	stat.isResting = (IsResting() ~= nil)
+	stat.isResting = IsResting()
 	stat.isMounted = CheckMounted()
 	stat.inVehicle = UnitHasVehicleUI("player")
-	stat.isPvP = (UnitIsPVP("player") ~= nil)
-	stat.isStealthed = (IsStealthed() ~= nil)
+	stat.isPvP = UnitIsPVP("player")
+	stat.isStealthed = IsStealthed()
 	stat.talentGroup = GetActiveSpecGroup(false, false)
 	stat.level = UnitLevel("player")
 	local m = UnitHealthMax("player"); if m > 0 then stat.health = (100 * UnitHealth("player") / m) else stat.health = 0 end
@@ -720,34 +722,34 @@ function MOD:UpdateConditions()
 	end
 	stat.combo = GetComboPoints("player")
 	stat.stance = GetStance()
-	stat.noPet = (UnitExists("pet") == nil)
+	stat.noPet = not UnitExists("pet")
 	if not stat.noPet then
-		stat.petCombat = (UnitAffectingCombat("pet") ~= nil)
+		stat.petCombat = UnitAffectingCombat("pet")
 		m = UnitHealthMax("pet"); if m > 0 then stat.petHealth = (100 * UnitHealth("pet") / m) else stat.petHealth = 0 end
 		m = UnitPowerMax("pet"); if m > 0 then stat.petPower = (100 * UnitPower("pet") / m) else stat.petPower = 0 end
 	end
-	stat.noTarget = (UnitExists("target") == nil)
+	stat.noTarget = not UnitExists("target")
 	if not stat.noTarget then
-		stat.targetPlayer = (UnitIsPlayer("target") ~= nil)
-		stat.targetEnemy = (UnitIsEnemy("player", "target") ~= nil)
-		stat.targetFriend = (UnitIsFriend("player", "target") ~= nil)
-		stat.targetDead = (UnitIsDead("target") ~= nil)
+		stat.targetPlayer = UnitIsPlayer("target")
+		stat.targetEnemy = UnitIsEnemy("player", "target")
+		stat.targetFriend = UnitIsFriend("player", "target")
+		stat.targetDead = UnitIsDead("target")
 		local classification = UnitClassification("target")
-		if MOD.LibBossIDs and MOD.LibBossIDs.BossIDs[tonumber(UnitGUID("target"):sub(-13, -9), 16)] then classification = "worldboss" end
+		if MOD.LibBossIDs and MOD.CheckLibBossIDs(UnitGUID("target")) then classification = "worldboss" end
 		stat.targetClassification = classification
 		m = UnitHealthMax("target")
 		if m > 0 then stat.targetMaxHealth = m; stat.targetHealth = (100 * UnitHealth("target") / m) else stat.targetMaxHealth = 0; stat.targetHealth = 0 end
 		m = UnitPowerMax("target"); if m > 0 then stat.targetPower = (100 * UnitPower("target") / m) else stat.targetPower = 0 end
 		stat.targetInRange = UnitRangeCheck("target")
 	end
-	stat.noFocus = (UnitExists("focus") == nil)
+	stat.noFocus = not UnitExists("focus")
 	if not stat.noFocus then
-		stat.focusPlayer = (UnitIsPlayer("focus") ~= nil)
-		stat.focusEnemy = (UnitIsEnemy("player", "focus") ~= nil)
-		stat.focusFriend = (UnitIsFriend("player", "focus") ~= nil)
-		stat.focusDead = (UnitIsDead("focus") ~= nil)
+		stat.focusPlayer = UnitIsPlayer("focus")
+		stat.focusEnemy = UnitIsEnemy("player", "focus")
+		stat.focusFriend = UnitIsFriend("player", "focus")
+		stat.focusDead = UnitIsDead("focus")
 		local classification = UnitClassification("focus")
-		if MOD.LibBossIDs and MOD.LibBossIDs.BossIDs[tonumber(UnitGUID("focus"):sub(-13, -9), 16)] then classification = "worldboss" end
+		if MOD.LibBossIDs and MOD.CheckLibBossIDs(UnitGUID("focus")) then classification = "worldboss" end
 		stat.focusClassification = classification
 		m = UnitHealthMax("focus"); if m > 0 then stat.focusHealth = (100 * UnitHealth("focus") / m) else stat.focusHealth = 0 end
 		m = UnitPowerMax("focus"); if m > 0 then stat.focusPower = (100 * UnitPower("focus") / m) else stat.focusPower = 0 end
@@ -760,9 +762,9 @@ function MOD:UpdateConditions()
 		-- set all conditions to false first (quicker to clear it than to check IsOn)
 		for _, c in pairs(ct) do if IsOn(c) then c.testResult = false; c.result = false end end
 		-- don't check conditions if dead or in vehicle or on a taxi
-		if UnitIsDeadOrGhost("player") ~= nil then return end
+		if UnitIsDeadOrGhost("player") then return end
 		if UnitHasVehicleUI("player") then return end
-		if UnitOnTaxi("player") ~= nil then return end		
+		if UnitOnTaxi("player") then return end		
 		-- run the tests in each condition to get intermediate testResult
 		for _, c in pairs(ct) do
 			if IsOn(c) and c.name then
@@ -803,7 +805,7 @@ end
 local function GetLocalizedSpellName(field)
 	if not field then return nil end
 	local id, name = tonumber(field), field
-	if id then name = GetSpellInfo(id) end
+	if id then name = GetSpellInfo(id); if name == "" then name = nil end end
 	return name
 end
 	

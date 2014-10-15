@@ -1,38 +1,48 @@
-﻿local L = AceLibrary("AceLocale-2.2"):new("GridStatusAFK")
-local GridRoster = Grid:GetModule("GridRoster")
+local _, ns = ...
 
-L:RegisterTranslations("enUS", function() return {
+--[[
+if GetLocale() == "enUS" then ns.L = {
 	["AFK"] = true,
 	["<AFK>"] = true,
 	["AFK alert"] = true,
-} end)
+} end
+--]]
 
-L:RegisterTranslations("deDE", function() return {
+if GetLocale() == "deDE" then ns.L = {
 	["AFK"] = "AFK",
 	["<AFK>"] = "<AFK>",
 	["AFK alert"] = "AFK Alarm",
-} end)
+} end
 
-L:RegisterTranslations("koKR", function() return {
+if GetLocale() == "koKR" then ns.L = {
 	["AFK"] = "자리비움",
 	["<AFK>"] = "<자리비움>",
 	["AFK alert"] = "자리비움 경고",
-} end)
+} end
 
-L:RegisterTranslations("zhTW", function() return {
+if GetLocale() == "zhTW" then ns.L = {
 	["AFK"] = "暫離",
 	["<AFK>"] = "<暫離>",
 	["AFK alert"] = "暫離警告",
-} end)
+} end
 
-L:RegisterTranslations("zhCN", function() return {
+if GetLocale() == "zhCN" then ns.L = {
 	["AFK"] = "暂离",
 	["<AFK>"] = "<暂离>",
 	["AFK alert"] = "暂离警告",
-} end)
+} end
 
+if not ns.L then ns.L = {} end
+local L = setmetatable(ns.L, {
+	__index = function(t, k)
+		t[k] = k
+		return k
+	end
+})
 
-local GridStatusAFK = Grid:GetModule("GridStatus"):NewModule("GridStatusAFK")
+local GridRoster = Grid:GetModule("GridRoster")
+
+local GridStatusAFK = Grid:GetModule("GridStatus"):NewModule("GridStatusAFK", "AceTimer-3.0")
 GridStatusAFK.menuName = L["AFK"]
 GridStatusAFK.options = false
 
@@ -47,7 +57,7 @@ GridStatusAFK.defaultDB = {
 	},
 }
 
-local UnitIsAFK = UnitIsAFK
+local UnitIsAFK, UnitGUID = UnitIsAFK, UnitGUID
 
 local afkers={}
 
@@ -68,7 +78,7 @@ function GridStatusAFK:Reset()
 	self.super.Reset(self)
 	afkers={}
 
-	self.core:SendStatusLostAllUnits(status)
+	self.core:SendStatusLostAllUnits("alert_afk")
 	self:UnregisterStatus("alert_afk")
 	self:RegisterStatus("alert_afk", L["AFK alert"], nil, true)
 
@@ -81,16 +91,18 @@ function GridStatusAFK:OnStatusEnable(status)
 	self:RegisterEvent("ZONE_CHANGED_NEW_AREA", "UpdateAllUnits")	-- Happens when we e.g. zone into an instance
 	self:RegisterEvent("READY_CHECK", "UpdateAllUnits")
 	self:RegisterEvent("READY_CHECK_FINISHED", "UpdateAllUnits")
-	self:RegisterEvent("Grid_UnitJoined")
-	self:RegisterEvent("Grid_UnitOffline")
-	self:ScheduleRepeatingEvent("GridStatusAFK_UpdateAllUnits", self.UpdateAllUnits, 5.07, self)	-- Once in a while, poll everyone to catch changes to units outside our range (yes, oddball interval to keep it from overlapping with everyone else's 1s timers all the time)
+	self:RegisterMessage("Grid_UnitJoined")
+	self:RegisterMessage("Grid_UnitOffline")
+	self.UpdateAllUnitsTimer = self:ScheduleRepeatingTimer("UpdateAllUnits", 5.07)	-- Once in a while, poll everyone to catch changes to units outside our range (yes, oddball interval to keep it from overlapping with everyone else's 1s timers all the time)
 	self:UpdateAllUnits()
 end
 
 function GridStatusAFK:OnStatusDisable(status)
 	self.core:SendStatusLostAllUnits(status)
 	self:UnregisterAllEvents()
-	self:CancelAllScheduledEvents()
+	self:UnregisterMessage("Grid_UnitJoined")
+	self:UnregisterMessage("Grid_UnitOffline")
+	self:CancelTimer(self.UpdateAllUnitsTimer, true)
 	afkers={}
 end
 
@@ -120,7 +132,7 @@ function GridStatusAFK:UpdateAllUnits()
 	end
 end
 
-function GridStatusAFK:OnUnitEvent(unitid)
+function GridStatusAFK:OnUnitEvent(event, unitid)
 	local guid = UnitGUID(unitid)
 	if (not GridRoster:IsGUIDInRaid(guid)) then
 		return
@@ -128,10 +140,10 @@ function GridStatusAFK:OnUnitEvent(unitid)
 	setStatus(guid,UnitIsAFK(unitid))
 end
 
-function GridStatusAFK:Grid_UnitJoined(guid, unitid)
+function GridStatusAFK:Grid_UnitJoined(event, guid, unitid)
 	setStatus(guid, UnitIsAFK(unitid)) 
 end
 
-function GridStatusAFK:Grid_UnitOffline(guid)
+function GridStatusAFK:Grid_UnitOffline(event, guid)
 	setStatus(guid, false)
 end

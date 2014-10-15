@@ -1,4 +1,4 @@
-## Interface: 50400
+## Interface: 60000
 ## Title: Bagnon Facade
 ## Notes: Allows ButtonFacade to skin Bagnon windows
 ## Author: Jaliborc (João Cardoso)
@@ -7,6 +7,6 @@
 
 ## SavedVariables: BagnonFacade_Settings
 ## Dependencies: Bagnon, Masque
-## Version: 9
+## Version: 10
 
 Bagnon_Facade.lua
