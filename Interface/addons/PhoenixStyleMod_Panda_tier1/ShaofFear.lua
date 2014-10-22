@@ -101,7 +101,7 @@ if arg2=="SPELL_HEAL" and spellid==129190 then
   end
   heal=psdamageceil(heal)
   pscaststartinfo(0,spellname..": |cffff0000-|r "..name2..": "..heal, -1, "id1", 2, "|s4id"..spellid.."|id - "..psinfo,psbossnames[2][4][4],2)
-    if psraidoptionson[2][4][4][2]==1 and pswasonbossp24==1 and select(3,GetInstanceInfo())~=7 then
+    if psraidoptionson[2][4][4][2]==1 and pswasonbossp24==1 and select(3,GetInstanceInfo())~=17 then
       pszapuskanonsa(psraidchats3[psraidoptionschat[2][4][4][2]], "{rt8} |s4id"..spellid.."|id > "..name2..": "..heal)
     end
 end

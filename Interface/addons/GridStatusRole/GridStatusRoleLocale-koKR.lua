@@ -1,7 +1,7 @@
 if GetLocale() ~= "koKR" then return end
 local _, ns = ...
 ns.L = {
-	["Role"] = "역할",
+	["Specialization Role"] = "역할",
 
 	["Healer"] = "힐러",
 	["Melee"] = "근접",

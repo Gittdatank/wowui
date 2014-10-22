@@ -71,6 +71,7 @@ L["Font"] = "Шрифт" -- Needs review
 L["Font Color"] = "Цвет шрифта" -- Needs review
 L["Font Size"] = "Размер шрифта" -- Needs review
 L["Force a square texture. Fixed distortion on square textures."] = "Делать текстуру квадратной. Постоянное искажение на квадратных текстурах." -- Needs review
+L["Garrison Button (When Available)"] = "Кнопка гарнизона (если он доступен)" -- Needs review
 L["Guild Dungeon Difficulty Indicator (When Available)"] = "индикатор сложности подземелья в составе группы гильдии (если доступно)" -- Needs review
 L["Heart"] = "Сердце" -- Needs review
 L["Height"] = "Высота"

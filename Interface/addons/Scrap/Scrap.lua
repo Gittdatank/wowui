@@ -177,7 +177,7 @@ function Scrap:CheckFilters(...)
 		end
 
 	elseif consumable then
-		return value and Scrap_LowConsume and self:LowLevel(level)
+		return value and Scrap_LowConsume and quality < LE_ITEM_QUALITY_RARE and self:LowLevel(level)
 	end
 end
 

@@ -2,6 +2,7 @@ local AceLocale = LibStub:GetLibrary("AceLocale-3.0")
 local L = AceLocale:NewLocale("ComboPointsRedux_Options", "ruRU") 
 if not L then return end
 
+-- L["Advanced Point Tracking"] = "Advanced Point Tracking"
 -- L["Advanced Show/Hide Options"] = "Advanced Show/Hide Options"
 L["Arcane Blast"] = "Чародейская вспышка"
 -- L["Blood Rune"] = "Blood Rune"
@@ -90,6 +91,7 @@ L["Text Strata"] = "Слой текста"
 L["Thick Outline"] = "Толстый контур"
 L["Triangle"] = "треугольник" -- Needs review
 -- L["Unholy Rune"] = "Unholy Rune"
+-- L["Use advanced point tracking methods to show Combo Points on the Player instead of the Target."] = "Use advanced point tracking methods to show Combo Points on the Player instead of the Target."
 L["Vertical"] = "Вертикальное"
 L["X Position"] = "Позиция по Х"
 L["Y Position"] = "Позиция по Y"

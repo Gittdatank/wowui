@@ -108,7 +108,7 @@ rscmain4_min:SetValue(rscminflaskgood)
 		rsccheckboxhhb:SetPoint("TOPLEFT", 230, pii)
 		rsccheckboxhhb:SetScript("OnClick", function(self) if rsctableannounce[hhb]==1 then rsctableannounce[hhb]=0 else rsctableannounce[hhb]=1 end end )
 		if rsctableannounce[hhb]==1 then
-			rsccheckboxhhb:SetChecked()
+			rsccheckboxhhb:SetChecked(true)
 		else
 			rsccheckboxhhb:SetChecked(false)
 		end
@@ -132,7 +132,7 @@ rscmain4_min:SetValue(rscminflaskgood)
 	rsccheckbox1:SetPoint("TOPLEFT", 20, pii)
 	rsccheckbox1:SetScript("OnClick", function(self) rsccheckflaskbutchanged3(ii) end )
 		if rscflaskcheckb[ii]==1 then
-			rsccheckbox1:SetChecked()
+			rsccheckbox1:SetChecked(true)
 		else
 			rsccheckbox1:SetChecked(false)
 		end
@@ -159,7 +159,7 @@ rscmain4_min:SetValue(rscminflaskgood)
             rscupdateflask()
          end )
 		if rscflaskcheckfoodadd==1 then
-			rsccheckbox8:SetChecked()
+			rsccheckbox8:SetChecked(true)
 		else
 			rsccheckbox8:SetChecked(false)
 		end
@@ -177,7 +177,7 @@ rscmain4_min:SetValue(rscminflaskgood)
             rscupdateflask()
          end )
 		if rscflaskcheckfoodadd2==1 then
-			rsccheckbox9:SetChecked()
+			rsccheckbox9:SetChecked(true)
 		else
 			rsccheckbox9:SetChecked(false)
 		end
@@ -260,7 +260,7 @@ function rsccheckflaskbutchanged3(nr)
 if rscflaskcheckb[nr]==1 then rscflaskcheckb[nr]=0 else rscflaskcheckb[nr]=1 end
 
 if rscflaskcheckb[nr]==1 then
-rscflaskcheckbox3[nr]:SetChecked()
+rscflaskcheckbox3[nr]:SetChecked(true)
 else
 rscflaskcheckbox3[nr]:SetChecked(false)
 end
@@ -443,7 +443,7 @@ end
 function rscupdateflask()
 if GetNumGroupMembers() > 0 and UnitInRaid("player") then
 local rscgropcheck=2
-if select(3,GetInstanceInfo())==7 or select(3,GetInstanceInfo())==14 or GetRaidDifficultyID()==4 or GetRaidDifficultyID()==6 then
+if select(3,GetInstanceInfo())==17 or select(3,GetInstanceInfo())==14 or select(3,GetInstanceInfo())==15 or select(3,GetInstanceInfo())==16 or GetRaidDifficultyID()==4 or GetRaidDifficultyID()==6 then
 rscgropcheck=5
 end
 
@@ -528,8 +528,8 @@ if #rscwillcheckthem>0 and rscflaskcheckb[6]==1 then
         end
       end
     end
-	if byl==0 and byl~=100 then
-		if UnitAura(rscwillcheckthem[yy],GetSpellInfo(430)) or UnitAura(rscwillcheckthem[yy],GetSpellInfo(433)) then
+	if (byl==0 and byl~=100) then
+		if (UnitAura(rscwillcheckthem[yy],GetSpellInfo(430)) or UnitAura(rscwillcheckthem[yy],GetSpellInfo(433))) then
 			--персонаж ест
 			byl=99
 		end
@@ -1209,7 +1209,7 @@ if canreport==1 then
 
 if slak==0 and rscwasyellpull and GetTime()<rscwasyellpull+4 then
 else
-if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
 SendAddonMessage("RSCaddon", "a50", "Instance_CHAT")
 else
 SendAddonMessage("RSCaddon", "a50", "RAID")
@@ -1230,7 +1230,7 @@ if rscflaskcheckb[4]==1 and GetTime()-rscflaskimportchat2[1]>100 and #whisper1>0
 rscflaskdelayrep[1]=GetTime()+50
 rscchatfiltimefunc()
 
-if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
 SendAddonMessage("RSCaddon", "b50", "Instance_CHAT")
 else
 SendAddonMessage("RSCaddon", "b50", "RAID")
@@ -1295,7 +1295,7 @@ end
 function rscflaskcheckgo(rscjustfortest)
 --works ONLY IN THE RAID-INSTANCE! in white list and NOT IN LFR
 local a1,a2=IsInInstance()
-if select(3,GetInstanceInfo())==7 and rscjustfortest==nil then
+if select(3,GetInstanceInfo())==17 and rscjustfortest==nil then
 --nothing
 elseif a1 and a2 and a2=="raid" then
 

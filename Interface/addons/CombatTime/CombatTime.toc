@@ -1,14 +1,14 @@
-## Interface: 50400
+## Interface: 60000
 ## Title: CombatTime
 ## Description: Simple, light-weight, LDB-enabled timer that tracks how long you spend in combat
 ## Notes: Simple, light-weight, LDB-enabled timer that tracks how long you spend in combat
 ## Author: oscarucb
 ## Credits: Portions modified from James Whitehead II, Rick Roe, and the Blizzard Stopwatch code
-## Version: 2.4.4
+## Version: 2.5.0
 ## SavedVariablesPerCharacter: CombatTimeSettings
 ## LoadManagers: AddonLoader
 ## X-LoadOn-Always: delayed
-## X-Curse-Packaged-Version: 2.4.4
+## X-Curse-Packaged-Version: 2.5.0
 ## X-Curse-Project-Name: CombatTime
 ## X-Curse-Project-ID: combattime
 ## X-Curse-Repository-ID: wow/combattime/mainline

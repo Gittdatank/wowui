@@ -3,7 +3,7 @@ local L = vars.L
 local addon = RaidBuffStatus
 local report = addon.report
 local raid = addon.raid
-RBS_svnrev["Buffs.lua"] = select(3,string.find("$Revision: 675 $", ".* (.*) .*"))
+RBS_svnrev["Buffs.lua"] = select(3,string.find("$Revision: 690 $", ".* (.*) .*"))
 
 local profile
 function addon:UpdateProfileBuffs()
@@ -278,62 +278,103 @@ local allfoods = {
 }
 
 local fortitude = {
-	SpellName(21562), 	-- Prayer of Fortitude
-        SpellName(109773), 	-- Dark Intent
-	SpellName(469),     	-- Commanding Shout
-        SpellName(90364),   	-- Qiraji Fortitude
+	SpellName(21562),	-- Power Word: Fortitude
+	SpellName(166928),	-- Blood Pact
+	SpellName(469), 	-- Commanding Shout
+	SpellName(90364),	-- Silithid, Qiraji Fortitude
+	SpellName(50256),	-- Bear, Invigorating Roar
+	SpellName(160014),	-- Goat, Sturdiness
 }
 
 local statbuff = {
-	SpellName(1126), 	-- Mark of the Wild
-	SpellName(20217), 	-- Blessing of Kings
-        SpellName(117666), 	-- Legacy of the Emperor
-        SpellName(90363),   	-- Embrace of the Shale Spider
+	SpellName(20217),	-- Blessing of Kings
+	SpellName(1126),	-- Mark of the Wild
+	SpellName(116781),	-- Legacy of the White Tiger
+	SpellName(115921),	-- Legacy of the Emperor
+	SpellName(90363),	-- Shale Spider, Embrace of the Shale Spider
+	SpellName(159988),	-- Dog, Bark of the Wild
+	SpellName(160017),	-- Gorilla, Blessing of Kongs
+	SpellName(160077),	-- Worm, Strength of the Earth
 }
 
 local masterybuff = { 
-        SpellName(19740),           -- Blessing of Might
-        SpellName(116956),          -- Grace of Air
-        SpellName(93435),           -- Roar of Courage
-        SpellName(128997),          -- Spirit Beast Blessing        
+	SpellName(19740),	-- Blessing of Might
+	SpellName(155522),	-- Power of the Grave
+	SpellName(116956),	-- Grace of Air
+	SpellName(24907),	-- Moonkin Aura
+	SpellName(93435),	-- Cat, Roar of Courage
+	SpellName(128997),	-- Spirit Beast, Spirit Beast Blessing
+	SpellName(160073),	-- Tallstrider, Plainswalking
+	SpellName(160039),	-- Hydra, Keen Senses
 } 
 
-local spbuff = { 
-	SpellName(1459), 	-- Arcane Intellect
-	SpellName(61316), 	-- Dalaran Brilliance
-        SpellName(109773), 	-- Dark Intent
-        SpellName(77747), 	-- Burning Wrath
-        SpellName(126309), 	-- Still Water
-}
-
 local critbuff = {
-        SpellName(116781),	-- Legacy of the White Tiger
-        SpellName(17007), 	-- Leader of the Pack
-        SpellName(1459), 	-- Arcane Brilliance
-        SpellName(61316),	-- Dalaran Brilliance
-        SpellName(24604), 	-- Furious Howl
-        SpellName(90309), 	-- Terrifying Roar
-        SpellName(97229), 	-- Bellowing Roar
-        SpellName(126373),	-- Fearless Roar
-        SpellName(126309),	-- Still Water        
+	SpellName(116781),	-- Legacy of the White Tiger
+	SpellName(17007),	-- Leader of the Pack
+	SpellName(1459),	-- Arcane Brilliance
+	SpellName(61316),	-- Dalaran Brilliance
+	SpellName(24604),	-- Wolf, Furious Howl
+	SpellName(90309),	-- Devilsaur, Terrifying Roar
+	SpellName(126373),	-- Quilen, Fearless Roar
+	SpellName(126309),	-- Water Strider, Still Water
+	SpellName(90363),	-- Shale Spider, Embrace of the Shale Spider
+	SpellName(160052),	-- Raptor, Strength of the Pack
 }
 
-local aspects = {
-	SpellName(13165), -- Aspect of the Hawk
-	SpellName(109260), -- Aspect of the Iron Hawk
-	SpellName(5118), -- Aspect of the Cheetah
-	SpellName(13159), -- Aspect of the Pack
+local hastebuff = {
+	SpellName(55610),	-- Unholy Aura
+	SpellName(116956),	-- Grace of Air
+	SpellName(49868),	-- Mind Quickening
+	SpellName(113742),	-- Swiftblade's Cunning
+	SpellName(135678),	-- Sporebat, Energizing Spores
+	SpellName(128432),	-- Hyena, Cackling Howl
+	SpellName(160074),	-- Wasp, Speed of the Swarm
+}
+
+local msbuff = { -- multistrike
+	SpellName(166916),	-- Windflurry
+	SpellName(49868),	-- Mind Quickening
+	SpellName(113742),	-- Swiftblade's Cunning
+	SpellName(109773),	-- Dark Intent
+	SpellName(50519),	-- Bat, Sonic Focus
+	SpellName(159736), 	-- Chimaera, Duality
+	SpellName(57386),	-- Clefthoof, Wild Strength
+	SpellName(58604),	-- Core Hound, Double Bite
+	SpellName(34889),	-- Dragonhawk, Spry Attacks
+	SpellName(24844),	-- Wind Serpent, Breath of the Winds
+}
+
+local vsbuff = { -- versatility
+	SpellName(167187),	-- Sanctity Aura
+	SpellName(167188),	-- Inspiring Presence
+	SpellName(55610),	-- Unholy Aura
+	SpellName(1126),	-- Mark of the Wild
+	SpellName(159735),	-- Bird of Prey, Tenacity
+	SpellName(35290),	-- Boar, Indomitable
+	SpellName(57386),	-- Clefthoof, Wild Strength
+	SpellName(160045),	-- Porcupine, Defensive Quills
+	SpellName(50518),	-- Ravager, Chitinous Armor
+	SpellName(160077),	-- Worm, Strength of the Earth
+}
+
+local spbuff = { 
+	SpellName(1459),	-- Arcane Brilliance
+	SpellName(61316),	-- Dalaran Brilliance
+	SpellName(109773),	-- Dark Intent
+	SpellName(126309),	-- Water Strider, Still Water
+	SpellName(90364),	-- Silithid, Qiraji Fortitude
+	SpellName(128433),	-- Serpent, Serpent's Cunning
+}
+
+local apbuff = {
+	SpellName(19506),	-- Trueshot Aura
+	SpellName(6673),	-- Battle Shout
+	SpellName(57330),	-- Horn of Winter
 }
 
 local badaspects = {
 	SpellName(5118), -- Aspect of the Cheetah
 	SpellName(13159), -- Aspect of the Pack
-}
-
-local magearmors = {
-	SpellName(6117), -- Mage Armor
-	SpellName(7302), -- Frost Armor
-	SpellName(30482), -- Molten Armor
 }
 
 local blood_presence = SpellName(48263) -- Blood Presence
@@ -343,11 +384,10 @@ local dkpresences = {
 	SpellName(48265), -- Unholy Presence
 }
 
-local seals = {
-	SpellName(20165), -- Seal of Insight
-	SpellName(20164), -- Seal of Justice
-	SpellName(31801), -- Seal of Truth
-	SpellName(20154), -- Seal of Righteousness	
+local defensive_stance = SpellName(71)
+local warrstances = {
+	defensive_stance,
+	SpellName(2457), -- Battle Stance
 }
 
 local scrollofagility = {
@@ -378,15 +418,6 @@ local roguewepbuffs = {
 	BS[2818],  -- Deadly
 	BS[3409],  -- Crippling
 	BS[8679],  -- Wound 
-	BS[5760],  -- Mind-numbing
-}
-
-local shamanwepbuffs = {
-	L["(Flametongue)"], -- Shaman self buff
-	L["(Earthliving)"], -- Resto Shaman self buff
-	L["(Frostbrand)"], -- Shaman self buff
-	L["(Rockbiter)"], -- Shaman self buff
-	L["(Windfury)"], -- Shaman self buff
 }
 
 local function initreporttable(tablename)
@@ -788,6 +819,7 @@ local BF = {
 		checkzonedout = true,
 		selfbuff = false,
 		timer = true,
+		core = true,
 		class = allclasses,
 		buffinfo = { { "PRIEST", 2006 }, { "DRUID", 50769 }, { "PALADIN", 7328 }, { "SHAMAN", 2008 }, { "MONK", 115178 } },
 		chat = L["Dead"],
@@ -1009,7 +1041,6 @@ local BF = {
 		selfbuff = true,
 		selfonlybuff = true,
 		timer = false,
-		core = true,
 		class = { PALADIN = true, },
 		chat = BS[25780], -- Righteous Fury
 		main = function(self, name, class, unit, raid, report)
@@ -1153,9 +1184,9 @@ local BF = {
 		default = true,
 		defaultbuff = false,
 		defaultwarning = true,
-		defaultdash = true,
-		defaultdashcombat = true,
-		defaultboss = true,
+		defaultdash = false,
+		defaultdashcombat = false,
+		defaultboss = false,
 		defaulttrash = false,
 		checkzonedout = true,
 		selfbuff = false,
@@ -1211,12 +1242,12 @@ local BF = {
 		end,
 		tip = function(self)
 			if not report.soulstonelist then  -- fixes error when tip being called from option window when not in a party/raid
-				addon:Tooltip(self, L["Someone has a Soulstone or not"])
+				addon:Tooltip(self, BS[20707])
 			else
 				if #report.soulstonelist < 1 then
-					addon:Tooltip(self, L["Someone has a Soulstone or not"], {L["No Soulstone detected"]}, nil, addon.BF.soulstone:buffers())
+					addon:Tooltip(self, BS[20707], {L["No Soulstone detected"]}, nil, addon.BF.soulstone:buffers())
 				else
-					addon:Tooltip(self, L["Someone has a Soulstone or not"], nil, nil, addon.BF.soulstone:buffers(), nil, nil, nil, nil, report.havesoulstonelist)
+					addon:Tooltip(self, BS[20707], nil, nil, addon.BF.soulstone:buffers(), nil, nil, nil, nil, report.havesoulstonelist)
 				end
 			end
 		end,
@@ -1303,7 +1334,7 @@ local BF = {
 			addon:ButtonClick(self, button, down, "healthstone")
 		end,
 		tip = function(self)
-			addon:Tooltip(self, L["Missing "] .. ITN[5512], report.healthstonelist, nil, addon.BF.healthstone:buffers(), nil, nil, nil, report.healthstonelistunknown, report.healthstonelistgotone) -- Healthstone
+			addon:Tooltip(self, nil, report.healthstonelist, nil, addon.BF.healthstone:buffers(), nil, nil, nil, report.healthstonelistunknown, report.healthstonelistgotone) -- Healthstone
 		end,
 		partybuff = nil,
 		whispertobuff = function(reportl, prefix)
@@ -1341,7 +1372,7 @@ local BF = {
 		default = true,
 		defaultbuff = false,
 		defaultwarning = true,
-		defaultdash = true,
+		defaultdash = false,
 		defaultdashcombat = false,
 		defaultboss = false,
 		defaulttrash = false,
@@ -1431,8 +1462,8 @@ local BF = {
 			   if select(2,UnitRace(unit.unitid)) == "Pandaren" then -- normalize for Epicurean racial
 			      statval = statval / 2
 			   end
-			   if statval >= 100 and string.find(foodz, ITEM_MOD_STAMINA_SHORT) then -- normalize for MoP stam bonus
-			      statval = statval * 300 / 450
+			   if statval >= 40 and string.find(foodz, ITEM_MOD_STAMINA_SHORT) then -- normalize for MoP stam bonus
+			      statval = statval / 1.5
 			   end
 			   if statval >= profile.foodlevel or
 			      select(11,UnitBuff(unit.unitid, foods[1])) == 66623 then -- bountiful feast
@@ -1593,7 +1624,7 @@ local BF = {
 			addon:ButtonClick(self, button, down, "flask")
 		end,
 		tip = function(self)
-			addon:Tooltip(self, L["Missing a Flask or two Elixirs"], report.flasklist)
+			addon:Tooltip(self, nil, report.flasklist)
 		end,
 		partybuff = nil,
 		consumable = true,
@@ -1626,7 +1657,7 @@ local BF = {
 			addon:ButtonClick(self, button, down, "flask")
 		end,
 		tip = function(self)
-			addon:Tooltip(self, L["Missing a Battle Elixir"], report.belixirlist)
+			addon:Tooltip(self, nil, report.belixirlist)
 		end,
 		partybuff = nil,
 		consumable = true,
@@ -1660,7 +1691,7 @@ local BF = {
 			addon:ButtonClick(self, button, down, "flask")
 		end,
 		tip = function(self)
-			addon:Tooltip(self, L["Missing a Guardian Elixir"], report.gelixirlist)
+			addon:Tooltip(self, nil, report.gelixirlist)
 		end,
 		partybuff = nil,
 		consumable = true,
@@ -1680,7 +1711,7 @@ local BF = {
 		checkzonedout = false,
 		selfbuff = true,
 		timer = false,
-		class = { ROGUE = true, SHAMAN = true, },
+		class = { ROGUE = true },
 		chat = L["Weapon buff"],
 		pre = nil,
 		main = function(self, name, class, unit, raid, report)
@@ -1690,82 +1721,6 @@ local BF = {
                                         table.insert(report.wepbufflist, name)
                                 end
 				return
-			elseif class ~= "SHAMAN" then
- 				return
-                        elseif not UnitIsUnit(unit.unitid, "player") then
-				return -- XXX
-			end
-			local bufflist = false
-			local dualw = false
-			bufflist = shamanwepbuffs
-			if raid.classes.SHAMAN[name].spec == 2 then
-				dualw = true
-			end
-			if _G.InspectFrame and _G.InspectFrame:IsShown() then
-				return -- can't inspect at same time as UI
-			end
-			if not CanInspect(unit.unitid) then
-				return
-			end
-			report.checking.wepbuff = true
-			local missingbuffmh = true
-			local missingbuffoh = true
-			local notified
-			RBSToolScanner:Reset()
-			RBSToolScanner:SetInventoryItem(unit.unitid, 16)
-			if RBSToolScanner:NumLines() < 1 then
-				if not UnitIsUnit(unit.unitid, "player") then
-				   local lastcheck = addon.lastweapcheck[unit.guid] or 0
-				   local failed = lastcheck and lastcheck < 0
-				   if failed then lastcheck = -lastcheck end
-				   if GetTime() < lastcheck + 5*60 then
-					addon:Debug("skipping weapcheck for:" .. unit.unitid)
-					if failed then
-					  table.insert(report.wepbufflist, name)
-				        end	
-				        return
-				   else
-					addon:Debug("having to call notifyinspect for:" .. unit.unitid)
-					NotifyInspect(unit.unitid)
-					notified = unit.unitid
-					addon.lastweapcheck[unit.guid] = GetTime()
-				   end
-				else
-					addon:Debug("skipping call notifyinspect for:" .. unit.unitid)
-				end
-				RBSToolScanner:ClearLines()
-				RBSToolScanner:SetInventoryItem(unit.unitid, 16)
-				if RBSToolScanner:NumLines() < 1 then
-					addon:Debug("NotifyInspect failed")
-					return
-				end
-			end
-			for _,buff in ipairs(bufflist) do
-				if RBSToolScanner:Find(buff) then
-					missingbuffmh = false
-					break
-				end
-			end
-			if dualw then
-				RBSToolScanner:Reset()
-				RBSToolScanner:SetInventoryItem(unit.unitid, 17)
-				if RBSToolScanner:NumLines() > 1 then
-					for _,buff in ipairs(bufflist) do
-						if RBSToolScanner:Find(buff) then
-							missingbuffoh = false
-							break
-						end
-					end
-				else
-					missingbuffoh = false -- nothing equipped
-				end
-			end
-			if missingbuffmh or (dualw and missingbuffoh) then
-				table.insert(report.wepbufflist, name)
-			        addon.lastweapcheck[unit.guid] = -GetTime()
-			end
-			if notified then
-			  ClearInspectPlayer(notified)
 			end
 		end,
 		post = nil,
@@ -1779,35 +1734,18 @@ local BF = {
 			local itemslot = nil
 			if class == "ROGUE" then
 			  buffspell = BS[2823]
-			elseif class == "SHAMAN" then
-			  local spec = GetSpecialization()
-			  if spec == 1 then -- elemental 
-			    buffspell = BS[8024]
-                          elseif spec == 2 then -- resto
-			    buffspell = BS[51730]
-			  elseif spec == 3 then -- enh
-			    local hasMainHandEnchant, mainHandExpiration, mainHandCharges, 
-                                  hasOffHandEnchant, offHandExpiration, offHandCharges = GetWeaponEnchantInfo()
-			    if not hasMainHandEnchant or mainHandExpiration < 15*60*1000 then
-			  	itemslot = GetInventorySlotInfo("MainHandSlot")
-			        buffspell = BS[8232]
-			    elseif not hasOffHandEnchant or offHandExpiration < 15*60*1000 then
-				itemslot = GetInventorySlotInfo("SecondaryHandSlot")
-			        buffspell = BS[8024]
-			    end
-                          end
 			end
 			addon:ButtonClick(self, button, down, "wepbuff", buffspell, nil, nil, itemslot)
                 end,
 		tip = function(self)
-			addon:Tooltip(self, L["Missing a temporary weapon buff"], report.wepbufflist)
+			addon:Tooltip(self, nil, report.wepbufflist)
 		end,
 		partybuff = nil,
 		consumable = true,
 	},
 
 	spbuff = {
-		order = 430,
+		order = 416,
 		list = "spbufflist",
 		check = "checkspbuff",
 		default = true,
@@ -1822,9 +1760,9 @@ local BF = {
 		timer = false,
 		core = true,
 		class = { MAGE = true, WARLOCK = true },
-		chat = L["Spellpower Buff"],
+		chat = STAT_SPELLPOWER, -- "Spell Power"
 		pre = nil,
-		buffinfo = { { "MAGE", 1459, 1 }, { "WARLOCK", 109773, 2 } },
+		buffinfo = { { "MAGE", 1459 }, { "WARLOCK", 109773 } },
 		main = function(self, name, class, unit, raid, report)
 			if raid.ClassNumbers.MAGE > 0 or  raid.ClassNumbers.WARLOCK > 0 then
 				report.checking.spbuff = true
@@ -1846,7 +1784,7 @@ local BF = {
 			addon:ButtonClick(self, button, down, "spbuff", player_spell("spbuff"))
 		end,
 		tip = function(self)
-			addon:Tooltip(self, L["Missing "] .. L["Spellpower Buff"], report.spbufflist, nil, generic_buffers("spbuff"))
+			addon:Tooltip(self, nil, report.spbufflist, nil, generic_buffers("spbuff"))
 		end,
 		singlebuff = false,
 		partybuff = false,
@@ -1871,8 +1809,11 @@ local BF = {
 		timer = false,
 		core = true,
 		class = { DRUID = true, PALADIN = true, MONK = true },
-		buffinfo = { { "DRUID", 1126, 1 }, { "MONK", 117666, 1 }, { "PALADIN", 20217, 2, nil, 19740 } },
-		chat = L["Stat Buff"], 
+		buffinfo = { { "DRUID", 1126, 1 }, 
+		             { "MONK", 116781, 1, 1 }, { "MONK", 116781, 1, 3 }, -- Legacy of the White Tiger, Brewmaster/Windwalker
+			     { "MONK", 115921, 2, 2 },  -- Legacy of the Emperor, Mistweaver Only
+			     { "PALADIN", 20217, 2, nil, 19740 } },
+		chat = RAID_BUFF_1, -- "Stats"
 		pre = nil,
 		main = function(self, name, class, unit, raid, report)
 			if raid.ClassNumbers.DRUID > 0 or 
@@ -1895,7 +1836,7 @@ local BF = {
 			addon:ButtonClick(self, button, down, "statbuff", player_spell("statbuff"))
 		end,
 		tip = function(self)
-			addon:Tooltip(self, L["Missing "] .. L["Stat Buff"], report.statbufflist, nil, generic_buffers("statbuff"))
+			addon:Tooltip(self, nil, report.statbufflist, nil, generic_buffers("statbuff"))
 		end,
 		singlebuff = false,
 		partybuff = false,
@@ -1921,7 +1862,7 @@ local BF = {
 		core = true,
 		class = { PALADIN = true },
 		buffinfo = { { "PALADIN", 19740, 1, nil, 20217 } },
-		chat = L["Mastery Buff"], 
+		chat = STAT_MASTERY, -- "Mastery" 
 		pre = nil,
 		main = function(self, name, class, unit, raid, report)
 			if raid.ClassNumbers.PALADIN > 1 or
@@ -1945,7 +1886,7 @@ local BF = {
 			addon:ButtonClick(self, button, down, "masterybuff", player_spell("masterybuff"))
 		end,
 		tip = function(self)
-			addon:Tooltip(self, L["Missing "] .. L["Mastery Buff"], report.masterybufflist, nil, generic_buffers("masterybuff"))
+			addon:Tooltip(self, nil, report.masterybufflist, nil, generic_buffers("masterybuff"))
 		end,
 		singlebuff = false,
 		partybuff = false,
@@ -1967,13 +1908,13 @@ local BF = {
 		defaulttrash = true,
 		checkzonedout = false,
 		core = true,
-		class = { PRIEST = true, WARLOCK = true },
-		buffinfo = { { "PRIEST", 21562 }, { "WARLOCK", 109773 } },
-		chat = BS[21562], -- Prayer of Fortitude
+		class = { PRIEST = true, WARRIOR = true },
+		buffinfo = { { "PRIEST", 21562, 1 }, { "WARRIOR", 469, 2, nil, 6673 }},
+		chat = RAID_BUFF_2, -- "Stamina"
 		pre = nil,
 		main = function(self, name, class, unit, raid, report)
 			if raid.ClassNumbers.PRIEST > 0 or
-			   raid.ClassNumbers.WARLOCK > 0 then
+			   raid.ClassNumbers.WARRIOR > 0 then
 				report.checking.fortitude = true
 				if not unithasbuff(unit, fortitude, true) then
 					table.insert(report.fortitudelist, name)
@@ -1991,7 +1932,7 @@ local BF = {
 			addon:ButtonClick(self, button, down, "fortitude", player_spell("fortitude"))
 		end,
 		tip = function(self)
-			addon:Tooltip(self, L["Missing "] .. BS[21562], report.fortitudelist, nil, generic_buffers("fortitude")) -- Prayer of Fortitude
+			addon:Tooltip(self, nil, report.fortitudelist, nil, generic_buffers("fortitude")) -- Prayer of Fortitude
 		end,
 		singlebuff = false,
 		partybuff = false,
@@ -2001,7 +1942,7 @@ local BF = {
 	},
 
 	critbuff = {
-		order = 420,
+		order = 434,
 		list = "critbufflist",
 		check = "checkcritbuff",
 		default = true,
@@ -2015,9 +1956,11 @@ local BF = {
 		selfbuff = false,
 		timer = false,
 		core = true,
-		buffinfo = { { "MAGE", 1459 }, { "MONK", 116781, nil, 3 } }, -- monk buff is windwalker only
+		buffinfo = { { "MAGE", 1459 }, 
+		             { "MONK", 116781, nil, 1 }, { "MONK", 116781, nil, 3 }, -- Legacy of the White Tiger, Brewmaster/Windwalker
+			   },
 		class = { MAGE = true, MONK = true },
-		chat = L["Crit Buff"], 
+		chat = STAT_CRITICAL_STRIKE, -- "Critical Strike"
 		pre = nil,
 		main = function(self, name, class, unit, raid, report)
 			if report.checking.critbuff == nil then -- only scan once per report
@@ -2041,7 +1984,156 @@ local BF = {
 			addon:ButtonClick(self, button, down, "critbuff", player_spell("critbuff"))
 		end,
 		tip = function(self)
-			addon:Tooltip(self, L["Missing "] .. L["Crit Buff"], report.critbufflist, nil, generic_buffers("critbuff"))
+			addon:Tooltip(self, nil, report.critbufflist, nil, generic_buffers("critbuff"))
+		end,
+		singlebuff = false,
+		partybuff = false,
+		raidbuff = true,
+		raidwidebuff = true,
+		whispertobuff = generic_whispertobuff,
+	},
+
+	apbuff = {
+		order = 415,
+		list = "apbufflist",
+		check = "checkapbuff",
+		default = true,
+		defaultbuff = true,
+		defaultwarning = false,
+		defaultdash = true,
+		defaultdashcombat = false,
+		defaultboss = true,
+		defaulttrash = true,
+		checkzonedout = false,
+		selfbuff = false,
+		timer = false,
+		core = true,
+		buffinfo = { { "DEATHKNIGHT", 57330, 1 }, 
+		             { "WARRIOR", 6673, 2, nil, 469 }, 
+			   },
+		class = { DEATHKNIGHT = true, WARRIOR = true },
+		chat = STAT_ATTACK_POWER,      -- "Attack Power"
+		pre = nil,
+		main = function(self, name, class, unit, raid, report)
+			if raid.ClassNumbers.DEATHKNIGHT > 0 or  
+			   raid.ClassNumbers.WARRIOR > 1 or -- can have both shouts
+			   (raid.ClassNumbers.WARRIOR == 1 and -- commanding shout not needed
+			    (raid.ClassNumbers.PRIEST > 0) or (raid.ClassNumbers.WARLOCK > 0))
+			   then
+				report.checking.apbuff = true
+				if class ~= "PRIEST" and class ~= "MAGE" and class ~= "WARLOCK" then
+					if not unithasbuff(unit, apbuff, true) then
+						table.insert(report.apbufflist, name)
+					end
+				end
+			end
+		end,
+		post = function(self, raid, report)
+			table.sort(report.apbufflist)
+		end,
+		icon = BSI[57330], -- Horn of Winter
+		update = function(self)
+			addon:DefaultButtonUpdate(self, report.apbufflist, profile.checkapbuff, report.checking.apbuff or false, generic_buffers("apbuff"))
+		end,
+		click = function(self, button, down)
+			addon:ButtonClick(self, button, down, "apbuff", player_spell("apbuff"))
+		end,
+		tip = function(self)
+			addon:Tooltip(self, nil, report.apbufflist, nil, generic_buffers("apbuff"))
+		end,
+		singlebuff = false,
+		partybuff = false,
+		raidbuff = true,
+		raidwidebuff = true,
+		whispertobuff = generic_whispertobuff,
+	},
+
+	msbuff = { -- multistrike
+		order = 432,
+		list = "msbufflist",
+		check = "checkmsbuff",
+		default = true,
+		defaultbuff = true,
+		defaultwarning = false,
+		defaultdash = true,
+		defaultdashcombat = false,
+		defaultboss = true,
+		defaulttrash = true,
+		checkzonedout = false,
+		selfbuff = false,
+		timer = false,
+		core = true,
+		buffinfo = { { "WARLOCK", 109773 }, },
+		class = { WARLOCK = true },
+		chat = STAT_MULTISTRIKE,       -- "Multistrike"
+		pre = nil,
+		main = function(self, name, class, unit, raid, report)
+			if raid.ClassNumbers.WARLOCK > 0 then
+				report.checking.msbuff = true
+				if not unithasbuff(unit, msbuff, true) then
+					table.insert(report.msbufflist, name)
+				end
+			end
+		end,
+		post = function(self, raid, report)
+			table.sort(report.msbufflist)
+		end,
+		icon = BSI[166916], -- Windflurry
+		update = function(self)
+			addon:DefaultButtonUpdate(self, report.msbufflist, profile.checkmsbuff, report.checking.msbuff or false, generic_buffers("msbuff"))
+		end,
+		click = function(self, button, down)
+			addon:ButtonClick(self, button, down, "msbuff", player_spell("msbuff"))
+		end,
+		tip = function(self)
+			addon:Tooltip(self, nil, report.msbufflist, nil, generic_buffers("msbuff"))
+		end,
+		singlebuff = false,
+		partybuff = false,
+		raidbuff = true,
+		raidwidebuff = true,
+		whispertobuff = generic_whispertobuff,
+	},
+
+	vsbuff = { -- versatility
+		order = 431,
+		list = "vsbufflist",
+		check = "checkvsbuff",
+		default = true,
+		defaultbuff = true,
+		defaultwarning = false,
+		defaultdash = true,
+		defaultdashcombat = false,
+		defaultboss = true,
+		defaulttrash = true,
+		checkzonedout = false,
+		selfbuff = false,
+		timer = false,
+		core = true,
+		buffinfo = { { "DRUID", 1126 }, },
+		class = { DRUID = true },
+		chat = STAT_VERSATILITY,       -- "Versatility"
+		pre = nil,
+		main = function(self, name, class, unit, raid, report)
+			if raid.ClassNumbers.DRUID > 0 then
+				report.checking.vsbuff = true
+				if not unithasbuff(unit, vsbuff, true) then
+					table.insert(report.vsbufflist, name)
+				end
+			end
+		end,
+		post = function(self, raid, report)
+			table.sort(report.vsbufflist)
+		end,
+		icon = BSI[167187], -- Sanctity Aura
+		update = function(self)
+			addon:DefaultButtonUpdate(self, report.vsbufflist, profile.checkvsbuff, report.checking.vsbuff or false, generic_buffers("vsbuff"))
+		end,
+		click = function(self, button, down)
+			addon:ButtonClick(self, button, down, "vsbuff", player_spell("vsbuff"))
+		end,
+		tip = function(self)
+			addon:Tooltip(self, nil, report.vsbufflist, nil, generic_buffers("vsbuff"))
 		end,
 		singlebuff = false,
 		partybuff = false,
@@ -2062,7 +2154,8 @@ local BF = {
 		defaultboss = true,
 		defaulttrash = false,
 		checkzonedout = false,
-		chat = BS[69377], -- Fortitude
+		core = true,
+		chat = ITN[49632],
 		iconfix = function(self) -- to handle when server is slow to get the icon
 			if addon.BF.runescrollfortitude.icon == "Interface\\Icons\\INV_Misc_QuestionMark" then
 				addon.BF.runescrollfortitude.icon = ITT[79257] -- Runescroll of Fortitude
@@ -2124,7 +2217,7 @@ local BF = {
 			addon:ButtonClick(self, button, down, "runescrollfortitude", nil, nil, scroll)
 		end,
 		tip = function(self)
-			addon:Tooltip(self, L["Missing "] .. ITN[49632], report.runescrollfortitudelist, nil, addon.BF.runescrollfortitude:buffers()) -- Runescroll of Fortitude
+			addon:Tooltip(self, nil, report.runescrollfortitudelist, nil, addon.BF.runescrollfortitude:buffers())
 		end,
 		singlebuff = false,
 		partybuff = false,
@@ -2165,7 +2258,6 @@ local BF = {
 		checkzonedout = false,
 		selfbuff = false,
 		timer = false,
-		core = true,
 		buffinfo = { { "PRIEST", 1706, 1 }, { "MAGE", 130, 2 } },
 		class = { PRIEST = true, MAGE = true },
 		chat = BS[1706], -- Levitate
@@ -2189,7 +2281,7 @@ local BF = {
 			addon:ButtonClick(self, button, down, "levitate", player_spell("levitate"), true)
 		end,
 		tip = function(self)
-			addon:Tooltip(self, L["Missing "] .. BS[1706], report.levitatelist, nil, generic_buffers("levitate"))
+			addon:Tooltip(self, nil, report.levitatelist, nil, generic_buffers("levitate"))
 		end,
 		singlebuff = false,
 		partybuff = false,
@@ -2199,48 +2291,8 @@ local BF = {
 		singletarget = true,
 	},
 
-	noaspect = {
-		order = 400,
-		list = "noaspectlist",
-		check = "checknoaspect",
-		default = true,
-		defaultbuff = true,
-		defaultwarning = false,
-		defaultdash = true,
-		defaultdashcombat = false,
-		defaultboss = true,
-		defaulttrash = true,
-		checkzonedout = false,
-		selfbuff = true,
-		selfonlybuff = true,
-		timer = false,
-		class = { HUNTER = true, },
-		chat = L["Hunter Aspect"],
-		pre = nil,
-		main = function(self, name, class, unit, raid, report)
-			if class == "HUNTER" then
-				report.checking.noaspect = true
-				if not unithasbuff(unit, aspects) then
-					table.insert(report.noaspectlist, name)
-				end
-			end
-		end,
-		post = nil,
-		icon = BSI[13165], -- Aspect of the Hawk
-		update = function(self)
-			addon:DefaultButtonUpdate(self, report.noaspectlist, profile.checknoaspect, report.checking.noaspect or false, report.noaspectlist)
-		end,
-		click = function(self, button, down)
-			addon:ButtonClick(self, button, down, "noaspect")
-		end,
-		tip = function(self)
-			addon:Tooltip(self, L["Hunter has no aspect at all"], report.noaspectlist)
-		end,
-		partybuff = nil,
-	},
-
 	dkpresence = {
-		order = 394,
+		order = 395,
 		list = "dkpresencelist",
 		check = "checkdkpresence",
 		default = true,
@@ -2285,11 +2337,10 @@ local BF = {
 		partybuff = nil,
 	},
 
-
-	symbiosis = {
-		order = 392,
-		list = "symbiosislist",
-		check = "checksymbiosis",
+	warrstance = {
+		order = 394,
+		list = "warrstancelist",
+		check = "checkwarrstance",
 		default = true,
 		defaultbuff = true,
 		defaultwarning = false,
@@ -2301,55 +2352,37 @@ local BF = {
 		selfbuff = true,
 		selfonlybuff = true,
 		timer = false,
-		class = { DRUID = true, },
-		chat = BS[110309], -- Symbiosis
-		pre = function(self, raid, report)
-			initreporttable("havesymbiosis")
-			initreporttable("gavesymbiosis")
-		end,
+		class = { WARRIOR = true, },
+		chat = L["Warrior Stance"],
 		main = function(self, name, class, unit, raid, report)
-			-- Symbiosis is supposed to persist through death and only be "cancelled if the druid and target become too far apart"
-			-- in reality this cancellation often happens at zone boundaries (releasing upon death from inside an instance)
-			-- but more importantly it sometimes only cancels the buff on one of the two players (can happen either direction)
-			-- So we need to check every druid has the buff on themselves and a (non-druid) target
-			if class == "DRUID" then
-				report.checking.symbiosis = true
-				if unit.hasbuff[BS[110309]] then -- druid has the buff
-					report.gavesymbiosis[name] = true
-				else -- druid missing the buff
-					table.insert(report.symbiosislist, name)
-				end
-			elseif unit.hasbuff[BS[110309]] then -- non-druid received the buff
-				report.havesymbiosis[name] = unit.hasbuff[BS[110309]].caster or true
+			if class ~= "WARRIOR" then
+				return
+			end
+			report.checking.warrstance = true
+			local stance = unithasbuff(unit, warrstances)
+			if not stance then
+				table.insert(report.warrstancelist, name)
+			elseif (unit.istank and stance ~= defensive_stance) or
+			       (not unit.istank and stance == defensive_stance) then
+				table.insert(report.warrstancelist, name.."("..stance..")")
 			end
 		end,
-		post = function(self, raid, report)
-			local havecnt,gavecnt = 0,0
-			for _ in pairs(report.havesymbiosis) do havecnt = havecnt + 1 end
-			for _ in pairs(report.gavesymbiosis) do gavecnt = gavecnt + 1 end
-			if gavecnt ~= havecnt then -- a buff connection broke
-				for nondruid, druid in pairs(report.havesymbiosis) do
-					report.gavesymbiosis[druid] = nil -- remove druids accounted for
-				end
-				for druid in pairs(report.gavesymbiosis) do -- druids whose target lost it (or are not in zone)
-					table.insert(report.symbiosislist, druid.."("..L["Broken Link"]..")")
-				end
-			end
-		end,
-		icon = BSI[110309], -- Symbiosis
+		post = nil,
+		icon = BSI[2457], -- Battle Stance
 		update = function(self)
-			addon:DefaultButtonUpdate(self, report.symbiosislist, profile.checksymbiosis, report.checking.symbiosis or false, report.symbiosislist)
+			addon:DefaultButtonUpdate(self, report.warrstancelist, profile.checkwarrstance, report.checking.warrstance or false, report.warrstancelist)
 		end,
 		click = function(self, button, down)
-			addon:ButtonClick(self, button, down, "symbiosis")
+                        local name = UnitName("player")
+                        local unit = raid.classes.WARRIOR[name]
+			addon:ButtonClick(self, button, down, "warrstance", unit and unit.istank and warrstances[1] or warrstances[2])
 		end,
 		tip = function(self)
-			addon:Tooltip(self, L["Missing "] .. BS[110309], report.symbiosislist, -- Symbiosis
-						nil, nil, nil, nil, nil, nil,
-						report.havesymbiosis)
+			addon:Tooltip(self, L["Warrior Stance"], report.warrstancelist)
 		end,
 		partybuff = nil,
 	},
+
 
 	beacon = {
 		order = 393,
@@ -2421,54 +2454,9 @@ local BF = {
 			addon:ButtonClick(self, button, down, "beacon")
 		end,
 		tip = function(self)
-			addon:Tooltip(self, L["Missing "] .. BS[53563], report.beaconlist, 
+			addon:Tooltip(self, nil, report.beaconlist, 
 						nil, nil, nil, nil, nil, nil,
 						report.gavebeacon)
-		end,
-		partybuff = nil,
-	},
-
-	innerfire = {
-		order = 390,
-		list = "innerfirelist",
-		check = "checkinnerfire",
-		default = true,
-		defaultbuff = true,
-		defaultwarning = false,
-		defaultdash = true,
-		defaultdashcombat = false,
-		defaultboss = true,
-		defaulttrash = true,
-		checkzonedout = false,
-		selfbuff = true,
-		selfonlybuff = true,
-		timer = false,
-		class = { PRIEST = true, },
-		chat = BS[588] .. "/" .. BS[73413], -- Inner Fire/Inner Will
-		main = function(self, name, class, unit, raid, report)
-			if class == "PRIEST" then
-				report.checking.innerfire = true
-				if not unit.hasbuff[BS[588]] and not unit.hasbuff[BS[73413]] then -- Inner Fire and Inner Will
-					table.insert(report.innerfirelist, name)
-				end
-			end
-		end,
-		post = nil,
-		icon = BSI[588], -- Inner Fire
-		update = function(self)
-			addon:DefaultButtonUpdate(self, report.innerfirelist, profile.checkinnerfire, report.checking.innerfire or false, report.innerfirelist)
-		end,
-		click = function(self, button, down)
-			local buffspell = BS[588]  -- Inner Fire
-                        local name = UnitName("player")
-                        local spec = raid.classes.PRIEST[name] and raid.classes.PRIEST[name].spec
-                        if spec == 1 then  -- disc
-                           buffspell = BS[73413] -- Inner Will
-                        end
-			addon:ButtonClick(self, button, down, "innerfire", buffspell)
-		end,
-		tip = function(self)
-			addon:Tooltip(self, L["Missing "] .. BS[588] .. "/" .. BS[73413], report.innerfirelist) -- Inner Fire/Inner Will
 		end,
 		partybuff = nil,
 	},
@@ -2509,7 +2497,7 @@ local BF = {
 			addon:ButtonClick(self, button, down, "shadowform", BS[15473]) -- Shadowform
 		end,
 		tip = function(self)
-			addon:Tooltip(self, L["Missing "] .. BS[15473], report.shadowformlist)
+			addon:Tooltip(self, nil, report.shadowformlist)
 		end,
 		partybuff = nil,
 	},
@@ -2550,98 +2538,7 @@ local BF = {
 			addon:ButtonClick(self, button, down, "boneshield", BS[49222]) -- Bone Shield
 		end,
 		tip = function(self)
-			addon:Tooltip(self, L["Missing "] .. BS[49222], report.boneshieldlist) -- Bone Shield
-		end,
-		partybuff = nil,
-	},
-
-	soullink = {
-		order = 375,
-		list = "soullinklist",
-		check = "checksoullink",
-		default = false,
-		defaultbuff = true,
-		defaultwarning = false,
-		defaultdash = false,
-		defaultdashcombat = false,
-		defaultboss = false,
-		defaulttrash = false,
-		checkzonedout = false,
-		selfbuff = true,
-		selfonlybuff = true,
-		timer = false,
-		class = { WARLOCK = true, },
-		chat = BS[108415], -- Soul Link
-		main = function(self, name, class, unit, raid, report)
-			if class ~= "WARLOCK" then
-				return
-			end
-			report.checking.soullink = true
-			if not unit.hasbuff[BS[108415]] then -- Soul Link
-				table.insert(report.soullinklist, name)
-			end
-		end,
-		post = nil,
-		icon = BSI[108415], -- Soul Link
-		update = function(self)
-			addon:DefaultButtonUpdate(self, report.soullinklist, profile.checksoullink, report.checking.soullink or false, report.soullinklist)
-		end,
-		click = function(self, button, down)
-			addon:ButtonClick(self, button, down, "soullink", BS[108415]) -- Soul Link
-		end,
-		tip = function(self)
-			addon:Tooltip(self, L["Missing "] .. BS[108415], report.soullinklist) -- Soul Link
-		end,
-		partybuff = nil,
-	},
-	magearmor = {
-		order = 370,
-		list = "magearmorlist",
-		check = "checkmagearmor",
-		default = true,
-		defaultbuff = true,
-		defaultwarning = false,
-		defaultdash = true,
-		defaultdashcombat = false,
-		defaultboss = true,
-		defaulttrash = true,
-		checkzonedout = false,
-		selfbuff = true,
-		selfonlybuff = true,
-		timer = false,
-		class = { MAGE = true, },
-		chat = BS[6117], -- Mage Armor
-		pre = nil,
-		main = function(self, name, class, unit, raid, report)
-			if class == "MAGE" then
-				report.checking.magearmor = true
-				if not unithasbuff(unit, magearmors) then
-					table.insert(report.magearmorlist, name)
-				end
-			end
-		end,
-		post = nil,
-		icon = BSI[30482], -- Molten Armor
-		update = function(self)
-			addon:DefaultButtonUpdate(self, report.magearmorlist, profile.checkmagearmor, report.checking.magearmor or false, report.magearmorlist)
-		end,
-		click = function(self, button, down)
-		        local buffspell
-                        local name = UnitName("player")
-			local spec = raid.classes.MAGE[name] and raid.classes.MAGE[name].spec
-                        if spec == 1 then  -- arcane
-			   buffspell = BS[6117] -- Mage Armor
-                        elseif spec == 2 then  -- fire
-			   buffspell = BS[30482] -- Molten Armor
-			elseif spec == 3 then
-			   buffspell = BS[7302] -- Frost Armor
-			else -- no spec, favor lowest lvl spell
-			   buffspell = BS[30482] -- Molten Armor
-			end
-			addon:ButtonClick(self, button, down, "magearmor", buffspell)
-		end,
-		tip = function(self)
-			addon:Tooltip(self, L["Mage is missing a Mage Armor"], report.magearmorlist)
+			addon:Tooltip(self, nil, report.boneshieldlist) -- Bone Shield
 		end,
 		partybuff = nil,
 	},
@@ -2695,7 +2592,7 @@ local BF = {
 			addon:ButtonClick(self, button, down, "shamanshield", buffspell)
 		end,
 		tip = function(self)
-			addon:Tooltip(self, L["Missing "] .. BS[52127] .. "/" .. BS[324], report.shamanshieldlist) -- Water Shield/Lightning Shield
+			addon:Tooltip(self, nil, report.shamanshieldlist)
 		end,
 		partybuff = nil,
 		singletarget = true,
@@ -2713,6 +2610,7 @@ local BF = {
 		defaultboss = true,
 		defaulttrash = false,
 		checkzonedout = false,
+		core = true,
 		chat = BS[69378], -- Blessing of Forgotten Kings
 		iconfix = function(self)  -- to handle when server is slow to get the icon
 			if addon.BF.drumskings.icon == "Interface\\Icons\\INV_Misc_QuestionMark" then
@@ -2752,7 +2650,7 @@ local BF = {
 			addon:ButtonClick(self, button, down, "drumskings", nil, nil, ITN[49633]) -- Drums of Forgotten Kings
 		end,
 		tip = function(self)
-			addon:Tooltip(self, L["Missing "] .. BS[69378], report.drumskingslist, nil, addon.BF.drumskings:buffers()) -- Blessing of Forgotten Kings, Blessing of Kings
+			addon:Tooltip(self, nil, report.drumskingslist, nil, addon.BF.drumskings:buffers())
 		end,
 		singlebuff = false,
 		partybuff = false,
@@ -2874,7 +2772,7 @@ local BF = {
 			addon:ButtonClick(self, button, down, "checkpet", summonspell) 
 		end,
 		tip = function(self)
-			addon:Tooltip(self, L["Missing "] .. BS[883]:gsub("%s*%d+$",""), report.petlist) -- Call Pet
+			addon:Tooltip(self, nil, report.petlist)
 		end,
 		partybuff = nil,
 	},

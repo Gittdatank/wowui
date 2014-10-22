@@ -19,6 +19,34 @@ oRA3DB = {
 				},
 			},
 		},
+		["Invite"] = {
+			["global"] = {
+				["keyword"] = "jailbreak",
+			},
+		},
+		["LibDualSpec-1.0"] = {
+		},
+		["ReadyCheck"] = {
+			["profiles"] = {
+				["Giit tank"] = {
+					["relayReady"] = true,
+				},
+				["WARRIOR"] = {
+					["relayReady"] = true,
+				},
+				["Default"] = {
+					["relayReady"] = true,
+				},
+				["Gitt - Monk"] = {
+					["relayReady"] = true,
+				},
+				["Git - Mar 2014"] = {
+					["relayReady"] = true,
+				},
+			},
+		},
+		["Difficulty"] = {
+		},
 		["Loot"] = {
 			["profiles"] = {
 				["Giit tank"] = {
@@ -63,9 +91,54 @@ oRA3DB = {
 				},
 			},
 		},
-		["Invite"] = {
-			["global"] = {
-				["keyword"] = "jailbreak",
+		["Promote"] = {
+			["factionrealm"] = {
+				["Horde - Azuremyst"] = {
+					["promotes"] = {
+						"Findadar", -- [1]
+						"Duckiebutter", -- [2]
+					},
+					["promoteGuild"] = false,
+					["promoteRank"] = {
+						["Requiem"] = {
+							nil, -- [1]
+							true, -- [2]
+							true, -- [3]
+							true, -- [4]
+							true, -- [5]
+						},
+					},
+					["promoteAll"] = false,
+				},
+				["Horde - Cho'gall"] = {
+					["promoteRank"] = {
+						["Lusting on Trash"] = {
+							true, -- [1]
+							true, -- [2]
+							true, -- [3]
+							true, -- [4]
+						},
+					},
+					["promotes"] = {
+						"Nidater", -- [1]
+					},
+				},
+				["Horde - Arthas"] = {
+					["promotes"] = {
+						"Gramz", -- [1]
+					},
+					["promoteRank"] = {
+						["Lusting on Trash"] = {
+							[4] = true,
+						},
+					},
+				},
+				["Horde - Silvermoon"] = {
+					["promotes"] = {
+					},
+					["promoteRank"] = {
+					},
+				},
 			},
 		},
 		["Cooldowns"] = {
@@ -171,84 +244,7 @@ oRA3DB = {
 				},
 			},
 		},
-		["ReadyCheck"] = {
-			["profiles"] = {
-				["Giit tank"] = {
-					["relayReady"] = true,
-				},
-				["WARRIOR"] = {
-					["relayReady"] = true,
-				},
-				["Default"] = {
-					["relayReady"] = true,
-				},
-				["Gitt - Monk"] = {
-					["relayReady"] = true,
-				},
-				["Git - Mar 2014"] = {
-					["relayReady"] = true,
-				},
-			},
-		},
-		["LibDualSpec-1.0"] = {
-		},
-		["Promote"] = {
-			["factionrealm"] = {
-				["Horde - Azuremyst"] = {
-					["promotes"] = {
-						"Findadar", -- [1]
-						"Duckiebutter", -- [2]
-					},
-					["promoteGuild"] = false,
-					["promoteRank"] = {
-						["Requiem"] = {
-							nil, -- [1]
-							true, -- [2]
-							true, -- [3]
-							true, -- [4]
-							true, -- [5]
-						},
-					},
-					["promoteAll"] = false,
-				},
-				["Horde - Cho'gall"] = {
-					["promoteRank"] = {
-						["Lusting on Trash"] = {
-							true, -- [1]
-							true, -- [2]
-							true, -- [3]
-							true, -- [4]
-						},
-					},
-					["promotes"] = {
-						"Nidater", -- [1]
-					},
-				},
-				["Horde - Arthas"] = {
-					["promotes"] = {
-						"Gramz", -- [1]
-					},
-					["promoteRank"] = {
-						["Lusting on Trash"] = {
-							[4] = true,
-						},
-					},
-				},
-				["Horde - Silvermoon"] = {
-					["promotes"] = {
-					},
-					["promoteRank"] = {
-					},
-				},
-			},
-		},
-	},
-	["char"] = {
-		["Gitt - Arthas"] = {
-			["lastRaidDifficulty"] = 4,
-		},
-		["Git - Cho'gall"] = {
-			["lastRaidDifficulty"] = 4,
+		["BattleRes"] = {
 		},
 	},
 	["profileKeys"] = {
@@ -266,11 +262,11 @@ oRA3DB = {
 		["Gimm - Cho'gall"] = "Default",
 		["Gitt - Arthas"] = "Gitt - Monk",
 		["Git - Arthas"] = "Git - Mar 2014",
-		["Git - Cho'gall"] = "Default",
 		["Git - Azuremyst"] = "Default",
 		["Greny - Azuremyst"] = "Default",
-		["Spih - Cho'gall"] = "Default",
+		["Git - Cho'gall"] = "Default",
 		["Giitt - Feathermoon"] = "Default",
+		["Spih - Cho'gall"] = "Default",
 		["Giit - Cho'gall"] = "Giit tank",
 		["Spih - Arthas"] = "Default",
 	},
@@ -355,6 +351,12 @@ oRA3DB = {
 					["Width"] = 319.999938964844,
 					["PosY"] = 420.405337362827,
 					["PosX"] = 222.880484988855,
+				},
+				["oRA3BattleResMonitor"] = {
+					["Height"] = 29.9999122619629,
+					["PosX"] = 579.201276116342,
+					["PosY"] = 735.840061677693,
+					["Width"] = 139.999984741211,
 				},
 				["oRA3CooldownFrame"] = {
 					["Height"] = 354.030700683594,

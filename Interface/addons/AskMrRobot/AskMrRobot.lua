@@ -27,9 +27,16 @@ AskMrRobot.eventListener:RegisterEvent("PLAYER_REGEN_DISABLED")
 AskMrRobot.eventListener:RegisterEvent("CHAT_MSG_ADDON")
 AskMrRobot.eventListener:RegisterEvent("UPDATE_INSTANCE_INFO")
 AskMrRobot.eventListener:RegisterEvent("PLAYER_DIFFICULTY_CHANGED")
+AskMrRobot.eventListener:RegisterEvent("VOID_STORAGE_OPEN")
+AskMrRobot.eventListener:RegisterEvent("VOID_STORAGE_CONTENTS_UPDATE")
+AskMrRobot.eventListener:RegisterEvent("PLAYER_DIFFICULTY_CHANGED")
+AskMrRobot.eventListener:RegisterEvent("VOID_STORAGE_UPDATE")
 
 AskMrRobot.AddonName = ...
 AskMrRobot.ChatPrefix = "_AMR"
+
+-- flag to turn on debugging behavior
+AskMrRobot.debug = false
 
 -- the main user interface window
 AskMrRobot.mainWindow = nil
@@ -41,15 +48,13 @@ function AskMrRobot.eventListener:OnEvent(event, ...)
 	if event == "ADDON_LOADED" then
         local addon = select(1, ...)
         if (addon == "AskMrRobot") then
-            --print(L.AMR_ON_EVENT_LOADED:format(GetAddOnMetadata(AskMrRobot.AddonName, "Version")))
-            
             AskMrRobot.InitializeSettings()
             AskMrRobot.InitializeMinimap()
             
-            -- listen for messages from other AMR addons
-            RegisterAddonMessagePrefix(AskMrRobot.ChatPrefix)            
-
             AskMrRobot.mainWindow = AskMrRobot.AmrUI:new()
+            
+            -- listen for messages from other AMR addons
+            RegisterAddonMessagePrefix(AskMrRobot.ChatPrefix)
         end
     
     elseif event == "UNIT_INVENTORY_CHANGED" then
@@ -66,7 +71,8 @@ function AskMrRobot.eventListener:OnEvent(event, ...)
         
 	elseif event == "BANKFRAME_OPENED" or event == "PLAYERBANKSLOTS_CHANGED" then 
 		AskMrRobot.ScanBank();
-        
+    elseif event == "VOID_STORAGE_OPEN" or event == "VOID_STORAGE_CONTENTS_UPDATE" or event == "VOID_STORAGE_DEPOSIT_UPDATE" or event == "VOID_STORAGE_UPDATE" then
+    	AskMrRobot.ScanVoidStorage();
 	elseif event == "CHARACTER_POINTS_CHANGED" or event == "CONFIRM_TALENT_WIPE" or event == "PLAYER_TALENT_UPDATE" or event == "ACTIVE_TALENT_GROUP_CHANGED" then
 		--AskMrRobot.GetAmrSpecializations();
 		--if AskMrRobot_ReforgeFrame then
@@ -92,12 +98,15 @@ function AskMrRobot.eventListener:OnEvent(event, ...)
         local chatPrefix, message = select(1, ...)
         local isLogging = AskMrRobot.CombatLogTab.IsLogging()
         if (isLogging and chatPrefix == AskMrRobot.ChatPrefix) then
-            AskMrRobot.mainWindow.combatLogTab:ReadAddonMessage(message)
+            if AskMrRobot.mainWindow then
+                AskMrRobot.mainWindow.combatLogTab:ReadAddonMessage(message)
+            end
         end
         
     elseif event == "UPDATE_INSTANCE_INFO" or event == "PLAYER_DIFFICULTY_CHANGED" then
-    	AskMrRobot.mainWindow.combatLogTab:UpdateAutoLogging()
-        
+        if AskMrRobot.mainWindow then
+            AskMrRobot.mainWindow.combatLogTab:UpdateAutoLogging()
+        end
 	end
  
 end
@@ -253,7 +262,6 @@ end
 
 function AskMrRobot.SaveAll()
     AskMrRobot.ScanCharacter()
-	AskMrRobot.ScanBank()
 	AskMrRobot.ScanBags()
 	AskMrRobot.ScanEquipped()
 	AskMrRobot.GetCurrencies()
@@ -373,11 +381,13 @@ local function scanBag(bagId, isBank, bagTable, bagItemsWithCount)
 	end
 end
 		
-function AskMrRobot.ScanBank(bankItemsWithCount)
+function AskMrRobot.ScanBank()
+	--REAGENTBANK_CONTAINER (-3)
 	local bankItems = {}
 	local bankItemsAndCounts = {}
 
 	scanBag(BANK_CONTAINER, true, bankItems, bankItemsAndCounts)
+	scanBag(REAGENTBANK_CONTAINER, true, bankItems, bankItemsAndCounts)
 	for bagId = NUM_BAG_SLOTS + 1, NUM_BAG_SLOTS + NUM_BANKBAGSLOTS do
 		scanBag(bagId, true, bankItems, bankItemsAndCounts)
 	end
@@ -389,6 +399,28 @@ function AskMrRobot.ScanBank(bankItemsWithCount)
             AmrDb.BankItems = bankItems
             AmrDb.BankItemsAndCounts = bankItemsAndCounts
 		end
+	end
+end
+
+function AskMrRobot.ScanVoidStorage()
+	if IsVoidStorageReady() then
+		local voidItems = {}
+		local VOID_STORAGE_MAX = 80
+		local VOID_STORAGE_PAGES = 2
+        
+		for page = 1,VOID_STORAGE_PAGES do
+			for i = 1,VOID_STORAGE_MAX do
+				local itemId = GetVoidItemInfo(page, i)
+				if itemId then
+					local itemLink = GetVoidItemHyperlinkString(((page - 1) * VOID_STORAGE_MAX) + i);
+					if itemLink then
+						tinsert(voidItems, itemLink)
+					end
+				end
+			end
+		end
+        
+		AmrDb.VoidItems = voidItems
 	end
 end
 
@@ -425,7 +457,7 @@ function AskMrRobot.GetCurrencies()
     local currencies = {};
     currencies[-1] = GetMoney()
     
-    local currencyList = {61, 81, 241, 361, 384, 394, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402, 416, 515, 614, 615, 676, 679}
+    local currencyList = {61, 81, 241, 361, 384, 394, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402, 416, 515, 614, 615, 676, 679, 823}
 	for i, currency in pairs(currencyList) do
 		local amount = getCurrencyAmount(currency)
 		if amount ~= 0 then
@@ -693,19 +725,36 @@ function AskMrRobot.ExportToCompressedString(complete)
         local itemObjects = {}
     	if AmrDb.BagItems then
 	        for i, v in ipairs(AmrDb.BagItems) do
-	            local itemData = AskMrRobot.parseItemLink(v)
-	            if itemData ~= nil then
-	                table.insert(itemObjects, itemData)
-	            end
+	        	local _,_,_,_,_,_,_,stackCount = GetItemInfo(v)
+	        	if stackCount == 1 then
+		            local itemData = AskMrRobot.parseItemLink(v)
+		            if itemData ~= nil then
+		                table.insert(itemObjects, itemData)
+		            end
+		        end
 	        end
 	    end
 	    if AmrDb.BankItems then
 	        for i, v in ipairs(AmrDb.BankItems) do
-	            local itemData = AskMrRobot.parseItemLink(v)
-	            if itemData ~= nil then
-	                table.insert(itemObjects, itemData)
+	        	local _,_,_,_,_,_,_,stackCount = GetItemInfo(v)
+	        	if stackCount == 1 then
+	            	local itemData = AskMrRobot.parseItemLink(v)
+	            	if itemData ~= nil then
+		                table.insert(itemObjects, itemData)
+	            	end
 	            end
 	        end
+	    end
+	    if AmrDb.VoidItems then
+	        for i, v in ipairs(AmrDb.VoidItems) do
+	        	local _,_,_,_,_,_,_,stackCount = GetItemInfo(v)
+	        	if stackCount == 1 then
+		            local itemData = AskMrRobot.parseItemLink(v)
+		            if itemData ~= nil then
+		                table.insert(itemObjects, itemData)
+		            end
+		        end
+		    end
 	    end
         
         table.insert(fields, ".inv")
@@ -717,7 +766,7 @@ end
 
 function AskMrRobot.ExportToAddonChat(timestamp)
     local msg = AskMrRobot.ExportToCompressedString(false)
-    local msgPrefix = timestamp .. "\n" .. AmrRealmName .. "\n" .. AmrCharacterName .. "\n"
+    local msgPrefix = timestamp .. "\n" .. AmrDb.RealmName .. "\n" .. AmrDb.CharacterName .. "\n"
     
     -- break the data into 250 character chunks (to deal with the short limit on addon message size)
     local chunks = {}
@@ -761,7 +810,7 @@ local MIN_IMPORT_VERSION = 2
 --
 -- Import a character, returning nil on success, otherwise an error message, import result stored in AskMrRobot.ImportData
 --
-function AskMrRobot.ImportCharacter(data)
+function AskMrRobot.ImportCharacter(data, isTest)
 
     -- make sure all data is up to date before importing
     AskMrRobot.SaveAll()
@@ -784,54 +833,57 @@ function AskMrRobot.ImportCharacter(data)
     end
     
     -- require realm/name match
-    local realm = parts[2]
-    local name = parts[3]
-    if realm ~= AmrDb.RealmName or name ~= AmrDb.CharacterName then
-        local badPers = name .. " (" .. realm .. ")"
-        local goodPers = AmrDb.CharacterName .. " (" .. AmrDb.RealmName .. ")"
-        return L.AMR_IMPORT_ERROR_CHAR:format(badPers, goodPers)
-    end
-    
-    -- require race match
-    local race = tonumber(parts[5])
-    if race ~= AskMrRobot.raceIds[AmrDb.Race] then
-        return L.AMR_IMPORT_ERROR_RACE
-    end
-    
-    -- require faction match
-    local faction = tonumber(parts[6])
-    if faction ~= AskMrRobot.factionIds[AmrDb.Faction] then
-        return L.AMR_IMPORT_ERROR_FACTION
-    end
-    
-    -- require level match
-    local level = tonumber(parts[7])
-    if level ~= AmrDb.Level then
-        return L.AMR_IMPORT_ERROR_LEVEL
-    end
+    if not isTest then
+        local realm = parts[2]
+        local name = parts[3]
+        if name ~= AmrDb.CharacterName then
+            local badPers = name .. " (" .. realm .. ")"
+            local goodPers = AmrDb.CharacterName .. " (" .. AmrDb.RealmName .. ")"
+            return L.AMR_IMPORT_ERROR_CHAR:format(badPers, goodPers)
+        end
+        
+        -- require race match
+        local race = tonumber(parts[5])
+        if race ~= AskMrRobot.raceIds[AmrDb.Race] then
+            return L.AMR_IMPORT_ERROR_RACE
+        end
+        
+        -- require faction match
+        local faction = tonumber(parts[6])
+        if faction ~= AskMrRobot.factionIds[AmrDb.Faction] then
+            return L.AMR_IMPORT_ERROR_FACTION
+        end
+        
+        -- require level match
+        local level = tonumber(parts[7])
+        if level ~= AmrDb.Level then
+            return L.AMR_IMPORT_ERROR_LEVEL
+        end
 
-    -- require spec match
-    local spec = tonumber(parts[11])
-    if spec ~= AmrDb.Specs[AmrDb.ActiveSpec] then
-        print(AmrDb.ActiveSpec)
-        print(spec)
-        print(AmrDb.Specs[AmrDb.ActiveSpec])
-        local _, specName = GetSpecializationInfoByID(AskMrRobot.gameSpecIds[spec])
-        return L.AMR_IMPORT_ERROR_SPEC:format(specName)
+        -- require spec match
+        local spec = tonumber(parts[11])
+        if spec ~= AmrDb.Specs[AmrDb.ActiveSpec] then
+            print(AmrDb.ActiveSpec)
+            print(spec)
+            print(AmrDb.Specs[AmrDb.ActiveSpec])
+            local _, specName = GetSpecializationInfoByID(AskMrRobot.gameSpecIds[spec])
+            return L.AMR_IMPORT_ERROR_SPEC:format(specName)
+        end
+        
+        -- require talent match
+        local talents = parts[12]
+        if talents ~= AmrDb.Talents[AmrDb.ActiveSpec] then
+            return L.AMR_IMPORT_ERROR_TALENT
+        end
+        
+        -- require glyph match
+        -- TODO: re-enable this check when glyphs are more consistent
+        --local glyphs = parts[13]
+        --if glyphs ~= AskMrRobot.toCompressedNumberList(AmrDb.Glyphs[AmrDb.ActiveSpec]) then
+        --    return L.AMR_IMPORT_ERROR_GLYPH
+        --end
     end
     
-    -- require talent match
-    local talents = parts[12]
-    if talents ~= AmrDb.Talents[AmrDb.ActiveSpec] then
-        return L.AMR_IMPORT_ERROR_TALENT
-    end
-    
-    -- require glyph match
-    -- TODO: re-enable this check when glyphs are more consistent
-    --local glyphs = parts[13]
-    --if glyphs ~= AskMrRobot.toCompressedNumberList(AmrDb.Glyphs[AmrDb.ActiveSpec]) then
-    --    return L.AMR_IMPORT_ERROR_GLYPH
-    --end
     
     -- if we make it this far, the data is valid, so read item information
     local importData = {}
@@ -936,12 +988,13 @@ function AskMrRobot.ImportCharacter(data)
                 itemObj.socketColors = {}
                 for j = 1, string.len(tokens["c"]) do
                     table.insert(itemObj.socketColors, tonumber(string.sub(tokens["c"], j, j)))
-                end
+                end                
             end
             
             -- look for item ID duplicate info, deals with old SoO items
             if tokens["d"] then
                 itemObj.duplicateId = tonumber(tokens["d"])
+                itemInfo[itemObj.duplicateId] = itemObj
             end
             
         end
@@ -1003,12 +1056,29 @@ function AskMrRobot.ImportCharacter(data)
         end
     end
     
-    -- we have succeeded, record the result
-    AskMrRobot.ImportData = importData
-    AskMrRobot.ExtraItemData = itemInfo
-    AskMrRobot.ExtraGemData = gemInfo
-    AskMrRobot.ExtraEnchantData = enchantInfo    
+    if isTest then
     
-    AmrDb.LastCharacterImport = data
-    AmrDb.LastCharacterImportDate = date()    
+        -- print result for debugging
+        --for k,v in pairs(importData) do
+         --   local blah = AskMrRobot.createItemLink(v)
+        --    print(blah)
+            --local name, link = GetItemInfo(blah)
+            --print(link)
+            --if link == nil then
+            --    print(blah)
+            --    print("bad item: " .. v.id)
+            --end
+        --end
+        
+        
+    else
+        -- we have succeeded, record the result
+        AskMrRobot.ImportData = importData
+        AskMrRobot.ExtraItemData = itemInfo
+        AskMrRobot.ExtraGemData = gemInfo
+        AskMrRobot.ExtraEnchantData = enchantInfo    
+        
+        AmrDb.LastCharacterImport = data
+        AmrDb.LastCharacterImportDate = date()
+    end
 end

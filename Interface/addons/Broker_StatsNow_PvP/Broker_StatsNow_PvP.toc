@@ -1,9 +1,0 @@
-## Interface: 60000
-## Title: Broker_StatsNow - PvP
-## Version: 2014.08.21
-## Author: WNxSajuukCor
-## Notes: LDB plugin to display your PvP stats where you want.
-libs\LibStub.lua
-libs\CallbackHandler-1.0.lua
-libs\LibDataBroker-1.1.lua
-Broker_StatsNow_PvP.lua

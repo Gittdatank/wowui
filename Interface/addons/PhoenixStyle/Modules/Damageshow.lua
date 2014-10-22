@@ -878,7 +878,7 @@ if pssisavedbossinfo[pssichose1] and #pssisavedbossinfo[pssichose1]>0 then
     end
     pssavedinfotextframe1:SetText(psstrochka)
     pssavedinfotextframe1:HighlightText(0,string.len(psstrochka))
-    pssavedinfotextframe1:SetFocus()
+    pssavedinfotextframe1:SetFocus(true)
   else
     pssavedinfotextframe1:SetText(pcicccombat4)
   end

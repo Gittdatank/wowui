@@ -1,12 +1,13 @@
 
 -- Gear status is requested/transmitted when opening the list.
 
-local oRA = LibStub("AceAddon-3.0"):GetAddon("oRA3")
+local addonName, scope = ...
+local oRA = scope.addon
 local util = oRA.util
 local module = oRA:NewModule("Gear")
-local L = LibStub("AceLocale-3.0"):GetLocale("oRA3")
+local L = scope.locale
 
-module.VERSION = tonumber(("$Revision: 712 $"):sub(12, -3))
+module.VERSION = tonumber(("$Revision: 806 $"):sub(12, -3))
 
 local gearTbl = {}
 
@@ -22,11 +23,16 @@ function module:OnRegister()
 	oRA.RegisterCallback(self, "OnShutdown")
 	oRA.RegisterCallback(self, "OnListSelected")
 	oRA.RegisterCallback(self, "OnCommReceived")
+	oRA.RegisterCallback(self, "OnGroupChanged")
 
 	SLASH_ORAGEAR1 = "/ragear"
 	SlashCmdList.ORAGEAR = function()
 		oRA:OpenToList(L["Gear"])
 	end
+end
+
+function module:OnGroupChanged()
+	oRA:UpdateList(L["Gear"])
 end
 
 function module:OnShutdown()
@@ -76,12 +82,6 @@ do
 				local all, equipped = GetAverageItemLevel()
 				local missingEnchants, emptySockets = 0, 0
 
-				local isBlacksmith = GetSpellInfo((GetSpellInfo(2018))) -- Blacksmithing
-				local isEnchanter = GetSpellInfo((GetSpellInfo(7411))) -- Enchanting
-
-				enchantableItems[11] = isEnchanter and true or false -- FINGER 1
-				enchantableItems[12] = isEnchanter and true or false -- FINGER 2
-
 				for i = 1, 17 do
 					local itemLink = GetInventoryItemLink("player", i)
 					if itemLink then
@@ -97,8 +97,7 @@ do
 						-- Handle missing gems
 						local totalItemSockets = 0
 						-- WAIST, add +1 as the belt buckle doesn't contribute to the EMPTY_SOCKET_GEM entries
-						-- WRIST & HANDS, same as above for smithies
-						if i == 6 or ((i == 9 or i == 10) and isBlacksmith) then
+						if i == 6 then
 							totalItemSockets = 1
 						end
 

@@ -9,11 +9,11 @@ vars.icon = vars.LDB and LibStub("LibDBIcon-1.0", true)
 
 local QTip = LibStub("LibQTip-1.0")
 local dataobject, db, config
-local maxdiff = 10 -- max number of instance difficulties
+local maxdiff = 16 -- max number of instance difficulties
 local maxcol = 4 -- max columns per player+instance
 
 addon.svnrev = {}
-addon.svnrev["SavedInstances.lua"] = tonumber(("$Revision: 383 $"):match("%d+"))
+addon.svnrev["SavedInstances.lua"] = tonumber(("$Revision: 394 $"):match("%d+"))
 
 -- local (optimal) references to provided functions
 local table, math, bit, string, pairs, ipairs, unpack, strsplit, time, type, wipe, tonumber, select, strsub = 
@@ -48,18 +48,18 @@ vars.Indicators = {
 	BLANK = "None",
 }
 
-vars.Categories = {
-	D0 = EXPANSION_NAME0 .. ": " .. LFG_TYPE_DUNGEON,
-	R0 = EXPANSION_NAME0 .. ": " .. LFG_TYPE_RAID,
-	D1 = EXPANSION_NAME1 .. ": " .. LFG_TYPE_DUNGEON,
-	R1 = EXPANSION_NAME1 .. ": " .. LFG_TYPE_RAID,
-	D2 = EXPANSION_NAME2 .. ": " .. LFG_TYPE_DUNGEON,
-	R2 = EXPANSION_NAME2 .. ": " .. LFG_TYPE_RAID,
-	D3 = EXPANSION_NAME3 .. ": " .. LFG_TYPE_DUNGEON,
-	R3 = EXPANSION_NAME3 .. ": " .. LFG_TYPE_RAID,
-	D4 = EXPANSION_NAME4 .. ": " .. LFG_TYPE_DUNGEON,
-	R4 = EXPANSION_NAME4 .. ": " .. LFG_TYPE_RAID,
-}
+vars.Categories = { }
+local maxExpansion
+for i = 0,10 do
+  local ename = _G["EXPANSION_NAME"..i]
+  if ename then
+    maxExpansion = i
+    vars.Categories["D"..i] = ename .. ": " .. LFG_TYPE_DUNGEON
+    vars.Categories["R"..i] = ename .. ": " .. LFG_TYPE_RAID
+  else
+    break
+  end
+end
 
 local tooltip, indicatortip
 local thisToon = UnitName("player") .. " - " .. GetRealmName()
@@ -88,30 +88,44 @@ local currency = {
 addon.currency = currency
 
 addon.LFRInstances = { 
-  [416] = { total=4, base=1,  parent=448 }, -- The Siege of Wyrmrest Temple
-  [417] = { total=4, base=5,  parent=448 }, -- Fall of Deathwing
-  [527] = { total=3, base=1,  parent=532 }, -- Guardians of Mogu'shan
-  [528] = { total=3, base=4,  parent=532 }, -- The Vault of Mysteries
-  [529] = { total=3, base=1,  parent=534 }, -- The Dread Approach
-  [530] = { total=3, base=4,  parent=534 }, -- Nightmare of Shek'zeer
-  [526] = { total=4, base=1,  parent=536 }, -- Terrace of Endless Spring
-  [610] = { total=3, base=1,  parent=634 }, -- Throne of Thunder pt 1
-  [611] = { total=3, base=4,  parent=634 }, -- Throne of Thunder pt 2
-  [612] = { total=3, base=7,  parent=634 }, -- Throne of Thunder pt 3
-  [613] = { total=3, base=10, parent=634 }, -- Throne of Thunder pt 4
-  [716] = { total=4, base=1,  parent=715, flexid=726 }, -- SoO pt 1
-  [717] = { total=4, base=5,  parent=715, flexid=728 }, -- SoO pt 2
-  [724] = { total=3, base=9,  parent=715, flexid=729 }, -- SoO pt 3
-  [725] = { total=3, base=12, parent=715, flexid=730 }, -- SoO pt 4
+  -- total is boss count, base is boss offset, 
+  -- parent is instance name to use
+  -- altid is for alternate LFRID for higher level toons
+
+  [416] = { total=4, base=1,  parent=448, altid=843 }, -- DS1: The Siege of Wyrmrest Temple
+  [417] = { total=4, base=5,  parent=448, altid=844 }, -- DS2: Fall of Deathwing
+
+  [527] = { total=3, base=1,  parent=532, altid=830 }, -- MSV1: Guardians of Mogu'shan
+  [528] = { total=3, base=4,  parent=532, altid=831 }, -- MSV2: The Vault of Mysteries
+  [529] = { total=3, base=1,  parent=534, altid=832 }, -- HoF1: The Dread Approach
+  [530] = { total=3, base=4,  parent=534, altid=833 }, -- HoF2: Nightmare of Shek'zeer
+  [526] = { total=4, base=1,  parent=536, altid=834 }, -- TeS1: Terrace of Endless Spring
+  [610] = { total=3, base=1,  parent=634, altid=835 }, -- ToT1: Last Stand of the Zandalari
+  [611] = { total=3, base=4,  parent=634, altid=836 }, -- ToT2: Forgotten Depths
+  [612] = { total=3, base=7,  parent=634, altid=837 }, -- ToT3: Halls of Flesh-Shaping
+  [613] = { total=3, base=10, parent=634, altid=838 }, -- ToT4: Pinnacle of Storms
+  [716] = { total=4, base=1,  parent=715, altid=839 }, -- SoO1: Vale of Eternal Sorrows
+  [717] = { total=4, base=5,  parent=715, altid=840 }, -- SoO2: Gates of Retribution
+  [724] = { total=3, base=9,  parent=715, altid=841 }, -- SoO3: The Underhold
+  [725] = { total=3, base=12, parent=715, altid=842 }, -- SoO4: Downfall
+
+  [849] = { total=3, base=1,  parent=897, altid=nil }, -- Highmaul1: Walled City
+  [850] = { total=3, base=4,  parent=897, altid=nil }, -- Highmaul2: Arcane Sanctum
+  [851] = { total=1, base=7,  parent=897, altid=nil }, -- Highmaul3: Imperator's Rise
+  [847] = { total=3, base=1,  parent=900, altid=nil }, -- BRF1: Slagworks
+  [846] = { total=3, base=4,  parent=900, altid=nil }, -- BRF2: The Black Forge
+  [848] = { total=3, base=7,  parent=900, altid=nil }, -- BRF3: Iron Assembly
+  [823] = { total=1, base=10, parent=900, altid=nil }, -- BRF4: Blackhand's Crucible
+
 }
-addon.FlexInstances = {}
-for id,info in pairs(addon.LFRInstances) do
-  if info.flexid then
-     addon.FlexInstances[info.flexid] = { total=info.total, base=info.base, parent=info.parent, flex=true }
-     info.flexid = nil
+local tmp = {}
+for id, info in pairs(addon.LFRInstances) do
+  tmp[id] = info
+  if info.altid then
+    tmp[info.altid] = info
   end
 end
-for id,info in pairs(addon.FlexInstances) do addon.LFRInstances[id] = info end
+addon.LFRInstances = tmp
 
 addon.WorldBosses = {
   -- encounter index is embedded in the Hjournal hyperlink
@@ -119,17 +133,15 @@ addon.WorldBosses = {
   [725] = { quest=32098, expansion=4, level=90 }, -- Galleon
   [814] = { quest=32518, expansion=4, level=90 }, -- Nalak 
   [826] = { quest=32519, expansion=4, level=90 }, -- Oondasta 
-  [857] = { quest=nil,   expansion=4, level=90, name=WORLD_BOSS_FOUR_CELESTIALS  }, -- Chi-Ji
+  [857] = { quest=nil,   expansion=4, level=90, name=L["The Four Celestials"]  }, -- Chi-Ji
   --[858] = { quest=nil, expansion=4, level=90 }, -- Yu'lon
   --[859] = { quest=nil, expansion=4, level=90 }, -- Niuzao
   --[860] = { quest=nil, expansion=4, level=90 }, -- Xuen
   [861] = { quest=nil,   expansion=4, level=90 }, -- Ordos
-}
 
-addon.showopts = {
-  always = "always",
-  saved = "saved",
-  never = "never",
+  [1291] = { quest=nil,  expansion=5, level=100 }, -- Drov the Ruiner
+  [1211] = { quest=nil,  expansion=5, level=100 }, -- Tarina the Ageless
+  [1262] = { quest=nil,  expansion=5, level=100 }, -- Rukhmar
 }
 
 local _specialQuests = {
@@ -201,8 +213,8 @@ local QuestExceptions = {
   [32641] = "Weekly",  -- Champions of the Thunder King
   [32718] = "Regular",  -- Mogu Runes of Fate -- ticket 142: outdated quest flag still shows up
   [32719] = "Regular",  -- Mogu Runes of Fate
-  [33133] = "Weekly",  -- Warforged Seals
-  [33134] = "Weekly",  -- Warforged Seals
+  [33133] = "Regular",  -- Warforged Seals outdated quests, no longer weekly
+  [33134] = "Regular",  -- Warforged Seals
   [33338] = "Weekly",  -- Empowering the Hourglass
   [33334] = "Weekly",  -- Strong Enough to Survive
 }
@@ -240,16 +252,14 @@ local function abbreviate(iname)
   iname = iname:gsub("Wrath of the Lich King", "WotLK")
   iname = iname:gsub("Cataclysm", "Cata")
   iname = iname:gsub("Mists of Pandaria", "MoP")
+  iname = iname:gsub("Warlords of Draenor", "WoD")
   return iname
 end
 
 vars.defaultDB = {
-	DBVersion = 11,
+	DBVersion = 12,
 	History = { }, -- for tracking 5 instance per hour limit
 		-- key: instance string; value: time first entered
-	Broker = {
-		HistoryText = false,
-	},
 	Toons = { }, 	-- table key: "Toon - Realm"; value:
 				-- Class: string
 				-- Level: integer
@@ -302,32 +312,48 @@ vars.defaultDB = {
 	Indicators = {
 		D1Indicator = "BLANK", -- indicator: ICON_*, BLANK
 		D1Text = "KILLED/TOTAL",
-		D1Color = { 0, 0.6, 0, 1, }, -- dark green
+		D1Color = { 0, 0.6, 0 }, -- dark green
 		D1ClassColor = true,
-		D2Indicator = "BLANK", -- indicator
+		D2Indicator = "BLANK",
 		D2Text = "KILLED/TOTAL",
-		D2Color = { 0, 1, 0, 1, }, -- green
+		D2Color = { 0, 1, 0 }, -- green
 		D2ClassColor = true,
-		R0Indicator = "BLANK", -- indicator: ICON_*, BLANK
+		R0Indicator = "BLANK",
 		R0Text = "KILLED/TOTAL",
-		R0Color = { 0.6, 0.6, 0, 1, }, -- dark yellow
+		R0Color = { 0.6, 0.6, 0 }, -- dark yellow
 		R0ClassColor = true,
-		R1Indicator = "BLANK", -- indicator: ICON_*, BLANK
+		R1Indicator = "BLANK",
 		R1Text = "KILLED/TOTAL",
-		R1Color = { 0.6, 0.6, 0, 1, }, -- dark yellow
+		R1Color = { 0.6, 0.6, 0 }, -- dark yellow
 		R1ClassColor = true,
-		R2Indicator = "BLANK", -- indicator
+		R2Indicator = "BLANK",
 		R2Text = "KILLED/TOTAL",
-		R2Color = { 0.6, 0, 0, 1, }, -- dark red
+		R2Color = { 0.6, 0, 0 }, -- dark red
 		R2ClassColor = true,
-		R3Indicator = "BLANK", -- indicator: ICON_*, BLANK
-		R3Text = "KILLED/TOTAL+",
-		R3Color = { 1, 1, 0, 1, }, -- yellow
+		R3Indicator = "BLANK",
+		R3Text = "KILLED/TOTALH",
+		R3Color = { 1, 1, 0 }, -- yellow
 		R3ClassColor = true,
-		R4Indicator = "BLANK", -- indicator
-		R4Text = "KILLED/TOTAL+",
-		R4Color = { 1, 0, 0, 1, }, -- red
+		R4Indicator = "BLANK",
+		R4Text = "KILLED/TOTALH",
+		R4Color = { 1, 0, 0 }, -- red
 		R4ClassColor = true,
+		R5Indicator = "BLANK",
+		R5Text = "KILLED/TOTAL",
+		R5Color = { 0, 0, 1 }, -- blue
+		R5ClassColor = true,
+		R6Indicator = "BLANK",
+		R6Text = "KILLED/TOTAL",
+		R6Color = { 0, 1, 0 }, -- green
+		R6ClassColor = true,
+		R7Indicator = "BLANK",
+		R7Text = "KILLED/TOTALH",
+		R7Color = { 1, 1, 0 }, -- yellow
+		R7ClassColor = true,
+		R8Indicator = "BLANK",
+		R8Text = "KILLED/TOTALM",
+		R8Color = { 1, 0, 0 }, -- red
+		R8ClassColor = true,
 	},
 	Tooltip = {
 		Details = false,
@@ -351,6 +377,7 @@ vars.defaultDB = {
 		AltColumnColor = { 0.2, 0.2, 0.2, 1, }, -- grey
 		ReportResets = true,
 		LimitWarn = true,
+		HistoryText = false,
 		ShowServer = false,
 		ServerSort = true,
 		ServerOnly = false,
@@ -358,10 +385,10 @@ vars.defaultDB = {
 		SelfAlways = false,
 		TrackLFG = true,
 		TrackDeserter = true,
-		Currency395 = true, -- Justice Points 
-		Currency396 = true, -- Valor Points
-		Currency752 = true, -- Mogu Runes
+		Currency395 = false, -- Justice Points  -- XXX: temporary
+		Currency396 = false, -- Valor Points -- XXX: temporary
 		Currency776 = true, -- Warforged Seals
+		Currency738 = true, -- Lesser Charm of Good Fortune -- XXX: temporary
 		CurrencyMax = false,
 		CurrencyEarned = true,
 	},
@@ -500,11 +527,14 @@ function addon:GetRegion()
   if not addon.region then
     local reg
     reg = GetCVar("portal")
-    if not reg or #reg ~= 2 then
-      reg = GetCVar("realmList"):match("^(%a+)%.")
+    if reg == "public-test" then -- PTR uses US region resets, despite the misleading realm name suffix
+      reg = "US"
     end
     if not reg or #reg ~= 2 then
-      reg = GetRealmName():match("%(%a%a%)")
+      reg = (GetCVar("realmList") or ""):match("^(%a+)%.")
+    end
+    if not reg or #reg ~= 2 then -- other test realms?
+      reg = (GetRealmName() or ""):match("%((%a%a)%)")
     end
     reg = reg and reg:upper()
     if reg and #reg == 2 then
@@ -791,7 +821,6 @@ function addon:instanceBosses(instance,toon,diff)
 end
 
 local lfrkey = "^"..L["LFR"]..": "
-local flexkey = "^"..L["Flex"]..": "
 local function instanceSort(i1, i2)
   local instance1 = vars.db.Instances[i1]
   local instance2 = vars.db.Instances[i2]
@@ -801,8 +830,6 @@ local function instanceSort(i1, i2)
   local id2 = instance2.LFDID or instance2.WorldBoss or 0
   local key1 = level1*1000000+id1
   local key2 = level2*1000000+id2
-  if i1:match(flexkey) then key1 = key1 - 10000 end
-  if i2:match(flexkey) then key2 = key2 - 10000 end
   if i1:match(lfrkey) then key1 = key1 - 20000 end
   if i2:match(lfrkey) then key2 = key2 - 20000 end
   if instance1.WorldBoss then key1 = key1 - 30000 end
@@ -827,12 +854,12 @@ function addon:OrderedCategories()
 	local orderedlist = { }
 	local firstexpansion, lastexpansion, expansionstep, firsttype, lasttype
 	if vars.db.Tooltip.NewFirst then
-		firstexpansion = GetExpansionLevel()
+		firstexpansion = maxExpansion
 		lastexpansion = 0
 		expansionstep = -1
 	else
 		firstexpansion = 0
-		lastexpansion = GetExpansionLevel()
+		lastexpansion = maxExpansion
 		expansionstep = 1
 	end
 	if vars.db.Tooltip.RaidsFirst then
@@ -859,17 +886,19 @@ end
 local function DifficultyString(instance, diff, toon, expired, killoverride, totoverride)
 	local setting,color
 	if not instance then
-		setting = "D" .. diff
+		setting = "D1"
 	else
 		local inst = vars.db.Instances[instance]
-		if inst.Expansion == 0 and inst.Raid then
+		if not inst or not inst.Raid then -- 5-man
+		  setting = (diff == 1 and "D1" or "D2")
+		elseif inst.Expansion == 0 then -- classic raid
 		  setting = "R0"
-		elseif inst.Raid and diff <= 2 then -- ticket 94: temporary hack for old 4.8.1 data
-		  setting = "R"..diff
-		elseif inst.Raid then
+		elseif diff >= 3 and diff <= 7 then -- pre-WoD raids
 		  setting = "R"..(diff-2)
-		else
-		  setting = "D"..diff
+		elseif diff >= 14 and diff <= 16 then -- WoD raids
+		  setting = "R"..(diff-8)
+		else -- don't know
+		  setting = "D1"
 		end
 	end
 	local prefs = vars.db.Indicators
@@ -894,6 +923,10 @@ local function DifficultyString(instance, diff, toon, expired, killoverride, tot
 	  else
 	    killed, total = addon:instanceBosses(instance,toon,diff)
 	  end
+	  if killed == 0 and total == 0 then -- boss kill info missing
+	    killed = "*"
+	    total = "*"
+	  end
 	  text = text:gsub("KILLED",killed)
 	  text = text:gsub("TOTAL",total)
 	end
@@ -908,7 +941,7 @@ function addon:UpdateInstanceData()
   instancesUpdated = true
   local count = 0
   local starttime = debugprofilestop()
-  local maxid = 1000
+  local maxid = 1500
   -- previously we used GetFullRaidList() and LFDDungeonList to help populate the instance list
   -- Unfortunately those are loaded lazily, and forcing them to load from here can lead to taint.
   -- They are also somewhat incomplete, so instead we just brute force it, which is reasonably fast anyhow
@@ -925,12 +958,14 @@ function addon:UpdateInstanceData()
     info.name = info.name or "UNKNOWN"..eid
     local instance = vars.db.Instances[info.name] or {}
     vars.db.Instances[info.name] = instance
-    instance.Show = (instance.Show and addon.showopts[instance.Show]) or "saved"
+    instance.Show = instance.Show or "saved"
     instance.WorldBoss = eid
     instance.Expansion = info.expansion
     instance.RecLevel = info.level
     instance.Raid = true
   end
+  local chiji = select(2,EJ_GetCreatureInfo(1,857))
+  vars.db.Instances[chiji] = nil -- XXX: correct a data corruption caused by locale string removal on 6.0.2 launch 
   starttime = debugprofilestop()-starttime
   debug("UpdateInstanceData(): completed "..count.." updates in "..string.format("%.6f",starttime/1000.0).." sec.")
   if addon.RefreshPending then
@@ -954,22 +989,48 @@ function addon:UpdateInstance(id)
   maxPlayers = tonumber(maxPlayers)
   if not name or not expansionLevel or not recLevel or (typeID > 2 and typeID ~= TYPEID_RANDOM_DUNGEON) then return end
   if name:find(PVP_RATED_BATTLEGROUND) then return end -- ignore 10v10 rated bg
-  if subtypeID == LFG_SUBTYPEID_SCENARIO and typeID ~= TYPEID_RANDOM_DUNGEON and
-     (maxPlayers == 3 or maxPlayers == 1) then -- ignore non-random scenarios
+  if subtypeID == LFG_SUBTYPEID_SCENARIO and typeID ~= TYPEID_RANDOM_DUNGEON then -- ignore non-random scenarios
      if vars.db.Instances[name] and vars.db.Instances[name].LFDID == id then
        vars.db.Instances[name] = nil -- clean old scenario entries
      end
      return 
   end
-  if addon.LFRInstances[id] then -- ensure uniqueness (eg TeS LFR)
+  if typeID == 2 and subtypeID == 0 and difficulty == 14 and maxPlayers == 0 then
+    --print("ignoring "..id, GetLFGDungeonInfo(id))
+    return -- ignore bogus LFR entries
+  end
+  if typeID == 1 and subtypeID == 5 and difficulty == 14 and maxPlayers == 25 then
+    --print("ignoring "..id, GetLFGDungeonInfo(id))
     if vars.db.Instances[name] and vars.db.Instances[name].LFDID == id then
+      vars.db.Instances[name] = nil
+    end
+    return -- ignore old Flex entries
+  end
+  if addon.LFRInstances[id] then -- ensure uniqueness (eg TeS LFR)
+    local lfrid = vars.db.Instances[name] and vars.db.Instances[name].LFDID
+    if lfrid and addon.LFRInstances[lfrid] then
       vars.db.Instances[name] = nil -- clean old LFR entries
     end
-    if addon.LFRInstances[id].flex then
-      name = L["Flex"]..": "..name
-    else
-      name = L["LFR"]..": "..name
+    vars.db.Instances[L["Flex"]..": "..name] = nil -- clean old flex entries
+    name = L["LFR"]..": "..name
+  end
+  if id == 852 and expansionLevel == 5 then -- XXX: Molten Core hack
+    return -- ignore Molten Core holiday version, which has no save
+  end
+  if (id == 897 or id == 900) and expansionLevel == 4 then -- XXX: Highmaul / Blackrock Foundry hack
+    expansionLevel = 5 -- fix incorrect expansionLevel
+  end
+  if id == 767 then -- ignore bogus Ordos entry
+    if vars.db.Instances[name] and vars.db.Instances[name].LFDID == id then
+      vars.db.Instances[name].LFDID = nil
     end
+    return
+  end
+  if id == 768 then -- ignore bogus Celestials entry
+    if vars.db.Instances[name] and vars.db.Instances[name].LFDID == id then
+      vars.db.Instances[name] = nil
+    end
+    return
   end
 
   local instance = vars.db.Instances[name]
@@ -980,7 +1041,7 @@ function addon:UpdateInstance(id)
     newinst = true
   end
   vars.db.Instances[name] = instance
-  instance.Show = (instance.Show and addon.showopts[instance.Show]) or "saved"
+  instance.Show = instance.Show or "saved"
   instance.Encounters = nil -- deprecated
   instance.LFDupdated = nil
   instance.LFDID = id
@@ -1194,25 +1255,6 @@ function addon:UpdateToonData()
 	  t.Money = GetMoney()
 	end
 	local zone = GetRealZoneText()
-	local zoneid = GetCurrentMapAreaID()
-        if vars.db.Tooltip.RemindCharms and 
-	   (not addon.remindCharms or (zone ~= t.Zone and zoneid == 811)) and
-	   not addon.logout and nextreset and nextreset > time() 
-	   then
-	   local lcharm = t.currency[738]
-	   local gcharm = t.currency[776]
-	   local qlink = select(2, addon:QuestInfo(33133))
-	   if t.Level == 90 and qlink and
-	      not t.Quests[33133] and not t.Quests[33134] and
-	      -- lcharm and lcharm.amount >= 50 and
-	      gcharm and gcharm.amount <= gcharm.totalMax-3
-	      then
-	        core:ScheduleTimer(function() 
-	          chatMsg(string.format(L["Reminder: You need to do quest %s"], qlink))
-		end, 5) -- short delay for loading messages
-	        addon.remindCharms = true
-	   end
-	end
 	if zone and #zone > 0 then
 	  t.Zone = zone
 	end
@@ -1253,14 +1295,17 @@ local function SI_GetQuestReward()
   local isWeekly = QuestIsWeekly()
   local isDaily = QuestIsDaily()
   local isAccount
-  for index = 1, GetNumQuestLogEntries() do
-     local questLogTitleText, level, questTag, suggestedGroup, isHeader, 
-           isCollapsed, isComplete, isDaily, questID, startEvent = GetQuestLogTitle(index)
-     if questID == id then
-        link = GetQuestLink(index)
-	isAccount = questTag and #questTag > 0 and ITEM_ACCOUNTBOUND:lower():find(questTag:lower()) -- questtag is localized
-        break
-     end
+
+  local index = GetQuestLogIndexByID(id)
+  if index and index > 0 then
+    link = GetQuestLink(index)
+  end
+  local questTagID, tagName = GetQuestTagInfo(id)
+  if questTagID and tagName then
+    isAccount = (questTagID == QUEST_TAG_ACCOUNT)
+  else
+    isAccount = db.QuestDB.AccountDaily[id] or db.QuestDB.AccountWeekly[id]
+    debug("Fetched isAccount")
   end
   if QuestExceptions[id] then
     local qe = QuestExceptions[id]
@@ -1268,10 +1313,6 @@ local function SI_GetQuestReward()
     isDaily = 	qe:find("Daily") and true
     isWeekly = 	qe:find("Weekly") and true
     isMonthly =	qe:find("Darkmoon") and true
-  end
-  if not link then 
-    isAccount = db.QuestDB.AccountDaily[id] or db.QuestDB.AccountWeekly[id]
-    debug("Fetched isAccount")
   end
   local expires
   local questDB
@@ -1392,8 +1433,12 @@ local function ShowQuestTooltip(cell, arg, ...)
           local id = tonumber(e:match("# (%d+)"))
           local qi = id and t.Quests[id]
           local line = indicatortip:AddLine()
+	  local link = qi.Link
+	  if not link then -- sometimes missing the actual link due to races, fake it for display to prevent confusion
+	    link = "\124cffffff00["..(qi.Title or "???").."]\124r"
+	  end
 	  indicatortip:SetCell(line,1,(qi.Zone or ""),"LEFT")
-          indicatortip:SetCell(line,2,(qi.Link or qi.Title),"RIGHT")
+          indicatortip:SetCell(line,2,link,"RIGHT")
         end
 	finishIndicator()
 end
@@ -1624,7 +1669,7 @@ local function ShowIndicatorTooltip(cell, arg, ...)
 	if info.Expires > 0 then
 	  indicatortip:AddLine(YELLOWFONT .. L["Time Left"] .. ":" .. FONTEND, nil, SecondsToTime(thisinstance[toon][diff].Expires - time()))
 	end
-	if thisinstance.Raid and info.ID > 0 and (diff == 5 or diff == 6) then -- heroic raid
+	if thisinstance.Raid and info.ID > 0 and (diff == 5 or diff == 6 or diff == 16) then -- heroic raid
 	  local n = indicatortip:AddLine()
 	  indicatortip:SetCell(n, 1, YELLOWFONT .. ID .. ":" .. FONTEND, "LEFT", 1)
 	  indicatortip:SetCell(n, 2, info.ID, "RIGHT", 2)
@@ -1766,9 +1811,9 @@ function core:OnInitialize()
 	-- begin backwards compatibility
 	if not SavedInstancesDB.DBVersion or SavedInstancesDB.DBVersion < 10 then
 		SavedInstancesDB = vars.defaultDB
-	end
-	if SavedInstancesDB.DBVersion < 11 then
+	elseif SavedInstancesDB.DBVersion < 12 then
 		SavedInstancesDB.Indicators = vars.defaultDB.Indicators
+		SavedInstancesDB.DBVersion = 12
 	end
 	-- end backwards compatibilty
 	db = db or SavedInstancesDB
@@ -1780,6 +1825,7 @@ function core:OnInitialize()
 	db.Quests = db.Quests or vars.defaultDB.Quests
 	db.Tooltip.ReportResets = (db.Tooltip.ReportResets == nil and true) or db.Tooltip.ReportResets
 	db.Tooltip.LimitWarn = (db.Tooltip.LimitWarn == nil and true) or db.Tooltip.LimitWarn
+	db.Tooltip.HistoryText = (db.Tooltip.HistoryText == nil and false) or db.Tooltip.HistoryText
 	db.Tooltip.ShowHoliday = (db.Tooltip.ShowHoliday == nil and true) or db.Tooltip.ShowHoliday
 	db.Tooltip.ShowRandom = (db.Tooltip.ShowRandom == nil and true) or db.Tooltip.ShowRandom
 	db.Tooltip.CombineLFR = (db.Tooltip.CombineLFR == nil and true) or db.Tooltip.CombineLFR
@@ -1789,7 +1835,6 @@ function core:OnInitialize()
 	db.Tooltip.AugmentBonus = (db.Tooltip.AugmentBonus == nil and true) or db.Tooltip.AugmentBonus
 	db.Tooltip.TrackDailyQuests = (db.Tooltip.TrackDailyQuests == nil and true) or db.Tooltip.TrackDailyQuests
 	db.Tooltip.TrackWeeklyQuests = (db.Tooltip.TrackWeeklyQuests == nil and true) or db.Tooltip.TrackWeeklyQuests
-	db.Tooltip.RemindCharms = (db.Tooltip.RemindCharms == nil and true) or db.Tooltip.RemindCharms
 	db.Tooltip.ServerSort = (db.Tooltip.ServerSort == nil and true) or db.Tooltip.ServerSort
 	db.Tooltip.ServerOnly = (db.Tooltip.ServerOnly == nil and false) or db.Tooltip.ServerOnly
 	db.Tooltip.SelfFirst = (db.Tooltip.SelfFirst == nil and true) or db.Tooltip.SelfFirst
@@ -2196,27 +2241,34 @@ function addon:HistoryUpdate(forcereset, forcemesg)
       end
     end
   end
-  local oldistexp = (oldesttime and SecondsToTime(oldesttime+addon.histReapTime-now,false,false,1)) or "n/a"
-  debug(livecnt.." live instances, oldest ("..(oldestkey or "none")..") expires in "..oldistexp..". Current Zone="..(newzone or "nil"))
+  local oldestrem = oldesttime and (oldesttime+addon.histReapTime-now)
+  local oldestremt = (oldestrem and SecondsToTime(oldestrem,false,false,1)) or "n/a"
+  local oldestremtm = (oldestrem and SecondsToTime(math.floor((oldestrem+59)/60)*60,false,false,1)) or "n/a"
+  debug(livecnt.." live instances, oldest ("..(oldestkey or "none")..") expires in "..oldestremt..". Current Zone="..(newzone or "nil"))
   --myprint(vars.db.History)
   -- display update
 
   if forcemesg or (vars.db.Tooltip.LimitWarn and zoningin and livecnt >= addon.histLimit-1) then 
-      chatMsg(L["Warning: You've entered about %i instances recently and are approaching the %i instance per hour limit for your account. More instances should be available in %s."]:format(livecnt, addon.histLimit, oldistexp))
+      chatMsg(L["Warning: You've entered about %i instances recently and are approaching the %i instance per hour limit for your account. More instances should be available in %s."]:format(livecnt, addon.histLimit, oldestremt))
   end
   addon.histLiveCount = livecnt
-  addon.histOldest = oldistexp
-  if db.Broker.HistoryText and vars.dataobject then
-    if livecnt >= addon.histLimit then
-      vars.dataobject.text = oldistexp
-    else
-      vars.dataobject.text = livecnt
-    end
+  addon.histOldest = oldestremt
+  if db.Tooltip.HistoryText and livecnt > 0 then
+    vars.dataobject.text = "("..livecnt.."/"..(oldestremt or "?")..")"
+    addon.histTextthrottle = math.min(oldestrem+1, addon.histTextthrottle or 15)
+    addon.resetDetect:SetScript("OnUpdate", addon.histTextUpdate)
   else
     vars.dataobject.text = addonName
+    addon.resetDetect:SetScript("OnUpdate", nil)
   end
 end
 function core:HistoryUpdate(...) return addon:HistoryUpdate(...) end
+function addon.histTextUpdate(self, elap)
+  addon.histTextthrottle = addon.histTextthrottle - elap
+  if addon.histTextthrottle > 0 then return end
+  addon.histTextthrottle = 15
+  addon:HistoryUpdate()
+end
 
 local function localarr(name) -- save on memory churn by reusing arrays in updates
   name = "localarr#"..name
@@ -2485,7 +2537,7 @@ function addon:ShowDetached()
                   end)
       f:SetScript("OnHide", function() if tooltip then QTip:Release(tooltip); tooltip = nil end  end )
       f:SetScript("OnUpdate", function(self)
-		  if not tooltip then return end
+		  if not tooltip then f:Hide(); return end
 		  local w,h = tooltip:GetSize()
 		  self:SetSize(w*tooltip:GetScale(),(h+20)*tooltip:GetScale())
 		  tooltip:ClearAllPoints()
@@ -2532,17 +2584,6 @@ local function OpenLFR(self, instanceid, button)
     end
     if RaidFinderFrame and RaidFinderFrame:IsVisible() and RaidFinderQueueFrame_SetRaid then
       RaidFinderQueueFrame_SetRaid(instanceid)
-    end
-end
-
-local function OpenFlex(self, instanceid, button)
-    if FlexRaidFrame and FlexRaidFrame:IsVisible() and FlexRaidFrame.raid ~= instanceid then
-      -- changing entries
-    else
-      PVEFrame_ToggleFrame("GroupFinderFrame", FlexRaidFrame)
-    end
-    if FlexRaidFrame and FlexRaidFrame:IsVisible() and FlexRaidFrame_SetRaid then
-      FlexRaidFrame_SetRaid(instanceid)
     end
 end
 
@@ -2610,7 +2651,8 @@ function core:ShowTooltip(anchorframe)
 	if tooltip and tooltip:IsShown() and 
 	   core.showall == showall and
 	   core.scale == vars.db.Tooltip.Scale
-	   then return -- skip update
+	   then 
+	   return -- skip update
 	end
 	core.scale = vars.db.Tooltip.Scale
 	core.showall = showall
@@ -2660,14 +2702,18 @@ function core:ShowTooltip(anchorframe)
 			   categoryshown[category] = true
 			end
 			if inst.Show ~= "never" or showall then
-			    if wbcons and inst.WorldBoss then
-			      table.insert(worldbosses, instance)
+			    if wbcons and inst.WorldBoss and inst.Expansion <= GetExpansionLevel() then
+			      if vars.db.Tooltip.ReverseInstances then
+			        table.insert(worldbosses, instance)
+			      else
+			        table.insert(worldbosses, 1, instance)
+			      end
 			      wbalways = wbalways or (inst.Show == "always")
 			    end
 			    local lfrinfo = lfrcons and inst.LFDID and addon.LFRInstances[inst.LFDID]
 			    local lfrboxid
 			    if lfrinfo then
-			      lfrboxid = (lfrinfo.flex and -1 or 1)*lfrinfo.parent
+			      lfrboxid = lfrinfo.parent
 			      lfrmap[inst.LFDID] = instance
 			      if inst.Show == "always" then
 			        lfrbox[lfrboxid] = true
@@ -2745,11 +2791,7 @@ function core:ShowTooltip(anchorframe)
 			      if lfrbox[inst.LFDID] then
 			        lfrbox[L["LFR"]..": "..instance] = tooltip:AddLine()
 		              end
-			      if lfrbox[-inst.LFDID] then
-			        lfrbox[L["Flex"]..": "..instance] = tooltip:AddLine()
-		              end
 			      lfrbox[inst.LFDID] = nil
-			      lfrbox[-inst.LFDID] = nil
 			   end 
 			end
 			firstcategory = false
@@ -2760,9 +2802,7 @@ function core:ShowTooltip(anchorframe)
 	        local inst = vars.db.Instances[instance]
 		tooltip:SetCell(instancerow[instance], 1, (instancesaved[instance] and GOLDFONT or GRAYFONT) .. instance .. FONTEND)
 		if addon.LFRInstances[inst.LFDID] then
-		  local openfunc = OpenLFR
-		  if addon.LFRInstances[inst.LFDID].flex then openfunc = OpenFlex end
-		  tooltip:SetLineScript(instancerow[instance], "OnMouseDown", openfunc, inst.LFDID)
+		  tooltip:SetLineScript(instancerow[instance], "OnMouseDown", OpenLFR, inst.LFDID)
 		end
 			for toon, t in cpairs(vars.db.Toons) do
 				if inst[toon] then
@@ -2790,9 +2830,7 @@ function core:ShowTooltip(anchorframe)
 					tooltip:SetCellScript(instancerow[instance], columns[toon..base], "OnEnter", ShowIndicatorTooltip, {instance, toon, diff})
 					tooltip:SetCellScript(instancerow[instance], columns[toon..base], "OnLeave", CloseTooltips)
 					if addon.LFRInstances[inst.LFDID] then
-		                          local openfunc = OpenLFR
-		                          if addon.LFRInstances[inst.LFDID].flex then openfunc = OpenFlex end
-					  tooltip:SetCellScript(instancerow[instance], columns[toon..base], "OnMouseDown", openfunc, inst.LFDID)
+					  tooltip:SetCellScript(instancerow[instance], columns[toon..base], "OnMouseDown", OpenLFR, inst.LFDID)
 					else
 					  local link = inst[toon][diff].Link
 					  if link then
@@ -2812,20 +2850,19 @@ function core:ShowTooltip(anchorframe)
 	if lfrcons then
 	  for boxname, line in pairs(lfrbox) do
 	    local boxtype, pinstance = boxname:match("^([^:]+): (.+)$")
-	    local flex = boxtype == L["Flex"]
 	    local pinst = vars.db.Instances[pinstance]
-	    local boxid = (flex and -1 or 1)*pinst.LFDID
+	    local boxid = pinst.LFDID
 	    local firstid
 	    local total = 0
             for lfdid, lfrinfo in pairs(addon.LFRInstances) do
-	      if lfrinfo.parent == pinst.LFDID and (not flex) == (not lfrinfo.flex) and lfrmap[lfdid] then
+	      if lfrinfo.parent == pinst.LFDID and lfrmap[lfdid] then
 	        firstid = math.min(lfdid, firstid or lfdid)
 		total = total + lfrinfo.total
 	        lfrmap[boxname..":"..lfrinfo.base] = lfrmap[lfdid]
 	      end
 	    end
 	    tooltip:SetCell(line, 1, (instancesaved[boxid] and GOLDFONT or GRAYFONT) .. boxname .. FONTEND)
-	    tooltip:SetLineScript(line, "OnMouseDown", (flex and OpenFlex or OpenLFR), firstid)
+	    tooltip:SetLineScript(line, "OnMouseDown", OpenLFR, firstid)
 	    for toon, t in cpairs(vars.db.Toons) do
 	      local saved = 0
 	      local diff = 2
@@ -3426,6 +3463,11 @@ local trade_spells = {
 	[126459] = "item",	-- Blingtron
 	[54710]  = "item",	-- MOLL-E
 	[67826]  = "item",	-- Jeeves
+
+	[67833] = "item",	-- Wormhole Generator: Northrend
+	[126755] = "item",	-- Wormhole Generator: Pandaria
+	[23453] = "item", 	-- Ultrasafe Transporter: Gadgetzhan
+	[36941] = "item",	-- Ultrasafe Transporter: Toshley's Station
 }
 
 local cdname = {
@@ -3439,6 +3481,10 @@ local itemcds = { -- [itemid] = spellid
 	[87214] = 126459, 	-- Blingtron
 	[40768] = 54710, 	-- MOLL-E
 	[49040] = 67826, 	-- Jeeves
+	[48933] = 67833,	-- Wormhole Generator: Northrend
+	[87215] = 126755,	-- Wormhole Generator: Pandaria
+	[18986] = 23453, 	-- Ultrasafe Transporter: Gadgetzhan
+	[30544] = 36941,	-- Ultrasafe Transporter: Toshley's Station
 }
 
 function core:scan_item_cds()
@@ -3473,6 +3519,12 @@ function core:record_skill(spellID, expires)
     if not expires then 
       core:ScheduleTimer("scan_item_cds", 2) -- theres a delay for the item to go on cd
       return
+    end
+    for itemid, spellid in pairs(itemcds) do
+      if spellid == spellID then
+        title,link = GetItemInfo(itemid) -- use item name as some item spellnames are ambiguous or wrong
+	title = title or spellName
+      end
     end
   elseif type(cdinfo) == "string" then
     idx = cdinfo

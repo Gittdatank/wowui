@@ -196,9 +196,9 @@ function AskMrRobot.SummaryTab:showBadItems()
 			self.badItemSlots[i]:SetText(AskMrRobot.slotDisplayText[slotId])
 			self.badItemSlots[i]:Show()
 			if badItem.optimized then
-				self.badItemNames[i]:SetItemId(badItem.optimized.id, badItem.optimized.upgradeId, badItem.optimized.suffixId)
+				self.badItemNames[i]:SetItem(badItem.optimized)
 			else
-				self.badItemNames[i]:SetItemId(nil, 0, 0)
+				self.badItemNames[i]:SetItem(nil)
 			end
 			self.badItemNames[i]:Show()
 			i = i + 1
@@ -214,9 +214,9 @@ function AskMrRobot.SummaryTab:showBadItems()
 			self.upgradeItemSlots[j]:SetText(AskMrRobot.slotDisplayText[slotId])
 			self.upgradeItemSlots[j]:Show()
 			if badItem.optimized then
-				self.upgradeItemNames[j]:SetItemId(badItem.optimized.id, badItem.optimized.upgradeId, badItem.optimized.suffixId)
+				self.upgradeItemNames[j]:SetItem(badItem)
 			else
-				self.upgradeItemNames[j]:SetItemId(nil, 0, 0)
+				self.upgradeItemNames[j]:SetItem(nil)
 			end
 			self.upgradeItemNames[j]:Show()
 			j = j + 1

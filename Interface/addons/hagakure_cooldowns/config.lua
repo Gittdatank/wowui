@@ -146,13 +146,6 @@ local options = {
 			order = 6,
 			func = function () HCoold:SpellDebugModeOn() end,
 		},
-		symbiosys = {
-			type = "execute",
-			name = L["symbiosys tracking"],
-			desc = L["desc symbiosys tracking"],
-			order = 7,
-			func = function () GameTooltip:Hide(); HCoold:SymbiosysTrakingList() end,
-		},
 		talents = {
 			type = "execute",
 			name = L["talents tracking"],
@@ -175,10 +168,7 @@ if HCoold.debug then
 	local f = function() -- function for test scripts
 		-- HCoold:RunTalentsSpellSelection()
 		-- HCoold:RunPersonalSpellConfig() 
-		-- HCoold:RunSymbiosysSetup()
-		-- HCoold:SymbiosysTrakingList()
 		-- HCoold:TestFunc()
-		-- HCoold:CheckSymbiosysBuffs()
 		-- HCoold:CheckTalents()
 	end
 	

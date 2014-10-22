@@ -50,40 +50,18 @@ end
 --[[ Frame Events ]]--
 
 function SortButton:OnClick(button)
-	local frameID = self:GetParent():GetFrameID()
+	local isBank = self:GetParent().frameID == 'bank'
 
-	-- Override blizz settings
-	SetSortBagsRightToLeft(true)
-	SetBackpackAutosortDisabled(false)
-	SetBankAutosortDisabled(false)
-
-	for i, slot in Addon.FrameSettings:Get(frameID):GetBagSlots() do
-		if slot > NUM_BAG_SLOTS then
-			slot = slot - NUM_BAG_SLOTS
-
-			for flag = FIRST_FLAG, LAST_FLAG do
-				if GetBankBagSlotFlag(slot, flag) then
-					SetBankBagSlotFlag(slot, flag, false)
-				end
-			end
-		elseif slot > 0 then
-			for flag = FIRST_FLAG, LAST_FLAG do
-				if GetBagSlotFlag(slot, flag) then
-					SetBagSlotFlag(slot, flag, false)
-				end
-			end
-		end
-	end
-
-	-- Sort
-	if frameID == 'bank' then
-		if button == 'RightButton' then
-			DepositReagentBank()
-		else
+	if button == 'RightButton' then
+		if isBank then
+			SetSortBagsRightToLeft(true)
 			SortReagentBankBags()
 			SortBankBags()
 		end
+	elseif isBank then
+		DepositReagentBank()
 	else
+		SetSortBagsRightToLeft(true)
 		SortBags()
 	end
 end
@@ -91,11 +69,11 @@ end
 function SortButton:OnEnter()
 	GameTooltip:SetOwner(self, self:GetRight() > (GetScreenWidth() / 2) and 'ANCHOR_LEFT' or 'ANCHOR_RIGHT')
 	
-	local frameID = self:GetParent():GetFrameID()
+	local frameID = self:GetParent().frameID
 	if frameID == 'bank' then
 		GameTooltip:SetText(L.TipManageBank)
-		GameTooltip:AddLine(L.TipCleanBank, 1,1,1)
 		GameTooltip:AddLine(L.TipDepositReagents, 1,1,1)
+		GameTooltip:AddLine(L.TipCleanBank, 1,1,1)
 	else
 		GameTooltip:SetText(L.TipCleanBags)
 	end

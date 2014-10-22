@@ -102,6 +102,18 @@ function MOD:OnInitialize()
 	MOD.MSQ = LibStub("Masque", true)
 end
 
+-- Print debug messages with variable number of arguments in a useful format
+function MOD.Debug(a, ...)
+	if type(a) == "table" then
+		for k, v in pairs(a) do print(tostring(k) .. " = " .. tostring(v)) end -- if first parameter is a table, print out its fields
+	else
+		local s = tostring(a) -- otherwise first argument is a string but just make sure
+		local parm = {...}
+		for i = 1, #parm do s = s .. " " .. tostring(parm[i]) end -- append remaining arguments converted to strings
+		print(s)
+	end
+end
+
 -- Functions called to trigger updates
 local function TriggerPlayerUpdate() unitUpdate.player = true; updateCooldowns = true; doUpdate = true end
 local function TriggerCooldownUpdate() updateCooldowns = true; doUpdate = true end
@@ -148,7 +160,8 @@ local function AddTracker(dstGUID, dstName, isBuff, name, rank, icon, count, bty
 	if not t then t = AllocateTable(); tracker[id] = t end -- create the tracker if necessary
 	local vehicle = UnitHasVehicleUI("player")
 	t[1], t[2], t[3], t[4], t[5], t[6], t[7], t[8], t[9], t[10], t[11], t[12], t[13], t[14], t[15], t[16], t[17], t[18], t[19], t[20], t[21], t[22] =
-		true, 0, count, btype, duration, caster, isStealable, icon, rank, expire, "spell id", spellID, name, spellID, boss, UnitName("player"), apply, nil, vehicle, dstGUID, dstName, tag
+		true, 0, count, btype, duration, caster, isStealable, icon, rank, expire, "spell id", spellID, name, spellID,
+		boss, UnitName("player"), apply, nil, vehicle, dstGUID, dstName, tag
 end
 
 -- Remove tracker entries for a unit, if tag is specified then only remove if tracker tag not equal
@@ -242,13 +255,14 @@ local function GetUnitIDFromGUID(guid)
 	return uid
 end
 
--- Function called for combat log events to track hots and dots (updated for 4.2)
-local function CombatLogTracker(event, timeStamp, e, hc, srcGUID, srcName, sf1, sf2, dstGUID, dstName, df1, df2, spellID, spellName, spellSchool)
-	if srcGUID == UnitGUID("player") then -- make sure event is from a player action
+-- Function called for combat log events to track hots and dots
+local function CombatLogTracker(event, timeStamp, e, hc, srcGUID, srcName, sf1, sf2, dstGUID, dstName, df1, df2, spellID, spellName, spellSchool, auraType)
+	if bit.band(sf1, COMBATLOG_OBJECT_AFFILIATION_MASK) == COMBATLOG_OBJECT_AFFILIATION_MINE then -- make sure event controlled by the player
+	-- MOD.Debug("CULE: ", e, dstGUID, dstName, spellName, string.format("%x", sf1), auraType)
 		doUpdate = true
 		local now = GetTime()
 		if e == "SPELL_CAST_SUCCESS" then -- check for special cases
-			if spellID == 33763 then e = "SPELL_AURA_APPLIED" end -- Lifebloom refreshes don't always generate aura applied events
+			if spellID == 33763 then e = "SPELL_AURA_APPLIED"; auraType = "BUFF" end -- Lifebloom refreshes don't always generate aura applied events
 		end
 		if e == "SPELL_AURA_APPLIED" or e == "SPELL_AURA_APPLIED_DOSE" or e == "SPELL_AURA_REFRESH" then
 			local name, rank, icon, count, bType, duration, expire, caster, isStealable, boss, sid, apply, _
@@ -267,8 +281,7 @@ local function CombatLogTracker(event, timeStamp, e, hc, srcGUID, srcName, sf1, 
 			if not name then
 				name = spellName; rank = ""; count = 1; bType = nil; duration = MOD:GetDuration(name, spellID)
 				if duration > 0 then expire = now + duration else duration = 0; expire = 0 end
-				caster = "player"; isStealable = nil; boss = nil; apply = nil; isBuff = false
-				isBuff = (bit.band(df1, COMBATLOG_OBJECT_REACTION_MASK) ~= COMBATLOG_OBJECT_REACTION_HOSTILE)
+				caster = "player"; isStealable = nil; boss = nil; apply = nil; isBuff = (auraType == "BUFF")
 			end
 			if name and caster == "player" and (isBuff or (srcGUID ~= dstGUID)) then
 				AddTracker(dstGUID, dstName, isBuff, name, rank, icon, count, btype, duration, expire, caster, isStealable, spellID, boss, apply, nil)
@@ -680,9 +693,9 @@ function MOD.CheckLibBossIDs(guid)
 	_, _, _, _, _, id = string.match(guid, "(%a+)%-(%d+)%-(%d+)%-(%d+)%-(%d+)%-(%d+)")
 	if id then
 		id = tonumber(id)
-		if id and MOD.LibBossIDs.BossIDs[id] then return 1 end
+		if id and MOD.LibBossIDs.BossIDs[id] then return true end
 	end
-	return nil
+	return false
 end
 	
 -- Add an active aura to the table for the specified unit
@@ -691,7 +704,7 @@ local function AddAura(unit, name, isBuff, spellID, count, btype, duration, cast
 	local auraCache = isBuff and cacheBuffs[unit] or cacheDebuffs[unit]
 	if auraTable then
 		local b = AllocateTable() -- get an empty aura descriptor
-		local cname, isNPC, vehicle = nil, nil, nil
+		local cname, isNPC, vehicle = nil, false, false
 		if caster then
 			local guid = UnitGUID(caster); cname = UnitName(caster); vehicle = UnitHasVehicleUI(caster)
 			if guid then
@@ -865,7 +878,7 @@ local function GetWeaponBuffs()
 	if ohLastBuff then ReleasePlayerBuff(ohLastBuff) end 
 	
 	-- first check if there are weapon auras then, only if necessary, use tooltip to scan for the buff names
-	local mh, mhms, mhc, oh, ohms, ohc = GetWeaponEnchantInfo()
+	local mh, mhms, mhc, mx, oh, ohms, ohc, ox = GetWeaponEnchantInfo()
 	if mh then -- add the mainhand buff, if any, to the table
 		local islot = GetInventorySlotInfo("MainHandSlot")
 		local mhbuff = GetWeaponBuffName(islot)
@@ -966,7 +979,7 @@ local function GetTracking()
 	local notTracking, notTrackingIcon, found = L["Not Tracking"], "Interface\\Minimap\\Tracking\\None", false
 	for i = 1, GetNumTrackingTypes() do
 		local tracking, trackingIcon, active = GetTrackingInfo(i)
-		if active == 1 then
+		if active then
 			found = true
 			AddAura("player", tracking, true, nil, 1, "Tracking", 0, "player", nil, nil, nil, trackingIcon, nil, 0, "tracking", tracking)
 		end
@@ -1009,9 +1022,9 @@ local function GetSpellEffectAuras()
 	end
 end
 
--- Create an aura for current stance for warriors and paladins
+-- Create an aura for current stance for classes that don't include stance buffs
 local function GetStanceAura()
-	if MOD.myClass == "WARRIOR" or MOD.myClass == "PALADIN" or MOD.myClass == "MONK" then
+	if MOD.myClass == "PALADIN" or MOD.myClass == "MONK" then
 		local stance = GetShapeshiftForm()
 		if stance and stance > 0 then
 			local _, name = GetShapeshiftFormInfo(stance)
@@ -1029,13 +1042,19 @@ local function GetPowerBuffs()
 	local power, id = nil, nil
 	if MOD.myClass == "PALADIN" then power = UnitPower("player", SPELL_POWER_HOLY_POWER); id = 85247
 	elseif MOD.myClass == "PRIEST" then power = UnitPower("player", SPELL_POWER_SHADOW_ORBS); id = 95740
-	elseif MOD.myClass == "MONK" then power = UnitPower("player", SPELL_POWER_CHI); id = 97272
+	elseif MOD.myClass == "MONK" then
+		local chi = UnitPower("player", SPELL_POWER_CHI)
+		local _, _, icon = GetSpellInfo(115460)
+		local name = L["Chi"] or "Chi"
+		if chi and chi > 0 then
+			AddAura("player", name, true, nil, chi, "Power", 0, "player", nil, nil, nil, icon, nil, 0, "text", name)
+		end
 	elseif MOD.myClass == "WARLOCK" then
-		if IsSpellKnown(108647) then
+		if IsSpellKnown(116858) then -- check chaos bolt for destruction spec
 			power = UnitPower("player", SPELL_POWER_BURNING_EMBERS, true); id = 108647
-		elseif IsSpellKnown(1120) then
+		elseif IsSpellKnown(30108) then -- check unstable affliction for affliction spec
 			power = UnitPower("player", SPELL_POWER_SOUL_SHARDS); id = 117198
-		elseif IsSpellKnown(104315) then
+		elseif IsSpellKnown(103958) then -- check metamorphosis for demonology spec
 			power = UnitPower("player", SPELL_POWER_DEMONIC_FURY); id = 104315
 		end
 	elseif MOD.myClass == "DRUID" then
@@ -1107,12 +1126,20 @@ function MOD:UpdateTrackers()
 	end
 end
 
+--[[
+function MOD.DebugTrackers(whence)
+	MOD.Debug("Trackers: ", whence)
+	for id, tracker in pairs(unitBuffs) do for k, t in pairs(tracker) do MOD.Debug("buff", id, t[13]) end end
+	for id, tracker in pairs(unitDebuffs) do for k, t in pairs(tracker) do MOD.Debug("debuff", id, t[13]) end end
+end
+]]--
+
 -- Update aura table with current player, target and focus auras and debuffs, include player weapon buffs
 function MOD:UpdateAuras()
 	for _, k in pairs(units) do unitStatus[k] = MOD:ValidateUnit(k)	end	 -- set current unit status, defer actual update until referenced
 	for _, k in pairs(eventUnits) do unitUpdate[k] = (unitStatus[k] == 1) end -- can't count on events for these units
 	if throttleCount == 0 then -- things to do every second...
-		GetWeaponBuffs() -- get current weapon buffs, if any
+		GetWeaponBuffs() -- get current weapon buffs, if any (less useful in WoD since no longer track shaman weapon enchants or rogue poisons)
 		RefreshTrackers() -- validate the unit id cache for the trackers
 	end
 end

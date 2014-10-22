@@ -11,7 +11,7 @@ pslocale()
 end
 
 
-	psversion=5.431
+	psversion=6.002
 
 
 	psverstiptext="alpha"
@@ -414,7 +414,7 @@ if psdethrepwaittab1 and curtime>psdethrepwaittab1 then
       else
         for i = 1,GetNumGroupMembers() do
           local nameee,_,subgroup,_,_,_,_,_,isDead = GetRaidRosterInfo(i)
-          if nameee and ((isDead==1 or UnitIsDeadOrGhost(nameee)==1) and subgroup<=psnumgrup) then
+          if nameee and ((isDead==1 or UnitIsDeadOrGhost(nameee)==true) and subgroup<=psnumgrup) then
             psnumdead=psnumdead+1
           end
         end
@@ -519,7 +519,7 @@ psrecheckbossmin40=nil
 	else
 		local inInstance, instanceType = IsInInstance()
 		if instanceType=="raid" then
-      if select(3,GetInstanceInfo())==7 then
+      if select(3,GetInstanceInfo())==17 then
         SendAddonMessage("D4", "H\t", "instance_chat")
         SendAddonMessage("BigWigs", "VQ:0", "instance_chat")
         SendAddonMessage("RW2", "^1^SReqVersionInfo^^", "instance_chat")
@@ -705,7 +705,7 @@ if psdelaybossmodchecktemp and curtime>psdelaybossmodchecktemp then
 local inInstance, instanceType = IsInInstance()
 if instanceType=="raid" then
   local chatsen="RAID"
-      if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+      if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
         chatsen="instance_chat"
       end
 
@@ -823,7 +823,7 @@ psdelayofcheck=nil
 if UnitInRaid("player") then
 local inInstance, instanceType = IsInInstance()
 if instanceType~="pvp" then
-if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) then
+if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) then
   SendAddonMessage("PSaddon", "17"..psversion, "instance_chat")
 else
   SendAddonMessage("PSaddon", "17"..psversion, "raid")
@@ -836,7 +836,7 @@ end
 --чек баг боссов
 if pscheckbusboss1 and curtime>pscheckbusboss1 then
 pscheckbusboss1=nil
-if UnitIsDeadOrGhost("player")==nil and UnitName("boss1") and UnitName("boss1")~="" and IsInInstance() and UnitAffectingCombat("player")==nil then
+if UnitIsDeadOrGhost("player")==false and UnitName("boss1") and UnitName("boss1")~="" and IsInInstance() and UnitAffectingCombat("player")==false then
 pscheckbusboss2=curtime+7
 end
 end
@@ -844,7 +844,7 @@ end
 if pscheckbusboss2 and curtime>pscheckbusboss2 then
 pscheckbusboss2=nil
 pscheckbusboss1=nil
-if UnitIsDeadOrGhost("player")==nil and UnitName("boss1") and UnitName("boss1")~="" and IsInInstance() and UnitAffectingCombat("player")==nil then
+if UnitIsDeadOrGhost("player")==false and UnitName("boss1") and UnitName("boss1")~="" and IsInInstance() and UnitAffectingCombat("player")==false then
 
 local id2=UnitGUID("boss1")
 local id=tonumber(string.sub(id2,6,10),16)
@@ -1037,7 +1037,7 @@ psmsgtimestart42=0
 if psmsgmychat42=="instance_chat" then
   SendAddonMessage("PhoenixStyle", "myname:"..psnamemsgsend.."++mychat:"..psmsgmychat42.."++", "instance_chat")
 else
-  if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+  if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
     SendAddonMessage("PhoenixStyle", "myname:"..psnamemsgsend.."++mychat:"..psmsgmychat42.."++", "instance_chat")
   else
     SendAddonMessage("PhoenixStyle", "myname:"..psnamemsgsend.."++mychat:"..psmsgmychat42.."++", "RAID")
@@ -1050,7 +1050,7 @@ psmsgtimestart43=0
 if psmsgmychat43=="instance_chat" then
   SendAddonMessage("PhoenixStyle", "myname:"..psnamemsgsend.."++mychat:"..psmsgmychat43.."++", "instance_chat")
 else
-  if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+  if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
     SendAddonMessage("PhoenixStyle", "myname:"..psnamemsgsend.."++mychat:"..psmsgmychat43.."++", "instance_chat")
   else
     SendAddonMessage("PhoenixStyle", "myname:"..psnamemsgsend.."++mychat:"..psmsgmychat43.."++", "RAID")
@@ -1138,7 +1138,7 @@ pssendchatmsg(psmsgmychat,psannouncewait)
 local _, instanceType, pppl, _, maxPlayers, dif = GetInstanceInfo()
 --репорт для РСК аддона инфы после боя НЕ В ЛФР
 if IsAddOnLoaded("RaidSlackCheck") then
-  if select(3,GetInstanceInfo())==7 then
+  if select(3,GetInstanceInfo())==17 then
   else
     if psrscafterfightrep[1]==1 then
       rscrepnortafretcom1(psmsgmychat)
@@ -1195,7 +1195,7 @@ if(UnitIsGroupAssistant("player") or UnitIsGroupLeader("player")) then
 								if online==nil then
 									psdelaydeathcheck=GetTime()-10
 								end
-								if (online and isDead==nil and UnitIsDeadOrGhost(name2)==nil) then
+								if (online and isDead==nil and UnitIsDeadOrGhost(name2)==false) then
 									if GetRaidTargetIndex(pssetmarknew[i][ij])==nil or (GetRaidTargetIndex(pssetmarknew[i][ij]) and GetRaidTargetIndex(pssetmarknew[i][ij])~=i) then
 										SetRaidTarget(pssetmarknew[i][ij], i)
 									end
@@ -1207,7 +1207,7 @@ if(UnitIsGroupAssistant("player") or UnitIsGroupLeader("player")) then
 							oj=oj+1
 						end
 					else
-						if UnitIsDeadOrGhost(pssetmarknew[i][ij])==nil then
+						if UnitIsDeadOrGhost(pssetmarknew[i][ij])==false then
 							if GetRaidTargetIndex(pssetmarknew[i][ij])==nil or (GetRaidTargetIndex(pssetmarknew[i][ij]) and GetRaidTargetIndex(pssetmarknew[i][ij])~=i) then
 								SetRaidTarget(pssetmarknew[i][ij], i)
 							end
@@ -1608,11 +1608,14 @@ end
 
 	--обнуление таймера при смерти игрока
 	if UnitInRaid(arg8) and not UnitIsFeignDeath(arg8) then
-    local B = tonumber(arg7:sub(5,5), 16)
-    local maskedB = B % 8
-    if maskedB and maskedB==0 then
-      pswipecheckdelay=GetTime()-1
-    end
+	--local B = tonumber(arg7:sub(5,5), 16)
+	--local maskedB = B % 8
+    --if maskedB and maskedB==0 then
+    --  pswipecheckdelay=GetTime()-1
+    --end
+	if (string.find(arg7,"Player")) then
+		pswipecheckdelay=GetTime()-1
+	end
 
   end
     --может умер пет? проверим!
@@ -2177,13 +2180,13 @@ if arg2=="SPELL_CREATE" and (arg10==49844 or arg10==61031) and pstrackbadsummons
   local a1,a2=IsInInstance()
   if psunitplayertrue and (UnitInRaid("player") or UnitInParty("player")) then
     if a2=="raid" then
-      if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+      if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
         pszapuskanonsa("instance_chat", "{rt8} PhoenixStyle: "..arg5.." > "..arg11)
       else
         pszapuskanonsa("raid", "{rt8} PhoenixStyle: "..arg5.." > "..arg11)
       end
     else
-      if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+      if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
         pszapuskanonsa("instance_chat", "{rt8} PhoenixStyle: "..arg5.." > "..arg11)
       end
     end
@@ -3160,7 +3163,7 @@ if arg1=="PSaddon" and arg2 and string.sub(arg2,1,2)=="17" then
 if tonumber(string.sub(arg2,3))>psversion then
 
 		if tonumber(string.sub(arg2,3))-psversion>0.0007 then
-	if psverschech2==nil and UnitAffectingCombat("player")==nil then
+	if psverschech2==nil and UnitAffectingCombat("player")==false then
 	psverschech2=1
 psoldvern=tonumber(string.sub(arg2,3))
 if psoldvern>psversion then
@@ -3184,7 +3187,7 @@ end
 	end
 		elseif tonumber(string.sub(arg2,3))-psversion>0.00008 then
 
-	if psverschech2==nil and UnitAffectingCombat("player")==nil then
+	if psverschech2==nil and UnitAffectingCombat("player")==false then
 	psverschech2=1
 psoldvern=tonumber(string.sub(arg2,3))
 if psoldvern>psversion then
@@ -3400,17 +3403,23 @@ if pppl and (pppl==3 or pppl==5) then
 psiccinst="10"
 psdifflastfight=10
 end
-if pppl and (pppl==4 or pppl==6 or pppl==7) then
+if pppl and (pppl==4 or pppl==6 or pppl==17) then
 psiccinst="25"
 psdifflastfight=25
 end
-if select(3,GetInstanceInfo())==7 then
+if select(3,GetInstanceInfo())==17 then
   psiccinst="25, LFR"
 end
 if select(3,GetInstanceInfo())==14 then
   psiccinst="FLEX"
 end
-if pppl and (pppl==5 or pppl==6) then
+if select(3,GetInstanceInfo())==15 then
+  psiccinst="FLEX"
+end
+if select(3,GetInstanceInfo())==16 then
+  psiccinst="Mythic"
+end
+if pppl and (pppl==5 or pppl==6 or pppl==15) then
 psiccinst=psiccinst..", "..psiccheroic
 psheroiccombat=1
 else
@@ -3852,7 +3861,7 @@ dfsdfsdfjy4:SetPoint("BOTTOMRIGHT", dfdfdpsdonatefr2, "BOTTOMRIGHT", 0, 0)
 dfsdfsdfjy4:SetPoint("BOTTOMLEFT", dfdfdpsdonatefr2, "BOTTOMLEFT", 0, 0)
 dfsdfsdfjy4:SetScript("onescapepressed", function(self) dfsdfsdfjy4:ClearFocus() end)
 dfsdfsdfjy4:SetFont(GameFontNormal:GetFont(), 13)
-dfsdfsdfjy4:SetMultiLine()
+dfsdfsdfjy4:SetMultiLine(true)
 dfsdfsdfjy4:SetAutoFocus(false)
 dfsdfsdfjy4:SetHeight(150)
 dfsdfsdfjy4:SetWidth(225)
@@ -4345,15 +4354,15 @@ end
 	framewasinuse8=nil --номерация дальше совпадает
 	framewasinuse9=nil
 
-if (thisaddononoff) then PSFmain3_CheckButton1:SetChecked() else PSFmain3_CheckButton1:SetChecked(false) end
-if (thisaddonwork) then PSFmain3_CheckButton2:SetChecked() else PSFmain3_CheckButton2:SetChecked(false) end
-if (psfnopromrep) then PSFmain3_CheckButton3:SetChecked() else PSFmain3_CheckButton3:SetChecked(false) end
-if (psminibutenabl) then PSFmain3_CheckButton4:SetChecked() else PSFmain3_CheckButton4:SetChecked(false) end
+if (thisaddononoff) then PSFmain3_CheckButton1:SetChecked(true) else PSFmain3_CheckButton1:SetChecked(false) end
+if (thisaddonwork) then PSFmain3_CheckButton2:SetChecked(true) else PSFmain3_CheckButton2:SetChecked(false) end
+if (psfnopromrep) then PSFmain3_CheckButton3:SetChecked(true) else PSFmain3_CheckButton3:SetChecked(false) end
+if (psminibutenabl) then PSFmain3_CheckButton4:SetChecked(true) else PSFmain3_CheckButton4:SetChecked(false) end
 
-if (psrscafterfightrep[1]==1) then PSFmain3_CheckButton11:SetChecked() else PSFmain3_CheckButton11:SetChecked(false) end
-if (psrscafterfightrep[1]==2) then PSFmain3_CheckButton12:SetChecked() else PSFmain3_CheckButton12:SetChecked(false) end
-if (psrscafterfightrep[2]==1) then PSFmain3_CheckButton13:SetChecked() else PSFmain3_CheckButton13:SetChecked(false) end
-if (pstrackbadsummons==1) then PSFmain3_CheckButton14:SetChecked() else PSFmain3_CheckButton14:SetChecked(false) end
+if (psrscafterfightrep[1]==1) then PSFmain3_CheckButton11:SetChecked(true) else PSFmain3_CheckButton11:SetChecked(false) end
+if (psrscafterfightrep[1]==2) then PSFmain3_CheckButton12:SetChecked(true) else PSFmain3_CheckButton12:SetChecked(false) end
+if (psrscafterfightrep[2]==1) then PSFmain3_CheckButton13:SetChecked(true) else PSFmain3_CheckButton13:SetChecked(false) end
+if (pstrackbadsummons==1) then PSFmain3_CheckButton14:SetChecked(true) else PSFmain3_CheckButton14:SetChecked(false) end
 
 local s1=GetSpellInfo(61031)
 local s2=GetSpellInfo(49844)
@@ -4400,9 +4409,9 @@ if i==2 then
 	end
 end
 
-if (psrscafterfightrep[1]==1) then PSFmain3_CheckButton11:SetChecked() else PSFmain3_CheckButton11:SetChecked(false) end
-if (psrscafterfightrep[1]==2) then PSFmain3_CheckButton12:SetChecked() else PSFmain3_CheckButton12:SetChecked(false) end
-if (psrscafterfightrep[2]==1) then PSFmain3_CheckButton13:SetChecked() else PSFmain3_CheckButton13:SetChecked(false) end
+if (psrscafterfightrep[1]==1) then PSFmain3_CheckButton11:SetChecked(true) else PSFmain3_CheckButton11:SetChecked(false) end
+if (psrscafterfightrep[1]==2) then PSFmain3_CheckButton12:SetChecked(true) else PSFmain3_CheckButton12:SetChecked(false) end
+if (psrscafterfightrep[2]==1) then PSFmain3_CheckButton13:SetChecked(true) else PSFmain3_CheckButton13:SetChecked(false) end
 
 end
 
@@ -4751,7 +4760,7 @@ local psnumgrup=2
 	end
 for i = 1,GetNumGroupMembers() do
   local nameee,_,subgroup,_,_,_,_,_,isDead = GetRaidRosterInfo(i)
-  if nameee and ((isDead==1 or UnitIsDeadOrGhost(nameee)==1) and subgroup<=psnumgrup) then
+  if nameee and ((isDead==1 or UnitIsDeadOrGhost(nameee)==true) and subgroup<=psnumgrup) then
     psnumdead=psnumdead+1
   end
 end
@@ -5277,11 +5286,11 @@ end
 
 function pszapuskanonsa(kudarep, chtorep, bojinterr, vajnreport, addicc, norep)
 
-if kudarep and (kudarep=="raid" or kudarep=="raid_warning" or kudarep=="party") and (select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD)) then
+if kudarep and (kudarep=="raid" or kudarep=="raid_warning" or kudarep=="party") and (select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD)) then
   kudarep="instance_chat"
 end
 
-if select(3,GetInstanceInfo())==7 and (kudarep~="raid" and kudarep~="sebe" and kudarep~="instance_chat") then
+if select(3,GetInstanceInfo())==17 and (kudarep~="raid" and kudarep~="sebe" and kudarep~="instance_chat") then
   psstopreportiflfrotherchan=1
 end
 
@@ -5544,7 +5553,7 @@ if nr then
 local inInstance, instanceType = IsInInstance()
 if instanceType~="pvp" then
   if cchat==nil then
-    if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) then
+    if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) then
       SendAddonMessage("PSaddon", "12info", "instance_chat")
     else
       SendAddonMessage("PSaddon", "12info", "raid")
@@ -5679,7 +5688,7 @@ a:SetHeight(20)
 a:SetWidth(170)
 a:SetPoint("TOPLEFT", 57, b)
 a:Show()
-a:SetScript("OnTabPressed", function(self) if psfautomebtable[nr+1] then psfautomebtable[nr+1]:SetFocus() psfautomebtable[nr+1]:HighlightText() else psfautomebtable[1]:SetFocus() psfautomebtable[1]:HighlightText() end end )
+a:SetScript("OnTabPressed", function(self) if psfautomebtable[nr+1] then psfautomebtable[nr+1]:SetFocus(true) psfautomebtable[nr+1]:HighlightText() else psfautomebtable[1]:SetFocus(true) psfautomebtable[1]:HighlightText() end end )
 a:SetScript("OnEnterPressed", function(self) psautomarunfoc() end )
 
 local nicks=""
@@ -5707,7 +5716,7 @@ function psmarksoff(where)
 local inInstance, instanceType = IsInInstance()
 if instanceType~="pvp" then
 if where==nil then
-  if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+  if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
     SendAddonMessage("PSaddon", "16off", "instance_chat")
   else
     SendAddonMessage("PSaddon", "16off", "raid")
@@ -5760,7 +5769,7 @@ psverschech1=1
 if (UnitInRaid("player")) then
 local inInstance, instanceType = IsInInstance()
 if instanceType~="pvp" then
-  if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) then
+  if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) then
     SendAddonMessage("PSaddon", "17"..psversion, "instance_chat")
   else
     SendAddonMessage("PSaddon", "17"..psversion, "raid")
@@ -5794,12 +5803,15 @@ psunitplayertrue=nil
 if id then
 
 
-	local B = tonumber(id:sub(5,5), 16)
-  if B then
-    local maskedB = B % 8
-    if maskedB and maskedB==0 then
-      psunitplayertrue=1
-    end
+	--local B = tonumber(id:sub(5,5), 16)
+  --if B then
+  --  local maskedB = B % 8
+  -- if maskedB and maskedB==0 then
+  --    psunitplayertrue=1
+  --  end
+	--end
+	if (string.find(id,"Player")) then
+		psunitplayertrue=1
 	end
 
 end
@@ -6495,7 +6507,7 @@ psicctableradiobut[1][bb]:SetChecked(false)
 psicctableradiobut[2][bb]:SetChecked(false)
 psicctableradiobut[3][bb]:SetChecked(false)
 psraidoptionschatp1[psmenuchoose1][psmenuchoose2][bb]=aa
-psicctableradiobut[aa][bb]:SetChecked()
+psicctableradiobut[aa][bb]:SetChecked(true)
 if aa==1 then
 psicctablecifr[bb]:SetText("|cff00ff001|r")
 elseif aa==2 then
@@ -6511,7 +6523,7 @@ psicctableradiobut[1][bb]:SetChecked(false)
 psicctableradiobut[2][bb]:SetChecked(false)
 psicctableradiobut[3][bb]:SetChecked(false)
 psraidoptionschatp2[1][psmenuchoose2][bb]=aa
-psicctableradiobut[aa][bb]:SetChecked()
+psicctableradiobut[aa][bb]:SetChecked(true)
 if aa==1 then
 psicctablecifr[bb]:SetText("|cff00ff001|r")
 elseif aa==2 then
@@ -6527,7 +6539,7 @@ psicctableradiobut[1][bb]:SetChecked(false)
 psicctableradiobut[2][bb]:SetChecked(false)
 psicctableradiobut[3][bb]:SetChecked(false)
 psraidoptionschatp3[1][psmenuchoose2][bb]=aa
-psicctableradiobut[aa][bb]:SetChecked()
+psicctableradiobut[aa][bb]:SetChecked(true)
 if aa==1 then
 psicctablecifr[bb]:SetText("|cff00ff001|r")
 elseif aa==2 then
@@ -6582,13 +6594,13 @@ for i=1,#psraidoptionson[pssetexpans][psmenuchoose1][psmenuchoose2] do
 		psicctableradiobut[3][i]:SetChecked(false)
 		if psraidoptionschat[pssetexpans][psmenuchoose1][psmenuchoose2][i]==1 then
 			psicctablecifr[i]:SetText("|cff00ff001|r")
-			psicctableradiobut[1][i]:SetChecked()
+			psicctableradiobut[1][i]:SetChecked(true)
 		elseif psraidoptionschat[pssetexpans][psmenuchoose1][psmenuchoose2][i]==2 then
 			psicctablecifr[i]:SetText("|cffff00002|r")
-			psicctableradiobut[2][i]:SetChecked()
+			psicctableradiobut[2][i]:SetChecked(true)
 		else
 			psicctablecifr[i]:SetText("|CFFFFFF003|r")
-			psicctableradiobut[3][i]:SetChecked()
+			psicctableradiobut[3][i]:SetChecked(true)
 		end
 		psicctableradiobut[1][i]:Show()
 		psicctableradiobut[2][i]:Show()
@@ -6596,7 +6608,7 @@ for i=1,#psraidoptionson[pssetexpans][psmenuchoose1][psmenuchoose2] do
 	end
 	psiccchbtfr[i]:Show()
 	if psraidoptionson[pssetexpans][psmenuchoose1][psmenuchoose2][i] and psraidoptionson[pssetexpans][psmenuchoose1][psmenuchoose2][i]==1 then
-		psiccchbtfr[i]:SetChecked()
+		psiccchbtfr[i]:SetChecked(true)
 	else
 		psiccchbtfr[i]:SetChecked(false)
 	end
@@ -6617,7 +6629,7 @@ end
 			--если нет места то не пишем
 			if n<18 then
 			if ps_saoptions[pssetexpans][psmenuchoose1][psmenuchoose2][i] and ps_saoptions[pssetexpans][psmenuchoose1][psmenuchoose2][i]==1 then
-				psiccchbtfr[n]:SetChecked()
+				psiccchbtfr[n]:SetChecked(true)
 			else
 				psiccchbtfr[n]:SetChecked(false)
 			end
@@ -6763,7 +6775,7 @@ for i=1,3 do
 psrbuttablraidopt[i]:SetPoint("TOPLEFT", 17, -344-i*15)
 psrbuttablraidopt[i]:SetWidth("16")
 psrbuttablraidopt[i]:SetHeight("16")
-psrbuttablraidopt[i]:SetScript("OnClick", function(self) psraidoptionsnumers[1]=i psrbuttablraidopt[1]:SetChecked(false) psrbuttablraidopt[2]:SetChecked(false) psrbuttablraidopt[3]:SetChecked(false) psrbuttablraidopt[i]:SetChecked() end )
+psrbuttablraidopt[i]:SetScript("OnClick", function(self) psraidoptionsnumers[1]=i psrbuttablraidopt[1]:SetChecked(false) psrbuttablraidopt[2]:SetChecked(false) psrbuttablraidopt[3]:SetChecked(false) psrbuttablraidopt[i]:SetChecked(true) end )
 
 --text
 local s = PSFraidopt:CreateFontString()
@@ -6774,7 +6786,7 @@ s:SetPoint("TOPLEFT",36,-340-i*15)
 s:SetJustifyH("LEFT")
 s:SetText(temptxt1[i+4])
 end
-psrbuttablraidopt[psraidoptionsnumers[1]]:SetChecked()
+psrbuttablraidopt[psraidoptionsnumers[1]]:SetChecked(true)
 
 
 --boss model options
@@ -6784,7 +6796,7 @@ che1:SetWidth("25")
 che1:SetHeight("25")
 che1:SetScript("OnClick", function(self) if psbossmodelshow==1 then psbossmodelshow=0 else psbossmodelshow=1 end end )
 if psbossmodelshow==1 then
-che1:SetChecked()
+che1:SetChecked(true)
 else
 che1:SetChecked(false)
 end
@@ -6805,7 +6817,7 @@ che2:SetWidth("25")
 che2:SetHeight("25")
 che2:SetScript("OnClick", function(self) if psmergepets==1 then psmergepets=0 else psmergepets=1 end end )
 if psmergepets==1 then
-che2:SetChecked()
+che2:SetChecked(true)
 else
 che2:SetChecked(false)
 end
@@ -6829,7 +6841,7 @@ psraidoptionsnumers={2,0,4,8,5,7,10,20}
 for i=1,3 do
 psrbuttablraidopt[i]:SetChecked(false)
 end
-psrbuttablraidopt[psraidoptionsnumers[1]]:SetChecked()
+psrbuttablraidopt[psraidoptionsnumers[1]]:SetChecked(true)
 
 for i=3,8 do
 pssliderstablraidopt[i-2]:SetValue(psraidoptionsnumers[i])
@@ -6955,7 +6967,7 @@ end
 
 function pssendchatmsg(chat,tbl,nick)
 
-if chat and (chat=="raid" or chat=="raid_warning" or chat=="party") and (select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD)) then
+if chat and (chat=="raid" or chat=="raid_warning" or chat=="party") and (select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD)) then
   chat="instance_chat"
 end
 
@@ -7596,7 +7608,7 @@ end
 
 PSFmainfrainsavedinfo_Button1:Hide()
 PSFmainfrainsavedinfo_Button2:Hide()
-pssavedinfotextframe1:SetFocus()
+pssavedinfotextframe1:SetFocus(true)
 pssavedinfotextframe1:HighlightText()
 
 end
@@ -7935,7 +7947,7 @@ end
 
 
 function psdamageceildeathrep(dmg)
-if dmg==nil then
+if dmg==nil or dmg==false then
 	return ""
 else
 	local he=0
@@ -8406,7 +8418,7 @@ adfsdfsdfjy4:SetPoint("BOTTOMRIGHT", adfdfdpsdonatefr2, "BOTTOMRIGHT", 0, 0)
 adfsdfsdfjy4:SetPoint("BOTTOMLEFT", adfdfdpsdonatefr2, "BOTTOMLEFT", 0, 0)
 adfsdfsdfjy4:SetScript("onescapepressed", function(self) adfsdfsdfjy4:ClearFocus() end)
 adfsdfsdfjy4:SetFont(GameFontNormal:GetFont(), 13)
-adfsdfsdfjy4:SetMultiLine()
+adfsdfsdfjy4:SetMultiLine(true)
 adfsdfsdfjy4:SetAutoFocus(false)
 adfsdfsdfjy4:SetHeight(150)
 adfsdfsdfjy4:SetWidth(225)
@@ -8423,7 +8435,7 @@ adfdfdpsdonatefr2:Show()
 --донейт текст показывать
 adfsdfsdfjy4:SetText("http://www.phoenixstyle.com/help")
 adfsdfsdfjy4:HighlightText(0,string.len(adfsdfsdfjy4:GetText()))
-adfsdfsdfjy4:SetFocus()
+adfsdfsdfjy4:SetFocus(true)
 
 
 else

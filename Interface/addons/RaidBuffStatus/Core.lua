@@ -1,11 +1,11 @@
 local addonName, vars = ...
 local L = vars.L
 local AceConfig = LibStub('AceConfigDialog-3.0')
-local GI = LibStub("LibGroupInSpecT-1.0")
+local GI = LibStub("LibGroupInSpecT-1.1")
 
 RaidBuffStatus = LibStub("AceAddon-3.0"):NewAddon("RaidBuffStatus", "AceEvent-3.0", "AceTimer-3.0", "AceConsole-3.0", "AceSerializer-3.0")
 RBS_svnrev = {}
-RBS_svnrev["Core.lua"] = select(3,string.find("$Revision: 679 $", ".* (.*) .*"))
+RBS_svnrev["Core.lua"] = select(3,string.find("$Revision: 688 $", ".* (.*) .*"))
 
 local addon = RaidBuffStatus
 local profile
@@ -81,7 +81,6 @@ end
 local ccspells = {
 --	BS[118], -- Polymorph (needs workaround)
 	BS[9484], -- Shackle Undead
-	BS[2637], -- Hibernate
 	BS[3355], -- Freezing Trap (Effect)
 	BS[6770], -- Sap
 	BS[20066], -- Repentance
@@ -93,11 +92,9 @@ local ccspells = {
 --	BS[28271], -- Polymorph (Turtle) (needs workaround)
 --	BS[61721], -- Polymorph (Rabbit) (needs workaround)
 --	BS[61780], -- Polymorph (Turkey) (needs workaround)
-	BS[76780], -- Bind Elemental
 	BS[6358], -- Seduction
 	BS[115268], -- Mesmerize
 --	BS[339], -- Entangling Roots (needs workaround)
-	BS[1513], -- Scare Beast
 	BS[10326], -- Turn Evil
 	BS[19386], -- Wyvern Sting
 	BS[115078], -- Paralysis (Monk)
@@ -425,7 +422,7 @@ function addon:OnInitialize()
 		WhisperMany = true,
 		HowMany = 4,
 		HowOften = 3,
-		foodlevel = 250,
+		foodlevel = 25,
 		ignoreeating = false,
 		OldFlasksElixirs = false,
 		FeastTT = true,
@@ -1553,7 +1550,11 @@ function addon:ReadUnit(unitid, unitindex)
 --			if duration and expirationTime then
 --				addon:Debug(buffName .. ":" .. duration .. ":" .. expirationTime .. ":")
 --			end
-			if duration and expirationTime and profile.checkabouttorunout and duration > mintimeleft and (expirationTime - thetime) < mintimeleft then
+			if (duration or 0) > 0 and (expirationTime or 0) > 0 -- has a visible duration and expiration
+			  and profile.checkabouttorunout and profile.abouttorunout > 0 -- checking expiring
+			  and (duration > 2*mintimeleft or (expirationTime - thetime) < 30) -- only warn about short buffs about to expire
+			  and (expirationTime - thetime) < mintimeleft then
+			  	-- buff is expiring, behave as if absent
 --				addon:Debug(buffName .. ":" .. duration .. ":" .. expirationTime .. ":")
 --				addon:Debug("running out")
 --				buffName = nil
@@ -1743,7 +1744,7 @@ function addon:Say(msg, player, prepend, channel)
 	  if player and type(player) == "number" then -- BNet ID
 	  	BNSendWhisper(player, str)
 	  elseif player then
-	  	player = player:gsub("%s*%(.+%)$","")  -- remove note suffix
+	        player = addon:NoteParse(player) -- remove any note suffix
 		SendChatMessage(str, "WHISPER", nil, player)
 	  elseif channel then
 		SendChatMessage(str, channel)
@@ -2488,6 +2489,7 @@ function addon:AddBuffButton(name, x, y, icon, update, click, tooltip)
 		if v.free then
 			button = v
 			button.update = nil
+			button.buffname = nil
 			button:SetScript("PreClick", nil)
 			button:SetScript("PostClick", nil)
 			button:SetScript("OnEnter", nil)
@@ -2522,6 +2524,7 @@ function addon:AddBuffButton(name, x, y, icon, update, click, tooltip)
 		count:Show()
 	end
 	button.free = false
+	button.buffname = name
 	button:SetNormalTexture(icon)
 	button:SetPoint("BOTTOMLEFT", addon.frame, "BOTTOMLEFT", x, y)
 	if click then
@@ -2548,6 +2551,7 @@ end
 function addon:AddOptionsBuffButton(buffname, x, y, icon, tooltip)
 	local button = CreateFrame("Button", nil, addon.optionsframe, "SecureActionButtonTemplate")
 	button.buffname = buffname
+	button.optionsbuff = true
 	table.insert(optionsiconbuttons, button)
 	button:Hide()
 	button:SetWidth(20)
@@ -2869,12 +2873,21 @@ function addon:FormatNameList(list)
   return str
 end
 
+function addon:NoteParse(namewithnote)
+  local name = namewithnote
+  local note = name:match("%((.+)%)$")
+  if note and note:match("^[A-Z][A-Z]$") then
+    note = nil -- ignore PTR realm suffixes
+  elseif note then 
+    name = name:gsub("%s*%(.+%)$","")  -- remove note suffix
+  end
+  return name, note
+end
+
 function addon:TooltipAddNames(list, timerlist)
   for _, name in ipairs(list) do
-    local note = name:match("%((.+)%)$")
-    if note then 
-      name = name:gsub("%s*%(.+%)$","")  -- remove note suffix
-    end
+    local note
+    name, note = addon:NoteParse(name)
     local cname = addon:ClassColor(name)
     if timerlist and not note then
       note = timerlist[name] and "("..addon:TimeSince(timerlist[name])..")"
@@ -2885,10 +2898,26 @@ end
 
 function addon:Tooltip(self, title, list, tlist, blist, slist, messagelist, itemcountlist, unknownlist, gotitlist, zonelist, itemlist)
 	GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+	if not title and self and self.buffname then -- default title
+	  local check = addon.BF[self.buffname]
+	  if check and type(check.chat) == "string" then
+	    if list and #list == 0 then
+	      title = check.chat
+	    else
+	      title = L["Missing "]
+	      if not title:find("%s$") then title = title .. " " end
+	      title = title .. check.chat
+	    end
+	  end
+	end
 	GameTooltip:SetText(title,1,1,1,1,1)
+	if self.optionsbuff then 
+	  GameTooltip:Show()
+	  return
+	end
 	local str = ""
 	if list and #list > 0 then
-	  if tlist or list[1]:match("%(.+%)$") or list.notes then
+	  if tlist or select(2,addon:NoteParse(list[1])) or list.notes then
 	    addon:TooltipAddNames(list, tlist)
 	  else
 	    GameTooltip:AddLine(addon:FormatNameList(list, tlist),nil,nil,nil,1)
@@ -3252,7 +3281,7 @@ end
 
 
 function addon:GetUnitFromName(whom)
-        whom = whom:gsub("%s*%(.+%)$","") -- remove any note suffix
+	whom = addon:NoteParse(whom) -- remove any note suffix
 	for class,cinfo in pairs(raid.classes) do
 		local u = cinfo[whom]
 		if u then return u end
@@ -4845,11 +4874,11 @@ function addon:CHAT_MSG_WHISPER(event, msg, whom)
 		return
 	end
 	local fwhom = addon:FQname(tostring(whom)) -- might be a bnet pid
-	if not addon:CanAutoInvite(whom) then return end
 	if profile.aiwguildmembers and IsInGuild() then
 		for i=1, GetNumGuildMembers() do
 			local name = GetGuildRosterInfo(i)
 			if addon:FQname(name) == fwhom then
+	                        if not addon:CanAutoInvite(fwhom) then return end -- may send a whisper
 				addon:SendInvite(whom)
 				return
 			end
@@ -4859,6 +4888,7 @@ function addon:CHAT_MSG_WHISPER(event, msg, whom)
 		for i=1, GetNumFriends() do
 			local name = GetFriendInfo(i)
 			if addon:FQname(name) == fwhom then
+	                        if not addon:CanAutoInvite(fwhom) then return end -- may send a whisper
 				addon:SendInvite(whom)
 				return
 			end
@@ -4872,9 +4902,11 @@ function addon:CHAT_MSG_WHISPER(event, msg, whom)
 			local _, toonName, client, realmName, realmId, faction = BNGetFriendToonInfo(i,j)
 			if client == "WoW" and faction == UnitFactionGroup("player") then
 				if fwhom == toonName.."-"..realmName:gsub("%s","") then -- regular wsp from local bnet friend
+	                        	if not addon:CanAutoInvite(fwhom) then return end -- may send a whisper
 					addon:SendInvite(fwhom)
 					return
 				elseif whom == pID then -- CHAT_MSG_BN_WHISPER
+	                        	if not addon:CanAutoInvite(whom) then return end -- may send a whisper
   		                        FriendsFrame_BattlenetInvite(nil, pID)
 					return
 				end

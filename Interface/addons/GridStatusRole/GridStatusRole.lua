@@ -12,13 +12,13 @@ local L = setmetatable(ns.L, {
 })
 
 --{{{ Libraries
-local libGroupInSpecT = LibStub("LibGroupInSpecT-1.0")
+local libGroupInSpecT = LibStub("LibGroupInSpecT-1.1")
 local GridRoster = Grid:GetModule("GridRoster")
 local GridStatus = Grid:GetModule("GridStatus")
 --}}}
 
-local GridStatusRole = Grid:NewStatusModule("GridStatusRole")
-GridStatusRole.menuName = L["Role"]
+local GridStatusRole = Grid:NewStatusModule("GridStatusSpecializationRole")
+GridStatusRole.menuName = L["Specialization Role"]
 
 local rolestatus = {
 	healer = {
@@ -41,8 +41,7 @@ local rolestatus = {
 
 --{{{ AceDB defaults
 GridStatusRole.defaultDB = {
-	role = {
-		text = L["Role"],
+	specRole = {
 		enable = true,
 		color = { r = 1, g = 1, b = 1, a = 1 },
 		priority = 10,
@@ -69,7 +68,7 @@ GridStatusRole.defaultDB = {
 GridStatusRole.options = false
 
 local assigned_colors = setmetatable({}, {__index = function(t, k)
-	local settings = GridStatusRole.db.profile.role
+	local settings = GridStatusRole.db.profile.specRole
     local roleColor = settings.colors[k]
     local color = { r = roleColor.r, g = roleColor.g, b = roleColor.b, a = ((roleColor.a or 1) * (settings.assignedOpacity or 1)) }
     rawset(t, k, color)
@@ -96,12 +95,12 @@ local class_role_map = {
 }
 
 local function getrolecolor(role)
-	local color = GridStatusRole.db.profile.role.colors[role]
+	local color = GridStatusRole.db.profile.specRole.colors[role]
 	return color.r, color.g, color.b, color.a
 end
 
 local function setrolecolor(role, r, g, b, a)
-	local settings = GridStatusRole.db.profile.role
+	local settings = GridStatusRole.db.profile.specRole
 	local color = settings.colors[role]
 	color.r = r
 	color.g = g
@@ -118,11 +117,11 @@ local function setrolecolor(role, r, g, b, a)
 end
 
 local function getrolefilter(role)
-	return GridStatusRole.db.profile.role.filter[role] ~= false
+	return GridStatusRole.db.profile.specRole.filter[role] ~= false
 end
 
 local function setrolefilter(role, v)
-	GridStatusRole.db.profile.role.filter[role] = v
+	GridStatusRole.db.profile.specRole.filter[role] = v
 	GridStatusRole:UpdateAllRoles()
 end
 
@@ -223,9 +222,9 @@ local roleOptions = {
 				name = L["Use assigned roles"],
 				desc = L["Use assigned roles while talent info is unknown."],
 				order = 100,
-				get = function() return GridStatusRole.db.profile.role.useAssigned end,
+				get = function() return GridStatusRole.db.profile.specRole.useAssigned end,
 				set = function()
-					local settings = GridStatusRole.db.profile.role
+					local settings = GridStatusRole.db.profile.specRole
 					settings.useAssigned = not settings.useAssigned
 					if settings.enable then
 						if settings.useAssigned then
@@ -248,9 +247,9 @@ local roleOptions = {
 				bigStep = 0.05,
 				isPercent = true,
 				order = 101,
-				get = function () return GridStatusRole.db.profile.role.assignedOpacity end,
+				get = function () return GridStatusRole.db.profile.specRole.assignedOpacity end,
 				set = function (_, v)
-					local settings = GridStatusRole.db.profile.role
+					local settings = GridStatusRole.db.profile.specRole
 					settings.assignedOpacity = v
 					for role, assignedColor in pairs(assigned_colors) do
 						local color = settings.colors[role]
@@ -266,9 +265,9 @@ local roleOptions = {
 		name = L["Hide in combat"],
 		desc = L["Hide roles while in combat."],
 		order = 95,
-		get = function() return GridStatusRole.db.profile.role.hideInCombat end,
+		get = function() return GridStatusRole.db.profile.specRole.hideInCombat end,
 		set = function()
-			local settings = GridStatusRole.db.profile.role
+			local settings = GridStatusRole.db.profile.specRole
 			settings.hideInCombat = not settings.hideInCombat
 			if settings.enable then
 				if settings.hideInCombat then
@@ -288,14 +287,14 @@ local roleOptions = {
 
 function GridStatusRole:OnInitialize()
 	self.super.OnInitialize(self)
-	self:RegisterStatus("role", L["Role"], roleOptions, true)
+	self:RegisterStatus("specRole", L["Specialization Role"], roleOptions, true)
 end
 
 function GridStatusRole:OnStatusEnable(status)
-	if status == "role" then
+	if status == "specRole" then
 		self:RegisterMessage("Grid_UnitJoined")
 		libGroupInSpecT.RegisterCallback(self, "GroupInSpecT_Update")
-		local settings = self.db.profile.role
+		local settings = self.db.profile.specRole
 		if settings.useAssigned then
 			self:RegisterEvent("PLAYER_ROLES_ASSIGNED")
 		end
@@ -308,10 +307,10 @@ function GridStatusRole:OnStatusEnable(status)
 end
 
 function GridStatusRole:OnStatusDisable(status)
-	if status == "role" then
+	if status == "specRole" then
 		self:UnregisterMessage("Grid_UnitJoined")
 		libGroupInSpecT.UnregisterCallback(self, "GroupInSpecT_Update")
-		local settings = self.db.profile.role
+		local settings = self.db.profile.specRole
 		if settings.useAssigned then
 			self:UnregisterEvent("PLAYER_ROLES_ASSIGNED")
 			wipe(assigned_colors)
@@ -320,7 +319,7 @@ function GridStatusRole:OnStatusDisable(status)
 			self:UnregisterMessage("Grid_EnteringCombat")
 			self:UnregisterMessage("Grid_LeavingCombat")
 		end
-		self.core:SendStatusLostAllUnits("role")
+		self.core:SendStatusLostAllUnits("specRole")
 	end
 end
 
@@ -328,7 +327,7 @@ function GridStatusRole:Reset()
 	self.super.Reset(self)
 	wipe(assigned_colors)
 	self:UpdateAllRoles()
-	local settings = self.db.profile.role
+	local settings = self.db.profile.specRole
 	if settings.useAssigned then
 		self:RegisterEvent("PLAYER_ROLES_ASSIGNED")
 	else
@@ -349,14 +348,14 @@ function GridStatusRole:Grid_UnitJoined(event, guid, unit)
 end
 
 function GridStatusRole:Grid_EnteringCombat()
-	local settings = self.db.profile.role
+	local settings = self.db.profile.specRole
 	if settings.enable and settings.hideInCombat then
-		self.core:SendStatusLostAllUnits("role")
+		self.core:SendStatusLostAllUnits("specRole")
 	end
 end
 
 function GridStatusRole:Grid_LeavingCombat()
-	local settings = self.db.profile.role
+	local settings = self.db.profile.specRole
 	if settings.enable and settings.hideInCombat then
 		self:UpdateAllRoles()
 	end
@@ -367,14 +366,14 @@ function GridStatusRole:PLAYER_ROLES_ASSIGNED()
 end
 
 function GridStatusRole:UpdateAllRoles()
-	local settings = self.db.profile.role
+	local settings = self.db.profile.specRole
 	if settings.enable and (not settings.hideInCombat or not Grid.inCombat) then
 		for guid, unit in GridRoster:IterateRoster() do
 			local info = libGroupInSpecT:GetCachedInfo(guid)
 			self:UpdateRole(guid, unit, info and info.spec_role_detailed)
 		end
 	else
-		self.core:SendStatusLostAllUnits("role")
+		self.core:SendStatusLostAllUnits("specRole")
 	end
 end
 
@@ -384,7 +383,7 @@ end
 
 function GridStatusRole:UpdateRole(guid, unit, role)
 	local gained
-	local settings = self.db.profile.role
+	local settings = self.db.profile.specRole
 	if settings.enable and (not settings.hideInCombat or not Grid.inCombat) then
 		local assigned
 		if not role and settings.useAssigned then
@@ -404,7 +403,7 @@ function GridStatusRole:UpdateRole(guid, unit, role)
 		if role and settings.filter[role] then
 			local status = rolestatus[role]
 			self.core:SendStatusGained(guid,
-										"role",
+										"specRole",
 										settings.priority,
 										settings.range,
 										assigned and assigned_colors[role] or settings.colors[role],
@@ -416,6 +415,6 @@ function GridStatusRole:UpdateRole(guid, unit, role)
 		end
 	end
 	if not gained then
-		self.core:SendStatusLost(guid, "role")
+		self.core:SendStatusLost(guid, "specRole")
 	end
 end

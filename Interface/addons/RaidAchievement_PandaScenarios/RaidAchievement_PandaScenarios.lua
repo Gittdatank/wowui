@@ -553,7 +553,7 @@ end
 function pzragalochki()
 for i=1,#pzraspisokach5 do
 if pzracbset[i] then
-if(pzraspisokon[i]==1)then pzracbset[i]:SetChecked() else pzracbset[i]:SetChecked(false) end
+if(pzraspisokon[i]==1)then pzracbset[i]:SetChecked(true) else pzracbset[i]:SetChecked(false) end
 end
 end
 end

@@ -1,7 +1,7 @@
 if GetLocale() ~= "ruRU" then return end
 local _, ns = ...
 ns.L = {
-	["Role"] = "Роль",
+	["Specialization Role"] = "Роль",
 
 	["Healer"] = "Лекарь",
 	["Melee"] = "Ближний бой",

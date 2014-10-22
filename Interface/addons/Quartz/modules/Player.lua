@@ -22,8 +22,6 @@ local L = LibStub("AceLocale-3.0"):GetLocale("Quartz3")
 local MODNAME = "Player"
 local Player = Quartz3:NewModule(MODNAME)
 
-local WoD = select(4, GetBuildInfo()) >= 60000
-
 ----------------------------
 -- Upvalues
 -- GLOBALS: CastingBarFrame
@@ -167,13 +165,14 @@ local sparkfactory = {
 }
 local barticks = setmetatable({}, sparkfactory)
 
-local function setBarTicks(ticknum)
+local function setBarTicks(ticknum, duration, ticks)
 	if( ticknum and ticknum > 0) then
-		local delta = ( castBar:GetWidth() / ticknum )
-		for k = 1,ticknum do
+		local width = castBar:GetWidth()
+		for k = 1, ticknum do
 			local t = barticks[k]
 			t:ClearAllPoints()
-			t:SetPoint("CENTER", castBar, "LEFT", delta * (k-1), 0 )
+			local x = ticks[k] / duration
+			t:SetPoint("CENTER", castBar, "RIGHT", -width * x, 0 )
 			t:Show()
 		end
 		for k = ticknum+1,#barticks do
@@ -187,9 +186,7 @@ local function setBarTicks(ticknum)
 	end
 end
 
-local channelingTicks
-if WoD then
-channelingTicks = {
+local channelingTicks = {
 	-- warlock
 	[GetSpellInfo(689)] = 6, -- drain life
 	[GetSpellInfo(103103)] = 4, -- drain soul
@@ -211,30 +208,6 @@ channelingTicks = {
 	[GetSpellInfo(125953)] = 9, -- soothing mist
 	[GetSpellInfo(117952)] = 4, -- crackling jade lightning
 }
-else
-channelingTicks = {
-	-- warlock
-	[GetSpellInfo(1120)] = 6, -- drain soul
-	[GetSpellInfo(689)] = 6, -- drain life
-	[GetSpellInfo(103103)] = 4, -- malefic grasp
-	-- druid
-	[GetSpellInfo(740)] = 4, -- Tranquility
-	[GetSpellInfo(16914)] = 10, -- Hurricane
-	[GetSpellInfo(106996)] = 10, -- Astral Storm
-	-- priest
-	[GetSpellInfo(15407)] = 3, -- mind flay
-	[GetSpellInfo(129197)] = 3, -- mind flay: insanity
-	[GetSpellInfo(48045)] = 5, -- mind sear
-	[GetSpellInfo(47540)] = 2, -- penance
-	-- mage
-	[GetSpellInfo(5143)] = 5, -- arcane missiles
-	[GetSpellInfo(10)] = 8, -- blizzard
-	[GetSpellInfo(12051)] = 3, -- evocation
-	-- monk
-	[GetSpellInfo(125953)] = 9, -- soothing mist
-	[GetSpellInfo(117952)] = 6, -- crackling jade lightning
-}
-end
 
 local function getChannelingTicks(spell)
 	if not db.showticks then
@@ -247,25 +220,51 @@ end
 function Player:UNIT_SPELLCAST_START(bar, unit)
 	if bar.channeling then
 		local spell = UnitChannelInfo(unit)
+		bar.channelingEnd = bar.endTime
+		bar.channelingDuration = bar.endTime - bar.startTime
 		bar.channelingTicks = getChannelingTicks(spell)
-		setBarTicks(bar.channelingTicks)
+		bar.channelingTickTime = bar.channelingDuration / bar.channelingTicks
+		bar.ticks = bar.ticks or {}
+		for i = 1, bar.channelingTicks do
+			bar.ticks[i] = bar.channelingDuration - (i - 1) * bar.channelingTickTime
+		end
+		setBarTicks(bar.channelingTicks, bar.channelingDuration, bar.ticks)
 	else
 		setBarTicks(0)
+		bar.channelingDuration = nil
 	end
 end
 
 function Player:UNIT_SPELLCAST_STOP(bar, unit)
 	setBarTicks(0)
+	bar.channelingDuration = nil
 end
 
 function Player:UNIT_SPELLCAST_FAILED(bar, unit)
 	setBarTicks(0)
+	bar.channelingDuration = nil
 end
 
 function Player:UNIT_SPELLCAST_INTERRUPTED(bar, unit)
 	setBarTicks(0)
+	bar.channelingDuration = nil
 end
 
 function Player:UNIT_SPELLCAST_DELAYED(bar, unit)
-
+	if bar.channeling and bar.endTime > bar.channelingEnd then
+		local duration = bar.endTime - bar.startTime
+		if bar.channelingDuration and duration > bar.channelingDuration and bar.channelingTicks > 0 then
+			local extraTime = (duration - bar.channelingDuration)
+			for i = 1, bar.channelingTicks do
+				bar.ticks[i] = bar.ticks[i] + extraTime
+			end
+			while bar.ticks[bar.channelingTicks] > bar.channelingTickTime do
+				bar.channelingTicks = bar.channelingTicks + 1
+				bar.ticks[bar.channelingTicks] = bar.ticks[bar.channelingTicks-1] - bar.channelingTickTime
+			end
+			bar.channelingDuration = duration
+			bar.channelingEnd = bar.endTime
+			setBarTicks(bar.channelingTicks, bar.channelingDuration, bar.ticks)
+		end
+	end
 end

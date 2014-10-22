@@ -28,11 +28,13 @@ do -- actions with sp
 			player = "noname", -- player name
 			screen_name = "noname", -- screen name for player
 			guid = nil,
-			state = 1, -- spell state  1 - ready 2 - casting 3 - cd
+			state = 1, -- spell state  1 - ready 2 - casting 3 - cd 4 - cd but have charges
 			state_casting_end = -1, -- end of casting spell
 			state_cd_end = -1, -- time when end cd
 			color = "|cff00ff00", -- color of spell when drawing
 			type = 1, -- type of spell  1 - bad 2 - good 3 - super good 4 - dead 5 - offline 6 - casting 7 - cd
+			maxCharges = 1, -- amount of spell charges
+			currCharges = 1, -- amount of current charges
 
 			cont = nil,
 		}	
@@ -103,34 +105,63 @@ do -- actions with sp
 				self.cont.font:Show()
 				--self:Update()
 			end
+			
+			-- get spell from spell table for current view
+			function out:GetSpell()
+				local spec = HCoold:GetSpec(self.player)
+				local spell = HCoold:GetSpellBySpec(self.id,spec.spec)
+				spell = HCoold:GetManualSpell(self.id, self.player) or spell
+				return spell
+			end
 		end
 			
 		do -- function sections
 			function out:UpdateState()
+				-- if we have casting state, then set 2 (we show cd only for last cast)
+				-- but if we have amout of charges > 0 then we return state 4
 				if HCoold:GetDiff(self.state_casting_end) > 0 then 
 					self.state = 2
+					--HCoold:Chat("Chage state to 2")
 				elseif HCoold:GetDiff(self.state_cd_end) > 0 then 
-					self.state = 3
+					--HCoold:Chat("currCharges = ", self.currCharges)
+					if self.currCharges > 0 then
+						self.state = 4
+						--HCoold:Chat("Chage state to 4")
+					else
+						self.state = 3
+						--HCoold:Chat("Chage state to 3")
+					end
 					self.state_casting_end = -1
-				else 
+				-- if currCharges + 1 == maxCharges, then no CD, else we should recalculate state_cd_end
+				elseif self.currCharges + 1 >= self.maxCharges then 
 					self.state = 1 
+					self.currCharges = self.maxCharges
+					--HCoold:Chat("Chage state to 1")
 					self.state_casting_end = -1
 					self.state_cd_end = -1
+				else
+					self.state = 4
+					--HCoold:Chat("Chage state to 4")
+					self.currCharges = self.currCharges + 1
+					spell = self:GetSpell()
+					if not spell then return false end
+					self.state_cd_end = self.state_cd_end + spell.CD
 				end
 			end
 			
 			function out:StartCD()
-				local spec = HCoold:GetSpec(self.player)
-				local spell = HCoold:GetSpellBySpec(self.id,spec.spec)
-				spell = HCoold:GetManualSpell(self.id, self.player) or spell
+				spell = self:GetSpell()
 				if not spell then return false end
-				self.state_cd_end = HCoold:GetEndTime(spell.CD)
+				if self.currCharges > 0 then self.currCharges = self.currCharges - 1 end
+				if self.state ~= 4 then self.state_cd_end = HCoold:GetEndTime(spell.CD) end
 				if spell.cast_time then 
 					self.state_casting_end = HCoold:GetEndTime(spell.cast_time)
 				end
+				--HCoold:Chat("currCharges = ", self.currCharges)
+				--HCoold:Chat("currCharges = ", self.currCharges)
 				self:Update()
 				local mv = HCoold:GetDiff(self.state_cd_end)
-				self.cont.bar:SetMinMaxValues(0, mv)
+				--self.cont.bar:SetMinMaxValues(0, mv)
 				self.cont.bar:SetValue(mv)
 				if self.parent then
 					self.parent:AddCDTrack(self)
@@ -138,7 +169,6 @@ do -- actions with sp
 			end
 				
 			function out:Update()
-				--HCoold:Printf("Update spell %s",self.id)
 				self:UpdateState()
 				local t = select(2,HCoold:GetColor(self.id,self.player))
 				local diff = nil
@@ -147,12 +177,15 @@ do -- actions with sp
 				if t < 4 then
 					if self.state == 2 then  t = 6 end
 					if self.state == 3 then  t = 7 end
+					if self.state == 4 then  t = 1 end
 				end
 				diff = diff or ""
 				local bconf = HCoold.db.profile.bars
 				if self.state == 2 then self.cont.bar:SetStatusBarColor(bconf.cast_color.r,bconf.cast_color.g,bconf.cast_color.b,bconf.cast_color.a) 
 				elseif self.state == 3 then self.cont.bar:SetStatusBarColor(bconf.cd_color.r,bconf.cd_color.g,bconf.cd_color.b,bconf.cd_color.a) end
-				self.cont.font:SetText(string.format("%s%s %s|r",diff,HCoold:GetColorByQuality(t),self.screen_name,t,self.state)) -----------------------------------
+				local charges = ""
+				if self.maxCharges > 1 then charges = string.format("\[%s/%s\]", self.currCharges, self.maxCharges) end
+				self.cont.font:SetText(string.format("%s%s%s %s|r",diff,HCoold:GetColorByQuality(t),charges,self.screen_name))
 				self.cont.font:UpdateHeight()
 				self.cont.bar:SetValue(HCoold:GetDiff(self.state_cd_end))
 				if t ~= self.type then
@@ -198,7 +231,6 @@ do -- actions with sp
 		mybar:SetPoint("BOTTOMRIGHT",font,"BOTTOMRIGHT")
 		local textures = LSM:Fetch("statusbar",bconf.texture)
 		if bconf.enable then mybar:SetStatusBarTexture(textures) end
-		mybar:SetMinMaxValues(0,1)
 		mybar:SetValue(0)
 		
 		local bg = mybar:CreateTexture(nil, "BACKGROUND")
@@ -251,22 +283,30 @@ do -- actions with sp
 		local t = sp.empty()
 		setmetatable(t, sp.data)
 		t.state_cd_end = HCoold:GetLastSessionCD(sp_id,name)
+		if t.state_cd_end > 0 then t.currCharges = 0 end
 		
 		t.id = sp_id -- id of spell
 		t.player = name -- player name
 		t.screen_name = name -- player name without server
 		t.guid = UnitGUID(name)
 		
+		-- remove server names if option is turned on
 		local is_to = string.find(name, "-")
 		if is_to and HCoold.db.profile.server_names then
 			t.screen_name = string.sub(name, 1, is_to-1)
-			--HCoold:Printf("%s %s %s",name, is_to,t.screen_name)
 		end
 		
 		t.color, t.type = HCoold:GetColor(sp_id,name) -- color of spell when drawing + type of spell
 
+		spell = t:GetSpell();
+
+		-- create container for spell and set CD for this spell CD
 		t.cont = sp.create_cont(sp_id,t.color,name,cont)
-		if t.state_cd_end > 0 then t.cont.bar:SetMinMaxValues(0,HCoold:GetDiff(t.state_cd_end)) end
+		if spell then
+			t.cont.bar:SetMinMaxValues(0, spell.CD) 
+			t.maxCharges = spell.charges or 1
+			t.currCharges = spell.charges or 1
+		end
 		
 		return t
 	end
@@ -481,21 +521,6 @@ local function CDnewSpell(spell)
 				GameTooltip:Hide()
 			end)
 		end
-		--[[
-		frame:SetBackdrop({
-			bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background",
-			edgeFile = "", --"Interface\\DialogFrame\\UI-DialogBox-Border",
-			tile = false,
-			tileSize = 32,
-			edgeSize = 0,
-			insets = {
-				left = 0,
-				right = 0,
-				top = 0,
-				bottom = 0,
-			},
-		})
-		-- ]]
 		
 		if conf.cancel_by_click then
 			frame:EnableMouse(true)

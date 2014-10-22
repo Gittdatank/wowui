@@ -610,7 +610,7 @@ end
 function phragalochki()
 for i=1,#phraspisokach5 do
 if phracbset[i] then
-if(phraspisokon[i]==1)then phracbset[i]:SetChecked() else phracbset[i]:SetChecked(false) end
+if(phraspisokon[i]==1)then phracbset[i]:SetChecked(true) else phracbset[i]:SetChecked(false) end
 end
 end
 end

@@ -15,11 +15,11 @@ LoggerHeadDB = {
 		["Gimm - Cho'gall"] = "Default",
 		["Gitt - Arthas"] = "Default",
 		["Git - Arthas"] = "Default",
-		["Git - Cho'gall"] = "Default",
 		["Git - Azuremyst"] = "Default",
 		["Greny - Azuremyst"] = "Default",
-		["Giitt - Feathermoon"] = "Default",
+		["Git - Cho'gall"] = "Default",
 		["Spih - Cho'gall"] = "Default",
+		["Giitt - Feathermoon"] = "Default",
 		["Giit - Cho'gall"] = "Default",
 		["Spih - Arthas"] = "Default",
 	},
@@ -35,21 +35,20 @@ LoggerHeadDB = {
 						false, -- [2]
 						[8] = false,
 					},
-					["Scholomance"] = {
-						[2] = false,
-						[8] = false,
-					},
 					["Sunken Temple"] = {
 						false, -- [1]
+					},
+					["Halls of Origination"] = {
+						false, -- [1]
+						false, -- [2]
 					},
 					["Blackrock Caverns"] = {
 						false, -- [1]
 						false, -- [2]
 					},
-					["Gate of the Setting Sun"] = {
-						true, -- [1]
+					["Lost City of the Tol'vir"] = {
+						false, -- [1]
 						false, -- [2]
-						[8] = false,
 					},
 					["Blackrock Spire"] = {
 						false, -- [1]
@@ -64,12 +63,13 @@ LoggerHeadDB = {
 						[2] = false,
 						[8] = false,
 					},
-					["Well of Eternity"] = {
-						[2] = false,
-					},
-					["Halls of Origination"] = {
+					["The Stonecore"] = {
 						false, -- [1]
 						false, -- [2]
+					},
+					["Scholomance"] = {
+						[2] = false,
+						[8] = false,
 					},
 					["Ragefire Chasm"] = {
 						false, -- [1]
@@ -83,19 +83,21 @@ LoggerHeadDB = {
 					["End Time"] = {
 						[2] = false,
 					},
-					["Shadowfang Keep"] = {
-						[2] = false,
-					},
-					["Zul'Gurub"] = {
-						[2] = false,
-					},
 					["Shado-Pan Monastery"] = {
 						false, -- [1]
 						true, -- [2]
 						[8] = false,
 					},
-					["Hellfire Citadel: Ramparts"] = {
+					["Zul'Gurub"] = {
+						[2] = false,
+					},
+					["Shadowfang Keep"] = {
+						[2] = false,
+					},
+					["Temple of the Jade Serpent"] = {
 						false, -- [1]
+						false, -- [2]
+						[8] = false,
 					},
 					["Halls of Stone"] = {
 						[2] = false,
@@ -120,10 +122,8 @@ LoggerHeadDB = {
 						false, -- [1]
 						false, -- [2]
 					},
-					["Temple of the Jade Serpent"] = {
+					["Hellfire Citadel: Ramparts"] = {
 						false, -- [1]
-						false, -- [2]
-						[8] = false,
 					},
 					["Stormstout Brewery"] = {
 						true, -- [1]
@@ -137,13 +137,13 @@ LoggerHeadDB = {
 					["Blackrock Depths"] = {
 						false, -- [1]
 					},
-					["The Stonecore"] = {
-						false, -- [1]
-						false, -- [2]
+					["Well of Eternity"] = {
+						[2] = false,
 					},
-					["Lost City of the Tol'vir"] = {
-						false, -- [1]
+					["Gate of the Setting Sun"] = {
+						true, -- [1]
 						false, -- [2]
+						[8] = false,
 					},
 				},
 				["scenario"] = {
@@ -164,14 +164,14 @@ LoggerHeadDB = {
 					},
 				},
 				["none"] = {
-					["Tol Barad"] = {
-						true, -- [1]
-					},
 					["Pandaria"] = {
 						[0] = false,
 					},
 					["Kalimdor"] = {
 						[0] = false,
+					},
+					["Tol Barad"] = {
+						true, -- [1]
 					},
 				},
 				["arena"] = {

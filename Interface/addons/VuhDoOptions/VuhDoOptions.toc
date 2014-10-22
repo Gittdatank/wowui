@@ -1,14 +1,14 @@
 ## Interface: 60000
 ## Title: VuhDo ['vu:du:] - Options
 ## Author: Iza@Gilneas, humfras
-## Version: 3.6
+## Version: 3.64
 ## Notes: VuhDo Options
 ## SavedVariables: VUHDO_OPTIONS_SETTINGS
 ## SavedVariablesPerCharacter: VUHDO_GLOBAL_ICONS, VUHDO_GI_SCAN_IDX
 ## DefaultState: Enabled
 ## Dependencies: VuhDo
 ## LoadOnDemand: 0
-## X-Curse-Packaged-Version: v3.62
+## X-Curse-Packaged-Version: v3.64
 ## X-Curse-Project-Name: VuhDo
 ## X-Curse-Project-ID: vuhdo
 ## X-Curse-Repository-ID: wow/vuhdo/mainline

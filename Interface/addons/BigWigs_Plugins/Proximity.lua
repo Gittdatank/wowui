@@ -51,13 +51,13 @@ local proximityPlayerTable = {}
 local maxPlayers = 0
 local unitList = nil
 local blipList = {}
-local updater = nil
+local updater = false
+local functionToFire = nil
 local proxAnchor, proxTitle, proxCircle = nil, nil, nil
 
 -- Upvalues
-local SetMapToCurrentZone = BigWigsLoader.SetMapToCurrentZone
-local GetPlayerMapPosition, GetCurrentMapDungeonLevel, GetPlayerFacing = GetPlayerMapPosition, GetCurrentMapDungeonLevel, GetPlayerFacing
-local UnitPosition = UnitPosition
+local CTimerAfter = BigWigsLoader.CTimerAfter
+local UnitPosition, GetPlayerFacing = UnitPosition, GetPlayerFacing
 local GetRaidTargetIndex, GetNumGroupMembers, GetTime = GetRaidTargetIndex, GetNumGroupMembers, GetTime
 local IsInRaid, InCombatLockdown = IsInRaid, InCombatLockdown
 local UnitIsDead, UnitIsUnit, UnitClass = UnitIsDead, UnitIsUnit, UnitClass
@@ -230,6 +230,8 @@ do
 	--
 
 	function normalProximity()
+		if updater then CTimerAfter(0.05, functionToFire) else return end
+
 		local anyoneClose = 0
 
 		local srcY, srcX = UnitPosition("player")
@@ -275,6 +277,8 @@ do
 	--
 
 	function targetProximity()
+		if updater then CTimerAfter(0.05, functionToFire) else return end
+
 		local srcY, srcX = UnitPosition("player")
 		local unitY, unitX = UnitPosition(proximityPlayer)
 
@@ -301,6 +305,8 @@ do
 	--
 
 	function multiTargetProximity()
+		if updater then CTimerAfter(0.05, functionToFire) else return end
+
 		local anyoneClose = 0
 
 		local srcY, srcX = UnitPosition("player")
@@ -335,6 +341,8 @@ do
 	--
 
 	function reverseProximity()
+		if updater then CTimerAfter(0.05, functionToFire) else return end
+
 		local anyoneClose = 0
 
 		local srcY, srcX = UnitPosition("player")
@@ -380,6 +388,8 @@ do
 	--
 
 	function reverseTargetProximity()
+		if updater then CTimerAfter(0.05, functionToFire) else return end
+
 		local srcY, srcX = UnitPosition("player")
 		local unitY, unitX = UnitPosition(proximityPlayer)
 		local dx = unitX - srcX
@@ -405,6 +415,8 @@ do
 	--
 
 	function reverseMultiTargetProximity()
+		if updater then CTimerAfter(0.05, functionToFire) else return end
+
 		local anyoneClose = 0
 
 		local srcY, srcX = UnitPosition("player")
@@ -554,11 +566,6 @@ do
 		end)
 		tooltipFrame:SetScript("OnLeave", onControlLeave)
 		proxAnchor.tooltip = tooltipFrame
-
-		updater = proxAnchor:CreateAnimationGroup()
-		updater:SetLooping("REPEAT")
-		local anim = updater:CreateAnimation()
-		anim:SetDuration(0.05)
 
 		local bg = proxAnchor:CreateTexture(nil, "BACKGROUND")
 		bg:SetAllPoints(proxAnchor)
@@ -890,7 +897,7 @@ end
 --
 
 function plugin:Close()
-	updater:Stop()
+	updater = false
 
 	proxAnchor:UnregisterEvent("GROUP_ROSTER_UPDATE")
 	proxAnchor:UnregisterEvent("RAID_TARGET_UPDATE")
@@ -904,6 +911,7 @@ function plugin:Close()
 
 	activeRange, activeRangeSquared = 0, 0
 	activeSpellID = nil
+	functionToFire = nil
 	proximityPlayer = nil
 	wipe(proximityPlayerTable)
 
@@ -931,7 +939,7 @@ function plugin:Open(range, module, key, player, isReverse)
 	updateBlipIcons()
 
 	if not player and not isReverse then
-		updater:SetScript("OnLoop", normalProximity)
+		functionToFire = normalProximity
 	elseif player then
 		if type(player) == "table" then
 			for i = 1, #player do
@@ -943,9 +951,9 @@ function plugin:Open(range, module, key, player, isReverse)
 				end
 			end
 			if isReverse then
-				updater:SetScript("OnLoop", reverseMultiTargetProximity)
+				functionToFire = reverseMultiTargetProximity
 			else
-				updater:SetScript("OnLoop", multiTargetProximity)
+				functionToFire = multiTargetProximity
 			end
 		else
 			for i = 1, GetNumGroupMembers() do
@@ -956,13 +964,13 @@ function plugin:Open(range, module, key, player, isReverse)
 			end
 			if not proximityPlayer then self:Close() end -- Not found e.g. Mirror Image
 			if isReverse then
-				updater:SetScript("OnLoop", reverseTargetProximity)
+				functionToFire = reverseTargetProximity
 			else
-				updater:SetScript("OnLoop", targetProximity)
+				functionToFire = targetProximity
 			end
 		end
 	elseif isReverse then
-		updater:SetScript("OnLoop", reverseProximity)
+		functionToFire = reverseProximity
 	end
 
 	local width, height = proxAnchor:GetWidth(), proxAnchor:GetHeight()
@@ -987,8 +995,11 @@ function plugin:Open(range, module, key, player, isReverse)
 	end
 
 	-- Start the show!
-	proxAnchor:Show()
-	updater:Play()
+	CTimerAfter(0.2, function()
+		proxAnchor:Show()
+		updater = true
+		functionToFire()
+	end)
 end
 
 function plugin:Test()

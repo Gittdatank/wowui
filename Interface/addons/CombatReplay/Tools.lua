@@ -19,7 +19,7 @@ else
   table.wipe(crRangeCheckRaidTable)
   
   --убрать выделения игроков красным
-  if crsaveddata[crPlayingCombatID] then
+  if crsaveddata and crsaveddata[crPlayingCombatID] then
     for i=1,25 do
       if crPlayersFramesColor[i] and crsaveddata[crPlayingCombatID].players[i] then
         crPlayersFramesColor[i]:SetTexture(crClassColors[crsaveddata[crPlayingCombatID].players[i].class].r, crClassColors[crsaveddata[crPlayingCombatID].players[i].class].g, crClassColors[crsaveddata[crPlayingCombatID].players[i].class].b, 1)

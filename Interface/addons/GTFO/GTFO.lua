@@ -798,7 +798,11 @@ Change Log:
 		- Added WoD spells for Iron Docks
 	v4.35
 		- Updated for patch 6.0
-
+	v4.35.1
+		- Added WoD spells for Upper Blackrock Spire
+		- Added WoD spells for Blasted Lands Event
+		- Added Pandaria spells for Brewmoon Festival
+		
 ]]--
 GTFO = {
 	DefaultSettings = {
@@ -815,8 +819,8 @@ GTFO = {
 		IgnoreOptions = { };
 		TrivialDamagePercent = 2; -- Minimum % of HP lost required for an alert to be trivial
 	};
-	Version = "4.35"; -- Version number (text format)
-	VersionNumber = 43500; -- Numeric version number for checking out-of-date clients
+	Version = "4.35.1"; -- Version number (text format)
+	VersionNumber = 43501; -- Numeric version number for checking out-of-date clients
 	DataLogging = nil; -- Indicate whether or not the addon needs to run the datalogging function (for hooking)
 	DataCode = "4"; -- Saved Variable versioning, change this value to force a reset to default
 	CanTank = nil; -- The active character is capable of tanking

@@ -1,8 +1,8 @@
 --[[
 ComboPointsRedux_Options - LoD option module for ComboPointsRedux
 Author: Michael Joseph Murray aka Lyte of Lothar(US)
-$Revision: 305 $
-$Date: 2012-12-27 06:54:36 +0000 (Thu, 27 Dec 2012) $
+$Revision: 343 $
+$Date: 2014-10-21 01:17:32 +0000 (Tue, 21 Oct 2014) $
 Project Version: 2.0.0 beta2
 contact: codemaster2010 AT gmail DOT com
 
@@ -575,17 +575,17 @@ if select(2, UnitClass("player")) == "DRUID" then
 		arg = "hideOutCat",
 		order = 2,
 	}
-	
-	opts.args["Lacerate"].args.showWhen.args.bearForm = {
-		type = 'toggle',
-		name = L["Hide Out of Bear Form"],
-		desc = L["Hides the displays when you are not in bear form."],
+end
+
+opts.args["Combo Points"].args.advancedPointTracking = {
+	type = 'toggle',
+		name = L["Advanced Point Tracking"],
+		desc = L["Use advanced point tracking methods to show Combo Points on the Player instead of the Target."],
 		get = "Get",
 		set = "Set",
-		arg = "hideOutBear",
-		order = 2,
-	}
-end
+		arg = "advancedPointTracking",
+		order = 3,
+}
 
 --add profile controls
 opts.args.profile = LibStub("AceDBOptions-3.0"):GetOptionsTable(core.db)

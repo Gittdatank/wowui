@@ -19,7 +19,7 @@ end
 --создает фрейм боя
 function crShowEventFrame(nr,ev)
 
-  if #crsaveddata>0 then
+  if crsaveddata and #crsaveddata>0 then
     if nr==nil then
       nr=1
     end
@@ -384,7 +384,7 @@ end
 
 
 function crUpdateFrameRight(changedEvent,thecurrentposition)
-if crsaveddata[crPlayingCombatID] then
+if crsaveddata and crsaveddata[crPlayingCombatID] then
 
   --если плеер больше не существует:
   if crsaveddata[crPlayingCombatID].events[crPlayingCombatEvent].p[crPlayersActive[#crPlayersActive]]==nil or (crsaveddata[crPlayingCombatID].events[crPlayingCombatEvent+1] and crsaveddata[crPlayingCombatID].events[crPlayingCombatEvent+1].p[crPlayersActive[#crPlayersActive]]==nil) then
@@ -926,7 +926,7 @@ end
 
 
 function crUpdateFrameCenterUtilities(changedEvent)
-if crsaveddata[crPlayingCombatID] then
+if crsaveddata and crsaveddata[crPlayingCombatID] then
 --только раз в 0.5 сек!!!
 if changedEvent==1 then
 
@@ -984,7 +984,7 @@ end
 
 
 function crUpdateFrameTop(changedEvent,thecurrentposition)
-if crsaveddata[crPlayingCombatID] then
+if crsaveddata and crsaveddata[crPlayingCombatID] then
 
 --некоторые вещи раз в 0.5 сек
 if changedEvent==1 then
@@ -1354,7 +1354,7 @@ end
 
 
 function crShowCurrentTime(nr,ev,currentposition)
-if crsaveddata[nr] then
+if crsaveddata and crsaveddata[nr] then
   local time=0
   if currentposition and crsaveddata[nr].events[ev+1] then
     time=(crsaveddata[nr].events[ev].t-crsaveddata[nr].events[1].t)+((crsaveddata[nr].events[ev+1].t-crsaveddata[nr].events[ev].t))*currentposition

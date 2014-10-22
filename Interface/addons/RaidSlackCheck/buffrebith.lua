@@ -58,7 +58,7 @@ rsceditframecreat(rscebf4,-285,4)
 	rsccheckbox1:SetPoint("TOPLEFT", 20, pii)
 	rsccheckbox1:SetScript("OnClick", function(self) rsccheckbutchanged5(ii) end )
 		if rscbuffcheckb2[ii]==1 then
-			rsccheckbox1:SetChecked()
+			rsccheckbox1:SetChecked(true)
 		else
 			rsccheckbox1:SetChecked(false)
 		end
@@ -78,7 +78,7 @@ rsceditframecreat(rscebf4,-285,4)
 	rsccheckbox1:SetPoint("TOPLEFT", 144, -72)
 	rsccheckbox1:SetScript("OnClick", function(self) rsccheckbutchanged5(6) end )
 		if rscbuffcheckb2[6]==1 then
-			rsccheckbox1:SetChecked()
+			rsccheckbox1:SetChecked(true)
 		else
 			rsccheckbox1:SetChecked(false)
 		end
@@ -169,7 +169,7 @@ for i=1,#rscspisokid do
 	c:SetScript("OnClick", function(self) rsccheckbutchanged(i) end )
 	table.insert(rsccheckbuttable, c)
 	if rscbuffwhichtrack2[i]==1 then
-		rsccheckbuttable[i]:SetChecked()
+		rsccheckbuttable[i]:SetChecked(true)
 	else
 		rsccheckbuttable[i]:SetChecked(false)
 	end
@@ -229,7 +229,7 @@ a:SetWidth(190)
 a:SetPoint("TOPLEFT", 20, b)
 a:Show()
 table.insert(rsceditboxtable,a)
-a:SetScript("OnTabPressed", function(self) rscsavenicks3() if rsceditboxtable[nr+1] then rsceditboxtable[nr+1]:SetFocus() rsceditboxtable[nr+1]:HighlightText() else rsceditboxtable[1]:SetFocus() rsceditboxtable[1]:HighlightText() end end )
+a:SetScript("OnTabPressed", function(self) rscsavenicks3() if rsceditboxtable[nr+1] then rsceditboxtable[nr+1]:SetFocus(true) rsceditboxtable[nr+1]:HighlightText() else rsceditboxtable[1]:SetFocus(true) rsceditboxtable[1]:HighlightText() end end )
 a:SetScript("OnEnterPressed", function(self) rscsavenicks3() rsceditboxtable[nr]:ClearFocus() end )
 end
 
@@ -237,7 +237,7 @@ end
 function rsccheckbutchanged(nr)
 if rscbuffwhichtrack2[nr]==1 then rscbuffwhichtrack2[nr]=0 else rscbuffwhichtrack2[nr]=1 end
 if rscbuffwhichtrack2[nr]==1 then
-rsccheckbuttable[nr]:SetChecked()
+rsccheckbuttable[nr]:SetChecked(true)
 else
 rsccheckbuttable[nr]:SetChecked(false)
 end
@@ -246,7 +246,7 @@ end
 function rsccheckbutchanged5(nr)
 if rscbuffcheckb2[nr]==1 then rscbuffcheckb2[nr]=0 else rscbuffcheckb2[nr]=1 end
 if rscbuffcheckb2[nr]==1 then
-rsccheckboxtabl5[nr]:SetChecked()
+rsccheckboxtabl5[nr]:SetChecked(true)
 else
 rsccheckboxtabl5[nr]:SetChecked(false)
 end
@@ -514,7 +514,7 @@ end
 			end
 		end
 
-		if UnitInRaid(nicktable[yyy]) and UnitIsDeadOrGhost(nicktable[yyy])==nil and UnitAffectingCombat(nicktable[yyy]) and bill==0 then
+		if UnitInRaid(nicktable[yyy]) and UnitIsDeadOrGhost(nicktable[yyy])==false and UnitAffectingCombat(nicktable[yyy]) and bill==0 then
 			rscchatfiltimefunc()
 				if classs then
 			if UnitSex(whobuff) and UnitSex(whobuff)==3 then

@@ -4,7 +4,7 @@ CPR is a combo points display addon based on Funkydude's BasicComboPoints
 Chi.lua - A module for tracking Chi (Light Force)
 $Date: 2012-07-10 17:02:06 -0500 (Tue, 10 Jul 2012) $
 $Revision: 250 $
-Project Version: 2.3.0
+Project Version: 3.2.3
 contact: codemaster2010 AT gmail DOT com
 
 Copyright (c) 2007-2012 Michael J. Murray aka Lyte of Lothar(US)

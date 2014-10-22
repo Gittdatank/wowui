@@ -1,13 +1,22 @@
 
 AmrDb = {
 	["Talents"] = {
-		"0000000", -- [1]
-		"0000000", -- [2]
+		"2112310", -- [1]
+		"2101330", -- [2]
 	},
 	["Glyphs"] = {
 		{
+			58099, -- [1]
+			123779, -- [2]
+			58356, -- [3]
+			68164, -- [4]
 		}, -- [1]
 		{
+			115946, -- [1]
+			63325, -- [2]
+			58099, -- [3]
+			123779, -- [4]
+			58098, -- [5]
 		}, -- [2]
 	},
 	["SendSettings"] = {
@@ -23,8 +32,26 @@ AmrDb = {
 	["Level"] = 90,
 	["Equipped"] = {
 		{
+			"|cffa335ee|Hitem:99409:0:5030:4615:0:0:0:0:90:505:0:0|h[Faceguard of the Prehistoric Marauder]|h|r", -- [1]
+			"|cffa335ee|Hitem:105622:0:0:0:0:0:0:1248041344:90:505:0:0|h[Blackfuse's Blasting Cord]|h|r", -- [2]
+			"|cffa335ee|Hitem:105416:4805:5024:5024:0:0:0:726292864:90:505:0:0|h[Pauldrons of Violent Eruption]|h|r", -- [3]
+			nil, -- [4]
+			"|cffa335ee|Hitem:105512:4420:4645:4615:5024:0:0:941149824:90:505:0:0|h[Earthbreaker's Steaming Chestplate]|h|r", -- [5]
+			"|cffa335ee|Hitem:105587:0:4645:4648:4648:0:0:1234485248:90:505:0:0|h[Untarnishable Greatbelt]|h|r", -- [6]
+			"|cffa335ee|Hitem:99410:4824:4648:4648:0:0:0:0:90:505:0:0|h[Legguards of the Prehistoric Marauder]|h|r", -- [7]
+			"|cffa335ee|Hitem:105588:4429:5024:0:0:0:0:871318016:90:505:0:0|h[Ominous Mogu Greatboots]|h|r", -- [8]
+			"|cffa335ee|Hitem:105415:4412:0:0:0:0:0:328627840:90:505:0:0|h[Bracers of Sordid Sleep]|h|r", -- [9]
+			"|cffa335ee|Hitem:105435:4869:4615:5024:0:0:0:964166528:90:505:0:0|h[Shockstriker Gauntlets]|h|r", -- [10]
+			"|cffa335ee|Hitem:105536:0:4648:0:0:0:0:790882688:90:505:0:0|h[Ring of the Iron Tomb]|h|r", -- [11]
+			"|cffa335ee|Hitem:105492:0:5024:0:0:0:0:1697950464:90:505:0:0|h[Galakrond Control Band]|h|r", -- [12]
+			"|cffa335ee|Hitem:104636:0:0:0:0:0:0:657324928:90:505:0:0|h[Skeer's Bloodsoaked Talisman]|h|r", -- [13]
+			"|cffa335ee|Hitem:105568:0:0:0:0:0:0:149844736:90:505:0:0|h[Vial of Living Corruption]|h|r", -- [14]
+			"|cffff8000|Hitem:102249:4424:4610:0:0:0:0:826296448:90:493:0:0|h[Gong-Lu, Strength of Xuen]|h|r", -- [15]
+			"|cffa335ee|Hitem:105417:4446:4645:0:0:0:0:1520998272:90:505:0:0|h[Encapsulated Essence of Immerseus]|h|r", -- [16]
+			"|cffa335ee|Hitem:105481:4993:4645:0:0:0:0:1585973632:90:505:0:0|h[Shield of Mockery]|h|r", -- [17]
 		}, -- [1]
 	},
+	["Guild"] = "Lusting on Trash",
 	["Specs"] = {
 		34, -- [1]
 		33, -- [2]
@@ -101,7 +128,7 @@ AmrDb = {
 		[392] = 1309,
 		[393] = 4,
 		[394] = 13,
-		[-1] = 0,
+		[-1] = 8841603208,
 	},
 	["RealmName"] = "Arthas",
 	["LogData"] = {
@@ -114,6 +141,88 @@ AmrDb = {
 		["_lastDiff"] = 0,
 	},
 	["BagItems"] = {
+		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:90:0:0:0|h[Hearthstone]|h|r", -- [1]
+		"|cffffffff|Hitem:76077:0:0:0:0:0:0:916554497:90:0:0:0|h[Elixir of Weaponry]|h|r", -- [2]
+		"|cff1eff00|Hitem:104287:0:0:0:0:0:0:435756160:90:0:0:0|h[Windfeather Plume]|h|r", -- [3]
+		"|cffa335ee|Hitem:105644:4444:4647:0:0:0:0:238525568:90:505:0:0|h[Xal'atoh, Desecrated Image of Gorehowl]|h|r", -- [4]
+		"|cffa335ee|Hitem:105644:4444:4647:0:0:0:0:788794880:90:505:0:0|h[Xal'atoh, Desecrated Image of Gorehowl]|h|r", -- [5]
+		"|cffa335ee|Hitem:105555:4444:4647:0:0:0:0:577374208:90:493:0:0|h[Gar'tok, Strength of the Faithful]|h|r", -- [6]
+		"|cffa335ee|Hitem:104962:0:0:0:0:0:0:1208038272:90:491:0:0|h[Xifeng, Longblade of the Titanic Guardian]|h|r", -- [7]
+		"|cffa335ee|Hitem:94768:0:0:0:0:0:0:318084352:90:465:0:0|h[Shellsplitter Greataxe]|h|r", -- [8]
+		"|cffa335ee|Hitem:96182:4993:4652:0:0:0:0:1244667136:90:467:0:0|h[Ultimate Protection of the Emperor]|h|r", -- [9]
+		"|cffa335ee|Hitem:99418:0:5032:4610:0:0:0:0:90:493:0:0|h[Helmet of the Prehistoric Marauder]|h|r", -- [10]
+		"|cffa335ee|Hitem:101855:0:0:0:0:0:-379:1070465115:90:491:0:0|h[Elder Tortoiseshell Helm of the Decimator]|h|r", -- [11]
+		"|cffa335ee|Hitem:90151:0:0:0:0:0:0:0:90:0:0:0|h[Crown of the Golden King]|h|r", -- [12]
+		"|cffa335ee|Hitem:104645:0:0:0:0:0:0:1649116288:90:491:0:0|h[Spaulders of the Fallen Warchief]|h|r", -- [13]
+		"|cffa335ee|Hitem:104645:0:0:0:0:0:0:238525568:90:491:0:0|h[Spaulders of the Fallen Warchief]|h|r", -- [14]
+		"|cffa335ee|Hitem:104494:0:0:0:0:0:0:127601536:90:491:0:0|h[Krugruk's Rigid Shoulderplates]|h|r", -- [15]
+		"|cffa335ee|Hitem:99414:4803:4647:4647:0:0:0:0:90:493:0:0|h[Pauldrons of the Prehistoric Marauder]|h|r", -- [16]
+		"|cffa335ee|Hitem:101858:0:0:0:0:0:-350:2005205060:90:491:0:0|h[Elder Tortoiseshell Pauldrons of the Bladewall]|h|r", -- [17]
+		"|cffa335ee|Hitem:90153:0:0:0:0:0:0:0:90:0:0:0|h[Mantle of the Golden King]|h|r", -- [18]
+		"|cffa335ee|Hitem:104536:4419:4610:4610:4647:0:0:438512384:90:491:0:0|h[Breastplate of Shamanic Mirrors]|h|r", -- [19]
+		"|cffa335ee|Hitem:99411:4419:4647:4647:4647:0:0:0:90:491:0:0|h[Battleplate of the Prehistoric Marauder]|h|r", -- [20]
+		"|cffa335ee|Hitem:101789:0:0:0:0:0:-461:981205083:90:491:0:0|h[Cliffbreaker Breastplate of the Decimator]|h|r", -- [21]
+		"|cffa335ee|Hitem:90149:0:0:0:0:0:0:0:90:0:0:0|h[Chestplate of the Golden King]|h|r", -- [22]
+		"|cffa335ee|Hitem:105456:4415:0:0:0:0:0:62065536:90:493:0:0|h[Bracers of Blind Hatred]|h|r", -- [23]
+		"|cffa335ee|Hitem:104493:0:0:0:0:0:0:147225216:90:491:0:0|h[Arcsmasher Bracers]|h|r", -- [24]
+		"|cffa335ee|Hitem:101861:0:0:0:0:0:-347:559349811:90:491:0:0|h[Elder Tortoiseshell Vambraces of the Savant]|h|r", -- [25]
+		"|cffa335ee|Hitem:90154:0:0:0:0:0:0:0:90:0:0:0|h[Bracers of the Golden King]|h|r", -- [26]
+		"|cffa335ee|Hitem:105511:4432:4610:4647:0:0:0:271217280:90:491:0:0|h[Tar-Coated Gauntlets]|h|r", -- [27]
+		"|cffa335ee|Hitem:99412:4432:4647:4647:0:0:0:0:90:504:0:0|h[Gauntlets of the Prehistoric Marauder]|h|r", -- [28]
+		"|cffa335ee|Hitem:101853:0:0:0:0:0:-366:325124164:90:491:0:0|h[Elder Tortoiseshell Gauntlets of the Mountainbed]|h|r", -- [29]
+		"|cffa335ee|Hitem:90150:0:0:0:0:0:0:0:90:0:0:0|h[Reach of the Golden King]|h|r", -- [30]
+		"|cffa335ee|Hitem:104537:0:4610:4592:4647:0:0:1349315200:90:491:0:0|h[Ashen Wall Girdle]|h|r", -- [31]
+		"|cffa335ee|Hitem:101854:0:0:0:0:0:-349:310902852:90:491:0:0|h[Elder Tortoiseshell Girdle of the Bladewall]|h|r", -- [32]
+		"|cffa335ee|Hitem:90147:0:0:0:0:0:0:0:90:0:0:0|h[Girdle of the Golden King]|h|r", -- [33]
+		"|cffa335ee|Hitem:99413:4823:4647:4647:0:0:0:0:90:493:0:0|h[Legplates of the Prehistoric Marauder]|h|r", -- [34]
+		"|cffa335ee|Hitem:101856:0:0:0:0:0:-483:583270491:90:491:0:0|h[Elder Tortoiseshell Legplates of the Mountainbed]|h|r", -- [35]
+		"|cffa335ee|Hitem:90152:0:0:0:0:0:0:0:90:0:0:0|h[Greaves of the Golden King]|h|r", -- [36]
+		"|cffa335ee|Hitem:105478:0:0:0:0:0:0:1172929792:90:491:0:0|h[Greaves of Sublime Superiority]|h|r", -- [37]
+		"|cffa335ee|Hitem:105414:4429:4615:0:0:0:0:139478528:90:493:0:0|h[Treads of Unchained Hate]|h|r", -- [38]
+		"|cffa335ee|Hitem:104482:4429:4610:0:0:0:0:1042905728:90:493:0:0|h[Greaves of Sublime Superiority]|h|r", -- [39]
+		"|cffa335ee|Hitem:98240:0:0:0:0:0:-365:426704979:90:465:0:0|h[Doubtcrusher Sabatons of the Faultline]|h|r", -- [40]
+		"|cffa335ee|Hitem:101859:0:0:0:0:0:-366:1175978052:90:491:0:0|h[Elder Tortoiseshell Sabatons of the Mountainbed]|h|r", -- [41]
+		"|cffa335ee|Hitem:90148:0:0:0:0:0:0:0:90:0:0:0|h[Greatboots of the Golden King]|h|r", -- [42]
+		"|cffff8000|Hitem:102250:4422:4645:0:0:0:0:1360499456:90:505:0:0|h[Qian-Ying, Fortitude of Niuzao]|h|r", -- [43]
+		"|cffa335ee|Hitem:101852:0:0:0:0:0:-350:235077683:90:491:0:0|h[Elder Tortoiseshell Drape of the Bladewall]|h|r", -- [44]
+		"|cff1eff00|Hitem:63353:0:0:0:0:0:0:0:90:0:0:0|h[Shroud of Cooperation]|h|r", -- [45]
+		"|cffa335ee|Hitem:105622:0:0:0:0:0:0:1715718016:90:491:0:0|h[Blackfuse's Blasting Cord]|h|r", -- [46]
+		"|cffa335ee|Hitem:104570:0:0:0:0:0:0:219866112:90:493:0:0|h[Malkorok's Tainted Dog Tags]|h|r", -- [47]
+		"|cffa335ee|Hitem:105611:0:4647:0:0:0:0:543087360:90:491:0:0|h[Devilfang Band]|h|r", -- [48]
+		"|cffa335ee|Hitem:104593:0:4647:0:0:0:0:1061588096:90:493:0:0|h[Seal of the Forgotten Kings]|h|r", -- [49]
+		"|cffa335ee|Hitem:104538:0:4647:0:0:0:0:1899458176:90:491:0:0|h[Bloodclaw Band]|h|r", -- [50]
+		"|cffa335ee|Hitem:105645:0:0:0:0:0:0:1510154112:90:491:0:0|h[Curse of Hubris]|h|r", -- [51]
+		"|cffa335ee|Hitem:105609:0:0:0:0:0:0:934977664:90:505:0:0|h[Thok's Tail Tip]|h|r", -- [52]
+		"|cffa335ee|Hitem:105438:0:0:0:0:0:0:833036672:90:505:0:0|h[Rook's Unlucky Talisman]|h|r", -- [53]
+		"|cffa335ee|Hitem:104613:0:0:0:0:0:0:610738176:90:505:0:0|h[Thok's Tail Tip]|h|r", -- [54]
+		"|cffa335ee|Hitem:104572:0:0:0:0:0:0:1884832896:90:493:0:0|h[Vial of Living Corruption]|h|r", -- [55]
+		"|cffa335ee|Hitem:104495:0:0:0:0:0:0:1697950464:90:505:0:0|h[Evil Eye of Galakras]|h|r", -- [56]
+		"|cffa335ee|Hitem:104463:0:0:0:0:0:0:768596480:90:491:0:0|h[Fusion-Fire Core]|h|r", -- [57]
+		"|cffa335ee|Hitem:87575:0:0:0:0:0:0:1222441984:90:445:0:0|h[Bubbliest Brightbrew Charm]|h|r", -- [58]
+		"|cffa335ee|Hitem:103982:0:0:0:0:0:0:979739665:90:0:0:0|h[Burden of Eternity]|h|r", -- [59]
+		"|cffffffff|Hitem:87216:0:0:0:0:0:0:1716311936:90:0:0:0|h[Thermal Anvil]|h|r", -- [60]
+		"|cff0070dd|Hitem:40768:0:0:0:0:0:0:413039488:90:0:0:0|h[MOLL-E]|h|r", -- [61]
+		"|cffffffff|Hitem:20815:0:0:0:0:0:0:0:90:0:0:0|h[Jeweler's Kit]|h|r", -- [62]
+		"|cffffffff|Hitem:40772:0:0:0:0:0:0:2086946028:90:0:0:0|h[Gnomish Army Knife]|h|r", -- [63]
+		"|cffffffff|Hitem:104265:0:0:0:0:0:0:576632320:90:0:0:0|h[Great Turtle Meat]|h|r", -- [64]
+		"|cffa335ee|Hitem:105867:0:0:0:0:0:0:222852480:90:491:0:0|h[Essence of the Cursed Conqueror]|h|r", -- [65]
+		"|cffa335ee|Hitem:105867:0:0:0:0:0:0:222852480:90:491:0:0|h[Essence of the Cursed Conqueror]|h|r", -- [66]
+		"|cffa335ee|Hitem:105866:0:0:0:0:0:0:325345792:90:491:0:0|h[Essence of the Cursed Protector]|h|r", -- [67]
+		"|cffa335ee|Hitem:105866:0:0:0:0:0:0:1219128192:90:491:0:0|h[Essence of the Cursed Protector]|h|r", -- [68]
+		"|cffa335ee|Hitem:105866:0:0:0:0:0:0:1310977536:90:491:0:0|h[Essence of the Cursed Protector]|h|r", -- [69]
+		"|cffa335ee|Hitem:105866:0:0:0:0:0:0:788794880:90:491:0:0|h[Essence of the Cursed Protector]|h|r", -- [70]
+		"|cffa335ee|Hitem:99725:0:0:0:0:0:0:886615680:90:491:0:0|h[Helm of the Cursed Protector]|h|r", -- [71]
+		"|cffa335ee|Hitem:99719:0:0:0:0:0:0:1824404480:90:491:0:0|h[Shoulders of the Cursed Protector]|h|r", -- [72]
+		"|cffa335ee|Hitem:99719:0:0:0:0:0:0:1250240128:90:491:0:0|h[Shoulders of the Cursed Protector]|h|r", -- [73]
+		"|cffa335ee|Hitem:99716:0:0:0:0:0:0:1528643840:90:491:0:0|h[Chest of the Cursed Protector]|h|r", -- [74]
+		"|cffa335ee|Hitem:99713:0:0:0:0:0:0:1832709760:90:491:0:0|h[Leggings of the Cursed Protector]|h|r", -- [75]
+		"|cffa335ee|Hitem:104253:0:0:0:0:0:0:222852480:90:0:0:0|h[Kor'kron Juggernaut]|h|r", -- [76]
+		"|cffa335ee|Hitem:37254:0:0:0:0:0:0:-2080011776:90:0:0:0|h[Super Simian Sphere]|h|r", -- [77]
+		"|cff0070dd|Hitem:104304:0:0:0:0:0:0:1824453120:90:0:0:0|h[Blizzard Stone]|h|r", -- [78]
+		"|cff0070dd|Hitem:93030:0:0:0:0:0:0:504251392:90:0:0:0|h[Dusty Clutch of Eggs]|h|r", -- [79]
+		"|cff0070dd|Hitem:93029:0:0:0:0:0:0:1340462336:90:0:0:0|h[Gluth's Bone]|h|r", -- [80]
+		"|cff0070dd|Hitem:86565:0:0:0:0:0:0:151080064:90:0:0:0|h[Battle Horn]|h|r", -- [81]
+		"|cffffffff|Hitem:87806:0:0:0:0:0:0:982733296:90:0:0:0|h[Ancient Mogu Key]|h|r", -- [82]
 	},
 	["LastCharacterImportDate"] = "",
 	["LastCharacterImport"] = "",
@@ -132,6 +241,12 @@ AmrDb = {
 	["IconInfo"] = {
 	},
 	["Professions"] = {
+		["Cooking"] = 576,
+		["Blacksmithing"] = 600,
+		["Archaeology"] = 165,
+		["Fishing"] = 544,
+		["First Aid"] = 450,
+		["Engineering"] = 600,
 	},
 	["Class"] = "WARRIOR",
 	["BankItemsAndCounts"] = {
@@ -184,9 +299,9 @@ AmrDb = {
 		[105511] = 1,
 		[44050] = 1,
 		[33924] = 1,
-		[104535] = 1,
-		[63378] = 1,
 		[63128] = 7,
+		[63378] = 1,
+		[104535] = 1,
 		[22206] = 1,
 		[86572] = 1,
 		[88584] = 1,

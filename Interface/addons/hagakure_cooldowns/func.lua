@@ -65,7 +65,7 @@ function HCoold:GetRaidList() --+ get list of raid members with it's cd's
 end
 
 function HCoold:IsTrackSpell(spellID,name) 
-	if tracking_list[string.format("%d.%s",spellID,name)] then 
+	if tracking_list[string.format("%d.%s",spellID or "",name or "")] then 
 		-- сначала ищем ручками добавленное заклинание
 		local s = self:GetManualSpell(spellID, name)
 		if s then return s end
@@ -152,15 +152,6 @@ function HCoold:GetCDs(inp) --+ get cd's for current class+spec    ---  inp = {n
 		end
 	end
 	
-	-- ну а теперь надо добавить залинания от симбиоза
-	local symb = self:GetSymbiosysSpell(inp)
-	for _, v in next, symb do 
-		local succ = true
-		for _,k in next, check do if self:CompairSpellID(k, v) then succ = false end end
-		if succ then table.insert(out,v) end
-	end
-	wipe(check)
-	
 	return out
 end
 
@@ -230,7 +221,7 @@ do --+ frame renew actions
 		local spLink = GetSpellLink(spell.id)
 		if spLink ~= nil then spName = spLink end
 
-		local out = string.format(L["%s casted %s."],spell.player,spName)
+		local out = string.format(L["%s casted %s."], spell.player, spName)
 		if self.db.profile.ann.s_self then self:Chat(out) end
 		--[[
 		if self:CheckGridIntegration() and self.grid then
@@ -413,7 +404,6 @@ do -- lock/unlock frames
 	end
 	
 	function HCoold:DrawNew()
-		self:SymbiosysManage()
 		self:MakeSpellList() -- making spells for tracking from setup
 		self:MakeSpellGroups() -- making frames for align spells
 		self:CheckPlayersCDs()
@@ -435,15 +425,6 @@ function HCoold:GetManualSpell(id, player)
 				end
 			end
 		end
-	end
-	
-	-- теперь выдадим заклинания от симбиоза
-	local symb = self:GetSymbiosysSpell(player)
-	for _, i in next, symb do
-		local is_id = false
-		if i.trigger then for _, k in next, i.trigger do if k == id then is_id = true end end end
-		if i.spellID == id then is_id = true end
-		if is_id and self.db.profile.trackSpells[self:SymbiosysSpellIndex(i)] then return i end
 	end
 	
 	-- ну а теперь заклинания от автоопределения талантов
@@ -471,191 +452,6 @@ function HCoold:ManualSpellIndex(i)
 	end
 	local index = string.format("%s.%s.%d.%s.%s.%d.%.1f.%s",spellID,i.type,i.quality,specs,i.player,i.CD,i.cast_time or 0,i.succ)
 	return index
-end
-
-do -- actions with symbiosys spell
-	function HCoold:SymbiosysApplied(druid_name, player_name) -- применение симбиоза
-		local druids_arr = self.db.profile.druids_arr
-
-		-- если на игроке висел симбиоз, то его надо удалить
-		for i, j in next, druids_arr do if j == player_name then druids_arr[i] = nil end end
-
-		-- теперь надо данному друиду забить имя этого игрока
-		druids_arr[druid_name] = player_name
-		
-		-- ну а теперь обновить фреймы
-		self:CheckPlayersCDs()
-	end
-
-	function HCoold:SymbiosysRemoved(druid_name) -- пропал симбиоз
-		local druids_arr = HCoold.db.profile.druids_arr
-		if druids_arr[druid_name] then 
-			druids_arr[druid_name] = nil 
-			self:CheckPlayersCDs()
-		end
-	end
-	
-	function HCoold:CheckSymbiosys(inp) -- проверка запускаемая из анализа лога для симбиоза
-			--[[
-			... :
-				2 - timestamp
-				3 - event
-				6 - sourceName
-				10 - destName
-					SPELL:
-						13 - spellID
-						14 - spellName
-						15 - spellSchool
-					_AURA_APPLIED
-					_AURA_REMOVED
-						16 - auraType  // BUFF DEBUFF
-					_HEAL
-					_CAST_START
-					_CAST_SUCCESS
-					_MISS
-					_RESURRECT
-					UNIT_DIED
-				110484 paladin
-		]]
-		
-		if not HCoold.symbiosys_spells_id[inp[13]] then return end
-		if inp[3] == "SPELL_AURA_APPLIED" and inp[6] ~= inp[10] then self:SymbiosysApplied(inp[6], inp[10]) end
-		if inp[3] == "SPELL_AURA_REMOVED" then self:SymbiosysRemoved(inp[6]) end
-	end
-
-	function HCoold:SymbiosysSpellIndex(i) -- выдать по заклинанию текстовое ид
-		local tt = ""
-		if i.symb == "raid" then tt = "syb.raid." .. tostring(i.spellID) end -- raid
-		if i.symb == "druid" then tt = "syb.druid." .. tostring(i.spellID) end -- druid
-		for _,j in next, i.specs do tt = string.format("%s.%d",tt,j) end
-		return tt
-	end
-
-	function HCoold:SymbiosysManage() -- удаляет симбиоз при пропадании/появлении рейдеров из рейда
-		local druids_arr = HCoold.db.profile.druids_arr
-		local names = {}
-		for i = 1, self:NumRaidMembers() do
-			local name = GetRaidRosterInfo(i)
-			names[name] = true
-		end
-		
-		for i, j in next, druids_arr do if not (names[i] and names[j]) then druids_arr[i] = nil end end
-	end
-
-	function HCoold:SymbiosysTrakingList() -- открывает окошко кто на кого повешал симбиоз
-		local AceGUI = LibStub("AceGUI-3.0")
-		local LSM = LibStub("LibSharedMedia-3.0")
-		local druids_arr = HCoold.db.profile.druids_arr
-		
-		local f = AceGUI:Create("Frame")
-		local s = AceGUI:Create("ScrollFrame")
-		local main_label = AceGUI:Create("InteractiveLabel")
-		do -- frame creation
-			f:SetLayout("Fill")
-			f.state = true
-			f:SetCallback("OnClose",function(widget) 
-				AceGUI:Release(widget) 
-			end)
-			f:SetTitle(L["Tracking symbiosys"])
-
-			s:SetLayout("List") -- probably?
-			f:AddChild(s)
-			f:SetPoint("RIGHT")
-			f:SetWidth(self.db.profile.text.big_w * 2 + 50)
-			
-			s:AddChild(main_label)
-			main_label:SetFont(LSM:Fetch("font",self.db.profile.font.name),self.db.profile.font.big_size)
-			main_label:SetRelativeWidth(0.95)
-		end
-		
-		local check = false
-		local list = {} -- массив по имени друида выдающий объект label, содержащий имя человека на которого кастанули спелл
-		for i = 1, self:NumRaidMembers() do -- добавляем список друидов и симбиозов на них
-			if not check then check = true end
-			local inp = self:GetSpec(i)
-			if inp.class == "DRUID" then
-				local sg0 = AceGUI:Create("SimpleGroup")
-				sg0:SetLayout("Flow")
-				sg0:SetFullWidth(true)
-				s:AddChild(sg0)
-				
-				local label = AceGUI:Create("InteractiveLabel") -- имя друида
-				sg0:AddChild(label)
-				label:SetText(string.format(L["DRUIDcolor"],inp.name))
-				label:SetWidth(self.db.profile.text.big_w)
-				
-				local label2 = AceGUI:Create("InteractiveLabel") -- имя того, на кого кастанули симбиоз
-				list[inp.name] = label2
-				sg0:AddChild(label2)
-				label2:SetWidth(self.db.profile.text.big_w)
-				--[[ старая часть
-				if druids_arr[inp.name] then 
-					pl = self:GetSpec(druids_arr[inp.name])
-					label2:SetText(string.format(L[pl.class .. "color"],pl.name))
-				else label2:SetText(L["no symbiosys for this druid"]) end
-				--]]
-			end
-		end
-		
-		local function check_list() -- функция для забивания симбиозов в список
-			if not check then return end
-			HCoold:CheckSymbiosysBuffs()
-			for druid, label in next, list do -- добавляем список друидов и симбиозов на них
-				if druids_arr[druid] then 
-					pl = self:GetSpec(druids_arr[druid])
-					label:SetText(string.format(L[pl.class .. "color"],pl.name))
-				else label:SetText(L["no symbiosys for this druid"]) end
-			end
-		end
-		
-		check_list()
-		
-		do -- добавляем кнопку для обновления
-			local butt = AceGUI:Create("Button")
-			s:AddChild(butt)
-			butt:SetText(L["renew symbiosys"])
-			butt:SetCallback("OnClick", check_list)
-		end
-		
-		if check then main_label:SetText(L["druids list:"])
-		else main_label:SetText(L["currently no players in raid"]) end
-	end
-
-	function HCoold:CheckSymbiosysBuffs()
-		local list = {}
-		for i = 1, self:NumRaidMembers() do
-			-- ищем бафф симбиоза
-			local doing, k, name, search = true, 1, select(1, GetRaidRosterInfo(i)), false
-			while doing do
-				local _, _, _, _, _, _, expirationTime, unitCaster, _, _, spellId = UnitBuff(name, k) -- name, rank, icon, count, debuffType, duration, expirationTime, unitCaster, isStealable, shouldConsolidate, spellId
-				if spellId then 
-					if unitCaster == nil then break end
-					local caster = UnitName(unitCaster)
-					if not (self:IsInRaid(caster) and self:IsInRaid(name)) then return end
-					
-					if self.symbiosys_spells_id[spellId] then
-						-- итак, мы нашли бафф симбиоз и мы знаем кто его кастанул
-						local diff = (expirationTime-GetTime()) / 60 -- время до окончания симбиоза
-						
-						if caster ~= name then --  and diff > 15
-							--self:Chat("detected symbiosys", caster, name, diff)
-							self:SymbiosysApplied(caster, name)
-							search = true
-							list[caster] = name
-						end
-					end
-					
-					--self:Chat(expirationTime, spellId, UnitName(unitCaster))
-				else doing = false end
-				k = k + 1
-				
-				if k == 300 then doing = false end
-				if search then doing = false end
-			end
-			
-			
-		end
-	end
 end
 
 do -- save/restor cds between sessions
@@ -728,12 +524,6 @@ do -- minimap
 						wipe(info)
 						info.disabled = 1
 						info.notCheckable = 1
-						UIDropDownMenu_AddButton(info, level)
-						
-						wipe(info)
-						info.text = L["Show druids' symbiosys"]
-						info.notCheckable = 1
-						info.func = function () HCoold:SymbiosysTrakingList() end
 						UIDropDownMenu_AddButton(info, level)
 						
 						wipe(info)

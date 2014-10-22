@@ -129,7 +129,9 @@ L["TANK_HEALER"] = "只對坦克和治療"
 L["TANK_HEALER_desc"] = "有些技能只對坦克和治療重要。如想看到這些技能警報而無視你的職業，禁用此選項。"
 L["test"] = "測試"
 L["thanks"] = "感謝他們在各個領域的開發與幫助"
-L["tooltipHint"] = "|cffeda55f點擊|r圖示重置所有運作中的模組。|cffeda55fAlt-點擊|r可以禁用所有首領模組。"
+L["tooltipHint"] = [=[|cffeda55f點擊|r圖示重置所有運作中的模組。
+|cffeda55fAlt-點擊|r可以禁用所有首領模組。
+|cffeda55fRight-Click|r to access options.]=] -- Needs review
 L["upToDate"] = "已更新："
 L["warmup"] = "預備"
 L["warmup_desc"] = "首領戰鬥之前的預備時間。"

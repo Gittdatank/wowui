@@ -21,38 +21,49 @@ function AskMrRobot.ItemLinkText:SetFormat(formatText)
 	self.formatText = formatText
 end
 
-function AskMrRobot.ItemLinkText:SetItemId(itemId, upgradeId, suffixId)
-	AskMrRobot.ItemTooltipFrame.SetItemLink(self, link)
-	self.itemName = nil
-	if itemId > 0 then
-		local linkTemplate = "item:%d:0:0:0:0:0:%d:0:%d:0:%d"
-		local itemName, itemLink = GetItemInfo(linkTemplate:format(itemId, suffixId, UnitLevel("player"), upgradeId))
-		self:SetItemLink(itemLink)
-		if itemLink then
-			self.itemName = itemName
-			if self.formatText then
-				self.itemText:SetFormattedText(self.formatText, itemLink:gsub("%[", ""):gsub("%]", ""))
-			else
-				self.itemText:SetText(itemLink:gsub("%[", ""):gsub("%]", ""))
-			end
-		else
-			self.itemText:SetFormattedText("unknown (%d)", itemId)
-			self.itemText:SetTextColor(1,1,1)
-			AskMrRobot.RegisterItemInfoCallback(itemId, function(name, itemLink2)
-				if self.formatText then
-					self.itemText:SetFormattedText(self.formatText, itemLink2:gsub("%[", ""):gsub("%]", ""))
-				else
-					self.itemText:SetText(itemLink2:gsub("%[", ""):gsub("%]", ""))
-				end
-				self:SetItemLink(itemLink2)
-				self.itemName = name
-			end)
-		end
-	else
-		self.itemText:SetText("empty")
+function AskMrRobot.ItemLinkText:SetItem(itemObj)
+    -- blank/nil
+    if itemObj == nil or itemObj.id == nil or itemObj.id == 0 then
+        self.itemText:SetText("empty")
 		self.itemText:SetTextColor(0.5,0.5,0.5)
 		self:SetItemLink(nil)
-	end
+        return
+    end
+    
+    local itemName, itemLink = GetItemInfo(AskMrRobot.createItemLink(itemObj))
+    self:SetItemLink(itemLink)
+    if itemLink then
+        self.itemName = itemName
+        if self.formatText then
+            self.itemText:SetFormattedText(self.formatText, itemLink:gsub("%[", ""):gsub("%]", ""))
+        else
+            self.itemText:SetText(itemLink:gsub("%[", ""):gsub("%]", ""))
+        end
+    else
+        self.itemText:SetFormattedText("unknown (%d)", itemObj.id)
+        self.itemText:SetTextColor(1,1,1)
+        AskMrRobot.RegisterItemInfoCallback(itemObj.id, function(name, itemLink2)
+            if self.formatText then
+                self.itemText:SetFormattedText(self.formatText, itemLink2:gsub("%[", ""):gsub("%]", ""))
+            else
+                self.itemText:SetText(itemLink2:gsub("%[", ""):gsub("%]", ""))
+            end
+            self:SetItemLink(itemLink2)
+            self.itemName = name
+        end)
+    end
+end 
+
+function AskMrRobot.ItemLinkText:SetItemId(itemId)
+
+    self:SetItem({ 
+        id = itemId,
+        enchantId = 0,
+        gemIds = {0,0,0,0},
+        suffixId = 0,
+        upgradeId = 0
+    })
+    
 end
 
 function AskMrRobot.ItemLinkText:SetFontSize(fontSize)

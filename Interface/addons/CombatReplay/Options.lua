@@ -9,10 +9,10 @@ crframeright:Hide()
 crframebottom:Hide()
 crframeoptions:Show()
 
-if crOptTrackBoss then crframeoptions_CheckButton1:SetChecked() else crframeoptions_CheckButton1:SetChecked(false) end
-if crPlayerIconPositionShow then crframeoptions_CheckButton2:SetChecked() else crframeoptions_CheckButton2:SetChecked(false) end
-if crOptTrackLfr then crframeoptions_CheckButton3:SetChecked() else crframeoptions_CheckButton3:SetChecked(false) end
-if crShowPlayersHpDynamic then crframeoptions_CheckButton4:SetChecked() else crframeoptions_CheckButton4:SetChecked(false) end
+if crOptTrackBoss then crframeoptions_CheckButton1:SetChecked(true) else crframeoptions_CheckButton1:SetChecked(false) end
+if crPlayerIconPositionShow then crframeoptions_CheckButton2:SetChecked(true) else crframeoptions_CheckButton2:SetChecked(false) end
+if crOptTrackLfr then crframeoptions_CheckButton3:SetChecked(true) else crframeoptions_CheckButton3:SetChecked(false) end
+if crShowPlayersHpDynamic then crframeoptions_CheckButton4:SetChecked(true) else crframeoptions_CheckButton4:SetChecked(false) end
 
 
 --слайдер для размеров квадратов-игроков

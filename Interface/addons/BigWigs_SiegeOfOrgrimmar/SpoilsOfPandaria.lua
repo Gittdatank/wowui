@@ -20,12 +20,11 @@ local stoutCrates = 6
 local prevEnrage = 0
 
 local function checkPlayerSide()
-	BigWigsLoader.SetMapToCurrentZone()
-	local cx, cy = GetPlayerMapPosition("player") -- XXX compat
+	local cy, cx = UnitPosition("player")
 	if cy == 0 then return 0 end
 
 	-- simplified cross product: mantid > 0 > mogu
-	return 0.04362700914 - (cx * 0.11017924547) + (cy * 0.04940152168)
+	return -27.2 * (5134.9 + cx) + 17.5 * (-1618.5 + cy)
 end
 
 --------------------------------------------------------------------------------
@@ -115,7 +114,7 @@ function mod:ENCOUNTER_END(_, id, name, diff, size, win)
 	-- Sometimes there's a long delay between the last IEEU and IsEncounterInProgress being false so use this instead.
 	if id == 1594 then
 		if win == 1 then
-			self:Win(true)
+			self:Win(nil, true)
 		else
 			self:Wipe()
 		end
@@ -166,7 +165,7 @@ function mod:UNIT_POWER_FREQUENT(unit, powerType)
 			self:Message("crates", "Important", "Long", L.full_power, L.crates_icon)
 			massiveCrates = 2
 			stoutCrates = 6
-		else --if power > 25 then
+		else
 			local remaining = 50 - power
 			local small = remaining
 			small = max(0, small - (massiveCrates * 14))
@@ -174,7 +173,7 @@ function mod:UNIT_POWER_FREQUENT(unit, powerType)
 			small = max(0, small - (medium * 3))
 			self:Message("crates", "Attention", nil, L.power_left:format(remaining, massiveCrates, medium, small), L.crates_icon)
 		end
-	elseif self:Heroic() then
+	elseif self:Mythic() then
 		self:Message(146815, "Important", "Alert", CL.incoming:format(self:SpellName(-8469))) -- Unstable Spark
 		if self:Damager() then
 			self:Flash(146815)
@@ -195,11 +194,17 @@ do
 	end
 end
 
-function mod:BreathOfFire(args) -- XXX no position check, could use :GetUnitIdByGUID, strip "target" and do a range check?
-	local debuffed = UnitDebuff("player", self:SpellName(146217)) -- Keg Toss
-	self:Message(args.spellId, "Attention", debuffed and "Long")
-	if debuffed then
-		self:Flash(146217) -- flash again
+function mod:BreathOfFire(args)
+	-- can be on both sides so check range on someone targeting him
+	local unit = self:GetUnitIdByGUID(args.sourceGUID)
+	local player = unit and unit:match("^(.-)target$") -- should always be a player or nil
+
+	if not player or self:Range(player) < 30 then
+		self:Message(args.spellId, "Attention")
+		if UnitDebuff("player", self:SpellName(146217)) then -- Keg Toss
+			self:PlaySound(args.spellId, "Long")
+			self:Flash(146217) -- flash again
+		end
 	end
 end
 
@@ -353,7 +358,7 @@ function mod:UPDATE_WORLD_STATES()
 	-- Repeatedly running through LFR to test various methods was also a delightful experience.
 	-- Pretty much, I hate it. The only positive from this is that we don't need to schedule the messages.
 	-- If this ever breaks in a future patch, $#!+.
-	local _, _, _, enrage = GetWorldStateUIInfo(5)
+	local _, _, _, enrage = GetWorldStateUIInfo(6)
 	if enrage then
 		local remaining = enrage:match("%d+")
 		if remaining then

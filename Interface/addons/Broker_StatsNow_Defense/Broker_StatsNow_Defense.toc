@@ -1,6 +1,6 @@
 ## Interface: 60000
 ## Title: Broker_StatsNow - Defense
-## Version: 2014.08.21
+## Version: 2014.10.21
 ## Author: WNxSajuukCor
 ## Notes: LDB plugin to display your defense stats where you want.
 libs\LibStub.lua

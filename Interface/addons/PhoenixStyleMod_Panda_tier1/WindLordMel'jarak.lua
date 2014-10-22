@@ -258,7 +258,7 @@ if arg2=="SPELL_AURA_BROKEN_SPELL" and UnitName("boss1") and psmeljarcontol1 and
         end
       end
       
-      if psraidoptionson[2][2][4][4]==1 and pswasonbossp24==1 and psmeljaddkilled==nil and GetTime()>psmeljarcontol3[i]+2 and psmaxrepmelj<3 then --and select(3,GetInstanceInfo())~=7
+      if psraidoptionson[2][2][4][4]==1 and pswasonbossp24==1 and psmeljaddkilled==nil and GetTime()>psmeljarcontol3[i]+2 and psmaxrepmelj<3 then --and select(3,GetInstanceInfo())~=17
         pszapuskanonsa(psraidchats3[psraidoptionschat[2][2][4][4]], psremovecolor(text))
         psmaxrepmelj=psmaxrepmelj+1
         psmaxrepmelj2=GetTime()

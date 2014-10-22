@@ -84,13 +84,18 @@ end
 
 function crunitraidorparty(guid,name)
     if UnitInRaid(name) then
-      local B = tonumber(guid:sub(5,5), 16)
-      local maskedB = B % 8
-      if maskedB and maskedB==0 then
-        return true
-      else
-        return false
-      end
+      --local B = tonumber(guid:sub(5,5), 16)
+      --local maskedB = B % 8
+      --if maskedB and maskedB==0 then
+      --  return true
+      --else
+      --  return false
+      --end
+		if (string.find(guid,"Player")) then
+			return true
+		else
+			return false
+		end
     else
       return false
     end

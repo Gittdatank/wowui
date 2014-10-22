@@ -869,6 +869,12 @@ GTFO.SpellID["125405"] = {
 	trivialPercent = 0;
 };
 
+GTFO.SpellID["125428"] = {
+	--desc = "Burning Oil (Warbringer Qobi)";
+	sound = 1;
+	trivialPercent = 0;
+};
+
 -- **********************
 -- * Greenstone Village *
 -- **********************

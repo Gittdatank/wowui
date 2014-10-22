@@ -1,4 +1,5 @@
 TidyPlates: disabled
 TidyPlatesHub: disabled
 TidyPlatesWidgets: disabled
-ACP: disabled
+Bagnon: enabled
+Bagnon_Config: enabled

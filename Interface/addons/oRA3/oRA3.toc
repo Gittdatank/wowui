@@ -2,7 +2,7 @@
 ## Title: oRA3
 ## Notes: Raid and Party Assist
 ## Author: Funkydude, Nebula169
-## X-Curse-Packaged-Version: r775-release
+## X-Curse-Packaged-Version: r807-release
 ## X-Curse-Project-Name: oRA3
 ## X-Curse-Project-ID: ora3
 ## X-Curse-Repository-ID: wow/ora3/mainline
@@ -12,10 +12,9 @@
 ## SavedVariables: oRA3DB
 
 ## OptionalDeps: Ace3, LibCandyBar-3.0, LibSharedMedia-3.0, LibDDI-1.0, LibGroupInSpecT-1.0, LibDualSpec-1.0
+## X-Embeds: Ace3, LibCandyBar-3.0, LibSharedMedia-3.0, LibDDI-1.0, LibGroupInSpecT-1.0, LibDualSpec-1.0
 
-#@no-lib-strip@
 libs.xml
-#@end-no-lib-strip@
 
 locales\enUS.lua
 locales\itIT.lua

@@ -617,6 +617,8 @@ function AskMrRobot.ShoppingListTab:CalculateItems()
 	-- add the items from the players bags
 	AskMrRobot.ScanBags(bagItemsWithCounts)
 
+	-- note: void storage can't hold stackable items, so don't worry about them
+
 	--substract any inventory we already have in bags/bank
 	for itemId, count in pairs(bagItemsWithCounts) do
 		for _, gem in pairs(gemList) do

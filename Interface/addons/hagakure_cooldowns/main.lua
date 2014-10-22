@@ -4,7 +4,7 @@ HCoold.name = addon_name
 do -- turn on debug mod
 	HCoold.debug = true
 	local name = UnitName("Player")
-	local plist = { "Лиззэ", "Калдох" } -- "Лиззэ", "Калдох", "Эллиандрессе", 
+	local plist = { "Лиззэ", "Калдох", "Пертту", "Fifali"} -- "Лиззэ", "Калдох", "Эллиандрессе", 
 	if HCoold.debug then
 		HCoold.debug = false
 		for _, i in next, plist do if i == name then HCoold.debug = true end end
@@ -244,7 +244,6 @@ HCoold.config = {
 	addbuttonwidth = 100,
 	deletebuttonwidth = 100,
 	checkboxwidth = 150,
-	timer_combat_symbiosys_delay = 5,
 	max_CD_for_reset = 300,
 	boss_check_timer = 10,
 	grid_integration_delay_timer = 0.1,
@@ -404,7 +403,6 @@ function HCoold:CombatLog(...)
 			self:StartCD(inp[6],spell)
 			return true
 		end
-		self:CheckSymbiosys(inp)
 	end
 end
 
@@ -428,8 +426,6 @@ do -- секция с вход/выход из боя
 			end
 		else
 			self.combat_spec = {}
-			-- запускаем таймер в 5 секунд для проверки симбиоза
-			self:ScheduleTimer(function() HCoold.db.profile.druids_arr = {}; HCoold:CheckSymbiosysBuffs() end, self.config.timer_combat_symbiosys_delay)
 		end
 		combat = true
 		
@@ -578,7 +574,7 @@ function HCoold:TimerActions()
 			table.remove(self.trackCDs,k)
 		end 
 		if state == 2 then diff = self.trackCDs[k].state_casting_end
-		elseif state == 3 then diff = self.trackCDs[k].state_cd_end end
+		elseif state == 3 or state == 4 then diff = self.trackCDs[k].state_cd_end end
 		if diff ~= -1 then 
 			diff = self:GetDiff(diff) 
 			min_cd = math.min(min_cd,diff)

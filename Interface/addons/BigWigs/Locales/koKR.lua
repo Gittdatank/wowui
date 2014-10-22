@@ -129,7 +129,9 @@ L["TANK_HEALER"] = "방어 & 치유 전담만"
 L["TANK_HEALER_desc"] = "일부 능력은 방어 전담과 치유 전담에게만 중요합니다. 당신의 역할에 대한 능력 경고를 표시하지 않으려면 이 옵션을 해제합니다."
 L["test"] = "테스트"
 L["thanks"] = "다양한 분야에서 개발을 위해 다음과 같은 사람들의 도움이 있었습니다."
-L["tooltipHint"] = "|cffeda55f클릭|r : 모두 초기화 |cffeda55f알트-클릭|r 비활성화 |cffeda55f컨트롤-알트-클릭|r : BigWigs 비활성화."
+L["tooltipHint"] = [=[|cffeda55f클릭|r : 모두 초기화
+|cffeda55f알트-클릭|r 비활성화
+|cffeda55f컨트롤-알트-클릭|r : BigWigs 비활성화.]=]
 L["upToDate"] = "최신 버전:"
 L["warmup"] = "준비"
 L["warmup_desc"] = "보스와의 전투가 시작될 때까지의 시간"

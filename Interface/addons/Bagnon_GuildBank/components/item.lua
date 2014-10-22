@@ -90,7 +90,7 @@ end
 
 function ItemSlot:UpdateTooltip()
 	if self:IsCached() then
-		local dummySlot = self:GetDummyItemSlot()
+		local dummySlot = self:GetDummySlot()
 		dummySlot:SetParent(self)
 		dummySlot:SetAllPoints(self)
 		dummySlot:Show()

@@ -128,7 +128,9 @@ L["TANK_HEALER"] = "Sólo Tanques y Sanadores"
 L["TANK_HEALER_desc"] = "Algunas habilidades son importantes solo para tanques y sanadores. Si quieres ver advertencias para este tipo de habilidades independientemente de tu rol, desactiva esta opción."
 L["test"] = "Probar"
 L["thanks"] = "Gracias a las siguientes personas por su ayuda en varias partes del desarrollo"
-L["tooltipHint"] = "|cffeda55fClic|r para reiniciar todos los módulos. |cffeda55fAlt-Clic|r para desactivarlos. |cffeda55fRight-Clic|r para acceder a las opciones."
+L["tooltipHint"] = [=[|cffeda55fClic|r para reiniciar todos los módulos.
+|cffeda55fAlt-Clic|r para desactivarlos.
+|cffeda55fRight-Clic|r para acceder a las opciones.]=]
 L["upToDate"] = "Al día:"
 L["warmup"] = "Calentamiento"
 L["warmup_desc"] = "Tiempo hasta que el combate con el jefe comience."

@@ -125,7 +125,7 @@ if pspanogmalrokcone2 and curtime>pspanogmalrokcone2 then
     end
 
     --репорт в чат и в фрейм
-    if psraidoptionson[2][6][9][2]==1 and pswasonbossp69==1 then -- ыытест select(3,GetInstanceInfo())~=7 добавить в репорт для лфр
+    if psraidoptionson[2][6][9][2]==1 and pswasonbossp69==1 then -- ыытест select(3,GetInstanceInfo())~=17 добавить в репорт для лфр
       pszapuskanonsa(psraidchats3[psraidoptionschat[2][6][9][2]], "{rt8} |s4id142849|id ("..#pspanogmalrokcone1.."): "..psremovecolor(text))
     end
   end
@@ -150,7 +150,7 @@ end
 if psrezetnotcombp3 and curtime>psrezetnotcombp3 then
 	local a=GetSpellInfo(20711)
 	local b=UnitBuff("player", a)
-	if UnitAffectingCombat("player")==nil and UnitIsDeadOrGhost("player")==nil and b==nil then --and UnitName("boss1")
+	if UnitAffectingCombat("player")==false and UnitIsDeadOrGhost("player")==false and b==nil then --and UnitName("boss1")
 		psiccwipereport_p3(nil,"try")
 		psrezetnotcombp3=nil
 	end
@@ -494,7 +494,7 @@ end
 
 
 if event=="PLAYER_REGEN_ENABLED" then
-	if UnitAffectingCombat("player")==nil and UnitIsDeadOrGhost("player")==nil then --and UnitName("boss1")==nil
+	if UnitAffectingCombat("player")==false and UnitIsDeadOrGhost("player")==false then --and UnitName("boss1")==nil
     --if pswasonbossp42 then
     --  psrezetnotcombp3=GetTime()+3
     --else

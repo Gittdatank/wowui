@@ -1,4 +1,4 @@
-local _, AskMrRobot = ...
+﻿local _, AskMrRobot = ...
 AskMrRobot.L = {};
 local L = AskMrRobot.L;
 
@@ -451,7 +451,7 @@ L.AMR_ENCHANTTAB_NOTE = "Hit and expertise have been removed from gear, gems and
 L.AMR_EXPORTTAB_EXPORT_TITLE = "Export your character to AskMrRobot.com"
 L.AMR_EXPORTTAB_COPY_PASTE_EXPORT_1 = "1. Open your bank"
 L.AMR_EXPORTTAB_COPY_PASTE_EXPORT_2 = "2. Copy the text below by pressing Ctrl+C (or Cmd+C on a Mac)"
-L.AMR_EXPORTTAB_COPY_PASTE_EXPORT_3 = "3. Go to |c00ffd100AskMrRobot.com|r and click the green '|c0000ff00Import from Armory|r' button found just above your character name.  Paste the text into the window that pops up."
+L.AMR_EXPORTTAB_COPY_PASTE_EXPORT_3 = "3. Go to |c00ffd100AskMrRobot.com|r and click the green '|c0000ff00Import from Addon|r' button found just above your character name.  Paste the text into the window that pops up."
 L.AMR_EXPORTTAB_COPY_PASTE_EXPORT_NOTE = "NOTE: If you change something while this window is open, press the Update button below to generate a new export string."
 
 --ui/GemTab.lua
@@ -481,7 +481,7 @@ L.AMR_HELPTAB_Q2 = "|c00999999Q:|r Do I have to get a new text-string every time
 L.AMR_HELPTAB_A2 = "|c0066dd66A:|r Yes. Go to the |c00ffd100website|r and click the green '|c0000ff00Update from Armory|r' button found just above your character name, to make sure you have updated gear. Optimize your gear and then click the blue '|c0018C0F7Export to Addon|r' button found to the right of your gear, in the purple '|c00BF28D6Now What?|r section.  Return to this |c00ffd100addon|r, go to the '|c00ffd100Load a Gear Set|r' tab and paste the text in the box."
 L.AMR_HELPTAB_Q3 = "|c00999999Q:|r Can I send my shopping list to an alt?"
 L.AMR_HELPTAB_A3 = '|c0066dd66A:|r Yes, go to the shopping list tab and select the "mail" option in the drop down. You can mail the list to your alt.'
-L.AMR_HELPTAB_Q4 = "|c00999999Q:|r I am in the middle of a raid and just won a piece of loot. Can I optimize really quick"
+L.AMR_HELPTAB_Q4 = "|c00999999Q:|r I am in the middle of a raid and just won a piece of loot. Can I optimize really quickly?"
 L.AMR_HELPTAB_A4 = "|c0066dd66A:|r Yes! You'll want to read the tutorial on that here: \r|c003333ffhttp://blog.askmrrobot.com/addon#raid"
 L.AMR_HELPTAB_Q5 = "|c00999999Q:|r Where is auto gemming?"
 L.AMR_HELPTAB_A5 = "|c0066dd66A:|r We have temporarily removed it.  We plan to bring it back for WoD"

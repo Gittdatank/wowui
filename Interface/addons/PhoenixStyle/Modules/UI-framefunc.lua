@@ -730,11 +730,11 @@ PSFmainspellidframe_edbox2:SetScript("OnEnterPressed", function(self) psfindspel
 PSFmainspellidframe_edbox3:SetScript("OnEnterPressed", function(self) psspellcheck2() end )
 PSFmainspellidframe_edbox4:SetScript("OnEnterPressed", function(self) psspellcheck2() end )
 
-PSFmainspellidframe_edbox1:SetScript("OnTabPressed", function(self) PSFmainspellidframe_edbox1:ClearFocus() PSFmainspellidframe_edbox2:SetFocus() end )
-PSFmainspellidframe_edbox2:SetScript("OnTabPressed", function(self) PSFmainspellidframe_edbox2:ClearFocus() PSFmainspellidframe_edbox1:SetFocus() end )
+PSFmainspellidframe_edbox1:SetScript("OnTabPressed", function(self) PSFmainspellidframe_edbox1:ClearFocus() PSFmainspellidframe_edbox2:SetFocus(true) end )
+PSFmainspellidframe_edbox2:SetScript("OnTabPressed", function(self) PSFmainspellidframe_edbox2:ClearFocus() PSFmainspellidframe_edbox1:SetFocus(true) end )
 
-PSFmainspellidframe_edbox3:SetScript("OnTabPressed", function(self) PSFmainspellidframe_edbox3:ClearFocus() PSFmainspellidframe_edbox4:SetFocus() end )
-PSFmainspellidframe_edbox4:SetScript("OnTabPressed", function(self) PSFmainspellidframe_edbox4:ClearFocus() PSFmainspellidframe_edbox3:SetFocus() end )
+PSFmainspellidframe_edbox3:SetScript("OnTabPressed", function(self) PSFmainspellidframe_edbox3:ClearFocus() PSFmainspellidframe_edbox4:SetFocus(true) end )
+PSFmainspellidframe_edbox4:SetScript("OnTabPressed", function(self) PSFmainspellidframe_edbox4:ClearFocus() PSFmainspellidframe_edbox3:SetFocus(true) end )
 
 PSFmainspellidframe_edbox3:SetText(130000)
 PSFmainspellidframe_edbox4:SetText(170000)
@@ -1217,7 +1217,7 @@ if UnitInRaid("player") and sa_delayforwaiting==nil then
 	sa_delayforwaiting=GetTime()+5
 	out ("|cff99ffffPhoenixStyle|r - "..psmain_sawait.."...")
 
-  if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+  if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
     SendAddonMessage("SAver", "1", "instance_chat")
 	else
 	  SendAddonMessage("SAver", "1", "RAID")
@@ -1305,7 +1305,7 @@ c:SetWidth("25")
 c:SetHeight("25")
 c:SetPoint("TOPLEFT", 20, -135)
 c:SetScript("OnClick", function(self) if pssaaddon_12[2]==1 then pssaaddon_12[2]=0 checkaddbut_sa1:Hide() textbutadd_sa1:Hide() else pssaaddon_12[2]=1 checkaddbut_sa1:Show() textbutadd_sa1:Show() end ps_sa_checkonoff() end )
-if pssaaddon_12[2]==1 then c:SetChecked() else c:SetChecked(false)
+if pssaaddon_12[2]==1 then c:SetChecked(true) else c:SetChecked(false)
 end
 
 ps_saactivetxt1=PSF_saframe:CreateFontString()
@@ -1332,7 +1332,7 @@ checkaddbut_sa1:SetWidth("25")
 checkaddbut_sa1:SetHeight("25")
 checkaddbut_sa1:SetPoint("TOPLEFT", 20, -155)
 checkaddbut_sa1:SetScript("OnClick", function(self) if pssaaddon_12[3]==1 then pssaaddon_12[3]=0 else pssaaddon_12[3]=1 end end )
-if pssaaddon_12[3]==1 then checkaddbut_sa1:SetChecked() else checkaddbut_sa1:SetChecked(false)
+if pssaaddon_12[3]==1 then checkaddbut_sa1:SetChecked(true) else checkaddbut_sa1:SetChecked(false)
 end
 
 textbutadd_sa1 = PSF_saframe:CreateFontString()
@@ -1511,7 +1511,7 @@ local maxk=10 --макс в 1 строчке
 
 					ps_sa_tableofnames2[k]:Show()
 					if ps_saoptions[ps_sa_menuchooseexp1][ps_sa_menuchoose1][j][q]==1 then
-						ps_sa_tableofnames2[k]:SetChecked()
+						ps_sa_tableofnames2[k]:SetChecked(true)
 					else
 						ps_sa_tableofnames2[k]:SetChecked(false)
 					end
@@ -1532,7 +1532,7 @@ end
 
 function ps_sa_sendinfo (name, txt, blocksec, important, chat)
 local _, instanceType, difficulty, _, maxPlayers, playerDifficulty, isDynamicInstance = GetInstanceInfo()
-if select(3,GetInstanceInfo())==7 then
+if select(3,GetInstanceInfo())==17 then
 else
 --только не для ЛФР
 
@@ -1576,7 +1576,7 @@ end
 function ps_sa_checktargets(time,guid,rechecktime,texttosend,blocksec,important)
 
 local _, instanceType, difficulty, _, maxPlayers, playerDifficulty, isDynamicInstance = GetInstanceInfo()
-if select(3,GetInstanceInfo())==7 then
+if select(3,GetInstanceInfo())==17 then
 else
 --только не для ЛФР
 
@@ -1597,7 +1597,7 @@ pssavedinforeset(1)
 if IsAddOnLoaded("RaidSlackCheck") then
 rscrezetpot()
 end
-if UnitAffectingCombat("player")==nil and UnitIsDeadOrGhost("player")==nil then
+if UnitAffectingCombat("player")==false and UnitIsDeadOrGhost("player")==false then
   out ("|cff99ffffPhoenixStyle|r - OK!")
 end
 end
@@ -1854,7 +1854,7 @@ if (psdxespamfilter==nil or (psdxespamfilter and GetTime()>psdxespamfilter+30)) 
 --SendAddonMessage("DXE", "^1^SRequestAddOnVersion^^", "RAID")
 local inInstance, instanceType = IsInInstance()
 if instanceType~="pvp" then
-if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
 SendAddonMessage("DXE","DXEVersionRequest","instance_chat")
 else
 SendAddonMessage("DXE","DXEVersionRequest","RAID")
@@ -1916,7 +1916,7 @@ bossmodfdsfsdf=1
 	c:SetPoint("TOPLEFT", 20, -435)
 	c:SetScript("OnClick", function(self) if psbossmodnoalphavar==1 then psbossmodnoalphavar=0 psbossmodframeopen() else psbossmodnoalphavar=1 psbossmodframeopen() end end )
 	if psbossmodnoalphavar==1 then
-		c:SetChecked()
+		c:SetChecked(true)
 	else
 		c:SetChecked(false)
 	end
@@ -3059,7 +3059,7 @@ opendeathrc2()
 opendeathrc3()
 for i=1,#psdeathcheckbutt do
 	if psdeathrepsavemain[i]==1 then
-		psdeathcheckbutt[i]:SetChecked()
+		psdeathcheckbutt[i]:SetChecked(true)
 		if i==2 then
       pstabletextdeathreptt[2]:SetText("|cff00ff00"..psdropt1.." "..format(psmaindeathrepforppl,"10/25").."|r")
     end
@@ -3070,7 +3070,7 @@ for i=1,#psdeathcheckbutt do
     end
 	end
 end
-psdeathreppartycheckbut1:SetChecked()
+psdeathreppartycheckbut1:SetChecked(true)
 psdeathreppartycheckbuttxt1:SetText("|cff00ff00"..psdropt1.." "..format(psmaindeathrepforppl,5).."|r")
 
 
@@ -3307,19 +3307,19 @@ for i=1,11 do
   end
   if i==10 then
     if psdeathrepsavemain[17]==1 then
-      c:SetChecked()
+      c:SetChecked(true)
     else
       c:SetChecked(false)
     end
   elseif i==11 then
     if psdeathrepsavemain[18]==1 then
-      c:SetChecked()
+      c:SetChecked(true)
     else
       c:SetChecked(false)
     end
   else
     if psdeathrepsavemain[i]==1 then
-      c:SetChecked()
+      c:SetChecked(true)
     else
       c:SetChecked(false)
     end
@@ -3362,7 +3362,7 @@ end
 	psdeathreppartycheckbut1:SetPoint("TOPLEFT", 20, -125)
 	psdeathreppartycheckbut1:SetScript("OnClick", function(self) if psdeathrepsavemain[14]==1 then psdeathrepsavemain[14]=0 psdeathreppartycheckbuttxt1:SetText("|cffff0000"..psdropt1.." ("..format(psmaindeathrepforppl,5)..")|r") else psdeathrepsavemain[14]=1 psdeathreppartycheckbuttxt1:SetText("|cff00ff00"..psdropt1.." ("..format(psmaindeathrepforppl,5)..")|r") end end )
 	if psdeathrepsavemain[14]==1 then
-		psdeathreppartycheckbut1:SetChecked()
+		psdeathreppartycheckbut1:SetChecked(true)
 	else
 		psdeathreppartycheckbut1:SetChecked(false)
 	end
@@ -3515,7 +3515,7 @@ end
 
 function psdisbantandinvitef()
 --ыытест
-if select(3,GetInstanceInfo())~=7 and (psnotoftenthansec10==nil or (psnotoftenthansec10 and GetTime()>psnotoftenthansec10+10)) then
+if select(3,GetInstanceInfo())~=17 and (psnotoftenthansec10==nil or (psnotoftenthansec10 and GetTime()>psnotoftenthansec10+10)) then
 
 
 if (UnitInRaid("player") and (UnitIsGroupAssistant("player") or UnitIsGroupLeader("player"))) or (GetNumGroupMembers()>0 and UnitIsGroupLeader("player") and (UnitInRaid("player")==nil or UnitInRaid("player")==false)) then
@@ -3825,11 +3825,11 @@ PSFautoinvframe_edbox10:SetScript("OnTabPressed", function(self) PSFautoinvframe
 PSFautoinvframe_edbox10:SetScript("OnTextChanged", function(self) if string.find (PSFautoinvframe_edbox10:GetText(), " ",-1)==string.len(PSFautoinvframe_edbox10:GetText()) or string.find(PSFautoinvframe_edbox10:GetText(),",",-1)==string.len(PSFautoinvframe_edbox10:GetText()) then else psautoinvphrasesave(PSFautoinvframe_edbox10:GetText()) end end )
 
 
-if psautoinvsave[1]==1 then PSFautoinvframe_CheckButtonau10:SetChecked() else PSFautoinvframe_CheckButtonau10:SetChecked(false) end
-if psautoinvsave[2]==1 then PSFautoinvframe_CheckButtonau11:SetChecked() else PSFautoinvframe_CheckButtonau11:SetChecked(false) end
-if psautoinvsave[3]==1 then PSFautoinvframe_CheckButtonau12:SetChecked() else PSFautoinvframe_CheckButtonau12:SetChecked(false) end
-if psautoinvsave[4]==1 then PSFautoinvframe_CheckButtonau13:SetChecked() else PSFautoinvframe_CheckButtonau13:SetChecked(false) end
-if psautoinvsave[9]==1 then PSFautoinvframe_CheckButtonau14:SetChecked() else PSFautoinvframe_CheckButtonau14:SetChecked(false) end
+if psautoinvsave[1]==1 then PSFautoinvframe_CheckButtonau10:SetChecked(true) else PSFautoinvframe_CheckButtonau10:SetChecked(false) end
+if psautoinvsave[2]==1 then PSFautoinvframe_CheckButtonau11:SetChecked(true) else PSFautoinvframe_CheckButtonau11:SetChecked(false) end
+if psautoinvsave[3]==1 then PSFautoinvframe_CheckButtonau12:SetChecked(true) else PSFautoinvframe_CheckButtonau12:SetChecked(false) end
+if psautoinvsave[4]==1 then PSFautoinvframe_CheckButtonau13:SetChecked(true) else PSFautoinvframe_CheckButtonau13:SetChecked(false) end
+if psautoinvsave[9]==1 then PSFautoinvframe_CheckButtonau14:SetChecked(true) else PSFautoinvframe_CheckButtonau14:SetChecked(false) end
 
 
 
@@ -4212,7 +4212,7 @@ if pssisavedbossinfo[pssichose1] and #pssisavedbossinfo[pssichose1]>0 then
     end
     pssavedinfotextframe1:SetText(psstrochka)
     pssavedinfotextframe1:HighlightText(0,string.len(psstrochka))
-    pssavedinfotextframe1:SetFocus()
+    pssavedinfotextframe1:SetFocus(true)
   else
     pssavedinfotextframe1:SetText(pcicccombat4)
   end
@@ -4266,7 +4266,7 @@ psdonateeb2:SetPoint("BOTTOMRIGHT", psdonatefr2, "BOTTOMRIGHT", 0, 0)
 psdonateeb2:SetPoint("BOTTOMLEFT", psdonatefr2, "BOTTOMLEFT", 0, 0)
 psdonateeb2:SetScript("onescapepressed", function(self) psdonateeb2:ClearFocus() end)
 psdonateeb2:SetFont(GameFontNormal:GetFont(), psfontsset[2])
-psdonateeb2:SetMultiLine()
+psdonateeb2:SetMultiLine(true)
 psdonateeb2:SetAutoFocus(false)
 psdonateeb2:SetHeight(150)
 psdonateeb2:SetWidth(225)
@@ -4280,7 +4280,7 @@ end
 
 psdonateeb2:SetText("http://www.phoenixstyle.com")
 psdonateeb2:HighlightText(0,string.len(psdonateeb2:GetText()))
-psdonateeb2:SetFocus()
+psdonateeb2:SetFocus(true)
 
 
 end

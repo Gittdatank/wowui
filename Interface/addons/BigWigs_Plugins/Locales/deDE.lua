@@ -80,6 +80,7 @@ L["font"] = "Schriftart"
 L["fontColor"] = "Schriftfarbe"
 L["fontSize"] = "Schriftgröße"
 L["growingUpwards"] = "Nach oben erweitern"
+L["growingUpwardsDesc"] = "Legt fest, ob die Leisten aufwärts oder abwärts vom Ankerpunkt angezeigt werden." -- Needs review
 L["icon"] = "Symbol"
 L["iconDesc"] = "Zeigt oder versteckt die Symbole auf den Leisten."
 L["icons"] = "Symbole"

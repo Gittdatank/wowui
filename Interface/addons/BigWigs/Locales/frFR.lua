@@ -129,7 +129,9 @@ L["TANK_HEALER"] = "Tank & soigneur uniquement"
 L["TANK_HEALER_desc"] = "Certaines techniques sont importantes uniquement pour les tanks et les soigneurs. Si vous souhaitez voir des alertes pour cette technique quelque soit votre rôle, désactivez cette option."
 L["test"] = "Test"
 L["thanks"] = "Merci aux personnes suivantes pour leur aide :"
-L["tooltipHint"] = "|cffeda55fClic gauche|r pour redémarrer les modules actifs. |cffeda55fAlt-Clic gauche|r pour les désactiver. |cffeda55fClic droit|r pour accéder aux options."
+L["tooltipHint"] = [=[|cffeda55fClic gauche|r pour redémarrer les modules actifs.
+|cffeda55fAlt-Clic gauche|r pour les désactiver.
+|cffeda55fClic droit|r pour accéder aux options.]=]
 L["upToDate"] = "À jour :"
 L["warmup"] = "Préparation"
 L["warmup_desc"] = "Temps avant que le combat face au boss ne commence."

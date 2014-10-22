@@ -15,8 +15,8 @@ Auc-Stat-StdDev: enabled
 Auc-Util-FixAH: enabled
 AutoRez: disabled
 BagBrother: disabled
-Bagnon: disabled
-Bagnon_Config: disabled
+Bagnon: enabled
+Bagnon_Config: enabled
 Bagnon_GuildBank: disabled
 Bagnon_Scrap: disabled
 Bagnon_VoidStorage: disabled

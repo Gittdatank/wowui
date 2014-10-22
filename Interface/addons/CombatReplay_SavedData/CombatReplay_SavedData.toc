@@ -1,4 +1,4 @@
-﻿## Interface: 50400
+﻿## Interface: 60000
 ## Title: Combat|cff7fff7fReplay|r - Saved Data
 ## Author: Shurshik
 ## DefaultState: Enabled

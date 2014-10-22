@@ -23,7 +23,7 @@ function AskMrRobot.parseItemLink(itemLink)
     --item.difficultyId = tonumber(parts[11])
     
     local numBonuses = tonumber(parts[12])
-    if numBonuses > 0 then
+    if numBonuses and numBonuses > 0 then
         item.bonusIds = {}
         for i = 13, 12 + numBonuses do
             table.insert(item.bonusIds, tonumber(parts[i]))
@@ -31,6 +31,46 @@ function AskMrRobot.parseItemLink(itemLink)
     end
     
     return item
+end
+
+-- item link format:  |cffa335ee|Hitem:itemID:enchant:gem1:gem2:gem3:gem4:suffixID:uniqueID:level:upgradeId:instanceDifficultyID:numBonusIDs:bonusID1:bonusID2...|h[item name]|h|r
+
+function AskMrRobot.createItemLink(itemObj)
+
+    if itemObj == nil or itemObj.id == nil or itemObj.id == 0 then return nil end
+    
+    local parts = {}
+    table.insert(parts, "item")
+    table.insert(parts, itemObj.id)
+    table.insert(parts, itemObj.enchantId)
+    table.insert(parts, itemObj.gemIds[1])
+    table.insert(parts, itemObj.gemIds[2])
+    table.insert(parts, itemObj.gemIds[3])
+    table.insert(parts, itemObj.gemIds[4])
+    
+    if itemObj.suffixId == 0 then
+        table.insert(parts, 0)
+    else
+        table.insert(parts, -math.abs(itemObj.suffixId))
+    end
+    
+    table.insert(parts, 0)
+    table.insert(parts, UnitLevel("player"))
+    table.insert(parts, itemObj.upgradeId)
+    table.insert(parts, 0)
+    
+    if itemObj.bonusIds then
+        table.insert(parts, #itemObj.bonusIds)
+        for i,v in ipairs(itemObj.bonusIds) do
+            table.insert(parts, v)
+        end
+    end
+    
+    return table.concat(parts, ":")
+end
+
+function AskMrRobot.createGemLink(gemId)
+
 end
 
 -- convenience to get just the item id (or 0 if not a valid link) from an item link
@@ -155,8 +195,8 @@ AskMrRobot.specIds = {
     [63] = 12, -- MageFire
     [64] = 13, -- MageFrost
     [268] = 14, -- MonkBrewmaster
-    [269] = 15, -- MonkMistweaver
-    [270] = 16, -- MonkWindwalker
+    [270] = 15, -- MonkMistweaver
+    [269] = 16, -- MonkWindwalker
     [65] = 17, -- PaladinHoly
     [66] = 18, -- PaladinProtection
     [70] = 19, -- PaladinRetribution
@@ -223,12 +263,12 @@ AskMrRobot.slotDisplayText = {
     [6] = _G["WAISTSLOT"],
     [7] = _G["LEGSSLOT"],
     [8] = _G["FEETSLOT"],
-    [9] = _G["WROSTSLOT"],
+    [9] = _G["WRISTSLOT"],
     [10] = _G["HANDSSLOT"],
-    [11] = _G["FINGER0SLOT"],
-    [12] = _G["FINGER1SLOT"],
-    [13] = _G["TRINKET0SLOT"],
-    [14] = _G["TRINKET1SLOT"],
+    [11] = _G["FINGER0SLOT"] .. " 1",
+    [12] = _G["FINGER1SLOT"] .. " 2",
+    [13] = _G["TRINKET0SLOT"] .. " 1",
+    [14] = _G["TRINKET1SLOT"] .. " 2",
     [15] = _G["BACKSLOT"],
     [16] = _G["MAINHANDSLOT"],
     [17] = _G["SECONDARYHANDSLOT"]

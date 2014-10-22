@@ -1,13 +1,13 @@
-﻿## Interface: 50200
+﻿## Interface: 60000
 ## Title: Hagakure Cooldowns
-## Version: 0.1.4
+## Version: 0.1.8
 ## Credits: hagakure.su
 ## E-mail: kazmin.oleg@gmail.com
 ## Author: m9ist
 ## SavedVariables: hagakure_cooldownsDB
 ## Notes: Draw cooldown's interface
 ## Notes-ruRU: Создает интерфейс доступных кулдаунов в рейде.
-## X-Curse-Packaged-Version: r65
+## X-Curse-Packaged-Version: r69
 ## X-Curse-Project-Name: Hagakure Cooldowns
 ## X-Curse-Project-ID: hagakure-cooldowns
 ## X-Curse-Repository-ID: wow/hagakure-cooldowns/mainline

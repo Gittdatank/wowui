@@ -1,20 +1,22 @@
-## Interface: 50001
+## Interface: 60000
 ## Title: Satrina Buff Frames
 ## Author: Satrina@Stormrage
-## Version: 3.2
-## X-MinorVersion: 5
 ## OptionalDeps: ButtonFacade
 ## SavedVariables: SBFDB
 ## Notes: A replacement for the UI buff frame.
 ## Notes-zhCN: Buff框体替换与增强。
 ## Notes-zhTW: Buff框體替換與增強。
-## X-Curse-Packaged-Version: 3.2.6
+## X-Curse-Project-Name: SatrinaBuffFrame
+## X-Curse-Project-ID: satrina-buff-frame
+## X-Curse-Repository-ID: wow/satrina-buff-frame/mainline
+## X-Curse-Packaged-Version: v3.3.1
 ## X-Curse-Project-Name: SatrinaBuffFrame
 ## X-Curse-Project-ID: satrina-buff-frame
 ## X-Curse-Repository-ID: wow/satrina-buff-frame/mainline
 
-## X-Date $Date: 2012-09-12 04:52:12 +0000 (Wed, 12 Sep 2012) $  
-## X-Revision $Revision: 145 $
+## Version: 3.3
+## X-MinorVersion: 1
+## X-Curse-Packaged-Version: 3.3.1
 
 
 embeds.xml
@@ -33,7 +35,7 @@ SBFFilters.lua
 SBFTotems.lua
 SBFCombatLog.lua
 
-SBFButtonFacade.lua
+##SBFButtonFacade.lua
 
 Locales\Localisation.ruRU.lua
 Locales\Localisation.zhCN.lua

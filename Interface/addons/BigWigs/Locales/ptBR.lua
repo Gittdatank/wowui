@@ -120,7 +120,9 @@ L["TANK_HEALER"] = "Para Tanques e Curadores"
 L["TANK_HEALER_desc"] = "Algumas habilidades são importantes apenas para Tanques e Curadores. Se você preferir ser avisado desta abilidade, independente de sua especialização, desmarque esta opção"
 L["test"] = "Testar"
 L["thanks"] = "Agradecimentos às seguintes pessoas por sua ajuda em várias partes do desenvolvimento"
-L["tooltipHint"] = "|cffeda55fClique|r para reiniciar todos os módulos. |cffeda55fAlt-Clique|r para desativá-los. |cffeda55fClique-Direito|r para acessar as opções."
+L["tooltipHint"] = [=[|cffeda55fClique|r para reiniciar todos os módulos.
+|cffeda55fAlt-Clique|r para desativá-los.
+|cffeda55fClique-Direito|r para acessar as opções.]=]
 L["upToDate"] = "Atualizado:"
 L["website"] = "Website"
 L["wipes"] = "Wipes:"

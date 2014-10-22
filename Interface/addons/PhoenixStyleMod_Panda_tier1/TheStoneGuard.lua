@@ -146,7 +146,7 @@ if arg2=="SPELL_PERIODIC_DAMAGE" and spellid==130774 and UnitName("boss1") then
       pscaststartinfo(0,spellname..": "..psaddcolortxt(1,name2)..name2..psaddcolortxt(2,name2)..tt2, -1, "id1", 1, "|s4id"..spellid.."|id - "..psinfo,psbossnames[2][3][1],2)
 
       --тут репортить по ходу боя, с задержкой в 0.5 сек
-      if psraidoptionson[2][3][1][1]==1 and pswasonbossp31==1 and select(3,GetInstanceInfo())~=7 then
+      if psraidoptionson[2][3][1][1]==1 and pswasonbossp31==1 and select(3,GetInstanceInfo())~=17 then
         if psstoneguardrep05==nil then
           psstoneguardrep05=GetTime()+0.5
         end

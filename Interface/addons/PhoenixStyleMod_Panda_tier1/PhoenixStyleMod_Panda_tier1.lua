@@ -79,7 +79,7 @@ if psunsoktablbabah3 and #psunsoktablbabah3>0 and (curtime>psunsoktablbabah3[1]+
 
   if psunsoktablbabah4[1]>0 then
     pscaststartinfo(0,GetSpellInfo(122398)..": "..psaddcolortxt(1,psunsoktablbabah1[1])..psunsoktablbabah1[1]..psaddcolortxt(2,psunsoktablbabah1[1])..". "..pszzpandaaddopttxt17..": "..psdamageceil(psunsoktablbabah4[1]), -1, "id1", 53, "|s4id122398|id - "..psinfo,psbossnames[2][2][5],2)
-    if psraidoptionson[2][2][5][5]==1 and pswasonbossp25==1 and select(3,GetInstanceInfo())~=7 then
+    if psraidoptionson[2][2][5][5]==1 and pswasonbossp25==1 and select(3,GetInstanceInfo())~=17 then
       pszapuskanonsa(psraidchats3[psraidoptionschat[2][2][5][5]], "{rt8} "..psunsoktablbabah1[1].." > |s4id122398|id. "..pszzpandaaddopttxt17..": "..psdamageceil(psunsoktablbabah4[1]))
     end
     addtotwotables5(psunsoktablbabah1[1])
@@ -301,7 +301,7 @@ if pswaitgaralontorep and curtime>pswaitgaralontorep then
     end
 
         --ыытест без репорта в ЛФР
-        if psraidoptionson[2][2][3][3]==1 and pswasonbossp23==1 and select(3,GetInstanceInfo())~=7 then
+        if psraidoptionson[2][2][3][3]==1 and pswasonbossp23==1 and select(3,GetInstanceInfo())~=17 then
           pszapuskanonsa(psraidchats3[psraidoptionschat[2][2][3][3]], "{rt8} "..psremovecolor(text))
         end
 
@@ -629,7 +629,7 @@ if psmassiveattackstabletay2 and curtime>psmassiveattackstabletay2+1.4 then
 		end
 		for i = 1,GetNumGroupMembers() do
 			local name, _, subgroup, _, _, _, _, online, isDead = GetRaidRosterInfo(i)
-			if subgroup<=psgroup and online and isDead==nil and UnitIsDeadOrGhost(name)==nil then
+			if subgroup<=psgroup and online and isDead==nil and UnitIsDeadOrGhost(name)==false then
 				table.insert(taball,name)
 			end
 		end
@@ -712,7 +712,7 @@ if pstayaktabwind2 and curtime>pstayaktabwind2 then
     end
 
     --репорт в чат и в фрейм
-    if psraidoptionson[2][2][2][1]==1 and pswasonbossp22==1 and select(3,GetInstanceInfo())~=7 then
+    if psraidoptionson[2][2][2][1]==1 and pswasonbossp22==1 and select(3,GetInstanceInfo())~=17 then
       pszapuskanonsa(psraidchats3[psraidoptionschat[2][2][2][1]], "{rt8} |s4id123175|id: "..psremovecolor(text))
     end
     pscaststartinfo(0,GetSpellInfo(123175)..": "..text, -1, "id1", 81, "|s4id123175|id - "..psinfo,psbossnames[2][2][2],2)
@@ -939,7 +939,7 @@ if psmassiveattackstabletemp2 and curtime>psmassiveattackstabletemp2+1.4 then
 		end
 		for i = 1,GetNumGroupMembers() do
 			local name, _, subgroup, _, _, _, _, online, isDead = GetRaidRosterInfo(i)
-			if subgroup<=psgroup and online and isDead==nil and UnitIsDeadOrGhost(name)==nil then
+			if subgroup<=psgroup and online and isDead==nil and UnitIsDeadOrGhost(name)==false then
 				table.insert(taball,name)
 			end
 		end
@@ -1004,7 +1004,7 @@ end
 if psshieldisup and curtime>psshieldisup+7 then
 psshieldisup=nil
 if psshieldnrdrag then
-        if psraidoptionson[2][3][2][3]==1 and pswasonbossp32==1 and select(3,GetInstanceInfo())~=7 then
+        if psraidoptionson[2][3][2][3]==1 and pswasonbossp32==1 and select(3,GetInstanceInfo())~=17 then
           strochkavezcrash="{rt8} "..pszzpandaaddopttxt12.." |sid115856|id #"..psshieldnrdrag..": "
           reportafterboitwotab(psraidchats3[psraidoptionschat[2][3][2][3]], false, vezaxname3, vezaxcrash3, 1)
         end
@@ -1092,7 +1092,7 @@ if psguardchainstab6 then
           red2="|r"
         end
         text=text..red1..psdamageceil(psguardchainstab4[i])..red2.."."
-        if psraidoptionson[2][3][1][6]==1 and pswasonbossp31==1 and select(3,GetInstanceInfo())~=7 then
+        if psraidoptionson[2][3][1][6]==1 and pswasonbossp31==1 and select(3,GetInstanceInfo())~=17 then
           pszapuskanonsa(psraidchats3[psraidoptionschat[2][3][1][6]], psremovecolor(text))
         end
         if psstrazhiotstup then
@@ -1146,7 +1146,7 @@ if psambertabltorep254 then
         text=text.." "..pszzpandaaddopttxt4..": "..psdamageceil(psambertabltorep253[t]).." "..psulhp.."."
       end
 
-      if select(3,GetInstanceInfo())~=7 then
+      if select(3,GetInstanceInfo())~=17 then
         pszapuskanonsa(psraidchats3[psraidoptionschat[2][2][5][3]], text)
       end
 
@@ -1238,7 +1238,7 @@ end
 if psrezetnotcombp1 and curtime>psrezetnotcombp1 then
 	local a=GetSpellInfo(20711)
 	local b=UnitBuff("player", a)
-	if UnitAffectingCombat("player")==nil and UnitIsDeadOrGhost("player")==nil and b==nil then --and UnitName("boss1")
+	if UnitAffectingCombat("player")==false and UnitIsDeadOrGhost("player")==false and b==nil then --and UnitName("boss1")
 		psiccwipereport_p1(nil,"try")
 	end
 end
@@ -1650,7 +1650,7 @@ end
 
 
 if event=="PLAYER_REGEN_ENABLED" then
-	if UnitAffectingCombat("player")==nil and UnitIsDeadOrGhost("player")==nil then --and UnitName("boss1")==nil
+	if UnitAffectingCombat("player")==false and UnitIsDeadOrGhost("player")==false then --and UnitName("boss1")==nil
     if pswasonbossp42 then
       psrezetnotcombp1=GetTime()+3
     else

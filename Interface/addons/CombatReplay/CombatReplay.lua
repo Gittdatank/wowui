@@ -7,7 +7,7 @@ crlocale()
 end
 
 
-	crversion=5.425
+	crversion=6.000
 
   if crPlayersSizeOnMap==nil then crPlayersSizeOnMap=12 end
   if crOptTrackLfr==nil then crOptTrackLfr=false end
@@ -122,7 +122,7 @@ function cr_OnEvent(self,event,...)
   else
     --проверка, мы в рейд инсте?
     local _, instanceType, pppl, _, maxPlayers, dif = GetInstanceInfo()
-    if ((pppl and (pppl==3 or pppl==5 or pppl==4 or pppl==6 or pppl==14 or (pppl==7 and crOptTrackLfr))) or (select(3,GetInstanceInfo())==7 and crOptTrackLfr)) then
+    if ((pppl and (pppl==3 or pppl==5 or pppl==4 or pppl==6 or pppl==14 or pppl==15 or pppl==16 or (pppl==17 and crOptTrackLfr)))) then
       --начался бой, через 2 сек проверяю босса и тогда трекерю
       crcheckbossincombat=GetTime()+2
     end
@@ -138,7 +138,7 @@ function cr_OnEvent(self,event,...)
   if event == "PLAYER_REGEN_ENABLED" then
   crcheckbossincombatafterfight=GetTime()
   --если жив и вышел с боя
-  if UnitIsDeadOrGhost("player")==nil then
+  if UnitIsDeadOrGhost("player")==false then
     --конец боя
     crcheckbossincombatafterfight=nil
     crStopTracking()
@@ -191,10 +191,14 @@ if crcombatin==nil then
 
   crframeopen()
 
-  if crsaveddata[1] then
+  if crsaveddata and crsaveddata[1] then
     crShowCombat(1)
   else
-    crCurrentTimeShow:SetText(crlocnocombatsaved)
+	if crsaveddata then
+		crCurrentTimeShow:SetText(crlocnocombatsaved)
+	else
+		crCurrentTimeShow:SetText("Module that saves data is not installed or there was an error on loading it.")
+	end
   end
 
 else

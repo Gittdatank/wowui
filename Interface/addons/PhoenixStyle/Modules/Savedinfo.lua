@@ -126,14 +126,14 @@ pssavedinfscrollfr:SetPoint("TOPLEFT", PSFmainfrainsavedinfo, "TOPLEFT", 20, -80
 pssavedinfscrollfr:SetHeight(280)
 pssavedinfscrollfr:SetWidth(695)
 
-pssavedinfotextframe1 = CreateFrame("EditBox", "pssavedinfotextframe1", PSFmainfrainsavedinfo)
+pssavedinfotextframe1 = CreateFrame("EditBox", "pssavedinfotextframe1", pssavedinfscrollfr)
 pssavedinfotextframe1:SetPoint("TOPRIGHT", pssavedinfscrollfr, "TOPRIGHT", 0, 0)
 pssavedinfotextframe1:SetPoint("TOPLEFT", pssavedinfscrollfr, "TOPLEFT", 0, 0)
 pssavedinfotextframe1:SetPoint("BOTTOMRIGHT", pssavedinfscrollfr, "BOTTOMRIGHT", 0, 0)
 pssavedinfotextframe1:SetPoint("BOTTOMLEFT", pssavedinfscrollfr, "BOTTOMLEFT", 0, 0)
 pssavedinfotextframe1:SetScript("onescapepressed", function(self) pssavedinfotextframe1:ClearFocus() end)
 pssavedinfotextframe1:SetFont(GameFontNormal:GetFont(), psfontsset[2])
-pssavedinfotextframe1:SetMultiLine()
+pssavedinfotextframe1:SetMultiLine(true)
 pssavedinfotextframe1:SetAutoFocus(false)
 pssavedinfotextframe1:SetHeight(655)
 pssavedinfotextframe1:SetWidth(695)
@@ -261,7 +261,7 @@ for i=1,#tab1 do
 	c:SetPoint("TOPLEFT", 550, -130-22*i)
 	c:SetScript("OnClick", function(self) if pssavedinfocheckexport[i]==1 then pssavedinfocheckexport[i]=0 else pssavedinfocheckexport[i]=1 end end )
 	if pssavedinfocheckexport[i]==1 then
-		c:SetChecked()
+		c:SetChecked(true)
 	else
 		c:SetChecked(false)
 	end
@@ -421,7 +421,7 @@ if a1~=math.floor(PSFmainfrainsavedinfo_slid1:GetValue()) or a4~=math.floor(PSFm
 	end
 end
 
-if slid and slid==1 and PSFmainfrainsavedinfo_slid2:IsEnabled()==nil then
+if slid and slid==1 and PSFmainfrainsavedinfo_slid2:IsEnabled()==false then
 PSFmainfrainsavedinfo_slid2:Enable()
 psisicombattypeduring5:SetText(psincombaddtxtlocal5)
 end
@@ -1347,7 +1347,7 @@ end
 end
 
 function pssavedinforeset(n)
-if UnitAffectingCombat("player")==nil and UnitIsDeadOrGhost("player")==nil then
+if UnitAffectingCombat("player")==false and UnitIsDeadOrGhost("player")==false then
 if n==1 then
 --все вообще удаляем
     table.wipe(pssisavedfailsplayern)

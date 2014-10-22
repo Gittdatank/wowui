@@ -240,7 +240,7 @@ end
 --кто стоял оч близко при кар!
 if (arg2=="SPELL_DAMAGE" or arg2=="SPELL_MISSED") and spellid==134375 then
 psragnamaxdam=2
-if select(3,GetInstanceInfo())==4 or select(3,GetInstanceInfo())==6 or select(3,GetInstanceInfo())==7 then
+if select(3,GetInstanceInfo())==4 or select(3,GetInstanceInfo())==6 or select(3,GetInstanceInfo())==17 then
 psragnamaxdam=5
 end
 

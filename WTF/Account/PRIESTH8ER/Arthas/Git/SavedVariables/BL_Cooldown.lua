@@ -1,7 +1,6 @@
 
 BLCDrosterReload = {
 	["Player-69-08560956"] = {
-		["class"] = "WARRIOR",
 		["talents"] = {
 			[19138] = {
 				["name_localized"] = "Avatar",
@@ -35,14 +34,6 @@ BLCDrosterReload = {
 				["icon"] = "Interface\\Icons\\Ability_Warrior_Vigilance",
 				["tier"] = 5,
 			},
-			[21790] = {
-				["name_localized"] = "Heavy Repercussions",
-				["talent_id"] = 21790,
-				["spell_id"] = 169680,
-				["column"] = 1,
-				["icon"] = "Interface\\Icons\\INV_Shield_32",
-				["tier"] = 3,
-			},
 			[16035] = {
 				["name_localized"] = "Double Time",
 				["talent_id"] = 16035,
@@ -51,8 +42,17 @@ BLCDrosterReload = {
 				["icon"] = "Interface\\Icons\\INV_Misc_Horn_04",
 				["tier"] = 1,
 			},
+			[21790] = {
+				["name_localized"] = "Heavy Repercussions",
+				["talent_id"] = 21790,
+				["spell_id"] = 169680,
+				["column"] = 1,
+				["icon"] = "Interface\\Icons\\INV_Shield_32",
+				["tier"] = 3,
+			},
 		},
 		["name"] = "Git",
+		["class"] = "WARRIOR",
 		["spec"] = 73,
 	},
 }

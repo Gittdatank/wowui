@@ -40,6 +40,8 @@ local PlaySound = PlaySound
 local RegisterStateDriver = RegisterStateDriver
 local UnitName = UnitName
 
+--local WatchFrame = ObjectiveTrackerFrame
+
 local MOVANY = _G.MOVANY
 local MAOptions
 
@@ -555,7 +557,7 @@ local MovAny = {
 		ArenaPrepFrames:ma_Hide()
 		ArenaEnemyFrames:ma_Hide()
 	end,
-	hWatchFrameExpand = function()
+	--[[hWatchFrameExpand = function()
 		if ArenaEnemyFrames then
 			local _, instanceType = IsInInstance()
 			if not WatchFrame:IsUserPlaced() then
@@ -599,7 +601,7 @@ local MovAny = {
 				ArenaPrepFrames.hidWatchedQuests = false
 			end
 		end
-	end,
+	end,]]
 	hFocusFrame_Update = function()
 		if MovAny:IsModified(FocusFrame) then
 			RegisterStateDriver("FocusFrame", "visibility", "hide")
@@ -668,6 +670,13 @@ if CompactRaidFrameManager_Collapse then
 		end
 	end)
 end
+if WorldMap_ToggleSizeDown then
+	hooksecurefunc("WorldMap_ToggleSizeDown", function()
+		if MovAny:IsModified(WorldMapFrame) then
+			MovAny.API:SyncElement("WorldMapFrame")
+		end
+	end)
+end
 
 OverrideActionBar:HookScript("OnShow", function(self)
 	if not MovAny:IsModified(MicroButtonsMover) and not MovAny:IsModified(MicroButtonsSplitMover) and not MovAny:IsModified(MicroButtonsVerticalMover) then
@@ -680,7 +689,7 @@ OverrideActionBar:HookScript("OnShow", function(self)
 		AchievementMicroButton,
 		QuestLogMicroButton,
 		GuildMicroButton,
-		PVPMicroButton,
+		--PVPMicroButton,
 		LFDMicroButton,
 		CompanionsMicroButton,
 		EJMicroButton,
@@ -689,16 +698,18 @@ OverrideActionBar:HookScript("OnShow", function(self)
 	}
 	for i = 1, #children, 1 do
 		MovAny:UnlockPoint(children[i])
+		MovAny:UnlockScale(children[i])
 		children[i]:ClearAllPoints()
 		children[i]:SetScale(1)
 		if i == 1 then
 			children[i]:SetPoint("LEFT", OverrideActionBarLeaveFrame, "LEFT", - 165, 20)
-		elseif children[i] == PVPMicroButton then
+		elseif children[i] == LFDMicroButton then
 			children[i]:SetPoint("LEFT", CharacterMicroButton, "LEFT", 0, - 34)
 		else
-			children[i]:SetPoint("LEFT", children[i - 1], "RIGHT", - 3, 0)
+			children[i]:SetPoint("LEFT", children[i - 1], "RIGHT", - 2, 0)
 		end
 		MovAny:LockPoint(children[i])
+		MovAny:LockScale(children[i])
 	end
 end)
 
@@ -921,9 +932,9 @@ function MovAny:Boot()
 			SpellBookPage1:SetPoint("LEFT", SpellBookFrame)
 		end)
 	end
-	if WatchFrame_Update then
+	--[[if WatchFrame_Update then
 		hooksecurefunc("WatchFrame_Update", self.hWatchFrameExpand)
-	end
+	end]]
 	--setfenv(WorldMapFrame_OnShow, setmetatable({UpdateMicroButtons = function() end }, { __index = _G}))
 	--[[hooksecurefunc("PetActionBar_UpdatePositionValues", function()
 		if MovAny:IsModified(PetActionButtonsVerticalMover) or MovAny:IsModified(PetActionButtonsMover) then
@@ -2551,6 +2562,13 @@ function MovAny:HideFrame(f, readOnly)
 	elseif fn == "CompactRaidFrameManager" then
 		f:UnregisterAllEvents()
 		CompactRaidFrameContainer:SetParent(UIParent)
+	elseif fn == "Boss1TargetFrame" or fn == "Boss2TargetFrame" or fn == "Boss3TargetFrame" or fn == "Boss4TargetFrame" or fn == "Boss5TargetFrame" then
+		f:UnregisterAllEvents()
+		f:Hide()
+		f.oldShow = f.Show
+		f.Show = function()
+			-- empty
+		end
 	elseif fn == "MicroButtonsMover" or fn == "MicroButtonsSplitMover" or fn == "MicroButtonsVerticalMover" or fn == "AchievementMicroButton" then
 		AchievementMicroButton.IsShown = function(self)
 			local opt = MovAny:GetUserData(fn)
@@ -2660,6 +2678,9 @@ function MovAny:ShowFrame(f, readOnly, dontHook)
 		CompactRaidFrameContainer:SetParent(f)
 		MovAny:UnlockPoint(CompactRaidFrameContainer)
 		CompactRaidFrameContainer:SetPoint("TOPLEFT", CompactRaidFrameManagerContainerResizeFrame, "TOPLEFT", 4, - 7)
+	elseif fn == "Boss1TargetFrame" or fn == "Boss2TargetFrame" or fn == "Boss3TargetFrame" or fn == "Boss4TargetFrame" or fn == "Boss5TargetFrame" then
+		f.Show = f.oldShow
+		f.oldShow = nil
 	end
 	--[[local mover = self:GetMoverByFrame(f)
 	if mover then
@@ -5345,6 +5366,12 @@ function MovAny_OnEvent(self, event, arg1)
 				if MovAny:IsModified(LFRParentFrame) then
 					MovAny:ResetFrame(LFRParentFrame)
 				end
+				if MovAny:IsModified(QuestLogFrame) then
+					MovAny:ResetFrame(QuestLogFrame)
+				end
+				if MovAny:IsModified(QuestLogDetailFrame) then
+					MovAny:ResetFrame(QuestLogDetailFrame)
+				end
 			end
 		elseif arg1 == "Blizzard_TalentUI" and MovAny.hBlizzard_TalentUI then
 			MovAny:hBlizzard_TalentUI()
@@ -5361,7 +5388,7 @@ function MovAny_OnEvent(self, event, arg1)
 					CompanionsMicroButton:SetButtonState("PUSHED", 1)
 				end
 			end }, { __index = _G}))]]
-		elseif arg1 == "Blizzard_ArenaUI" then
+		--[=[elseif arg1 == "Blizzard_ArenaUI" then
 			ArenaEnemyFrame_UpdatePet = function() end
 			ArenaEnemyFrames_UpdateWatchFrame = function()
 				local _, instanceType = IsInInstance()
@@ -5595,7 +5622,7 @@ function MovAny_OnEvent(self, event, arg1)
 					--RegisterStateDriver(_G[frame], "visibility", "[@arenapet"..i", exists] show hide")
 				end
 				MovAny.API:SyncElement(frame)
-			end
+			end]=]
 		end
 		MovAny:SyncFrames()
 	elseif event == "GROUP_ROSTER_UPDATE" then
@@ -5626,7 +5653,7 @@ function MovAny_OnEvent(self, event, arg1)
 			AchievementMicroButton,
 			QuestLogMicroButton,
 			GuildMicroButton,
-			PVPMicroButton,
+			--PVPMicroButton,
 			LFDMicroButton,
 			CompanionsMicroButton,
 			EJMicroButton,
@@ -5635,16 +5662,18 @@ function MovAny_OnEvent(self, event, arg1)
 		}
 		for i = 1, #children, 1 do
 			MovAny:UnlockPoint(children[i])
+			MovAny:UnlockScale(children[i])
 			children[i]:ClearAllPoints()
 			children[i]:SetScale(1)
 			if i == 1 then
 				children[i]:SetPoint("TOPLEFT", PetBattleFrame.BottomFrame, "TOPRIGHT", - 180, 0)
-			elseif children[i] == PVPMicroButton then
+			elseif children[i] == LFDMicroButton then
 				children[i]:SetPoint("LEFT", CharacterMicroButton, "LEFT", 0, - 34)
 			else
-				children[i]:SetPoint("LEFT", children[i - 1], "RIGHT", - 3, 0)
+				children[i]:SetPoint("LEFT", children[i - 1], "RIGHT", - 2, 0)
 			end
 			MovAny:LockPoint(children[i])
+			MovAny:LockScale(children[i])
 		end
 	elseif event == "PET_BATTLE_CLOSE" then
 		if not MovAny:IsModified(MicroButtonsMover) and not MovAny:IsModified(MicroButtonsSplitMover) and not MovAny:IsModified(MicroButtonsVerticalMover) then

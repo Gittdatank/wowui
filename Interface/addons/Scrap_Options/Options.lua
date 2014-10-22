@@ -25,7 +25,7 @@ Options:SetChildren(function(self)
 	self:CreateHeader('Behaviour', 'GameFontHighlight', true)
 	self:Create('CheckButton', 'AutoSell')
 	self:Create('CheckButton', 'AutoRepair')
-	self:Create('CheckButton', 'GuildRepair', nil, Scrap_AutoRepair, true)
+	self:Create('CheckButton', 'GuildRepair', nil, not Scrap_AutoRepair, true)
 	self:Create('CheckButton', 'SafeMode', 'Safe')
 	self:Create('CheckButton', 'Learn')
 	

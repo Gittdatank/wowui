@@ -1,3 +1,38 @@
+0.1.8
+*Update version
+
+0.1.7
+*Remove Symbiosis
+*Check for old speels, now they won't bother you
+
+0.1.6.a
+*Nature's Swiftness is no longer a talent, and is now an ability learned by Balance and Restoration Druids at level 30
+*Silencing Shot is no longer a talent and is now an ability that replaces Counter Shot for Marksman Hunters
+*Guardian of the Ancient Kings (Holy) now has a cooldown of 3 minutes (down from 5 minutes)
+*Bladestorm's cooldown has decreased to 60 seconds (down from 1.5 minutes).
+*Vigilance no longer transfers damage to the Warrior. The talent now reduces amount of damage the target takes by 30% for 12 seconds.
+*Mannoroth's Fury is no longer a passive ability. Mannoroth's Fury now has a duration of 10 seconds with a 60 second cooldown, and increases the area of area-of-effect by 500% and increases damage by 100% for Hellfire, Immolation Aura, Rain of Fire, and Seed of Corruption.
+*Howl of Terror is no longer a talent and is now a baseline skill for all Warlocks.
+*Demonic Breath is a new talent replacing Howl of Terror. The Warlock sends out a cone of Shadow damage, snaring targets, has a 20-second cooldown.
+*Healing Tide Totem is no longer a talent and is a baseline ability for all Shamans. Additionally, this totem will now heal 12 raid members (up from 5) when used in a 25-player instance.
+*New Talent (shamans): Rushing Streams. Rushing Streams replaces Healing Tide Totem talent, increases healing done by Healing Stream Totem by 15%, and causes the totem to heal 2 targets at once.
+
+0.1.6
+*Increment support version of game
+*Anti-Magic Zone DK has been redesigned. The talent now reduces magic damage taken in the area-of-effect by 40% for 3 seconds, there is no longer a cap on total damage absorbed, and the ability no longer scales with strength.
+*Master of Ghouls DK now reduces the cooldown of Raise Dead by 60 seconds.
+*Deterrence hunters now has a 3-minute cooldown (up from 2 minutes) but has 2 charges.
+*Disengage hunters now has a cooldown of 20 seconds (down from 25 seconds).
+*Readiness hunters has been removed.
+*Evasion rogues now increases dodge chance by 100% (was 50%), cooldown has been reduced to 2 minutes (down from 3 minutes), and duration has been reduced to 10 seconds (down from 15 seconds).
+*Shadowstep rogues now has a reduced cooldown of 20 seconds (down from 24 seconds).
+*Astral Shift shaman now has a cooldown of 90 seconds, down from 120 seconds.
+*Healing Tide Totem shamans is no longer a talent and is a baseline ability for all Shamans. Additionally, this totem will now heal 12 raid members (up from 5) when used in a 25-player instance.
+*New Talent: Rushing Streams shamans. Rushing Streams replaces Healing Tide Totem talent, increases healing done by Healing Stream Totem by 15%, and causes the totem to heal 2 targets at once.
+
+0.1.5
+*Add support for spells with charges (now need to redo all spells with it and add support for palladin's multicharges from talent)
+
 0.1.4
 *Strangulate (DK) have now 60s CD
 *Asphyxiate (DK) have now 30s CD

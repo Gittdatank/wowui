@@ -118,7 +118,7 @@ function MOD:FinalizeConditions()
 					if ct then for k, v in pairs(ct) do if test[k] == v then test[k] = nil end end end
 				end
 			end
-			if c.shared then
+			if c.shared and c.name then
 				local t = MOD.CopyTable(c)
 				t.shared = false
 				MOD.db.global.SharedConditions["[" .. MOD.myClass .. "] " .. c.name] = t
@@ -205,6 +205,11 @@ end
 -- Check if a spell is ready to be cast by the player, if rangeCheck then make sure in range of unit too
 local function CheckSpellReady(spell, unit, rangeCheck, usable, checkCharges, charges)
 	if not spell or (spell == "") then return true end
+	if string.find(spell, "^#%d+") then -- check if name is in special format for specific spell id (i.e., #12345)
+		local id = tonumber(string.sub(spell, 2)) -- extract the spell id and get the name
+		spell = GetSpellInfo(id)
+		if not spell or (spell == "") then return false end
+	end
 	if usable and not IsUsableSpell(spell) then return false end -- checks player has learned the spell, has mana and/or reagents, and reactive conditions are met
 	if IsOn(checkCharges) then -- optionally check for remaining spell charges (can't count on the value of cd if not on cooldown)
 		local n = GetSpellCharges(spell) -- this has to be done separate from cooldown check in order to correctly handle the check for "less than"
@@ -264,18 +269,17 @@ local function CheckAuras(unit, auras, hasAll, isMine, buff, toggle)
 	if (unit == "focus") and MOD.status.noFocus then return not toggle end
 	local found = false
 	for _, aname in pairs(auras) do -- look for each aura and check if buff/debuff and cast by player
+		local foundThis = false
 		local auraList = MOD:CheckAura(unit, aname, buff)
 		if #auraList > 0 then
 			for _, aura in pairs(auraList) do
 				if IsOff(isMine) or (isMine == (aura[6] == "player")) then -- check cast by setting
 					found = true -- found at least one of the auras
-				else
-					if hasAll then return toggle end -- not all are found
+					foundThis = true -- found this particular aura
 				end
 			end
-		else
-			if hasAll then return toggle end -- not all are found
 		end
+		if hasAll and not foundThis then return toggle end -- not all are found
 	end
 	if toggle then return not found end -- flip result if necessary
 	return found

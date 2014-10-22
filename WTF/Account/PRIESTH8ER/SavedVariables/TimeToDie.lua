@@ -20,10 +20,10 @@ TimeToDieDB = {
 		["Git - Azuremyst"] = "Git",
 		["Burk - Azuremyst"] = "Default",
 		["Spih - Cho'gall"] = "Spih - DPS",
-		["Git - Cho'gall"] = "Default",
+		["Greny - Azuremyst"] = "Greny - Azuremyst",
 		["Giitt - Feathermoon"] = "Default",
 		["Lihte - Cho'gall"] = "Default",
-		["Greny - Azuremyst"] = "Greny - Azuremyst",
+		["Git - Cho'gall"] = "Default",
 		["Git - Arthas"] = "Git - Mar 2014",
 	},
 	["profiles"] = {

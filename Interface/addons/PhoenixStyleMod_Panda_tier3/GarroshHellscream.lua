@@ -173,7 +173,7 @@ if arg2=="SPELL_DAMAGE" and spellid==147235 then
     pswasonbossp614=1
   end
   psunitisplayer(guid2,name2)
-  if psunitplayertrue and arg12>400000 then
+  if psunitplayertrue and arg12>8000 then
 
     pscheckwipe1()
     if pswipetrue and pswasonbossp614~=2 then

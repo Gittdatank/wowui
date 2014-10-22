@@ -47,3 +47,5 @@ TitanGuild: disabled
 WhoPulled: disabled
 oqueue: enabled
 ACP: disabled
+Bagnon: enabled
+Bagnon_Config: enabled

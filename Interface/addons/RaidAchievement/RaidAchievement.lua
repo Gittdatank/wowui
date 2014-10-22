@@ -6,7 +6,7 @@ if GetLocale()=="deDE" or GetLocale()=="ruRU" or GetLocale()=="zhTW" or GetLocal
 end
 
 
-	raversion=5.425
+	raversion=6.001
 	local raverstiptext="alpha"
 	if string.len(raversion)==6 then
 		raverstiptext="beta"
@@ -138,7 +138,7 @@ end
 if ramsgtimestart>0 and racurrenttime>ramsgtimestart+0.4 then
 ramsgtimestart=0
 --тут отправда в аддон канал инфы
-  if select(3,GetInstanceInfo())==7 or select(3,GetInstanceInfo())==11 or select(3,GetInstanceInfo())==12 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) then
+  if select(3,GetInstanceInfo())==17 or select(3,GetInstanceInfo())==11 or select(3,GetInstanceInfo())==12 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) then
   SendAddonMessage("RaidAc", "myname:"..ranamemsgsend.."++mychat:"..ramsgmychat.."++", "Instance_CHAT")
   else
   SendAddonMessage("RaidAc", "myname:"..ranamemsgsend.."++mychat:"..ramsgmychat.."++", "RAID")
@@ -391,7 +391,7 @@ raverschech1=1
 if (UnitInRaid("player")) then
 local inInstance, instanceType = IsInInstance()
 if instanceType~="pvp" then
-if select(3,GetInstanceInfo())==7 or select(3,GetInstanceInfo())==11 or select(3,GetInstanceInfo())==12 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) then
+if select(3,GetInstanceInfo())==17 or select(3,GetInstanceInfo())==11 or select(3,GetInstanceInfo())==12 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) then
 SendAddonMessage("RAother", "5"..raversion, "Instance_CHAT")
 else
 SendAddonMessage("RAother", "5"..raversion, "raid")
@@ -483,7 +483,7 @@ raraerrordfsdfsdfjy4:SetPoint("BOTTOMRIGHT", raraerrordfdfdpsdonatefr2, "BOTTOMR
 raraerrordfsdfsdfjy4:SetPoint("BOTTOMLEFT", raraerrordfdfdpsdonatefr2, "BOTTOMLEFT", 0, 0)
 raraerrordfsdfsdfjy4:SetScript("onescapepressed", function(self) raraerrordfsdfsdfjy4:ClearFocus() end)
 raraerrordfsdfsdfjy4:SetFont(GameFontNormal:GetFont(), 13)
-raraerrordfsdfsdfjy4:SetMultiLine()
+raraerrordfsdfsdfjy4:SetMultiLine(true)
 raraerrordfsdfsdfjy4:SetAutoFocus(false)
 raraerrordfsdfsdfjy4:SetHeight(150)
 raraerrordfsdfsdfjy4:SetWidth(225)
@@ -707,16 +707,16 @@ end
 	end
 
 
-if (thisaddonworkea) then PSFeamain3_CheckButton1:SetChecked() else PSFeamain3_CheckButton1:SetChecked(false) end
-if (raminibutshowt) then PSFeamain3_CheckButton11:SetChecked() else PSFeamain3_CheckButton11:SetChecked(false) end
-if (pseashowfailreas) then PSFeamain3_CheckButton2:SetChecked() else PSFeamain3_CheckButton2:SetChecked(false) end
-if (pseashownewvervar) then PSFeamain3_CheckButton3:SetChecked() else PSFeamain3_CheckButton3:SetChecked(false) end
-if (rasoundtoplay[1]==1) then PSFeamain3_CheckButton4:SetChecked() else PSFeamain3_CheckButton4:SetChecked(false) end
-if (rasoundtoplay[2]==1) then PSFeamain3_CheckButton5:SetChecked() else PSFeamain3_CheckButton5:SetChecked(false) end
-if (rasoundtoplay[3]==1) then PSFeamain3_CheckButton6:SetChecked() else PSFeamain3_CheckButton6:SetChecked(false) end
-if (rasoundtoplay[6]==1) then PSFeamain3_CheckButton7:SetChecked() else PSFeamain3_CheckButton7:SetChecked(false) end
+if (thisaddonworkea) then PSFeamain3_CheckButton1:SetChecked(true) else PSFeamain3_CheckButton1:SetChecked(false) end
+if (raminibutshowt) then PSFeamain3_CheckButton11:SetChecked(true) else PSFeamain3_CheckButton11:SetChecked(false) end
+if (pseashowfailreas) then PSFeamain3_CheckButton2:SetChecked(true) else PSFeamain3_CheckButton2:SetChecked(false) end
+if (pseashownewvervar) then PSFeamain3_CheckButton3:SetChecked(true) else PSFeamain3_CheckButton3:SetChecked(false) end
+if (rasoundtoplay[1]==1) then PSFeamain3_CheckButton4:SetChecked(true) else PSFeamain3_CheckButton4:SetChecked(false) end
+if (rasoundtoplay[2]==1) then PSFeamain3_CheckButton5:SetChecked(true) else PSFeamain3_CheckButton5:SetChecked(false) end
+if (rasoundtoplay[3]==1) then PSFeamain3_CheckButton6:SetChecked(true) else PSFeamain3_CheckButton6:SetChecked(false) end
+if (rasoundtoplay[6]==1) then PSFeamain3_CheckButton7:SetChecked(true) else PSFeamain3_CheckButton7:SetChecked(false) end
 
-if (raenablebg==1) then PSFeamain3_CheckButton22:SetChecked() else PSFeamain3_CheckButton22:SetChecked(false) end
+if (raenablebg==1) then PSFeamain3_CheckButton22:SetChecked(true) else PSFeamain3_CheckButton22:SetChecked(false) end
 
 openmenureportchra11()
 openmenureportchra12()
@@ -1158,7 +1158,7 @@ end
 if select(3,GetInstanceInfo())==2 and buul==1 then
 
 local chattt="party"
-if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) then
+if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) then
   chattt="Instance_CHAT"
 end
 
@@ -1191,7 +1191,7 @@ end
 if select(3,GetInstanceInfo())==2 and buul==1 then
 
 local chattt="party"
-if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) then
+if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) then
   chattt="Instance_CHAT"
 end
 
@@ -1224,7 +1224,7 @@ end
 if select(3,GetInstanceInfo())==2 and buul==1 then
 
 local chattt="party"
-if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) then
+if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) then
   chattt="Instance_CHAT"
 end
 
@@ -1357,7 +1357,7 @@ end
 if pseashowfailreas then ratmp1="1-"..rasoundtoplay[1]..rasoundtoplay[2]..rasoundtoplay[3]..rasoundtoplay[4]..rasoundtoplay[5]..rasoundtoplay[6] end
 print ("RA "..UnitName("player").." v."..raversion.." "..ratmp1.." "..ratmp2.." "..wherereportraidach..wherereportpartyach.." "..psa6.." installed: "..raaddoninstalledsins)
 if cchat==nil then
-if select(3,GetInstanceInfo())==7 or select(3,GetInstanceInfo())==11 or select(3,GetInstanceInfo())==12 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) then
+if select(3,GetInstanceInfo())==17 or select(3,GetInstanceInfo())==11 or select(3,GetInstanceInfo())==12 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) then
 SendAddonMessage("RAother", "3info", "Instance_CHAT")
 else
 SendAddonMessage("RAother", "3info", "raid")
@@ -1395,7 +1395,7 @@ if (wherereportraidach=="sebe") then
 out("- "..achlinnk.." |cffff0000"..pseatreb4.."|r"..add_info..ratemp)
 else
 if UnitIsGroupAssistant("player")==false and wherereportraidach=="raid_warning" then
-  if select(3,GetInstanceInfo())==7 or select(3,GetInstanceInfo())==11 or select(3,GetInstanceInfo())==12 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) then
+  if select(3,GetInstanceInfo())==17 or select(3,GetInstanceInfo())==11 or select(3,GetInstanceInfo())==12 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) then
   razapuskanonsa("Instance_CHAT", "RA: {rt8} "..achlinnk.." "..pseatreb4..ratemp)
   else
     if UnitInRaid("player") then
@@ -1450,7 +1450,7 @@ if kudarep=="raid" and UnitInRaid("player")==nil then
   return
 end
 
-if (kudarep=="party" or kudarep=="raid" or kudarep=="raid_warning") and (select(3,GetInstanceInfo())==7 or select(3,GetInstanceInfo())==11 or select(3,GetInstanceInfo())==12 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO)) then
+if (kudarep=="party" or kudarep=="raid" or kudarep=="raid_warning") and (select(3,GetInstanceInfo())==17 or select(3,GetInstanceInfo())==11 or select(3,GetInstanceInfo())==12 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO)) then
 kudarep="Instance_CHAT"
 end
 
@@ -1683,9 +1683,7 @@ if UnitInRaid(name) or UnitInParty(name) then
 raunitplayertrue=1
 else
 
-	local B = tonumber(id:sub(5,5), 16)
-	local maskedB = B % 8
-	if maskedB and maskedB==0 then
+	if (string.find(id,"Player")) then
 		raunitplayertrue=1
 	end
 
@@ -2138,7 +2136,7 @@ psdonateeb22:SetPoint("BOTTOMRIGHT", psdonatefr22, "BOTTOMRIGHT", 0, 0)
 psdonateeb22:SetPoint("BOTTOMLEFT", psdonatefr22, "BOTTOMLEFT", 0, 0)
 psdonateeb22:SetScript("onescapepressed", function(self) psdonateeb22:ClearFocus() end)
 psdonateeb22:SetFont(GameFontNormal:GetFont(), rafontsset[2])
-psdonateeb22:SetMultiLine()
+psdonateeb22:SetMultiLine(true)
 psdonateeb22:SetAutoFocus(false)
 psdonateeb22:SetHeight(150)
 psdonateeb22:SetWidth(185)
@@ -2217,7 +2215,7 @@ raerrordfsdfsdfjy4:SetPoint("TOPLEFT", raerrordfdfdpsdonatefr2, "TOPLEFT", 0, 0)
 raerrordfsdfsdfjy4:SetPoint("BOTTOMRIGHT", raerrordfdfdpsdonatefr2, "BOTTOMRIGHT", 0, 0)
 raerrordfsdfsdfjy4:SetPoint("BOTTOMLEFT", raerrordfdfdpsdonatefr2, "BOTTOMLEFT", 0, 0)
 raerrordfsdfsdfjy4:SetFont(GameFontNormal:GetFont(), 13)
-raerrordfsdfsdfjy4:SetMultiLine()
+raerrordfsdfsdfjy4:SetMultiLine(true)
 raerrordfsdfsdfjy4:SetAutoFocus(false)
 raerrordfsdfsdfjy4:SetHeight(150)
 raerrordfsdfsdfjy4:SetWidth(325)

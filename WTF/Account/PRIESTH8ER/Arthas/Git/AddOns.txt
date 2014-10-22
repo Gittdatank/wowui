@@ -30,8 +30,8 @@ AVRE_Options: disabled
 AVRE_Ulduar: disabled
 AzCastBar: disabled
 AzCastBarOptions: disabled
-Bagnon: disabled
-Bagnon_Config: disabled
+Bagnon: enabled
+Bagnon_Config: enabled
 Bagnon_Forever: enabled
 Bagnon_Tooltips: enabled
 Bartender4: enabled
@@ -555,7 +555,7 @@ _NPCScan: disabled
 _NPCScan.AutoAdd: disabled
 _NPCScan.Overlay: disabled
 _NPCScan.Overlay.Broker: disabled
-BigWigs: enabled
+BigWigs: disabled
 CombatReplay: disabled
 CombatReplay_Logger: enabled
 CombatReplay_SavedData: enabled

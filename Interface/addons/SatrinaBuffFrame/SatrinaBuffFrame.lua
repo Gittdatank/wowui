@@ -67,7 +67,7 @@ sbf.OnInitialize = function(self)
   self.durationIncrement = 1.0
   self.flashCount = 0
   self.justify = {[1] = "LEFT", [2] = "CENTER", [3] = "RIGHT", ["LEFT"] = 1, ["CENTER"] = 2, ["RIGHT"] = 3}
-  
+
   self.version = tonumber(GetAddOnMetadata("SatrinaBuffFrame", "Version"))
   self.minor = tonumber(GetAddOnMetadata("SatrinaBuffFrame", "X-MinorVersion"))
 
@@ -85,7 +85,7 @@ sbf.OnInitialize = function(self)
 	else
 		self.sbfoVersionStr = format("%.01f.%d", self.version, self.minor)
 	end
-	
+
 	self.sortOptions = {
 		self.NoSort,
 		self.AscendingTimeSort,
@@ -98,20 +98,20 @@ sbf.OnInitialize = function(self)
 
 	self.interactiveSortOptions = {
 		"INDEX",
-		"TIME", 
-		"TIME", 
-		"NAME", 
-		"NAME", 
+		"TIME",
+		"TIME",
+		"NAME",
+		"NAME",
 	}
 
   self:RegisterChatCommand("sbf", "ChatCommand")
-  
+
 	self.updateFrame = CreateFrame("Frame")
   self.frames = {}
   self.setup = {}
-  
+
   self.lastUpdate = {}
-  
+
   self.getAuras = {
     ["player"] = false
   }
@@ -137,13 +137,13 @@ sbf.OnInitialize = function(self)
 		HUNTER = {},
 		WARLOCK = {},
 	}
-	
+
 	SML:Register("sound", sbf.strings.sounds[1], [[Sound\Spells\AntiHoly.wav]])
 	SML:Register("sound", sbf.strings.sounds[2], [[Sound\interface\iTellMessage.wav]])
 	SML:Register("sound", sbf.strings.sounds[3], [[Sound\interface\AuctionWindowOpen.wav]])
 	SML:Register("sound", sbf.strings.sounds[4], [[Sound\interface\FriendJoin.wav]])
 	SML:Register("sound", sbf.strings.sounds[5], [[Sound\Creature\Murloc\mMurlocAggroOld.wav]])
-  
+
   if self.sounds then
     for index,data in pairs(self.sounds) do
       SML:Register("sound", data[1], data[2])
@@ -155,7 +155,7 @@ sbf.OnInitialize = function(self)
   self:AddCallout("player", self.AddEnchants, self.RemoveEnchants)
   self:AddCallout("player", self.AddTotems, self.RemoveTotems)
   self:AddCallout("player", self.AddTrackingBuff, self.RemoveTrackingBuff)
-  
+
   -- Options Stub
   InterfaceOptionsPanel()
   hooksecurefunc("InterfaceOptionsListButton_OnClick", self.CheckOptionsClick)
@@ -180,7 +180,7 @@ sbf.OnEnable = function(self)
     self:Print(format(self.strings.OPTIONSVERSION, self.sbfoVersionStr, self.versionStr))
     self.versionMismatch = true
   end
-  
+
   self.player = UnitName("player")
 	_,self.playerClass = UnitClass("player")
   self.scale = UIParent:GetEffectiveScale()
@@ -190,7 +190,9 @@ sbf.OnEnable = function(self)
 	self.db = LibStub("AceDB-3.0"):New("SBFDB", self.defaultVars)
   self:DisableDefaultBuffFrame()
 
-  self.bfModule = SBFBFLoad()
+  if SBFBFLoad then
+     self.bfModule = SBFBFLoad()
+  end
   self:ProfileChanged()
 
   sbf.update = 0
@@ -223,9 +225,9 @@ sbf.FinishSetup = function(self)
   self:RegisterEvent("PLAYER_REGEN_DISABLED", "CombatStatus", true)
   self:RegisterEvent("PLAYER_REGEN_ENABLED", "CombatStatus", false)
   self:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED", "CombatLog", false)
-  
+
   self.db.RegisterCallback(self, "OnProfileChanged", "ProfileChanged", self)
-  
+
   self.checkVisibility = false
   for k,v in pairs(SBF.db.profile.frames) do
     if v.layout.visibility and (v.layout.visibility > 1) then
@@ -277,7 +279,7 @@ SBF.OnUpdate = function(self, e)
   combat = combat + e
   sbf.update = sbf.update + e
   visibility = visibility + e
-  
+
   if not sbf.showingOptions then
     -- Invoke functions set to be called in delayed updates
     if (#delayedCallList > 0) then
@@ -475,13 +477,13 @@ end
 sbf.ChatCommand = function(self, args)
   if args then
     local cmd, arg = string.match(args, "(.-) (.*)")
-    
+
     if not cmd then
       cmd = strlower(args)
     else
       cmd = strlower(cmd)
     end
-    
+
     if (cmd == "options") then
       self:OpenOptions()
     elseif (cmd == "hide") then
@@ -562,7 +564,7 @@ sbf.CloseOptions = function(self)
   self:ClearBuffFrames()
   self:SetupFrames()
 	self.showingOptions = nil
-  
+
   collectgarbage()
   self:RegisterUnits()
   self:UnitVehicle(nil, "player")

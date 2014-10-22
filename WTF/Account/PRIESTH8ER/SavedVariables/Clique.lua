@@ -645,12 +645,12 @@ CliqueDB3 = {
 				["CompactRaidFrame21Buff3"] = true,
 				["CompactRaidFrame17Debuff1"] = true,
 				["CompactRaidFrame27Buff2"] = true,
-				["CompactRaidFrame7DispelDebuff2"] = true,
+				["CompactRaidFrame28Buff3"] = true,
 				["CompactRaidFrame29Buff3"] = true,
 				["CompactRaidFrame18"] = true,
 				["CompactRaidFrame3"] = true,
 				["CompactRaidFrame7Debuff1"] = true,
-				["CompactRaidFrame27DispelDebuff2"] = true,
+				["CompactRaidFrame7DispelDebuff2"] = true,
 				["CompactRaidFrame6DispelDebuff3"] = true,
 				["CompactRaidFrame9Debuff1"] = true,
 				["CompactRaidFrame35Buff1"] = true,
@@ -667,10 +667,10 @@ CliqueDB3 = {
 				["CompactRaidFrame11Debuff3"] = true,
 				["CompactRaidFrame23Buff1"] = true,
 				["CompactRaidFrame2Debuff1"] = true,
-				["CompactRaidFrame30Debuff3"] = true,
+				["CompactRaidFrame33Debuff3"] = true,
 				["CompactRaidFrame11Buff2"] = true,
 				["CompactRaidFrame20DispelDebuff3"] = true,
-				["CompactRaidFrame33Debuff3"] = true,
+				["CompactRaidFrame30Debuff3"] = true,
 				["CompactRaidFrame20"] = true,
 				["CompactRaidFrame31Buff2"] = true,
 				["CompactRaidFrame23DispelDebuff3"] = true,
@@ -725,7 +725,7 @@ CliqueDB3 = {
 				["CompactRaidFrame32"] = true,
 				["SUFUnitplayer"] = true,
 				["CompactRaidFrame22Debuff1"] = true,
-				["CompactRaidFrame28Buff3"] = true,
+				["CompactRaidFrame27DispelDebuff2"] = true,
 				["CompactRaidFrame29Debuff1"] = true,
 				["CompactRaidFrame35DispelDebuff2"] = true,
 				["CompactRaidFrame9Buff2"] = true,
@@ -879,7 +879,7 @@ CliqueDB3 = {
 				["FocusFrame"] = true,
 				["CompactRaidFrame2DispelDebuff2"] = true,
 				["CompactRaidFrame12Buff2"] = true,
-				["CompactRaidFrame7Debuff3"] = true,
+				["CompactRaidFrame4DispelDebuff1"] = true,
 				["CompactRaidFrame3Buff2"] = true,
 				["CompactRaidFrame3DispelDebuff2"] = true,
 				["CompactRaidFrame6DispelDebuff2"] = true,
@@ -923,7 +923,7 @@ CliqueDB3 = {
 				["CompactRaidFrame7DispelDebuff3"] = true,
 				["CompactRaidFrame4"] = true,
 				["PitBull4_Frames_focus"] = true,
-				["CompactRaidFrame4DispelDebuff1"] = true,
+				["CompactRaidFrame7Debuff3"] = true,
 				["CompactRaidFrame2Buff2"] = true,
 				["CompactRaidFrame10DispelDebuff3"] = true,
 				["CompactRaidFrame5Debuff1"] = true,
@@ -987,19 +987,19 @@ CliqueDB3 = {
 				["CompactPartyFrameMember4Buff3"] = true,
 				["Boss1TargetFrame"] = true,
 				["CompactPartyFrameMember3Debuff1"] = true,
-				["CompactPartyFrameMember2DispelDebuff1"] = true,
 				["CompactPartyFrameMember1DispelDebuff1"] = true,
+				["CompactPartyFrameMember4DispelDebuff1"] = true,
 				["CompactPartyFrameMember1"] = true,
 				["CompactPartyFrameMember1Debuff1"] = true,
 				["CompactPartyFramePet3"] = true,
-				["CompactPartyFrameMember3DispelDebuff1"] = true,
+				["CompactPartyFrameMember2DispelDebuff1"] = true,
 				["CompactPartyFrameMember4"] = true,
-				["CompactPartyFrameMember4DispelDebuff1"] = true,
+				["CompactPartyFrameMember5DispelDebuff1"] = true,
 				["CompactPartyFrameMember4DispelDebuff2"] = true,
 				["CompactPartyFrameMember1Buff2"] = true,
 				["PitBull4_Frames_target"] = true,
 				["CompactPartyFrameMember4Debuff1"] = true,
-				["CompactPartyFrameMember5DispelDebuff1"] = true,
+				["CompactPartyFrameMember3DispelDebuff1"] = true,
 				["CompactPartyFramePet2"] = true,
 				["CompactPartyFrameMember5Buff1"] = true,
 				["CompactPartyFrameMember3"] = true,
@@ -1040,11 +1040,11 @@ CliqueDB3 = {
 		["Giit - Cho'gall"] = "Giit - Cho'gall",
 		["Gitt - Arthas"] = "Gitt - Arthas",
 		["Git - Arthas"] = "Git - Cho'gall",
-		["Greny - Azuremyst"] = "Greny - Azuremyst",
 		["Git - Cho'gall"] = "Gitt - Cho'gall",
 		["Git - Azuremyst"] = "Git - Azuremyst",
-		["Spih - Cho'gall"] = "Spih - Cho'gall",
+		["Greny - Azuremyst"] = "Greny - Azuremyst",
 		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
+		["Spih - Cho'gall"] = "Spih - Cho'gall",
 		["Gimm - Cho'gall"] = "Gimm - Cho'gall",
 		["Spih - Arthas"] = "Spih - Arthas",
 	},
@@ -1389,25 +1389,6 @@ CliqueDB3 = {
 				}, -- [2]
 			},
 		},
-		["Greny - Azuremyst"] = {
-			["bindings"] = {
-				{
-					["sets"] = {
-						["default"] = true,
-					},
-					["type"] = "target",
-					["key"] = "BUTTON1",
-					["unit"] = "mouseover",
-				}, -- [1]
-				{
-					["type"] = "menu",
-					["key"] = "BUTTON2",
-					["sets"] = {
-						["default"] = true,
-					},
-				}, -- [2]
-			},
-		},
 		["Git - Cho'gall"] = {
 			["bindings"] = {
 				{
@@ -1500,7 +1481,26 @@ CliqueDB3 = {
 				}, -- [6]
 			},
 		},
-		["Spih - Cho'gall"] = {
+		["Greny - Azuremyst"] = {
+			["bindings"] = {
+				{
+					["sets"] = {
+						["default"] = true,
+					},
+					["type"] = "target",
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["type"] = "menu",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [2]
+			},
+		},
+		["Giitt - Feathermoon"] = {
 			["bindings"] = {
 				{
 					["type"] = "target",
@@ -1519,7 +1519,7 @@ CliqueDB3 = {
 				}, -- [2]
 			},
 		},
-		["Giitt - Feathermoon"] = {
+		["Spih - Cho'gall"] = {
 			["bindings"] = {
 				{
 					["type"] = "target",

@@ -259,7 +259,7 @@ if arg2=="SPELL_AURA_APPLIED" and spellid==122713 then
 		SetMapToCurrentZone()
 		for i = 1,GetNumGroupMembers() do
 			local nameq, _, subgroup, _, _, _, _, online, isDead = GetRaidRosterInfo(i)
-			if subgroup<=psgroup and online and isDead==nil and UnitIsDeadOrGhost(nameq)==nil then
+			if subgroup<=psgroup and online and isDead==nil and UnitIsDeadOrGhost(nameq)==false then
 				--игрок живой
 				if UnitBuff(nameq, spbuf)==nil and UnitDebuff(nameq, spbuf)==nil then
           --нет бафа

@@ -1,11 +1,13 @@
 local addonName, vars = ...
 local addon = RaidBuffStatus
 local L = vars.L
-RBS_svnrev["Config.lua"] = select(3,string.find("$Revision: 677 $", ".* (.*) .*"))
+RBS_svnrev["Config.lua"] = select(3,string.find("$Revision: 684 $", ".* (.*) .*"))
 
 local profile
 function addon:UpdateProfileConfig()
         profile = addon.db.profile
+	if profile.foodlevel > 34 then profile.foodlevel = 25 end -- XXX: 6.0.2 stat squish
+	addon.GI.debug = profile.Debug
 end
 
 local buttonoptions = {
@@ -87,6 +89,7 @@ local options = {
 			desc = 'Toggles debug messages.',
 			func = function()
 				profile.Debug = not profile.Debug
+				addon:UpdateProfileConfig()
 			end,
 			guiHidden = true,
 			cmdHidden = true,
@@ -187,9 +190,9 @@ local options = {
 					name = L["Required food quality"],
 					desc = L["Select which level of food quality you require for the raiders to be considered 'Well Fed'"],
 					min = 0,
-					max = 300,
+					max = 34,
 					step = 1,
-					bigStep = 25,
+					bigStep = 5,
 					get = function(info) return profile.foodlevel end,
 					set = function(info, v)
 						profile.foodlevel = v

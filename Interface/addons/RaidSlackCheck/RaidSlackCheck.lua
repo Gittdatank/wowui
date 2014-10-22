@@ -5,7 +5,7 @@ if GetLocale()=="deDE" or GetLocale()=="ruRU" or GetLocale()=="zhTW" or GetLocal
 rsclocalel()
 end
 
-rscversion=5.428
+rscversion=6.001
 
 
 --zone ID where addon check flasks
@@ -401,7 +401,7 @@ else
 		if (UnitIsGroupAssistant("player") or UnitIsGroupLeader("player")) then
 			chat="raid_warning"
 		end
-		if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+		if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
       chat="Instance_CHAT"
 		end
 		for i=1,#rsctabletoreport1 do
@@ -423,7 +423,7 @@ else
 		if (UnitIsGroupAssistant("player") or UnitIsGroupLeader("player")) then
 			chat="raid_warning"
 		end
-		if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+		if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
       chat="Instance_CHAT"
 		end
 		for i=1,#rsctabletoreport2 do
@@ -445,7 +445,7 @@ else
 		if (UnitIsGroupAssistant("player") or UnitIsGroupLeader("player")) then
 			chat="raid_warning"
 		end
-		if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+		if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
       chat="Instance_CHAT"
 		end
 		for i=1,#rsctabletoreport3 do
@@ -467,7 +467,7 @@ else
 		if (UnitIsGroupAssistant("player") or UnitIsGroupLeader("player")) then
 			chat="raid_warning"
 		end
-		if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+		if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
       chat="Instance_CHAT"
 		end
 		for i=1,#rsctabletoreport4 do
@@ -490,7 +490,7 @@ end
 
 if rscdelayforcombat and curtime>rscdelayforcombat+1.5 then
 rscdelayforcombat=nil
-if rscboy==0 and UnitIsDead("player")==nil and UnitIsDeadOrGhost("player")==nil and UnitName("boss1") and UnitName("boss1")~="" then
+if rscboy==0 and UnitIsDead("player")==nil and UnitIsDeadOrGhost("player")==false and UnitName("boss1") and UnitName("boss1")~="" then
 	rscnewcombatstart()
 	rscnewcombatstartdelay=GetTime()
 	rscnewcombattempdel=GetTime()+7
@@ -501,7 +501,7 @@ end
 
 if rscnewcombattempdel and curtime>rscnewcombattempdel then
 rscnewcombattempdel=nil
-if UnitAffectingCombat("player")==nil and rscboy==1 then
+if UnitAffectingCombat("player")==false and rscboy==1 then
 rscboy=0
 end
 end
@@ -552,7 +552,7 @@ if #rscrebirth3>0 and ((rscrebnextupd and curtime>rscrebnextupd) or rscrebnextup
 			if rscrebirth3[yy] and curtime>rscrebirth3[yy] then
 				--время после реса прошло, проверяем жив ли игрок и в бою ли он
 
-				if UnitIsDeadOrGhost(rscrebirth2[yy])==nil and UnitAffectingCombat(rscrebirth2[yy]) and rscbuffcheckb2[1]==1 and (rscbuffcheckb2[2]==1 or rscbuffcheckb2[3]==1 or rscbuffcheckb2[4]==1 or rscbuffcheckb2[5]==1) and (rscbcanannounce==nil or (rscbcanannounce and GetTime()>rscbcanannounce+180)) then
+				if UnitIsDeadOrGhost(rscrebirth2[yy])==false and UnitAffectingCombat(rscrebirth2[yy]) and rscbuffcheckb2[1]==1 and (rscbuffcheckb2[2]==1 or rscbuffcheckb2[3]==1 or rscbuffcheckb2[4]==1 or rscbuffcheckb2[5]==1) and (rscbcanannounce==nil or (rscbcanannounce and GetTime()>rscbcanannounce+180)) then
 					--игрок жив в бою, проверка бафов и репорты
 					local strin="" --список бафов нету
 
@@ -604,7 +604,7 @@ if #rscrebirth3>0 and ((rscrebnextupd and curtime>rscrebnextupd) or rscrebnextup
 													classfound=1
 												end
 											end
-											if sdc==1 and UnitIsDeadOrGhost(name)==nil and UnitAffectingCombat(name) then
+											if sdc==1 and UnitIsDeadOrGhost(name)==false and UnitAffectingCombat(name) then
 												if rscbuffcheckb2[4]==1 then
 													rscreportchatbyname(rscrebirth2[yy],name,rscbufftimers[1],buffnamelist[x],1)
 												end
@@ -688,7 +688,7 @@ if #rscrebirth5>0 and ((rscrebnextupd2 and curtime>rscrebnextupd2) or rscrebnext
 		for yy=1,#rscrebirth5 do
 			if rscrebirth5[yy] and curtime>rscrebirth5[yy] then
 				--время после реса прошло, проверяем жив ли игрок и в бою ли он
-				if UnitIsDeadOrGhost(rscrebirth4[yy])==nil and UnitAffectingCombat(rscrebirth4[yy]) and rscbuffcheckb2[1]==1 and (rscbuffcheckb2[3]==1 or rscbuffcheckb2[5]==1) and (rscbcanannounce==nil or (rscbcanannounce and GetTime()>rscbcanannounce+180)) then
+				if UnitIsDeadOrGhost(rscrebirth4[yy])==false and UnitAffectingCombat(rscrebirth4[yy]) and rscbuffcheckb2[1]==1 and (rscbuffcheckb2[3]==1 or rscbuffcheckb2[5]==1) and (rscbcanannounce==nil or (rscbcanannounce and GetTime()>rscbcanannounce+180)) then
 					--игрок жив в бою, проверка бафов и репорты
 					local strin="" --список бафов нету
 
@@ -738,7 +738,7 @@ if #rscrebirth5>0 and ((rscrebnextupd2 and curtime>rscrebnextupd2) or rscrebnext
 													classfound=1
 												end
 											end
-										if sdc==1 and UnitIsDeadOrGhost(name)==nil and UnitAffectingCombat(name) then
+										if sdc==1 and UnitIsDeadOrGhost(name)==false and UnitAffectingCombat(name) then
 											if rscbuffcheckb2[5]==1 then
 												rscreportchatbyname(rscrebirth4[yy],name,rscbufftimers[2],buffnamelist[x],2)
 											end
@@ -1133,7 +1133,7 @@ if arg2=="SPELL_CREATE" and arg5 and UnitInRaid(arg5) then
 			if (UnitIsGroupAssistant("player") or UnitIsGroupLeader("player")) then
 				stxt="0"..UnitName("player")
 			end
-			if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+			if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
 			SendAddonMessage("RSCaddon", "c"..stxt, "Instance_CHAT")
 			else
 			SendAddonMessage("RSCaddon", "c"..stxt, "RAID")
@@ -1164,7 +1164,7 @@ if arg2=="SPELL_CAST_START" and arg5 and UnitInRaid(arg5) then
 			if (UnitIsGroupAssistant("player") or UnitIsGroupLeader("player")) then
 				stxt="0"..UnitName("player")
 			end
-			if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+			if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
 			SendAddonMessage("RSCaddon", "d"..stxt, "Instance_CHAT")
 			else
 			SendAddonMessage("RSCaddon", "d"..stxt, "RAID")
@@ -1194,7 +1194,7 @@ if arg2=="SPELL_SUMMON" and arg5 and UnitInRaid(arg5) then
 			if (UnitIsGroupAssistant("player") or UnitIsGroupLeader("player")) then
 				stxt="0"..UnitName("player")
 			end
-			if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+			if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
 			SendAddonMessage("RSCaddon", "e"..stxt, "Instance_CHAT")
 			else
 			SendAddonMessage("RSCaddon", "e"..stxt, "RAID")
@@ -1224,7 +1224,7 @@ if arg2=="SPELL_CREATE" and arg5 and UnitInRaid(arg5) then
 			if (UnitIsGroupAssistant("player") or UnitIsGroupLeader("player")) then
 				stxt="0"..UnitName("player")
 			end
-			if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+			if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
 			SendAddonMessage("RSCaddon", "f"..stxt, "Instance_CHAT")
 			else
 			SendAddonMessage("RSCaddon", "f"..stxt, "RAID")
@@ -1245,7 +1245,7 @@ if arg2=="SPELL_CAST_SUCCESS" then
 for i,usedpotion in ipairs(rscpotiontable) do
 	if usedpotion == arg10 then
 		if UnitInRaid(arg5) then
-			if rscboy==0 and UnitIsDead("player")==nil and UnitIsDeadOrGhost("player")==nil and UnitName("boss1") and UnitName("boss1")~="" and UnitName("player")~=arg5 then
+			if rscboy==0 and UnitIsDead("player")==nil and UnitIsDeadOrGhost("player")==false and UnitName("boss1") and UnitName("boss1")~="" and UnitName("player")~=arg5 then
 				if rscnewcombatstartdelay==nil or (rscnewcombatstartdelay and GetTime()>rscnewcombatstartdelay+5) then
 					if rscdelayforcombat==nil then
 						rscdelayforcombat=GetTime()
@@ -1301,7 +1301,7 @@ end
 --героизм
 if (arg2=="SPELL_CAST_SUCCESS" and (arg10==2825 or arg10==32182 or arg10==80353 or arg10==90355)) then
 
-			if rscboy==0 and UnitIsDead("player")==nil and UnitIsDeadOrGhost("player")==nil and UnitName("boss1") and UnitName("boss1")~="" and UnitName("player")~=arg5 then
+			if rscboy==0 and UnitIsDead("player")==nil and UnitIsDeadOrGhost("player")==false and UnitName("boss1") and UnitName("boss1")~="" and UnitName("player")~=arg5 then
 				if rscnewcombatstartdelay==nil or (rscnewcombatstartdelay and GetTime()>rscnewcombatstartdelay+5) then
 					if rscdelayforcombat==nil then
 						rscdelayforcombat=GetTime()
@@ -1361,7 +1361,7 @@ end
 if arg2=="SPELL_RESURRECT" and rscbuffcheckb2[1]==1 and (rscbuffcheckb2[6]==1 or (UnitIsGroupAssistant("player") or UnitIsGroupLeader("player")) or psfnopromrep) and (arg10==48477 or arg10==20484 or arg10==20742 or arg10==20739 or arg10==20747 or arg10==95750 or arg10==61999) and UnitAffectingCombat(arg5) and (rscbcanannounce==nil or (rscbcanannounce and GetTime()>rscbcanannounce+180)) then
 --works ONLY IN THE RAID-INSTANCE! and NOT LFR
 local a1,a2=IsInInstance()
-if select(3,GetInstanceInfo())==7 then
+if select(3,GetInstanceInfo())==17 then
 --nothing... LFR!
 elseif a1 and a2 and a2=="raid" then
 
@@ -1399,7 +1399,7 @@ end
 if (UnitIsGroupAssistant("player") or UnitIsGroupLeader("player")) then
 	stxt="0"..stxt
 end
-if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
 SendAddonMessage("RSCaddon", "2"..stxt, "Instance_CHAT")
 else
 SendAddonMessage("RSCaddon", "2"..stxt, "RAID")
@@ -1581,13 +1581,13 @@ openmenureprsc()
 
 
 if psversion then
-if (rscraidlrep) then PSFpotioncheckframe_CheckButton1:SetChecked() else PSFpotioncheckframe_CheckButton1:SetChecked(false) end
-if (rsccolornick) then PSFpotioncheckframe_CheckButton2:SetChecked() else PSFpotioncheckframe_CheckButton2:SetChecked(false) end
-if (rsconlyfrombosssave) then PSFpotioncheckframe_CheckButton3:SetChecked() else PSFpotioncheckframe_CheckButton3:SetChecked(false) end
+if (rscraidlrep) then PSFpotioncheckframe_CheckButton1:SetChecked(true) else PSFpotioncheckframe_CheckButton1:SetChecked(false) end
+if (rsccolornick) then PSFpotioncheckframe_CheckButton2:SetChecked(true) else PSFpotioncheckframe_CheckButton2:SetChecked(false) end
+if (rsconlyfrombosssave) then PSFpotioncheckframe_CheckButton3:SetChecked(true) else PSFpotioncheckframe_CheckButton3:SetChecked(false) end
 else
-if (rscraidlrep) then rscmain3_CheckButton1:SetChecked() else rscmain3_CheckButton1:SetChecked(false) end
-if (rsccolornick) then rscmain3_CheckButton2:SetChecked() else rscmain3_CheckButton2:SetChecked(false) end
-if (rsconlyfrombosssave) then rscmain3_CheckButton3:SetChecked() else rscmain3_CheckButton3:SetChecked(false) end
+if (rscraidlrep) then rscmain3_CheckButton1:SetChecked(true) else rscmain3_CheckButton1:SetChecked(false) end
+if (rsccolornick) then rscmain3_CheckButton2:SetChecked(true) else rscmain3_CheckButton2:SetChecked(false) end
+if (rsconlyfrombosssave) then rscmain3_CheckButton3:SetChecked(true) else rscmain3_CheckButton3:SetChecked(false) end
 end
 
 
@@ -1604,9 +1604,9 @@ rscraidlrep=true
 end
 
 if psversion then
-if (rscraidlrep) then PSFpotioncheckframe_CheckButton1:SetChecked() else PSFpotioncheckframe_CheckButton1:SetChecked(false) end
+if (rscraidlrep) then PSFpotioncheckframe_CheckButton1:SetChecked(true) else PSFpotioncheckframe_CheckButton1:SetChecked(false) end
 else
-if (rscraidlrep) then rscmain3_CheckButton1:SetChecked() else rscmain3_CheckButton1:SetChecked(false) end
+if (rscraidlrep) then rscmain3_CheckButton1:SetChecked(true) else rscmain3_CheckButton1:SetChecked(false) end
 end
 
 end
@@ -1630,9 +1630,9 @@ rsccolornick=true
 end
 
 if psversion then
-if (rsccolornick) then PSFpotioncheckframe_CheckButton2:SetChecked() else PSFpotioncheckframe_CheckButton2:SetChecked(false) end
+if (rsccolornick) then PSFpotioncheckframe_CheckButton2:SetChecked(true) else PSFpotioncheckframe_CheckButton2:SetChecked(false) end
 else
-if (rsccolornick) then rscmain3_CheckButton2:SetChecked() else rscmain3_CheckButton2:SetChecked(false) end
+if (rsccolornick) then rscmain3_CheckButton2:SetChecked(true) else rscmain3_CheckButton2:SetChecked(false) end
 end
 
 --обн. тек список
@@ -2586,7 +2586,7 @@ end
 
 function rscchatsendreports(chat,nnn1, nnn2, nnn3, nnn4, nnn5, nnn6, nnn7, nnn8, nnn9, nnn10,nnn11,nnn12)
 
-if chat and (chat=="raid" or chat=="raid_warning" or chat=="party") and (select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD)) then
+if chat and (chat=="raid" or chat=="raid_warning" or chat=="party") and (select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD)) then
   chat="Instance_CHAT"
 end
 

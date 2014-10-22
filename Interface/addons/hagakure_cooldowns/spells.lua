@@ -148,6 +148,15 @@ do -- generate spells list
 				class = "MONK",
 				quality = 1,
 			},
+			{-- тотем целительного прилива
+				spellID = 108280,
+				succ = "SPELL_CAST_SUCCESS",
+				specs = { 0 },
+				CD = 180,
+				cast_time = 10,
+				class = "SHAMAN",
+				quality = 1,
+			},
 		}
 		local type3 = {------ type == 3 на ману
 			{ -- гимн надежды
@@ -245,9 +254,9 @@ do -- generate spells list
 				spellID = 5277,
 				succ = "SPELL_CAST_SUCCESS", 
 				specs = { 0 },
-				CD = 180,
+				CD = 120,
 				class = "ROGUE",
-				cast_time = 15,
+				cast_time = 10,
 				quality = 1,
 			},
 			{ -- маг леденая глыба
@@ -344,10 +353,11 @@ do -- generate spells list
 				spellID = 19263,
 				succ = "SPELL_CAST_SUCCESS", 
 				specs = { 0 },
-				CD = 120,
+				CD = 180,
 				cast_time = 5,
 				class = "HUNTER",
 				quality = 1,
+				charges = 2,
 			},
 			{ -- монах укрепляющий отвар (барскин+ласт стенд)
 				spellID = 115203,
@@ -509,9 +519,17 @@ do -- generate spells list
 			{ -- войско мертвых дк
 				spellID = 42650,
 				class = "DEATHKNIGHT",
-				specs = { 0 },
+				specs = { 1, 2 },
 				succ = "SPELL_CAST_SUCCESS",
 				CD = 600,
+				cast_time = 44,
+			},
+			{ -- войско мертвых дк нечестивость
+				spellID = 42650,
+				class = "DEATHKNIGHT",
+				specs = { 3 },
+				succ = "SPELL_CAST_SUCCESS",
+				CD = 540,
 				cast_time = 44,
 			},
 			{ -- Сокрушительный бросок	
@@ -984,6 +1002,14 @@ do -- generate spells list
 			},
 			
 			----------------- Друид
+			{ -- природная стремительность
+				spellID = 132158,
+				succ = "SPELL_AURA_REMOVED",
+				specs = { 1, 4 },
+				class = "DRUID",
+				CD = 60,
+				quality = 1,
+			},
 			{ -- друид порыв
 				spellID = 1850,
 				succ = "SPELL_CAST_SUCCESS", 
@@ -1170,7 +1196,7 @@ do -- generate spells list
 				spellID = 86669,
 				succ = "SPELL_SUMMON", 
 				specs = { 1 },
-				CD = 300,
+				CD = 180,
 				cast_time = 30,
 				class = "PALADIN",
 				quality = 1,
@@ -1232,7 +1258,7 @@ do -- generate spells list
 				spellID = 781,
 				succ = "SPELL_CAST_SUCCESS", 
 				specs = { 0 },
-				CD = 25,
+				CD = 20,
 				class = "HUNTER",
 				quality = 1,
 			},
@@ -1251,6 +1277,15 @@ do -- generate spells list
 				CD = 45,
 				cast_time = 4,
 				class = "HUNTER",
+				quality = 1,
+			},
+			{ -- глушаший выстрел
+				spellID = 34490,
+				class = "HUNTER",
+				CD = 24,
+				specs = { 2 },
+				succ = "SPELL_CAST_SUCCESS",
+				cast_time = 3,
 				quality = 1,
 			},
 		
@@ -1465,6 +1500,15 @@ do -- generate spells list
 				class = "PALADIN",
 				quality = 1,
 			},
+			{ -- вой ужаса варлок
+				spellID = 5484,
+				class = "WARLOCK",
+				CD = 40,
+				succ = "SPELL_CAST_SUCCESS",
+				specs = { 0 },
+				-- trigger = {},
+				quality = 1,
+			},
 		}
 		local type10 = {-- type == 10 кулдауны личные на +дамаг
 			{ -- хант, собаки
@@ -1628,14 +1672,6 @@ do -- generate spells list
 				class = "HUNTER",
 				quality = 1,
 			},
-			{ -- хант готовность
-				spellID = 23989,
-				succ = "SPELL_CAST_SUCCESS", 
-				specs = { 0 },
-				CD = 300,
-				class = "HUNTER",
-				quality = 1,
-			},
 			{ -- хант бм+дамаг
 				spellID = 19574,
 				succ = "SPELL_CAST_SUCCESS", 
@@ -1669,12 +1705,12 @@ do -- generate spells list
 		local type11 = { -- type == 11 просто рандомный бред
 		}
 
-		local shok = { -- для отладки Шок небес
-			spellID = 25914, -- ID спелла
-			class = "PALADIN", -- класс, которому принадлежит спелл
+		local shok = { -- для отладки реньюшка
+			spellID = 139, -- ID спелла
+			class = "PRIEST", -- класс, которому принадлежит спелл
 			CD = 6, -- кулдаун в секундах у спела
-			specs = { 1 },
-			succ = "SPELL_HEAL", -- тип ивента, который означает удачное применение , возможен вариант массива { "SPELL_HEAL", "SPELL_AURA_APPLIED" }
+			specs = { 2 },
+			succ = "SPELL_CAST_SUCCESS", -- тип ивента, который означает удачное применение , возможен вариант массива { "SPELL_HEAL", "SPELL_AURA_APPLIED" }
 			type = 1,  --[[ тип спелла: 
 					1 - аура на -дамаг (купол, мастер аур и тд) 
 					2 - аое хил (гимн пристов, транквил) 
@@ -1688,20 +1724,35 @@ do -- generate spells list
 					10 - кулдауны личные на +дамаг
 				]]
 			trigger = { 19750, }, -- дополнительные ид с которых триггерится ивент
-			cast_time = 5, -- время действия спелла
+			cast_time = 0, -- время действия спелла
 			quality = 3, -- качество спелла при сортировке 1/nil - плохое 2 - хорошее 3 - лучшее
+			charges = 2, -- количество зарядов спелла
 		}
 
-		for _, i in next, type1 do i.type = 1; table.insert(spells,i) end
-		for _, i in next, type2 do i.type = 2; table.insert(spells,i) end
-		for _, i in next, type3 do i.type = 3; table.insert(spells,i) end
-		for _, i in next, type4 do i.type = 4; table.insert(spells,i) end
-		for _, i in next, type5 do i.type = 5; table.insert(spells,i) end
-		for _, i in next, type6 do i.type = 6; table.insert(spells,i) end
-		for _, i in next, type7 do i.type = 7; table.insert(spells,i) end
-		for _, i in next, type8 do i.type = 8; table.insert(spells,i) end
-		for _, i in next, type9 do i.type = 9; table.insert(spells,i) end
-		for _, i in next, type10 do i.type = 10; table.insert(spells,i) end
+		local bad_spells = 0;
+		local function formArray(arr, t)
+		    for _, i in next, arr do
+			    if (select(1, GetSpellInfo(i.spellID)) ~= nil) then
+				    i.type = t
+					table.insert(spells, i)
+				else
+					bad_spells = bad_spells + 1
+					HCoold:Printf("   bad spell id = %d", i.spellID)
+				end
+			end
+		end
+		
+		formArray(type1, 1)
+		formArray(type2, 2)
+		formArray(type3, 3)
+		formArray(type4, 4)
+		formArray(type5, 5)
+		formArray(type6, 6)
+		formArray(type7, 7)
+		formArray(type8, 8)
+		formArray(type9, 9)
+		formArray(type10, 10)
+		HCoold:Printf("Found %d old spells in common spells", bad_spells)
 		HCoold.config.types_amount = 10
 		
 		if HCoold.debug then table.insert(spells,shok) end
@@ -1803,15 +1854,6 @@ do -- generate spells list
 				class = "DRUID",
 				CD = 30,
 				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				-- trigger = {},
-				quality = 1,
-			},
-			[132158] = { -- природная стремительность
-				spellID = 132158,
-				class = "DRUID",
-				CD = 60,
-				succ = "SPELL_AURA_REMOVED",
 				type = 8,
 				-- trigger = {},
 				quality = 1,
@@ -2053,15 +2095,6 @@ do -- generate spells list
 				cast_time = 12,
 				quality = 1,
 			},
-			[5484] = { -- вой ужаса
-				spellID = 5484,
-				class = "WARLOCK",
-				CD = 40,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 9,
-				-- trigger = {},
-				quality = 1,
-			},
 			[108416] = { -- жертвенный приговор
 				spellID = 108416,
 				class = "WARLOCK",
@@ -2138,6 +2171,26 @@ do -- generate spells list
 				cast_time = 8,
 				quality = 1,
 			},
+			[108508] = { -- Ярость Маннорота
+				spellID = 108508,
+				class = "WARLOCK",
+				CD = 60,
+				succ = "SPELL_CAST_SUCCESS",
+				type = 8,
+				-- trigger = {},
+				cast_time = 10,
+				quality = 1,
+			},
+			[47897] = { -- Дыхание демона
+				spellID = 47897,
+				class = "WARLOCK",
+				CD = 20,
+				succ = "SPELL_CAST_SUCCESS",
+				type = 9,
+				-- trigger = {},
+				cast_time = 6,
+				quality = 1,
+			},
 --[[
 			[119049] = { -- коварство килджедена 
 				spellID = 119049,
@@ -2193,12 +2246,13 @@ do -- generate spells list
 				quality = 1,
 			},
 			[51052] = { -- зона антимагии
+				turn_on = true,
 				spellID = 51052,
 				class = "DEATHKNIGHT",
 				CD = 120,
 				succ = "SPELL_CAST_SUCCESS",
 				type = 1,
-				cast_time = 10,
+				cast_time = 3,
 				-- trigger = {},
 				quality = 1,
 			},
@@ -2320,22 +2374,12 @@ do -- generate spells list
 				CD = 45,
 				succ = "SPELL_CAST_SUCCESS",
 				type = 9,
-				cast_time = 8,
+				cast_time = 4,
 				-- trigger = {},
 				quality = 1,
 			},
 		}
 		local list_hunter = { --???????
-			[34490] = { -- глушаший выстрел
-				spellID = 34490,
-				class = "HUNTER",
-				CD = 24,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				cast_time = 3,
-				-- trigger = {},
-				quality = 1,
-			},
 			[109304] = { -- живость
 				spellID = 109304,
 				class = "HUNTER",
@@ -2451,11 +2495,21 @@ do -- generate spells list
 			[108271] = { -- астральный сдвиг
 				spellID = 108271,
 				class = "SHAMAN",
-				CD = 120,
+				CD = 90,
 				succ = "SPELL_CAST_SUCCESS",
 				type = 4,
 				cast_time = 6,
 				-- trigger = {},
+				quality = 1,
+			},
+			[147074] = { -- целительные потоки
+				spellID = 108280,
+				class = "SHAMAN",
+				CD = 90,
+				succ = "SPELL_CAST_SUCCESS",
+				type = 4,
+				cast_time = 6,
+				trigger = {},
 				quality = 1,
 			},
 			[51485] = { -- тотем хватки земли +
@@ -2508,7 +2562,7 @@ do -- generate spells list
 				-- trigger = {},
 				quality = 1,
 			},
-			[108280] = { -- тотем целительного прилива +
+			[147074] = { -- стремительные потоки
 				turn_on = true,
 				spellID = 108280,
 				class = "SHAMAN",
@@ -2517,7 +2571,7 @@ do -- generate spells list
 				type = 2,
 				cast_time = 10,
 				-- trigger = {},
-				quality = 1,
+				quality = 3,
 			},
 			[108281] = { -- наставления предков +
 				spellID = 108281,
@@ -2686,7 +2740,7 @@ do -- generate spells list
 			[36554] = { -- шаг сквозь тень
 				spellID = 36554,
 				class = "ROGUE",
-				CD = 24,
+				CD = 20,
 				succ = "SPELL_CAST_SUCCESS",
 				type = 8,
 				-- cast_time = 3,
@@ -2748,7 +2802,7 @@ do -- generate spells list
 			[46924] = { -- вихрь клинков +
 				spellID = 46924,
 				class = "WARRIOR",
-				CD = 90,
+				CD = 60,
 				succ = "SPELL_CAST_SUCCESS",
 				type = 8,
 				-- cast_time = 3,
@@ -2796,6 +2850,7 @@ do -- generate spells list
 				quality = 1,
 			},
 			[114030] = { -- бдительность
+				turn_on = true,
 				spellID = 114030,
 				class = "WARRIOR",
 				CD = 120,
@@ -2837,19 +2892,34 @@ do -- generate spells list
 			},
 		}
 		
-		for k, i in next, list_paladin do list_talents[k] =  i end
-		for k, i in next, list_druid do list_talents[k] =  i end
-		for k, i in next, list_priest do list_talents[k] =  i end
-		for k, i in next, list_warlock do list_talents[k] =  i end
-		for k, i in next, list_dk do list_talents[k] =  i end
-		for k, i in next, list_monk do list_talents[k] =  i end
-		for k, i in next, list_hunter do list_talents[k] =  i end
-		for k, i in next, list_shaman do list_talents[k] =  i end
-		for k, i in next, list_mage do list_talents[k] =  i end
-		for k, i in next, list_rogue do list_talents[k] =  i end
-		for k, i in next, list_warrior do list_talents[k] =  i end
+		local bad_spells = 0;
+		local function formArray(arr)
+		    for k, i in next, arr do
+			    if (select(1, GetSpellInfo(i.spellID)) ~= nil) then
+				    i.talent = true
+					list_talents[k] = i
+				else
+					bad_spells = bad_spells + 1
+					HCoold:Printf("   bad spell id = %d", i.spellID)
+				end
+			end
+		end
 		
-		for _, i in next, list_talents do i.talent = true end
+		for i = 55694, 55794, 1 do if (GetSpellLink(i) ~= nil) then HCoold:Printf("Spell %d %s", i, GetSpellLink(i)) end end
+		
+		formArray(list_paladin)
+		formArray(list_druid)
+		formArray(list_priest)
+		formArray(list_warlock)
+		formArray(list_dk)
+		formArray(list_monk)
+		formArray(list_hunter)
+		formArray(list_shaman)
+		formArray(list_mage)
+		formArray(list_rogue)
+		formArray(list_warrior)
+		
+		HCoold:Printf("Found %d old spells in talents", bad_spells)
 	end
 
 	do -- generate spec_spells
@@ -3412,7 +3482,7 @@ do -- generate spells list
 					[3] = 102401,
 				},
 				[2] = {
-					[1] = 132158,
+					[1] = nil,
 					[2] = 108238,
 					[3] = 102351,
 				},
@@ -3447,7 +3517,7 @@ do -- generate spells list
 					[3] = nil,
 				},
 				[2] = {
-					[1] = 5484,
+					[1] = 47897,
 					[2] = 6789,
 					[3] = 30283,
 				},
@@ -3469,7 +3539,7 @@ do -- generate spells list
 				[6] = {
 					[1] = 108505,
 					[2] = nil,
-					[3] = nil,
+					[3] = 108508,
 				},
 			},
 		})
@@ -3482,7 +3552,7 @@ do -- generate spells list
 					[3] = nil,
 				},
 				[2] = {
-					[1] = 34490,
+					[1] = nil,
 					[2] = 19386,
 					[3] = 109248,
 				},
@@ -3532,7 +3602,7 @@ do -- generate spells list
 					[3] = nil,
 				},
 				[5] = {
-					[1] = 108280,
+					[1] = 147074,
 					[2] = 108281,
 					[3] = nil,
 				},
@@ -3719,527 +3789,6 @@ do -- generate spells list
 			},
 		})
 	end
-	
-	do -- sybiosis generate
-		sybiosis_gain_druid = {
-			{ -- антимагический панцирь от дк баланс друиду
-				spellID = 110570,
-				class = "DEATHKNIGHT",
-				CD = 45,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 1 },
-				cast_time = 5,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- костяной щит от дк танку друиду
-				turn_on = true,
-				spellID = 122285,
-				class = "DEATHKNIGHT",
-				CD = 60,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 4,
-				specs = { 3 },
-				-- cast_time = 5,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- незыблемость льда от дк рестор друиду
-				spellID = 110575,
-				class = "DEATHKNIGHT",
-				CD = 180,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 4,
-				specs = { 4 },
-				cast_time = 12,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- хант - друид | мисдирект баланс
-				spellID = 110588,
-				class = "HUNTER",
-				CD = 30,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 1 },
-				-- cast_time = 12,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- хант - друид | фд кот
-				spellID = 110597,
-				class = "HUNTER",
-				CD = 30,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 2 },
-				-- cast_time = 12,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- хант - друид | ловушка медвед
-				spellID = 110600,
-				class = "HUNTER",
-				CD = 30,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 3 },
-				-- cast_time = 12,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- хант - друид | сдерживание рестор
-				spellID = 110617,
-				class = "HUNTER",
-				CD = 120,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 4,
-				specs = { 4 },
-				cast_time = 5,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- маг - друид | копии баланс
-				spellID = 110621,
-				class = "MAGE",
-				CD = 180,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 10,
-				specs = { 1 },
-				cast_time = 30,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- маг - друид | фрост нова коту
-				spellID = 110693,
-				class = "MAGE",
-				CD = 25,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 9,
-				specs = { 2 },
-				--cast_time = 5,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- маг - друид | айс блок рестору
-				spellID = 110696,
-				class = "MAGE",
-				CD = 300,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 4,
-				specs = { 4 },
-				cast_time = 10,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- монах - друид | дизарм балансу
-				spellID = 126458,
-				class = "MONK",
-				CD = 60,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 1 },
-				cast_time = 10,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- монах - друид | бред типа чарджа коту
-				spellID = 126449,
-				class = "MONK",
-				CD = 35,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 2 },
-				-- cast_time = 10,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- монах - друид | +10% доджа медведю
-				spellID = 126453,
-				class = "MONK",
-				CD = 60,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 3 },
-				cast_time = 8,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- монах - друид | -дамаг рестору
-				spellID = 126456,
-				class = "MONK",
-				CD = 180,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 4,
-				specs = { 4 },
-				cast_time = 20,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- паладин - друид | стан балансу
-				spellID = 110698,
-				class = "PALADIN",
-				CD = 60,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 9,
-				specs = { 1 },
-				--cast_time = 20,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- паладин - друид | бабл фералу
-				spellID = 110700,
-				class = "PALADIN",
-				CD = 300,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 4,
-				specs = { 2 },
-				cast_time = 8,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- паладин - друид | лужа проту
-				spellID = 110701,
-				class = "PALADIN",
-				CD = 30,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 3 },
-				--cast_time = 20,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- паладин - друид | диспел яд/болезнь рестору
-				spellID = 122288,
-				class = "PALADIN",
-				CD = 8,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 4 },
-				--cast_time = 20,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- прист - друид | масс диспел сове
-				spellID = 110707,
-				class = "PRIEST",
-				CD = 60,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 1 },
-				--cast_time = 20,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- прист - друид | бабл коту
-				spellID = 110715,
-				class = "PRIEST",
-				CD = 180,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 2 },
-				cast_time = 6,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- прист - друид | защита от страха медведю
-				spellID = 110717,
-				class = "PRIEST",
-				CD = 180,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 3 },
-				--cast_time = 20,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- прист - друид | тянулка рестору
-				spellID = 110718,
-				class = "PRIEST",
-				CD = 90,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 4 },
-				--cast_time = 20,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- рога - друид | кош балансу
-				spellID = 110788,
-				class = "ROGUE",
-				CD = 120,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 4,
-				specs = { 1 },
-				cast_time = 5,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- рога - друид | додж рестору
-				spellID = 110791,
-				class = "ROGUE",
-				CD = 180,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 4 },
-				cast_time = 15,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- шаман - друид | волки коту
-				spellID = 110807,
-				class = "SHAMAN",
-				CD = 120,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 2 },
-				cast_time = 30,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- шаман - друид | касты на ходу рестору
-				spellID = 110806,
-				class = "SHAMAN",
-				CD = 120,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 4 },
-				cast_time = 15,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- варлок - друид | шв балансу
-				spellID = 122291,
-				class = "WARLOCK",
-				CD = 180,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 4,
-				specs = { 1 },
-				cast_time = 12,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- варлок - друид | телепортация в круг рестору
-				spellID = 112970,
-				class = "WARLOCK",
-				CD = 30,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 4 },
-				--cast_time = 20,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- воин - друид | интервейн балансом О_о
-				spellID = 122292,
-				class = "WARRIOR",
-				CD = 30,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 1 },
-				--cast_time = 20,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- воин - друид | раскол брони коту
-				spellID = 112997,
-				class = "WARRIOR",
-				CD = 300,
-				succ = {"SPELL_CAST_SUCCESS", "SPELL_DAMAGE", "SPELL_MISSED" },
-				type = 6,
-				specs = { 2 },
-				cast_time = 10,
-				-- trigger = {},
-				quality = 1,
-				turn_on = true,
-			},
-			{ -- воин - друид | отражение залинаний медведю
-				spellID = 113002,
-				class = "WARRIOR",
-				CD = 120,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 3 },
-				cast_time = 5,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- воин - друид | фир рестору
-				spellID = 113004,
-				class = "WARRIOR",
-				CD = 60,
-				succ = "SPELL_CAST_SUCCESS",
-				type =9,
-				specs = { 4 },
-				--cast_time = 20,
-				-- trigger = {},
-				quality = 1,
-			},
-		}
-
-		local old_symb = {
-		}
-		
-		sybiosis_gain_raid = {
-			{ -- дикий гриб чума не блад дк
-				spellID = 113516,
-				class = "DEATHKNIGHT",
-				CD = 180,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 2, 3 },
-				cast_time = 30,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- хантер порыв
-				spellID = 113073,
-				class = "HUNTER",
-				CD = 180,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 0 },
-				cast_time = 15,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- монк стан дд
-				spellID = 127361,
-				class = "MONK",
-				CD = 60,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 9,
-				specs = { 2 },
-				cast_time = 3,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- паладин возрождение холик
-				spellID = 113269,
-				class = "PALADIN",
-				CD = 600,
-				succ = "SPELL_RESURRECT",
-				turn_on = true,
-				type = 7,
-				specs = { 1 },
-				-- cast_time = 15,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- шп транквил
-				spellID = 113277,
-				class = "PRIEST",
-				CD = 480,
-				turn_on = true,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 2,
-				specs = { 3 },
-				cast_time = 8,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- рога медвед+таунт
-				spellID = 113613,
-				class = "ROGUE",
-				CD = 180,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 0 },
-				cast_time = 30,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- элем+энх столп света
-				spellID = 113286,
-				class = "SHAMAN",
-				CD = 60,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 1, 2 },
-				cast_time = 10,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- вар тревожный рык (на скорость бега)
-				spellID = 122294,
-				class = "WARRIOR",
-				CD = 300,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 1, 2 },
-				cast_time = 8,
-				-- trigger = {},
-				quality = 1,
-			},
-			----------------
-			{ -- монк Танк сейв
-				spellID = 113306,
-				class = "MONK",
-				CD = 180,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 4,
-				specs = { 1 },
-				turn_on = true,
-				cast_time = 6,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- вар прот - юз на додж
-				spellID = 122286,
-				class = "WARRIOR",
-				CD = 60,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 8,
-				specs = { 3 },
-				cast_time = 6,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- мощь урсока блад дк
-				spellID = 113072,
-				class = "DEATHKNIGHT",
-				CD = 180,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 4,
-				turn_on = true,
-				specs = { 1 },
-				cast_time = 20,
-				-- trigger = {},
-				quality = 1,
-			},
-			{ -- паладин дубовая кожа прот
-				spellID = 113075,
-				class = "PALADIN",
-				turn_on = true,
-				CD = 60,
-				succ = "SPELL_CAST_SUCCESS",
-				type = 4,
-				specs = { 2 },
-				cast_time = 6,
-				-- trigger = {},
-				quality = 1,
-			},
-			
-		}
-	
-		HCoold.symbiosys_spells_id = { -- массив с ид симбиозов 
-			[110309] = true,  -- друид 
-			[110478] = true,  -- дк
-			[110479] = true,  -- хант
-			[110482] = true,  -- маг
-			[110484] = true,  -- пал
-			[110483] = true,  -- монк
-			[110485] = true,  -- прист
-			[110486] = true,  -- рога
-			[110488] = true,  -- шам
-			[110490] = true,  -- варлок
-			[110491] = true,  -- вар
-		}
-	
-		for _, i in next, sybiosis_gain_druid do i.symb = "druid" end
-		for _, i in next, sybiosis_gain_raid do i.symb = "raid" end
-	end
 end
 
 function HCoold:MakeSpellList() -- in future - making self.spells that contains spells, that will be tracking by system by user configuration
@@ -4418,155 +3967,6 @@ function HCoold:GenerateSpellList()
 			end,
 			get = function() return self.db.profile.types[k_].enable end,
 		}
-	end
-	
-	do -- symbiosys raid
-		out["symb_raid"] = {
-			type = "group",
-			cmdHidden = true,
-			name = L["symbiosis raid"],
-			desc = L["Track spells for raid"],
-			order = 13 + 30,
-			args = {},
-		}
-		local t = out["symb_raid"].args
-		for _, i in next, sybiosis_gain_raid do
-			local tt = self:SymbiosysSpellIndex(i)
-			local spname = select(1, GetSpellInfo(i.spellID)) or L["No spell found"]
-			local splink = select(1, GetSpellLink(i.spellID))
-			local specs = ""
-			local tmp = ""
-			for _, j in next, i.specs do 
-				specs = string.format("%s%s%s",specs,tmp,j)
-				tmp = ", "
-			end
-			local desc = function(self)
-				GameTooltip:ClearLines()
-				if splink then
-					GameTooltip:SetHyperlink(splink)
-				end
-				GameTooltip:AppendText("\n")
-				GameTooltip:AppendText(string.format(L["class %s specs %s"],L[i.class],L[i.class .. specs]))
-				GameTooltip:AppendText(string.format(L["\ntype is %s"],L["type" .. i.type]))
-				GameTooltip:AppendText("\n")
-				return nil
-			end
-			t[tt] = {
-				type = "toggle",
-				name = spname,
-				desc = desc,
-				descStyle = "Toggle",
-				set = function(tmp,key)
-					self.db.profile.trackSpells[tt] = key
-				end,
-				get = function() 
-					return self.db.profile.trackSpells[tt]
-				end,
-				--order = order,
-			}
-		end
-		t.turnoff = {
-			type = "execute",
-			name = L["turn all off"],
-			desc = L["desc turn all off"],
-			func = function() for _, i in next, t do if i.type == "toggle" then i.set(nil,false) end end end,
-			order = 1,
-		}
-		t.turnon = {
-			type = "execute",
-			name = L["turn all on"],
-			desc = L["desc turn all on"],
-			func = function() for _, i in next, t do if i.type == "toggle" then i.set(nil,true) end end end,
-			order = 2,
-		}
-		t["header"] = {
-			type = "header",
-			cmdHidden = true,
-			name = "",
-			order = 3
-		}
-	end
-
-	do -- symbiosys druid
-		out["symb_druid"] = {
-			type = "group",
-			cmdHidden = true,
-			name = L["symbiosis druid"],
-			desc = L["Track spells for druid"],
-			order = 14 + 30,
-			args = {},
-		}
-		local t = out["symb_druid"].args
-		local order = {
-			-- ["DRUID"] = 0,
-			["PALADIN"] = 1,
-			["PRIEST"] = 2,
-			["WARLOCK"] = 3,
-			["DEATHKNIGHT"] = 4,
-			["MONK"] = 5,
-			["HUNTER"] = 6,
-			["SHAMAN"] = 7,
-			["MAGE"] = 8,
-			["WARRIOR"] = 9,
-			["ROGUE"] = 10,
-		}
-		for _, i in next, sybiosis_gain_druid do
-			local tt = self:SymbiosysSpellIndex(i)
-			local spname = select(1, GetSpellInfo(i.spellID)) or L["No spell found"]
-			local splink = select(1, GetSpellLink(i.spellID))
-			local specs = ""
-			local tmp = ""
-			for _, j in next, i.specs do 
-				specs = string.format("%s%s%s",specs,tmp,j)
-				tmp = ", "
-			end
-			local desc = function(self)
-				GameTooltip:ClearLines()
-				if splink then
-					GameTooltip:SetHyperlink(splink)
-				end
-				GameTooltip:AppendText("\n")
-				GameTooltip:AppendText(string.format(L["class %s specs %s"],L[i.class],L["DRUID" .. specs]))
-				GameTooltip:AppendText(string.format(L["\ntype is %s"],L["type" .. i.type]))
-				GameTooltip:AppendText("\n")
-				return nil
-			end
-			t[tt] = {
-				type = "toggle",
-				name = spname,
-				desc = desc,
-				descStyle = "Toggle",
-				set = function(tmp,key)
-					self.db.profile.trackSpells[tt] = key
-				end,
-				get = function() 
-					return self.db.profile.trackSpells[tt]
-				end,
-				order = order[i.class] * 20 + 5,
-			}
-		end
-		t.turnoff = {
-			type = "execute",
-			name = L["turn all off"],
-			desc = L["desc turn all off"],
-			func = function() for _, i in next, t do if i.type == "toggle" then i.set(nil,false) end end end,
-			order = 1,
-		}
-		t.turnon = {
-			type = "execute",
-			name = L["turn all on"],
-			desc = L["desc turn all on"],
-			func = function() for _, i in next, t do if i.type == "toggle" then i.set(nil,true) end end end,
-			order = 2,
-		}
-		for class, ord in next, order do
-			t["header" .. class] = {
-				type = "header",
-				cmdHidden = true,
-				name = L[class],
-				order = ord * 20 + 3,
-			}
-		end
 	end
 	
 	do -- talent section
@@ -5311,56 +4711,6 @@ function HCoold:RunTalentsSpellSelection() -- talents configuration
 	end
 end
 
-function HCoold:GetSymbiosysSpell(inp) ---  inp = {name, class, spec}
-	local out = {}
-	local druids_arr = self.db.profile.druids_arr
-	
-	if type(inp) == "string" then inp = self:GetSpec(inp) end
-
-	if druids_arr[inp.name] then
-		-- если это друид, который кастанул на кого-то симбиоз. 
-		-- тогда мы берем класс игрока на которого кастанут симбиоз, спек друида
-		-- и не забываем проверить добавили для трекинга ли данный спелл
-		
-		-- для начала получим инфу об игроке на которого кастанули спелл
-		local pl_n = self:GetSpec(druids_arr[inp.name])
-		
-		-- теперь проходимся по базе
-		for _, spell in next, sybiosis_gain_druid do
-			if pl_n.class == spell.class then
-				local check = false
-				for _, k in next, spell.specs do
-					if k == 0 then check = true end
-					if k == inp.spec then check = true end
-				end
-				if not self.db.profile.trackSpells[self:SymbiosysSpellIndex(spell)] then check = false end -- это проверка трекинга данного заклинания
-				if check then table.insert(out, spell) end
-			end
-		end
-	else
-		for _, j in next, druids_arr do
-			if j == inp.name then
-				-- и так, это игрок на которого кастанул друид заклинание, так что мы берем его класс
-				-- и добавляем соотв заклинание
-				for _, spell in next, sybiosis_gain_raid do
-					if inp.class == spell.class then
-						-- проверить спек!!!
-						local check = false
-						for _, k in next, spell.specs do
-							if k == 0 then check = true end
-							if k == inp.spec then check = true end
-						end
-						if not self.db.profile.trackSpells[self:SymbiosysSpellIndex(spell)] then check = false end -- это проверка трекинга данного заклинания
-						if check then table.insert(out,spell) end
-					end
-				end
-			end
-		end
-	end
-	
-	return out
-end
-
 function HCoold:GetTalentSpell(inp)
 	local out = {}
 	if not self.db.profile.auto_scan_talents then return out end
@@ -5384,35 +4734,6 @@ function HCoold:GetTalentSpell(inp)
 					-- и так, спелл отслеживается и у нашего парня есть ->
 					table.insert(out,spell)
 				end
-			end
-		end
-	end
-	
-	return out
-end
-
-function HCoold:GetTalentSpellForGridIntegration(inp, spCheck)
-	local out = false
-	if not self.db.profile.auto_scan_talents then return out end
-	if type(inp) == "string" then inp = self:GetSpec(inp) end
-	
-	-- и так у нас есть имя игрока, его класс
-	-- нам надо взять таланты из памяти
-	-- проверить изучил ли он их или нет
-	-- включено ли отслеживание аддоном и выдать в массиве
-	local t = self.db.faction.AutoTalents[inp.name]
-	if t then -- у нас есть таланты по данному игроку
-		local ct = nil
-		for _, k in next, class_talents do
-			if k.class == inp.class then ct = k end
-		end
-		-- проходимся по всем талантам
-		for i = 1, 6 do
-			if ct.talents[i][t.talents[i]] then -- у нас есть в базе данных этот талант
-				local spell = list_talents[ct.talents[i][t.talents[i]]] -- спелл который следует добавить/не добавить
-				
-				-- вот тут надо зарубить проверку совпадают ли триггеры этих спеллов или нет и если совпадают выдать true
-				if self:CompairSpellID(spell, spCheck) then return true end
 			end
 		end
 	end

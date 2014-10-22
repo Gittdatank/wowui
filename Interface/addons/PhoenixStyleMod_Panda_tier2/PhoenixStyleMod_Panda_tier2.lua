@@ -140,7 +140,7 @@ if psbigaoeprimidstabletay2 and curtime>psbigaoeprimidstabletay2+1.4 then
 		end
 		for i = 1,GetNumGroupMembers() do
 			local name, _, subgroup, _, _, _, _, online, isDead = GetRaidRosterInfo(i)
-			if subgroup<=psgroup and online and isDead==nil and UnitIsDeadOrGhost(name)==nil then
+			if subgroup<=psgroup and online and isDead==nil and UnitIsDeadOrGhost(name)==false then
 				table.insert(taball,name)
 			end
 		end
@@ -290,7 +290,7 @@ if #psragnahishand1>psragnamaxdam then
 		end
 
 		pscaststartinfo(0,txt2, -1, "id1", 12, spellname.." - "..psinfo,psbossnames[2][5][6],2)
-		if psraidoptionson[2][5][6][2]==1 and select(3,GetInstanceInfo())~=7 then
+		if psraidoptionson[2][5][6][2]==1 and select(3,GetInstanceInfo())~=17 then
 			pszapuskanonsa(psraidchats3[psraidoptionschat[2][5][6][2]], txt1)
 		end
 	end
@@ -425,7 +425,7 @@ end
 if psrezetnotcombp2 and curtime>psrezetnotcombp2 then
 	local a=GetSpellInfo(20711)
 	local b=UnitBuff("player", a)
-	if UnitAffectingCombat("player")==nil and UnitIsDeadOrGhost("player")==nil and b==nil then --and UnitName("boss1")
+	if UnitAffectingCombat("player")==false and UnitIsDeadOrGhost("player")==false and b==nil then --and UnitName("boss1")
 		psiccwipereport_p2(nil,"try")
 		psrezetnotcombp2=nil
 	end
@@ -765,7 +765,7 @@ end
 
 
 if event=="PLAYER_REGEN_ENABLED" then
-	if UnitAffectingCombat("player")==nil and UnitIsDeadOrGhost("player")==nil then --and UnitName("boss1")==nil
+	if UnitAffectingCombat("player")==false and UnitIsDeadOrGhost("player")==false then --and UnitName("boss1")==nil
     --if pswasonbossp42 then
     --  psrezetnotcombp2=GetTime()+3
     --else

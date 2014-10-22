@@ -24,34 +24,32 @@ Masque:Group('Bagnon', 'guildbank')
 Masque:Group('Bagnon', 'voidstorage')
 
 local ItemSlot = Bagnon.ItemSlot
-local NewSlot = ItemSlot.New
-local FreeSlot = ItemSlot.Free
+local SetParent = ItemSlot.SetParent
 
-function ItemSlot:New(...)
-	local item = NewSlot(self, ...)
-	local name = item:GetName()
-		
-	Masque:Group('Bagnon', item:GetFrameID()):AddButton(item, {
-		Count = _G[name .. 'Count'],
-		Icon = _G[name .. 'IconTexture'],
-		Normal = _G[name .. 'NormalTexture'],
-		
-		Highlight = item:GetHighlightTexture(),
-		Pushed = item:GetPushedTexture(),
-		
-		Cooldown = item.cooldown,
-		Border = item.border,
-		
-		AutoCastable = false, AutoCast = false,
-		HotKey = false, Name = false, Duration = false,
-		Disabled = false, Checked = false,
-		Flash = false,
-	})
+function ItemSlot:SetParent(parent)
+	if self:GetParent() and self:GetFrameID() then
+		Masque:Group('Bagnon', self:GetFrameID()):RemoveButton(self)
+	end
+
+	local name = self:GetName()
+	SetParent(self, parent)
 	
-	return item
-end
-
-function ItemSlot:Free()
-	FreeSlot(self)
-	Masque:Group('Bagnon', self:GetFrameID()):RemoveButton(self)
+	if self:GetFrameID() then
+		Masque:Group('Bagnon', self:GetFrameID()):AddButton(self, {
+			Count = _G[name .. 'Count'],
+			Icon = _G[name .. 'IconTexture'],
+			Normal = _G[name .. 'NormalTexture'],
+			
+			Highlight = self:GetHighlightTexture(),
+			Pushed = self:GetPushedTexture(),
+			
+			Cooldown = self.cooldown,
+			Border = self.border,
+			
+			AutoCastable = false, AutoCast = false,
+			HotKey = false, Name = false, Duration = false,
+			Disabled = false, Checked = false,
+			Flash = false,
+		})
+	end
 end

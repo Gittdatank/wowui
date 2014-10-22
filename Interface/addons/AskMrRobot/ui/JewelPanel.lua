@@ -114,7 +114,7 @@ function AskMrRobot.JewelPanel:SetOptimizedGems(optimizedGems, showGems)
 		--if i <= #optimizedGems or currentGemLink then
 		if i <= #optimizedGems or currentGemLink then
 			local optimizedGemId = 0
-			if optimizedGems[i] > 0 then
+			if optimizedGems[i] and optimizedGems[i] > 0 then
 				optimizedGemId = AskMrRobot.ExtraGemData[optimizedGems[i]].id
 			end
 			--local currentGemId = AskMrRobot.ExtraGemData[showGems[i]].id
@@ -141,7 +141,7 @@ function AskMrRobot.JewelPanel:SetOptimizedGems(optimizedGems, showGems)
 
 			--if showGems[i] and optimizedGems[i] and optimizedGems[i].color then
 			--if test and optimizedGems[i] and optimizedGems[i].color then
-			if mismatched and optimizedGems[i] > 0 then
+			if mismatched and optimizedGems[i] and optimizedGems[i] > 0 then
 				gemCount = gemCount + 1
 				-- set the optimized gem text
 				text:SetTextColor(1,1,1)

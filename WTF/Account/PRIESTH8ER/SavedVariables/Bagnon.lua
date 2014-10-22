@@ -1,4 +1,5 @@
 
 BagnonGlobalSettings = {
-	["version"] = "5.4.15",
+	["version"] = "6.0.12",
+	["highlightUnusableItems"] = true,
 }

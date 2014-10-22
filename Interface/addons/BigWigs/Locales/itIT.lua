@@ -127,7 +127,9 @@ L["TANK_HEALER"] = "Solo Difensori e Guaritori"
 L["TANK_HEALER_desc"] = "Alcune abilità sono rilevanti solo per i Difensori e i Guaritori. Se vuoi vedere questi avvertimenti anche se non è il tuo ruolo, disabilita questa opzione."
 L["test"] = "Prova"
 L["thanks"] = "Grazie per seguirci in tutte le fasi dello sviluppo."
-L["tooltipHint"] = "|cffeda55fClic|r per reinizializzare tutti i moduli. |cffeda55fAlt-Clic|r per Disattivarli. |cffeda55fClic-Destro|r per aprire le Opzioni."
+L["tooltipHint"] = [=[|cffeda55fClic|r per reinizializzare tutti i moduli.
+|cffeda55fAlt-Clic|r per Disattivarli.
+|cffeda55fClic-Destro|r per aprire le Opzioni.]=]
 L["upToDate"] = "Aggiornati:"
 L["warmup"] = "Pre-ingaggio"
 L["warmup_desc"] = "Conto alla rovescia per l'inizio del combattimento con il boss."

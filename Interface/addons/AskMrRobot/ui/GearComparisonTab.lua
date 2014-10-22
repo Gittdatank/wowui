@@ -119,27 +119,39 @@ function AskMrRobot.GearComparisonTab:new(parent)
 end
 
 function AskMrRobot.GearComparisonTab:On_SOCKET_INFO_CLOSE()
-    self:Import()
+    if self.initialized then
+        self:Import()
+    end
 end
 
 function AskMrRobot.GearComparisonTab:On_SOCKET_INFO_UPDATE()
-    self:Import()
+    if self.initialized then
+        self:Import()
+    end
 end
 
 function AskMrRobot.GearComparisonTab:On_PLAYER_SPECIALIZATION_CHANGED()
-    self:Import()
+    if self.initialized then
+        self:Import()
+    end
 end
 
 function AskMrRobot.GearComparisonTab:On_BAG_UPDATE()
-    self:Import()
+    if self.initialized then
+        self:Import()
+    end
 end
 
 function AskMrRobot.GearComparisonTab:On_ITEM_PUSH()
-    self:Import()
+    if self.initialized then
+        self:Import()
+    end
 end
 
 function AskMrRobot.GearComparisonTab:On_DELETE_ITEM_CONFIRM()
-    self:Import()
+    if self.initialized then
+        self:Import()
+    end
 end
 
 function AskMrRobot.GearComparisonTab:OnShow()
@@ -150,6 +162,7 @@ function AskMrRobot.GearComparisonTab:OnShow()
         if AmrDb.LastCharacterImport and AmrDb.LastCharacterImport ~= "" then
             self.importTab:SetImportText(AmrDb.LastCharacterImport)
             self:Import()
+            self.tabButtonClick(self.tabButtons[2])
         else
             self:Update()
         end
@@ -160,10 +173,7 @@ end
 
 function AskMrRobot.GearComparisonTab:Import()
 
-    -- example string
-    -- $2;Brill (EU);Yellowfive;Twisted Legion;11;2;90;7:600,9:600;1;s1;34;2123320;68164,47782,7833;q1;99195s7u493x4647y0c22e4823;1s3u0x0y0c11e90;6s10u0x0y0c11e-481;1s1u0x383y-383c41;3047s15u12x0c1e-8;3109s5u-12x0y0z0c112e445;55s8u12x0c1e-442;5371s16u0b450x0c1e18;1691s13u-14b-1;238s11u0b0x-60c3;28s2u0b0;21s6u2b0x60y0z0c130;29s14u0b0;1s9u-2b0e-30;62s12u0b0x0c1;95s17u2b0x0c1$g\4647\76697\76631,76697,83146\20 _CriticalStrike_@g\5030\95344\\Indomitable@g\4587\76636\76570,76636,83144\20 _CriticalStrike_@e\4823\83765\122388\19 _Strength_, 11 _CriticalStrike_\72163=1,76061=1@e\4913\87585\113047\20 _Strength_, 5 _CriticalStrike_\39354=1,79254=3@e\4432\74721\104419\11 _Strength_\74249=3,74250=1,74247=1@e\4424\74713\104404\12 _CriticalStrike_\74250=1@e\4869\85559\124091\9 _Stamina_\72120=4@e\4427\74716\104408\11 _CriticalStrike_\74249=2,74250=1@e\4445\74727\104440\Colossus\74247=3@e\4415\74704\104390\18 _Strength_\74248=3 
-    
-    local err = AskMrRobot.ImportCharacter(self.importTab:GetImportText())
+    local err = AskMrRobot.ImportCharacter(self.importTab:GetImportText(), AskMrRobot.debug)
     -- goto the summary tab
     self.summaryTab:showImportError(err)
     PanelTemplates_EnableTab(self, 2)
@@ -308,11 +318,13 @@ function AskMrRobot.GearComparisonTab.Compare()
                 needsUpgrade = needsUpgrade
             }
         elseif itemEquipped then
-            if AskMrRobot.ExtraItemData[itemEquipped.id] and AskMrRobot.ExtraItemData[itemEquipped.id].socketColors then
-            -- items are same, check for gem/enchant differences
-            --   NOTE: we used to do a bunch of fancy gem checks, but we can ditch all that logic b/c WoD gems are much simpler (no socket bonuses, gem/socket colors to worry about)
+        
+            if AskMrRobot.ExtraItemData[itemImported.id] and AskMrRobot.ExtraItemData[itemImported.id].socketColors then
+            
+                -- items are same, check for gem/enchant differences
+                --   NOTE: we used to do a bunch of fancy gem checks, but we can ditch all that logic b/c WoD gems are much simpler (no socket bonuses, gem/socket colors to worry about)
                 local hasBadGems = false
-                for g = 1, #AskMrRobot.ExtraItemData[itemEquipped.id].socketColors do
+                for g = 1, #AskMrRobot.ExtraItemData[itemImported.id].socketColors do
                     if not AskMrRobot.AreGemsCompatible(itemEquipped.gemIds[g], itemImported.gemIds[g]) then
                         hasBadGems = true
                         break
@@ -325,7 +337,7 @@ function AskMrRobot.GearComparisonTab.Compare()
                         optimized = {}
                     }
 
-                    for g = 1, #AskMrRobot.ExtraItemData[itemEquipped.id].socketColors do
+                    for g = 1, #AskMrRobot.ExtraItemData[itemImported.id].socketColors do
                         result.gems[slotId].current[g] = itemEquipped.gemIds[g]
                         result.gems[slotId].optimized[g] = itemImported.gemIds[g]
                     end

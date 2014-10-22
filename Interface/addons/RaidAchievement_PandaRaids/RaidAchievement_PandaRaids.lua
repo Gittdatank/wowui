@@ -11,7 +11,7 @@ end
 	RaidAchievement_prra:RegisterEvent("ADDON_LOADED")
 	
 	local _, instanceType, difficulty, _, maxPlayers, playerDifficulty, isDynamicInstance = GetInstanceInfo()
-	if select(3,GetInstanceInfo())==7 then
+	if select(3,GetInstanceInfo())==17 then
 		lfrenable=1
   else
     lfrenable=nil
@@ -224,7 +224,7 @@ if event == "ZONE_CHANGED_NEW_AREA" then
 rpradelayzonech=GetTime()+2
 
 	local _, instanceType, difficulty, _, maxPlayers, playerDifficulty, isDynamicInstance = GetInstanceInfo()
-	if select(3,GetInstanceInfo())==7 then
+	if select(3,GetInstanceInfo())==17 then
 		lfrenable=1
   else
     lfrenable=nil
@@ -628,7 +628,7 @@ end
 
 function prragalochki()
 for i=1,#prraspisokach25 do
-if(prraspisokon[i]==1)then prracbset[i]:SetChecked() else prracbset[i]:SetChecked(false) end
+if(prraspisokon[i]==1)then prracbset[i]:SetChecked(true) else prracbset[i]:SetChecked(false) end
 end
 end
 

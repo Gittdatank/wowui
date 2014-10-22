@@ -285,13 +285,7 @@ SkadaDB = {
 					["snapto"] = true,
 					["mode"] = "Damage",
 					["point"] = "LEFT",
-					["buttons"] = {
-						["report"] = true,
-						["menu"] = true,
-						["mode"] = true,
-						["segment"] = true,
-						["reset"] = true,
-					},
+					["bartexture"] = "Minimalist",
 					["barwidth"] = 203.249938964844,
 					["barspacing"] = 0,
 					["reversegrowth"] = false,
@@ -319,7 +313,13 @@ SkadaDB = {
 					["classcolorbars"] = true,
 					["enabletitle"] = true,
 					["clickthrough"] = false,
-					["bartexture"] = "Minimalist",
+					["buttons"] = {
+						["report"] = true,
+						["menu"] = true,
+						["mode"] = true,
+						["segment"] = true,
+						["reset"] = true,
+					},
 					["name"] = "Damage",
 				}, -- [2]
 			},
@@ -354,10 +354,10 @@ SkadaDB = {
 						["texture"] = "Flat",
 					},
 					["point"] = "BOTTOM",
+					["mode"] = "Healing",
 					["background"] = {
 						["height"] = 258.045837402344,
 					},
-					["mode"] = "Healing",
 					["x"] = 402.417236328125,
 				}, -- [1]
 			},

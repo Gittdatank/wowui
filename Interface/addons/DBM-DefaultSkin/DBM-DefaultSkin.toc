@@ -10,7 +10,7 @@
 ## X-DBM-Timer-Skin-Name: Classic
 ## X-DBM-Timer-Skin-Textures: Interface\AddOns\DBM-DefaultSkin\textures\default.tga
 ## X-DBM-Timer-Skin-Texture-Names: Default
-## X-Curse-Packaged-Version: 5.4.19-42-g6c6fef5
+## X-Curse-Packaged-Version: 6.0.3-11-g8cc9d6b
 ## X-Curse-Project-Name: Deadly Boss Mods
 ## X-Curse-Project-ID: deadly-boss-mods
 ## X-Curse-Repository-ID: wow/deadly-boss-mods/mainline

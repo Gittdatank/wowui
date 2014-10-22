@@ -1,5 +1,5 @@
-## Interface: 50400
-## X-Curse-Packaged-Version: r80
+## Interface: 60000
+## X-Curse-Packaged-Version: r82
 ## X-Curse-Project-Name: LibCandyBar-3.0
 ## X-Curse-Project-ID: libcandybar-3-0
 ## X-Curse-Repository-ID: wow/libcandybar-3-0/mainline

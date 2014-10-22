@@ -1,7 +1,7 @@
 ﻿function psdeathrepevent(type,marksource,mark,name,guid,spellid,spellname,dmg,overkill,crit,whokill,resist,block,absorbed,spellschool)
 
 -- в ЛФР не трекерить !! psdeathrepsavemain[5]
-if select(3,GetInstanceInfo())==7 and psdeathrepsavemain[5]==1 then
+if select(3,GetInstanceInfo())==17 and psdeathrepsavemain[5]==1 then
   return
 end
 
@@ -513,7 +513,7 @@ end
 function psreportdeathchat(frase)
     local _, instanceType, difficulty, _, maxPlayers, playerDifficulty, isDynamicInstance = GetInstanceInfo()
     local pplfr=0
-    if select(3,GetInstanceInfo())==7 then
+    if select(3,GetInstanceInfo())==17 then
       pplfr=1
     end
 if pstoomuchrepstopforfight==nil and (UnitInRaid("player") or UnitInParty("player")) and (psmylogin==nil or (psmylogin and GetTime()>psmylogin+10)) and ((psdeathrepsavemain[5]==0 and pplfr==1) or (pplfr==0)) and thisaddononoff then
@@ -534,7 +534,7 @@ if pstoomuchrepstopforfight==nil and (UnitInRaid("player") or UnitInParty("playe
 	if partyonly==0 then
     for i = 1,GetNumGroupMembers() do
       local nameee,_,subgroup,_,_,_,_,_,isDead = GetRaidRosterInfo(i)
-      if nameee and ((isDead==1 or UnitIsDeadOrGhost(nameee)==1) and subgroup<=psnumgrup) then
+      if nameee and ((isDead==1 or UnitIsDeadOrGhost(nameee)==true) and subgroup<=psnumgrup) then
         psnumdead=psnumdead+1
       end
     end
@@ -591,7 +591,7 @@ if pstoomuchrepstopforfight==nil and (UnitInRaid("player") or UnitInParty("playe
           if partyonly==1 then
             cha=psdeathrepsavemain[15]
           end
-          if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+          if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
             SendAddonMessage("PSaddon", "666"..myname.."++"..cha, "instance_chat")
           else
             SendAddonMessage("PSaddon", "666"..myname.."++"..cha, "raid")
@@ -605,7 +605,7 @@ if pstoomuchrepstopforfight==nil and (UnitInRaid("player") or UnitInParty("playe
           if partyonly==1 then
             cha=psdeathrepsavemain[15]
           end
-          if select(3,GetInstanceInfo())==7 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+          if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
             SendAddonMessage("PSaddon", "666"..myname.."^^++"..cha, "instance_chat")
           else
             SendAddonMessage("PSaddon", "666"..myname.."^^++"..cha, "raid")
@@ -628,13 +628,18 @@ function psunitraidorparty(guid,name)
   --  return true
   --else
     if UnitInRaid(name) then
-      local B = tonumber(guid:sub(5,5), 16)
-      local maskedB = B % 8
-      if maskedB and maskedB==0 then
-        return true
-      else
-        return false
-      end
+      --local B = tonumber(guid:sub(5,5), 16)
+      --local maskedB = B % 8
+      --if maskedB and maskedB==0 then
+      --  return true
+      --else
+      --  return false
+      --end
+		if (string.find(guid,"Player")) then
+			return true
+		else
+			return false
+		end
     else
       return false
     end

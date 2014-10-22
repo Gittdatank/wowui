@@ -339,7 +339,7 @@ if crPlayersFrames==nil then
 
 
   --set the slider
-  if crsaveddata[1] then
+  if crsaveddata and crsaveddata[1] then
   
     local combatTime=math.floor(crsaveddata[1].events[#crsaveddata[1].events].t-crsaveddata[1].events[1].t)
     local min=math.floor(combatTime/60)
@@ -602,7 +602,7 @@ DropDownMenuCombatChoose:Show()
 
 
 local items={}
-if #crsaveddata>0 then
+if crsaveddata and #crsaveddata>0 then
   for i=1,#crsaveddata do
     local name=""
     if crsaveddata[i].boss[1] and crsaveddata[i].boss[1][2] then
