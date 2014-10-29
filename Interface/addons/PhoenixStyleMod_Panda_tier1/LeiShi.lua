@@ -200,7 +200,7 @@ end
 if psleishicount then
   if arg2=="DAMAGE_SHIELD" or arg2=="SPELL_PERIODIC_DAMAGE" or arg2=="SPELL_DAMAGE" or arg2=="RANGE_DAMAGE" then
   if arg12 then
-  local id=tonumber(string.sub(guid2,6,10),16)
+  local id=psGetUnitID(guid2)
   if id==62983 then
       --получение инфо о хозяине если там пет, с учетом по маске
       local source=psgetpetownername(guid1, name1, flag1)
@@ -214,7 +214,7 @@ if psleishicount then
 
   if arg2=="SWING_DAMAGE" then
   if spellid then
-  local id=tonumber(string.sub(guid2,6,10),16)
+  local id=psGetUnitID(guid2)
   if id==62983 then
       local source=psgetpetownername(guid1, name1, flag1)
       pselegadddamage(3,source,1000+psleishinmr,spellid,spellname,0)

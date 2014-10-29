@@ -45,6 +45,7 @@ local defaults = {
 	prevDiffShown = 3,
 	recordTimes = {},
 	firstLoad = true,
+	warlordsUpdate = false,
 	},
 }
 
@@ -69,6 +70,11 @@ function addon:OnInitialize()
 		self.db.profile.firstLoad = false
 	end
 
+	if not self.db.profile.warlordsUpdate then
+		addon:ConvertSiegeRecords()
+		self.db.profile.warlordsUpdate = true
+	end
+
 	self:RegisterChatCommand("bwrk", "SlashHandler")
 	self:RegisterChatCommand("recordkills", "SlashHandler")
 end
@@ -80,15 +86,17 @@ function addon:SlashHandler(input)
 	elseif (input == "reset") then
 		for k,v in pairs(self.db.profile.recordTimes) do 
 			self.db.profile.recordTimes[k]=nil
-			self.db.profile.firstLoad = true
-			self.db.profile.showAllBosses = true
-			self.db.profile.showAllTiers = false
-			self.db.profile.diffShown = 3
-			self.db.profile.prevDiffShown = 3 
-			self.db.profile.tierShown = C["CURRENT_TIER"]
-			self.db.profile.prevTierShown = C["CURRENT_TIER"]
-			self.db.profile.RK_DEBUG = false
 		end
+		
+		self.db.profile.firstLoad = true
+		self.db.profile.showAllBosses = true
+		self.db.profile.showAllTiers = false
+		self.db.profile.diffShown = 3
+		self.db.profile.prevDiffShown = 3 
+		self.db.profile.tierShown = C["CURRENT_TIER"]
+		self.db.profile.prevTierShown = C["CURRENT_TIER"]
+		self.db.profile.RK_DEBUG = false
+
 		addon:rlog("Data |c00FF0000Reset|r.")
 
 	elseif (input == "debug") then
@@ -98,15 +106,6 @@ function addon:SlashHandler(input)
 			addon:rlog("Debugging |c0000FF00ON|r.")
 		else
 			addon:rlog("Debugging |c00FF0000OFF|r.")
-		end
-
-	elseif (input == "allTiers") then
-		self.db.profile.showAllTiers = not self.db.profile.showAllTiers
-
-		if (self.db.profile.showAllTiers) then
-			addon:rlog("Showing All Tiers: |c0000FF00ON|r.")
-		else
-			addon:rlog("Showing All Tiers: |c00FF0000OFF|r.")
 		end
 
 	elseif (input == "allBosses") then
@@ -139,7 +138,7 @@ function addon:ImportRecords()
 	local statDB = BigWigsStatisticsDB
 	if not statDB then return end
 
-	local diffRef = {["10"] = 3, ["25"] = 4, ["10h"] = 5, ["25h"] = 6, ["lfr"] = 7, ["flex"] = 14}	
+	local diffRef = {["10"] = 3, ["25"] = 4, ["10h"] = 5, ["25h"] = 6, ["lfr"] = 7, ["normal"] = 14, ["heroic"] = 15, ["mythic"] = 16 }	
 
 	for zoneID, idArray in pairs (statDB) do
 		for eID, diffArray in pairs (idArray) do
@@ -162,6 +161,31 @@ function addon:ImportRecords()
 	addon:rlog("BigWigs record import complete.")
 end
 
+function addon:ConvertSiegeRecords()
+	local diffRef = {["10"] = 3, ["25"] = 4, ["10h"] = 5, ["25h"] = 6, ["lfr"] = 7, ["normal"] = 14, ["heroic"] = 15, ["mythic"] = 16 }	
+
+	local recordDB = self.db.profile.recordTimes["Siege of Orgrimmar"]
+
+	for bossName, diffArray in pairs (recordDB) do
+		local normTen = addon:GetBestTime("Siege of Orgrimmar", bossName, 3)
+		local normTwentyFive = addon:GetBestTime("Siege of Orgrimmar", bossName, 4)
+
+		--Upgrade the best normal time to heroic
+		if normTen > 0 and normTwentyFive > 0  then
+			if normTen < normTwentFive then
+				addon:SetBestTime("Siege of Orgrimmar", bossName, 15, normTen)
+			else
+				addon:SetBestTime("Siege of Orgrimmar", bossName, 15, normTwentyFive)
+			end
+		elseif normTen > 0 then
+			addon:SetBestTime("Siege of Orgrimmar", bossName, 15, normTen)
+		elseif normTwentyFive > 0 then
+			addon:SetBestTime("Siege of Orgrimmar", bossName, 15, normTwentyFive)
+		end
+	end
+	addon:dlog("Siege of Orgrimmar Flex + Normal Records Successfully Upgraded.")
+end
+
 --===============================================================================
 --BOSS ENGAGE/WIPE/KILL DETECTION THROUGH BIGWIGS
 --===============================================================================
@@ -172,7 +196,6 @@ function addon:onBossEngage(self, module)
 	activeEncounters[module.encounterId] = GetTime() --denotes the start time of a boss
 
 	--add a 'best kill' bar to BW and announce
-	addon:StartRecordTimer(addon:InstanceName(), module)
 	addon:dlog(string.format("Encounter Engaged: %s [%i]", module.moduleName, module.encounterId))
 end
 
@@ -183,7 +206,6 @@ function addon:onBossWipe(sender, module)
 	activeEncounters[module.encounterId] = nil
 
 	--kill the BW 'best kill' bar and announce
-	addon:EndRecordTimer(module)
 	addon:dlog(string.format("Encounter Wiped: %s [%i]", module.moduleName, module.encounterId))
 end
 
@@ -215,15 +237,19 @@ function addon:onBossWin(sender, module)
 				local timeDiff = prevTime - curTime
 				addon:rlog(string.format("%s defeated in %s (NEW RECORD - %is faster)!", module.moduleName, addon:FormatTime(curTime), timeDiff))
 			else
-				addon:rlog(string.format("%s defeated in %s!", module.moduleName, addon:FormatTime(curTime)))
+				addon:rlog(string.format("%s [%s] defeated in %s!", module.moduleName, C["DIFFICULTY"][addon:InstanceDiff()].name, addon:FormatTime(curTime)))
 			end
 		end
 	end
-	addon:EndRecordTimer(module)	
 end
 
 function addon:ShouldRecord(raidName)
-	if UnitLevel("player") ~= C["MAX_LEVEL"] then return false end
+	--If player isn't max level AND it's not a prepatch (X.0) then dont record
+	if UnitLevel("player") ~= C["MAX_LEVEL"]  then
+		if (select(4, GetBuildInfo()) % 10000 ~= 0) then
+			return false
+		end
+	end
 
 	local tierList = C["RAID_LOOKUP"]
 	for tierNum=C["MINIMUM_TIER"], C["CURRENT_TIER"] do
@@ -327,8 +353,19 @@ function addon:RecordsForDifficulty(raidName, difficulty)
 end
 
 function addon:TierHasDifficulty(tierNum, hasDiff)
-	return hasDiff < 7 or (tierNum >= 13 and hasDiff == 7)  or (tierNum >= 16 and hasDiff == 14)
-	--Norm/Heroic -- LFR --  Flex
+
+	if tierNum >= 14 and tierNum < 16 then
+		--This tier adopts the legacy raid difficulties
+		return hasDiff >= 3 and hasDiff <= 7
+	
+	elseif tierNum == 16 then
+		--This tier adopts legacy AND new raid difficulties
+		return (hasDiff >= 3 and hasDiff <= 7) or (hasDiff >= 14 and hasDiff <= 16)
+
+	elseif tierNum > 16 then
+		--This tier adopts the new raid difficulties
+		return hasDiff >= 14 and hasDiff <= 16
+	end
 end
 
 function addon:FormatTime(seconds)
@@ -336,8 +373,8 @@ function addon:FormatTime(seconds)
 		return "0:00"
 	end
 
-	local mins= math.floor(seconds/60)
-	local secs= seconds - (mins*60)
+	local mins = math.floor(seconds/60)
+	local secs = seconds - (mins*60)
 	return string.format("%i:%02d", mins, secs)
 end
 
@@ -367,29 +404,52 @@ end
 function addon:CycleDiffShown(self)
 	local diff = addon.db.profile.diffShown + 1
 
-	if diff > 7 and diff < 14 and addon.db.profile.tierShown >= 16 then
-		diff = 14
-	elseif diff > 7 then
-		diff = 3
+	--This is tier is legacy, pre-Mythic and 6.0
+	if addon.db.profile.tierShown < 16 then
+		if diff > 7 then
+			diff = 3
+		end
 	end
 
+	--This tier adopts the new raid difficulties as well as the legacy
+	if addon.db.profile.tierShown == 16 then
+		if diff > 7 and diff < 14 then
+			diff = 14
+		elseif diff > 16 then
+			diff = 3
+		end
+	end
+
+	--This tier adopts the new raid difficulties only
+	if addon.db.profile.tierShown > 16 then
+		if diff > 16 then
+			diff = 7
+		elseif diff > 7 and diff < 14 then
+			diff = 14
+		end
+	end
+				
 	addon.db.profile.diffShown = diff
+	addon.db.profile.prevDiffShown = diff
 	addon:DisplayRecords(self)
 end
 
 function addon:CycleTierShown(self)
-	addon.db.profile.tierShown = addon.db.profile.tierShown + 1
+	addon.db.profile.tierShown = addon.db.profile.tierShown + 1	
 	if addon.db.profile.tierShown > C["CURRENT_TIER"] then addon.db.profile.tierShown = C["MINIMUM_TIER"] end
 
-	if addon.db.profile.diffShown == 14 and addon.db.profile.tierShown < 16 then -- Flex difficulty where Flex doesn't exist
+	if addon.db.profile.diffShown >= 14 and addon.db.profile.tierShown < 16 then -- Flex difficulty where Flex doesn't exist
 		addon:SetDiffShown(3)
+	elseif addon.db.profile.diffShown < 7 and addon.db.profile.tierShown > 16 then --Legacy difficulties where it doesn't exist
+		addon:SetDiffshown(7)
 	end
 
+	addon.db.profile.prevTierShown = addon.db.profile.tierShown
 	addon:DisplayRecords(self)
 end
 
 function addon:SetDiffShown(newDiff)
-	if (newDiff < 3 or newDiff > 7) and not newDiff == 14 then return end
+	if (newDiff < 3 or newDiff > 7) and not (newDiff >= 14 and newDiff <= 17) then return end
 	addon.db.profile.diffShown = newDiff
 end
 
@@ -446,28 +506,6 @@ function addon:RemoveBestTime(instance, boss, difficulty)
 end
 
 --===============================================================================
---CREATION/REMOVAL OF BIGWIGS RECORD KILL BARS
---===============================================================================
-function addon:StartRecordTimer(instance, module)
-	if not BigWigs then addon:rlog("No record bar created. 'BW' not found.") return end
-
-	local bars = BigWigs:GetPlugin("Bars", true)
-	if not bars then addon:rlog("No record bar created. 'Bars' plugin not found.") return end
-	
-	local bestTime = addon:GetBestTime(instance, module.moduleName, addon:InstanceDiff())	
-	bars:BigWigs_StartBar(_, module, nil, "Record Kill", bestTime, icon, false)
-end
-
-function addon:EndRecordTimer(module)
-	if not BigWigs then return end
-
-	local bars = BigWigs:GetPlugin("Bars", true)
-	if not bars then return end
-
-	bars:StopSpecificBar(_, module, "Record Kill")
-end
-
---===============================================================================
 --UTILITY FUNCTIONS
 --===============================================================================
 function addon:IsRaid()
@@ -479,7 +517,13 @@ function addon:InstanceName()
 end
 
 function addon:InstanceDiff()
-	return select (3, GetInstanceInfo())
+	local diff = select(3, GetInstanceInfo())
+
+	if diff == 17 then
+		diff = 7
+	end
+
+	return diff
 end
 
 function addon:GetTierForRaid(raidName)

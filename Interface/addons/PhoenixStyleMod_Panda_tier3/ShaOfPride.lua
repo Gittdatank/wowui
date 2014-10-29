@@ -149,7 +149,7 @@ if arg2=="SWING_DAMAGE" then
 
 
   
-    local id=tonumber(string.sub(guid1,6,10),16)
+    local id=psGetUnitID(guid1)
     if id==71734 then
     psunitisplayer(guid2,name2)
     if psunitplayertrue then

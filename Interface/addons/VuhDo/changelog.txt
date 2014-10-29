@@ -1,3 +1,39 @@
+Version 3.65.
+
+
+Known issues:
+-- Settings are not saved when the character name includes a special character
+--   Mac OS X WoW client bug - http://us.battle.net/wow/en/forum/topic/14880818884
+-- Incoming heal estimation reported is not even close to accurate
+--   Bug in Blizzard API UnitGetIncomingHeals() - returns bogus values
+-- AOE advisor not yet updated for Warlords of Draenor
+--   Need new spell formulas and coefficients
+
+Bugfixes:
+-- Fixed profile activation due to group size 20
+-- Fixed the inability of players without assist to see ready checks
+-- Fixed VuhDo Options tooltip mispellings in EN and ES localizations
+
+
+Improvements:
+-- Added ability to select a default profile and key layout
+--   Defaults are applied when no existing settings are found
+-- Copying a profile now also creates a copy of the selected key layout
+-- Added new raid group size 30 man
+--   Tools > Profiles > Activate due to group size
+--   Move > Hold to Test 
+-- Added new bouquets to check if a unit is in same zone as the player
+--   Flag: Player Zone, Inside
+--   Flag: Player Zone, Outside
+-- Added new bouquets to check if a unit is a particular class of tank
+--   Flag: Role Tank, Death Knight
+--   Flag: Role Tank, Druid
+--   Flag: Role Tank, Monk
+--   Flag: Role Tank, Paladin
+--   Flag: Role Tank, Warrior
+
+
+--------------------------------------------------------------
 Version 3.64.
 
 

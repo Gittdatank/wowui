@@ -4,7 +4,7 @@ CPR is a combo points display addon based on Funkydude's BasicComboPoints
 SoulShards.lua - A module for tracking Soul Shards
 $Date: 2013-06-22 00:48:16 +0000 (Sat, 22 Jun 2013) $
 $Revision: 324 $
-Project Version: 3.2.3
+Project Version: 3.2.4
 contact: codemaster2010 AT gmail DOT com
 
 Copyright (c) 2007-2012 Michael J. Murray aka Lyte of Lothar(US)

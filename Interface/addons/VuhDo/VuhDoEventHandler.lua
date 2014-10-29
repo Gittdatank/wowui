@@ -271,14 +271,14 @@ end
 
 
 --
-local function VUHDO_loadDefaultProfile()
-	local tName;
+local function VUHDO_loadCurrentProfile()
+	if not VUHDO_CONFIG then 
+		return;
+	end
 
-	if not VUHDO_CONFIG then return; end
+	local tName = VUHDO_CONFIG["CURRENT_PROFILE"];
 
-	tName = VUHDO_CONFIG["CURRENT_PROFILE"];
 	if (tName or "") ~= "" then
-
 		local _, tProfile = VUHDO_getProfileNamedCompressed(tName);
 
 		if tProfile then
@@ -288,7 +288,52 @@ local function VUHDO_loadDefaultProfile()
 			end
 
 			VUHDO_loadProfileNoInit(tName);
+		else
+			VUHDO_Msg("Error: Currently selected profile \"" .. tName .. "\" doesn't exist.", 1, 0.4, 0.4);
 		end
+	end
+end
+
+
+
+--
+local function VUHDO_loadDefaultProfile()
+	if not VUHDO_CONFIG then 
+		return;
+	elseif ((VUHDO_CONFIG["CURRENT_PROFILE"] or "") == "") and
+		((VUHDO_DEFAULT_PROFILE or "") ~= "") then
+		local _, tProfile = VUHDO_getProfileNamedCompressed(VUHDO_DEFAULT_PROFILE);
+
+		if tProfile then
+			if tProfile["LOCKED"] then -- Nicht laden, Einstellungen wurden ja auch nicht automat. gespeichert
+				VUHDO_Msg("Profile " .. tProfile["NAME"] .. " is currently locked and has NOT been loaded.");
+				return;
+			end
+
+			VUHDO_loadProfile(VUHDO_DEFAULT_PROFILE);
+		else
+			VUHDO_Msg("Error: Default profile \"" .. VUHDO_DEFAULT_PROFILE .. "\" doesn't exist.", 1, 0.4, 0.4);
+		end
+	else
+		return;
+	end
+end
+
+
+
+--
+local function VUHDO_loadDefaultLayout()
+	if not VUHDO_SPEC_LAYOUTS then 
+		return;
+	elseif ((VUHDO_SPEC_LAYOUTS["selected"] or "") == "") and
+		((VUHDO_DEFAULT_LAYOUT or "") ~= "") then
+		if VUHDO_SPELL_LAYOUTS and VUHDO_SPELL_LAYOUTS[VUHDO_DEFAULT_LAYOUT] ~= nil then
+			VUHDO_activateLayout(VUHDO_DEFAULT_LAYOUT);
+		else
+			VUHDO_Msg(VUHDO_I18N_SPELL_LAYOUT_NOT_EXIST_1 .. VUHDO_DEFAULT_LAYOUT .. VUHDO_I18N_SPELL_LAYOUT_NOT_EXIST_2, 1, 0.4, 0.4);
+		end
+	else
+		return;
 	end
 end
 
@@ -306,7 +351,9 @@ local function VUHDO_init()
 
 	if not VUHDO_RAID then VUHDO_RAID = { }; end
 
-	VUHDO_loadDefaultProfile(); -- 1. Diese Reihenfolge scheint wichtig zu sein, erzeugt
+	local tHasPerCharacterConfig = _G["VUHDO_CONFIG"] and true or false;
+
+	VUHDO_loadCurrentProfile(); -- 1. Diese Reihenfolge scheint wichtig zu sein, erzeugt
 	VUHDO_loadVariables(); -- 2. umgekehrt undefiniertes Verhalten (VUHDO_CONFIG ist nil etc.)
 	VUHDO_initAllBurstCaches();
 	VUHDO_initDefaultProfiles();
@@ -338,6 +385,11 @@ local function VUHDO_init()
 
 	VUHDO_timeReloadUI(3);
 	VUHDO_aoeUpdateTalents();
+
+	if not tHasPerCharacterConfig then
+		VUHDO_loadDefaultProfile();
+		VUHDO_loadDefaultLayout();
+	end
 end
 
 
@@ -514,13 +566,13 @@ function VUHDO_OnEvent(_, anEvent, anArg1, anArg2, anArg3, anArg4, anArg5, anArg
 		if VUHDO_VARIABLES_LOADED then VUHDO_parseAddonMessage(anArg1, anArg2, anArg4); end
 
 	elseif "READY_CHECK" == anEvent then
-		if VUHDO_RAID and (VUHDO_getPlayerRank()) >= 1 then VUHDO_readyStartCheck(anArg1, anArg2); end
+		if VUHDO_RAID then VUHDO_readyStartCheck(anArg1, anArg2); end
 
 	elseif "READY_CHECK_CONFIRM" == anEvent then
-		if VUHDO_RAID and (VUHDO_getPlayerRank()) >= 1 then VUHDO_readyCheckConfirm(anArg1, anArg2); end
+		if VUHDO_RAID then VUHDO_readyCheckConfirm(anArg1, anArg2); end
 
 	elseif "READY_CHECK_FINISHED" == anEvent then
-		if VUHDO_RAID and (VUHDO_getPlayerRank()) >= 1 then VUHDO_readyCheckEnds(); end
+		if VUHDO_RAID then VUHDO_readyCheckEnds(); end
 
 	elseif "CVAR_UPDATE" == anEvent then
 		VUHDO_IS_SFX_ENABLED = tonumber(GetCVar("Sound_EnableSFX")) == 1;

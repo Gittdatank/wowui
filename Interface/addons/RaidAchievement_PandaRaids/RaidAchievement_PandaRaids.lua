@@ -65,7 +65,7 @@ if ramariotrack and curtime>ramariotrack then
   for i=1,GetNumGroupMembers() do
     if UnitGUID("raid"..i.."-target") then
 			local a1=UnitGUID("raid"..i.."-target")
-			local id=tonumber(string.sub(a1,6,10),16)
+			local id=raGetUnitID(a1)
 			if id==67966 then
         --проверка что есть бафф
         local bummname=GetSpellInfo(136431)
@@ -202,7 +202,7 @@ ratableforgaroshach2=nil
 
 	if UnitGUID("boss1") and UnitName("boss1")~="" then
 		local id2=UnitGUID("boss1")
-		local id=tonumber(string.sub(id2,6,10),16)
+		local id=raGetUnitID(id2)
 
 	else
 		racrtimerbossrecheck=GetTime()+3
@@ -331,7 +331,7 @@ if GetCurrentMapAreaID()==886 then
 
 if arg2=="SPELL_DAMAGE" and arg14 and arg14>0 then
 	if prraspisokon[2]==1 and raachdone1 then
-    local id=tonumber(string.sub(arg7,6,10),16)
+    local id=raGetUnitID(arg7)
     if id==64443 then
       prrafailnoreason(2) --arg8
     end
@@ -382,7 +382,7 @@ end
 --6 ВРЕМЕННО 5 если не найду как трекерить 1 ачивку
 if arg2=="UNIT_DIED" then
   if prraspisokon[5]==1 and raachdone1 then
-  local id=tonumber(string.sub(arg7,6,10),16)
+  local id=raGetUnitID(arg7)
   if id==69221 and UnitName("boss1") then
       prrafailnoreason(5)
     end
@@ -455,7 +455,7 @@ end
 
 if arg2=="UNIT_DIED" then
   if prraspisokon[10]==1 and raachdone1 then
-  local id=tonumber(string.sub(arg7,6,10),16)
+  local id=raGetUnitID(arg7)
   if id==72192 then
       prrafailnoreason(10)
     end
@@ -468,7 +468,7 @@ end
 if arg2=="SPELL_DAMAGE" and arg10==144650 and arg14 and arg14>0 then
   --if prraspisokon[11]==1 and raachdone1 then
   if prraspisokon[11]==1 then
-	local id=tonumber(string.sub(arg7,6,10),16)
+	local id=raGetUnitID(arg7)
 	if id==71979 then
 		if ratableforgaroshach1==nil then
 			ratableforgaroshach1={}

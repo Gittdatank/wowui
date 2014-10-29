@@ -1,0 +1,2 @@
+svn: warning: W000013: Can't open file '/root/.subversion/servers': Permission denied
+svn: E195012: Unable to find repository location for '/media/cf-repositories/packager/svn-tag-checkout/wow/combattime/mainline/2.5.0' in revision 36

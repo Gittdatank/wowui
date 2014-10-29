@@ -4,7 +4,7 @@ local oRA = scope.addon
 local module = oRA:NewModule("Loot", "AceTimer-3.0")
 local L = scope.locale
 
-module.VERSION = tonumber(("$Revision: 806 $"):sub(12, -3))
+module.VERSION = tonumber(("$Revision: 808 $"):sub(12, -3))
 local db
 local defaults = {
 	profile = {
@@ -55,6 +55,7 @@ local function getOptions()
 								roundrobin = LOOT_ROUND_ROBIN,
 								master = LOOT_MASTER_LOOTER,
 								group = LOOT_GROUP_LOOT,
+								personalloot = LOOT_PERSONAL_LOOT,
 							}
 						},
 						threshold = {
@@ -93,6 +94,7 @@ local function getOptions()
 								roundrobin = LOOT_ROUND_ROBIN,
 								master = LOOT_MASTER_LOOTER,
 								group = LOOT_GROUP_LOOT,
+								personalloot = LOOT_PERSONAL_LOOT,
 							}
 						},
 						threshold = {
@@ -165,7 +167,7 @@ do
 				self:ScheduleTimer(SetLootThreshold, 2, threshold)
 			end
 			-- SetLootMethod("method"[,"masterPlayer" or ,threshold])
-			-- method  "group", "freeforall", "master", "neeedbeforegreed", "roundrobin".
+			-- method  "group", "freeforall", "master", "neeedbeforegreed", "roundrobin", "personalloot".
 			-- threshold  0 poor  1 common  2 uncommon  3 rare  4 epic  5 legendary  6 artifact
 		end
 	end

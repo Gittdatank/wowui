@@ -961,7 +961,7 @@ local time90=0
 if GetNumGroupMembers()>0 and bossid~=0 then
 	for nm=1,GetNumGroupMembers() do
 		if time90==0 then
-			if UnitGUID("raid"..nm.."-target") and UnitGUID("raid"..nm.."-target")==bossid then
+			if psGetUnitID(UnitGUID("raid"..nm.."-target"))==bossid then
 				local spell1,_,_,_,_,endTime = UnitCastingInfo("raid"..nm.."-target")
 				if endTime then
 					time90=endTime/1000-0.2

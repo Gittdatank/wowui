@@ -398,7 +398,7 @@ function options:OnEnable()
 	local tmp, tmpZone = {}, {}
 	for k in next, BigWigsLoader:GetZoneMenus() do
 		local zone = translateZoneID(k)
-		if zone and k ~= 988 and k ~= 994 and k ~= 962 then -- XXX compat
+		if zone and (BigWigs.isWOD or (k ~= 988 and k ~= 994 and k ~= 962)) then -- XXX compat
 			tmp[zone] = k
 			tmpZone[#tmpZone+1] = zone
 		end
@@ -866,8 +866,8 @@ local function populateToggleOptions(widget, module)
 	scrollFrame:ReleaseChildren()
 
 	local sDB = BigWigsStatisticsDB
-	if module.encounterId and module.zoneId and BigWigs:GetPlugin("Statistics").db.profile.enabled and sDB and sDB[module.zoneId] and sDB[module.zoneId][module.encounterId] then
-		sDB = sDB[module.zoneId][module.encounterId]
+	if module.journalId and module.zoneId and BigWigs:GetPlugin("Statistics").db.profile.enabled and sDB and sDB[module.zoneId] and sDB[module.zoneId][module.journalId] then
+		sDB = sDB[module.zoneId][module.journalId]
 
 		if sDB.LFR or sDB.normal or sDB.heroic or sDB.mythic then -- Create NEW statistics table
 			local statGroup = AceGUI:Create("InlineGroup")

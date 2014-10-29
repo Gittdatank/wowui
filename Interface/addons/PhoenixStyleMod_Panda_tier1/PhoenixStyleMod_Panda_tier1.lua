@@ -811,7 +811,7 @@ if pselegmaxHPadd1 and pselegmaxHPadd1==0 then
 		psdelayhpcheckalakir=curtime+0.5
 		for ttg=1,GetNumGroupMembers() do
 			if UnitGUID("raid"..ttg.."-target") then
-				local id=tonumber(string.sub(UnitGUID("raid"..ttg.."-target"),6,10),16)
+				local id=psGetUnitID(UnitGUID("raid"..ttg.."-target"))
 				if id==60793 then
           pselegmaxHPadd1=UnitHealthMax("raid"..ttg.."-target")*0.75
 					ttg=41
@@ -1251,7 +1251,7 @@ if pscmrcheckforevade_p1 and curtime>pscmrcheckforevade_p1 then
 pscmrcheckforevade_p1=pscmrcheckforevade_p1+7
 local id=0
 if UnitGUID("boss1") then
-	id=tonumber(string.sub(UnitGUID("boss1"),6,10),16)
+	id=psGetUnitID(UnitGUID("boss1"))
 end
 local bil=0
 if #psbossbugs>0 then
@@ -1298,7 +1298,7 @@ if pscheckbossincombatmcr_p1 and GetTime()>pscheckbossincombatmcr_p1 then
 
 local id=0
 if UnitGUID("boss1") then
-	id=tonumber(string.sub(UnitGUID("boss1"),6,10),16)
+	id=psGetUnitID(UnitGUID("boss1"))
 end
 local bil=0
 if #psbossbugs>0 then
@@ -1329,7 +1329,7 @@ pscatadelaycheckboss=nil
 
 	if UnitGUID("boss1") then
 		local id2=UnitGUID("boss1")
-		local id=tonumber(string.sub(id2,6,10),16)
+		local id=psGetUnitID(id2)
 local bil=0
 if #psbossbugs>0 then
 	for i=1,#psbossbugs do
@@ -1356,7 +1356,7 @@ pscmrdelayofbosccheck_p1=curtime+1
 
 	if UnitGUID("boss1") then
 		local id2=UnitGUID("boss1")
-		local id=tonumber(string.sub(id2,6,10),16)
+		local id=psGetUnitID(id2)
 local bil=0
 if #psbossbugs>0 then
 	for i=1,#psbossbugs do
@@ -1625,7 +1625,7 @@ table.wipe (pselegontabldamage1[4])
 
 if UnitGUID("boss1") then
 local id2=UnitGUID("boss1")
-local id=tonumber(string.sub(id2,6,10),16)
+local id=psGetUnitID(id2)
 local bil=0
 if #psbossbugs>0 then
 	for i=1,#psbossbugs do

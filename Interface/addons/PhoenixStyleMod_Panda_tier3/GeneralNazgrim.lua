@@ -175,7 +175,7 @@ if psgenstoika and ((GetTime()-psgenstoika)<70) and (arg2=="SPELL_DAMAGE" or arg
   if pswasonbossp68==nil then
     pswasonbossp68=1
   end
-  local id=tonumber(string.sub(guid2,6,10),16)
+  local id=psGetUnitID(guid2)
   if id==71515 then
     psunitisplayer(guid1,name1)
     if psunitplayertrue then

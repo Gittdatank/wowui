@@ -1,0 +1,9 @@
+## Interface: 60000
+## Title: Broker_StatsNow - Secondary
+## Version: 2014.10.21
+## Author: WNxSajuukCor
+## Notes: LDB plugin to display your secondary stats where you want.
+libs\LibStub.lua
+libs\CallbackHandler-1.0.lua
+libs\LibDataBroker-1.1.lua
+Broker_StatsNow_Secondary.lua

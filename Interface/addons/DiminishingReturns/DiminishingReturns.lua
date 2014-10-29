@@ -4,12 +4,11 @@ Copyright 2009-2012 Adirelle (adirelle@gmail.com)
 All rights reserved.
 --]]
 
+local addonName, ns = ...
+
 -- Addon creation and initialization
 
-_G.DiminishingReturns = CreateFrame("Frame")
-local addon = _G.DiminishingReturns
-LibStub('LibAdiEvent-1.0').Embed(addon)
-addon:SetMessageChannel(addon)
+local addon = CreateFrame("Frame", addonName)
 
 --<GLOBALS
 local _G = _G
@@ -24,6 +23,33 @@ if AdiDebug then
 else
 	function addon.Debug() end
 end
+
+do
+	local mixins = { Debug = addon.Debug }
+
+	-- Events
+	local __RegisterEvent = addon.RegisterEvent
+	local __UnregisterEvent = addon.UnregisterEvent
+
+	local dispatcher = LibStub('CallbackHandler-1.0'):New(mixins, "RegisterEvent", "UnregisterEvent", "UnregisterEvents")
+
+	function dispatcher:OnUsed(_, event) return __RegisterEvent(addon, event) end
+	function dispatcher:OnUnused(_, event) return  __UnregisterEvent(addon, event) end
+	addon:SetScript('OnEvent', dispatcher.Fire)
+
+	-- Messages
+	local messagging = LibStub('CallbackHandler-1.0'):New(mixins, "RegisterMessage", "UnregisterMessage", "UnregisterAllMessages")
+	mixins.SendMessage = messagging.Fire
+
+	-- Embedding event dispatcher and messaging
+	function addon:EmbedEventDispatcher(target)
+		for name, methods in pairs(mixins) do
+			target[name] = methods
+		end
+	end
+end
+
+addon:EmbedEventDispatcher(addon)
 
 local DEFAULT_CONFIG = {
 	learnCategories = true,
@@ -40,15 +66,17 @@ local DEFAULT_CONFIG = {
 addon.DEFAULT_CONFIG = DEFAULT_CONFIG
 
 function addon:OnProfileChanged(self, ...)
-	addon:TriggerMessage('OnProfileChanged')
+	addon:SendMessage('OnProfileChanged')
 end
 
-local function OnLoad(self, event, name, ...)
-	if name:lower() ~= "diminishingreturns" then return end
-	self:UnregisterEvent('ADDON_LOADED', OnLoad)
-	OnLoad = nil
+function addon:ADDON_LOADED(event, name, ...)
+	if name ~= addonName then return end
 
-	local db = LibStub('AceDB-3.0'):New("DiminishingReturnsDB", {profile=DEFAULT_CONFIG})
+	-- Future events will only call CheckAddonSupport
+	self.ADDON_LOADED = self.CheckAddonSupport
+
+	-- Initialize the database
+	local db = LibStub('AceDB-3.0'):New("DiminishingReturnsDB", { profile = DEFAULT_CONFIG })
 	db.RegisterCallback(self, 'OnProfileChanged')
 	db.RegisterCallback(self, 'OnProfileCopied', 'OnProfileChanged')
 	db.RegisterCallback(self, 'OnProfileReset', 'OnProfileChanged')
@@ -61,21 +89,33 @@ local function OnLoad(self, event, name, ...)
 		LibDualSpec:EnhanceDatabase(db, "Diminishing Returns")
 	end
 
-	addon:TriggerMessage('OnProfileChanged')
+	-- Propagate settings
+	self:SendMessage('OnProfileChanged')
 
-	addon:LoadAddonSupport()
+	self:RegisterEvent('SPELLS_CHANGED', 'ResolveSpells')
 
 	if IsLoggedIn() then
+		self:PLAYER_LOGIN()
+	else
+		self:RegisterEvent('PLAYER_LOGIN')
+	end
+end
+addon:RegisterEvent('ADDON_LOADED')
+
+function addon:PLAYER_LOGIN()
+	self:CheckAddonSupport()
+	if not self:ResolveSpells() then
 		self:CheckActivation('OnLoad')
 	end
 end
 
-addon:RegisterEvent('ADDON_LOADED', OnLoad)
-
 -- Test mode
 function addon:SetTestMode(mode)
 	self.testMode = mode
-	addon:TriggerMessage('SetTestMode', self.testMode)
+	self:SendMessage('SetTestMode', self.testMode)
+	if mode then
+		self:SpawnTestDR()
+	end
 end
 
 -- GLOBALS: SLASH_DRTEST1

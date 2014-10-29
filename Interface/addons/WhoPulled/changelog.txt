@@ -1,3 +1,6 @@
+V1.0.11
+* toc bump
+
 V1.0.10
 * toc bump
 

@@ -14,7 +14,7 @@ local pName = UnitName("player")
 local bossUtilityFrame = CreateFrame("Frame")
 local enabledModules = {}
 local allowedEvents = {}
-local difficulty = 3
+local difficulty = 16 -- Mythic
 local UpdateDispelStatus = nil
 local myGUID = nil
 local myRole = nil
@@ -94,8 +94,8 @@ local boss = {}
 core:GetModule("Bosses"):SetDefaultModulePrototype(boss)
 function boss:IsBossModule() return true end
 function boss:OnInitialize() core:RegisterBossModule(self) end
-function boss:OnEnable()
-	if debug then dbg(self, "OnEnable()") end
+function boss:OnEnable(isWipe)
+	if debug then dbg(self, isWipe and "OnEnable() via Wipe()" or "OnEnable()") end
 
 	updateData()
 
@@ -109,14 +109,19 @@ function boss:OnEnable()
 	if self.SetupOptions then self:SetupOptions() end
 	if type(self.OnBossEnable) == "function" then self:OnBossEnable() end
 
-	if IsEncounterInProgress() then
-		self:CheckBossStatus("NoEngage") -- Prevent engaging if enabling during a boss fight (after a DC)
+	if self.engageId then
+		self:RegisterEvent("INSTANCE_ENCOUNTER_ENGAGE_UNIT", "CheckForEncounterEngage")
+		self:RegisterEvent("ENCOUNTER_END", "EncounterEnds")
+	end
+
+	if IsEncounterInProgress() and not isWipe then -- Safety. ENCOUNTER_END might fire whilst IsEncounterInProgress is still true and engage a module.
+		self:CheckForEncounterEngage("NoEngage") -- Prevent engaging if enabling during a boss fight (after a DC)
 	end
 
 	self:SendMessage("BigWigs_OnBossEnable", self)
 end
-function boss:OnDisable()
-	if debug then dbg(self, "OnDisable()") end
+function boss:OnDisable(isWipe)
+	if debug then dbg(self, isWipe and "OnDisable() via Wipe()" or "OnDisable()") end
 	if type(self.OnBossDisable) == "function" then self:OnBossDisable() end
 
 	-- Update enabled modules list
@@ -169,8 +174,9 @@ function boss:Reboot(isWipe)
 		-- Devs, in 99% of cases you'll want to use OnBossWipe
 		self:SendMessage("BigWigs_OnBossWipe", self)
 	end
-	self:Disable()
-	self:Enable()
+	self:OnDisable(isWipe)
+	self:CancelAllTimers()
+	self:OnEnable(isWipe)
 end
 
 function boss:NewLocale(locale, default) return AL:NewLocale(self.name, locale, default, "raw") end
@@ -386,13 +392,9 @@ do
 		end
 	end
 
-	function boss:CheckBossStatus(noEngage)
+	function boss:CheckForEncounterEngage(noEngage)
 		local hasBoss = UnitHealth("boss1") > 0 or UnitHealth("boss2") > 0 or UnitHealth("boss3") > 0 or UnitHealth("boss4") > 0 or UnitHealth("boss5") > 0
-		if not hasBoss and self.isEngaged then
-			if debug then dbg(self, ":CheckBossStatus wipeCheck scheduled.") end
-			self:ScheduleTimer(wipeCheck, 3, self)
-		elseif not self.isEngaged and hasBoss then
-			if debug then dbg(self, ":CheckBossStatus Engage called.") end
+		if not self.isEngaged and hasBoss then
 			local guid = UnitGUID("boss1") or UnitGUID("boss2") or UnitGUID("boss3") or UnitGUID("boss4") or UnitGUID("boss5")
 			local module = core:GetEnableMobs()[self:MobId(guid)]
 			local modType = type(module)
@@ -411,6 +413,17 @@ do
 				end
 				if not self.isEngaged then self:Disable() end
 			end
+		end
+	end
+
+	function boss:CheckBossStatus()
+		local hasBoss = UnitHealth("boss1") > 0 or UnitHealth("boss2") > 0 or UnitHealth("boss3") > 0 or UnitHealth("boss4") > 0 or UnitHealth("boss5") > 0
+		if not hasBoss and self.isEngaged then
+			if debug then dbg(self, ":CheckBossStatus wipeCheck scheduled.") end
+			self:ScheduleTimer(wipeCheck, 3, self)
+		elseif not self.isEngaged and hasBoss then
+			if debug then dbg(self, ":CheckBossStatus Engage called.") end
+			self:CheckForEncounterEngage()
 		end
 		if debug then dbg(self, ":CheckBossStatus called with no result. Engaged = "..tostring(self.isEngaged).." hasBoss = "..tostring(hasBoss)) end
 	end
@@ -513,7 +526,7 @@ do
 
 	function boss:Win(args, direct)
 		if debug then dbg(self, ":Win") end
-		if direct or self.engageId then
+		if direct then
 			self:Message("bosskill", "Positive", "Victory", AL:GetLocale("Big Wigs").defeated:format(self.displayName), false)
 			self.lastKill = GetTime() -- Add the kill time for the enable check.
 			if self.OnWin then self:OnWin() end
@@ -561,6 +574,16 @@ do
 
 		self.scheduledScansCounter[func] = 0
 		self.scheduledScans[func] = self:ScheduleRepeatingTimer(bossScanner, 0.05, self, func, tankCheckExpiry, guid)
+	end
+end
+
+function boss:EncounterEnds(event, id, name, difficulty, size, status)
+	if self.engageId == id and self.enabledState then
+		if status == 1 then
+			self:Win(nil, true)
+		elseif status == 0 then
+			self:ScheduleTimer("Wipe", 6) -- XXX Delayed for now due to issues with certain encounters and using IEEU for engage. Can be removed if we swap to ENCOUNTER_START.
+		end
 	end
 end
 

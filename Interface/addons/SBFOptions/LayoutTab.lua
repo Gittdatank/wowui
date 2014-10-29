@@ -34,7 +34,7 @@ SBFOptions.LayoutTabInitialise = function(self)
 	SBFOOpacitySlider:SetValueStep(0.1)
 	SBFORowsCheckButtonText:SetFormattedText(self.strings.BUFFHORIZONTAL)
 	SBFORowCountSliderLow:SetFormattedText(1)
-	SBFORowCountSlider:SetValueStep(1)
+	SBFORowCountSlider:SetValueStep(1.0)
 	SBFOLayoutConfigButton.text:SetFormattedText(self.strings.LAYOUTCONFIG, self.curFrame.id)
   SBFOFrameVisibilityDropDown.dropDownOptions = { noSort = true, }
   SBFOBuffSortDropDown.dropDownOptions = { noSort = true, }
@@ -70,7 +70,7 @@ SBFOptions.LayoutTabSelectFrame = function(self, var)
 		SBFORowCountSliderText:SetFormattedText("%s (%d)", self.strings.COLCOUNT, self.curFrame._var.layout.rowCount)
 	end
   rows(_var.layout.rows)
-  
+
   if _var.general.interactiveFrame then
     SBFOFrameVisibilityDropDown:Disable()
     SBFOBuffSortDropDown:Disable()
@@ -79,7 +79,7 @@ SBFOptions.LayoutTabSelectFrame = function(self, var)
   end
 
 	self:BuffSortDropDown_Initialise()
-  
+
   setup = false
 end
 

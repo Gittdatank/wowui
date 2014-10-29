@@ -190,8 +190,8 @@ sbf.OnEnable = function(self)
 	self.db = LibStub("AceDB-3.0"):New("SBFDB", self.defaultVars)
   self:DisableDefaultBuffFrame()
 
-  if SBFBFLoad then
-     self.bfModule = SBFBFLoad()
+  if SBFMasqueLoad then
+    self.masqueModule = SBFMasqueLoad()
   end
   self:ProfileChanged()
 

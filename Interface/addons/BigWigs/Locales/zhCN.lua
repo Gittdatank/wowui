@@ -131,7 +131,7 @@ L["test"] = "测试"
 L["thanks"] = "感谢他们在各个领域的开发与帮助"
 L["tooltipHint"] = [=[|cffeda55f点击|r图标重置所有运行中的模块。
 |cffeda55fAlt-点击|r可以禁用所有首领模块。
-|cffeda55fRight-Click|r to access options.]=] -- Needs review
+|cffeda55f右击|r打开选项。]=]
 L["upToDate"] = "已更新："
 L["warmup"] = "预备"
 L["warmup_desc"] = "首领战斗开始前预备时间。"

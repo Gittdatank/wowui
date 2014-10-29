@@ -1,16 +1,18 @@
 --[[
 Author: Starinnia
 CPR is a combo points display addon based on Funkydude's BasicComboPoints
-$Date: 2013-06-30 15:27:22 +0000 (Sun, 30 Jun 2013) $
-$Revision: 327 $
-Project Version: 3.2.3
+$Date: 2014-10-28 01:03:54 +0000 (Tue, 28 Oct 2014) $
+$Revision: 349 $
+Project Version: 3.2.4
 contact: codemaster2010 AT gmail DOT com
 
-Copyright (c) 2007-2013 Michael J. Murray aka Lyte of Lothar(US)
+Copyright (c) 2007-2014 Michael J. Murray aka Lyte of Lothar(US)
 All rights reserved unless otherwise explicitly stated.
 ]]
 
 local ComboPointsRedux = LibStub("AceAddon-3.0"):NewAddon("ComboPointsRedux", "AceConsole-3.0")
+local AceConfig = LibStub("AceConfig-3.0")
+local AceConfigDialog = LibStub("AceConfigDialog-3.0")
 --set some module defaults
 ComboPointsRedux:SetDefaultModuleState(false)
 ComboPointsRedux:SetDefaultModuleLibraries("AceConsole-3.0", "AceEvent-3.0")
@@ -186,27 +188,22 @@ function ComboPointsRedux:OnInitialize()
 	self:RegisterChatCommand("cpr", "OpenConfig", true, true)
 	self:RegisterChatCommand("cpredux", "OpenConfig", true, true)
 	
-	local spy = CreateFrame("FRAME", nil, UIParent)
-	spy.name = "ComboPointsRedux"
-	spy.addon = "ComboPointsRedux_Options"
-	spy:Hide()
-	spy:SetScript("OnShow", function(self)
-		--remove the dummy entry
-		for i, f in ipairs(INTERFACEOPTIONS_ADDONCATEGORIES) do
-			if f == self.name or f.name == self.name then
-				tremove(INTERFACEOPTIONS_ADDONCATEGORIES, i)
-				break
-			end
-		end
-		self:Hide()
-		
-		--load the config
-		LoadAddOn(self.addon)
-		
-		--refresh the screen
-		InterfaceOptionsFrame_OpenToCategory(self.name)
-	end)
-	InterfaceOptions_AddCategory(spy)
+	AceConfig:RegisterOptionsTable("ComboPointsRedux_Bliz", {
+		name = "ComboPointsRedux",
+		handler = ComboPointsRedux,
+		type = 'group',
+		args = {
+			config = {
+				name = L["Standalone config"],
+				desc = L["Open a standlone config window, allowing you to actually configure ComboPointsRedux."],
+				type = 'execute',
+				func = function()
+					ComboPointsRedux.OpenConfig()
+				end
+			}
+		},
+	})
+	AceConfigDialog:AddToBlizOptions("ComboPointsRedux_Bliz", "ComboPointsRedux")
 end
 
 function ComboPointsRedux:OnEnable()

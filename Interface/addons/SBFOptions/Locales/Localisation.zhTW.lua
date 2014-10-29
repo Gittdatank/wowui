@@ -1,5 +1,5 @@
 -- Note for translators:
--- You should never have 
+-- You should never have
 --   SBFOptions.strings.X = SBFOptions.strings.X or "y"
 -- You should only have
 --   SBFOptions.strings.X = "y"
@@ -92,7 +92,7 @@ if ( GetLocale() == "zhTW" ) then
   SBFOptions.strings.SCTCOLOUR = "顏色"
   SBFOptions.strings.FASTBAR = "快速顯示計時條消隱"
   SBFOptions.strings.SCTWARN = "在%s顯示消失警報資訊"
-  SBFOptions.strings.SCTCRIT = "使用爆擊動畫顯示" 
+  SBFOptions.strings.SCTCRIT = "使用爆擊動畫顯示"
   SBFOptions.strings.SCTCRITTT1 = "如果SCT啟用則使用SCT的爆擊動畫顯示消失警報"
   SBFOptions.strings.SCTCRITTTM1 = "你已經設置SCT為使用訊息方塊體漸隱顯示Buff。"
   SBFOptions.strings.SCTCRITTTM2 = "當前SCT設置不允許資訊顯示為爆擊"
@@ -133,7 +133,7 @@ SBFOptions.strings.UNITFRAMEOWNERCHANGE =  "將框體%d的所有權由%s轉移�
   -- Global Tab
   SBFOptions.strings.GLOBALCONFIG = "全域設置"
   SBFOptions.strings.HOME = "主頁"
-  SBFOptions.strings.AURAMAXTIME = "光環效果顯示為最大持續時間" 
+  SBFOptions.strings.AURAMAXTIME = "光環效果顯示為最大持續時間"
   SBFOptions.strings.AURAMAXTIMETT1 = "選中後，光環類效果（無持續時間）"
   SBFOptions.strings.AURAMAXTIMETT2 = "會顯示為持續時間為最大值的法術。"
   SBFOptions.strings.ENCHANTSFIRST = "優先顯示物品附魔"
@@ -144,7 +144,7 @@ SBFOptions.strings.UNITFRAMEOWNERCHANGE =  "將框體%d的所有權由%s轉移�
 
   -- Misc
   SBFOptions.strings.VERSION2 = "Satrina Buff Frames |cff00ff00%s|r"
-  SBFOptions.strings.HINT = "http://familyofnine.org/SBF"
+  SBFOptions.strings.HINT = "http://sbf.satrina.info"
   SBFOptions.strings.HINT2 = "Alt+移動我！"
   SBFOptions.strings.FRAME = "框體%d"
   SBFOptions.strings.USINGPROFILE = "正在使用的設定檔"
@@ -228,7 +228,7 @@ SBFOptions.strings.UNITFRAMEOWNERCHANGE =  "將框體%d的所有權由%s轉移�
     "Curse effects",
     "Untyped effects",
   }
-  
+
   frameVisibility = {
     "始終",
     "從不",

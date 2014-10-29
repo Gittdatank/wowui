@@ -51,9 +51,9 @@
 --  Globals/Default Options  --
 -------------------------------
 DBM = {
-	Revision = tonumber(("$Revision: 11811 $"):sub(12, -3)),
-	DisplayVersion = "6.0.4 alpha", -- the string that is shown as version
-	ReleaseRevision = 11799 -- the revision of the latest stable version that is available
+	Revision = tonumber(("$Revision: 11834 $"):sub(12, -3)),
+	DisplayVersion = "6.0.5 alpha", -- the string that is shown as version
+	ReleaseRevision = 11829 -- the revision of the latest stable version that is available
 }
 
 -- Legacy crap; that stupid "Version" field was never a good idea.
@@ -197,7 +197,7 @@ DBM.DefaultOptions = {
 --	HelpMessageShown = false,
 	BugMessageShown = 0,
 	MoviesSeen = {},
-	MovieFilter = "Never",
+	MovieFilter = "AfterFirst",
 	LastRevision = 0,
 	FilterSayAndYell = false,
 	DebugMode = false,
@@ -225,7 +225,6 @@ local blockEnable = false
 local cachedGetTime = GetTime()
 local lastCombatStarted = cachedGetTime
 local loadcIds = {}
-local blockMovieSkipItems = {}
 local inCombat = {}
 local combatInfo = {}
 local bossIds = {}
@@ -909,6 +908,10 @@ do
 			DBM.Bars:LoadOptions("DBM")
 			DBM.Arrow:LoadPosition()
 			if not DBM.Options.ShowMinimapButton then self:HideMinimapButton() end
+			local soundChannels = tonumber(GetCVar("Sound_NumChannels")) or 24--if set to 24, may return nil, Defaults usually do
+			if soundChannels < 64 then
+				SetCVar("Sound_NumChannels", 64)
+			end
 			self.AddOns = {}
 			for i = 1, GetNumAddOns() do
 				local addonName = GetAddOnInfo(i)
@@ -956,12 +959,6 @@ do
 							local idTable = {strsplit(",", GetAddOnMetadata(i, "X-DBM-Mod-LoadCID"))}
 							for i = 1, #idTable do
 								loadcIds[tonumber(idTable[i]) or ""] = addonName
-							end
-						end
-						if GetAddOnMetadata(i, "X-DBM-Mod-Block-Movie-Skip-ItemID") then
-							local idTable = {strsplit(",", GetAddOnMetadata(i, "X-DBM-Mod-Block-Movie-Skip-ItemID"))}
-							for i = 1, #idTable do
-								blockMovieSkipItems[tonumber(idTable[i]) or ""] = tonumber(mapIdTable[1])
 							end
 						end
 					end
@@ -2474,13 +2471,7 @@ end
 function DBM:CINEMATIC_START()
 	DBM:Debug("CINEMATIC_START fired")
 	if not IsInInstance() or C_Garrison:IsOnGarrisonMap() or DBM.Options.MovieFilter == "Never" then return end
-	DBM:Debug("CINEMATIC_START is enabled and passed first check")
-	for itemId, mapId in pairs(blockMovieSkipItems) do
-		if mapId == LastInstanceMapID then
-			if select(3, GetItemCooldown(itemId)) > 0 then return end
-		end
-	end
-	DBM:Debug("CINEMATIC_START has no visions of time item")
+	DBM:Debug("CINEMATIC_START: in valid zone, checking settings")
 	SetMapToCurrentZone()
 	local currentFloor = GetCurrentMapDungeonLevel() or 0
 	if DBM.Options.MovieFilter == "Block" or DBM.Options.MovieFilter == "AfterFirst" and DBM.Options.MoviesSeen[LastInstanceMapID..currentFloor] then
@@ -2629,7 +2620,6 @@ do
 	end
 
 	function DBM:LoadModsOnDemand(checkTable, checkValue)
-		DBM:Debug("LoadModsOnDemand fired for checkValue "..checkValue.." using checkMethod "..checkTable)
 		for i, v in ipairs(DBM.AddOns) do
 			local modTable = v[checkTable]
 			local enabled = GetAddOnEnableState(playerName, v.modId)
@@ -2658,7 +2648,6 @@ end
 	--The main place we should force a mod load in combat is for IsEncounterInProgress because i'm pretty sure blizzard waves "script ran too long" function for a small amount of time after a DC
 	--Outdoor bosses will try to ignore check, if they fail, well, then we need to try and find ways to make the mods that can't load in combat smaller or load faster.
 function DBM:LoadMod(mod, force)
-	DBM:Debug("LoadMod fired")
 	if type(mod) ~= "table" then
 		DBM:Debug("LoadMod failed because mod table not valid")
 		return false
@@ -3305,7 +3294,7 @@ do
 					difficultyName = PLAYER_DIFFICULTY1
 				end
 				if wipe == "1" then
-					DBM:AddMsg(DBM_CORE_GUILD_COMBAT_ENDED_AT:format(difficultyName, bossName, wipeHP, time))
+					DBM:AddMsg(DBM_CORE_GUILD_COMBAT_ENDED_AT:format(difficultyName.."-"..bossName, wipeHP, time))
 				else
 					DBM:AddMsg(DBM_CORE_GUILD_BOSS_DOWN:format(difficultyName.."-"..bossName, time))
 				end
@@ -3789,7 +3778,9 @@ do
 	end
 	
 	function DBM:UNIT_TARGETABLE_CHANGED()
-		self:Debug("UNIT_TARGETABLE_CHANGED event fired")
+		if Transcriptor and Transcriptor:IsLogging() then
+			self:Debug("UNIT_TARGETABLE_CHANGED event fired")
+		end
 	end
 
 	--TODO, waste less cpu and register Unit event somehow. DBMs register events code is so conviluted though that it's difficult to add without tons of work.
@@ -4008,6 +3999,7 @@ end
 local statVarTable = {
 	--6.0
 	["event5"] = "normal",
+	["event20"] = "lfr25",
 	["event40"] = "lfr25",
 	["normal5"] = "normal",
 	["heroic5"] = "heroic",
@@ -4262,7 +4254,7 @@ function DBM:UNIT_HEALTH(uId)
 	end
 	if not health or health < 5 then return end -- no worthy of combat start if health is below 5%
 	if InCombatLockdown() then
-		if not cId == 0 and not bossHealth[cId] and bossIds[cId] and UnitAffectingCombat(uId) and healthCombatInitialized then -- StartCombat by UNIT_HEALTH.
+		if cId ~= 0 and not bossHealth[cId] and bossIds[cId] and UnitAffectingCombat(uId) and healthCombatInitialized then -- StartCombat by UNIT_HEALTH.
 			if combatInfo[LastInstanceMapID] then
 				for i, v in ipairs(combatInfo[LastInstanceMapID]) do
 					if v.mod.Options.Enabled and not v.mod.disableHealthCombat and (v.type == "combat" or v.type == "combat_yell" or v.type == "combat_emote" or v.type == "combat_say") and (v.multiMobPullDetection and checkEntry(v.multiMobPullDetection, cId) or v.mob == cId) then
@@ -4667,6 +4659,8 @@ function DBM:GetCurrentInstanceDifficulty()
 		return "event40", difficultyName.." - ", difficulty, instanceGroupSize
 	elseif difficulty == 19 then
 		return "event5", difficultyName.." - ", difficulty, instanceGroupSize
+	elseif difficulty == 20 then
+		return "event20", difficultyName.." - ", difficulty, instanceGroupSize
 	else--failsafe
 		return "normal5", "", difficulty, instanceGroupSize
 	end
@@ -4917,12 +4911,20 @@ do
 				mod = not v.isCustomMod and v
 			end
 			mod = mod or inCombat[1]
-			local hp = ("%d%%"):format(mod.highesthealth and mod:GetHighestBossHealth() or mod:GetLowestBossHealth())
+			local hp = ("%d%%"):format(mod.highesthealth and mod:GetHighestBossHealth() or mod:GetLowestBossHealth()) or DBM_CORE_UNKNOWN
+			local hpText = hp
+			if mod.vb.phase then
+				hpText = hpText.." ("..SCENARIO_STAGE:format(mod.vb.phase)..")"
+			end
+			if mod.numBoss then
+				local bossesKilled = mod.numBoss - mod.vb.bossLeft
+				hpText = hpText.." ("..BOSSES_KILLED:format(bossesKilled, mod.numBoss)..")"
+			end
 			if not autoRespondSpam[sender] then
 				if IsInScenarioGroup() then
 					sendWhisper(sender, chatPrefix..DBM_CORE_AUTO_RESPOND_WHISPER_SCENARIO:format(playerName, difficultyText..(mod.combatInfo.name or ""), getNumAlivePlayers(), DBM:GetNumGroupMembers()))
 				else
-					sendWhisper(sender, chatPrefix..DBM_CORE_AUTO_RESPOND_WHISPER:format(playerName, difficultyText..(mod.combatInfo.name or ""), hp or DBM_CORE_UNKNOWN, IsInInstance() and getNumRealAlivePlayers() or getNumAlivePlayers(), DBM:GetNumRealGroupMembers()))
+					sendWhisper(sender, chatPrefix..DBM_CORE_AUTO_RESPOND_WHISPER:format(playerName, difficultyText..(mod.combatInfo.name or ""), hpText, IsInInstance() and getNumRealAlivePlayers() or getNumAlivePlayers(), DBM:GetNumRealGroupMembers()))
 				end
 				DBM:AddMsg(DBM_CORE_AUTO_RESPONDED)
 			end
@@ -5191,9 +5193,12 @@ end
 -------------------
 MovieFrame:HookScript("OnEvent", function(self, event, id)
 	if event == "PLAY_MOVIE" and id then
+		DBM:Debug("PLAY_MOVIE fired")
 		if not IsInInstance() or C_Garrison:IsOnGarrisonMap() or DBM.Options.MovieFilter == "Never" then return end
+		DBM:Debug("PLAY_MOVIE: In valid zone, checking settings")
 		if DBM.Options.MovieFilter == "Block" or DBM.Options.MovieFilter == "AfterFirst" and DBM.Options.MoviesSeen[id] then
 			MovieFrame_OnMovieFinished(self)
+			DBM:Debug("PLAY_MOVIE: Canceling movie")
 		else
 			DBM.Options.MoviesSeen[id] = true
 		end

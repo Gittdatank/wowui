@@ -225,7 +225,7 @@ end
 --счет урона в аддов
 if arg2=="DAMAGE_SHIELD" or arg2=="SPELL_PERIODIC_DAMAGE" or arg2=="SPELL_DAMAGE" or arg2=="RANGE_DAMAGE" then
 if arg12 then
-local id=tonumber(string.sub(guid2,6,10),16)
+local id=psGetUnitID(guid2)
 if id==69480 or id==69491 or id==69492 then
   if pswasonbossp53==nil then
     pswasonbossp53=1
@@ -250,7 +250,7 @@ end
 
 if arg2=="SWING_DAMAGE" then
 if spellid then
-local id=tonumber(string.sub(guid2,6,10),16)
+local id=psGetUnitID(guid2)
 if id==69480 or id==69491 or id==69492 then
     pscduhnamedamageadd1=name2
     local source=psgetpetownername(guid1, name1, flag1)

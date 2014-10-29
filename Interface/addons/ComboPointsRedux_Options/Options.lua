@@ -1,8 +1,8 @@
 --[[
 ComboPointsRedux_Options - LoD option module for ComboPointsRedux
 Author: Michael Joseph Murray aka Lyte of Lothar(US)
-$Revision: 343 $
-$Date: 2014-10-21 01:17:32 +0000 (Tue, 21 Oct 2014) $
+$Revision: 349 $
+$Date: 2014-10-28 01:03:54 +0000 (Tue, 28 Oct 2014) $
 Project Version: 2.0.0 beta2
 contact: codemaster2010 AT gmail DOT com
 
@@ -594,5 +594,3 @@ LibStub('LibDualSpec-1.0'):EnhanceOptions(opts.args.profile, core.db)
 
 LibStub("AceConfig-3.0"):RegisterOptionsTable("ComboPointsRedux", opts)
 LibStub("AceConfigDialog-3.0"):SetDefaultSize("ComboPointsRedux", 800, 500)
-
-LibStub("AceConfigDialog-3.0"):AddToBlizOptions("ComboPointsRedux", "ComboPointsRedux")

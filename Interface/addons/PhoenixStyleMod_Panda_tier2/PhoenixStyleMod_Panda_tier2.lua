@@ -439,7 +439,7 @@ if pscmrcheckforevade_p2 and curtime>pscmrcheckforevade_p2 then
 pscmrcheckforevade_p2=pscmrcheckforevade_p2+7
 local id=0
 if UnitGUID("boss1") then
-	id=tonumber(string.sub(UnitGUID("boss1"),6,10),16)
+	id=psGetUnitID(UnitGUID("boss1"))
 end
 local bil=0
 if #psbossbugs>0 then
@@ -486,7 +486,7 @@ if pscheckbossincombatmcr_p2 and GetTime()>pscheckbossincombatmcr_p2 then
 
 local id=0
 if UnitGUID("boss1") then
-	id=tonumber(string.sub(UnitGUID("boss1"),6,10),16)
+	id=psGetUnitID(UnitGUID("boss1"))
 end
 local bil=0
 if #psbossbugs>0 then
@@ -517,7 +517,7 @@ pscatadelaycheckboss=nil
 
 	if UnitGUID("boss1") then
 		local id2=UnitGUID("boss1")
-		local id=tonumber(string.sub(id2,6,10),16)
+		local id=psGetUnitID(id2)
 local bil=0
 if #psbossbugs>0 then
 	for i=1,#psbossbugs do
@@ -544,7 +544,7 @@ pscmrdelayofbosccheck_p2=curtime+1
 
 	if UnitGUID("boss1") then
 		local id2=UnitGUID("boss1")
-		local id=tonumber(string.sub(id2,6,10),16)
+		local id=psGetUnitID(id2)
 local bil=0
 if #psbossbugs>0 then
 	for i=1,#psbossbugs do
@@ -740,7 +740,7 @@ table.wipe (pselegontabldamage2[4])
 
 if UnitGUID("boss1") then
 local id2=UnitGUID("boss1")
-local id=tonumber(string.sub(id2,6,10),16)
+local id=psGetUnitID(id2)
 local bil=0
 if #psbossbugs>0 then
 	for i=1,#psbossbugs do

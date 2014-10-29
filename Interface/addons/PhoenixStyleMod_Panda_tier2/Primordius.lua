@@ -130,7 +130,7 @@ end
 
 --не разделили урон
 if (arg2=="SPELL_DAMAGE" or arg2=="SPELL_MISSED") and spellid==136216 then
-  local id=tonumber(string.sub(guid1,6,10),16)
+  local id=psGetUnitID(guid1)
   if id==69017 then
 psunitisplayer(guid2,name2)
 if psunitplayertrue then

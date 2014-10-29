@@ -1,11 +1,15 @@
-## Interface: 60000
+## Interface: 60200
 ## Title: EPGP
 ## Notes: Effort Points/Gear Points Loot System
 ## Author: Alkis Evlogimenos
-## Version: 5.10.4
+## Version: 5.10.6
 ## SavedVariables: EPGP_DB
 ## X-Category: Guild
 ## X-Website: http://code.google.com/p/epgp/
+## X-Curse-Packaged-Version: v5.10.8
+## X-Curse-Project-Name: epgp (dkp reloaded)
+## X-Curse-Project-ID: epgp-dkp-reloaded
+## X-Curse-Repository-ID: wow/epgp-dkp-reloaded/mainline
 
 libs\LibStub\LibStub.lua
 libs\CallbackHandler-1.0\CallbackHandler-1.0.xml

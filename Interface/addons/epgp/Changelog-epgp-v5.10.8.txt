@@ -1,0 +1,1226 @@
+tag v5.10.8
+ce5fed51427ab7e64e5d0bb5d6625db92cfa8bf2
+Chip Turner <cturner@pattern.net>
+2014-10-28 08:07:34 -0700
+
+release v5.10.8
+
+
+--------------------
+
+Chip Turner:
+	- tweak release script
+	- remove dead google upload code from release script
+	- pkgmeta for curseforge
+	- bump toc
+	- update externals
+	- fix traceback due to ITEM_QUALITY_EPIC becoming LE_ITEM_QUALITY_EPIC
+	- Add T16 "normal" (was: "Flex") tokens, courtesy of kieron
+	- fix minor 6.0 issue with loot announcing
+	- update toc
+	- update externals
+	- bump version
+	- update externals
+	- handle currency better
+	- bump
+	- fix cross-realm, same-name guild membership; thanks to shmoodude for the fix
+	- bump
+	- update externals
+	- bump
+	- workaround epgp lootmaster versioning issue
+	- bump
+	- different approach; just strip off the -servername from the roster info, and leave the rest the same
+	- hey gp too
+	- another hack
+	- bump
+	- if the name doesn't have a server in it, force it
+	- hopefully fix the broken 5.4.2 stuff
+	- stop resetting the debug timer, task 735
+	- bump toc
+	- T16 tokens and essences
+	- bump toc
+	- use warforged seal for bonus rolls
+	- fix localization and change ilvl calc
+	- New tier, new values; also show ilvl in loot spam
+	- update libs
+	- ignore palace key and make UI a little wider, from electronicus
+	- update bigwigs interaction (thanks, funkydude); change announces for corpse loot; bump toc
+	- fix a stacktrace and also filter out old gear
+	- workaround import/export bug
+	- make rescale gp use 26 ilvls again
+	- invert condition
+	- fix coin log bug
+	- bump
+	- always log coin loot, even if announces are off
+	- bugfix
+	- bump
+	- remove LibBabbleClass and update externals
+	- make coin/corpse announces only go to the raid
+	- stop spamming lfr
+	- make coin loot messages configurable
+	- less spammy corpse loot announces
+	- bump
+	- new number for mogu
+	- bump
+	- fix a bug in how AceComm was used
+	- make any player able to announce loot, but only the first person in the guild to see it
+	- make the recurring dropdown list more sensible
+	- bump toc and version
+	- T15 tokens
+	- improve coin log
+	- fix costs for ranged reapons (guns vs wants), and new tier ilvl base
+	- log coin wins; also debug command line option
+	- the api returns the coin that is being used as part of the count, hah!
+	- loot announcement
+	- initial basic support for reporting bonus rolls
+	- bump toc
+eruteiHT:
+	- try to fix AceGUI widget problem. adjust dropdown layout.
+	Signed-off-by: eruteiHT <eruteiHT@gmail.com>
+	- change functions of dropdown from blizzard's code to AceGUI widget.
+	Signed-off-by: eruteiHT <eruteiHT@gmail.com>
+	- fix collision at OnShow.
+	Signed-off-by: eruteiHT <eruteiHT@gmail.com>
+	- loading improvement.
+	Signed-off-by: eruteiHT <eruteiHT@gmail.com>
+	- fix double GP increment issue.
+	Signed-off-by: eruteiHT <eruteiHT@gmail.com>
+	- adapt to LibDialog. fix dropdown taint issue for no masterlooter users.
+	Signed-off-by: eruteiHT <eruteiHT@gmail.com>
+	- adapt to LibDialog.
+	Signed-off-by: eruteiHT <eruteiHT@gmail.com>
+	- adapt to LibDialog. fix global '_' taint.
+	Signed-off-by: eruteiHT <eruteiHT@gmail.com>
+	- fix huge lag issue when reloadUI with in combat.
+	Signed-off-by: eruteiHT <eruteiHT@gmail.com>
+	- add LibDialog-1.0
+	Signed-off-by: eruteiHT <eruteiHT@gmail.com>
+	- fix module disable issue.
+	Signed-off-by: eruteiHT <eruteiHT@gmail.com>
+Chip Turner:
+	- fix up some possible taint issues, update translations and externals
+	- remove unnecessary dependency and increase timeout for loot award
+	- use upgraded ilvl for gp costs... ugh what a hack
+	- bump version
+	- wands actually should be 1.5, not 2.0; also new tier items
+	- remove some debugging spam, tidy up debugging timestamps, and slightly change behavior of modules being enabled
+	- update localization
+	- adapt patch from eruteiHT to (hopefully!) fix the module-disabling bug
+	- wands are 2.0 too
+	- use mop instances
+	- 5.8.5
+	- use 496 rather than 489 for the ilvl floor
+	- 5.8.4
+	- argh, fix typo
+	- 5.8.3
+	- fix how we decide when the next expansion is here since patch level won't be accurate
+	- a couple more API updates for 5.0.4
+	- refresh externals
+	- fix traceback from task 723
+	- fix a couple of reported issues
+	- 5.8.1
+	- translations
+	- pull new externals
+	- remove unnecessary function
+	- new german translations
+	- updated localizations
+	- fix api usage
+	- update localization fetch script
+	- fixup regex to not pick up some probably broken strings
+	- update localization strings
+	- make script work once again with new dir structure
+	- always tag local, user must do push
+	- update for 5.0
+	- update make-release for git
+	- update externals
+cturner@pattern.net:
+	- Added tag v5.7.1 for changeset 3f545f484ac2
+	- 5.7.1
+	- make the new tier popup better and avoid referencing firelands
+	- Added tag v5.7.0 for changeset 5975f36037dc
+	- bump to 5.7.0 for 4.3!
+	- untested changes for 4.3, pt 2
+	- untested changes for 4.3
+	- Tag the 5.6.5 release.
+	- Added tag v5.6.5 for changeset 0b31c750b00f
+	- fix initialized placement
+	- change how submodule db initialization happens as well as how the global epgp db works
+	- update libs
+	- Added tag v5.6.4 for changeset f8893390f8f1
+	- bump
+	- fix some outsider support bugs
+	- Added tag v5.6.3 for changeset 2455d1419dff
+	- bump version
+	- fix costs that were not updated properly for off/main hand change
+	- Tag the 5.6.2 release.
+	- Added tag v5.6.2 for changeset feaa9682d3dc
+	- fix rounding in gp values
+	- Added tag v5.6.1 for changeset 3f00ce1f40a4
+	- bump version and fix a bug in adding the outsiders support
+	- Added tag v5.6.0 for changeset 5147e1f3828e
+	- glue in outsiders configuration support
+	- outsider patch, step 1
+	- strip carriage returns, ugh
+	- hack to work around offline mode
+	- bumping to 5.6 in preparation for 4.2
+	- reference release notes in the new tier message
+	- add T12 data
+	- more library upgrades.  tested it this time
+	- bump LibGearPoints-1.0.lua t. 1.2
+	- fix the gp decay value
+	- add decay gp and reset gp buttons, adjust pricing to be tier relative
+	- fixup event handling
+	- make the log autotrim to 30 days
+	- Add T11 tokens, courtesy of r.siereveld@gmail.com
+	- Added tag v5.5.27 for changeset 2fe8f82a66da
+	- bump version
+	- fix issue with lib name
+	- Added tag v5.5.26 for changeset cbcb3f8d4835
+	- Removed tag v5.5.26
+	- Added tag v5.5.26 for changeset 3b5b345b58fb
+	- register guildstorage prefix as well as reduce it below the prefix size limit
+	- properly bump version number
+	- update externals, bump version number
+evlogimenos:
+	- Fix library include order. Fixes issue 683.
+	- Tag the 5.5.24 release.
+	- Added tag v5.5.24 for changeset 06b98c639db9
+	- Increase version of this lib so that other addons use it.
+	- Fix GP for ilvl 359 chests to be exactly 1000. Also remove rarity from the calculation since item budget is homogenized now.
+	Fixes issue 669.
+	- Change EP reasons to cover Cataclysm ones.
+	- Load the correct popups.lua. Fixes issue 668.
+	- Tag the 5.5.23 release.
+	- Added tag v5.5.23 for changeset 2cd95b5ce470
+	- Add hgignore.
+	- Pull make-release from epgp-6.
+	- Remove junk file.
+	- Change GP formula for Cataclysm.
+	- Fix case collision.
+	- Pull libraries using scripts and update epgp.toc to match
+cturner@pattern.net:
+	- scripts and datafiles to pull externals from svn and git repositories
+evlogimenos:
+	- Move guild info parsing in its own file.
+	- Add comment for example lib to base separate project on.
+	- Use self.db instead of db for most uses.
+	- Remove Create as it is not needed.
+	- Add unittest to LibCoroutine. Multiple fixes.
+	- Remove unused library.
+	- Remove debug.xml from toc.
+	- Remove lootmaster files.
+	- Move modules in their own directory.
+	- Force show offline members on Guild UI. Fixes issue 632.
+	- Update localizations.
+	- Update TOC
+	- Fix guild roster updating for 4.0.1 patch. Fixes issue 630.
+	- Really use ChatThrottleLib for events.
+	- Add WaitForEvent() api.
+	- Remove Deformat-2.0 (and usage of AceLibrary-2.0). Use LibDeformat-3.0.
+	- Unregister boss events from DXE when we are disabled.
+	- Format strings properly when reporting which boss mod we are using.
+	- Use double colon syntax for Coroutine and AceTimer.
+	- Fix buglet.
+	- Add DXE support. Fixes issue 546.
+	- Fix comments.
+	- Add LibCoroutine to TOC.
+	- Use coroutines to simplify code.
+	- Remove unused embed.
+	- Remove unused variable.
+	- Remove debugging variable.
+	- Add LibCoroutine and simplify loot.lua code.
+	- Make script work with 2.6.
+	- Add functions to query for authorization to decay/reset EPGP and use this to update the buttons on the popups. Fixes issue 614.
+	- Fixes to accommodate for new ChatEditBox. Fixes issue 606.
+	- Update localizations.
+	- Import localizations.
+	- Fix GP popup.
+	- Update localizations.
+	- Add emblem of frost to the ignore list.
+	Fixes issue 579.
+	- Update localizations.
+	- Clear alts on standby like other members.
+	Fixes issue 540.
+	- Fix raid dungeon listing to handle all combinations of heroic/normal/10/25 properly.
+	Fixes issue 563.
+	- Update TOC.
+	Fixes issue 549.
+	- Use SetNonSpaceWrap instead of SetMultilineIndent.
+	Fixes issue 548.
+	- Fix LDB ui and config toggling.
+	Fixes issue 544.
+	- Add support for %t in epgp commands.
+	Fixes issue 543.
+	- Add GP for Marks of Sanctification (Icecrown Citadel tokens) and Trophies of the Crusade.
+	Fixes issue 542.
+	- Add command line interface to EPGP to accomodate UI haters!
+	Fixes issue 329.
+	- Update localizations.
+	- Specify timeout otherwise we get an error.
+	Fixes issue 530.
+	- Update localizations.
+	- Update localizations.
+	- Add warning for multiple epgp masters causing data loss.
+	Closes issue 512.
+	- Fix typo.
+	Update issue 454.
+	- Update localizations.
+	- Add support for BigWigs. Patch provided by Ronald J. Yacketta!
+	- Update localizations.
+	- Make the default log width to 600 pixels.
+	Update issue 471
+	Also change the default log width to 600 pixels.
+	- Make the log window resize up to 1200 pixels.
+	Fixes issue 471.
+	- Add LDB module to EPGP.
+	Fixes issue 491.
+	- Fix problem awarding mass ep.
+	Fixes issue 518.
+	- Update localizations.
+	- Allow only 1 level of main indirection. An alt cannot be an alt of an alt. So an alt can only be valid if it points to a member with ep and gp.
+	Fixes issue 507.
+	- Handle untracked toons in mass EP awards.
+	Fixes issue 517.
+	- Changes for DBM API changes.
+	Fixes issue 513.
+mackatack:
+	- Many modifications. Implemented alot of the functionality. The true netcode still needs to be added along with the distribution funcionality and popups. All in all still a lot of work.
+evlogimenos:
+	- Update localizations.
+	- Add debugging line to log profile changes.
+	- Stop setting EPGP.db to nil if we are out of a guild. We disable all modules that's enough.
+	This fixes issue 459.
+	- Move the last version variable in global data. This is part of the fix for issue 459.
+	- Update localizations.
+	- Make all chat/addon traffic generated from epgp to go through ChatThrottleLib if available. Also make it work with ChatThrottleLib 21.
+	This fixes issue 489.
+	- Fix quest awards for reply code alpha.
+	This fixes issue 486.
+	- Fire a log updated message to notify log changes on sync.
+	- Update localizations.
+	- Disallow fractional EP or GP values.
+	This fixes issue 479.
+	- Broadcast logs to guild.
+	This fixes issue 485.
+	- Bump the version.
+	- Remove ilvl from tooltip.
+	This fixes issue 484.
+	- Ignore emblems of triumph.
+	This fixes issue 482.
+	- Simplify the code a bit and use ChatThrottleLib for all announces if available.
+	- Fix typo.
+	- Add token values for tier 9 25m heroic loot.
+	This fixes issue 480.
+troeks:
+	- Fix a typo in whisper.lua
+	- Let the user select the announce medium the whisper module should use. This fixes issue 475.
+evlogimenos:
+	- Remove members from standby list after a mass EP award.
+	This fixes issue 476.
+	- Fix double award when both main and alt are in the award list.
+	This fixes issue 474.
+	- Update localizations.
+	- Make wipe detection respect a disabled setting.
+	This fixes issue 473.
+	- Do not fail undoing 0 GP or 0 EP awards.
+	This fixes issue 439.
+	- Add rank to the tooltip in the standings list.
+	This fixes issue 429.
+	- Make standby queuing for other members case insensitive.
+	This fixes issue 472.
+	- Report the right awards when whispering to standby members.
+	This fixes issue 461.
+troeks:
+	- Make sure that the person we try to award EP actually is a valid member. This fixes issue 463.
+	- Make the dialog variable accessible to the correct scope.
+	- Fix inconsisten syntax identation.
+	- Validate that we actually can give the player GP before we show the GP credit dialog. This fixes issue 465.
+	- Check that we actually have a list of extras before we attempt to announce them. This fixes issue 462.
+evlogimenos:
+	- Add more localizations from the community.
+	- Fix the script to work after the curseforge changes.
+troeks:
+	- Display a confirmation before we trim the log.
+	- Change the capitalization method used in whisper to support multibyte characters. This fixes issue 437.
+evlogimenos:
+	- Add announce for extras awards (standby). This fixes issue 422.
+	- Add way to trim the log to avoid large logs slowing down load times.
+	- Add way to mark loot as guild bank loot. Add a third button in the gp popup dialog. Add export of loot for the webapp.
+	- Add support for wipe awards on bosses.
+	This fixes issue 457.
+	
+	Thanks Graeme!
+	- Send instructions for standby whispers to guild instead of default channel.
+	This fixes issue 456.
+	
+	Thanks Trond!
+	- Update to the latest version of upload.py.
+	- Add an option to control GP display on item quality.
+	This fixes issue 455.
+	
+	Thanks Trond!
+	- Make whisper commands case insensitive.
+	This fixes issue 453.
+	
+	Thanks Trond!
+mackatack:
+	- Now using AceHook to hook the GiveMasterLoot function, instead or hooking it manually.
+	- Made the changes Alkis proposed, added some comments and a thorough unit test to test all the situations that might occur. Wiping the tables on LOOT_CLOSED is not needed since the other event clear the tables themselves.
+	- Sometimes the loot message is called before the LOOT_SLOT_CLEARED event. An extra lookup table has been added to make sure we're not duplicating the loot message.
+	- Fixed a bug where the library couldn't always detect class-only items. Now scanning all the lines on a tooltip, this has been tried and tested in EPGPLootmaster.
+	- Changed some debug output.
+	- Fixed some trailing spaces and syntax here and there.
+	- Simplified the patch for 'the player out of range while distributing master loot' bug. Also using less tables now.
+	- Patch to fix a blizzard bug where the master looter doesn't receive a 'Player X receives Item Y.' message when the receiving player is out of range of the master looter. This patch caches the looting slots and traps the messages that trigger when a loot slot gets cleared. If after a specified period of time the master looter still doesn't receive a loot message this patch will emulate that message, so other addons such as EPGPLootmaster, headcount etc etc keep functioning.
+evlogimenos:
+	- Update localizations.
+	- Fix issue with static popup.
+	- Stop exporting the class of each toon. This fixes issue 433.
+	- Enable debugging output by default. /epgp debug now only toggles the debug window. This fixes issue 432.
+	- Add popup mentioning epgpweb. This fixes issue 431.
+	- Update localizations.
+	- Fix recurring EP resume after a reloadUI. This fixes issue 289.
+	- Fix issue 370. Make the loot and boss popup check for things to do every 10th of a second.
+	- Update localizations.
+	- Update localizations.
+	- Add automatic detection of the region.
+	- Fix ilvl of Archivum Data Disc that drops from normal mode.
+	- Update localizations.
+	- Pass the right string to import. This fixes isue 415.
+	- Update strings for import/export and fix the window to open properly when import/export buttons are clicked while it is open.
+	- Add Archivon Data Disk.
+	- Add localizations for new string as part of fix of issue 356.
+	- Use a proper editbox for import and export. This fixes issue 356.
+	- Update russian localizations.
+	- Fix error on zoning in while having recurring awards on. This fixes issue 389.
+	- Fix persisting problem with options for gptooltip (or all modules that do not provide defaults. This fixes issue 406.
+	- Add Ulduar bosses and new Vault of Archavon boss. This fixes issue 408.
+	- Update french localizations.
+	- Add T8 and T8 (heroic) token drops.
+	Thanks sh4d0w3d.
+	- Make scripts a bit more generic
+	- Report the decay properly.
+	- Fix bug with gp computation. This partly fixes issue 400.
+	- Ignore debug.xml and WowMatrix.dat when making a release.
+	- Update localizations.
+	- Update TOC for 3.1.
+	- Log the real EP/GP changes not the requested ones. This fixes issue 379.
+	- Ignore emblems of conquest from auto-loot. This fixes issue 398.
+mackatack:
+	- Make the ItemsForSlot() function also support inspection of other units.
+evlogimenos:
+	- Make the interface of the RPC call functions just like AceComm and ChatThrottleLib functions.
+	- Fix line endings for LibRPC.
+mackatack:
+	- Implemented a whole bunch of the logic, especially the looting events.
+evlogimenos:
+	- Put a link to the translators page for credits.
+	- Fix multiple calls to GuildRoster and wrong db initialization.
+	This fixes issue 396.
+mackatack:
+	- How ironic, bug in Debug() call fixed.
+	- Jeez, too many errors on 4 lines of code... Wrong variable name, fixed.
+	- Syntax error fixed.
+	- Changed the ItemlinkToID() function a little, always return nil when the itemID cannot be found, not 0.
+	- Added a function to extract itemid from itemlinks
+	- Images for the lootmaster frame
+evlogimenos:
+	- Remove ending semicolons.
+	- Cleanup whitespace.
+mackatack:
+	- Lootmaster ui, row highlighting, cell mouseover popups. Lets discuss this implementation tonight before i start adding more.
+	- Code cleanup for lootmaster ui
+	- Updated more UI stuff, scrolling table is now in place. (only showing guild data now)
+	- Some main controls for the lootmaster ui. very much a wip. ;)
+evlogimenos:
+	- Do not resume if current time is less than the next time to award (this happens after a reboot).
+	This fixes issue 386.
+	- Ignore EPGP changes to unknown members and print a warning message.
+	This fixes issue 384.
+	- Fix highlighting issue when selecting members for individual EP/GP adjustments.
+	This fixes issue 383.
+	- Update localizations.
+	- Fix button update of the boss kill popup.
+	This fixes issue 376.
+	- Use the export.txt url to get plain text out of curseforge.
+	- Fix 3-byte utf8 sequences to be escaped properly.
+	This fixes issue 378.
+	- Make lines under 80 characters. Add consistent headers for the different parts of this library.
+	- Add ItemsForSlot function that given an invtype returns the currently equipped items for the player.
+	- Fix spello.
+	- Make log lines change width when the window is resized. This fixes issue 373.
+mackatack:
+	- Tiny bugfix for LibGearPoints-1.0, proper checking if itemLink is not null.
+evlogimenos:
+	- Close the zip file after finishing writing it.
+	- Make labels a list of labels not just a string otherwise we end up with a bunch of single character labels.
+	- Fix performance regression when checking for remaining pending notes. This makes the O(N) (N is number of guild members) operation to O(1).
+	This fixes issue 372.
+	- Rewrite make-release.sh to python. This allows easier building of releases from windows (if svn commandline is installed) and make the script do a tad more and a tad better.
+	- Move the logging initialization into util.py.
+	- Update localizations.
+	- Pull utility function out and use it in make-curseforge-localizations.py.
+	- Provide a better test case since we ignore Emblems of Valor.
+	- Protect against uncached items.
+	- Do not diplay "nil" in the autocomplete boxes when an item has no GP assigned.
+	- Add more test cases.
+	- Add in comments a useful line to use to bring in cache uncached items.
+	- Address review comments. Add back rarity, level and equipslot derived values.
+mackatack:
+	- Initial import of LibRPC-1.0, implemented most of the comments on codereview. CallbackHandler wasn't an option because it always included the methodname in the function args, which would break most functions. LibDebug (if present) is also handling all the debug information for this lib.
+	- Made the isDebugging code more readable.
+evlogimenos:
+	- Make the sizer the same style as the LibDebugFrame's. Also fix the position of the buttons to not be so close to the border.
+	- Change the tile sizes to make the border less round. Also make the sizer texture AceGUI style.
+	- Add min sizes to avoid making the window look like crap.
+mackatack:
+	- Changed IsDebugging() to just return a local boolean. Implemented a patch by alkis to reuse the frame. Added a texture for the resizer.
+evlogimenos:
+	- Move EnableDebugging where we check the version.
+	- Change select(3, str:find(...)) to str:match() instead. Simpler more readable code.
+	- Make announces more granular.
+	This fixes issue 296.
+	- Streamline the SetEnabled function for each module. Also make sure we only call module:Enable once on startup as needed.
+	This is part of issue 362.
+	- Do not show the EPGPFrame if not in guild.
+	- Do not show the EPGPFrame if not in guild.
+	- Give modules some prototype functions and remove all the auxiliary code from epgp_options.lua.
+	This is part of the fix for issue 362.
+	- Fix enabled/disabled options for each module. This is part of issue 362.
+	- Fix some EPGP:Error/EPGP:Info remnants after the debug lib introduction.
+	This is part of issue 365.
+	- Move GP computation in its own library.
+	This fixes issue 358.
+	- Update ignored list when a note is updated.
+	This fixes issue 363.
+	- Fix first time draw of standings after the performance regression fix for issue 366.
+	- Add back automatic snapshot on logout. Also remove the rollback functions to not be confused with the import/export functionality.
+	This fixes issue 350.
+	- Cleanup all the SetCurrentState handlers on frames in the ui and replace them with OnUpdate handlers which is much simpler.
+	This allows us to fix some corner cases with recurring EP resume, which are also fixed in this commit.
+	- Make the log window resizable.
+	This fixes issue 336.
+	- Really fix issue 369.
+	- Fix importing with different BaseGP.
+	This fixes issue 369.
+	- Use wipe() instead of a for loot nillifying each key.
+	- Split recurring award handling in its own file.
+	- Add a debugging console to EPGP and modify all libraries/clients to use it.
+	- Fix breakage.
+	- Update base strings.
+	- Fix wording.
+	- Add script that scans all lua files, extracts localizations and write a base enUS localization file.
+	- Remove lootmaster localizations until those strings are finalized.
+	- Remove trailing whitespace.
+	- Fix performance regression when mass EPGP happen with the UI open.
+	This fixes issue 366.
+	- Implement resumable recurring award after a reloadUI or client relog.
+	This fixes issue 289.
+	- Merge change 1071 (fix to issue 365) from the epgp-5.3.1 branch.
+	- Avoid writing notes at the same time if we have a recurring ticker running.
+	- Move options to epgp_options since it is just another file for the core addon.
+	- Remove trailing whitespace.
+	- Set svn:eol-style=native on all text files.
+	- Make options have their own options stanza. This separates module configuration so that it becomes more maintainable.
+	An unfortunate effect is the needed rewording of most of the descriptions.
+	
+	This closes issue r362.
+	- Fix bad interaction with svn:externals. Patch submitted to rietveld for inclusion:
+	http://code.google.com/p/rietveld/issues/detail?id=100
+	- Add codereview.py to drive codereviews out of the repository.
+	Please see: http://code.google.com/p/rietveld/wiki/CodeReviewHelp
+	and: http://codereview.appspot.com/use_uploadpy
+	- Move localization files in their own directory.
+	- Address comments for LibLootNotify-1.0. It now passes the itemlink instead of the itemID.
+	- Remove a confusing comment.
+	- Move version into epgp.lua so that other modules can use it.
+	This fixes issue 360.
+	- Split loot notification and CHAT_MSG_LOG parsing into its own library and remove that code from loot.lua.
+	This fixes 353.
+	- Add LibItemUtils-1.0 to the toc.
+mackatack:
+	- Removed the LibBabble stuff since that's now in the LibItemUtils
+evlogimenos:
+	- Fix the error strings on the library. Also change the links to item:XXXX instead of Hitem:XXXX since the 'H' is not needed.
+mackatack:
+	- Merged in the epgp-5-lootmaster branch, since branches seem to mess with our brainzzzz...
+	- added AceSerializer-3.0 to the toc file
+	- Added debug.xml to the epgp.toc and added debug.xml to svn:ignore. This is for local testing/debugging purposes.
+evlogimenos:
+	- Do not call callbacks immediately because that leads to confusing behaviour. The user expects a call after this function returns, but we call it before for the items we find in the cache and after for the ones we are missing. We would rather be consistent and call all callbacks from our OnUpdate handler later on.
+	- Fix the item cacher to try harder and simpler. Now there is only a global timeout and a ticker. We retry every 1 second for 30 seconds before we give up on the itemcache. Each time we get something new, we extend the trying period to current time + 30 seconds.
+	- Merge from epgp-5-lootmaster branch.
+mackatack:
+	- Added LibSerializer-3.0 to the externals
+evlogimenos:
+	- Actually remove the deformat code :-/
+	- Add LibItemUtils-1.0 to trunk, replacing its deformat code with with Deformat-2.0.
+	- Add Deformat library and remove local deformat from the code. This is part of issue 351.
+	- Update localizations.
+	- Remove dependency from Beautiful soup. Now this can run on any standard python installation. Woohoo!!!
+	- Add extra logging when writing a file.
+	- Add a script to fetch and wrap up all non-enUS localizations from curseforge so that we do not have to do this by hand each time.
+	- Export only non-zero EP and non-base_gp GP members. Also make import aware of this change so that it resets missing people from the list to 0 EP, BaseGP GP on import.
+	This fixes issue 349.
+	- Fix the empty list problem on login when there are: k * 101 + 1 members in a guild.
+	- Apparently this was not commited. The tagged 5.3 release has it though.
+	- Fix issue 343. Whisper mod now disables announces properly when disabled.
+	- Fix text typo.
+	- Remove the snapshot functionality and the automatic snapshot on logout. Add import/export buttons to the log window and add popups to facilitate this from the webapp.
+	- Put global configuration table up in the file so that comparator functions can reference it.
+	- Fix whisper message to output properly. Also move expose the announce function to be used by other modules, like the whisper module and also make the whisper module announce opening of whispers when recurring awards start as well.
+	This fixes 338.
+	- Update localizations and fix chinese localization loading.
+	- Put all guild info variables in their own table.
+	- Simplify global configuration parsing code.
+	- Return the current contents of the note after a SetNote call.
+	- Adding some debugging information for main addon.
+	- Add tiered console output support. Now EPGP has :Debug, :Info, :Warning and :Error to output to the console. Everything from :Info and above should be localized. Debug doesn't have to be. Also added a function to :SetConsoleLevel(INFO|DEBUG|WARNING|ERROR) to set the minimum console output level.
+	This fixes issue 335.
+	- Fix the way we handle the guild info text. When part of the epgp stanza is not there, assume the default value. Also add a function that edits the guild info text as appropriate to save the variables.
+	This fixes issue 334.
+	- Remove the hack that adds 2 more rows than they can fit. The window apparently changes size after it is shown for the first time so this problem should really be fixed in another way.
+	In any case this fixes 333.
+	- Fix options after module renaming. This fixes issue 331.
+	- Fix standby awards. This fixes issue 330.
+	- Do not check non-existing variables to ignore loot events. This fixes issue 326.
+	- Properly escape all non-ascii characters.
+	- Temporary fix to allow disabling/enabling the automatic boss kill module if it is hooked on DBM detection.
+	- Add Latin American Spanish localization.
+	- Update localizations.
+	- Make module toggles toggle the module itself.
+	- Change module references to be inline with the new module names.
+	- Rename modules.
+	- Pass the name of the boss instead of the module that detected the kill.
+	- Use the DBM api if available to track boss kills. This fixes issue 319.
+	- Break the update text into 2 lines and make it update properly on first show.
+	- Fix computation of decay to correctly decay and floor the results. This fixes issue 320.
+	- Add support for a guildwide standby award modifier. This fixes issue 219. Patch provided by Terry Michaels.
+	- Fix issue 314. LibGuildStorage was never moved out of an uninitialized state causing it to emit GuildNoteChanged events on almost each frame update.
+	Next step is to profile GuildNoteChanged events to see why they are taking so much CPU.
+	- Fix alt lists from growing indefinitely. This fixes issue 314.
+	- Fix argument escaping when uploading a new release archive.
+	- Rewrite LibGuildStorage into a state machine that writes back its state lazily. This fixes issue 308.
+	- Add Spanish and French translations.
+	- Make the script ask for confirmation and actually do the import and upload of the release.
+	- Add debugging and safety code to SetNote as to avoid corrupting data. This is work towards the fix if issue 308.
+	- Add russian localization.
+	- Fix whispers and names with non-ascii characters. This fixes issue 306.
+	- Add Archavon. This fixes issue 303.
+	- Fix a problem where a player that is removed from the guild causes corruption of data when his/her EPGP changes before a ReloadUI() happens. This fixes issue 302.
+	- Output ignored officer notes on demand. Add a button in the configuration to do this. This effectively fixes issue 278.
+	- Fix some bugs with automatic boss tracking since the implementation didn't work (it looks like I committed an unfinished part). This fixes issue 154.
+	- Add missing string. Part of issue 154.
+	- Implement automatic boss death detection. This doesn't work on multiboss fights like Four Horsemen. This fixes issue 154.
+	- Do not change state if SetNote is called on a member we do not know of. This fixes issue 291.
+	- Register the first GuildRoster() to happen after PLAYER_ENTERING_WORLD. Also guard for cases where GetNumGuildMembers() returns 0 and perform the call again to eliminate spurious warnings. This fixes issue 287.
+	- Do not add items to the loot queue of awards if a member is not able to credit those GP. This fixes issue 286.
+	- Fix PR display to not print scientific notation when pr > 9999. This fixes issue 284.
+	- Add a cache of last award amounts made and auto-fill when the same award is chosen through the single or mass EP award frame. This fixes issue 256.
+	- Improve visualization of people below MinEP. This fixes issue 262.
+	- Clean up popup code. Use Button:Click to simplify some functions as well.
+	- Add alert icon to officer note warning popup. Also make it accept on enter. This fixes issue 282.
+	- Add ChatThrottleLib support if available. This fixes issue 279.
+	- Make sidepanels close when the main frame is hidden. This fixes issue 281.
+	- Fix snapshot saves all the officer notes from the cache since GuildRosterInfo is not available during logout. Alos dump and restore on rollback the guild info part of the settings. This fixes 277.
+	- Update the right member's EP or GP through the side frame even after a scholl up or down.
+	This fixes issue 276.
+	- Reject invalid officer notes and print an error to the user. These notes were making the epgp cache break in all sorts of ways.
+	This fixes issue 267.
+	- Remove some debugging output.
+	- Fix auto-fill on manual GPs. This is issue 274.
+	- Return the actual string instead of nil when an item has a single GP value. This fixes issue 274.
+	- Add a count of members in the award list in the status bar.
+	- Add a status bar to the bottom of the standings to display if we are looking at a raid or the guild, decay, minep and basegp.
+	This fixes issue 272.
+	- Remove the help text from the GP dropdown and add the tooltip instead. This fixes issue 270.
+	- Make manual GP fill in `X or Y` text for items that have multiple values.
+	This fixes issue 269.
+	- Stop storing a list of action buttons and give an event to register to if the buttons chose so.
+	- Fix thinko. When we do mass updates we can continue updating stuff even if the state is LOCAL_PENDING.
+	- Fix so that people that cannot change EPGP have their buttons disabled. Also fix the wrong reenabling of buttons while the guild note cache is in an inconsistent state.
+	- Fix thinko and add some documentation about the states.
+	- Lock down UI actions when a remote client is doing an update. This fixes issue 247.
+	- ProtectActionButtons when we know we have changes pending the cache to avoid data corruption. Also stop calling GuildRoster() a zillion times when we give a mass award. This possibly fixes issue 261.
+	- Add a redo button to the log.
+	Make EPGP automatically backup the officer notes on logout or reloadUI.
+	
+	Add a button in the configuration to rollback to the last
+	backup. Because of the redo queue the state of the personal log is
+	also retained.
+	
+	This fixes issues 254 and 195.
+	- Remove debug code. Refactor the code to be more readbale, more generic, and shorter. Also fix a bug: There are multiple popup frames. We save references to UIObjects so in the OnHide function when we restore the anchors we always restore the anchors of the first frame that popped up and got backed up, even if we are in another popup. This is fixed by doing a backup for each popup frame we see for the first time.
+	- Add a convinience debugging function call for testing the popup and lootqueue.
+	- Remove trailing semicolon.
+d43m0n:
+	- Further modifications to make the popup patch more resilient. This fixes  issue 251 .
+	- This patch resolves the popup components alignement issue.
+evlogimenos:
+	- Override raid and party announces and send them to the raid if the EPGP master is not in party or in raid respectively.
+	This fixes issue 245.
+	- Fix problem with officer note pointing to itself. Fix issue with names that are not in the basic ascii character set. Also update alt data when someone was an alt but stopped being one.
+	This effectively fixes issue 257.
+	- Fix version in development versions once and forall.
+	- Add a whisper feature for members on standby.
+	For this to work the EPGP officer should be in raid and the
+	auto-whisper feature should be enabled. In this mode the addon
+	interprets incoming whispers. If 'epgp standby' is received the sender
+	is added to the award list.  If 'epgp standby <name>' is received then
+	<name> is added to the award list.  After each award to the raid the
+	extra people are awarded the same EP. They are also removed from the
+	list and they are whispered the EP they received and also the fact
+	that they have been removed from the list. At this point, from here to
+	the next award they need to readd themselves to it.
+	
+	This fixes issue 217.
+	- Fix error when pressing enter on a GP popup. This fixes issue 253.
+	- Fix tooltip problems. Apparently AceHook:HookScript calls the original script automatically now. This fixes issue 209.
+	- Update callback documentation.
+	- Improve the way we handle the version in releases so that the dev versions have proper versions reported even if they live in different directories.
+	- Stop recurring awards when leaving a raid. This fixes issue 243.
+	- Add key to the focusing iris to the loot table. This fixes issue 242.
+	- Add officer chat to the options of announces. This fixes issue 236.
+	- Make loot with 2 gp values fill in X or Y in the popup. Also fix the validation code to enable/disable the ok button.
+	This fixes issue 238.
+	- Fix issue 231. /epgp now toggles the epgp frame, and /epgp config opens the configuration menu.
+	- Add T7 and T7 heroic armor tokens.
+	- Fix automatic loot tracking to work in raids.
+	- Fix a critical bug with decay and reset.
+	- Add missing documentation on callbacks fired.
+	- Add announcement for EP/GP reset.
+	- Fix time in recurring announcement. This fixes issue 214.
+	- Fix the log to refresh properly, fixing issue 212.
+	- Remvoe Deformat lib from toc file since it is not used anymore.
+	- Fix issue 210. strftime on windows is different than the one on the mac so %F %R doesn't really work for windows.
+	- Stop using Deformat-2.0. Implement deformat on our own it is not that hard.
+	- Fix issue 207. Guild information text was not being parsed properly.
+	- Fix issue 208. This adds GP to greens and blues.
+	- Fix font issues.
+	- Fix problem with modifying the game fonts.
+	- Fix scrolling the standings frame.
+	- Eliminate an error case in case the network is slow.
+	- Update toc and make changes to the release builder script to accomodate.
+	- Leave the recurring button enabled when recurring EPs are running.
+	- Make the recurring checkbox, enable/disable when the reason and awards are correct or not.
+	- Add missing localization entry.
+	- Yet more use of self in handlers for efficiency and conciseness (is that even a word?)
+	- Make code use self that is passed to the script handlers to be more concise and more efficient.
+	- Rename the "Award" into "Mass EP Award" for the mass EP awards when in raid. Add a string that shows the time to the next EP award when recurring awards are selected.
+	- Some string fixes and a function cleanup. Add announces for recurring awards.
+	- Really set disabled state.
+	- Start with all modules in a disabled state. When the main addon is enabled, establish a timer to check when GetGuildInfo("player") will actually return the guild name. Once that is available, we set the database profile to the guild name and enable all modules.
+	- Only create the frame once.
+	- Check if the EPGPFrame exists or not.
+	- Localization fixes.
+	- Adjust size of the log frame a bit.
+	- Rip out logging from epgp.lua and into its own module. Make correct use of RegisterCallback.
+	- Change the reporting strings a bit and make correct usage of RegisterCallback.
+	- Remove debug messages.
+	- Remove unused library from loot.lua.
+	- Polish the announce messages and prepare for the extraction of the log from the main code.
+	- Remove the ImportLog function.
+	- Remove calls to GetLibrary. We can "call" LibStub directly.
+	- Move defaults in the options module. Defer updating the timers for recurring when the side frame is shown.
+	- Rename report.lua to announce.lua.
+	- Commit ommitted file from the previous commit.
+	- Add an options panel and hook the options to teir modules.
+	- Add AceGUI-3.0.
+	- Remove trailing whitespace.
+	- Remove trailing whitespace and reindent to 80 columns.
+d43m0n:
+	- Added LootQueue!
+evlogimenos:
+	- Remove old Libs subdirectory.
+	- Rename the Libs subdirectory as well.
+	- Remove unused libraries.
+	- Remove unused libraries.
+d43m0n:
+	- Added Report module, for awards/credits reports.
+evlogimenos:
+	- Add callbacks for changes in configuration and hook the decay button to disable itself when it the decay is equal to 0.
+	- Add messages for awards made to ease implementation of the reporting and logging modules.
+	- Fix a bug when showing the guild list and showEveryone was unchecked.
+	- Fade out all members not in the raid while in raid mode. Also fix a bug of refreshing the standings when leaving a raid.
+	- Change the logic of the standings and award lists. Check the function comments for more information.
+	- Save recurring EP and recurring EP period state across reloads.
+	- Change all filenames to lowercase.
+d43m0n:
+	- Fixed IncStandingsEPBy to not allow duplicate rewards. Added new function EPGP:GetMain(name).
+	- Added missing localization entries.
+evlogimenos:
+	- Add a right padding padding for the table creation to make room for the scrollbar.  Also put all the rows in their own frame where the scroll bar is going to appear. Add and hook the scrollbar for the standings frame.
+d43m0n:
+	- Hooked SideFrame2's Award EP button, to the newly created function IncStandingsEPby(reason,amount). Changes in documentation in epgp.lua.
+evlogimenos:
+	- Remove member in the raid from those in standings not the other way around.
+	- Add code to hide all siderames when the main frame is shown. Also fix the highlighting issue when the rows are resorted.
+	- Clear all sideframes when we hide their parent.
+	- Fix the help tooltip to align properly.
+d43m0n:
+	- Added tooltips for showing alts, and a tooltip in GP Reason dropDown to inform the user of its function.
+evlogimenos:
+	- Add API for querying alts.
+	- Move OnShow handlers for EP and GP controls into their own frames so that we start with the right state when we are first shown.
+	- Add another sideframe for raid EP awards.
+d43m0n:
+	- Make the side frame hide if user clicks on player whose side frame is open.
+	- Confirm GP popup now fully functional!
+evlogimenos:
+	- Remove LibBabble-Boss and LibBabble-Class.
+	- Fix GP popup to assign GP properly when the ACCEPT button is pressed.
+d43m0n:
+	- Partial fix of EPGP_CONFIRM_GP_CREDIT popup and some cosmetic changes. Popup works if Enter is pressed, but the buttons still need work.
+	- Fixed scope bug.
+	- Added feature to enable/disable buttons if side frame GP/EP input is unaccetable.
+evlogimenos:
+	- Remove unused files.
+	- Add check for empty strings.
+	- Return false when EP/GP change is 0.
+	- Fix bugs in validation functions. Remove assertions from negative EP or GP. These are going to be set to zero if they are ever negative.
+	- Fix references to non existing button once.
+	- Localization fixes and cosmetic changes.
+	- Fix thinkos...
+	- Make functions not take a name since that is not going to work for mass awards/credits.
+	- Add testing functions to use the UI for validation.
+d43m0n:
+	- Fixed side frame 'Award EPs' button to handle 'Other' case.
+	- Binded the sideframe buttons 'Credit GPs' and 'Award EPs' to the appropriate functions.
+evlogimenos:
+	- Name the editboxes since blizzard's ui craps out without names.
+	- Use the right variable for setting the editbox's value.
+	- Factor out creation of EP and GP controls. Also remove a lot of the manual padding code. This will allow us to add EP controls for the raid awards.
+	- Fix bug when clicking other members when the side frame is open for another memeber.
+	- Do more relative alignment and get rid a bunch of constants.
+	- Cleanup the code in the sideframe to use relative names so that it can be reused.
+d43m0n:
+	- Added feature to disable and fade the 'EP Other Reason' editbox, unless it's selected from the drop down menu.
+evlogimenos:
+	- Fix the officer note warning to not allow the edit of a note unless a user clicks accept.
+d43m0n:
+	- EP DropDownMenu now working properly. Added feature to keep selected player highlighted while side frame is shown.
+	- Added more features in EPGP side frame, the EP DropDownBox needs to retrieve list of raiding instances, for now it does the same as the GP one.
+evlogimenos:
+	- Cleanup the code a bit and make the checks not go nuts.
+	- Indent files properly.
+d43m0n:
+	- Added EPGP side frame, to handle custom assignments of GPs (and EPs to come). Modified popups.lua to replace usage of 'this' with 'self'.
+evlogimenos:
+	- Remove LibBabble-Class.
+	- Dim rows a bit more when they are on standby.
+	- Yet another bugfix. Test before you commit!
+	- Small bugfix.
+	- Do not insert dups in the item cache.
+	- Add a cache of recent loot seen in tooltips.
+	- Add class coloring.
+	- Add the notion of extras to epgp. Implement selecting people in the UI to be added as extras.
+	- Make the show alts checkbox into a show everyone checkbox. The semantics are changed to show alts or not when in guild view (not in raid) and to show non-raid members or not when in raid view.
+	- Initialize defaults before we parse guild info to prevent errors.
+	- Fix sorting functions to work properly with min_ep set. Fix decay to decay properly.
+	- Add keyword substitution for Revision.
+	- Make the decay popup pick up the decay on its own.
+d43m0n:
+	- Added Decay EPGP popup (along with entry in Localization), and commented everything in EPGP_Popups:OnInitialize()
+	- Working GP_Confirm static popup, hooked with GPTooltip and using Localization.
+evlogimenos:
+	- Add a check next to each name in the listing. This will be used by the standby code.
+	- Fix text padding in the table rows.
+	- Add a decay button.
+	- Properly indent the code, make the file into its own module and add the debug code into the OnInitialize function.
+	- Simplify standings updates.
+	- Fix highlight texture path and change font to highlight font.
+	- Change formatting of PR and increase the spacing between the rows in the table.
+	- Hook up the table controls with the backend.  Sorting works through the headers and show alts toggles showing alts or not.
+d43m0n:
+	- Minor adjustment in popups.lua, forgot the EPGP_TEXT_CONFIRM_GP_CREDIT string!
+	- Added the Confirm_GP static popup in a new file (popups.lua) and update the epgp.toc accordingly.
+evlogimenos:
+	- Change the way we create tables. Make table rows.
+	- Rename scrollFrame to scrollBar.
+	- Make log lines into fontstrings. Make buttons to award EPs only enable when in raid.
+	- Change version number to work with patch 3.0.2.
+	- Add the log frame. The actual log contents need some work still to allow for hyperlinks.
+	- Add more convinient functions to access the log records.
+	- Remove stub function.
+	- Rework the UI. This doesn't have buttons or listing rows but it is a good start.
+	- Put all initialization code into OnInitialize().
+d43m0n:
+	- Moved checkbox to left side.
+evlogimenos:
+	- Indent code properly.
+d43m0n:
+	- Stop using xml templates and put all the code in lua for the EPGP v5.0 user interface.
+evlogimenos:
+	- Implement fix for Issue 72. The new formula for GP computation is:
+	GP = 0.483 * 2 ^ (200 / 26) * multiplier
+	
+	This means that for an epic chestpiece of ilvl 200 the GP is 100. For
+	every 26 ilvls higher the GP price doubles. Also the multipliers have
+	changed as follows:
+	
+	Head/Legs/Chest: 1
+	Shoulder/Waist/Feet/Trinket: .75
+	Ring/Cloak/Wrist: .5
+	Wand/Relic/Idol/Totem: .5
+	Main hand weapons: 1.5
+	Offhand weapons: 0.5
+	
+	Some items have 2 multipliers and they are used in certain exceptions:
+	
+	2h weapon: 2 or 1
+	  * 1 if it goes as an OH to a TG warrior or to a hunter, 2 otherwise
+	1h weapon: 1.5 or 0.5
+	  * 0.5 if it goes as a MH or to a hunter or a tanking warrior, 1.5 otherwise
+	ranged weapon: 1.5 or 0.5
+	  * 1.5 if it goes to a hunter, 0.5 otherwise
+	shield: 1.5 or 0.5
+	  * 1.5 if is a tanking shield, 0.5 otherwise
+	- Only track GP for epic items.
+	- Guard against first login on slow network connections. Sometimes GetGuildRosterInfo returns nil even though GUILD_ROSTER triggered.
+	- Add Loot tracking module.
+	- Fix library imports.
+	- Small bug fix for PLAYER_GUILD_UPDATE event. We do not want to stop updating the cache when we get this event unless we left the guild.
+	- Add OfficerNoteWarning module.
+	- Add GPTooltip module.
+	- Remove embeds.xml since it is not used anymore.
+	- Add first cut of EPGP v5. This is just the core addon, the UI is still under developement.
+	- Add first version of LibGuildStorage.
+	- Add AceConsole to the mix.
+	- Change externals to point to the new wowace repos.
+	- Use -dev in the title to distinguish between the release and the dev version.
+	- Add new libraries to toc and embeds.xml.
+	- Add LibStub and fix some more paths.
+	- Fix typo in externals.
+	- Change svn:externals to pick up Ace3 and in general updated libraries.
+	- Add russian localization.
+	- Fix issue 192.
+	- Fix issue 180.
+	- Fix 2.4.2 patch issues with officer note encoding.
+	- Make NPC id extraction more efficient and resilient.
+	- Fix GUID for Supremus.
+	- Fix issue 88.
+	- Fix SetEP and SetGP functionality.
+	- Update boss detection to work for 2.4.
+	- Add T6 tokens added with 2.4.
+	- Make the EPGP master the ML if the ML is set or the RL if not.
+	- Fix issue 143. Alts/outsiders can be toons with names including diacriticals.
+	- Fix item ids for T6 shoulders.
+	- Remove MasterLooter popup since this is replaced by the Loot module.
+	- Remove EPGP_UI.backend references and get the backend through EPGP.
+	- Get backend module through EPGP, not EPGP_UI.
+	- SaveRoster just once after assigning EPs to all members.
+	- Fix indentation.
+	- Make the cache handle negative or more than range ep/gp automatically.
+	- Add comment.
+	- Simplify code.
+	- Fix indentation and simplify code.
+	- Fix indentation.
+	- Fix indentation.
+	- Fix indentation and simplify some code.
+	- Simplify a lot of the code by using locals. This is a small performance improvement as well.
+	- Fix item id for Leggings of the Forgotten Protector.
+	- Fix problem with error when awarding to members in raid but not in guild.
+	- Make reporting a bit less verbose when awarding to the raid.
+	- Rename EPs to EP.
+	- Uncomment EPGP pushes to officer notes.
+	- Add protection for multiple raid adds.
+	- Remove ML popup. Add passive tracking of both loot and boss kills.   Loot no longer needs to be given out by the master looter for the addon to popup an entry box.   Boss kills automatically popup a dialog for boss EP award and they remember the last value entered for each boss. Standby EPs are used by default through whispers.
+	- Fix Deformat path.
+	- Fix path.
+	- Add more libraries.
+	- Make searchbox not reset when it loses focus.
+	- Use a ceiling to 0 when subtracting EP or GP from a member or list.
+	- Stop saving keybindings.
+	- Added a guard for bug 133. Wasn't able to reproduce but the guard will eliminate the error from coming up.
+	- Add spanish localization thanks to Urko Alberdi!
+	- Small fix on multiline output.
+	- Add GP for BoE recipes.
+	- 
+	- Update localizations.
+	- Make this run from the command line.
+	- Fix error on /epgp decay.
+	- Add a secondary itemid for Magtheridon's head. I believe there are two ids; one for the horde drop and one for the alliance.
+	- Remove extra 'end'.
+	- Make note parsing more resilient.
+	- Fix error on empty/unparsable officer notes.
+	- Update url of the homepage.
+	- Make reporting function chop off message at 255 characters.
+	- Add Online list (lists all the online members of the guild).
+	- Add support for Base GP.
+	- Stop if arguments are not right.
+	Remove dead code.
+	- Added Jody Steele for the GP for tokens/quest rewards patch.
+	Thanks Jody!
+	- Add token + quest reward from current content. Many thanks to jmlsteele for the patch.
+	- Create an embeds.xml to reference of library code.
+	- Remove unused db variable.
+	- Update directions to googlecode upload scripts.
+	- Remove leftover debug string.
+	- Use a FauxScrollFrame instead of a full blown frame. This reduces the memory footprint when using this addon on huge guilds (>500 members) dramaticaly.
+	- Update TOC version.
+	- Add version string to title bar.
+	- Fix bug when hitting enter to assign GPs in auto-ML popup.
+	- Fix bug in EP distribution when members are not in the zone.
+	- Make the UI respond to entering and exiting a raid and switching to different lists as necessary.
+	- Fix problem with epgp hiding command line interface when suspended (Issue 114)
+	- Fix reporting message for recurring rewards to include the right list used.
+	- Hide tooltip when leaving the recurring EP bar.
+	- Change default recurring period to 15 minutes.
+	- Add ML popup threshold. Also add localization from "Report channel"
+	- Add tooltip for help on recurring award status bar.
+	- Do not show popup for Adding/Setting EP/GP for each member when the addon is not on an officer client.
+	- Fix leakage in StaticPopup's editboxes.
+	- Move Master Looter popup into another module.
+	- Add "Set EP" and "Set GP" option to the members right click context menu to allow EP or GP value editing.
+	- Update TOC.
+	- Give warning before editing officer notes.
+	- Add AceLocale otherwise this doesn't work on clients where AceLocale is not loaded by other addons.
+	- Added German translation thanks to Alexander Nastev.
+	- Add French translation.
+	- Fix toc to reference babble-class.
+	- Fix parenthesis.
+	- Make some more strings more easily translatable.
+	- Adjust so that strings are translatable.
+	- Remove some unneeded translations since Blizzard already provides for them.
+	- Remove duplicate translations.
+	- Uniqify strings before gatheriing their translations.
+	- Make text more descriptive.
+	- Streamline the delaying code a bit.
+	- Change encoding back to the old. Leave the client able to read the new one. Once everyone downloads v3.0 the change can go in the next version (v3.1).
+	- Remove extraneous newline.
+	- Remove the notion of current raid. Now we only keep track of total EP and GP.
+	- Localize some more stuff.
+	- Removed % bonus award method.
+	- Regenerate localizations now they are output in sorted order.
+	- Sort the string table and output each language table in that order to make diffs readable in svn.
+	- Fix oversight with localizations. Now export to html and to text works again.
+	- Use Babble-Class to avoid errors on non EN clients.
+	- Add support for localizing EPGP.
+	- Update with all knows WoW localized clients.
+	- Move Babel.lua into scripts, since we don't want to distribute this with epgp.
+	- Remove tabs and use spaces.
+	- Make checkbuttons be separate for each of the lists. So now you can setup the raid listing to show alts and the guild listing to not.
+	- Don't define the strings table twice when not on an enUS client.
+	- Don't mess up with metatables. The script can generate all the translations anyway.
+	- Add localization builder.
+	- Fix issue 83. Exporting to HTML now works again.
+	- Fixed problems when the UI hasn't refreshed the guild of the current player yet and GUILD_ROSTER_UPDATE fires.
+	- Add support for searching for classes. This cannot be a partial search, it must be completely typed in. Case doesn't matter.
+	- Make all popups work while dead. Also fix problem where EPs where not assigned to alts at all.
+	- - Renamed New Raid to Decay EP and GP - Renamed Add EP to Award EP - Renamed Add GP to Credit GP - Made EPGP panel pushable
+	- Fix add ep/gp to member that I broke with recent changes to the StaticDialogs.
+	- Allow negative input to all editboxes. Fix problem when awarding to all the guild.
+	- Set 'J' as the key to toggle the EPGP window if the key is not bound to anything.
+	- Fix bug from recent zone changes that caused an error when awarding to the guild. Also disable zone checking for recurring awards.
+	- Remove the zone list. Now the raid list is adaptive. If an award is made to the raid and there are members not in the zone the award initiator receives a popup asking him to either award or not the members not in the same zone as the award initiator.
+	- Integrate EPGP UI to the default Panels (Guild, Character, Spellbook and such) and add a keybinding for it.
+	- * New UI * Option for GP tooltip on/off * Option for Master Looter popup on/off * Sorting by name, EP, GP, PR * Recurring period is now configurable * Status bar for next recurring EP reward * Search in standings list
+	- Stop creating temp files with sed in the release directory.
+	- Add thrown weapons.
+	- Fix backup/restore.
+	- Make epgp reset more robust.
+	- Remove distribute recurring EPs. add recurring is more than enough.
+	- Use the Core DB and Console commands and remove all unneeded libraries from modules.
+	- Fix problem not allowing people that can edit Officer notes but not Public notes to log raids.
+	- Fix error when item has no GP value.
+	- Fix for issue 75. Invalid alts will now longer cause an error.
+	- Fix recurring distribution of points to the raid.
+	- Fix recurring EPs to ignore zone checks.
+	- Fix release script to not include any hidden files.
+	- Make epgp reset make officer notes readable by all ranks so that EPGP can work without the need for guildmasters to edit all permissions by hand.
+	- Add master loot hook to popup when ML gives out loot to people to ease GP entry.
+	- Implement export to text table as well.
+	- Stop using softtabls.
+	- Remove trailing space.
+	- Fix issue 59. Now the table has id="epgp-standings" and each tr tag has a specified class="wow-class" for use with CSS to style the epgp standings.
+	- Remove Compost as it is not used anymore.
+	- Implement outsiders support and add a config panel for people to be able to check that their setup is correct.
+	- Minor fix in proposed command line for import.
+	- Implement time based EP awards.
+	- Print instructions on how to use googlecode-upload.py to upload new releases.
+	- Change designation of alts. Now if a toon has a name in his officernote this will be the name of the main of this toon.
+	- Add option to suppress EPGP action messages.
+	- Add relics to GP table. Relics are valued the same as ranged or off-hands.
+	- Fix double menu with recent library updates.
+	- Fix memory leak in options therefore fixing issue 51
+	- Update copyright years.
+	- Fix saving FuBar state so that the addon can be hidden and stay as such across logins.
+	- Make script work for Mac OS X as well as Linux.
+	- Remove debugging from backend. Fix upgrade to not erase data on members with alts. Send much less messages to guild when updating the in game roster.
+	- Filter out messages that are not for this addon.
+	- Make script work for linux as well.
+	- Pass tooltip arguments to hooked functions.
+	- Fix backup notes call to be called on the backend.
+	- Use AceHook's HookScript instead.
+	- Make add/distribute EPs to raid contain the zone string in it.
+	- Remove some debug statements.
+	- Make hooking code more generic and simplify the code a bit.
+	- Really register slash commands and update them as the configuration changes.
+	- Improve confirmation messages for "restore" and "newraid". Add confirmation message for "reset".
+	- Make Flat Credentials parsing the same as the rest of the options.
+	- Update links to Google Group and main website.
+	- Fix computation of new raid and proper decay of GP.
+	- Fix configuration update bug. If a configuration directive was removed it wasn't resetting back to defaults.
+	- Fix problem when awarding EPs to raid that has non-guildies.
+	- Now that HTML export is done in game this is not needed.
+	- Add HTML export of standings table.
+	- Create a table for GPUtils
+	- Fix toc to load GPUtils before GPTooltip.
+	- Move GP computation out of the Tooltip module.
+	- Add first version of HTML export of the standings table.
+	- Removed unused db variable.
+	- Make Cache and Backend use a profile named after the guild's name for storing data in SavedVariables.
+	- Fix tooltip addition to work for all tooltips: addons and blizzard ui alike.
+	- Fix cache to not call GuildRoster() when the character is not in a guild.
+	- Fix for cache to not cause errors when queried for non guild members.
+	- Use OnTooltipSetItem script handlers so that it works with all cases now.
+	- Remove debugging message.
+	- Fix sorting and colors on standings display.
+	- Refresh properly on sorting changes.
+	- Really fix version replacement in TOC file.
+	- Fix version replacement in released TOC files.
+	- Do a standings update when we get in and out of raid or players enter or leave raid.
+	- Add Backup/Restore options and reorganize options a bit.
+	- Rename GPValues to GPTooltip.
+	- More cleanups.
+	- Small fix for not spewing errors on items with no itemlink.
+	- Remove Roster.lua as it is not used anymore.
+	- Complete rewrite of the backend.
+	A cache module keeps the cache fresh given the GuildRoster.
+	A backend module delegates all EPGP operations to EPGP logic on the cache.
+	The UI displays from the cache.
+	The core simply puts things together.
+	GPValues displays the GP value of an item in all tooltips of the game.
+	- Update TOC and script to make tagging easier.
+	- Make functions member functions and extract computation of GP so that it can be used by other parts of the code later on.
+	- Make functions member functions and extract computation of GP so that it can be used by other parts of the code later on.
+	- Move GP value display on tooltips in a separate module.
+	- First go on EPGP v2:  - No more raid window and min raids. Use decay and min ep instead  - No more history  - Use only officer notes for storing EPGP data  - Upgrade data from older versions  - GP display on tooltips  - Change Guild Information configuration directives to be inside an EPGP block  - Make EP bonuses to be distributed to the raid and not a fixed amount per participant
+	- Don't release the wiki, nor backup/temp files.
+	- Bump TOC version.
+	- Add newline at the end of file.
+	- Use a scheduled event id in order to cancel an already scheduled event when scheduling another.
+	- Improve GuildRoster syncing code to eliminate pretty much all overhead.
+	- Update script to extract the release for tagging.
+	- Update version and addon's website.
+	- Make GuildRoster() reading much more efficient.
+	- Fix comment.
+	- Fix Issue 28. Commanders can now assign GPs.
+	- Remove lua 5.0 compatibility. Update toc for v2.0.1 patch.
+	- Implement undo functionality.
+	- Add new line at the end of the TOC file
+	- Implement undo functionality.
+	- Keep the undo window to 10 last changes so that it doesn't grow indefinitely.
+	- Added undo queue. On every roster update if there is a change, the whole roster is saved to a queue of up to 10 rosters. This is the ground work for implementing undo functionality.
+	- Remove unused variables.
+	- Fix for TBC.
+	- Remove usage of table.getn when not needed. Use pairs instead.
+	- Add option to show/hide alts. Add raidmode in which it automatically figures if player is in raid and shows only raid members (and alts as they are in raid).
+	- Change how options are parsed. Alts specification stays the same, but rest of options change. Each one is on separate line and prefixed with '@'. Pasting the comments from the code:
+	--   @RW:<number>    // for raid window (defaults to 10)
+	  --   @NR:<number>    // for min raids (defaults to 2)
+	  --   @FC             // for flat credentials (true if specified, false otherwise)
+	  --   Main:Alt1 Alt2  // Alt1 and Alt2 are alts for Main
+	
+	Also added option to set flat credentials. This means that all EPGP officers have the same power as the guild master.
+	- Make click toggle standings and shift-click history.
+	- Fix issue 18. Make Standings/History be unlocked when detached. So now if a tablet is locked, a simple hide/show will unlock it.
+	- Fix issue 20. Group members by class in menu on adding EP or GP to specific person.
+	- Fix problems when addon is enabled on unguilded characters.
+	- Fix release script
+	- Fix issue with roster not updating fast enough. This is not perfect but cuts the time down to 1 sec.
+	- Push Raid Window and Min Raids in Guild Info Text. Now syncing though addon channel is not necessary :-)
+	- Fixing usage of BabbleClass after conversion to BabbleClass-2.2
+	- Make Libs be pulled directly from the wowace svn repository.
+	- Fix release script.
+	- Remove libraries. They will be pulled back in by using svn:externals.
+	- Add bonus for raid.
+	- Fix bug that was preventing menu from being updated to allow assigning EPs to individuals.
+	- Use predefined variables in AceAddon and use Revision keyword only in the toc file.
+	- Remove AceLocale-2.0 from Libs
+	- Update website.
+	- Revert broken "fix"
+	- Fix immediate refresh of roster when a change in EP or GP happens.
+	- - Colorize member names given their class - Add grouping by class in both history and standings panels - Fix bug where a member no longer in guild appeared in standings/history
+	- Make script accept a version argument.
+	- Simplify code. No functionality changes.
+	- Correct tooltip hint. Make column headers a bit narrower.
+	- Whitespace fix.
+	- Add more information to standings table. Make the whole UI prettier.
+	- Add history browser.
+	- Add raid window and min raids columns.
+	- Fix indentation.
+	- Remove reporting standings function.
+	- Push roster to server after new raid.
+	- Pass args to find so that we can use -print0 to pass it to xargs properly
+	- Add some useful scripts.
+	- Remove documentation from readme now that epgp website is up.
+	- Remove junk from the end of the README.
+	- Add roster cache to make everything more understandable and fluid. Fix bug in rendering standings. The cache also fixes a bug with non-guild master players.
+	- Added version check in syncing.
+	- Added min raids option.
+	- Add readme file for instructions on usage and installation.
+	- Added icon.
+	- Fix bug on first load. Call SetProfile when we have guild info at hand.
+	- Fix issue 5. Standings table now autorefreshes. Also made the minimap button toggle show/hide and removed menu.
+	- Fix saving position of Standings UI and save it's settings.
+	- Make version be the revision in svn. Add the website.
+	- Push bugs enhancements to issue tracking in our webpage.
+	- Update AceLibs.
+	- Add syncing of epgp rules. Add bugs in todo.
+	- Optimize event handling a bit by asking at most 1/sec GUILD_ROSTER_UPDATE events.
+	- Remove done todo.
+	- Name profile after guild to keep them separate between guilds.
+	- Fix grammar in debugging message. Remove spurious print.
+	- Add alt support.
+	- Fix closing tooltip to not leave menu behind. Add hint about EP, GP, PR.
+	- Make standings UI into its own module instead of being the tooltip of the addon itself.
+	- Update TODO list
+	- Add basic UI.
+	- Remove some debugging code. Make dynamic population of defaults values if a new member is added.
+	- Minor bugfix for encoding function
+	- Reimplement the whole thing. Use public/officers notes to keep track of EP/GP. Allow only guild master to reset. Allow editors of officers notes to add raids and award bonus/kills/gear points.
+	- Added preliminary sync code. Fixed toc to actually load libraries.
+	- Update libraries
+	- Update toc to match file renames
+	- Rename files removing the epgp_ prefix
+	- Add todo item
+	- Add status message in tooltip
+	- Bunch of changes: - Remove start raid, end raid and periodic attendance events - Make start/stop tracking of raid explicit - Build options only once and make some go disabled depending on credentials - Cache results table in tooltip and update only on refresh - Make tooltip clickable
+	- Fix roster building for raids.
+	- Group roster change events to get a trigger at most 1 per sec. We don't need better tracking than that.
+	- Add options for all variables.
+	- Fix undefined function call.
+	- Add comment
+	- Make the gross hack even more gross. This is the "correct" hack!
+	- Fix EP computation for items. Add loot tables for each item slot.
+	Introduce a gross hack to get ItemInfo when looted by spinning until we get the value, since GetItemInfo() returns nil until the value is in the cache.
+	- Fix problem with tracking who is promoted or not in order to keep tracking the raid.
+	- Add parsing code for loot. Still needs work to account for quality and zone multipliers.
+	- Show all guild members EPGP standings
+	- Add todo
+	- Add a refresh button to the tooltip.
+	- Fix bug in parsing and logging loot.
+	- Add custom bonus
+	- Fix showing only online members in the standings. Fix small bug in computation (in case name if player in roster is not in guild)
+	- Add a standings table as the tooltip
+	- Add todo list
+	- Add options to set the tracked raid window size and use it.
+	- Add a comment for improvement.
+	- Small bug fixes to attendance logs. Really remove epgp_Util.lua this time
+	- Added credentials for tracking raids. Added credentials for changing loot system variables. Removed epgp_Utils.lua and replaced it with epgp_Events.lua Subsequently moved event handling code to epgp_Events.lua
+	- Update default EP values for bosses
+	- Move current_zone to be a member variable. Rename EventLog functions to be consistent with the rest. Add Start/End raid functionality.
+	- Remove OptionsUI addon and merge it with EPGP
+	- Add options (command line and ui) for setting variables
+	- Mostly cleanups and function moves to other files
+	- Bug fix to parsing dead mobs Bug fix to raid tracking to start from index 1 (so that the first raid is not skipped) Add rudimentary menu to show EPs
+	- Remove AceLocale-2.0
+	- Log boss kills and loots in database. Make database persist now. Make parsing variables local to the file they are used.
+	- Add epgp_Util.lua for parsing functions. Add AceDB usage for all options and variables.
+	- Add license (BSD style)
+	- Removed junk characters in front of files.
+	- Initial commit.
+	It now detects boss kills and zone changes.
+unknown:
+	- Initial directory structure.

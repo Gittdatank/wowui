@@ -1,6 +1,6 @@
 -- Notes for translators:
 -- 1) If you aren't translating a string, don't put it your locale file
--- 2) You should never have 
+-- 2) You should never have
 --   SBFOptions.strings.X = SBFOptions.strings.X or "y"
 --   You should only have
 --   SBFOptions.strings.X = "y"
@@ -109,7 +109,7 @@ SBFOptions.strings.DEBUFFNAMECOLOURTT2 = SBFOptions.strings.DEBUFFNAMECOLOURTT2 
 SBFOptions.strings.NAMEPOSITION = SBFOptions.strings.NAMEPOSITION or "Name position"
 -- v3.1.5
 SBFOptions.strings.NAMEACTIVE = SBFOptions.strings.NAMEACTIVE or "Activate mouse"
-SBFOptions.strings.NAMEACTIVETT = SBFOptions.strings.NAMEACTIVETT or "Buff names will show tooltips, allow you to click to dismiss, etc." 
+SBFOptions.strings.NAMEACTIVETT = SBFOptions.strings.NAMEACTIVETT or "Buff names will show tooltips, allow you to click to dismiss, etc."
 
 -- Expiry Tab
 SBFOptions.strings.WARNCONFIG = SBFOptions.strings.WARNCONFIG or "Expiry"
@@ -192,7 +192,7 @@ SBFOptions.strings.PROFILECONFIG = SBFOptions.strings.PROFILECONFIG or "Profiles
 
 -- Misc
 SBFOptions.strings.VERSION2 = SBFOptions.strings.VERSION2 or "Satrina Buff Frames |cff00ff00%s|r"
-SBFOptions.strings.HINT3 = SBFOptions.strings.HINT3 or "http://familyofnine.org/SBF"
+SBFOptions.strings.HINT3 = SBFOptions.strings.HINT3 or "http://sbf.satrina.info"
 SBFOptions.strings.HINT2 = SBFOptions.strings.HINT2 or "Alt+Drag to move me"
 SBFOptions.strings.HINT = SBFOptions.strings.HINT or "Have a question?  Need help? Try here first:"
 SBFOptions.strings.FRAME = SBFOptions.strings.FRAME or "Frame %d"

@@ -10,6 +10,11 @@
 --------------------------------------------------------
 -- CHANGELOG --
 --------------------------------------------------------
+--- v2.0 ---
+-Update for 6.0 and new raid difficulties
+-Upgrade old flex/normal to current normal/heroic
+-General code clean up and small fixes
+
 --- v1.26 ---
 -Fix a bug preventing some records from tracking
 

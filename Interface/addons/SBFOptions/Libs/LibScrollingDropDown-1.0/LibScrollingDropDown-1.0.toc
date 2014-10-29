@@ -4,11 +4,10 @@
 ## Author: Satrina
 ## X-Email: satrina.stormrage@gmail.com
 ## X-Category: Library
-## X-Curse-Packaged-Version: 3.2.6
 ## X-Curse-Project-Name: SatrinaBuffFrame
 ## X-Curse-Project-ID: satrina-buff-frame
 ## X-Curse-Repository-ID: wow/satrina-buff-frame/mainline
-## X-Curse-Packaged-Version: v3.3.1
+## X-Curse-Packaged-Version: v3.3.4
 ## X-Curse-Project-Name: SatrinaBuffFrame
 ## X-Curse-Project-ID: satrina-buff-frame
 ## X-Curse-Repository-ID: wow/satrina-buff-frame/mainline

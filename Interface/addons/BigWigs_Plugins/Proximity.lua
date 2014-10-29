@@ -288,12 +288,13 @@ do
 		setDot(dx, dy, blipList[1])
 		if range <= activeRangeSquared then
 			proxCircle:SetVertexColor(1, 0, 0)
+			proxTitle:SetFormattedText(L_proximityTitle, activeRange, 1)
+			if not db.sound then return end
 			local t = GetTime()
 			if t > (lastplayed + 1) and not UnitIsDead("player") and InCombatLockdown() then
 				lastplayed = t
 				plugin:SendMessage("BigWigs_Sound", db.soundName, true)
 			end
-			proxTitle:SetFormattedText(L_proximityTitle, activeRange, 1)
 		else
 			proxCircle:SetVertexColor(0, 1, 0)
 			proxTitle:SetFormattedText(L_proximityTitle, activeRange, 0)
@@ -328,6 +329,7 @@ do
 			proxCircle:SetVertexColor(0, 1, 0)
 		else
 			proxCircle:SetVertexColor(1, 0, 0)
+			if not db.sound then return end
 			local t = GetTime()
 			if t > (lastplayed + 1) and not UnitIsDead("player") and InCombatLockdown() then
 				lastplayed = t
@@ -401,12 +403,13 @@ do
 			proxTitle:SetFormattedText(L_proximityTitle, activeRange, 1)
 		else
 			proxCircle:SetVertexColor(1, 0, 0)
+			proxTitle:SetFormattedText(L_proximityTitle, activeRange, 0)
+			if not db.sound then return end
 			local t = GetTime()
 			if t > (lastplayed + 1) and not UnitIsDead("player") and InCombatLockdown() then
 				lastplayed = t
 				plugin:SendMessage("BigWigs_Sound", db.soundName, true)
 			end
-			proxTitle:SetFormattedText(L_proximityTitle, activeRange, 0)
 		end
 	end
 
@@ -898,6 +901,7 @@ end
 
 function plugin:Close()
 	updater = false
+	functionToFire = nil
 
 	proxAnchor:UnregisterEvent("GROUP_ROSTER_UPDATE")
 	proxAnchor:UnregisterEvent("RAID_TARGET_UPDATE")
@@ -911,7 +915,6 @@ function plugin:Close()
 
 	activeRange, activeRangeSquared = 0, 0
 	activeSpellID = nil
-	functionToFire = nil
 	proximityPlayer = nil
 	wipe(proximityPlayerTable)
 
@@ -922,84 +925,93 @@ function plugin:Close()
 	proxAnchor:Hide()
 end
 
-local abilityNameFormat = "|T%s:20:20:-5|t%s"
-function plugin:Open(range, module, key, player, isReverse)
-	if type(range) ~= "number" then print("Range needs to be a number!") return end
-	if not IsInGroup() then return end -- Solo runs of old content
-	self:Close()
+do
+	local hardCount, softCount = 0, 0
+	local function openProx()
+		softCount = softCount + 1
+		-- Check if proximity was closed before we even started, or if another has been opened in the 0.1s we were waiting
+		if functionToFire and softCount == hardCount then
+			proxAnchor:Show()
+			updater = true
+			functionToFire()
+		end
+	end
 
-	local y, x = UnitPosition("player")
-	if x == 0 and y == 0 then print("No map data!") return end
+	function plugin:Open(range, module, key, player, isReverse)
+		if type(range) ~= "number" then print("Range needs to be a number!") return end
+		if not IsInGroup() then return end -- Solo runs of old content
+		self:Close()
 
-	activeRange = range
-	activeRangeSquared = range*range
-	proxAnchor:RegisterEvent("GROUP_ROSTER_UPDATE")
-	proxAnchor:RegisterEvent("RAID_TARGET_UPDATE")
-	updateBlipColors()
-	updateBlipIcons()
+		local y, x = UnitPosition("player")
+		if x == 0 and y == 0 then print("No map data!") return end
 
-	if not player and not isReverse then
-		functionToFire = normalProximity
-	elseif player then
-		if type(player) == "table" then
-			for i = 1, #player do
-				for j = 1, GetNumGroupMembers() do
-					if UnitIsUnit(player[i], unitList[j]) then
-						proximityPlayerTable[#proximityPlayerTable+1] = unitList[j]
+		activeRange = range
+		activeRangeSquared = range*range
+		hardCount = hardCount + 1
+		proxAnchor:RegisterEvent("GROUP_ROSTER_UPDATE")
+		proxAnchor:RegisterEvent("RAID_TARGET_UPDATE")
+		updateBlipColors()
+		updateBlipIcons()
+
+		if not player and not isReverse then
+			functionToFire = normalProximity
+		elseif player then
+			if type(player) == "table" then
+				for i = 1, #player do
+					for j = 1, GetNumGroupMembers() do
+						if UnitIsUnit(player[i], unitList[j]) then
+							proximityPlayerTable[#proximityPlayerTable+1] = unitList[j]
+							break
+						end
+					end
+				end
+				if isReverse then
+					functionToFire = reverseMultiTargetProximity
+				else
+					functionToFire = multiTargetProximity
+				end
+			else
+				for i = 1, GetNumGroupMembers() do
+					if UnitIsUnit(player, unitList[i]) then
+						proximityPlayer = unitList[i]
 						break
 					end
 				end
-			end
-			if isReverse then
-				functionToFire = reverseMultiTargetProximity
-			else
-				functionToFire = multiTargetProximity
-			end
-		else
-			for i = 1, GetNumGroupMembers() do
-				if UnitIsUnit(player, unitList[i]) then
-					proximityPlayer = unitList[i]
-					break
+				if not proximityPlayer then self:Close() end -- Not found e.g. Mirror Image
+				if isReverse then
+					functionToFire = reverseTargetProximity
+				else
+					functionToFire = targetProximity
 				end
 			end
-			if not proximityPlayer then self:Close() end -- Not found e.g. Mirror Image
-			if isReverse then
-				functionToFire = reverseTargetProximity
+		elseif isReverse then
+			functionToFire = reverseProximity
+		end
+
+		local width, height = proxAnchor:GetWidth(), proxAnchor:GetHeight()
+		local ppy = min(width, height) / (range * 3)
+		proxCircle:SetSize(ppy * range * 2, ppy * range * 2)
+
+		-- Update the ability name display
+		if module and key then
+			local dbKey, name, desc, icon = BigWigs:GetBossOptionDetails(module, key)
+			if type(icon) == "string" then
+				proxAnchor.ability:SetFormattedText("|T%s:20:20:-5:0:64:64:4:60:4:60|t%s", icon, name)
 			else
-				functionToFire = targetProximity
+				proxAnchor.ability:SetText(name)
 			end
-		end
-	elseif isReverse then
-		functionToFire = reverseProximity
-	end
-
-	local width, height = proxAnchor:GetWidth(), proxAnchor:GetHeight()
-	local ppy = min(width, height) / (range * 3)
-	proxCircle:SetSize(ppy * range * 2, ppy * range * 2)
-
-	-- Update the ability name display
-	if module and key then
-		local dbKey, name, desc, icon = BigWigs:GetBossOptionDetails(module, key)
-		if type(icon) == "string" then
-			proxAnchor.ability:SetFormattedText("|T%s:20:20:-5:0:64:64:4:60:4:60|t%s", icon, name)
 		else
-			proxAnchor.ability:SetText(name)
+			proxAnchor.ability:SetText(L.customRange)
 		end
-	else
-		proxAnchor.ability:SetText(L.customRange)
-	end
-	if type(key) == "number" and key > 0 then -- GameTooltip doesn't do "journal" hyperlinks
-		activeSpellID = key
-	else
-		activeSpellID = nil
-	end
+		if type(key) == "number" and key > 0 then -- GameTooltip doesn't do "journal" hyperlinks
+			activeSpellID = key
+		else
+			activeSpellID = nil
+		end
 
-	-- Start the show!
-	CTimerAfter(0.2, function()
-		proxAnchor:Show()
-		updater = true
-		functionToFire()
-	end)
+		-- Start the show!
+		CTimerAfter(0.1, openProx)
+	end
 end
 
 function plugin:Test()

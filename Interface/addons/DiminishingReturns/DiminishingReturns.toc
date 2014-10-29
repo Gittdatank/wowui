@@ -1,5 +1,5 @@
-## Interface: 50400
-## X-Curse-Packaged-Version: v1.3.5
+## Interface: 60000
+## X-Curse-Packaged-Version: v1.4
 ## X-Curse-Project-Name: DiminishingReturns
 ## X-Curse-Project-ID: diminishingreturns
 ## X-Curse-Repository-ID: wow/diminishingreturns/mainline
@@ -9,11 +9,11 @@
 ## Notes-zhCN: 在单位框体附着递减规则图标。
 ## Notes-zhTW: 在單位框體附著遞減規則圖示。
 ## Author: Adirelle
-## Version: v1.3.5
-## X-Date: 2013-10-20T07:47:46Z
+## Version: v1.4
+## X-Date: 2014-10-23T21:11:54Z
 
 ## SavedVariables: DiminishingReturnsDB
-## OptionalDeps: LibStub, CallbackHandler-1.0, Ace3, LibAdiEvent-1.0, LibDualSpec-1.0, DRData-1.0, LibSharedMedia-3.0, LibNameplate-1.0, ButtonFacade, LibButtonFacade, AdiDebug
+## OptionalDeps: LibStub, CallbackHandler-1.0, Ace3, LibDualSpec-1.0, DRData-1.0, LibSharedMedia-3.0, LibNameplateRegistry-1.0, ButtonFacade, LibButtonFacade, AdiDebug
 
 ## LoadManagers: AddonLoader
 ## X-LoadOn-Always: delayed
@@ -24,11 +24,7 @@ libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
 libs\AceDB-3.0\AceDB-3.0.xml
 libs\DRData-1.0\DRData-1.0.lua
 libs\LibSharedMedia-3.0\lib.xml
-libs\LibNameplate-1.0\lib.xml
 #@end-no-lib-strip@
-
-# Not installable by the CC
-libs\LibAdiEvent-1.0\LibAdiEvent-1.0.lua
 
 DiminishingReturns.lua
 Localization.lua

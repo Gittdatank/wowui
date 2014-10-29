@@ -7,7 +7,7 @@ if not BigWigs.isWOD then return end -- XXX compat
 local mod, CL = BigWigs:NewBoss("Imperator Mar'gok", 994, 1197)
 if not mod then return end
 mod:RegisterEnableMob(77428)
---mod.engageId = 1705
+mod.engageId = 1705
 
 --------------------------------------------------------------------------------
 -- Locals
@@ -53,12 +53,10 @@ function mod:GetOptions()
 end
 
 function mod:OnBossEnable()
-	self:RegisterEvent("INSTANCE_ENCOUNTER_ENGAGE_UNIT", "CheckBossStatus")
-
 	self:RegisterUnitEvent("UNIT_SPELLCAST_SUCCEEDED", "Phases", "boss1")
 	self:Log("SPELL_AURA_APPLIED_DOSE", "AcceleratedAssault", 159515)
 	self:Log("SPELL_CAST_START", "ArcaneWrath", 156238, 163988, 163989, 163990) -- Arcane Wrath, Displacement, Fortification, Replication
-	self:Log("SPELL_AURA_APPLIED", "ArcaneWrathApplied", 156225, 16400, 164005, 164006) -- Branded
+	self:Log("SPELL_AURA_APPLIED", "ArcaneWrathApplied", 156225, 164004, 164005, 164006) -- Branded
 	self:Log("SPELL_CAST_START", "DestructiveResonance", 156467, 164075, 164076, 164077)
 	self:Log("SPELL_CAST_START", "ArcaneAberration", 156471, 164299, 164301, 164303)
 	self:Log("SPELL_AURA_APPLIED", "MarkOfChaosApplied", 158605, 164176, 164178, 164191)
@@ -72,8 +70,6 @@ function mod:OnBossEnable()
 	self:Log("SPELL_AURA_REMOVED", "FixateRemoved", 157763)
 	self:Log("SPELL_AURA_APPLIED_DOSE", "CrushArmor", 158553)
 	self:Log("SPELL_CAST_SUCCESS", "KickToTheFace", 158563)
-
-	self:Death("Win", 77428)
 end
 
 function mod:OnEngage()
@@ -94,7 +90,7 @@ end
 
 function mod:UNIT_HEALTH_FREQUENT(unit)
 	local hp = UnitHealth(unit) / UnitHealthMax(unit) * 100
-	if (phase == 1 and hp < 94) or (phase == 2 and hp < 64) or (phase == 3 and hp < 34) then
+	if (phase == 1 and hp < 90) or (phase == 2 and hp < 60) or (phase == 3 and hp < 30) then
 		self:Message("stages", "Neutral", "Info", CL.soon:format(CL.phase:format(phase+1)), false)
 		self:UnregisterUnitEvent("UNIT_HEALTH_FREQUENT", "boss1")
 	end
@@ -196,7 +192,7 @@ end
 do
 	local timer = nil
 	local function nextAdd(self)
-		self:Message("volatile_anomaly", "Attention", "Info", CL.incoming:format(L.volatile_anomaly))
+		self:Message("volatile_anomaly", "Attention", "Info", CL.incoming:format(L.volatile_anomaly), L.volatile_anomaly_icon)
 		self:Bar("volatile_anomaly", 12, L.volatile_anomaly, L.volatile_anomaly_icon)
 		timer = self:ScheduleTimer(nextAdd, 12, self)
 	end

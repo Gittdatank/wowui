@@ -26,9 +26,9 @@ local InCombatLockdown = _G.InCombatLockdown
 local debugMask = 4
 local debugMask2 = 32
 
--- 
+--
 -- Frames
--- 
+--
 
 local verticalJustifyMap = { [1] = "TOP", [2] = "CENTER", [3] = "BOTTOM", ["TOP"] = 1, ["CENTER"] = 2, ["BOTTOM"] = 3, }
 
@@ -43,19 +43,19 @@ end
 local SecureFrameActiveChildren = function(self)
   return childIterator, self, 0
 end
-  
+
 --
 -- Frame creation
 --
 sbf.CreateFrames = function(self, frame)
 	local f
-  
+
 	if not frame then
     while (#self.frames > 0) do
       self:PutBuffFrame(tremove(self.frames))
     end
   end
-	
+
 	for i,var in pairs(self.db.profile.frames) do
     if not frame or (frame == i) then
       if self.frames[i] then
@@ -68,7 +68,7 @@ sbf.CreateFrames = function(self, frame)
       end
       f.id = i
       f._var = var
-      
+
       f.tab1:ClearAllPoints()
       f.tab2:ClearAllPoints()
       f.tab1:SetPoint("BOTTOM", f, "TOP")
@@ -79,7 +79,7 @@ sbf.CreateFrames = function(self, frame)
       f.tab2.label:SetFormattedText(var.general.frameName)
 
       f.buffs = f.buffs or {}
-      
+
       if not var.layout.point then
         if (i == 1) then
           self.db.profile.frames[i].layout.point = {"TOPRIGHT", -65, -250}
@@ -89,7 +89,7 @@ sbf.CreateFrames = function(self, frame)
           self.db.profile.frames[i].layout.point = {"CENTER", 0, 0}
         end
       end
-      
+
       if f.secure then
         f:SetAttribute("unit", var.general.unit)
         if var.general.debuffs then
@@ -108,9 +108,9 @@ sbf.CreateFrames = function(self, frame)
         f:SetAttribute("wrapAfter",100)
         f:SetAttribute("wrapXOffset", 0)
         f:SetAttribute("wrapYOffset", 0)
-        f:SetAttribute("maxWraps", 100)      
+        f:SetAttribute("maxWraps", 100)
       end
-      
+
       f:ClearAllPoints()
       f:SetPoint(var.layout.point[1], UIParent, var.layout.point[1], var.layout.point[2], var.layout.point[3])
       self.frames[i] = f
@@ -245,19 +245,19 @@ sbf.SetupFrame = function(self, frame, leaveSlots)
   end
 
   --debugmsg self:debugmsg(debugMask, "Setting up %d slots in frame %d", frame._var.layout.count, frame.id)
-  
+
   if not leaveSlots then
     self:ClearFrame(frame)
     self:FillFrame(frame)
   end
-  
+
 	local var = frame._var
   local backdrop
 
   if var.bar then
     backdrop = { bgFile = SML:Fetch("background", var.bar.barBGTexture), tile = true, tileSize = 4, }
   end
-  
+
   if var.timer and var.timer.milliseconds then
     frame.timerUpdate = 0.09
   else
@@ -265,11 +265,11 @@ sbf.SetupFrame = function(self, frame, leaveSlots)
   end
   frame.warn = 0
   frame.timer = 0
-  
+
   frame:SetAlpha(var.layout.opacity)
   frame:EnableMouse(var.general.clickthrough ~= true)
-  if self.bfModule then
-    self.bfModule:UndoGroup(frame._var.general.frameName)
+  if self.masqueModule then
+    self.masqueModule:UndoGroup(frame._var.general.frameName)
   end
 	for j,slot in ipairs(frame.slots) do
     if var.icon then
@@ -288,7 +288,7 @@ sbf.SetupFrame = function(self, frame, leaveSlots)
         if IsAddOnLoaded("OmniCC") then
           slot.icon.cooldownSweep.noCooldownCount = true
         end
-      else 
+      else
         slot.icon.cooldownSweep.noCooldownCount = nil
       end
     end
@@ -310,7 +310,7 @@ sbf.SetupFrame = function(self, frame, leaveSlots)
       slot.bar:SetWidth(var.bar.width)
       slot.bar:SetHeight(var.bar.height)
       slot.bar:SetBackdrop(backdrop)
-      slot.bar:SetBackdropColor(var.bar.bgColour.r, var.bar.bgColour.g, var.bar.bgColour.b, var.bar.bgColour.a) 
+      slot.bar:SetBackdropColor(var.bar.bgColour.r, var.bar.bgColour.g, var.bar.bgColour.b, var.bar.bgColour.a)
       slot.bar.bar:ClearAllPoints()
       if (var.bar.width > var.bar.height) then
         slot.bar.bar:SetPoint(self.justify[var.bar.direction], slot.bar, self.justify[var.bar.direction], 0, 0)
@@ -347,14 +347,14 @@ sbf.SetupFrame = function(self, frame, leaveSlots)
         slot.bar.sparkRight:ClearAllPoints()
         slot.bar.sparkRight:SetPoint("RIGHT", slot.bar, "RIGHT", 0, 0)
       end
-      
+
       if var.bar.disableRightClick then
         slot.bar:RegisterForClicks("LeftButtonUp")
       else
         slot.bar:RegisterForClicks("LeftButtonUp", "RightButtonUp")
       end
     end
-    
+
     if var.name then
       slot.name:SetParent(slot.anchor)
       slot.name:ClearAllPoints()
@@ -383,9 +383,9 @@ sbf.SetupFrame = function(self, frame, leaveSlots)
     end
     slot.anchor:Show()
 	end
---    if not frame._var.general.interactiveFrame and self.bfModule then
-    if self.bfModule then
-      self.bfModule:SetupGroup(frame._var.general.frameName)
+--    if not frame._var.general.interactiveFrame and self.masqueModule then
+    if self.masqueModule then
+      self.masqueModule:SetupGroup(frame._var.general.frameName)
     end
 
 	self:ArrangeFrame(frame)
@@ -403,15 +403,15 @@ sbf.ArrangeFrame = function(self, frame)
 	local var = frame._var
   local	x = var.layout.x
 	local y = var.layout.y
-	
+
 	if var.bar then
 		x = x + var.bar.width
 	end
-	
+
 	if (#frame.slots > 0) then
 		local rowCount, inRows, left, lastAnchor, offX, offY, buffCount, rowMin, leftovers
 		local curSlot, slot, lastSlot, lastRowAnchor
-		
+
 		buffCount = var.layout.count
 		rowCount = var.layout.rowCount
 		inRows = var.layout.rows
@@ -420,7 +420,7 @@ sbf.ArrangeFrame = function(self, frame)
     left =  (var.layout.growth == 1)
     offX = 32 + x
     offY = 32 + y
-    
+
     -- state:  1 = buff left or bottom, 2 = buff right or top
     local rowState, colState, anchorRight, anchorLeft, anchorTop, anchorBottom
     remain = rowCount
@@ -428,7 +428,7 @@ sbf.ArrangeFrame = function(self, frame)
       slot = frame.slots[i]
       slot.anchor:ClearAllPoints()
       slot.anchor:SetParent(frame)
-      
+
       if (i == 1) then
         anchorRight = slot.anchor
         anchorLeft = slot.anchor
@@ -520,7 +520,7 @@ sbf.SetupExtents = function(self)
       end
     end
   end
-  -- Delay GetExtents for 2 updates so that everything draws in 
+  -- Delay GetExtents for 2 updates so that everything draws in
   self:DelayedCall("GetExtents", 2)
 end
 
@@ -551,11 +551,11 @@ sbf.GetExtent = function(self, frame)
   if (type(frame) == "number") then
     frame = self.frames[frame]
   end
-  
+
   if not frame.slots or (#frame.slots == 0) then
     return
   end
-	
+
   local top, right, bottom, left = 0,0,99999,99999
   local t,r,b,l
   for index,slot in pairs(frame.slots) do
@@ -590,7 +590,7 @@ sbf.GetExtent = function(self, frame)
       end
     end
   end
-  
+
   if not frame.extent then
     frame.extent = self:GetTable()
   end
@@ -697,7 +697,7 @@ end
 
 --
 -- Frame buff slots
--- 
+--
 sbf.PopulateSlot = function(self, var)
   local slot = self:GetTable()
   slot.anchor = self:GetAnchor()
@@ -758,7 +758,7 @@ end
 local white = {1,1,1}
 local skin
 local findBorderColour = function(frameName)
-  if sbf.bfModule then
+  if sbf.masqueModule then
     skin = sbf.db.profile.buttonFacade[frameName]
     if skin then
       if skin.colours then
@@ -767,11 +767,11 @@ local findBorderColour = function(frameName)
         end
       end
       if skin.skin then
-        if sbf.bfModule.skins then
-          if sbf.bfModule.skins[skin.skin] then
-            if sbf.bfModule.skins[skin.skin].Normal then
-              if sbf.bfModule.skins[skin.skin].Normal.Color  then
-                return sbf.bfModule.skins[skin.skin].Normal.Color      
+        if sbf.masqueModule.skins then
+          if sbf.masqueModule.skins[skin.skin] then
+            if sbf.masqueModule.skins[skin.skin].Normal then
+              if sbf.masqueModule.skins[skin.skin].Normal.Color  then
+                return sbf.masqueModule.skins[skin.skin].Normal.Color
               end
             end
           end
@@ -799,10 +799,10 @@ sbf.FrameShowBuffs = function(self, frame)
   if not frame or not frame.slots or (#frame.slots == 0) then
     return
   end
-  
-  local normalColour 
+
+  local normalColour
   normalColour = findBorderColour(frame._var.general.frameName)
-  
+
   --debugmsg self:debugmsg(debugMask, "Showing buffs unit '%s' in frame %d", frame.unit, frame.id)
   local var = frame._var
   local buff, debuffColour, warnExpire
@@ -813,22 +813,22 @@ sbf.FrameShowBuffs = function(self, frame)
       --debugmsg self:debugmsg(debugMask2, "frame %d, slot %d -> %s", frame.id, j, buff.name)
       slot._buff = buff
       frame.stickySlot = slot
-      
+
       debuffColour = DebuffTypeColor[buff.debuffType] or DebuffTypeColor.none
-      
+
       if var.name then
         slot.name._buff = buff  -- so OnEnter can do the tooltip without backflips
         slot.name.text:SetText(self:FormatName(buff, var))
         if buff.auraType and (buff.auraType < self.HARMFUL) then
-          slot.name.text:SetVertexColor(var.name.buffColour.r, var.name.buffColour.g, var.name.buffColour.b, var.name.buffColour.a) 
+          slot.name.text:SetVertexColor(var.name.buffColour.r, var.name.buffColour.g, var.name.buffColour.b, var.name.buffColour.a)
         elseif buff.auraType and (buff.auraType == self.HARMFUL) and var.name.colourNameAsDebuff then
           slot.name.text:SetVertexColor(debuffColour.r, debuffColour.g, debuffColour.b, 1)
         else
-          slot.name.text:SetVertexColor(var.name.debuffColour.r, var.name.debuffColour.g, var.name.debuffColour.b, var.name.debuffColour.a) 
+          slot.name.text:SetVertexColor(var.name.debuffColour.r, var.name.debuffColour.g, var.name.debuffColour.b, var.name.debuffColour.a)
         end
         slot.name:ShowGraphics()
       end
-      
+
       if var.count then
         if buff.count and ((buff.count > 1) or (buff.hadCount and var.count.showOneCount)) or sbf.showingOptions then
           slot.count.text:SetText(buff.count)
@@ -837,12 +837,12 @@ sbf.FrameShowBuffs = function(self, frame)
           else
             slot.count:SetBackdropColor(0,0,0,0)
           end
-          slot.count:Show() 
+          slot.count:Show()
         else
           slot.count:Hide()
         end
       end
-      
+
       if var.timer then
         warnExpire = not buff.untilCancelled and (self:IsAlwaysWarn(buff.name, frame.id) or ((buff.duration or 0) >= var.expiry.minimumDuration))
         if not buff.untilCancelled then
@@ -899,7 +899,7 @@ sbf.FrameShowBuffs = function(self, frame)
         slot.bar:SetBackdropColor(var.bar.bgColour.r, var.bar.bgColour.g, var.bar.bgColour.b, var.bar.bgColour.a)
         slot.bar:ShowGraphics()
       end
-    
+
       if (buff.auraType == self.HARMFUL) then
         if slot.bar then
           if var.bar.debuffBar then
@@ -909,7 +909,7 @@ sbf.FrameShowBuffs = function(self, frame)
           end
         end
         if slot.icon then
-          if self.bfModule then
+          if self.masqueModule then
             if not var.icon.noBFIconBorder then
               SetNormalVertexColor(slot.icon, debuffColour.r, debuffColour.g, debuffColour.b, 1)
             else
@@ -928,7 +928,7 @@ sbf.FrameShowBuffs = function(self, frame)
           self:SetBarColour(slot.bar, var.bar.buffColour)
         end
         if slot.icon then
-          if self.bfModule then
+          if self.masqueModule then
             SetNormalVertexColor(slot.icon, normalColour[1], normalColour[2], normalColour[3])
           end
           if not var.icon.noIconBorder then

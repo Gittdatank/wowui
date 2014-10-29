@@ -105,7 +105,7 @@ end
 
 
 if arg2=="SPELL_CAST_SUCCESS" and spellid==123175 then
-  local id=tonumber(string.sub(guid1,6,10),16)
+  local id=psGetUnitID(guid1)
   if id==62543 then
     if pswasonbossp22==nil then
       pswasonbossp22=1
@@ -117,7 +117,7 @@ if arg2=="SPELL_CAST_SUCCESS" and spellid==123175 then
 end
 
 if (arg2=="SPELL_AURA_APPLIED" or arg2=="SPELL_AURA_REFRESH") and spellid==123180 then
-  local id=tonumber(string.sub(guid1,6,10),16)
+  local id=psGetUnitID(guid1)
   if id==62543 then
     if pstayaktabwind1==nil then
       pstayaktabwind1=0
@@ -135,7 +135,7 @@ end
 
 --Unseen Strike
 if (arg2=="SPELL_DAMAGE" or arg2=="SPELL_MISSED") and spellid==122994 then
-  local id=tonumber(string.sub(guid1,6,10),16)
+  local id=psGetUnitID(guid1)
   if id==62543 then
 psunitisplayer(guid2,name2)
 if psunitplayertrue then

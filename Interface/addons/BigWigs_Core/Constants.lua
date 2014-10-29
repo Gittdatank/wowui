@@ -3,6 +3,9 @@ local L = LibStub("AceLocale-3.0"):GetLocale("Big Wigs", true)
 local names = {}
 local descriptions = {}
 
+local GetSpellInfo, GetSpellDescription, EJ_GetSectionInfo = GetSpellInfo, GetSpellDescription, EJ_GetSectionInfo
+local type = type
+
 -- Option bitflags
 local coreToggles = { "BAR", "MESSAGE", "ICON", "PULSE", "SOUND", "SAY", "PROXIMITY", "FLASH", "ME_ONLY", "EMPHASIZE", "TANK", "HEALER", "TANK_HEALER", "DISPEL", "ALTPOWER" }
 for i, toggle in next, coreToggles do
@@ -80,31 +83,6 @@ function BigWigs:GetRoleOptions()
 	return roleToggles
 end
 
-local getSpellDescription
-do
-	local cache = {}
-	local scanner = CreateFrame("GameTooltip")
-	scanner:SetOwner(WorldFrame, "ANCHOR_NONE")
-	local lcache, rcache = {}, {}
-	for i = 1, 4 do
-		lcache[i], rcache[i] = scanner:CreateFontString(), scanner:CreateFontString()
-		lcache[i]:SetFontObject(GameFontNormal); rcache[i]:SetFontObject(GameFontNormal)
-		scanner:AddFontStrings(lcache[i], rcache[i])
-	end
-	function getSpellDescription(spellId)
-		if cache[spellId] then return cache[spellId] end
-		scanner:ClearLines()
-		scanner:SetHyperlink("spell:"..spellId)
-		for i = scanner:NumLines(), 1, -1 do
-			local desc = lcache[i] and lcache[i]:GetText()
-			if desc then
-				cache[spellId] = desc
-				return desc
-			end
-		end
-	end
-end
-
 --display role icon/message in the option
 local function getRoleStrings(module, key)
 	local option = module.toggleDefaults[key]
@@ -164,8 +142,10 @@ function BigWigs:GetBossOptionDetails(module, bossOption)
 		if option > 0 then
 			local spellName, _, icon = GetSpellInfo(option)
 			if not spellName then error(("Invalid option %d in module %s."):format(option, module.name)) end
+			local desc = GetSpellDescription(option)
+			if not desc then BigWigs:Print(("No spell description was returned for id %d!"):format(option)) desc = "" end
 			local roleIcon, roleDesc = getRoleStrings(module, spellName)
-			return spellName, spellName..roleIcon, roleDesc..getSpellDescription(option), icon
+			return spellName, spellName..roleIcon, roleDesc..desc, icon
 		else
 			-- This is an EncounterJournal ID
 			local title, description, _, abilityIcon, displayInfo = EJ_GetSectionInfo(-option)

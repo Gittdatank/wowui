@@ -16,7 +16,7 @@ SBFOptions.OnInitialize = function(self)
 	UIPanelWindows["SatrinaBuffFrameOptions"] =		{ area = "center",	pushable = 0,	whileDead = 1 }
 	SBFONewFrameButton:SetFormattedText(self.strings.NEWFRAME)
 	SBFORemoveFrameButton:SetFormattedText(self.strings.REMOVEFRAME)
-	
+
   self:GeneralTabInitialise()
   self:IconTabInitialise()
   self:CountTabInitialise()
@@ -28,13 +28,13 @@ SBFOptions.OnInitialize = function(self)
   self:FlowTabInitialise()
   self:FilterTabInitialise()
   self:SpellTabInitialise()
-  
+
   SBFOptions:SetupFrameLevelWindow()
-  
+
 	SBFOFilterEditButton:SetFormattedText(self.strings.EDIT)
 	SBFOFilterRemoveButton:SetFormattedText(self.strings.REMOVE)
 	SBFOClearSpellsButton:SetFormattedText(self.strings.CLEARSPELLS)
-	
+
   SBFOResetButton:SetFormattedText(self.strings.RESET)
 	SBFOVersionString:SetFormattedText(self.strings.VERSION2, SBF.versionStr)
 	SBFOHint:SetFormattedText(self.strings.HINT)
@@ -46,13 +46,13 @@ SBFOptions.OnInitialize = function(self)
 	SBFOSpellsConfigButton.text:SetFormattedText(self.strings.SPELLCONFIG)
 	SBFOFilterEditButton:Disable()
 
-	self.tabs = { SBFOGeneralTab, SBFOLayoutTab, SBFOIconTab, SBFOTimerTab, SBFOCountTab, SBFOBarTab, SBFONameTab, 
+	self.tabs = { SBFOGeneralTab, SBFOLayoutTab, SBFOIconTab, SBFOTimerTab, SBFOCountTab, SBFOBarTab, SBFONameTab,
                 SBFOExpiryTab, SBFOFilterTab, SBFOSpellTab, SBFOFlowTab, SBFOGlobalTab, SBFOProfileTab }
-	
+
   SBFOTabsFrame:SetBackdropColor(0,0,0,1)
   -- SBFOPositionWindow:SetBackdropColor(0,0,0,1)
-  
- 
+
+
 	SBFOBuffFilterEdit.label:SetFormattedText(self.strings.FILTER)
   SBFOSpellFilterEdit.label:SetFormattedText(self.strings.SPELLFILTER)
 	SBFOAddFilterButton:SetFormattedText(self.strings.ADDFILTER)
@@ -89,9 +89,9 @@ SBFOptions.OnInitialize = function(self)
     end
 		ColourFrame:AddCopy(nil, v.expiry.sctColour.r, v.expiry.sctColour.g, v.expiry.sctColour.b)
 	end
-	
+
   self:InitScrollingDropDowns()
- 
+
   self.cacheSize = 0
 end
 
@@ -110,7 +110,7 @@ end
 
 SBFOptions.SelectTab = function(self, tab)
 	self.tabchange = true
-  
+
   if tab then
 		SBFOptions.curTab = tab
 	end
@@ -124,7 +124,7 @@ SBFOptions.SelectTab = function(self, tab)
     SBFOBuffFrameDropDown:Show()
     SBFOCurrentFrameString:Show()
   end
-  
+
   if (tab == SBFOSpellsConfigButton:GetID()) then
     SBFOptions:SpellTabSelectTab()
   elseif (tab == SBFOFilterConfigButton:GetID()) then
@@ -134,10 +134,10 @@ SBFOptions.SelectTab = function(self, tab)
   elseif (tab == SBFOProfileConfigButton:GetID()) then
     self:ProfileTabSelectTab()
   end
-  
+
   self:AttachPositionWindow()
   self:AttachFrameLevelWindow()
-  
+
 	for k,v in pairs(SBFOptions.tabs) do
 		if (k == SBFOptions.curTab) then
 			v:Show()
@@ -169,9 +169,9 @@ SBFOptions.SelectFrame = function(self, f)
       self.curFrame = f
     end
 	end
-	
+
   local var = self.curFrame._var
-  
+
 	for k,frame in pairs(SBF.frames) do
 		if (frame == self.curFrame) then
 			frame.tab1.label:SetTextColor(0,1,0)
@@ -183,7 +183,7 @@ SBFOptions.SelectFrame = function(self, f)
 	end
   self:SetFrameNames(self.curFrame)
   self.firstBuff = self.curFrame.slots[1]
-  
+
 	self.curFrame.extent = nil
 	self:IconTabSelectFrame(var)
 	self:CountTabSelectFrame(var)
@@ -197,7 +197,7 @@ SBFOptions.SelectFrame = function(self, f)
 	self:FilterTabSelectFrame(var)
 
 	self:FlowTabSelectFrame(SBF.db.profile)
-  
+
   self:InitialiseGlobalDropDowns()
   SBFOCurrentFrameString:SetFormattedText(self.strings.CURRENTFRAME, self.curFrame.id)
   self:AttachPositionWindow()
@@ -210,7 +210,7 @@ SBFOptions.SelectFrame = function(self, f)
     self:EnableTab(SBFOFilterConfigButton, true)
     self:EnableTab(SBFOSpellsConfigButton, true)
   end
-  
+
 	ScrollingDropDown:SetSelected(SBFOBuffFrameDropDown, SBFOptions.curFrame.id, ScrollingDropDown.VALUE)
   self.framechange = false
 end
@@ -506,7 +506,7 @@ SBFOptions.icons = {
 
 SBFOptions.GetDebuffType = function(self, j)
 	local i = mod(j,5)
-	if i == 0  then 
+	if i == 0  then
 		return "Curse"
 	elseif  i == 1 then
 		return "Magic"

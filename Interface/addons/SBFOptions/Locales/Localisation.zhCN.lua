@@ -1,10 +1,10 @@
 ﻿-- Note for translators:
--- You should never have 
+-- You should never have
 --   SBFOptions.strings.X = SBFOptions.strings.X or "y"
 -- You should only have
 --   SBFOptions.strings.X = "y"
 
-if (GetLocale() == "zhCN") then 
+if (GetLocale() == "zhCN") then
   -- General Tab
   SBFOptions.strings.GENERALCONFIG = "全局设置"
   SBFOptions.strings.FRAMEUNIT = "框体单位"
@@ -105,7 +105,7 @@ if (GetLocale() == "zhCN") then
     SBFOptions.strings.NAMEPOSITION = "名称位置"
   -- v3.1.5
     SBFOptions.strings.NAMEACTIVE = "激活鼠标"
-    SBFOptions.strings.NAMEACTIVETT = "Buff名称显示提示,允许取消等" 
+    SBFOptions.strings.NAMEACTIVETT = "Buff名称显示提示,允许取消等"
 
   -- Expiry Tab
     SBFOptions.strings.WARNCONFIG = "消隐（%d）"
@@ -123,7 +123,7 @@ if (GetLocale() == "zhCN") then
     SBFOptions.strings.SCTCOLOUR = "颜色"
     SBFOptions.strings.FASTBAR = "快速显示计时条消隐"
     SBFOptions.strings.SCTWARN = "在%s显示消失警报信息"
-    SBFOptions.strings.SCTCRIT = "使用爆击动画显示" 
+    SBFOptions.strings.SCTCRIT = "使用爆击动画显示"
     SBFOptions.strings.SCTCRITTT1 = "如果SCT启用则使用SCT的爆击动画显示消失警报"
     SBFOptions.strings.SCTCRITTTM1 = "你已经设置SCT为使用消息框体渐隐显示Buff。"
     SBFOptions.strings.SCTCRITTTM2 = "当前SCT设置不允许信息显示为爆击"
@@ -157,7 +157,7 @@ if (GetLocale() == "zhCN") then
   -- Global Tab
     SBFOptions.strings.GLOBALCONFIG = "全局设置"
     SBFOptions.strings.HOME = "主页"
-    SBFOptions.strings.AURAMAXTIME = "光环效果显示为最大持续时间" 
+    SBFOptions.strings.AURAMAXTIME = "光环效果显示为最大持续时间"
     SBFOptions.strings.AURAMAXTIMETT1 = "选中后，光环类效果（无持续时间）"
     SBFOptions.strings.AURAMAXTIMETT2 = "会显示为持续时间为最大值的法术。"
     SBFOptions.strings.ENCHANTSFIRST = "优先显示物品附魔"
@@ -171,7 +171,7 @@ if (GetLocale() == "zhCN") then
 
   -- Misc
     SBFOptions.strings.VERSION2 = "Satrina Buff Frames |cff00ff00%s|r"
-    SBFOptions.strings.HINT3 = "http://familyofnine.org/SBF"
+    SBFOptions.strings.HINT3 = "http://sbf.satrina.info"
     SBFOptions.strings.HINT2 = "按住Alt移动我！"
     SBFOptions.strings.HINT = "有问题吗?  需要帮助? 来这里看看:"
     SBFOptions.strings.FRAME = "框体%d"
@@ -204,7 +204,7 @@ if (GetLocale() == "zhCN") then
     SBFOptions.strings.FONT = "字体"
     SBFOptions.strings.FONTSIZE = "字体大小（%d）"
     SBFOptions.strings.OUTLINEFONT = "文字描边"
-      
+
     SBFOptions.strings.RESET = "重置框体"
     SBFOptions.strings.RESETFRAMESTT = "重置为SBF默认框体"
 
@@ -418,7 +418,7 @@ if (GetLocale() == "zhCN") then
         "记得要始终把元素的条件文本写进标签内部！<BR/>",
       },
     }
-    
+
     SBFOptions.strings.frameVisibility = {
       "始终",
       "从不",
@@ -436,13 +436,13 @@ if (GetLocale() == "zhCN") then
       "暴雪默认样式2",
       "OmniCC样式",
     }
-    
+
     SBFOptions.strings.WARNTIMETT = {
       "消失警报启动时间",
       "在该buff剩余时间为此值时",
       "显示消失警报",
     }
-      
+
     SBFOptions.strings.MINTIMETT = {
       "最小buff时间",
       "仅对持续时间长于该值",

@@ -221,7 +221,7 @@ end
 
 
 if arg2=="SPELL_DAMAGE" and (spellid==119553 or spellid==119554 or spellid==118106 or spellid==118105) then
-local id=tonumber(string.sub(guid1,6,10),16)
+local id=psGetUnitID(guid1)
 if id==60710 then
   if pswasonbossp34==nil then
     pswasonbossp34=1

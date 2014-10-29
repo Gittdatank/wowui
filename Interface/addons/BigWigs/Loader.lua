@@ -23,7 +23,7 @@ do
 	--@end-alpha@]===]
 
 	-- This will (in ZIPs), be replaced by the highest revision number in the source tree.
-	myRevision = tonumber("12082")
+	myRevision = tonumber("12137")
 
 	-- If myRevision ends up NOT being a number, it means we're running a SVN copy.
 	if type(myRevision) ~= "number" then
@@ -317,8 +317,8 @@ do
 		end
 	end
 
-	local num = tonumber(GetCVar("Sound_NumChannels"))
-	if num and num < 64 then
+	local num = tonumber(GetCVar("Sound_NumChannels")) or 0
+	if num < 64 then
 		SetCVar("Sound_NumChannels", 64) -- XXX temp until Blizz stops screwing with us
 	end
 end
@@ -471,9 +471,9 @@ end
 
 do
 	-- This is a crapfest mainly because DBM's actual handling of versions is a crapfest, I'll try explain how this works...
-	local DBMdotRevision = "11799" -- The changing version of the local client, changes with every alpha revision using an SVN keyword.
-	local DBMdotReleaseRevision = "11799" -- This is manually changed by them every release, they use it to track the highest release version, a new DBM release is the only time it will change.
-	local DBMdotDisplayVersion = "6.0.3" -- Same as above but is changed between alpha and release cycles e.g. "N.N.N" for a release and "N.N.N alpha" for the alpha duration
+	local DBMdotRevision = "11829" -- The changing version of the local client, changes with every alpha revision using an SVN keyword.
+	local DBMdotReleaseRevision = "11829" -- This is manually changed by them every release, they use it to track the highest release version, a new DBM release is the only time it will change.
+	local DBMdotDisplayVersion = "6.0.4" -- Same as above but is changed between alpha and release cycles e.g. "N.N.N" for a release and "N.N.N alpha" for the alpha duration
 	function mod:DBM_VersionCheck(prefix, sender, revision, releaseRevision, displayVersion)
 		if prefix == "H" and (BigWigs and BigWigs.db.profile.fakeDBMVersion or self.isFakingDBM) then
 			SendAddonMessage("D4", "V\t"..DBMdotRevision.."\t"..DBMdotReleaseRevision.."\t"..DBMdotDisplayVersion.."\t"..GetLocale(), IsInGroup(2) and "INSTANCE_CHAT" or "RAID")
@@ -638,11 +638,11 @@ function mod:CHAT_MSG_ADDON(prefix, msg, channel, sender)
 			public:SendMessage("BigWigs_AddonMessage", bwPrefix, bwMsg, sender)
 		end
 	elseif prefix == "D4" then
-		local dbmPrefix, arg1, arg2, arg3 = strsplit("\t", msg)
+		local dbmPrefix, arg1, arg2, arg3, arg4 = strsplit("\t", msg)
 		if dbmPrefix == "V" or dbmPrefix == "H" then
 			self:DBM_VersionCheck(dbmPrefix, Ambiguate(sender, "none"), arg1, arg2, arg3)
 		elseif dbmPrefix == "U" or dbmPrefix == "PT" or dbmPrefix == "M" or dbmPrefix == "BT" then
-			public:SendMessage("DBM_AddonMessage", Ambiguate(sender, "none"), dbmPrefix, arg1, arg2, arg3)
+			public:SendMessage("DBM_AddonMessage", Ambiguate(sender, "none"), dbmPrefix, arg1, arg2, arg3, arg4)
 		end
 	end
 end

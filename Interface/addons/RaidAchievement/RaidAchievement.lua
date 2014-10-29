@@ -6,7 +6,7 @@ if GetLocale()=="deDE" or GetLocale()=="ruRU" or GetLocale()=="zhTW" or GetLocal
 end
 
 
-	raversion=6.001
+	raversion=6.002
 	local raverstiptext="alpha"
 	if string.len(raversion)==6 then
 		raverstiptext="beta"
@@ -2238,4 +2238,21 @@ end
 
 PSFeaerrorgeneral:Show()
 
+end
+
+function raGetUnitID(guid)
+if guid==nil or guid==false then
+	return 0
+end
+if (guid.find(guid,"Creature") or guid.find(guid,"Pet-") or guid.find(guid,"GameObject") or guid.find(guid,"Vehicle")) then
+	--Creature-0-3061-1136-29274-71979-00003EDC2C
+	local t1,_,_,_,_,id,g = guid:match("([^,]+)-([^,]+)-([^,]+)-([^,]+)-([^,]+)-([^,]+)-([^,]+)")
+	if id and tonumber(id) ~= nil then
+		return id
+	else
+		return 0
+	end
+else
+	return guid
+end
 end

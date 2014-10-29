@@ -2,9 +2,6 @@
 -- Adds RGB fields as well as cut and paste buttons to ColorPickerFrame
 -- 2008 Satrina@Stormrage
 
--- This is a beta version, and is subject to change before public release
--- Questions? http://familyofnine.org/SBF
-
 -- Localisation is at the end of this file
 
 --[[
@@ -64,7 +61,7 @@ function ColourFrame:Open(callback, r, g, b, a)
     self.isShown = true
   end
   self:SetOriginalColour(r,g,b,(a or 0))
-  self.callback = callback 
+  self.callback = callback
   self.lcfOpened = true
   ShowUIPanel(ColorPickerFrame)
 end
@@ -78,7 +75,7 @@ function ColourFrame:AddCopy(name, r, g, b, a)
   r = round(r)
   g = round(g)
   b = round(b)
-  if a then 
+  if a then
     a = round(a)
   else
     a = 1
@@ -99,32 +96,32 @@ function ColourFrame:OnKeyDown()
   if ColourFrame.lcfOpened then
     ColourFrame:Callback(true)
   end
-  if ColourFrame.origOnKeyDown then 
+  if ColourFrame.origOnKeyDown then
     ColourFrame.origOnKeyDown()
   end
 end
 
 function ColourFrame:OnShow()
-  if ColourFrame.origOnShow then 
+  if ColourFrame.origOnShow then
     ColourFrame.origOnShow(ColorPickerFrame)
   end
-  
+
   if ColourFrame.lcfOpened then
     if ColourFrame.isShown then
       ColorPickerFrame:SetHeight(235)
       ColorPickerOkayButton:Hide()
       ColorPickerCancelButton:Hide()
-      ColourFrame.red:Show()	
-      ColourFrame.green:Show()	
-      ColourFrame.blue:Show()	
-      ColourFrame.alpha:Show()	
+      ColourFrame.red:Show()
+      ColourFrame.green:Show()
+      ColourFrame.blue:Show()
+      ColourFrame.alpha:Show()
       ColourFrame:EnableAlpha(ColourFrame.useOpacity)
       ColourFrame.okButton:Show()
       ColourFrame.cancelButton:Show()
       ColourFrame.copyButton:Show()
       ColourFrame.pasteButton:Show()
-      ColourFrame.red:SetFocus()	
-      ColourFrame.red:HighlightText()	
+      ColourFrame.red:SetFocus()
+      ColourFrame.red:HighlightText()
     end
     ColorPickerFrame.func = ColourFrame.ColorPickerRGBCallback
     ColorPickerFrame.cancelFunc = ColourFrame.Cancel
@@ -133,10 +130,10 @@ function ColourFrame:OnShow()
 end
 
 function ColourFrame:OnHide()
-  if ColourFrame.origOnHide then 
+  if ColourFrame.origOnHide then
     ColourFrame.origOnHide()
   end
-  
+
   if ColourFrame.lcfOpened then
     ColorPickerFrame:SetHeight(200)
     ColorPickerOkayButton:Show()
@@ -145,9 +142,9 @@ function ColourFrame:OnHide()
     ColourFrame.cancelButton:Hide()
     ColourFrame.copyButton:Hide()
     ColourFrame.pasteButton:Hide()
-    ColourFrame.red:Hide()	
-    ColourFrame.green:Hide()	
-    ColourFrame.blue:Hide()	
+    ColourFrame.red:Hide()
+    ColourFrame.green:Hide()
+    ColourFrame.blue:Hide()
     ColourFrame.alpha:Hide()
   else
     ColourFrame:Cleanup()
@@ -171,7 +168,7 @@ function ColourFrame:OK()
 end
 
 function ColourFrame:Cancel()
-  CloseDropDownMenus(1) 
+  CloseDropDownMenus(1)
   ColourFrame:Callback(true)
   HideUIPanel(ColorPickerFrame)
   ColourFrame:Cleanup()
@@ -226,7 +223,7 @@ function ColourFrame.PasteDropDown_Callback(info)
   ColourFrame.colour.r = info.r
   ColourFrame.colour.g = info.g
   ColourFrame.colour.b = info.b
-  ColourFrame.colour.a = info.a or 1 
+  ColourFrame.colour.a = info.a or 1
   ColourFrame:UpdateFields()
   ColourFrame:UpdateColorPickerFrame()
   ColourFrame:Callback()
@@ -241,7 +238,7 @@ function ColourFrame:SetOriginalColour(r, g, b, a)
   self.colour.g = g
   self.colour.b = b
   self.colour.a = a
-  self:UpdateFields() 
+  self:UpdateFields()
   self:UpdateColorPickerFrame()
 end
 
@@ -327,20 +324,20 @@ function ColourFrame:CreateFrame()
   if ColourFrame.created then
     return
   end
-  
-  
+
+
   ColourFrame.origOnShow = ColorPickerFrame:GetScript("OnShow")
   ColorPickerFrame:SetScript("OnShow", ColourFrame.OnShow)
   ColourFrame.origOnHide = ColorPickerFrame:GetScript("OnHide")
   ColorPickerFrame:SetScript("OnHide", ColourFrame.OnHide)
   ColourFrame.origOnKeyDown = ColorPickerFrame:GetScript("OnKeyDown")
   ColorPickerFrame:SetScript("OnKeyDown", ColourFrame.OnKeyDown)
-  
+
   ColourFrame.red = ColourFrame:Edit_Create(ColorPickerFrame)
   ColourFrame.red:SetPoint("BOTTOM", ColorPickerFrame, "BOTTOM", -92, 35)
   ColourFrame.red.label:SetText(ColourFrame.strings.red)
   ColourFrame.red:Hide()
-  
+
   ColourFrame.green = ColourFrame:Edit_Create(ColorPickerFrame)
   ColourFrame.green:SetPoint("LEFT", ColourFrame.red, "RIGHT", 40, 0)
   ColourFrame.green.label:SetText(ColourFrame.strings.green)
@@ -364,7 +361,7 @@ function ColourFrame:CreateFrame()
   ColourFrame.blue.prev = ColourFrame.green
   ColourFrame.alpha.next = ColourFrame.red
   ColourFrame.alpha.prev = ColourFrame.blue
-  
+
   ColourFrame.copyButton = CreateFrame("Button", "lcfCopyButton", ColorPickerFrame, "GameMenuButtonTemplate")
   ColourFrame.copyButton:SetText(ColourFrame.strings.copy)
   ColourFrame.copyButton:SetWidth(50)
@@ -411,7 +408,7 @@ function ColourFrame:CreateFrame()
     { r = NORMAL_FONT_COLOR.r, g = NORMAL_FONT_COLOR.g, b = NORMAL_FONT_COLOR.b, a = 1, name = ColourFrame.strings.defaultColour },
   }
   UIDropDownMenu_Initialize(ColourFramePasteButtonDropDown, ColourFrame.PasteDropDown_Initialise, "MENU")
-  
+
   ColourFrame.created = true
 end
 
@@ -426,10 +423,10 @@ ColourFrame.Edit_Create = function(self, parent, isAlpha)
   frame:SetHeight(20)
   frame:SetFontObject(GameFontNormalSmall)
   frame:SetAutoFocus(false)
-  
+
   frame.label = frame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
   frame.label:SetPoint("RIGHT", frame, "LEFT", -10, 0)
-  
+
   frame.leftBG = frame:CreateTexture(nil, "BACKGROUND")
   frame.leftBG:SetTexture("Interface\\Common\\Common-Input-Border")
   frame.leftBG:SetTexCoord(0,0.0625, 0, 0.625)
@@ -459,7 +456,7 @@ ColourFrame.Edit_Create = function(self, parent, isAlpha)
     frame:SetScript("OnTextChanged", self.Edit_RGBChanged)
   end
   frame:SetScript("OnEscapePressed", self.Edit_EscapePressed)
-  
+
   return frame
 end
 

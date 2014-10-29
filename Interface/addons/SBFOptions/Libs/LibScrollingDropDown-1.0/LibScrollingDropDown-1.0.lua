@@ -1,26 +1,23 @@
--- This is a beta version, and is subject to change before public release
--- Questions? http://familyofnine.org/SBF
-
 --[[
 User Functions.  These functions are for you, the user!
 
-****  ScrollingDropDown:AddItem(frame, item) 
+****  ScrollingDropDown:AddItem(frame, item)
 Adds an item to a frame that a ScrollingDropDown will pop from
  * frame - Can be anything that you can click (dropdown, button, even a frame if you use OnMouseDown handlers)
  * item - the item to be added.  See below for item table structure
- 
- Note that item is COPIED so don't make a new table every time you add an item.  Reuse the same table.  
 
- The item will be deep copied, with these exceptions: 
+ Note that item is COPIED so don't make a new table every time you add an item.  Reuse the same table.
+
+ The item will be deep copied, with these exceptions:
   - Frame objects will alwyas be reference copied
-  - Any keys in items that are prefixed with _ will be only be reference copied 
-    
+  - Any keys in items that are prefixed with _ will be only be reference copied
+
     -- Good!
     -- UIParent is reference copied.  A reference copy of the addon's saved variables profile is made
     item.frame = UIParent
     item._var = MyAddon.db.profile
     ScrollingDropDown:AddItem(MyAddonFrameDropDown, item)
-    
+
     -- Bad!
     -- UIParent is reference copied.  A deep copy of the addon's saved variables profile is made
     item.frame = UIParent
@@ -32,33 +29,33 @@ All tables are recycled.
 
 **** ScrollingDropDown:Open(frame)
 Open the root ScrollingDropDown
- * frame - the frame 
+ * frame - the frame
 
 **** ScrollingDropDown:SetSelected(frame, arg[, param])
 Sets the selected item for a frame
  * frame - the frame to set the selection for
  * arg - the value to set selection by
  * param - the item parameter to set selection by (default is text)
- 
-Example 1: ScrollingDropDown:SetSelected(myFrame, "First", "text") 
+
+Example 1: ScrollingDropDown:SetSelected(myFrame, "First", "text")
 This sets the currently selected item for myFrame based on its text fields. The item with text "First" will be selected, if it exists.
 
-Example 2: ScrollingDropDown:SetSelected(myFrame, 1, "value") 
+Example 2: ScrollingDropDown:SetSelected(myFrame, 1, "value")
 This sets the currently selected item for myFrame based on its value fields (which is a user defined field). The item with value 1 will be selected, if it exists.
 
 **** Item Structure ****
   An item is a table. Reserved fields that do things are as follows:
 
-  text (string)                   - The text to display in the ScrollingDropDown 
+  text (string)                   - The text to display in the ScrollingDropDown
   callback (function)             - The function to invoke when this item is selected
   selected (nil, not-nil)         - This item is the selected item
   _textRGB {r=0-1, g=0-1, b=0-1}  - Reference to table containing colour information for text
   textRGB {r=0-1, g=0-1, b=0-1}   - Copied table of colour information (prefer using _textRGB when possible)
   colour {r=0-1, g=0-1, b=0-1}    - Swatch colour (also _colour as above)
   color {r=0-1, g=0-1, b=0-1}     - As above, so our American friends don't get tripped up (also _color as above)
-  
+
   You may define any other fields as desired
-  
+
 ]]
 
 local vmajor, vminor = "LibScrollingDropDown-1.0", 11
@@ -101,11 +98,11 @@ ScrollingDropDown.Open = function(self, frame)
   if not frame.items or (#frame.items == 0) then
     return
   end
-  
+
   if not self.frames[1] then
     self.frames[1] = self:CreateScrollingDropDown(1)
   end
-  
+
   if self.isShown and (self.currentFrame == frame) then
     self.currentFrame = nil
     self.frames[1]:Hide()
@@ -140,7 +137,7 @@ ScrollingDropDown.SetSelected = function(self, frame, arg, param)
   if not frame.items then
     return
   end
-  if not param then 
+  if not param then
     param = self.TEXT
   end
   if arg then
@@ -171,20 +168,20 @@ end
 --
 ScrollingDropDown.UpdateList = function()
   local dd = ScrollingDropDown
-  
+
   if not dd.currentFrame.items then
     return
   end
-  
+
   local offset = FauxScrollFrame_GetOffset(dd.currentDD.scrollFrame)
   local listIndex, button, item
   local selected = false
-  
+
   for i=1,10 do
     listIndex = offset + i
     button = dd.currentDD.listButtons[i]
     item = dd.currentFrame.items[listIndex]
-    
+
     if item then
       button.index = listIndex
       button.item = item
@@ -211,7 +208,7 @@ ScrollingDropDown.UpdateList = function()
         button.swatch:Hide()
       end
       button:Show()
-    else	
+    else
       button:Hide()
     end
 
@@ -236,7 +233,7 @@ ScrollingDropDown.SizeDropDown = function(self)
   local buttonWidth
   local w
   local swatch = 0
-  
+
   self.currentDD.listButtons[1].label:SetWidth(400)
   for k,v in pairs(self.currentFrame.items) do
     self.currentDD.listButtons[1].label:SetText(v.text)
@@ -248,7 +245,7 @@ ScrollingDropDown.SizeDropDown = function(self)
       swatch = 16
     end
   end
-  
+
   buttonWidth = labelWidth + swatch + 25
   for i=1,10 do
     self.currentDD.listButtons[i].label:SetWidth(labelWidth)
@@ -257,7 +254,7 @@ ScrollingDropDown.SizeDropDown = function(self)
       self.currentDD.listButtons[i].highlight:SetWidth(buttonWidth - 10)
     end
   end
-  
+
   if #self.currentFrame.items < 11 then
     self.currentDD:SetWidth(buttonWidth + 5)
     self.currentDD:SetHeight(#self.currentFrame.items * 14 + 8)
@@ -287,7 +284,7 @@ end
 local f, fp, fpp
 ScrollingDropDown.OnUpdate = function(frame, elapsed)
   local sdd = ScrollingDropDown
-  
+
   if not sdd.currentFrame:IsVisible() then
     frame:Hide()
   elseif sdd:WhoIsYourDaddy(GetMouseFocus(), frame) then
@@ -383,13 +380,13 @@ function ScrollingDropDown.CreateScrollingDropDown(self, index)
   frame:SetFrameStrata("TOOLTIP")
   frame:SetClampedToScreen(true)
   frame:SetToplevel(true)
-  
+
   local backdrop = ScrollingDropDown:GetTable()
   backdrop.bgFile = "Interface\\Tooltips\\UI-Tooltip-Background"
   backdrop.edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border"
   backdrop.tile = true
   backdrop.tileSize = 16
-  backdrop.edgeSize = 16 
+  backdrop.edgeSize = 16
   backdrop.insets = ScrollingDropDown:GetTable()
   backdrop.insets.left, backdrop.insets.right, backdrop.insets.top, backdrop.insets.bottom = 2,2,2,2
   frame:SetBackdrop(backdrop)
@@ -398,7 +395,7 @@ function ScrollingDropDown.CreateScrollingDropDown(self, index)
 
   frame:SetWidth(231)
   frame:SetHeight(148)
-  
+
   frame.listButtons = {}
   frame.listButtons[1] = self:CreateSDDButton(frame, 1)
   frame.listButtons[1]:SetPoint("TOPLEFT", frame, "TOPLEFT", 4, -4)
@@ -432,13 +429,13 @@ function ScrollingDropDown:CreateSDDButton(parent, index)
   frame:SetScript("OnLeave", ScrollingDropDown.OnLeaveButton)
   frame:SetHighlightTexture("Interface\\FriendsFrame\\UI-FriendsFrame-HighlightBar")
   frame:GetHighlightTexture():SetBlendMode("ADD")
-  
+
   frame.check = frame:CreateTexture()
   frame.check:SetHeight(16)
   frame.check:SetWidth(16)
   frame.check:SetPoint("LEFT", frame, "LEFT", 0, 0)
   frame.check:SetTexture("Interface\\Buttons\\UI-CheckBox-Check")
-  
+
   frame.label = frame:CreateFontString(nil, nil, "GameFontNormalSmall")
   frame.label:SetHeight(16)
   frame.label:SetWidth(175)

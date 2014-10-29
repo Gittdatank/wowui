@@ -1,5 +1,5 @@
-## Interface: 50400
-## Version: 1.0.10
+## Interface: 60000
+## Version: 1.0.11
 ## Title: Who Pulled?
 ## Notes: Notifies you who pulled that boss (or whatever) and allows you to tell everyone who did. FUCK GRIEFERS.
 ## SavedVariables: WhoPulled_Settings, WhoPulled_RageList, WhoPulled_Ignored, WhoPulled_Ignore

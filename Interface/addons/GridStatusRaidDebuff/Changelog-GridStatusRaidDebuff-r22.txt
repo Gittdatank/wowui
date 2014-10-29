@@ -1,0 +1,15 @@
+------------------------------------------------------------------------
+r22 | stassart | 2014-10-20 08:49:35 +0000 (Mon, 20 Oct 2014) | 1 line
+Changed paths:
+   M /trunk/Core.lua
+   M /trunk/GridStatusRaidDebuff.toc
+
+Updated ToC. Removed Blood Pact debuff.
+------------------------------------------------------------------------
+r21 | stassart | 2013-09-12 07:44:10 +0000 (Thu, 12 Sep 2013) | 1 line
+Changed paths:
+   M /trunk/Core.lua
+   M /trunk/GridStatusRaidDebuff.toc
+
+Fix lua error that can occur the first time a character zones into Proving Grounds (nil zone name on initial zone in).
+------------------------------------------------------------------------

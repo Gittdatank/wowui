@@ -7,7 +7,7 @@ if not BigWigs.isWOD then return end -- XXX compat
 local mod, CL = BigWigs:NewBoss("Tectus", 994, 1195)
 if not mod then return end
 mod:RegisterEnableMob(78948)
---mod.engageId = 1722
+mod.engageId = 1722
 
 --------------------------------------------------------------------------------
 -- Locals
@@ -62,8 +62,6 @@ function mod:GetOptions()
 end
 
 function mod:OnBossEnable()
-	self:RegisterEvent("INSTANCE_ENCOUNTER_ENGAGE_UNIT", "CheckBossStatus")
-
 	-- Tectus
 	self:Log("SPELL_AURA_APPLIED_DOSE", "Accretion", 162288)
 	self:Log("SPELL_AURA_APPLIED", "CrystallineBarrage", 162346)
@@ -82,15 +80,13 @@ function mod:OnBossEnable()
 	-- Berserker
 	self:Yell("Berserker", L.berserker_trigger1, L.berserker_trigger2, L.berserker_trigger3)
 	self:Log("SPELL_CAST_START", "RavingAssault", 163312)
-
-	self:Death("Win", 78948)
 end
 
 function mod:OnEngage()
 	wipe(marked)
 	--self:CDBar(162346, 6) -- Crystalline Barrage
-	self:CDBar("adds", 10, -10061, L.earthwarper_icon) -- Earthwarper
-	self:CDBar("adds", 20, -10062, L.berserker_icon) -- Berserker
+	self:CDBar("adds", 11, -10061, L.earthwarper_icon) -- Earthwarper
+	self:CDBar("adds", 21, -10062, L.berserker_icon) -- Berserker
 end
 
 --------------------------------------------------------------------------------
@@ -108,12 +104,12 @@ do
 end
 
 function mod:CrystallineBarrage(args)
-	--self:CDBar(args.spellId, 20)
+	--self:CDBar(args.spellId, 20.5)
 	if self:Me(args.destGUID) then
 		self:Message(args.spellId, "Personal", "Alarm", CL.you:format(args.spellName))
 		self:Flash(args.spellId)
 	end
-	if self.profile.custom_off_barrage_marker then
+	if self.db.profile.custom_off_barrage_marker then
 		for i=1, 5 do
 			if not marked[i] then
 				SetRaidTarget(args.destName, i)
@@ -125,7 +121,7 @@ function mod:CrystallineBarrage(args)
 end
 
 function mod:CrystallineBarrageRemoved(args)
-	if self.profile.custom_off_barrage_marker then
+	if self.db.profile.custom_off_barrage_marker then
 		SetRaidTarget(args.destName, 0)
 		for i=1, 5 do
 			if marked[i] == args.destName then

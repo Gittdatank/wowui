@@ -220,7 +220,7 @@ end
 
 --запугивание
 if arg2=="SPELL_AURA_APPLIED" and spellid==123012 then
-  local id=tonumber(string.sub(guid2,6,10),16)
+  local id=psGetUnitID(guid2)
   if id==62442 then
     pstsulong1=GetTime() --время начала
     pstsulong2=0 --конец
@@ -230,21 +230,21 @@ if arg2=="SPELL_AURA_APPLIED" and spellid==123012 then
 end
 
 if arg2=="SPELL_AURA_REMOVED" and spellid==123012 and pstsulong2 then
-  local id=tonumber(string.sub(guid2,6,10),16)
+  local id=psGetUnitID(guid2)
   if id==62442 then
     pstsulong2=GetTime()
   end
 end
 
 if arg2=="SPELL_PERIODIC_DAMAGE" and spellid==123012 and pstsulong2 then
-  local id=tonumber(string.sub(guid2,6,10),16)
+  local id=psGetUnitID(guid2)
   if id==62442 then
     pstsulong3=pstsulong3+(arg12-arg13)
   end
 end
 
 if (arg2=="SPELL_DISPEL" or arg2=="SPELL_STOLEN") and arg12==123012 and pstsulong2 then
-  local id=tonumber(string.sub(guid2,6,10),16)
+  local id=psGetUnitID(guid2)
   if id==62442 then
     pstsulong4=name1
   end

@@ -11,7 +11,7 @@ pslocale()
 end
 
 
-	psversion=6.002
+	psversion=6.004
 
 
 	psverstiptext="alpha"
@@ -847,7 +847,7 @@ pscheckbusboss1=nil
 if UnitIsDeadOrGhost("player")==false and UnitName("boss1") and UnitName("boss1")~="" and IsInInstance() and UnitAffectingCombat("player")==false then
 
 local id2=UnitGUID("boss1")
-local id=tonumber(string.sub(id2,6,10),16)
+local id=psGetUnitID(UnitGUID("boss1"))
 	local bloc=0
 	SetMapToCurrentZone()
 	for d=1,#pslocations do
@@ -910,7 +910,7 @@ if pscheckbossincombat and curtime>pscheckbossincombat+2 then
 pscheckbossincombat=curtime
 local id=0
 if UnitGUID("boss1") then
-	id=tonumber(string.sub(UnitGUID("boss1"),6,10),16)
+	id=psGetUnitID(UnitGUID("boss1"))
 end
 local bil=0
 if #psbossbugs>0 then
@@ -1480,7 +1480,7 @@ local arg1, arg2, arg3,arg4,arg5,arg6,argNEW1,arg7,arg8,arg9,argNEW2,arg10,arg11
 --ыытест дописать еще другие рейды
 if arg2=="UNIT_DIED" then
 
-	local id=tonumber(string.sub(arg7,6,10),16)
+	local id=psGetUnitID(arg7)
 	local bil2=0
 if id~=0 then
 
@@ -2637,7 +2637,7 @@ if event=="PLAYER_TARGET_CHANGED" then
 
 if pscurrentzoneid and pscurrentzoneid>0 then
 if UnitGUID("target") then
-local aa=tonumber(string.sub(UnitGUID("target"),6,10),16)
+local aa=psGetUnitID(UnitGUID("target"))
 	for i=1,#psbossid[pscurrentzoneex][pscurrentzoneid] do
 		if psbossid[pscurrentzoneex][pscurrentzoneid][i][1]~=0 then
 			if psbossid[pscurrentzoneex][pscurrentzoneid][i][1]==aa then
@@ -6031,7 +6031,7 @@ if pscheckbossinthissec and GetTime()<pscheckbossinthissec+0.5 then
 		local bil=0
 		for g=1,GetNumGroupMembers() do
 			if bil==0 and UnitName("raid"..g.."-target") then
-				local a=tonumber(string.sub(UnitGUID("raid"..g.."-target"),6,10),16)
+				local a=psGetUnitID(UnitGUID("raid"..g.."-target"))
 				for f=1,#psbossid[pssetexpans][psmenuchoose1] do
 					for d=1,#psbossid[pssetexpans][psmenuchoose1][f] do
 						if psbossid[pssetexpans][psmenuchoose1][f][d]==a and psbossid[pssetexpans][psmenuchoose1][f][d]~=0 then
@@ -8446,4 +8446,21 @@ else
   end
 end
 
+end
+
+function psGetUnitID(guid)
+if guid==nil or guid==false then
+	return 0
+end
+if (guid.find(guid,"Creature") or guid.find(guid,"Pet-") or guid.find(guid,"GameObject") or guid.find(guid,"Vehicle")) then
+	--Creature-0-3061-1136-29274-71979-00003EDC2C
+	local t1,_,_,_,_,id,g = guid:match("([^,]+)-([^,]+)-([^,]+)-([^,]+)-([^,]+)-([^,]+)-([^,]+)")
+	if id and tonumber(id) ~= nil then
+		return id
+	else
+		return 0
+	end
+else
+	return guid
+end
 end

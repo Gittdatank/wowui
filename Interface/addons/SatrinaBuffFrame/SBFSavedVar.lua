@@ -2,7 +2,7 @@ local sbf = SBF
 local debugMask = 32
 --
 -- Saved Vars
--- 
+--
 sbf.defaultVars = {
   global = {
     spells = {},
@@ -74,7 +74,7 @@ sbf.DoSavedVars = function(self, verbose)
   if IsAddOnLoaded("ButtonFacade") or IsAddOnLoaded("Masque") then
     self.db.profile.buttonFacade = self.db.profile.buttonFacade or {}
   end
-  
+
   -- cleanup old stuff
   self.db.global.throttlePeriod = nil
   self.db.profile.alwaysWarnList = nil
@@ -84,27 +84,27 @@ sbf.DoSavedVars = function(self, verbose)
   self.db.profile.filters = nil
 	self.db.global.castable = nil
   self.db.profile.enableFilters = nil
-  
+
   for index,frame in pairs(self.db.profile.frames) do
     frame.frameName = nil
     frame.unit = nil
   end
-  
+
   self.db.profile.flow = self.db.profile.flow or {}
   self.db.profile.settings = self.db.profile.settings or {}
 
   self:ValidateSpellList()
 
   self:minorUpdate()
-  
+
   self.db.global.version = self.version
 
   if self.db.global.message == nil then
     self.db.global.message = true
   end
-  
+
   self:CheckFlows()
-  
+
   -- force a GC cycle to clean up our mess
   collectgarbage()
 end
@@ -114,7 +114,7 @@ sbf.ValidateSpellList = function(self)
   self.db.global.spellTTL = 30
   self.spellTTL = 30
   local cutoff = time() - (self.db.global.spellTTL * 86400)
-  
+
   for k,v in pairs(self.db.global.spells) do
     -- Duplicates in castable list
     if v[6] then
@@ -144,7 +144,7 @@ sbf.ValidateFrameVars = function(self, i, create)
     end
 	end
 	local v = self.db.profile.frames[i]
-  
+
   v.layout = v.layout or {}
 	if (i == 1) then
 		v.layout.count = v.layout.count or 20
@@ -179,7 +179,7 @@ sbf.ValidateFrameVars = function(self, i, create)
   v.layout.growth = v.layout.growth or 3
   v.layout.reverse = nil
 	v.layout.bottom = nil
-  
+
 	v.expiry = v.expiry or {}
   v.expiry.flash = v.expiry.flash
 	v.expiry.sctWarn = v.expiry.sctWarn
@@ -212,7 +212,7 @@ sbf.ValidateFrameVars = function(self, i, create)
     v.layout.sort = "INDEX"
     v.layout.direction = "+"
 
-    if v.name then 
+    if v.name then
       v.name.mouseActive = true
     end
     if v.icon then
@@ -225,14 +225,14 @@ sbf.ValidateFrameVars = function(self, i, create)
       v.filters = {}
     end
   end
-  
+
 	return v
 end
 
 sbf.DoGeneralSavedVars = function(self, v, new, frameNum)
   v.general = v.general or {}
   v.general.unit = v.general.unit or "player"
-  
+
   -- new installation setup for frames 1 and 2
   if new then
     if frameNum == 1 then
@@ -260,7 +260,7 @@ sbf.DoGeneralSavedVars = function(self, v, new, frameNum)
       end
     end
   end
-  
+
   if (v.general.blacklist == nil) then
     v.general.blacklist = false
   end
@@ -301,7 +301,7 @@ sbf.DoCountSavedVars = function(self, v, new)
     v.count.frameLevel = v.count.frameLevel or 4
   end
 end
-  
+
 -- Icon is a default configuration element
 sbf.DoIconSavedVars = function(self, v, new)
   if v.icon or new then
@@ -344,7 +344,7 @@ sbf.DoBarSavedVars = function(self, v, new)
     v.bar.overrideColours = v.bar.overrideColours or {}
   end
 end
-  
+
 -- Name is not a default configuration element
 sbf.DoNameSavedVars = function(self, v, new)
   if v.name or new then
@@ -389,16 +389,16 @@ sbf.ProfileChanged = function(self, redoBF)
   self:PutTable(self.debuffs)
   self.debuffs = self:GetTable()
   self:DoSavedVars()
-  if self.bfModule and self.bfModule:HasGroups() then
+  if self.masqueModule and self.masqueModule:HasGroups() then
     for index,frame in pairs(self.frames) do
-      self.bfModule:UndoGroup(frame._var.general.frameName, true)
+      self.masqueModule:UndoGroup(frame._var.general.frameName, true)
     end
     ButtonFacade.options.args.addons.args["SBF"] = nil
     collectgarbage()
   end
   self:CreateFrames()
   self:SetupFrames()
-  if self.bfModule and self.bfModule:HasGroups() then
+  if self.masqueModule and self.masqueModule:HasGroups() then
     ButtonFacade:ElementListUpdate("SBF")
   end
   self:TokenizeFilters()

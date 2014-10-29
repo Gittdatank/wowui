@@ -1,10 +1,10 @@
 -- Note for translators:
--- You should never have 
+-- You should never have
 --   SBFOptions.strings.X = SBFOptions.strings.X or "y"
 -- You should only have
 --   SBFOptions.strings.X = "y"
 
-if (GetLocale() == "koKR") then 
+if (GetLocale() == "koKR") then
   -- General Tab
 SBFOptions.strings.GENERALCONFIG = "기본설정"
 SBFOptions.strings.FRAMEUNIT = "프레임 유닛"
@@ -104,7 +104,7 @@ SBFOptions.strings.DEBUFFNAMECOLOURTT2 = "(저주, 마법, 독, etc.)"
 SBFOptions.strings.NAMEPOSITION = "이름 표시 위치"
 -- v3.1.5
 SBFOptions.strings.NAMEACTIVE =  "마우스 활성화"
-SBFOptions.strings.NAMEACTIVETT = "Buff names will show tooltips, allow you to click to dismiss, etc." 
+SBFOptions.strings.NAMEACTIVETT = "Buff names will show tooltips, allow you to click to dismiss, etc."
 
 -- Expiry Tab
 SBFOptions.strings.WARNCONFIG = "버프종료알림"
@@ -170,7 +170,7 @@ SBFOptions.strings.HIDEPARTYTT2 = "\"Hide Party Interface in Raid\" option in th
 
 -- Misc
 SBFOptions.strings.VERSION2 = "Satrina Buff Frames |cff00ff00%s|r"
-SBFOptions.strings.HINT3 = "http://familyofnine.org/SBF"
+SBFOptions.strings.HINT3 = "http://sbf.satrina.info"
 SBFOptions.strings.HINT2 = "Alt+드래그로 이동"
 SBFOptions.strings.HINT = SBFOptions.strings.HINT or "Have a question?  Need help? Try here first:"
 SBFOptions.strings.FRAME = "프레임 %d"

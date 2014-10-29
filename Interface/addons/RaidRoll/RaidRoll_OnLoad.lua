@@ -97,274 +97,255 @@ function RR_LootWindowEvent(self, event, ...)
     end
 end
 
+function RR_GetMobName(unit)
+    local mob_name
+
+    -- If has a GUID and is a creature, name is the name of the creature
+    local mob_guid = UnitGUID("target")
+    if mob_guid and mob_guid:match("^Creature-") then
+        mob_name = UnitName("target")
+    end
+
+    -- If was not a creature with a name, use unknown
+    return mob_name or "Unknown"
+end
+
 function RR_SendItemInfo()
-    local player_name, mob_name, mob_guid, numLootItems, LootNumber, WeHaveFoundAnItem, ItemLink, AcceptItem,
+    local player_name, mob_name, numLootItems, LootNumber, WeHaveFoundAnItem, ItemLink, AcceptItem,
         DontAcceptItem, AcceptableZone, ZoneName, Seperator, Version, String, ItemId
 
     player_name = UnitName("player")
-    mob_name = UnitName("target")
-    mob_guid = UnitGUID("target")
+    mob_name = RR_GetMobName("target")
 
-    if mob_guid == nil then mob_guid = "0xF1008F32001790BE" end
+    -- Get the number of items on the body
+    numLootItems = GetNumLootItems()
 
-    -- Check if we are looking at a mob
-    if mob_guid ~= nil then
+    LootNumber = 0
 
-        -- Breakdown the guid to see if its an npc
-        local B = tonumber(mob_guid:sub(5, 5), 16)
-        local maskedB = B % 8  -- x % 8 has the same effect as x & 0x7 on numbers <= 0xf
-        local knownTypes = { [0] = "player", [3] = "NPC", [4] = "pet", [5] = "vehicle" }
-        local Type
-        if knownTypes[maskedB] ~= nil then
-            Type = knownTypes[maskedB]
-        else
-            Type = "unknown entity!"
-        end
-        RR_Debug("Your target is a " .. Type)
+    -- Check if the mob has loots
+    if numLootItems ~= nil then
+        RR_Debug("Mob " .. mob_name .. " has " .. numLootItems .. " items")
 
-        if Type ~= "NPC" then mob_name = "Unknown" end
+        -- Used later to see if an item was found yet
+        WeHaveFoundAnItem = false
 
-        -- RR_Debug(mob_name.." has the GUID: "..mob_guid)
+        -- Start scanning for items
+        for i = 1, numLootItems do
+            -- If its an item
+            local lootIcon, lootName, lootQuantity, rarity = GetLootSlotInfo(i)
 
-        -- Create an array for the mob GUID
-        -- if RaidRoll_DB["Loot"][mob_guid] == nil then RaidRoll_DB["Loot"][mob_guid] = {} end
-        -- if RaidRoll_DB["Loot"][mob_guid]["ALREADY FOUND"] == nil then
+            --[[
+                texture - Path to an icon texture for the item or amount of money (string)
+                item - Name of the item, or description of the amount of money (string)
+                quantity - Number of stacked items, or 0 for money (number)
+                quality - Quality (rarity) of the item (number, itemQuality)
+                locked - 1 if the item is locked (preventing the player from looting it); otherwise nil (1nil)
+            --]]
 
-        -- Set it so that we know the mob has been found
-        -- RaidRoll_DB["Loot"][mob_guid]["ALREADY FOUND"] = true
-        -- RR_Debug("New Mob Found!")
+            if not lootQuantity or lootQuantity == 0 then
+                RR_Debug("Skipping " .. tostring(lootName))
+            else
+                if WeHaveFoundAnItem == false then
+                    -- If we are currently looking at the last window
+                    --     if RaidRoll_DB["Loot"]["TOTAL WINDOWS"] == RaidRoll_DB["Loot"]["CURRENT WINDOW"] then
+                    -- then increment the current window ID
+                    --         RaidRoll_DB["Loot"]["CURRENT WINDOW"] = RaidRoll_DB["Loot"]["CURRENT WINDOW"] + 1
+                    --     end
+                    --
+                    -- Add a window to the list of windows
+                    --     RaidRoll_DB["Loot"]["TOTAL WINDOWS"] = RaidRoll_DB["Loot"]["TOTAL WINDOWS"] + 1
+                    --     Max_LootID = RaidRoll_DB["Loot"]["TOTAL WINDOWS"]
+                    --
+                    -- Set the Identifier to the mob guid
+                    --     if RaidRoll_DB["Loot"][Max_LootID] == nil then RaidRoll_DB["Loot"][Max_LootID] = mob_guid end
 
-        -- Get the number of items on the body
-        numLootItems = GetNumLootItems()
+                    WeHaveFoundAnItem = true
+                end
 
-        LootNumber = 0
+                -- Increase the count by 1 (because an item was found)
+                LootNumber = LootNumber + 1
 
-        -- Check if the mob has loots
-        if numLootItems ~= nil then
-            RR_Debug("The Mob Has Loots!")
-            RR_Debug(numLootItems .. " items found")
+                -- Get the ICON and ITEMLINK
+                ItemLink = GetLootSlotLink(i)
+                if ItemLink ~= nil then
 
-            -- Used later to see if an item was found yet
-            WeHaveFoundAnItem = false
+                    RR_Debug("Loot: slot=" .. i .. ", link=" .. ItemLink .. ", icon=" .. lootIcon .. ", name=" .. lootName
+                        .. ", quantity=" .. lootQuantity .. ", rarity=" .. rarity)
 
-            -- Start scanning for items
-            for i = 1, numLootItems do
-                -- If its an item
-                local lootIcon, lootName, lootQuantity, rarity = GetLootSlotInfo(i)
+                    -- Create an array
+                    if RR_Check_lootName == nil then RR_Check_lootName = {} end
 
-                --[[
-                    texture - Path to an icon texture for the item or amount of money (string)
-                    item - Name of the item, or description of the amount of money (string)
-                    quantity - Number of stacked items, or 0 for money (number)
-                    quality - Quality (rarity) of the item (number, itemQuality)
-                    locked - 1 if the item is locked (preventing the player from looting it); otherwise nil (1nil)
-                --]]
+                    AcceptItem = false
 
-                if not lootQuantity or lootQuantity == 0 then
-                    RR_Debug("Skipping " .. tostring(lootName))
-                else
-                    if WeHaveFoundAnItem == false then
-                        -- If we are currently looking at the last window
-                        --     if RaidRoll_DB["Loot"]["TOTAL WINDOWS"] == RaidRoll_DB["Loot"]["CURRENT WINDOW"] then
-                        -- then increment the current window ID
-                        --         RaidRoll_DB["Loot"]["CURRENT WINDOW"] = RaidRoll_DB["Loot"]["CURRENT WINDOW"] + 1
-                        --     end
-                        --
-                        -- Add a window to the list of windows
-                        --     RaidRoll_DB["Loot"]["TOTAL WINDOWS"] = RaidRoll_DB["Loot"]["TOTAL WINDOWS"] + 1
-                        --     Max_LootID = RaidRoll_DB["Loot"]["TOTAL WINDOWS"]
-                        --
-                        -- Set the Identifier to the mob guid
-                        --     if RaidRoll_DB["Loot"][Max_LootID] == nil then RaidRoll_DB["Loot"][Max_LootID] = mob_guid end
+                    local _, _, _, _, ItemId = string.find(ItemLink,
+                        "|?c?f?f?(%x*)|?H?([^:]*):?(%d+):?(%d*):?(%d*):?(%d*):?(%d*):?(%d*):?(%-?%d*):?(%-?%d*):?(%d*)|?h?%[?([^%[%]]*)%]?|?h?|?r?")
+                    ItemId = tonumber(ItemId)
 
-                        WeHaveFoundAnItem = true
+                    local _, _, _, ItemLvl = GetItemInfo(ItemId)
+                    ItemLvl = tonumber(ItemLvl)
+
+                    -- Special rare items that should be included
+                    if ItemId == 46110 or  -- Alchemist's Cache
+                        ItemId == 47556 or -- Crusader Orb
+                        ItemId == 45087 or -- Runed Orb
+                        ItemId == 49908    -- Primordial Saronite
+                    then
+                        AcceptItem = true
+                        RR_Debug("[Rarity] This is an acceptable Item - " .. lootName)
+                    else
+                        RR_Debug("[Rarity] This is >NOT< an acceptable Item - " .. lootName)
                     end
 
-                    -- Increase the count by 1 (because an item was found)
-                    LootNumber = LootNumber + 1
+                    DontAcceptItem = false
+                    -- Special epic items that should not be included
+                    if ItemId == 34057 or  -- Abyss Crystal
+                        ItemId == 36931 or -- Ametrine
+                        ItemId == 36919 or -- Cardinal Ruby
+                        ItemId == 36928 or -- Dreadstone
+                        ItemId == 36934 or -- Eye of Zul
+                        ItemId == 36922 or -- King's Amber
+                        ItemId == 36925 or -- Majestic Zircon
+                        ItemId == 87208 or -- Sigil of Power
+                        ItemId == 87209 or -- Sigil of Wisdom
+                        ItemId == 47241 or -- Emblem of Triumph
+                        ItemId == 49426 or -- Emblem of Frost
+                        ItemId == 74248    -- Sha Crystal
+                    then
+                        DontAcceptItem = true
+                        RR_Debug("[Epic Items] This is >NOT< an acceptable Item - " .. lootName)
+                    else
+                        RR_Debug("[Epic Items] This is an acceptable Item - " .. lootName)
+                    end
 
-                    -- Get the ICON and ITEMLINK
-                    ItemLink = GetLootSlotLink(i)
-                    if ItemLink ~= nil then
+                    AcceptableZone = false
 
-                        RR_Debug("Loot: slot=" .. i .. ", link=" .. ItemLink .. ", icon=" .. lootIcon .. ", name=" .. lootName
-                            .. ", quantity=" .. lootQuantity .. ", rarity=" .. rarity)
+                    -- Non-Localized zone info
+                    ZoneName = GetRealZoneText()
 
-                        -- Create an array
-                        if RR_Check_lootName == nil then RR_Check_lootName = {} end
+                    if ZoneName == "Trial of the Crusader" or
+                        ZoneName == "Icecrown Citadel" or
+                        ZoneName == "Naxxramas" or
+                        ZoneName == "Onyxia's Lair" or
+                        ZoneName == "The Eye of Eternity" or
+                        ZoneName == "The Obsidian Sanctum" or
+                        ZoneName == "Ulduar" or
+                        ZoneName == "Vault of Archavon"
+                    then
+                        AcceptableZone = true
+                        RR_Debug("This is an acceptable Zone - " .. ZoneName)
+                    else
+                        RR_Debug("This is >NOT< an acceptable zone - " .. ZoneName)
+                    end
 
-                        AcceptItem = false
-
-                        local _, _, _, _, ItemId = string.find(ItemLink,
-                            "|?c?f?f?(%x*)|?H?([^:]*):?(%d+):?(%d*):?(%d*):?(%d*):?(%d*):?(%d*):?(%-?%d*):?(%-?%d*):?(%d*)|?h?%[?([^%[%]]*)%]?|?h?|?r?")
-                        ItemId = tonumber(ItemId)
-
-                        local _, _, _, ItemLvl = GetItemInfo(ItemId)
-                        ItemLvl = tonumber(ItemLvl)
-
-                        -- Special rare items that should be included
-                        if ItemId == 46110 or  -- Alchemist's Cache
-                            ItemId == 47556 or -- Crusader Orb
-                            ItemId == 45087 or -- Runed Orb
-                            ItemId == 49908    -- Primordial Saronite
-                        then
-                            AcceptItem = true
-                            RR_Debug("[Rarity] This is an acceptable Item - " .. lootName)
-                        else
-                            RR_Debug("[Rarity] This is >NOT< an acceptable Item - " .. lootName)
-                        end
-
-                        DontAcceptItem = false
-                        -- Special epic items that should not be included
-                        if ItemId == 34057 or  -- Abyss Crystal
-                            ItemId == 36931 or -- Ametrine
-                            ItemId == 36919 or -- Cardinal Ruby
-                            ItemId == 36928 or -- Dreadstone
-                            ItemId == 36934 or -- Eye of Zul
-                            ItemId == 36922 or -- King's Amber
-                            ItemId == 36925 or -- Majestic Zircon
-                            ItemId == 87208 or -- Sigil of Power
-                            ItemId == 87209 or -- Sigil of Wisdom
-                            ItemId == 47241 or -- Emblem of Triumph
-                            ItemId == 49426 or -- Emblem of Frost
-                            ItemId == 74248    -- Sha Crystal
-                        then
-                            DontAcceptItem = true
-                            RR_Debug("[Epic Items] This is >NOT< an acceptable Item - " .. lootName)
-                        else
-                            RR_Debug("[Epic Items] This is an acceptable Item - " .. lootName)
-                        end
-
-                        AcceptableZone = false
-
-                        -- Non-Localized zone info
-                        ZoneName = GetRealZoneText()
-
-                        if ZoneName == "Trial of the Crusader" or
-                            ZoneName == "Icecrown Citadel" or
-                            ZoneName == "Naxxramas" or
-                            ZoneName == "Onyxia's Lair" or
-                            ZoneName == "The Eye of Eternity" or
-                            ZoneName == "The Obsidian Sanctum" or
-                            ZoneName == "Ulduar" or
-                            ZoneName == "Vault of Archavon"
-                        then
+                    if RaidRoll_DBPC[UnitName("player")]["RR_Frame_WotLK_Dung_Only"] == false then
+                        local name, ins_type, _, _, maxPlayers = GetInstanceInfo()
+                        RR_Debug("ins_type - " .. ins_type)
+                        if ins_type == "raid" or RaidRoll_DB["debug"] == true then
                             AcceptableZone = true
-                            RR_Debug("This is an acceptable Zone - " .. ZoneName)
-                        else
-                            RR_Debug("This is >NOT< an acceptable zone - " .. ZoneName)
+                            RR_Debug("This is a Raid - " .. ZoneName)
                         end
+                    end
 
-                        if RaidRoll_DBPC[UnitName("player")]["RR_Frame_WotLK_Dung_Only"] == false then
-                            local name, ins_type, _, _, maxPlayers = GetInstanceInfo()
-                            RR_Debug("ins_type - " .. ins_type)
-                            if ins_type == "raid" or RaidRoll_DB["debug"] == true then
-                                AcceptableZone = true
-                                RR_Debug("This is a Raid - " .. ZoneName)
+                    --[[
+                        Trial of the Crusader
+                        Icecrown Citadel
+                        Naxxramas
+                        Onyxia's Lair
+                        The Eye of Eternity
+                        The Obsidian Sanctum
+                        Ulduar
+                        Vault of Archavon
+                    --]]
+
+                    RR_Check_lootName[LootNumber] = lootName
+                    local tempLootName = lootName
+
+                    if LootNumber > 1 then
+                        local LootCount = 0
+                        for i = 1, LootNumber - 1 do
+                            -- Check if the lootName is the same as one in the list
+                            if lootName == RR_Check_lootName[i] then
+                                LootCount = LootCount + 1
+                                lootName = tempLootName .. LootCount
+                                RR_Check_lootName[LootNumber] = lootName
+                            end
+                        end
+                    end
+
+                    --local _, _, Color, Ltype, Id, Enchant, Gem1, Gem2, Gem3, Gem4, Suffix, Unique, LinkLvl, Name =
+                    --      string.find(ItemLink, "|?c?f?f?(%x*)|?H?([^:]*):?(%d+):?(%d*):?(%d*):?(%d*):?(%d*):?(%d*):?(%-?%d*):?(%-?%d*):?(%d*)|?h?%[?([^%[%]]*)%]?|?h?|?r?")
+                    --RR_Debug("Item ID = " .. Id)
+
+                    Seperator = "\a" -- "\226\149\145"
+                    Version = "Beta_2"
+                    String = ""
+
+                    --[[ beta string format
+                        String = (
+                            Version .. Seperator ..
+                            player_name .. Seperator ..
+                            mob_name .. Seperator ..
+                            ItemId .. Seperator ..
+                            lootName.. Seperator ..
+                            ItemLvl
+                        )
+                    --]]
+
+                    if ItemLvl ~= nil then
+                        String = (Version .. Seperator ..
+                            player_name .. Seperator ..
+                            mob_name .. Seperator ..
+                            ItemId .. Seperator ..
+                            lootName .. Seperator ..
+                            ItemLvl)
+
+                        if time() >= RR_LastItemDataReSent + 60 then
+                            RR_LastItemDataReSent = time() - 10
+                            if IsInRaid() or IsInGroup() then
+                                SendAddonMessage("RRL", "Request", IsInRaid() and "RAID" or "PARTY")
                             end
                         end
 
                         --[[
-                            Trial of the Crusader
-                            Icecrown Citadel
-                            Naxxramas
-                            Onyxia's Lair
-                            The Eye of Eternity
-                            The Obsidian Sanctum
-                            Ulduar
-                            Vault of Archavon
+                            0 for grey,
+                            1 for white items and quest items,
+                            2 for green,
+                            3 for blue,
+                            4 for epic,
+                            5 for legendary,
                         --]]
 
-                        RR_Check_lootName[LootNumber] = lootName
-                        local tempLootName = lootName
-
-                        if LootNumber > 1 then
-                            local LootCount = 0
-                            for i = 1, LootNumber - 1 do
-                                -- Check if the lootName is the same as one in the list
-                                if lootName == RR_Check_lootName[i] then
-                                    LootCount = LootCount + 1
-                                    lootName = tempLootName .. LootCount
-                                    RR_Check_lootName[LootNumber] = lootName
-                                end
-                            end
-                        end
-
-                        --local _, _, Color, Ltype, Id, Enchant, Gem1, Gem2, Gem3, Gem4, Suffix, Unique, LinkLvl, Name =
-                        --      string.find(ItemLink, "|?c?f?f?(%x*)|?H?([^:]*):?(%d+):?(%d*):?(%d*):?(%d*):?(%d*):?(%d*):?(%-?%d*):?(%-?%d*):?(%d*)|?h?%[?([^%[%]]*)%]?|?h?|?r?")
-                        --RR_Debug("Item ID = " .. Id)
-
-                        Seperator = "\a" -- "\226\149\145"
-                        Version = "Beta_2"
-                        String = ""
-
-                        --[[ beta string format
-                            String = (
-                                Version .. Seperator ..
-                                player_name .. Seperator ..
-                                mob_name .. Seperator ..
-                                ItemId .. Seperator ..
-                                lootName.. Seperator ..
-                                ItemLvl
-                            )
-                        --]]
-
-                        if ItemLvl ~= nil then
-                            String = (Version .. Seperator ..
-                                player_name .. Seperator ..
-                                mob_name .. Seperator ..
-                                ItemId .. Seperator ..
-                                lootName .. Seperator ..
-                                ItemLvl)
-
-                            if time() >= RR_LastItemDataReSent + 60 then
-                                RR_LastItemDataReSent = time() - 10
-                                if IsInRaid() or IsInGroup() then
-                                    SendAddonMessage("RRL", "Request", IsInRaid() and "RAID" or "PARTY")
-                                end
-                            end
-
-                            --[[
-                                0 for grey,
-                                1 for white items and quest items,
-                                2 for green,
-                                3 for blue,
-                                4 for epic,
-                                5 for legendary,
-                            --]]
-
-                            -- Send items with epic or higher quality, also send items on the acceptable items list.
-                            -- Also, only send items from an acceptable zone (raid)
-                            if rarity > 3 or RaidRoll_DB["debug"] == true or AcceptItem == true then
-                                if AcceptableZone == true or RaidRoll_DB["debug"] == true then
-                                    if DontAcceptItem == false or RaidRoll_DB["debug"] == true then
-                                        if IsInRaid() or IsInGroup() then
-                                            SendAddonMessage("RRL", String, IsInRaid() and "RAID" or "PARTY")
-                                        end
-                                        if IsInGuild() then
-                                            SendAddonMessage("RRL", String, "GUILD")
-                                        end
+                        -- Send items with epic or higher quality, also send items on the acceptable items list.
+                        -- Also, only send items from an acceptable zone (raid)
+                        if rarity > 3 or RaidRoll_DB["debug"] == true or AcceptItem == true then
+                            if AcceptableZone == true or RaidRoll_DB["debug"] == true then
+                                if DontAcceptItem == false or RaidRoll_DB["debug"] == true then
+                                    if IsInRaid() or IsInGroup() then
+                                        SendAddonMessage("RRL", String, IsInRaid() and "RAID" or "PARTY")
+                                    end
+                                    if IsInGuild() then
+                                        SendAddonMessage("RRL", String, "GUILD")
                                     end
                                 end
                             end
-
-                            --RaidRoll_DB["Loot"][mob_guid]["LOOTER NAME"]    = player_name
-                            --RaidRoll_DB["Loot"][mob_guid]["MOB NAME"]       = mob_name
-                            --RaidRoll_DB["Loot"][mob_guid]["TOTAL ITEMS"]    = LootNumber
-                            --
-                            --if RaidRoll_DB["Loot"][mob_guid]["ITEM_" .. LootNumber] == nil then
-                            --    RaidRoll_DB["Loot"][mob_guid]["ITEM_" .. LootNumber] = {}
-                            --end
-                            --
-                            --RaidRoll_DB["Loot"][mob_guid]["ITEM_" .. LootNumber]["ITEMLINK"]    = ItemLink
-                            --RaidRoll_DB["Loot"][mob_guid]["ITEM_" .. LootNumber]["ICON"]        = lootIcon
-                            --RaidRoll_DB["Loot"][mob_guid]["ITEM_" .. LootNumber]["WINNER"]      = "-"
-                            --RaidRoll_DB["Loot"][mob_guid]["ITEM_" .. LootNumber]["RECEIVED"]    = "-"
                         end
 
-                        if RaidRoll_LootTrackerLoaded == true then
-                            RR_Loot_Display_Refresh()
-                        end
+                        --RaidRoll_DB["Loot"][mob_guid]["LOOTER NAME"]    = player_name
+                        --RaidRoll_DB["Loot"][mob_guid]["MOB NAME"]       = mob_name
+                        --RaidRoll_DB["Loot"][mob_guid]["TOTAL ITEMS"]    = LootNumber
+                        --
+                        --if RaidRoll_DB["Loot"][mob_guid]["ITEM_" .. LootNumber] == nil then
+                        --    RaidRoll_DB["Loot"][mob_guid]["ITEM_" .. LootNumber] = {}
+                        --end
+                        --
+                        --RaidRoll_DB["Loot"][mob_guid]["ITEM_" .. LootNumber]["ITEMLINK"]    = ItemLink
+                        --RaidRoll_DB["Loot"][mob_guid]["ITEM_" .. LootNumber]["ICON"]        = lootIcon
+                        --RaidRoll_DB["Loot"][mob_guid]["ITEM_" .. LootNumber]["WINNER"]      = "-"
+                        --RaidRoll_DB["Loot"][mob_guid]["ITEM_" .. LootNumber]["RECEIVED"]    = "-"
+                    end
+
+                    if RaidRoll_LootTrackerLoaded == true then
+                        RR_Loot_Display_Refresh()
                     end
                 end
             end

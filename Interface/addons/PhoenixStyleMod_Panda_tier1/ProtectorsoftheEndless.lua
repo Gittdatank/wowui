@@ -147,25 +147,25 @@ end
 
 --бафф что нада диспелить
 if arg2=="SPELL_AURA_APPLIED" and spellid==117283 and UnitName("boss1") then
-  local id=tonumber(string.sub(guid2,6,10),16)
+  local id=psGetUnitID(guid2)
   if (id==60585 or id==60586 or id==60583) then
     --получаем ИД босса с минимальным ХП
     local bossid=0
     local hp=0
     if UnitName("boss1") then
       hp=UnitHealth("boss1")/UnitHealthMax("boss1")
-      bossid=tonumber(string.sub(UnitGUID("boss1"),6,10),16)
+      bossid=psGetUnitID(UnitGUID("boss1"))
     end
     if UnitName("boss2") then
       if hp~=0 and UnitHealth("boss2")/UnitHealthMax("boss2")<hp then
         hp=UnitHealth("boss2")/UnitHealthMax("boss2")
-        bossid=tonumber(string.sub(UnitGUID("boss2"),6,10),16)
+        bossid=psGetUnitID(UnitGUID("boss2"))
       end
     end
     if UnitName("boss3") then
       if hp~=0 and UnitHealth("boss3")/UnitHealthMax("boss3")<hp then
         hp=UnitHealth("boss3")/UnitHealthMax("boss3")
-        bossid=tonumber(string.sub(UnitGUID("boss3"),6,10),16)
+        bossid=psGetUnitID(UnitGUID("boss3"))
       end
     end
     if id==bossid then

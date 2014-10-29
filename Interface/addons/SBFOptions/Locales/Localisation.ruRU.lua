@@ -1,7 +1,7 @@
 -- Translated by StingerSoft
 
 -- Note for translators:
--- You should never have 
+-- You should never have
 --   SBFOptions.strings.X = SBFOptions.strings.X or "y"
 -- You should only have
 --   SBFOptions.strings.X = "y"
@@ -193,7 +193,7 @@ if ( GetLocale() == "ruRU" ) then
 
   -- Misc
   SBFOptions.strings.VERSION2 =  "Satrina Buff Frames |cff00ff00%s|r"
-  SBFOptions.strings.HINT =  "http://familyofnine.org/SBF"
+  SBFOptions.strings.HINT =  "http://sbf.satrina.info"
   SBFOptions.strings.HINT2 = "Чтобы переместить нажмите: Alt+Перемещайте"
   SBFOptions.strings.FRAME = "Фрейм %d"
   SBFOptions.strings.USINGPROFILE = "Исп. профиль"
@@ -288,4 +288,4 @@ if ( GetLocale() == "ruRU" ) then
     "для баффов данной продолжительности или выше",
   }
 
-end 
+end

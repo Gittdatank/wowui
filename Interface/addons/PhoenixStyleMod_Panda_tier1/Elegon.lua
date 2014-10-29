@@ -149,7 +149,7 @@ end
 
 if arg2=="DAMAGE_SHIELD" or arg2=="SPELL_PERIODIC_DAMAGE" or arg2=="SPELL_DAMAGE" or arg2=="RANGE_DAMAGE" then
 if arg12 then
-local id=tonumber(string.sub(guid2,6,10),16)
+local id=psGetUnitID(guid2)
 if id==60793 then
   if pswasonbossp35==nil then
     pswasonbossp35=1
@@ -165,7 +165,7 @@ end
 
 if arg2=="SWING_DAMAGE" then
 if spellid then
-local id=tonumber(string.sub(guid2,6,10),16)
+local id=psGetUnitID(guid2)
 if id==60793 then
     pselegnamedamageadd1=name2
     local source=psgetpetownername(guid1, name1, flag1)
@@ -283,7 +283,7 @@ if pselegonwavenumber then
   if arg2=="DAMAGE_SHIELD" or arg2=="SPELL_PERIODIC_DAMAGE" or arg2=="SPELL_DAMAGE" or arg2=="RANGE_DAMAGE" then
   pselegnamedamageadd2=name2
   if arg12 then
-  local id=tonumber(string.sub(guid2,6,10),16)
+  local id=psGetUnitID(guid2)
   if id==60913 then
       --получение инфо о хозяине если там пет, с учетом по маске
       local source=psgetpetownername(guid1, name1, flag1)
@@ -296,7 +296,7 @@ if pselegonwavenumber then
   if arg2=="SWING_DAMAGE" then
   if spellid then
   pselegnamedamageadd2=name2
-  local id=tonumber(string.sub(guid2,6,10),16)
+  local id=psGetUnitID(guid2)
   if id==60913 then
       local source=psgetpetownername(guid1, name1, flag1)
       pselegadddamage(2,source,1000+pselegonwavenumber,spellid,spellname,0)

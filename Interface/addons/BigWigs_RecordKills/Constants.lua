@@ -9,7 +9,7 @@ local C = NS.Constants
 
 C["MAX_LEVEL"] = GetMaxPlayerLevel()
 C["MINIMUM_TIER"] = 14
-C["CURRENT_TIER"] = 16
+C["CURRENT_TIER"] = 17
 C["RAID_LOOKUP"] = {	
 	[14] = {
 		raids = {
@@ -231,6 +231,92 @@ C["RAID_LOOKUP"] = {
 			},
 		},
 	},
+	[17] = {
+		raids = {
+			[1] = {
+				["name"] = "Highmaul",
+				["zoneID"] = 994,
+				["level"] = 100,
+				["encounters"] = {
+					[1] = {
+						eName = "Kargath Bladefist",
+						eID = 1128,
+					},
+					[2] = {
+						eName = "The Butcher",
+						eID = 971,
+					},
+					[3] = {
+						eName = "Tectus",
+						eID = 1195,
+					},
+					[4] = {
+						eName = "Blackenspore",
+						eID = 1196,
+					},
+					[5] = {
+						eName = "Twin Ogron",
+						eID = 1148,
+					},
+					[6] = {
+						eName = "Ko'ragh",
+						eID = 1153,
+					},
+					[7] = {
+						eName = "Imperator Mar'gok",
+						eID = 1197,
+					},
+				},
+			},
+			[2] = {
+				["name"] = "Blackrock Foundry",
+				["zoneID"] = 988,
+				["level"] = 100,
+				["encounters"] = { 
+					[1] = {
+						eName = "Beastlord Darmac",
+						eID = 1122,
+					},
+					[2] = {
+						eName = "Flamebender Ka'graz",
+						eID = 1123,
+					},
+					[3] = {
+						eName = "Gruul the Subjugated",
+						eID = 1161,
+					},
+					[4] = {
+						eName = "Blast Furnace",
+						eID = 1154,
+					},
+					[5] = {
+						eName = "Hans'gar and Franzok",
+						eID = 868,
+					},
+					[6] = {
+						eName = "Iron Maidens",
+						eID = 1203,
+					},
+					[7] = {
+						eName = "Kromog",
+						eID = 1162,
+					},
+					[7] = {
+						eName = "Operator Thogar",
+						eID = 1147,
+					},
+					[7] = {
+						eName = "Oregorger",
+						eID = 1202,
+					},
+					[7] = {
+						eName = "Warlord Blackhand",
+						eID = 959,
+					},
+				},
+			},
+		},
+	},
 }
 
 C["DIFFICULTY"] = {
@@ -256,6 +342,14 @@ C["DIFFICULTY"] = {
 	},
 	[14] = {
 		["index"] = 14,
-		["name"] = "Flex",
+		["name"] = "Normal",
+	},
+	[15] = {
+		["index"] = 15,
+		["name"] = "Heroic",
+	},
+	[16] = {
+		["index"] = 16,
+		["name"] = "Mythic",
 	},
 }

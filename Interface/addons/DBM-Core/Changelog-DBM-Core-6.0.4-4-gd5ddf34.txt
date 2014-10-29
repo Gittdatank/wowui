@@ -1,0 +1,5 @@
+subversion:
+	- Omega via svn r11834: Fix another highmaul error
+	- Omega via svn r11833: Fix error
+	- TOM_RUS via svn r11832: ruRU update
+	- tandanu via svn r11831: increment alpha version number

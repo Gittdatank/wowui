@@ -147,8 +147,8 @@ L["shockwave_missile_trigger"] = "¡He aquí la hermosa torreta de misiles de on
 L["shredder_engage_trigger"] = "¡Una trituradora automática se acerca!"
 
 
-	--L.custom_off_mine_marker = "Mine marker"
-	--L.custom_off_mine_marker_desc = "Mark the mines for specific stun assignments. (All the marks are used)"
+	L.custom_off_mine_marker = "Marcador de minas"
+	L.custom_off_mine_marker_desc = "Marca las minas para asignar aturdimientos. (Se usan todas las marcas)"
 end
 
 L = BigWigs:NewBossLocale("Paragons of the Klaxxi", "esES") or BigWigs:NewBossLocale("Paragons of the Klaxxi", "esMX")
@@ -186,14 +186,14 @@ L["chain_heal_bar"] = "Foco: Sanación en cadena"
 L["chain_heal_desc"] = "Cura un objetivo amistoso el 40% de su vida máxima, extendiéndose a los objetivos amistosos cercanos."
 L["chain_heal_message"] = "¡Tu foco está casteando Sanación en cadena!"
 L["clump_check_desc"] = "Comprueba cada 3 segundos durante el bombardeo los jugadores agrupados, si un grupo es encontrado por una Estrella de hierro Kor'kron aparecerá."
-L["clump_check_warning"] = "Grupo encontrado, Estrella inc"
+L["clump_check_warning"] = "Grupo encontrado, Estrella pronto"
 L["empowered_message"] = "¡%s está potenciado!"
 L["farseer_trigger"] = "¡Clarividentes, sanad nuestras heridas!"
 L["ironstar_impact_desc"] = "Un temporizador para cuando la Estrella de hierro choque con la pared en el otro lado."
 L["ironstar_rolling"] = "¡Estrella de hierro rodando!"
 L["manifest_rage"] = "Manifiesto de ira"
 L["manifest_rage_desc"] = "Cuando Garrosh alcanza 100 de energia el pre-casteará Manifiesto de Ira durante 2 segundos, entonces lo canalizará. Mientras es canalizado invocará adds grandes. Pon la Estrella de hierro en Garrosh para stunearlo y así interrumpir su casteo."
-L["phase_3_end_trigger"] = "¿Creéis que habéis GANADO?"
+L["phase_3_end_trigger"] = "¿Creéis que habéis ganado?"
 
 
 	L.custom_off_shaman_marker = "Marcador de Clarividentes"

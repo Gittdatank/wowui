@@ -233,7 +233,7 @@ end
 
 
 if arg2=="UNIT_DIED" and UnitName("boss1") then
-  local id=tonumber(string.sub(guid2,6,10),16)
+  local id=psGetUnitID(guid2)
   if id==62408 or id==62405 or id==62402 then
     psmeljaddkilled=1
   end

@@ -1,0 +1,26 @@
+------------------------------------------------------------------------
+r269 | mackatack | 2014-10-17 09:48:39 +0000 (Fri, 17 Oct 2014) | 1 line
+Changed paths:
+   A /tags/0.6.53 (from /trunk:268)
+
+update ace libs and toc
+------------------------------------------------------------------------
+r268 | mackatack | 2014-10-17 09:48:08 +0000 (Fri, 17 Oct 2014) | 1 line
+Changed paths:
+   M /trunk/epgp_lootmaster.toc
+   M /trunk/ml/epgp_lootmaster_ml.toc
+
+update toc
+------------------------------------------------------------------------
+r267 | mackatack | 2014-10-17 09:47:23 +0000 (Fri, 17 Oct 2014) | 1 line
+Changed paths:
+   M /trunk/Libs/AceComm-3.0/ChatThrottleLib.lua
+   M /trunk/Libs/AceConfig-3.0/AceConfigDialog-3.0/AceConfigDialog-3.0.lua
+   M /trunk/Libs/AceDB-3.0/AceDB-3.0.lua
+   M /trunk/Libs/AceGUI-3.0/widgets/AceGUIWidget-ColorPicker.lua
+   M /trunk/Libs/AceGUI-3.0/widgets/AceGUIWidget-DropDown.lua
+   M /trunk/Libs/AceHook-3.0/AceHook-3.0.lua
+   M /trunk/Libs/AceTimer-3.0/AceTimer-3.0.lua
+
+Update Ace libraries
+------------------------------------------------------------------------

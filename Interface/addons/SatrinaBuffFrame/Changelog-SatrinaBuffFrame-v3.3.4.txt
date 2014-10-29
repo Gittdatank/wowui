@@ -1,0 +1,13 @@
+tag v3.3.4
+2ff2ae86c53a72d30aaf650401bbe859013bc06d
+Satrina <satrina.stormrage@gmail.com>
+2014-10-24 01:38:37 -0400
+
+Tagging v3.3.4
+
+
+--------------------
+
+Satrina:
+	- - Create SBFOSlider template with custom GetValue that allows for   old-style stepped slider action
+	- - Upate SBFEnchant to take spellId returns from GetWeaponEnchantInfo

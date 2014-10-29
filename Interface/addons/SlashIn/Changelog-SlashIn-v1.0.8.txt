@@ -1,0 +1,12 @@
+tag v1.0.8
+679ddce18223d1ec42d058e22f6d56a929623178
+funkydude <none>
+2014-10-17 10:33:40 +0100
+
+Tagging as v1.0.8
+
+
+--------------------
+
+funkydude:
+	- bump toc

@@ -48,7 +48,7 @@ local SharedMedia = LibStub('LibSharedMedia-3.0')
 
 -- database upvalue
 local prefs
-addon:RegisterEvent('OnProfileChanged', function() prefs = addon.db.profile end)
+addon.RegisterMessage('Tracker', 'OnProfileChanged', function() prefs = addon.db.profile end)
 
 local CATEGORIES = DRData:GetCategories()
 addon.CATEGORIES = CATEGORIES
@@ -119,38 +119,26 @@ setmetatable(ICONS, { __index = function(t, category)
 	return [[Interface\\Icons\\INV_Misc_QuestionMark]]
 end})
 
-local spellsResolved = false
-do
-	local function ResolveSpells()
-		addon:UnregisterEvent('PLAYER_LOGIN', ResolveSpells)
-		for id, category in pairs(SPELLS) do
-			if type(id) == "number" then
-				local name = GetSpellInfo(id)
-				if name then
-					SPELLS[name] = category
-					spellsResolved = true
-				--[===[@debug@
-				else
-					geterrorhandler()('Unknown spell '..id..' (category '..category..')')
-				--@end-debug@]===]
-				end
-			end
-		end
-		if spellsResolved then
-			wipe(ICONS)
-			addon:UnregisterEvent('SPELLS_CHANGED', ResolveSpells)
-			ResolveSpells = nil
-			addon:Debug('Spells OK')
-			if addon.CheckActivation then
-				addon:CheckActivation('SpellsResolved')
+function addon:ResolveSpells()
+	if spellsResolved then return end
+	for id, category in pairs(SPELLS) do
+		if type(id) == "number" then
+			local name = GetSpellInfo(id)
+			if name then
+				SPELLS[name] = category
+				spellsResolved = true
+			--[===[@debug@
+			else
+				geterrorhandler()('Unknown spell '..id..' (category '..category..')')
+			--@end-debug@]===]
 			end
 		end
 	end
-	addon:RegisterEvent('SPELLS_CHANGED', ResolveSpells)
-	if not IsLoggedIn() then
-		addon:RegisterEvent('PLAYER_LOGIN', ResolveSpells)
-	else
-		ResolveSpells()
+	if spellsResolved then
+		wipe(ICONS)
+		self:Debug('Spells changed')
+		self:CheckActivation('SpellsResolved')
+		return true
 	end
 end
 
@@ -169,7 +157,7 @@ do
 end
 
 local runningDR = {}
-local timerFrame = CreateFrame("Frame")
+local StartTimer, StopTimer
 
 local function SpawnDR(guid, category, isFriend, increase, duration)
 	local targetDR = runningDR[guid]
@@ -190,9 +178,9 @@ local function SpawnDR(guid, category, isFriend, increase, duration)
 	dr.expireTime = now + duration
 	if dr.count > 0 then
 		assert(type(duration) == "number")
-		addon:TriggerMessage('UpdateDR', guid, category, isFriend, dr.texture, dr.count, duration, dr.expireTime)
+		addon:SendMessage('UpdateDR', guid, category, isFriend, dr.texture, dr.count, duration, dr.expireTime)
 	end
-	timerFrame:Show()
+	StartTimer()
 end
 
 local function RemoveDR(guid, cat)
@@ -200,13 +188,13 @@ local function RemoveDR(guid, cat)
 	local dr = targetDR and targetDR[cat]
 	if dr then
 		if dr.count > 0 then
-			addon:TriggerMessage('RemoveDR', guid, cat)
+			addon:SendMessage('RemoveDR', guid, cat)
 		end
 		targetDR[cat] = del(dr)
 		if not next(targetDR) then
 			runningDR[guid] = del(targetDR)
 			if not next(runningDR) then
-				timerFrame:Hide()
+				StopTimer()
 				if addon.testMode then
 					addon:SetTestMode(false)
 				end
@@ -263,9 +251,7 @@ local function SpawnTestDR(unit)
 	end
 end
 
-addon:RegisterEvent('SetTestMode', function(_, event, value)
-	addon:Debug(_, event, value)
-	if not value then return end
+function addon:SpawnTestDR()
 	SpawnTestDR("player")
 	SpawnTestDR("pet")
 	if not UnitIsUnit("pet", "target") and not UnitIsUnit("player", "target") then
@@ -274,7 +260,7 @@ addon:RegisterEvent('SetTestMode', function(_, event, value)
 	if not UnitIsUnit("pet", "focus") and not UnitIsUnit("player", "focus") and not UnitIsUnit("target", "focus") then
 		SpawnTestDR("focus")
 	end
-end)
+end
 
 local function WipeAll(self)
 	for guid, drs in pairs(runningDR) do
@@ -284,35 +270,44 @@ local function WipeAll(self)
 	end
 end
 
-local timer = 0
-timerFrame:Hide()
-timerFrame:SetScript('OnShow', function() timer = 0 end)
-timerFrame:SetScript('OnUpdate', function(self, elapsed)
-	if timer > 0 then
-		timer = timer - elapsed
-		return
-	end
-	local now = GetTime()
-	local watched = prefs.categories
-	local playSound = false
-	timer = 0.1
-	for guid, drs in pairs(runningDR) do
-		for cat, dr in pairs(drs) do
-			if now >= dr.expireTime then
-				if dr.count > 0 and not dr.isFriend and watched[cat] then
-					playSound = true
+do
+	local running, Tick
+
+	function Tick()
+		local now = GetTime()
+		local watched = prefs.categories
+		local playSound = false
+		for guid, drs in pairs(runningDR) do
+			for cat, dr in pairs(drs) do
+				if now >= dr.expireTime then
+					if dr.count > 0 and not dr.isFriend and watched[cat] then
+						playSound = true
+					end
+					RemoveDR(guid, cat)
 				end
-				RemoveDR(guid, cat)
 			end
 		end
+		if playSound and prefs.soundAtReset then
+			local key = prefs.resetSound
+			local media = SharedMedia:Fetch('sound', key)
+			addon:Debug('PlaySound', key, media)
+			PlaySoundFile(media, "SFX")
+		end
+		if running then
+			C_Timer.After(0.1, Tick)
+		end
 	end
-	if playSound and prefs.soundAtReset then
-		local key = prefs.resetSound
-		local media = SharedMedia:Fetch('sound', key)
-		addon:Debug('PlaySound', key, media)
-		PlaySoundFile(media, "SFX")
+
+	function StartTimer()
+		if running then return end
+		running = true
+		Tick()
 	end
-end)
+
+	function StopTimer()
+		running = false
+	end
+end
 
 local function IterFunc(targetDR, cat)
 	local dr
@@ -351,14 +346,14 @@ function addon:CheckActivation(event)
 			addon:Debug('CheckActivation, pveMode=', prefs.pveMode, ', activating')
 			addon:RegisterEvent('COMBAT_LOG_EVENT_UNFILTERED', ParseCLEU)
 			addon.active = true
-			addon:TriggerMessage('EnableDR')
+			addon:SendMessage('EnableDR')
 		end
 	elseif addon.active then
 		addon:Debug('CheckActivation, pveMode=', prefs.pveMode, ', disactivating')
-		addon:UnregisterEvent('COMBAT_LOG_EVENT_UNFILTERED', ParseCLEU)
+		addon:UnregisterEvent('COMBAT_LOG_EVENT_UNFILTERED')
 		WipeAll()
 		addon.active = false
-		addon:TriggerMessage('DisableDR')
+		addon:SendMessage('DisableDR')
 	end
 end
 
@@ -386,6 +381,6 @@ addon:RegisterEvent('PLAYER_UPDATE_RESTING', 'CheckActivation')
 addon:RegisterEvent('UNIT_FACTION', function(self, event, unit)
 	if unit == "player" then return addon:CheckActivation(event) end
 end)
-addon:RegisterEvent('OnConfigChanged', function(self, event, name)
+addon.RegisterMessage('Tracker', 'OnConfigChanged', function(self, event, name)
 	if name == "pveMode" then return addon:CheckActivation(event) end
 end)

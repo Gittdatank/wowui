@@ -115,10 +115,10 @@ sbf.FrameLevels = function(self, frame, slot)
   if frame and slot then
     local var = frame._var
     local f = frame:GetFrameLevel()
-    
+
     if slot.icon and (slot.icon:GetFrameLevel() ~= f+1) then
       slot.icon:SetFrameLevel(f+1)
-      if self.bfModule and slot.icon.__bf_normaltexture then
+      if self.masqueModule and slot.icon.__bf_normaltexture then
         slot.icon.__bf_normaltexture:SetDrawLayer("OVERLAY")
       end
     end
@@ -166,7 +166,7 @@ sbf.UpdateDurations = function(self, elapsed)
             if buff.timeLeft  and buff.duration then
               buff.timeLeft = min(buff.timeLeft, buff.duration)
             end
-            
+
             if (frame.warn >= 1.00) then
               self:ExpiryWarning(buff, slot, var, i)
             end
@@ -174,7 +174,7 @@ sbf.UpdateDurations = function(self, elapsed)
             -- Update bar if present
             self:DoBar(var, slot.bar)
           end
-          
+
           if (frame.timer >= frame.timerUpdate) then
             if slot.timer then
               if buff.untilCancelled then
@@ -195,8 +195,8 @@ sbf.UpdateDurations = function(self, elapsed)
           end
           if slot.bar then
             slot.bar.bar:SetWidth(0)
-          end ]]-- 
-        end 
+          end ]]--
+        end
       end
     end
     if (frame.warn >= 1.00) then
@@ -247,9 +247,9 @@ sbf.DoBar = function(self, var, bar)
         end
       else
         if (var.bar.width > var.bar.height) then
-          w = var.bar.width * buff.timeLeft / buff.duration      
+          w = var.bar.width * buff.timeLeft / buff.duration
         else
-          w = var.bar.height * buff.timeLeft / buff.duration      
+          w = var.bar.height * buff.timeLeft / buff.duration
         end
       end
       if w then
@@ -498,10 +498,10 @@ sbf.SetBuffTime = function(self, timer, timeLeft, timerFormat, milliseconds)
     elseif (floor(timeLeft) <= 60) then
       timer.text:SetFormattedText("%d", floor(timeLeft))
     else
-      timer.text:SetFormattedText("")      
+      timer.text:SetFormattedText("")
     end
   elseif (timerFormat == 5) then
-    timer.text:SetFormattedText("")      
+    timer.text:SetFormattedText("")
 	elseif (timerFormat == 6) then
 		if (timeLeft >= 86400) then
 			timer.text:SetFormattedText(dayAbbr, ceil(timeLeft/ 86400))
@@ -525,7 +525,7 @@ sbf.SetBuffTime = function(self, timer, timeLeft, timerFormat, milliseconds)
 			timer.text:SetFormattedText("%2.1f", timeLeft)
     else
 			timer.text:SetFormattedText(floor(timeLeft))
-		end 
+		end
 	end
 end
 
@@ -593,8 +593,8 @@ end
 
 
 -- Roman numeral conversion
-local roman = { 
-  {1000, "M"}, {900, "CM"}, {500, "D"}, {400, "CD"}, {100, "C"}, {90, "XC"}, 
+local roman = {
+  {1000, "M"}, {900, "CM"}, {500, "D"}, {400, "CD"}, {100, "C"}, {90, "XC"},
   {50, "L"}, {40, "L"}, {10, "X"}, {9, "IX"}, {5, "V"}, {4, "IV"}, {1, "I"}, }
 
 local toRoman = function(n)
@@ -661,8 +661,8 @@ local countFmt = function(nFmt, buff, var)
 
         if sfind(replace, "[aA][Ll][Ww][Aa][yY][sS]") then
           local c = buff.count
-          if not c or (c == 0) then 
-            c = 1 
+          if not c or (c == 0) then
+            c = 1
           end
           replace = sgsub(replace, "[aA][Ll][Ww][Aa][yY][sS]", c)
         end
@@ -686,7 +686,7 @@ end
 local strTmp = CreateFrame("Button")
 local shortName = function(name, supershort)
 	strTmp:SetFormattedText("")
-	for word in sgmatch(name, "[^%s]+") do 
+	for word in sgmatch(name, "[^%s]+") do
     if not supershort or (supershort and (sbyte(word, 1) > 64) and (sbyte(word, 1) < 91)) then
       if tonumber(word) then
         strTmp:SetFormattedText("%s%s", strTmp:GetText() or "", word)
@@ -746,7 +746,7 @@ local nameFmt = function(nFmt, buff, var)
           alpha = string.match(replace, "[oO][Ff]")
           replace = sgsub(replace, "[oO][Ff]", ofChop(buff.name))
         end
-        
+
         nFmt = sgsub(nFmt, name, replace)
       end
     end
@@ -770,7 +770,7 @@ sbf.FormatName = function(self, buff, var)
     nFmt = rankFmt(nFmt, buff, var)
     -- count format string
     nFmt = countFmt(nFmt, buff, var)
-    
+
     return nFmt
   else
     return buff.name

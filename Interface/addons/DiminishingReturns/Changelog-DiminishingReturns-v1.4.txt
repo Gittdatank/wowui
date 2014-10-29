@@ -1,0 +1,34 @@
+tag v1.4
+730b732c3dd8912ad363285560747796dab8b150
+Adirelle <adirelle@gmail.com>
+2014-10-23 23:12:12 +0200
+
+First 6.0 version.
+
+
+--------------------
+
+Adirelle:
+	- Use C_Timer instead of an OnUpdate to update the icons.
+	- Fixed text fitting.
+	- Use the right border texture.
+	- Fixed icon creation.
+	- Added a Debug method to icon and frames.
+	- Fixed test DR.
+	- Fixed another error.
+	- Fixed frame inheritance.
+	- Properly postpone oUF support until the addon is initialized.
+	- Tweaked icon display the config panel.
+	- Wait until DimRet has been initialized before loading frame support.
+	- TOC bump.
+	- OOP for the win!
+	- Refactored the loading process.
+	- Closure handlers do not receive "self" anymore.
+	- UnregisterEvent doesn't take a second argument anymore.
+	- Use *Message where appropriate.
+	- Add a lightweight, homebrew event dispatcher and internal messaging using Callbackhandler-1.0.
+	- Simplified how the addon is created.
+	- Removed references to LibAdiEvent-1.0.
+	- Fixed addon URLs in README.
+	- Use LibNameplateRegistry-1.0 instead of LibNameplate-1.0.
+	However, LibNameplateRegistry-1.0 is not embedded.

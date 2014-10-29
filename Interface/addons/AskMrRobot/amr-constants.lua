@@ -28,6 +28,7 @@ function AskMrRobot.parseItemLink(itemLink)
         for i = 13, 12 + numBonuses do
             table.insert(item.bonusIds, tonumber(parts[i]))
         end
+		table.sort(item.bonusIds)
     end
     
     return item
@@ -121,6 +122,14 @@ function AskMrRobot.IsSupportedInstance()
 		return false
 	end
 end
+
+AskMrRobot.regionNames = {
+	[1] = "US",
+	[2] = "KR",
+	[3] = "EU",
+	[4] = "TW",
+	[5] = "CN"
+}
 
 AskMrRobot.classIds = {
     ["NONE"] = 0,

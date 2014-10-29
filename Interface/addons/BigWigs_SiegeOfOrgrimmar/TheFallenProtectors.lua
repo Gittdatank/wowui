@@ -76,8 +76,6 @@ function mod:GetOptions()
 end
 
 function mod:OnBossEnable()
-	self:RegisterEvent("INSTANCE_ENCOUNTER_ENGAGE_UNIT", "CheckBossStatus")
-
 	self:RegisterUnitEvent("UNIT_SPELLCAST_SUCCEEDED", "BossSucceeded", "boss1", "boss2", "boss3", "boss4", "boss5")
 	self:Log("SPELL_CAST_START", "Heal", 143497)
 	-- Sun Tenderheart
@@ -491,7 +489,7 @@ end
 
 
 function mod:Heal(args)
-	self:Bar(args.spellId, self:LFR() and 20 or 15, CL.cast:format(CL.other:format(self:SpellName(2060), args.sourceName))) -- "Heal"
+	self:Bar(args.spellId, 15, CL.cast:format(CL.other:format(self:SpellName(2060), args.sourceName))) -- "Heal"
 	self:Message(args.spellId, "Positive", "Warning", CL.other:format(self:SpellName(37455), args.sourceName)) -- "Healing"
 end
 

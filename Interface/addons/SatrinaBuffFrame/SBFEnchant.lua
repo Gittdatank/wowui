@@ -1,6 +1,6 @@
--- 
+--
 -- Enchant functions
--- 
+--
 local _G = _G
 local sbf = _G.SBF
 local GetWeaponEnchantInfo = _G.GetWeaponEnchantInfo
@@ -110,7 +110,7 @@ end
 
 
 sbf.GetEnchantName = function(self, invID)
-  SBFTooltip:SetOwner(UIParent,"ANCHOR_NONE") 
+  SBFTooltip:SetOwner(UIParent,"ANCHOR_NONE")
 	SBFTooltip:ClearLines()
   SBFTooltip:SetInventoryItem("player", invID)
 	local name, lines
@@ -147,7 +147,7 @@ sbf.EnchantDuration = function(self, buff)
 	if self.showingOptions then
     return
   end
-  if self.db.global.spells[buff.name] then 
+  if self.db.global.spells[buff.name] then
     if self.db.global.spells[buff.name][1] and (self.db.global.spells[buff.name][1] > buff.timeLeft) then
       buff.duration = self.db.global.spells[buff.name][1]
     else
@@ -167,10 +167,12 @@ sbf.UpdateEnchants = function(self)
     for k,v in pairs(sbf.enchantID) do
       self.enchants[v].last = self.enchants[v].timeLeft
     end
-		self.enchants[16].hasBuff, self.enchants[16].timeLeft, self.enchants[16].count, 
-		self.enchants[17].hasBuff, self.enchants[17].timeLeft, self.enchants[17].count,
-		self.enchants[18].hasBuff, self.enchants[18].timeLeft, self.enchants[18].count = GetWeaponEnchantInfo()
-		local update = false
+		self.enchants[16].hasBuff, self.enchants[16].timeLeft, self.enchants[16].count, self.enchants[16].spellId,
+		self.enchants[17].hasBuff, self.enchants[17].timeLeft, self.enchants[17].count, self.enchants[17].spellId,
+		self.enchants[18].hasBuff, self.enchants[18].timeLeft, self.enchants[18].count, self.enchants[18].spellId
+      = GetWeaponEnchantInfo()
+
+    local update = false
 		for k,v in pairs(self.enchants) do
 			if v.hasBuff then
 				v.timeLeft = v.timeLeft/1000
