@@ -1,7 +1,7 @@
 
 AmrDb = {
 	["Talents"] = {
-		"2112310", -- [1]
+		"2113310", -- [1]
 		"2101330", -- [2]
 	},
 	["Glyphs"] = {
@@ -46,17 +46,33 @@ AmrDb = {
 			"|cffa335ee|Hitem:105492:0:5024:0:0:0:0:1697950464:90:505:0:0|h[Galakrond Control Band]|h|r", -- [12]
 			"|cffa335ee|Hitem:104636:0:0:0:0:0:0:657324928:90:505:0:0|h[Skeer's Bloodsoaked Talisman]|h|r", -- [13]
 			"|cffa335ee|Hitem:105568:0:0:0:0:0:0:149844736:90:505:0:0|h[Vial of Living Corruption]|h|r", -- [14]
-			"|cffff8000|Hitem:102249:4424:4610:0:0:0:0:826296448:90:493:0:0|h[Gong-Lu, Strength of Xuen]|h|r", -- [15]
+			"|cffff8000|Hitem:102250:4422:4645:0:0:0:0:1360499456:90:505:0:0|h[Qian-Ying, Fortitude of Niuzao]|h|r", -- [15]
 			"|cffa335ee|Hitem:105417:4446:4645:0:0:0:0:1520998272:90:505:0:0|h[Encapsulated Essence of Immerseus]|h|r", -- [16]
 			"|cffa335ee|Hitem:105481:4993:4645:0:0:0:0:1585973632:90:505:0:0|h[Shield of Mockery]|h|r", -- [17]
 		}, -- [1]
 	},
 	["Guild"] = "Lusting on Trash",
+	["RealmName"] = "Arthas",
 	["Specs"] = {
 		34, -- [1]
 		33, -- [2]
 	},
 	["Options"] = {
+	},
+	["Region"] = "US",
+	["Currencies"] = {
+		[81] = 48,
+		[614] = 7,
+		[384] = 12,
+		[416] = 45,
+		[402] = 27,
+		[391] = 46,
+		[361] = 6,
+		[-1] = 8847078664,
+		[392] = 1309,
+		[393] = 4,
+		[394] = 13,
+		[241] = 40,
 	},
 	["BankItems"] = {
 		"|cff0070dd|Hitem:88589:0:0:0:0:0:0:1030972672:90:0:0:0|h[Cremating Torch]|h|r", -- [1]
@@ -116,29 +132,14 @@ AmrDb = {
 		"|cffa335ee|Hitem:31103:0:0:0:0:0:0:2057955200:90:0:0:0|h[Pauldrons of the Forgotten Protector]|h|r", -- [55]
 		"|cff0070dd|Hitem:88566:0:0:0:0:0:0:1294903296:90:0:0:0|h[Krastinov's Bag of Horrors]|h|r", -- [56]
 	},
-	["Currencies"] = {
-		[81] = 48,
-		[614] = 7,
-		[384] = 12,
-		[416] = 45,
-		[402] = 27,
-		[361] = 6,
-		[391] = 46,
-		[241] = 40,
-		[392] = 1309,
-		[393] = 4,
-		[394] = 13,
-		[-1] = 8841603208,
-	},
-	["RealmName"] = "Arthas",
 	["LogData"] = {
 		["_wipes"] = {
 		},
 		["_autoLog"] = {
 			[1136] = "disabled",
 		},
-		["_lastZone"] = "Pandaria",
 		["_lastDiff"] = 0,
+		["_lastZone"] = "Pandaria",
 	},
 	["BagItems"] = {
 		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:90:0:0:0|h[Hearthstone]|h|r", -- [1]
@@ -183,7 +184,7 @@ AmrDb = {
 		"|cffa335ee|Hitem:98240:0:0:0:0:0:-365:426704979:90:465:0:0|h[Doubtcrusher Sabatons of the Faultline]|h|r", -- [40]
 		"|cffa335ee|Hitem:101859:0:0:0:0:0:-366:1175978052:90:491:0:0|h[Elder Tortoiseshell Sabatons of the Mountainbed]|h|r", -- [41]
 		"|cffa335ee|Hitem:90148:0:0:0:0:0:0:0:90:0:0:0|h[Greatboots of the Golden King]|h|r", -- [42]
-		"|cffff8000|Hitem:102250:4422:4645:0:0:0:0:1360499456:90:505:0:0|h[Qian-Ying, Fortitude of Niuzao]|h|r", -- [43]
+		"|cffff8000|Hitem:102249:4424:4610:0:0:0:0:826296448:90:493:0:0|h[Gong-Lu, Strength of Xuen]|h|r", -- [43]
 		"|cffa335ee|Hitem:101852:0:0:0:0:0:-350:235077683:90:491:0:0|h[Elder Tortoiseshell Drape of the Bladewall]|h|r", -- [44]
 		"|cff1eff00|Hitem:63353:0:0:0:0:0:0:0:90:0:0:0|h[Shroud of Cooperation]|h|r", -- [45]
 		"|cffa335ee|Hitem:105622:0:0:0:0:0:0:1715718016:90:491:0:0|h[Blackfuse's Blasting Cord]|h|r", -- [46]
@@ -205,26 +206,24 @@ AmrDb = {
 		"|cffffffff|Hitem:20815:0:0:0:0:0:0:0:90:0:0:0|h[Jeweler's Kit]|h|r", -- [62]
 		"|cffffffff|Hitem:40772:0:0:0:0:0:0:2086946028:90:0:0:0|h[Gnomish Army Knife]|h|r", -- [63]
 		"|cffffffff|Hitem:104265:0:0:0:0:0:0:576632320:90:0:0:0|h[Great Turtle Meat]|h|r", -- [64]
-		"|cffa335ee|Hitem:105867:0:0:0:0:0:0:222852480:90:491:0:0|h[Essence of the Cursed Conqueror]|h|r", -- [65]
-		"|cffa335ee|Hitem:105867:0:0:0:0:0:0:222852480:90:491:0:0|h[Essence of the Cursed Conqueror]|h|r", -- [66]
-		"|cffa335ee|Hitem:105866:0:0:0:0:0:0:325345792:90:491:0:0|h[Essence of the Cursed Protector]|h|r", -- [67]
-		"|cffa335ee|Hitem:105866:0:0:0:0:0:0:1219128192:90:491:0:0|h[Essence of the Cursed Protector]|h|r", -- [68]
-		"|cffa335ee|Hitem:105866:0:0:0:0:0:0:1310977536:90:491:0:0|h[Essence of the Cursed Protector]|h|r", -- [69]
-		"|cffa335ee|Hitem:105866:0:0:0:0:0:0:788794880:90:491:0:0|h[Essence of the Cursed Protector]|h|r", -- [70]
-		"|cffa335ee|Hitem:99725:0:0:0:0:0:0:886615680:90:491:0:0|h[Helm of the Cursed Protector]|h|r", -- [71]
-		"|cffa335ee|Hitem:99719:0:0:0:0:0:0:1824404480:90:491:0:0|h[Shoulders of the Cursed Protector]|h|r", -- [72]
-		"|cffa335ee|Hitem:99719:0:0:0:0:0:0:1250240128:90:491:0:0|h[Shoulders of the Cursed Protector]|h|r", -- [73]
-		"|cffa335ee|Hitem:99716:0:0:0:0:0:0:1528643840:90:491:0:0|h[Chest of the Cursed Protector]|h|r", -- [74]
-		"|cffa335ee|Hitem:99713:0:0:0:0:0:0:1832709760:90:491:0:0|h[Leggings of the Cursed Protector]|h|r", -- [75]
-		"|cffa335ee|Hitem:104253:0:0:0:0:0:0:222852480:90:0:0:0|h[Kor'kron Juggernaut]|h|r", -- [76]
-		"|cffa335ee|Hitem:37254:0:0:0:0:0:0:-2080011776:90:0:0:0|h[Super Simian Sphere]|h|r", -- [77]
-		"|cff0070dd|Hitem:104304:0:0:0:0:0:0:1824453120:90:0:0:0|h[Blizzard Stone]|h|r", -- [78]
-		"|cff0070dd|Hitem:93030:0:0:0:0:0:0:504251392:90:0:0:0|h[Dusty Clutch of Eggs]|h|r", -- [79]
-		"|cff0070dd|Hitem:93029:0:0:0:0:0:0:1340462336:90:0:0:0|h[Gluth's Bone]|h|r", -- [80]
-		"|cff0070dd|Hitem:86565:0:0:0:0:0:0:151080064:90:0:0:0|h[Battle Horn]|h|r", -- [81]
-		"|cffffffff|Hitem:87806:0:0:0:0:0:0:982733296:90:0:0:0|h[Ancient Mogu Key]|h|r", -- [82]
+		"|cffa335ee|Hitem:105866:0:0:0:0:0:0:325345792:90:491:0:0|h[Essence of the Cursed Protector]|h|r", -- [65]
+		"|cffa335ee|Hitem:105866:0:0:0:0:0:0:1219128192:90:491:0:0|h[Essence of the Cursed Protector]|h|r", -- [66]
+		"|cffa335ee|Hitem:105866:0:0:0:0:0:0:1310977536:90:491:0:0|h[Essence of the Cursed Protector]|h|r", -- [67]
+		"|cffa335ee|Hitem:105866:0:0:0:0:0:0:788794880:90:491:0:0|h[Essence of the Cursed Protector]|h|r", -- [68]
+		"|cffa335ee|Hitem:104253:0:0:0:0:0:0:222852480:90:0:0:0|h[Kor'kron Juggernaut]|h|r", -- [69]
+		"|cffffffff|Hitem:79249:0:0:0:0:0:0:0:90:0:0:0|h[Tome of the Clear Mind]|h|r", -- [70]
+		"|cffa335ee|Hitem:37254:0:0:0:0:0:0:-2080011776:90:0:0:0|h[Super Simian Sphere]|h|r", -- [71]
+		"|cff0070dd|Hitem:104304:0:0:0:0:0:0:1824453120:90:0:0:0|h[Blizzard Stone]|h|r", -- [72]
+		"|cff0070dd|Hitem:93030:0:0:0:0:0:0:504251392:90:0:0:0|h[Dusty Clutch of Eggs]|h|r", -- [73]
+		"|cff0070dd|Hitem:93029:0:0:0:0:0:0:1340462336:90:0:0:0|h[Gluth's Bone]|h|r", -- [74]
+		"|cff0070dd|Hitem:86565:0:0:0:0:0:0:151080064:90:0:0:0|h[Battle Horn]|h|r", -- [75]
+		"|cffffffff|Hitem:87806:0:0:0:0:0:0:982733296:90:0:0:0|h[Ancient Mogu Key]|h|r", -- [76]
+		"|cffffffff|Hitem:5512:0:0:0:0:0:0:0:90:0:6:0|h[Healthstone]|h|r", -- [77]
+		"|cffa335ee|Hitem:99716:0:0:0:0:0:0:0:90:0:0:0|h[Chest of the Cursed Protector]|h|r", -- [78]
+		"|cffffffff|Hitem:102144:0:0:0:0:0:0:0:90:0:6:0|h[Kor'kron Cage Key]|h|r", -- [79]
+		"|cffffffff|Hitem:81413:0:0:0:0:0:0:0:90:0:0:0|h[Skewered Peanut Chicken]|h|r", -- [80]
 	},
-	["LastCharacterImportDate"] = "",
+	["Class"] = "WARRIOR",
 	["LastCharacterImport"] = "",
 	["Reps"] = {
 		[1269] = 7,
@@ -248,7 +247,7 @@ AmrDb = {
 		["First Aid"] = 450,
 		["Engineering"] = 600,
 	},
-	["Class"] = "WARRIOR",
+	["LastCharacterImportDate"] = "",
 	["BankItemsAndCounts"] = {
 		[105457] = 1,
 		[34010] = 1,
@@ -288,38 +287,38 @@ AmrDb = {
 		[88381] = 1,
 		[89921] = 1,
 		[87405] = 1,
-		[96736] = 1,
-		[96818] = 1,
-		[31103] = 1,
+		[88566] = 1,
+		[24270] = 1,
+		[21213] = 8,
 		[38577] = 20,
-		[104536] = 1,
-		[94985] = 1,
+		[3823] = 2,
+		[71617] = 1,
 		[9172] = 2,
 		[17202] = 13,
 		[105511] = 1,
-		[44050] = 1,
+		[86980] = 1,
 		[33924] = 1,
-		[63128] = 7,
+		[89257] = 1,
 		[63378] = 1,
 		[104535] = 1,
 		[22206] = 1,
-		[86572] = 1,
-		[88584] = 1,
+		[35280] = 1,
+		[5507] = 1,
 		[5634] = 3,
 		[71682] = 1,
-		[88589] = 1,
 		[6657] = 18,
+		[88589] = 1,
 		[43348] = 1,
-		[5507] = 1,
-		[35280] = 1,
+		[88584] = 1,
+		[86572] = 1,
 		[6532] = 14,
-		[89257] = 1,
+		[63128] = 7,
 		[6533] = 13,
-		[86980] = 1,
-		[71617] = 1,
-		[3823] = 2,
-		[21213] = 8,
-		[24270] = 1,
-		[88566] = 1,
+		[44050] = 1,
+		[94985] = 1,
+		[104536] = 1,
+		[31103] = 1,
+		[96818] = 1,
+		[96736] = 1,
 	},
 }

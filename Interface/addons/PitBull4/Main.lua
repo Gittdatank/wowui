@@ -251,12 +251,11 @@ local _G = _G
 local PitBull4 = select(2, ...)
 PitBull4 = LibStub("AceAddon-3.0"):NewAddon(PitBull4, "PitBull4", "AceEvent-3.0", "AceTimer-3.0")
 _G.PitBull4 = PitBull4
-local wod_600 = select(4, GetBuildInfo()) >= 60000
 
 local DEBUG = PitBull4.DEBUG
 local expect = PitBull4.expect
 
-PitBull4.version = "v4.0.0-beta51"
+PitBull4.version = "v4.0.0-beta52"
 if PitBull4.version:match("@") then
 	PitBull4.version = "Development"
 end
@@ -750,14 +749,6 @@ end
 function PitBull4:IterateFramesForGUID(guid)
 	if DEBUG then
 		expect(guid, 'typeof', 'string;nil')
-		if guid then
-			if not wod_600 then
-				expect(guid, 'match', '^0x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x$')
-			else
-				local unit_type = strsplit(":", guid)
-				expect(unit_type, 'inset', 'Player;Creature;Pet;Vehicle;GameObject')
-			end
-		end
 	end
 	
 	if not guid then
@@ -791,14 +782,6 @@ function PitBull4:IterateFramesForGUIDs(...)
 		local guid = (select(i, ...))
 		if DEBUG then
 			expect(guid, 'typeof', 'string;nil')
-			if guid then
-				if not wod_600 then
-					expect(guid, 'match', '^0x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x%x$')
-				else
-					local unit_type = strsplit(":", guid)
-					expect(unit_type, 'inset', 'Player;Creature;Pet;Vehicle;GameObject')
-				end
-			end
 		end
 		
 		if guid then

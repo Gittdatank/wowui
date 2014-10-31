@@ -1,5 +1,5 @@
 local MAJOR_VERSION = "LibDogTag-Unit-3.0"
-local MINOR_VERSION = 90000 + tonumber(("$Revision: 245 $"):match("%d+")) or 0
+local MINOR_VERSION = 90000 + tonumber(("$Revision: 266 $"):match("%d+")) or 0
 
 if MINOR_VERSION > _G.DogTag_Unit_MINOR_VERSION then
 	_G.DogTag_Unit_MINOR_VERSION = MINOR_VERSION
@@ -364,8 +364,8 @@ for _, data in pairs(specialPowers) do
 	
 	local _, pclass = UnitClass("player") 
 	
-	local category = class == pclass and L["Power"] or nil
-	local noDoc = class ~= pclass
+	--local category = class == pclass and L["Power"] or nil
+	--local noDoc = class ~= pclass
 	
 	local specialPowerEvents = "UNIT_POWER#player#" .. data.eventPowerIdentifier .. ";UNIT_MAXPOWER#player#" .. data.eventPowerIdentifier .. ";UNIT_DISPLAYPOWER#player"
 	
@@ -375,10 +375,10 @@ for _, data in pairs(specialPowers) do
 		end,
 		ret = "number",
 		events = specialPowerEvents,
-		doc = class == pclass and L["Return your current special power"] or nil,
+		doc = L["Return your current special power"],
 		noDoc = noDoc,
-		example = class == pclass and ('[' .. tag .. '] => "%d"'):format(UnitPowerMax("player",arg2, arg3)*.632) or nil,
-		category = category
+		example = ('[' .. tag .. '] => "%d"'):format(UnitPowerMax("player",arg2, arg3)*.632),
+		category = L["Power"]
 	})
 
 	DogTag:AddTag("Unit", "Max" .. tag, {
@@ -387,10 +387,10 @@ for _, data in pairs(specialPowers) do
 		end,
 		ret = "number",
 		events = specialPowerEvents,
-		doc = class == pclass and L["Return your maximum special power"] or nil,
+		doc = L["Return your maximum special power"],
 		noDoc = noDoc,
-		example = class == pclass and ('[Max' .. tag .. '] => "%d"'):format(UnitPowerMax("player",arg2, arg3)) or nil,
-		category = category
+		example = ('[Max' .. tag .. '] => "%d"'):format(UnitPowerMax("player",arg2, arg3)),
+		category = L["Power"]
 	})
 
 	--[[

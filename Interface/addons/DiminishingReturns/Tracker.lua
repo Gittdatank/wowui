@@ -46,10 +46,6 @@ local wipe = _G.wipe
 local DRData = LibStub('DRData-1.0')
 local SharedMedia = LibStub('LibSharedMedia-3.0')
 
--- database upvalue
-local prefs
-addon.RegisterMessage('Tracker', 'OnProfileChanged', function() prefs = addon.db.profile end)
-
 local CATEGORIES = DRData:GetCategories()
 addon.CATEGORIES = CATEGORIES
 
@@ -90,8 +86,8 @@ addon.SPELLS_BY_CATEGORY = SPELLS_BY_CATEGORY
 -- Search icons on demand
 setmetatable(ICONS, { __index = function(t, category)
 	local icon
-	if prefs.icons[category] then
-		icon = prefs.icons[category]
+	if addon.db.profile.icons[category] then
+		icon = addon.db.profile.icons[category]
 	elseif SPELLS_BY_CATEGORY[category] then
 		local score = 0
 		for i, id in ipairs(SPELLS_BY_CATEGORY[category]) do
@@ -211,7 +207,7 @@ local function RemoveAllDR(guid)
 	end
 end
 
-local function ParseCLEU(self, _, timestamp, event, _, _, srcName, srcFlags, _, guid, name, flags, _, spellId, spell)
+local function ParseCLEU(_, timestamp, event, _, _, srcName, srcFlags, _, guid, name, flags, _, spellId, spell)
 	-- Always process UNIT_DIED if we have information about the unit
 	if event == 'UNIT_DIED' then
 		if runningDR[guid] then
@@ -222,21 +218,28 @@ local function ParseCLEU(self, _, timestamp, event, _, _, srcName, srcFlags, _, 
 	-- Ignore any spell or event we are not interested with
 	local increase, category = CL_EVENTS[event], SPELLS[spellId] or SPELLS[spell]
 	if not increase or not category then return end
-	-- Ignore friends unless asked for
+	-- Detect friends
 	local isFriend = false
 	if band(flags, CLO_REACTION_FRIENDLY) ~= 0 then
 		isFriend = band(flags, CLO_AFFILIATION_FRIEND) ~= 0
-		if not isFriend then return end -- Ignore outsiders
+		if not addon.testMode and not isFriend then
+			-- Ignore outsiders
+			return
+		end
 	end
-	-- Ignore mobs for non-PvE categories
-	local isPlayer = band(flags, CLO_TYPE_PET_OR_PLAYER) ~= 0 or band(flags, CLO_CONTROL_PLAYER) ~= 0
-	if not isPlayer and (not prefs.pveMode or not DRData:IsPVE(category)) then return end
-	-- Category auto-learning
-	if prefs.learnCategories and band(srcFlags, CLO_AFFILIATION_MINE) ~= 0 then
-		prefs.categories[category] = true
+	if not addon.testMode then
+		-- Ignore mobs for non-PvE categories
+		local isPlayer = band(flags, CLO_TYPE_PET_OR_PLAYER) ~= 0 or band(flags, CLO_CONTROL_PLAYER) ~= 0
+		if not isPlayer and (not addon.db.profile.pveMode or not DRData:IsPVE(category)) then
+			return
+		end
+		-- Category auto-learning
+		if addon.db.profile.learnCategories and band(srcFlags, CLO_AFFILIATION_MINE) ~= 0 then
+			addon.db.profile.categories[category] = true
+		end
 	end
 	-- Create or extend the DR
-	return SpawnDR(guid, category, isFriend, increase, prefs.resetDelay)
+	return SpawnDR(guid, category, isFriend, increase, addon.db.profile.resetDelay)
 end
 
 local function SpawnTestDR(unit)
@@ -275,7 +278,7 @@ do
 
 	function Tick()
 		local now = GetTime()
-		local watched = prefs.categories
+		local watched = addon.db.profile.categories
 		local playSound = false
 		for guid, drs in pairs(runningDR) do
 			for cat, dr in pairs(drs) do
@@ -287,8 +290,8 @@ do
 				end
 			end
 		end
-		if playSound and prefs.soundAtReset then
-			local key = prefs.resetSound
+		if playSound and addon.db.profile.soundAtReset then
+			local key = addon.db.profile.resetSound
 			local media = SharedMedia:Fetch('sound', key)
 			addon:Debug('PlaySound', key, media)
 			PlaySoundFile(media, "SFX")
@@ -313,7 +316,7 @@ local function IterFunc(targetDR, cat)
 	local dr
 	cat, dr = next(targetDR, cat)
 	if cat then
-		return cat, dr.isFriend, dr.texture, dr.count, prefs.resetDelay, dr.expireTime
+		return cat, dr.isFriend, dr.texture, dr.count, addon.db.profile.resetDelay, dr.expireTime
 	end
 end
 
@@ -332,8 +335,11 @@ local inDuel = false
 function addon:CheckActivation(event)
 	local activate = false
 	if spellsResolved then
-		if prefs.pveMode then
-			activate = not IsResting()
+		if addon.testMode then
+			self:Debug('CheckActivation: test mode')
+			activate = true
+		elseif addon.db.profile.pveMode then
+			activate = not IsResting() or InCombatLockdown() or event == "PLAYER_REGEN_DISABLED"
 			self:Debug('CheckActivation(PvE)', event, activate, "<= IsResting=", IsResting())
 		else
 			local _, instanceType = IsInInstance()
@@ -343,13 +349,13 @@ function addon:CheckActivation(event)
 	end
 	if activate then
 		if not addon.active then
-			addon:Debug('CheckActivation, pveMode=', prefs.pveMode, ', activating')
+			addon:Debug('CheckActivation, pveMode=', addon.db.profile.pveMode, ', activating')
 			addon:RegisterEvent('COMBAT_LOG_EVENT_UNFILTERED', ParseCLEU)
 			addon.active = true
 			addon:SendMessage('EnableDR')
 		end
 	elseif addon.active then
-		addon:Debug('CheckActivation, pveMode=', prefs.pveMode, ', disactivating')
+		addon:Debug('CheckActivation, pveMode=', addon.db.profile.pveMode, ', disactivating')
 		addon:UnregisterEvent('COMBAT_LOG_EVENT_UNFILTERED')
 		WipeAll()
 		addon.active = false
@@ -378,9 +384,14 @@ addon:RegisterEvent('DUEL_FINISHED', EndDuel)
 addon:RegisterEvent('PLAYER_ENTERING_WORLD', 'CheckActivation')
 addon:RegisterEvent('PLAYER_LEAVING_WORLD', 'CheckActivation')
 addon:RegisterEvent('PLAYER_UPDATE_RESTING', 'CheckActivation')
-addon:RegisterEvent('UNIT_FACTION', function(self, event, unit)
+addon:RegisterEvent('PLAYER_REGEN_ENABLED', 'CheckActivation')
+addon:RegisterEvent('PLAYER_REGEN_DISABLED', 'CheckActivation')
+addon:RegisterEvent('UNIT_FACTION', function(event, unit)
 	if unit == "player" then return addon:CheckActivation(event) end
 end)
-addon.RegisterMessage('Tracker', 'OnConfigChanged', function(self, event, name)
+addon.RegisterMessage('Tracker', 'OnConfigChanged', function(event, name)
 	if name == "pveMode" then return addon:CheckActivation(event) end
+end)
+addon.RegisterMessage('Tracker', 'SetTestMode', function(event, name)
+	return addon:CheckActivation(event)
 end)

@@ -1,9 +1,21 @@
 ------------------------------------------------------------------------
-r350 | starinnia | 2014-10-28 02:07:47 +0000 (Tue, 28 Oct 2014) | 1 line
+r353 | starinnia | 2014-10-30 14:17:12 +0000 (Thu, 30 Oct 2014) | 1 line
 Changed paths:
-   A /tags/3.2.4 (from /trunk:349)
+   A /tags/3.2.5 (from /trunk:352)
 
-Tagging as 3.2.4
+Tagging as 3.2.5
+------------------------------------------------------------------------
+r352 | starinnia | 2014-10-29 17:48:08 +0000 (Wed, 29 Oct 2014) | 1 line
+Changed paths:
+   M /trunk/Modules/Fulmination.lua
+
+Don't compress the text count for Fulmination
+------------------------------------------------------------------------
+r351 | starinnia | 2014-10-28 15:05:44 +0000 (Tue, 28 Oct 2014) | 1 line
+Changed paths:
+   M /trunk/Core.lua
+
+Close the Blizzard frames when opening the config window
 ------------------------------------------------------------------------
 r349 | starinnia | 2014-10-28 01:03:54 +0000 (Tue, 28 Oct 2014) | 1 line
 Changed paths:

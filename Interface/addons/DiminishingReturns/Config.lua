@@ -380,7 +380,7 @@ local function CreateOptions()
 				type = 'header',
 			},
 			version = {
-				name = "DiminishingReturns v1.4 2014-10-23T21:11:54Z",
+				name = "DiminishingReturns v1.4.1 2014-10-30T19:35:50Z",
 				type = 'description',
 				fontSize = "medium",
 				order = 10,

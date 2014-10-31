@@ -214,8 +214,8 @@ function mod:CHAT_MSG_MONSTER_YELL(_, msg)
 	elseif msg == L["weapons_inc_trigger"] then
 		phase = 2
 		self:Message("phase", "Positive", nil, L["weapons_inc_message"], false)
-		self:Bar("phase", 95, L["revive_bar"], "Spell_Holy_ReviveChampion")
-		self:DelayedMessage("phase", 90, "Attention", L["revive_warning"])
+		self:Bar("phase", 105, L["revive_bar"], "Spell_Holy_ReviveChampion")
+		self:DelayedMessage("phase", 100, "Attention", L["revive_warning"])
 	elseif msg == L["phase3_trigger"] then
 		phase = 3
 		self:Message("phase", "Positive", nil, L["phase3_message"], false)

@@ -1,5 +1,5 @@
 ## Interface: 60000
-## X-Curse-Packaged-Version: v1.4
+## X-Curse-Packaged-Version: v1.4.1
 ## X-Curse-Project-Name: DiminishingReturns
 ## X-Curse-Project-ID: diminishingreturns
 ## X-Curse-Repository-ID: wow/diminishingreturns/mainline
@@ -9,8 +9,8 @@
 ## Notes-zhCN: 在单位框体附着递减规则图标。
 ## Notes-zhTW: 在單位框體附著遞減規則圖示。
 ## Author: Adirelle
-## Version: v1.4
-## X-Date: 2014-10-23T21:11:54Z
+## Version: v1.4.1
+## X-Date: 2014-10-30T19:35:50Z
 
 ## SavedVariables: DiminishingReturnsDB
 ## OptionalDeps: LibStub, CallbackHandler-1.0, Ace3, LibDualSpec-1.0, DRData-1.0, LibSharedMedia-3.0, LibNameplateRegistry-1.0, ButtonFacade, LibButtonFacade, AdiDebug

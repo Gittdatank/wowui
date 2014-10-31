@@ -1,13 +1,13 @@
 --[[
 Name: LibDogTag-3.0
-Revision: $Rev: 263 $
+Revision: $Rev: 265 $
 Author: Cameron Kenneth Knight (ckknight@gmail.com)
 Website: http://www.wowace.com/
 Description: A library to provide a markup syntax
 ]]
 
 local MAJOR_VERSION = "LibDogTag-Unit-3.0"
-local MINOR_VERSION = 90000 + tonumber(("$Revision: 263 $"):match("%d+")) or 0
+local MINOR_VERSION = 90000 + tonumber(("$Revision: 265 $"):match("%d+")) or 0
 
 if MINOR_VERSION > _G.DogTag_Unit_MINOR_VERSION then
 	_G.DogTag_Unit_MINOR_VERSION = MINOR_VERSION
@@ -586,7 +586,7 @@ DogTag:AddTimerHandler("Unit", function(num, currentTime)
 	local exists = not not UnitExists("mouseover")
 	if not exists then
 		for fs, nsList in pairs(fsToNSList) do
-			if nsListHasUnit[nsList] then
+			if nsListHasUnit[nsList] and not fs.__DT_dontcancelupdatesforMO then
 				local kwargs = fsToKwargs[fs]
 				if kwargs and kwargs["unit"] == "mouseover" then
 					fsNeedUpdate[fs] = nil

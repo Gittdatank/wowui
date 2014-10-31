@@ -1,0 +1,18 @@
+tag v1.4.1
+917834febf69e531c275168155f9c281afc0b5c0
+Adirelle <adirelle@gmail.com>
+2014-10-30 20:36:18 +0100
+
+Combatlog analysis fixed.
+
+
+--------------------
+
+Adirelle:
+	- Do not activate in combat unless pveMode is enabled.
+	- Bypass some restriction in test mode.
+	- Let the test mode activate the tracker.
+	- In PvE mode, activate at start of combat.
+	- Got rid of the database upvalue.
+	- Fixed some event listeners.
+	- Added default config for "friendly".

@@ -4,7 +4,7 @@ CPR is a combo points display addon based on Funkydude's BasicComboPoints
 Fulmination.lua - A module for tracking extra Lighning Shield stacks for the Fulmination talent
 $Date: 2012-09-02 13:41:27 -0500 (Sun, 02 Sep 2012) $
 $Revision: 278 $
-Project Version: 3.2.4
+Project Version: 3.2.5
 contact: codemaster2010 AT gmail DOT com
 
 Copyright (c) 2007-2012 Michael J. Murray aka Lyte of Lothar(US)
@@ -33,6 +33,7 @@ function mod:UNIT_AURA(_, unit)
 	
 	local _, _, _, count = UnitBuff("player", buff)
 	if count and count > 1 then
+        local originalCount = count
 		count = math.floor(count / 3)
 		
 		if self.graphics then
@@ -46,7 +47,7 @@ function mod:UNIT_AURA(_, unit)
 			end
 		end
 		
-		if self.text then self.text:SetNumPoints(count) end
+		if self.text then self.text:SetNumPoints(originalCount) end
 		
 		--should prevent spamming issues when UNIT_AURA fires and
 		--the aura we care about hasn't changed

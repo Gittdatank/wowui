@@ -1,5 +1,5 @@
 local MAJOR_VERSION = "LibDogTag-3.0"
-local MINOR_VERSION = 90000 + tonumber(("$Revision: 244 $"):match("%d+")) or 0
+local MINOR_VERSION = 90000 + tonumber(("$Revision: 266 $"):match("%d+")) or 0
 
 if MINOR_VERSION > _G.DogTag_MINOR_VERSION then
 	_G.DogTag_MINOR_VERSION = MINOR_VERSION
@@ -306,7 +306,7 @@ function DogTag:OpenHelp()
 	
 	local selectedTreeLine
 	local function TreeLine_OnEnter(this)
-		if this:IsEnabled() == 1 then
+		if this:IsEnabled() then
 			this.highlight:SetAlpha(1)
 			this.highlight:Show()
 		end
@@ -361,7 +361,7 @@ function DogTag:OpenHelp()
 	end
 	
 	local function TreeLine_OnClick(this)
-		if this:IsEnabled() ~= 1 then
+		if not this:IsEnabled() then
 			return
 		end
 		

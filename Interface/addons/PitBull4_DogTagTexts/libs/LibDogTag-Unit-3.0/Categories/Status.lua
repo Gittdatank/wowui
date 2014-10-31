@@ -1,5 +1,5 @@
 local MAJOR_VERSION = "LibDogTag-Unit-3.0"
-local MINOR_VERSION = 90000 + tonumber(("$Revision: 243 $"):match("%d+")) or 0
+local MINOR_VERSION = 90000 + tonumber(("$Revision: 270 $"):match("%d+")) or 0
 
 if MINOR_VERSION > _G.DogTag_Unit_MINOR_VERSION then
 	_G.DogTag_Unit_MINOR_VERSION = MINOR_VERSION
@@ -28,6 +28,7 @@ local deadTimes = {}
 local wow_ver = select(4, GetBuildInfo())
 local wow_400 = wow_ver >= 40000
 local wow_500 = wow_ver >= 50000
+local wow_600 = wow_ver >= 60000
 local petHappinessEvent = "UNIT_HAPPINESS"
 if wow_400 then
 	petHappinessEvent = "UNIT_POWER"
@@ -40,6 +41,12 @@ end
 
 -- Parnic: pet happiness removed in 4.1
 local wow_401 = wow_ver >= 40100
+
+-- Parnic: GetNumRaidMembers/GetNumPartyMembers removed in 6.0
+if wow_600 then
+	GetNumRaidMembers = GetNumGroupMembers
+	GetNumPartyMembers = GetNumGroupMembers
+end
 
 local iterateGroupMembers
 local iterateGroupMembers__t = {}

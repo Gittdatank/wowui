@@ -1,5 +1,7 @@
 -- Options.lua : Options config
 
+if select(5, GetAddOnInfo("PitBull4_" .. (debugstack():match("[o%.][d%.][u%.]les\\(.-)\\") or ""))) ~= "MISSING" then return end
+
 local _G = getfenv(0)
 local PitBull4 = _G.PitBull4
 local PitBull4_Aura= PitBull4:GetModule("Aura")
@@ -43,7 +45,7 @@ PitBull4_Aura:SetDefaults({
 	max_debuffs = 6,
 	zoom_aura = false,
 	click_through = false,
-	suppress_occ = true,
+	suppress_occ = false,
 	cooldown = {
 		my_buffs = true,
 		my_debuffs = true,

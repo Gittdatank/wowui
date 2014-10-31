@@ -1,3 +1,5 @@
+if select(5, GetAddOnInfo("PitBull4_" .. (debugstack():match("[o%.][d%.][u%.]les\\(.-)\\") or ""))) ~= "MISSING" then return end
+
 local player_class = select(2,UnitClass('player'))
 if player_class ~= "SHAMAN" and player_class ~= "DRUID" and player_class ~= "DEATHKNIGHT" and player_class ~= "MONK" and player_class ~= "MAGE" then
 	return
@@ -10,7 +12,6 @@ if not PitBull4 then
 end
 
 local DEBUG = PitBull4.DEBUG
-local wod_600 = select(4, GetBuildInfo()) >= 60000
 
 -- CONSTANTS ----------------------------------------------------------------
 
@@ -870,11 +871,9 @@ function PitBull4_Totems:BuildFrames(frame)
 		end
 		local spiral = elements[i].spiral
 		spiral:SetReverse(true)
-		if wod_600 then
-			spiral:SetDrawEdge(false)
-			spiral:SetDrawSwipe(true)
-			spiral:SetHideCountdownNumbers(true)
-		end
+		spiral:SetDrawEdge(false)
+		spiral:SetDrawSwipe(true)
+		spiral:SetHideCountdownNumbers(true)
 		spiral:SetAllPoints(frm)
 		spiral:Show()
 		spiral.noCooldownCount = layout_option_get(frame,'suppress_occ') or nil

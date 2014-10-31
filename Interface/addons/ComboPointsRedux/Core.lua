@@ -1,9 +1,9 @@
 --[[
 Author: Starinnia
 CPR is a combo points display addon based on Funkydude's BasicComboPoints
-$Date: 2014-10-28 01:03:54 +0000 (Tue, 28 Oct 2014) $
-$Revision: 349 $
-Project Version: 3.2.4
+$Date: 2014-10-28 15:05:44 +0000 (Tue, 28 Oct 2014) $
+$Revision: 351 $
+Project Version: 3.2.5
 contact: codemaster2010 AT gmail DOT com
 
 Copyright (c) 2007-2014 Michael J. Murray aka Lyte of Lothar(US)
@@ -198,6 +198,8 @@ function ComboPointsRedux:OnInitialize()
 				desc = L["Open a standlone config window, allowing you to actually configure ComboPointsRedux."],
 				type = 'execute',
 				func = function()
+                    InterfaceOptionsFrameCancel:Click()
+					GameMenuButtonContinue:Click()
 					ComboPointsRedux.OpenConfig()
 				end
 			}
