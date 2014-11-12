@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
--- Tidy Plates: ClassicPlates 2.0 (6.0.3) - Oct/03/2014.
+-- Tidy Plates: ClassicPlates 2.1 (6.0.3) - Nov/12/2014.
 -- Author - delabarra
 -- Special thanks to Asethien.
 -------------------------------------------------------------------------------
@@ -13,11 +13,12 @@ local font = 						path.."Alice.ttf"
 local NonLatinLocales = { ["koKR"] = true, ["zhCN"] = true, ["zhTW"] = true, }
 if NonLatinLocales[GetLocale()] == true then font = STANDARD_TEXT_FONT end
 
-local castbarVertical = -15
-
 local StyleDefault = {}
 
-StyleDefault.hitbox = { width = 128, height = 32, }
+StyleDefault.hitbox = { 
+	width = 128, 
+	height = 64, 
+}
 
 StyleDefault.frame = {
 	width = 128,
@@ -33,23 +34,65 @@ StyleDefault.skullicon = {
 	show = true,
 }
 
+StyleDefault.castborder = {
+	texture =					path.."CastBarBorder",
+	width = 128,
+	height = 64,
+	x = 13,
+	y = 3,
+	show = true,
+}
+
+StyleDefault.castnostop = {
+	texture = 					path.."CastBarBorder",
+	width = 128,
+	height = 64,
+	x = 13, 
+	y = 3,
+	show = true,
+}
+
+StyleDefault.castbar = {
+	texture =					path.."StatusBar",
+	width = 86,
+	height = 7,
+	x = 18,
+	y = -10,
+	orientation = "HORIZONTAL",
+}
+
 StyleDefault.healthbar = {
 	texture = 					path.."StatusBar",
-	width =110,
+	width =105,
 	height = 9,
-	x = 9,
+	x = 6,
 	y = 4,
-	anchor = "CENTER",
 	orientation = "HORIZONTAL",
+}
+
+StyleDefault.highlight = {
+	texture =					path.."Highlight",
 }
 
 StyleDefault.healthborder = {
 	texture = 					path.."NormalPlate",
+	glowtexture =				path.."Highlight",
 	width = 128,
 	height = 64,
 	x = 0,
 	y = 0,
 	anchor = "CENTER",
+}
+
+StyleDefault.eliteicon = {
+	texture = 					path.."ElitePlate",
+	glowtexture =				path.."HighlightElite",
+	width = 128,
+	height = 64,
+	x = 0,
+	y = 0,
+	anchor = "CENTER",
+	show = true,
 }
 
 StyleDefault.target = {
@@ -62,48 +105,9 @@ StyleDefault.target = {
 	show = true,
 }
 
-StyleDefault.highlight = {
-	texture		 =				path.."Highlight",
-}
-
-StyleDefault.threatborder = {
-	texture =					path.."ThreatBar",
-	width = 128,
-	height = 64,
-	x = 0,
-	y = 0,
-	anchor = "CENTER",
-}
-
-StyleDefault.castborder = {
-	texture =					path.."CastBarBorder",
-	width = 128,
-	height = 64,
-	y = 0,
-}
-
-StyleDefault.castnostop = {
-	texture = 					path.."CastBarNoStop",
-	width = 128,
-	height = 64,
-	y = 0,
-}
-
-StyleDefault.castbar = {
-	texture =					path.."StatusBar",
-	width = 80,
-	height = 8,
-	x = 20,
-	y = -10,
-	orientation = "HORIZONTAL",
-	show = true,
-}
-
 StyleDefault.name = {
 	typeface =					font,
 	size = 12,
-	width = 128,
-	height = 64,
 	y = 17,
 	x = 40,
 	align = "LEFT",
@@ -114,18 +118,18 @@ StyleDefault.name = {
 
 StyleDefault.level = {
 	typeface =					font,
-	size = 9,
-	x = 11.5,
-	y = -4,
+	size = 8,
+	x = -39.5,
+	y = -3,
 	align = "CENTER",
-	anchor = "LEFT",
 	shadow = true,
 }
 
 StyleDefault.customtext = {
 	typeface =					font,
-	size = 8.5,
-	x = 9,
+	size = 9,
+	width = 90,
+	x = 6,
 	y = 4,
 	align = "CENTER",
 	anchor = "CENTER",
@@ -137,8 +141,9 @@ StyleDefault.customtext = {
 StyleDefault.spelltext = {
 	typeface =					font,
 	size = 9,
-	x = 4,
-	y = -10,
+	x = 20,
+	y = -9,
+	width = 70,
 	align = "CENTER",
 	vertical = "BOTTOM",
 	shadow = true,
@@ -146,30 +151,29 @@ StyleDefault.spelltext = {
 	show = true,
 }
 
-StyleDefault.eliteicon = {
-	texture = 					path.."ElitePlate",
-	width = 128,
-	height = 64,
-	x = 0,
-	y = 0,
-	anchor = "CENTER",
-	show = true,
-}
-
 StyleDefault.spellicon = {
-	width = 20,
-	height = 20,
-	x = 75,
-	y = -2,
-	anchor = "CENTER",
+	width =8,
+	height = 9,
+	x = 7,
+	y = -11,
+	anchor = "RIGHT",
 }
 
 StyleDefault.raidicon = {
 	width = 14,
 	height = 14,
+	x = 5,
+	y = 30,
+	anchor = "CENTER",
+}
+
+StyleDefault.threatborder = {
+	texture =					path.."ThreatBar",
+	width = 128,
+	height = 64,
 	x = 0,
-	y = 5,
-	anchor = "TOP",
+	y = 0,
+	anchor = "CENTER",
 }
 
 StyleDefault.threatcolor = {
@@ -180,32 +184,65 @@ StyleDefault.threatcolor = {
 
 -- No-Bar Style
 local StyleTextOnly = CopyTable(StyleDefault)
-StyleTextOnly.threatborder.texture = path.."ThreatBar"
-StyleTextOnly.healthborder.texture = path.."NormalPlate"
-StyleTextOnly.healthbar.texture = path.."StatusBar"
+StyleTextOnly.threatborder.texture = EmptyTexture
+StyleTextOnly.healthborder.texture = EmptyTexture
+StyleTextOnly.healthbar.texture = EmptyTexture
 StyleTextOnly.healthbar.backdrop = EmptyTexture
-StyleTextOnly.eliteicon.texture = path.."ElitePlate"
+StyleTextOnly.eliteicon.texture = EmptyTexture
+StyleTextOnly.name.show = true
+StyleTextOnly.name.align = "CENTER"
+StyleTextOnly.name.anchor = "CENTER"
+--StyleTextOnly.name.flags = "OUTLINE"
+--StyleTextOnly.name.vertical = "BOTTOM"
+StyleTextOnly.name.size = 16
+StyleTextOnly.name.width = 400
+StyleTextOnly.name.height = 40
+StyleTextOnly.name.y = -5
+StyleTextOnly.name.x = 0
 StyleTextOnly.customtext.show = true
 StyleTextOnly.customtext.align = "CENTER"
-StyleTextOnly.customtext.size = 8.5
-StyleTextOnly.customtext.y = 4
---StyleTextOnly.level.show = true
---StyleTextOnly.skullicon.show = true
---StyleTextOnly.eliteicon.show = true
---StyleTextOnly.raidicon.x = 
---StyleTextOnly.raidicon.y = 
---StyleTextOnly.highlight.texture = path.."Highlight"
---StyleTextOnly.target.texture = path.."Highlight"
---StyleTextOnly.target.y = 21
---StyleTextOnly.target.height = 46
+StyleTextOnly.customtext.anchor = "CENTER"
+StyleTextOnly.customtext.vertical = "BOTTOM"
+StyleTextOnly.customtext.size = 13
+StyleTextOnly.customtext.width = 500
+--StyleTextOnly.customtext.height = 
+StyleTextOnly.customtext.x = 1
+StyleTextOnly.customtext.y = -20
+--StyleTextOnly.customtext.flags = "OUTLINE"
+StyleTextOnly.level.show = false
+StyleTextOnly.castbar.y = -28
+StyleTextOnly.castbar.x = 0
+StyleTextOnly.castborder.y = -15
+StyleTextOnly.castborder.x = -7
+StyleTextOnly.castnostop.y = -15
+StyleTextOnly.castnostop.x = -7
+StyleTextOnly.spelltext.y = -28
+StyleTextOnly.spelltext.x = 0
+StyleTextOnly.spellicon.y = -28
+StyleTextOnly.spellicon.x = -13
+StyleTextOnly.skullicon.show = false
+StyleTextOnly.eliteicon.show = false
+StyleTextOnly.raidicon.x = 0
+StyleTextOnly.raidicon.y = 10
+StyleTextOnly.raidicon.anchor = "TOP"
+StyleTextOnly.highlight.texture = EmptyTexture
+StyleTextOnly.target.texture = EmptyTexture
+StyleTextOnly.target.y = 21
+StyleTextOnly.target.height = 64
+StyleTextOnly.target.height = 128
+StyleTextOnly.target.anchor = "CENTER"
 
 local WidgetConfig = {}
-WidgetConfig.ClassIcon = { anchor = "LEFT" , x = -10 ,y = -1 }
-WidgetConfig.TotemIcon = { anchor = "LEFT" , x = -10 ,y = -1 }
+--WidgetConfig.ClassIcon = { anchor = "LEFT", x = -10, y = -1 } 		-- Left side.
+--WidgetConfig.TotemIcon = { anchor = "LEFT", x = -10, y = -1 }			-- Left side.
+--WidgetConfig.ThreatWheelWidget = { anchor = "RIGHT", x = 50, y = 0 }	-- Right side.
+WidgetConfig.ClassIcon = { anchor = "RIGHT", x = 37, y = -1 } 			-- Right side.
+WidgetConfig.TotemIcon = { anchor = "RIGHT", x = 37, y = -1 } 			-- Right side.
+WidgetConfig.ThreatWheelWidget = { anchor = "LEFT", x = -50, y = 0 }	-- Left side.
 WidgetConfig.ThreatLineWidget = {  x = 0 ,y = -11 }
-WidgetConfig.ThreatWheelWidget = { anchor =  "LEFT", x = -33 ,y = 23 }
-WidgetConfig.ComboWidget = { x = 8 ,y = -38 }
---WidgetConfig.RangeWidget = { x = 0 ,y = 0 }
+WidgetConfig.ComboWidget = { x = 8 ,y = -38 }							-- Below castbar.
+--WidgetConfig.ComboWidget = { anchor = "CENTER", x = 8 ,y = -2 }		-- Displayed over health bar´s bottom.
+WidgetConfig.RangeWidget = { anchor = "BOTTOM", x = 0 ,y = 0 }
 WidgetConfig.DebuffWidget = { anchor = "TOP" , x = 21 ,y = 32 }
 
 local DamageThemeName = "Classic/|cFFFF4400Damage"

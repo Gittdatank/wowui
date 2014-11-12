@@ -6,3 +6,12 @@ TidyPlatesWidgets: disabled
 ACP: disabled
 Bagnon: enabled
 Bagnon_Config: enabled
+Auc-Advanced: enabled
+Auc-Filter-Basic: enabled
+Auc-Stat-iLevel: enabled
+Auc-Util-FixAH: enabled
+Auc-Stat-StdDev: enabled
+Auc-Stat-Simple: enabled
+Auc-Stat-Purchased: enabled
+Auc-ScanData: enabled
+Auc-Stat-Histogram: enabled

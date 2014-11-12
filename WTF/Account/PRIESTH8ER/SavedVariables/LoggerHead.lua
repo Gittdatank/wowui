@@ -36,12 +36,12 @@ LoggerHeadDB = {
 						false, -- [2]
 						[8] = false,
 					},
-					["Scholomance"] = {
-						[2] = false,
-						[8] = false,
-					},
 					["Sunken Temple"] = {
 						false, -- [1]
+					},
+					["Halls of Origination"] = {
+						false, -- [1]
+						false, -- [2]
 					},
 					["Blackrock Caverns"] = {
 						false, -- [1]
@@ -68,9 +68,9 @@ LoggerHeadDB = {
 						false, -- [1]
 						false, -- [2]
 					},
-					["Halls of Origination"] = {
-						false, -- [1]
-						false, -- [2]
+					["Scholomance"] = {
+						[2] = false,
+						[8] = false,
 					},
 					["Ragefire Chasm"] = {
 						false, -- [1]
@@ -165,14 +165,14 @@ LoggerHeadDB = {
 					},
 				},
 				["none"] = {
-					["Tol Barad"] = {
-						true, -- [1]
-					},
 					["Pandaria"] = {
 						[0] = false,
 					},
 					["Kalimdor"] = {
 						[0] = false,
+					},
+					["Tol Barad"] = {
+						true, -- [1]
 					},
 				},
 				["arena"] = {

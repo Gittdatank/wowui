@@ -18,8 +18,8 @@ FrameLevel: 1
 Anchor: TOP
 X: -137
 Y: -193
-W: 128
-H: 64
+W: 267
+H: 154
 Frame: LootHistoryFrame
 FrameLevel: 1
 Anchor: TOP

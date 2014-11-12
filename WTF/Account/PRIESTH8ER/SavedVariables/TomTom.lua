@@ -6,11 +6,11 @@ TomTomDB = {
 		["Gitt - Arthas"] = "Default",
 		["Evyyn - Azuremyst"] = "Default",
 		["Git - Arthas"] = "Default",
-		["Burk - Arthas"] = "Default",
 		["Git - Cho'gall"] = "Default",
+		["Greny - Azuremyst"] = "Default",
 		["Spih - Cho'gall"] = "Default",
 		["Got - Arthas"] = "Default",
-		["Greny - Azuremyst"] = "Default",
+		["Burk - Arthas"] = "Default",
 		["Spih - Arthas"] = "Default",
 	},
 	["profiles"] = {
@@ -26,11 +26,11 @@ TomTomWaypointsMF = {
 		["Gitt - Arthas"] = "Gitt - Arthas",
 		["Evyyn - Azuremyst"] = "Evyyn - Azuremyst",
 		["Git - Arthas"] = "Git - Arthas",
-		["Burk - Arthas"] = "Burk - Arthas",
 		["Git - Cho'gall"] = "Git - Cho'gall",
+		["Greny - Azuremyst"] = "Greny - Azuremyst",
 		["Spih - Cho'gall"] = "Spih - Cho'gall",
 		["Got - Arthas"] = "Got - Arthas",
-		["Greny - Azuremyst"] = "Greny - Azuremyst",
+		["Burk - Arthas"] = "Burk - Arthas",
 		["Spih - Arthas"] = "Spih - Arthas",
 	},
 	["profiles"] = {
@@ -264,71 +264,7 @@ TomTomWaypointsMF = {
 					["minimap"] = true,
 					["world"] = true,
 				},
-				["951:0:497000000:222000000:Archiereus of Flame (Sanctuary)"] = {
-					951, -- [1]
-					0, -- [2]
-					0.497, -- [3]
-					0.222, -- [4]
-					["arrivaldistance"] = 15,
-					["callbacks"] = {
-						["distance"] = {
-							[10] = nil --[[ skipped inline function ]],
-							[15] = nil --[[ skipped inline function ]],
-						},
-						["world"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
-						},
-						["minimap"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
-						},
-					},
-					["persistent"] = true,
-					["desc"] = "Archiereus of Flame (Sanctuary)",
-					["silent"] = true,
-					["cleardistance"] = 10,
-					["title"] = "Archiereus of Flame (Sanctuary)",
-					["crazy"] = true,
-					["minimap"] = true,
-					["world"] = true,
-				},
-				["951:0:648000000:288000000:Garnia"] = {
-					951, -- [1]
-					0, -- [2]
-					0.648, -- [3]
-					0.288, -- [4]
-					["arrivaldistance"] = 15,
-					["callbacks"] = {
-						["distance"] = {
-							[10] = nil --[[ skipped inline function ]],
-							[15] = nil --[[ skipped inline function ]],
-						},
-						["world"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
-						},
-						["minimap"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
-						},
-					},
-					["persistent"] = true,
-					["desc"] = "Garnia",
-					["silent"] = true,
-					["cleardistance"] = 10,
-					["title"] = "Garnia",
-					["crazy"] = true,
-					["minimap"] = true,
-					["world"] = true,
-				},
 			},
-		},
-		["Burk - Arthas"] = {
 		},
 		["Git - Cho'gall"] = {
 			[951] = {
@@ -518,11 +454,13 @@ TomTomWaypointsMF = {
 				},
 			},
 		},
+		["Greny - Azuremyst"] = {
+		},
 		["Spih - Cho'gall"] = {
 		},
 		["Got - Arthas"] = {
 		},
-		["Greny - Azuremyst"] = {
+		["Burk - Arthas"] = {
 		},
 		["Spih - Arthas"] = {
 		},

@@ -4,8 +4,8 @@ BagnonFrameSettings = {
 	["frames"] = {
 		["inventory"] = {
 			["reverseSlotOrder"] = true,
-			["y"] = 149.999938964844,
-			["x"] = -0.75,
+			["y"] = 148.499938964844,
+			["x"] = -459.000122070313,
 		},
 		["bank"] = {
 			["y"] = 189.500030517578,

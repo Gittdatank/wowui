@@ -23,6 +23,7 @@ EPGP_DB = {
 				["Lusting on Trash"] = {
 					["snapshot"] = {
 						["guild_info"] = "@DECAY_P:10\n@EXTRAS_P:100\n@MIN_EP:100\n@BASE_GP:2000",
+						["time"] = 1415808420,
 						["roster_info"] = {
 							{
 								"Totemebanana", -- [1]
@@ -1560,7 +1561,6 @@ EPGP_DB = {
 								"0,0", -- [3]
 							}, -- [307]
 						},
-						["time"] = 1415800380,
 					},
 					["log"] = {
 						{
@@ -8769,10 +8769,6 @@ EPGP_DB = {
 		},
 		["Lusting on Trash"] = {
 			["recurring_ep_period_mins"] = 10,
-			["outsiders"] = 0,
-			["min_ep"] = 100,
-			["base_gp"] = 2000,
-			["decay_p"] = 10,
 			["bonus_loot_log"] = {
 				{
 					["timestamp"] = "2014-05-19 21:15:00",
@@ -15895,6 +15891,10 @@ EPGP_DB = {
 					["currencyID"] = "0",
 				}, -- [1303]
 			},
+			["min_ep"] = 100,
+			["base_gp"] = 2000,
+			["outsiders"] = 0,
+			["decay_p"] = 10,
 			["sort_order"] = "EP",
 			["last_awards"] = {
 				["End of Raid"] = 50,
