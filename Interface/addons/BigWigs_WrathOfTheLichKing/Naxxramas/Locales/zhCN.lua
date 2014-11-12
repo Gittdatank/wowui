@@ -154,10 +154,6 @@ if L then
 	L.phase3_trigger = "主人，我需要帮助！"
 	L.phase3_warning = "第三阶段 - 约15秒后，寒冰皇冠卫士出现！"
 
-	L.mc_message = "克尔苏加德锁链：>%s<！"
-	L.mc_warning = "即将 克尔苏加德锁链！"
-	L.mc_nextbar = "<下一克尔苏加德锁链>"
-
 	L.frostblast_bar = "<可能 冰霜冲击>"
 	L.frostblast_soon_message = "约5秒后，可能冰霜冲击！"
 
@@ -264,11 +260,7 @@ if L then
 	L.lifedrain_warn1 = "5秒后，生命吸取！"
 	L.lifedrain_bar = "<生命吸取>"
 
-	L.icebolt_say = "我是寒冰屏障！快躲到我后面！"
-
-	L.ping = "点击"
-	L.ping_desc = "当你中了寒冰屏障时点击当前所在位置。"
-	L.ping_message = "寒冰屏障 - 点击你的位置！"
+	L.icebolt_say = "我是寒冰屏障！"
 end
 
 L = BigWigs:NewBossLocale("Instructor Razuvious", "zhCN")

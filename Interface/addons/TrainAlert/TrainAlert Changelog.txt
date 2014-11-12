@@ -1,3 +1,7 @@
+== Version 1.12.22 (November 6th 2014) ==
+
+* Bumped TOC to 60000.
+
 == Version 1.12.21 (November 24th 2013) ==
 
 * Added /trainalert as an alternative to /ta, as suggested by cheebc.

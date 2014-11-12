@@ -5,7 +5,7 @@ local GI = LibStub("LibGroupInSpecT-1.1")
 
 RaidBuffStatus = LibStub("AceAddon-3.0"):NewAddon("RaidBuffStatus", "AceEvent-3.0", "AceTimer-3.0", "AceConsole-3.0", "AceSerializer-3.0")
 RBS_svnrev = {}
-RBS_svnrev["Core.lua"] = select(3,string.find("$Revision: 688 $", ".* (.*) .*"))
+RBS_svnrev["Core.lua"] = select(3,string.find("$Revision: 694 $", ".* (.*) .*"))
 
 local addon = RaidBuffStatus
 local profile
@@ -1677,9 +1677,6 @@ function addon:DistanceBegin()
   end
   d.oldcont = GetCurrentMapContinent()
   d.oldmap = GetCurrentMapAreaID()
-  if WorldMapFrame then -- prevent map flicker
-    WorldMapFrame.blockWorldMapUpdate = true
-  end
   SetMapZoom(0)  -- azeroth continent
   d.px,d.py = GetPlayerMapPosition("player")
   d.contscalex = 47714
@@ -1712,9 +1709,6 @@ function addon:DistanceEnd()
   -- some addons (eg GatherMate2) foolishly assume the world map doesn't change via other addons, so unconditionally put it back
   if GetCurrentMapContinent() ~= d.oldcont then SetMapZoom(d.oldcont) end
   if GetCurrentMapAreaID() ~= d.oldmap then SetMapByID(d.oldmap) end
-  if WorldMapFrame then
-    WorldMapFrame.blockWorldMapUpdate = nil
-  end
 end
 
 local linelimit = 150
@@ -3618,7 +3612,7 @@ function addon:CCEventLog(event, timestamp, subevent,
 	if not spellID or not dstGUID or not srcname then
 		return
 	end
-	if band(tonumber(dstGUID:sub(0,5), 16), 0x00f) ~= 0x003 then
+	if not dstGUID:find("^Creature-") then
 		return  -- the destination is not a creature
 	end
 	if profile.cconlyme and not srcGUID == playerid then

@@ -154,10 +154,6 @@ if L then
 	L.phase3_trigger = "Господин мне нужна помощь!"
 	L.phase3_warning = "Фаза 3 защитники через ~15 секунд!"
 
-	L.mc_message = "Контроль над |3-4(%s)"
-	L.mc_warning = "Скоро контроль разума!"
-	L.mc_nextbar = "~Контроль Разума"
-
 	L.frostblast_bar = "Возможен ледяной взрыв"
 	L.frostblast_soon_message = "Возможный ледяной взрыв через 15 секунд!"
 
@@ -265,10 +261,6 @@ if L then
 	L.lifedrain_bar = "~Возможное похищение жизни"
 
 	L.icebolt_say = "Я в глыбе!"
-
-	L.ping = "Мояк по мини-карте"
-	L.ping_desc = "Отмечать ваше текущеее положение маяком по мини-карте если вы находитесь в глыбе после морозной стрелы."
-	L.ping_message = "Глыба - отмечаю положение!"
 end
 
 L = BigWigs:NewBossLocale("Instructor Razuvious", "ruRU")

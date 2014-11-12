@@ -802,6 +802,9 @@ Change Log:
 		- Added WoD spells for Upper Blackrock Spire
 		- Added WoD spells for Blasted Lands Event
 		- Added Pandaria spells for Brewmoon Festival
+	v4.35.2
+		- Updated mob identification for 6.0
+		- Added Wrath spells for Ulduar
 		
 ]]--
 GTFO = {
@@ -819,8 +822,8 @@ GTFO = {
 		IgnoreOptions = { };
 		TrivialDamagePercent = 2; -- Minimum % of HP lost required for an alert to be trivial
 	};
-	Version = "4.35.1"; -- Version number (text format)
-	VersionNumber = 43501; -- Numeric version number for checking out-of-date clients
+	Version = "4.35.2"; -- Version number (text format)
+	VersionNumber = 43502; -- Numeric version number for checking out-of-date clients
 	DataLogging = nil; -- Indicate whether or not the addon needs to run the datalogging function (for hooking)
 	DataCode = "4"; -- Saved Variable versioning, change this value to force a reset to default
 	CanTank = nil; -- The active character is capable of tanking
@@ -913,9 +916,12 @@ function GTFO_ScanPrint(str)
 	end
 end
 
-function GTFO_GetMobId(GUID)
-    if not GUID then return 0 end
-    return tonumber(GUID:sub(6, 10), 16) or 0
+function GTFO_GetMobId(sGUID)
+	local mobType, _, _, _, _, mobId = strsplit("-", sGUID or "")
+	if mobType and (mobType == "Creature" or mobType == "Vehicle" or mobType == "Pet") then
+		return tonumber(mobId)
+	end
+	return 0;
 end
 
 function GTFO_OnEvent(self, event, ...)

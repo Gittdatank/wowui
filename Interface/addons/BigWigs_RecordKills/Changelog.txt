@@ -10,6 +10,9 @@
 --------------------------------------------------------
 -- CHANGELOG --
 --------------------------------------------------------
+--- v2.01 -- 
+-Fix a bug with converting SoO records
+
 --- v2.0 ---
 -Update for 6.0 and new raid difficulties
 -Upgrade old flex/normal to current normal/heroic

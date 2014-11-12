@@ -247,3 +247,20 @@ function crDrawRouteLine(T, C, sx, sy, ex, ey, w, relPoint,range)
 
     
 end
+
+function crGetUnitID(guid)
+if guid==nil or guid==false then
+	return 0
+end
+if (guid.find(guid,"Creature") or guid.find(guid,"Pet-") or guid.find(guid,"GameObject") or guid.find(guid,"Vehicle")) then
+	--Creature-0-3061-1136-29274-71979-00003EDC2C
+	local t1,_,_,_,_,id,g = guid:match("([^,]+)-([^,]+)-([^,]+)-([^,]+)-([^,]+)-([^,]+)-([^,]+)")
+	if id and tonumber(id) ~= nil then
+		return id
+	else
+		return 0
+	end
+else
+	return 0
+end
+end

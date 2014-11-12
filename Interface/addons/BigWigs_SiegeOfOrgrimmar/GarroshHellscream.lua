@@ -23,7 +23,6 @@ local desecrateCounter = 1
 local phase = 1
 local waveTimer, waveCounter = nil, 1
 local whirlingCounter = 1
-local mindControl = nil
 local bombardmentCounter, maliceCounter = 1, 1
 local hopeTimer = nil
 
@@ -86,7 +85,7 @@ function mod:GetOptions(CL)
 		145065, {144985, "FLASH"}, {145183, "TANK"}, -- phase 2
 		-8325, -- phase 3
 		"custom_off_minion_marker",
-		{147209, "FLASH", "ICON"}, 147235, "bombardment", {147665, "FLASH", "ICON"}, {"clump_check", "FLASH"}, "manifest_rage", -- phase 4 .. fix descriptions
+		{147209, "FLASH", "ICON", "SAY"}, 147235, "bombardment", {147665, "FLASH", "ICON"}, {"clump_check", "FLASH", "PROXIMITY"}, "manifest_rage", -- phase 4
 		{144758, "SAY", "FLASH", "ICON"},
 		"stages", "berserk", "bosskill",
 	}, {
@@ -96,7 +95,7 @@ function mod:GetOptions(CL)
 		[145065] = -8307, -- phase 2
 		[-8325] = -8319, -- phase 3
 		["custom_off_minion_marker"] = L.custom_off_minion_marker,
-		[147209] = ("%s (%s)"):format(CL.stage:format(4), CL.heroic),
+		[147209] = ("%s (%s)"):format(CL.stage:format(4), CL.mythic),
 		[144758] = "general",
 	}
 end
@@ -142,16 +141,20 @@ end
 
 function mod:OnEngage(diff)
 	waveCounter = 1
-	waveTimer = self:ScheduleTimer("NewWave", 45)
-	self:Bar(-8292, 45, nil, 144582)
-	self:Berserk(self:LFR() and 1500 or 1080)
+	waveTimer = self:ScheduleTimer("NewWave", 2)
+	self:Bar(-8292, 2, nil, 144582) -- Kor'kron Warbringer aka add waves
+	self:Berserk(1500)
 	self:Bar(144758, 11) -- Desecrate
 	self:Bar(-8298, 20, nil, 144616) -- Siege Engineer
 	self:Bar(-8294, 30, nil, 144584) -- Farseer
 	self:Bar(144821, 22) -- Warsong
 	farseerCounter = 1
 	engineerCounter = 1
+	desecrateCounter = 1
+	whirlingCounter = 1
+	mcCounter = 1
 	phase = 1
+	bombardmentCounter, maliceCounter = 1, 1
 	wipe(markableMobs)
 	wipe(marksUsed)
 	markTimer = nil
@@ -233,6 +236,7 @@ function mod:MaliceApplied(args)
 	self:TargetBar(args.spellId, 14, args.destName)
 	if self:Me(args.destGUID) then
 		self:Flash(args.spellId)
+		self:Say(args.spellId)
 	end
 	maliceCounter = maliceCounter + 1
 	self:Bar(args.spellId, 30, CL.count:format(args.spellName, maliceCounter))
@@ -258,6 +262,8 @@ do
 		bombardmentCounter = bombardmentCounter + 1
 		self:Bar("bombardment", 13, CL.casting:format(args.spellName), args.spellId)
 		self:Bar("clump_check", 3, 147126) -- Clump Check
+		self:OpenProximity("clump_check", 10)
+		self:ScheduleTimer("CloseProximity", 13, "clump_check")
 	end
 end
 
@@ -272,14 +278,13 @@ function mod:GrippingDespair(args)
 end
 
 function mod:MindControl(args)
-	mindControl = true
-	self:Message(145065, "Urgent", "Alert", CL.casting:format(mod:SpellName(67229)))
+	self:Message(145065, "Urgent", "Alert", 67229, 145065) -- 67229 = "Mind Control"
 	if phase == 3 then
-		self:Bar(145065, (mcCounter == 1) and 35 or 42, 67229, 145065) -- "Mind Control" text
-		mcCounter = mcCounter + 1 -- XXX might need more data
-	else
-		self:Bar(145065, 45, 67229, 145065) -- "Mind Control" text
+		self:Bar(145065, (mcCounter == 1) and 35 or 42, 67229, 145065) -- 67229 = "Mind Control"
+	elseif mcCounter < 3 then -- Only enough time for 3 in phase 2 between each intermission
+		self:Bar(145065, 45, 67229, 145065) -- 67229 = "Mind Control"
 	end
+	mcCounter = mcCounter + 1
 end
 
 -- Phase 1
@@ -289,12 +294,12 @@ function mod:Warsong(args)
 end
 
 do
-	local waveTimers = { 45, 45 }
+	local waveTimers = { 43, 45 }
 	function mod:NewWave()
 		self:Message(-8292, "Attention", nil, nil, 144582)
-		waveCounter = waveCounter + 1
 		self:Bar(-8292, waveTimers[waveCounter] or 40, nil, 144582)
 		waveTimer = self:ScheduleTimer("NewWave", waveTimers[waveCounter] or 40)
+		waveCounter = waveCounter + 1
 	end
 end
 
@@ -356,7 +361,16 @@ do
 		self:Flash(144985)
 		self:Message(144985, "Important", "Long", CL.count:format(args.spellName, whirlingCounter))
 		whirlingCounter = whirlingCounter + 1
-		self:Bar(144985, 50, CL.count:format(self:SpellName(144985), whirlingCounter))
+		if phase == 2 then
+			if whirlingCounter < 4 then -- Only enough time for 3 in phase 2 between each intermission
+				self:Bar(144985, 50, CL.count:format(self:SpellName(144985), whirlingCounter))
+			end
+			if desecrateCounter == 3 and whirlingCounter == 3 then -- Whirling arrived first, delay Desecrate to the end of the cast
+				self:CDBar(144758, 8.5) -- Desecrate, delayed by Whirling: 2.5s cast and 6s channel = 8.5s
+			end
+		else
+			self:Bar(144985, 50, CL.count:format(self:SpellName(144985), whirlingCounter))
+		end
 
 		if args.spellId == 145037 and self.db.profile.custom_off_minion_marker then
 			wipe(markableMobs)
@@ -388,7 +402,7 @@ end
 
 do
 	local farseerTimers = { 50, 50, 40 } -- XXX need more data
-	--  cat Transcriptor.lua | sed "s/\t//g" | cut -d ' ' -f 2-300 | grep -E "(YELL].*Farseers)|(DED.*144489)|(DED.*144866)"
+	-- cat Transcriptor.lua | sed "s/\t//g" | cut -d ' ' -f 2-300 | grep -E "(YELL].*Farseers)|(DED.*144489)|(DED.*144866)"
 	function mod:Farseer()
 		self:Message(-8294, "Urgent", self:Damager() and "Alert", nil, 144584)
 		self:Bar(-8294, farseerTimers[farseerCounter] or 40, nil, 144584) -- chain lightning icon cuz that is some shaman spell
@@ -429,8 +443,7 @@ do
 	local hope, courage, faith = mod:SpellName(149004), mod:SpellName(148983), mod:SpellName(148994)
 	local hopeList = mod:NewTargetList()
 	local function announceHopeless()
-		for i=1, GetNumGroupMembers() do
-			local unit = ("raid%d"):format(i)
+		for unit in mod:IterateGroup() do
 			if UnitAffectingCombat(unit) and not UnitDebuff(unit, hope) and not UnitDebuff(unit, courage) and not UnitDebuff(unit, faith) then
 				hopeList[#hopeList+1] = mod:UnitName(unit)
 			end
@@ -461,12 +474,6 @@ end
 do
 	local warnPower = 25
 	local abilities = { [25] = mod:SpellName(144985), [50] = mod:SpellName(67229), [75] = mod:SpellName(144748), [100] = mod:SpellName(145183) }
-
-	local function mindControlMagic(spellId)
-		if not mindControl then -- there has not been an MC for more than 32 sec
-			mod:Bar(spellId, 8, 67229, spellId) -- "Mind Control" text
-		end
-	end
 
 	local annihilateCounter = 1
 	function mod:Annihilate(args)
@@ -499,10 +506,13 @@ do
 			hopeTimer = false
 		elseif spellId == 144956 then -- Jump To Ground -- exiting intermission
 			if phase == 2 then
-				if hopeTimer then self:CancelTimer(hopeTimer) end
+				if hopeTimer then self:CancelTimer(hopeTimer) hopeTimer = nil end
 				desecrateCounter = 1
+				mcCounter = 1
 				self:Bar(144758, 10) -- Desecrate
-				self:Bar(145065, 15, 67229, 145065) -- Mind Control
+				if not self:Solo() then
+					self:Bar(145065, 15, 67229, 145065) -- Mind Control
+				end
 				self:Bar(144985, 30, CL.count:format(self:SpellName(144985), whirlingCounter)) -- Whirling Corruption
 				self:RegisterUnitEvent("UNIT_HEALTH_FREQUENT", nil, "boss1", "boss2", "boss3")
 				-- warn for empowered abilities
@@ -516,21 +526,17 @@ do
 				warnPower = 25
 			end
 		elseif spellId == 145647 then -- Realm of Y'Shaarj -- phase 3
+			if hopeTimer then self:CancelTimer(hopeTimer) hopeTimer = nil end
 			phase = 3
 			mcCounter = 1
 			desecrateCounter = 1
 			self:Message("stages", "Neutral", nil, CL.phase:format(phase), false)
 			self:StopBar(CL.intermission)
-			self:Bar(144985, 48, CL.count:format(self:SpellName(144985), whirlingCounter)) -- Whirling Corruption
-			if self:Mythic() then
-				-- XXX lets try to improve this, because it looks like if it is not cast within 32 sec, then it is going to be closer to 40 than to 30 need more Transcriptor log
-				mindControl = nil
-				self:ScheduleTimer(mindControlMagic, 32, 145065)
-				self:Bar(145065, 31, 67229, 145065) -- Mind Control
-			else
+			self:Bar(144985, 45, CL.count:format(self:SpellName(144985), whirlingCounter)) -- Whirling Corruption
+			if not self:Solo() then
 				self:Bar(145065, 29, 67229, 145065) -- Mind Control
 			end
-			self:CDBar(144758, 21) -- Desecrate -- on heroic 21-23
+			self:CDBar(144758, 20) -- Desecrate
 		elseif spellId == 146984 then -- phase 4 Enter Realm of Garrosh
 			phase = 4
 			self:Message("stages", "Neutral", nil, CL.phase:format(phase), false)
@@ -551,7 +557,7 @@ end
 function mod:UNIT_HEALTH_FREQUENT(unitId)
 	if self:MobId(UnitGUID(unitId)) ~= 71865 then return end
 	local hp = UnitHealth(unitId) / UnitHealthMax(unitId) * 100
-	if (hp < 15 and phase == 1) or (hp < 13 and phase == 2) then -- 10%
+	if hp < 16 then -- 10%
 		self:Message("stages", "Neutral", "Info", CL.soon:format(CL.phase:format(phase+1)), false)
 		self:UnregisterUnitEvent("UNIT_HEALTH_FREQUENT", "boss1", "boss2", "boss3")
 	end
@@ -572,22 +578,24 @@ do
 		self:TargetMessage(144758, name, "Urgent", "Alarm")
 	end
 
-	local phase2DesecrateTimers = {36, 45, 36}
 	function mod:Desecrate(args)
 		self:GetBossTarget(bossTarget, 1, args.sourceGUID)
 
-		local cd = 41
+		local cd = 40
 		if phase == 2 then
-			local diff = self:Difficulty()
-			if diff == 3 or diff == 5 then -- 10 man
-				cd = phase2DesecrateTimers[desecrateCounter] or 45
+			if desecrateCounter > 3 then
+				cd = 0 -- Only enough time for 4 in phase 2 between each intermission
 			else
+				 -- The 3rd Desecrate (during p2 only) always aligns with Whirling and which he casts first seems random.
+				 -- Choosing Whirling will delay that Desecrate. We "fix" this by starting a new Desecrate timer in the Whirling function if Whirling arrived first.
 				cd = 35
 			end
 		elseif phase == 3 then
-			cd = (desecrateCounter == 1) and 35 or 25
+			cd = desecrateCounter == 1 and 34 or 25
 		end
-		self:CDBar(144758, cd)
+		if cd > 0 then
+			self:CDBar(144758, cd)
+		end
 		desecrateCounter = desecrateCounter + 1
 	end
 end

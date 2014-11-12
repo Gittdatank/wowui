@@ -4,8 +4,8 @@
 
 local AL = LibStub("AceLocale-3.0")
 local L = AL:GetLocale("Big Wigs: Common")
-local UnitExists, UnitAffectingCombat, GetSpellInfo, UnitGUID = UnitExists, UnitAffectingCombat, GetSpellInfo, UnitGUID
-local UnitDistanceSquared, UnitPosition = UnitDistanceSquared, UnitPosition
+local UnitAffectingCombat, UnitIsPlayer, UnitGUID, UnitPosition, UnitDistanceSquared, UnitIsConnected = UnitAffectingCombat, UnitIsPlayer, UnitGUID, UnitPosition, UnitDistanceSquared, UnitIsConnected
+local EJ_GetSectionInfo, GetSpellInfo = EJ_GetSectionInfo, GetSpellInfo
 local format, sub, gsub, band = string.format, string.sub, string.gsub, bit.band
 local type, next, tonumber = type, next, tonumber
 local core = BigWigs
@@ -18,7 +18,8 @@ local difficulty = 16 -- Mythic
 local UpdateDispelStatus = nil
 local myGUID = nil
 local myRole = nil
-local updateData = function()
+local solo = false
+local updateData = function(module)
 	myGUID = UnitGUID("player")
 
 	local tree = GetSpecialization()
@@ -31,6 +32,16 @@ local updateData = function()
 
 	local _, _, diff = GetInstanceInfo()
 	difficulty = diff
+
+	solo = true
+	local _, _, _, mapId = UnitPosition("player")
+	for unit in module:IterateGroup() do
+		local _, _, _, tarMapId = UnitPosition(unit)
+		if tarMapId == mapId and myGUID ~= UnitGUID(unit) and UnitIsConnected(unit) then
+			solo = false
+			break
+		end
+	end
 
 	UpdateDispelStatus()
 end
@@ -97,7 +108,7 @@ function boss:OnInitialize() core:RegisterBossModule(self) end
 function boss:OnEnable(isWipe)
 	if debug then dbg(self, isWipe and "OnEnable() via Wipe()" or "OnEnable()") end
 
-	updateData()
+	updateData(self)
 
 	-- Update enabled modules list
 	for i = #enabledModules, 1, -1 do
@@ -246,17 +257,19 @@ do
 		if allowedEvents[event] then
 			if event == "UNIT_DIED" then
 				local _, _, _, _, _, id = strsplit("-", destGUID)
-				local mobId = tonumber(id) or 1
-				for i = #enabledModules, 1, -1 do
-					local self = enabledModules[i]
-					local m = eventMap[self][event]
-					if m and m[mobId] then
-						local func = m[mobId]
-						args.mobId, args.destGUID, args.destName, args.destFlags, args.destRaidFlags = mobId, destGUID, destName, destFlags, args.destRaidFlags
-						if type(func) == "function" then
-							func(args)
-						else
-							self[func](self, args)
+				local mobId = tonumber(id)
+				if mobId then
+					for i = #enabledModules, 1, -1 do
+						local self = enabledModules[i]
+						local m = eventMap[self][event]
+						if m and m[mobId] then
+							local func = m[mobId]
+							args.mobId, args.destGUID, args.destName, args.destFlags, args.destRaidFlags = mobId, destGUID, destName, destFlags, args.destRaidFlags
+							if type(func) == "function" then
+								func(args)
+							else
+								self[func](self, args)
+							end
 						end
 					end
 				end
@@ -430,26 +443,22 @@ do
 end
 
 do
-	local t = nil
-	local function buildTable()
-		t = {
-			"boss1", "boss2", "boss3", "boss4", "boss5",
-			"target", "targettarget",
-			"focus", "focustarget",
-			"party1target", "party2target", "party3target", "party4target",
-			"mouseover", "mouseovertarget"
-		}
-		for i = 1, 25 do t[#t+1] = format("raid%dtarget", i) end
-		buildTable = nil
-	end
+	local unitTable = {
+		"boss1", "boss2", "boss3", "boss4", "boss5",
+		"target", "targettarget",
+		"focus", "focustarget",
+		"party1target", "party2target", "party3target", "party4target",
+		"mouseover", "mouseovertarget"
+	}
+	for i = 1, 40 do unitTable[#unitTable+1] = format("raid%dtarget", i) end
 	local function findTargetByGUID(id)
-		if not t then buildTable() end
-		for i, unit in next, t do
+		local isNumber = type(id) == "number"
+		for i, unit in next, unitTable do
 			local guid = UnitGUID(unit)
 			if guid and not UnitIsPlayer(unit) then
-				if type(id) == "number" then
+				if isNumber then
 					local _, _, _, _, _, id = strsplit("-", guid)
-					guid = tonumber(id) or 1
+					guid = tonumber(id)
 				end
 				if guid == id then return unit end
 			end
@@ -514,7 +523,7 @@ do
 		if debug then dbg(self, ":Engage") end
 
 		if not noEngage or noEngage ~= "NoEngage" then
-			updateData()
+			updateData(self)
 
 			if self.OnEngage then
 				self:OnEngage(difficulty)
@@ -573,7 +582,7 @@ do
 		if not self.scheduledScans then self.scheduledScans = {} self.scheduledScansCounter = {} end
 
 		self.scheduledScansCounter[func] = 0
-		self.scheduledScans[func] = self:ScheduleRepeatingTimer(bossScanner, 0.05, self, func, tankCheckExpiry, guid)
+		self.scheduledScans[func] = self:ScheduleRepeatingTimer(bossScanner, 0.05, self, func, solo and 0.1 or tankCheckExpiry, guid) -- Tiny allowance when solo
 	end
 end
 
@@ -639,12 +648,43 @@ function boss:Range(player, otherPlayer)
 		local distanceSquared = UnitDistanceSquared(player)
 		return distanceSquared == 0 and 200 or distanceSquared ^ 0.5
 	else
-		local tx, ty = UnitPosition(player)
-		local px, py = UnitPosition(otherPlayer)
+		local ty, tx = UnitPosition(player)
+		local py, px = UnitPosition(otherPlayer)
 		local dx = tx - px
 		local dy = ty - py
 		local distance = (dx * dx + dy * dy) ^ 0.5
 		return distance
+	end
+end
+
+function boss:Solo()
+	return solo
+end
+
+-------------------------------------------------------------------------------
+-- Group checking
+--
+
+do
+	local raidList = { -- Not using a for loop because... REASONS. P.S. I love Torgue.
+		"raid1", "raid2", "raid3", "raid4", "raid5", "raid6", "raid7", "raid8", "raid9", "raid10",
+		"raid11", "raid12", "raid13", "raid14", "raid15", "raid16", "raid17", "raid18", "raid19", "raid20",
+		"raid21", "raid22", "raid23", "raid24", "raid25", "raid26", "raid27", "raid28", "raid29", "raid30",
+		"raid31", "raid32", "raid33", "raid34", "raid35", "raid36", "raid37", "raid38", "raid39", "raid40"
+	}
+	local partyList = {"player", "party1", "party2", "party3", "party4"}
+	local GetNumGroupMembers, IsInRaid = GetNumGroupMembers, IsInRaid
+	function boss:IterateGroup()
+		local num = GetNumGroupMembers() or 0
+		local i = 0
+		local size = num > 0 and num+1 or 2
+		local function iter(t)
+			i = i + 1
+			if i < size then
+				return t[i]
+			end
+		end
+		return iter, IsInRaid() and raidList or partyList
 	end
 end
 
@@ -818,13 +858,13 @@ end
 
 -- PROXIMITY
 function boss:OpenProximity(key, range, player, isReverse)
-	if checkFlag(self, key, C.PROXIMITY) then
+	if not solo and checkFlag(self, key, C.PROXIMITY) then
 		self:SendMessage("BigWigs_ShowProximity", self, range, key, player, isReverse)
 	end
 end
 
 function boss:CloseProximity(key)
-	if checkFlag(self, key or "proximity", C.PROXIMITY) then
+	if not solo and checkFlag(self, key or "proximity", C.PROXIMITY) then
 		self:SendMessage("BigWigs_HideProximity", self, key or "proximity")
 	end
 end

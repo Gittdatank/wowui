@@ -1457,7 +1457,7 @@ crClassColors={
 
 
 function crGetBossModelID(guid)
-local id=tonumber(string.sub(guid,6,10),16)
+local id=crGetUnitID(guid)
 if id~=0 then
   for i=1,#crBossID do
     for j=1,#crBossID[i] do

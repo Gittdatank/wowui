@@ -11,7 +11,7 @@ local candy = LibStub("LibCandyBar-3.0")
 local media = LibStub("LibSharedMedia-3.0")
 local LGIST = LibStub("LibGroupInSpecT-1.1")
 
-module.VERSION = tonumber(("$Revision: 817 $"):sub(12, -3))
+module.VERSION = tonumber(("$Revision: 824 $"):sub(12, -3))
 
 --------------------------------------------------------------------------------
 -- Locals
@@ -179,7 +179,7 @@ local spells = {
 		[115610] = 25,  -- Temporal Shield
 		[102051] = 20,  -- Frostjaw
 		[110959] = 90,  -- Greater Invisibility
-		[159916] = 120,  -- Amplify Magic
+		[159916] = 120, -- Amplify Magic
 		[157913] = 45,  -- Evanesce
 		[108843] = 25,  -- Blazing Speed
 		[108839] = 20,  -- Ice Floes
@@ -1047,11 +1047,14 @@ do
 		if not display then setupCooldownDisplay() end
 		display:Show()
 		shown = true
+		oRA3CooldownFrame:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 	end
 	function hideDisplay()
 		if not display then return end
 		display:Hide()
 		shown = nil
+		oRA3CooldownFrame:UnregisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
+		stopAll()
 	end
 
 	local function setup()
@@ -1103,17 +1106,13 @@ do
 		tex:SetPoint("CENTER", drag)
 
 		if db.lockDisplay then
-			locked = nil
 			lockDisplay()
 		else
-			locked = true
 			unlockDisplay()
 		end
 		if db.showDisplay then
-			shown = true
 			showDisplay()
 		else
-			shown = nil
 			hideDisplay()
 		end
 	end
@@ -1145,9 +1144,39 @@ do
 	startBar = start
 end
 
+do
+	local spellList, reverseClass = nil, nil
+	function module:SpawnTestBar()
+		if not spellList then
+			spellList = {}
+			reverseClass = {}
+			for k in next, allSpells do spellList[#spellList + 1] = k end
+			for name, class in next, oRA._testUnits do reverseClass[class] = name end
+		end
+		local spell = spellList[math.random(1, #spellList)]
+		local name, _, icon = GetSpellInfo(spell)
+		if not name then return end
+		local unit = reverseClass[classLookup[spell]]
+		local duration = (allSpells[spell] / 30) + math.random(1, 120)
+		startBar(unit, spell, name, icon, duration)
+	end
+end
+
+function module:IsOnCD(unit, spell)
+	local barSpellKey = type(spell) == "string" and "ora3cd:spell" or "ora3cd:spellid"
+	for bar in next, self:GetBars() do
+		if UnitIsUnit(bar:Get("ora3cd:unit"), unit) and spell == bar:Get(barSpellKey) then
+			return true, bar
+		end
+	end
+	return false
+end
+
 --------------------------------------------------------------------------------
 -- Module
 --
+
+local checkReincarnationCooldown = nil
 
 function module:OnRegister()
 	local database = oRA.db:RegisterNamespace("Cooldowns", {
@@ -1214,7 +1243,7 @@ function module:OnRegister()
 	local _, playerClass = UnitClass("player")
 	if playerClass == "SHAMAN" then
 		-- GetSpellCooldown returns 0 when UseSoulstone is invoked, so we delay the check
-		local function checkCooldown()
+		function checkReincarnationCooldown()
 			local start, duration = GetSpellCooldown(20608)
 			if start > 0 and duration > 1.5 then
 				local elapsed = GetTime() - start -- don't resend the full duration if already on cooldown
@@ -1223,60 +1252,29 @@ function module:OnRegister()
 		end
 		hooksecurefunc("UseSoulstone", function()
 			if IsInGroup() then
-				module:ScheduleTimer(checkCooldown, 1)
+				module:ScheduleTimer(checkReincarnationCooldown, 1)
 			end
 		end)
 	end
 end
 
-function module:IsOnCD(unit, spell)
-	local barSpellKey = type(spell) == "string" and "ora3cd:spell" or "ora3cd:spellid"
-	for bar in next, self:GetBars() do
-		if UnitIsUnit(bar:Get("ora3cd:unit"), unit) and spell == bar:Get(barSpellKey) then
-			return true, bar
-		end
-	end
-	return false
-end
-
-do
-	local spellList, reverseClass = nil, nil
-	function module:SpawnTestBar()
-		if not spellList then
-			spellList = {}
-			reverseClass = {}
-			for k in next, allSpells do spellList[#spellList + 1] = k end
-			for name, class in next, oRA._testUnits do reverseClass[class] = name end
-		end
-		local spell = spellList[math.random(1, #spellList)]
-		local name, _, icon = GetSpellInfo(spell)
-		if not name then return end
-		local unit = reverseClass[classLookup[spell]]
-		local duration = (allSpells[spell] / 30) + math.random(1, 120)
-		startBar(unit, spell, name, icon, duration)
-	end
-end
-
-function module:OnStartup()
+function module:OnStartup(_, groupStatus)
 	setupCooldownDisplay()
-	oRA3CooldownFrame:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
-	self:RegisterEvent("PLAYER_TALENT_UPDATE", "UpdateCooldownModifiers")
-	self:RegisterEvent("GROUP_ROSTER_UPDATE")
+	oRA.RegisterCallback(self, "OnCommReceived")
+	oRA.RegisterCallback(self, "OnGroupChanged")
+	self:OnGroupChanged(nil, groupStatus)
 
 	LGIST.RegisterCallback(self, "GroupInSpecT_Update", "InspectUpdate")
 	LGIST.RegisterCallback(self, "GroupInSpecT_Remove", "InspectRemove")
-
-	oRA.RegisterCallback(self, "OnCommReceived")
-
-	self:UpdateCooldownModifiers()
+	LGIST:Query("player")
 end
 
 function module:OnShutdown()
 	self:UnregisterAllEvents()
-	oRA3CooldownFrame:UnregisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
+	oRA.UnregisterCallback(self, "OnCommReceived")
+	oRA.UnregisterCallback(self, "OnGroupChanged")
 	LGIST.UnregisterAllCallbacks(self)
 
-	stopAll()
 	hideDisplay()
 	wipe(cdModifiers)
 end
@@ -1287,51 +1285,46 @@ function module:OnCommReceived(_, sender, prefix, cd)
 	end
 end
 
-function module:GROUP_ROSTER_UPDATE()
+function module:OnGroupChanged(_, groupStatus)
+	if groupStatus == 0 then return end
+
 	for bar in next, self:GetBars() do
 		if not UnitExists(bar:Get("ora3cd:unit")) then
 			bar:Stop()
 		end
 	end
+
+	if checkReincarnationCooldown then
+		checkReincarnationCooldown()
+	end
 end
 
 function module:Cooldown(player, spell, cd)
+	if not db.showDisplay then return end
 	if type(spell) ~= "number" or type(cd) ~= "number" then error("Spell or number had the wrong type.") end
 	if not db.spells[spell] then return end
 	if db.onlyShowMine and not UnitIsUnit(player, "player") then return end
 	if db.neverShowMine and UnitIsUnit(player, "player") then return end
-	if not db.showDisplay then return end
 	local spellName, _, icon = GetSpellInfo(spell)
 	if not spellName or not icon then return end
 	startBar(player, spell, spellName, icon, cd)
 end
 
-function module:UpdateCooldownModifiers()
-	local info = LGIST:GetCachedInfo(playerGUID)
-	if info then
-		self:UpdateGroupCooldownModifiers(info)
-	end
-end
-
-function module:UpdateGroupCooldownModifiers(info)
-	if cdModifiers[info.guid] then
+function module:InspectUpdate(_, guid, unit, info)
+	if cdModifiers[guid] then
 		wipe(cdModifiers[info.guid])
 	end
 	for spellId in next, info.glyphs do
 		if glyphCooldowns[spellId] then
 			local spell, modifier = unpack(glyphCooldowns[spellId])
-			addMod(info.guid, spell, modifier)
+			addMod(guid, spell, modifier)
 		end
 	end
 	for talentId in next, info.talents do
 		if talentCooldowns[talentId] then
-			talentCooldowns[talentId](info.guid)
+			talentCooldowns[talentId](guid)
 		end
 	end
-end
-
-function module:InspectUpdate(_, guid, unit, info)
-	self:UpdateGroupCooldownModifiers(info)
 end
 
 function module:InspectRemove(_, guid)
@@ -1355,8 +1348,12 @@ do
 		if source and (event == "SPELL_CAST_SUCCESS" or event == "SPELL_RESURRECT") and allSpells[spellId] and band(srcFlags, group) ~= 0 then
 			if chargeSpells[spellId] then
 				local charges, maxCharges, start, duration = GetSpellCharges(spellId)
-				if not module:IsOnCD(source, spellId) then -- guess cd, nothing displayed so assume it's the first charge
-					module:Cooldown(source, spellId, duration or getCooldown(srcGUID, spellId))
+				if charges then -- your spell
+					if charges == 0 then
+						module:Cooldown(source, spellId, duration - (GetTime() - start))
+					end
+				elseif not module:IsOnCD(source, spellId) then -- guess cd, nothing displayed so assume it's the first charge
+					module:Cooldown(source, spellId, getCooldown(srcGUID, spellId))
 				end
 			else
 				module:Cooldown(source, spellId, getCooldown(srcGUID, spellId))

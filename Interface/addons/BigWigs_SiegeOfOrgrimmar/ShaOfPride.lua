@@ -28,11 +28,11 @@ if L then
 	L.titan_pride = "Titan+Pride: %s"
 
 	L.custom_off_titan_mark = "Gift of the Titans marker"
-	L.custom_off_titan_mark_desc = "Mark people that have Gift of the Titans with {rt1}{rt2}{rt3}{rt4}{rt5}{rt6}{rt7}{rt8}, requires promoted or leader.\n|cFFFF0000Only 1 person in the raid should have this enabled to prevent marking conflicts.|r"
+	L.custom_off_titan_mark_desc = "Mark people that have Gift of the Titans with {rt1}{rt2}{rt3}{rt4}{rt5}{rt6}, requires promoted or leader.\n|cFFFF0000Only 1 person in the raid should have this enabled to prevent marking conflicts.|r"
 	L.custom_off_titan_mark_icon = 1
 
 	L.custom_off_fragment_mark = "Corrupted Fragment marker"
-	L.custom_off_fragment_mark_desc = "Mark the Corrupted Fragments with {rt8}{rt7}{rt6}, requires promoted or leader.\n|cFFFF0000Only 1 person in the raid should have this enabled to prevent marking conflicts.\nIn 25 player mode, this will conflict with the Gift of the Titans marker.|r"
+	L.custom_off_fragment_mark_desc = "Mark the Corrupted Fragments with {rt8}{rt7}, requires promoted or leader.\n|cFFFF0000Only 1 person in the raid should have this enabled to prevent marking conflicts.|r"
 	L.custom_off_fragment_mark_icon = 8
 end
 L = mod:GetLocale()
@@ -45,10 +45,10 @@ function mod:GetOptions()
 	return {
 		145215, 147207, "custom_off_fragment_mark",
 		"custom_off_titan_mark",
-		{146595, "PROXIMITY"}, 144400, -8257, {-8258, "FLASH"}, {146817, "FLASH", "PROXIMITY"}, -8270, {144351, "DISPEL"}, {144358, "TANK", "FLASH", "EMPHASIZE"}, -8262, 144800, 144563, -8349,
+		{146595, "PROXIMITY"}, 144400, -8257, {-8258, "FLASH"}, {146817, "FLASH", "PROXIMITY"}, -8270, {144351, "DISPEL"}, {144358, "TANK", "FLASH", "EMPHASIZE"}, -8262, 144800, 144563, 144832, -8349,
 		"altpower", "berserk", "bosskill",
 	}, {
-		[145215] = "heroic",
+		[145215] = "mythic",
 		["custom_off_titan_mark"] = L.custom_off_titan_mark,
 		[146595] = "general",
 	}
@@ -59,11 +59,11 @@ function mod:OnBossEnable()
 		self:OpenAltPower("altpower", 144343) -- Pride
 	end
 
-	-- heroic
+	-- Mythic
 	self:Log("SPELL_AURA_REMOVED", "WeakenedResolveOver", 147207)
 	self:Log("SPELL_AURA_APPLIED", "WeakenedResolveBegin", 147207)
 	self:Log("SPELL_AURA_APPLIED", "Banishment", 145215)
-	-- normal
+	-- Normal
 	self:Log("SPELL_CAST_START", "UnleashedStart", 144832)
 	self:Log("SPELL_CAST_SUCCESS", "Unleashed", 144832)
 	self:Log("SPELL_AURA_APPLIED", "ImprisonApplied", 144574, 144684, 144683, 144636)
@@ -107,7 +107,7 @@ end
 -- Event Handlers
 --
 
--- heroic
+-- Mythic
 do
 	local function warnWeakenedResolve(spellId, spellName)
 		if not UnitAffectingCombat("player") then
@@ -141,7 +141,7 @@ do
 			mobTbl[guid] = true
 			SetRaidTarget(unit, counter)
 			counter = counter - 1
-			if counter == 5 or mod:Difficulty() == 5 then
+			if counter == 6 then
 				mod:UnregisterEvent("UPDATE_MOUSEOVER_UNIT")
 				mod:UnregisterEvent("UNIT_TARGET")
 			end
@@ -169,7 +169,8 @@ do
 end
 
 -- normal
-function mod:UnleashedStart()
+function mod:UnleashedStart(args)
+	self:Message(args.spellId, "Neutral", "Info", "30% - ".. CL.casting:format(args.spellName))
 	if not self:LFR() then
 		self:CDBar(144358, 11) -- Wounded Pride
 	end
@@ -183,7 +184,7 @@ end
 
 function mod:Unleashed() -- Final Gift
 	self:StopBar(146595) -- Gift of the Titans
-	self:Message(-8349, "Neutral", "Info")
+	self:Message(-8349, "Neutral", "Info") -- Final Gift
 	self:Bar(144400, 74, CL.count:format(self:SpellName(144400), swellingPrideCounter)) -- Swelling Pride
 	self:Bar(-8262, 60, CL.big_add, 144379)
 	self:DelayedMessage(-8262, 55, "Urgent", CL.spawning:format(CL.big_add), 144379)
@@ -196,8 +197,8 @@ end
 
 function mod:UNIT_HEALTH_FREQUENT(unitId)
 	local hp = UnitHealth(unitId) / UnitHealthMax(unitId) * 100
-	if hp < 33 then -- 30%
-		self:Message(-8349, "Neutral", "Info", CL.soon:format(self:SpellName(-8349)))
+	if hp < 34 then -- 30%
+		self:Message(144832, "Neutral", "Info", CL.soon:format(self:SpellName(144832))) -- Unleashed
 		self:UnregisterUnitEvent("UNIT_HEALTH_FREQUENT", "boss1")
 	end
 end
@@ -276,8 +277,9 @@ do
 		end
 		self:Bar(144563, 53) -- Imprison
 		self:Bar(-8262, 60, CL.big_add, 144379) -- when the add is actually up
+		self:DelayedMessage(-8262, 55, "Urgent", CL.soon:format(CL.big_add), 144379)
+		self:DelayedMessage(-8262, 60, "Urgent", CL.spawning:format(CL.big_add), 144379, self:Damager() and "Alert")
 		self:Bar(144800, 25.6, CL.small_adds)
-		self:DelayedMessage(-8262, 55, "Urgent", CL.spawning:format(CL.big_add), 144379, self:Damager() and "Alert")
 
 		-- lets do some fancy stuff
 		local playerPower = UnitPower("player", 10)
@@ -292,11 +294,10 @@ do
 		end
 
 		local warned = nil
-		for i=1, GetNumGroupMembers() do
-			local unit = GetRaidRosterInfo(i)
+		for unit in self:IterateGroup() do
 			local power = UnitPower(unit, 10)
 			if power == 100 then
-				mindcontrolled[#mindcontrolled+1] = unit
+				mindcontrolled[#mindcontrolled+1] = self:UnitName(unit)
 				if not scheduled then
 					scheduled = self:ScheduleTimer(warnOvercome, 0.1)
 				end

@@ -756,7 +756,7 @@ end
 
 
 function crShowMapOnBackground(guid)
---local id=tonumber(string.sub(guid,6,10),16)
+--local id=crGetUnitID(guid)
 --print ("bossid: "..id)
 
 --crMapBackground = crframecenter:CreateTexture(nil,"BACKGROUND")

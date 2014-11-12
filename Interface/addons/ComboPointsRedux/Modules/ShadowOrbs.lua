@@ -2,9 +2,9 @@
 Author: Starinnia
 CPR is a combo points display addon based on Funkydude's BasicComboPoints
 ShadowOrbs.lua - A module for tracking Shadow Orbs stacks for shadow priests
-$Date: 2012-08-30 22:16:36 +0000 (Thu, 30 Aug 2012) $
-$Revision: 267 $
-Project Version: 3.2.5
+$Date: 2014-10-31 16:04:39 +0000 (Fri, 31 Oct 2014) $
+$Revision: 354 $
+Project Version: 3.2.6
 contact: codemaster2010 AT gmail DOT com
 
 Copyright (c) 2007-2012 Michael J. Murray aka Lyte of Lothar(US)
@@ -23,7 +23,7 @@ local buff = GetSpellInfo(77487)
 
 function mod:OnInitialize()
 	self.abbrev = "SO"
-	self.MAX_POINTS = 3
+	self.MAX_POINTS = 5
 	self.displayName = buff
 	self.events = { ["UNIT_POWER"] = "Update", ["UNIT_DISPLAYPOWER"] = "Update" }
 end

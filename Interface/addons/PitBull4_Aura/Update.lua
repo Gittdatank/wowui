@@ -498,7 +498,7 @@ local function set_aura(frame, db, aura_controls, aura, i, is_friend)
 	count_text:SetText(count > 1 and count or "")
 
 	if db.cooldown[rule] and duration and duration > 0 then
-		control.cooldown:SetCooldown(expiration_time - duration, duration)
+		CooldownFrame_SetTimer(control.cooldown, expiration_time - duration, duration, 1)
 		control.cooldown:Show()
 	else
 		control.cooldown:Hide()
@@ -817,7 +817,7 @@ function PitBull4_Aura:UpdateWeaponEnchants(force)
 	if force then
 		wipe(weapon_list)
 	end
-	local mh, mh_time_left, mh_count, oh, oh_time_left, oh_count = GetWeaponEnchantInfo()
+	local mh, mh_time_left, mh_count, _, oh, oh_time_left, oh_count = GetWeaponEnchantInfo()
 	local current_time = GetTime()
 	local mh_entry = weapon_list[MAINHAND]
 	local oh_entry = weapon_list[OFFHAND]

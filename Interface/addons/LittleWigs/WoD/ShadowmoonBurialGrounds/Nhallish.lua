@@ -3,7 +3,6 @@
 -- Module Declaration
 --
 
-if not BigWigs.isWOD then return end -- XXX compat
 local mod, CL = BigWigs:NewBoss("Nhallish", 969, 1168)
 if not mod then return end
 mod:RegisterEnableMob(75829)
@@ -34,10 +33,6 @@ end
 
 function mod:OnBossEnable()
 	self:RegisterEvent("INSTANCE_ENCOUNTER_ENGAGE_UNIT", "CheckBossStatus")
-
-	-- XXX Currently doesn't fire IEEU, rely on the old fashioned engage
-	self:RegisterEvent("PLAYER_REGEN_DISABLED", "CheckForEngage")
-	self:RegisterEvent("PLAYER_REGEN_ENABLED", "CheckForWipe")
 
 	self:Log("SPELL_CAST_START", "PlanarShift", 153623)
 	self:Log("SPELL_CAST_START", "VoidVortex", 152801)

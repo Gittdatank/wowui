@@ -4,12 +4,12 @@
 ## Author: Starinnia
 ## X-Category: Combat
 ## X-Credits: Funkydude (inspiration for the mod)
-## Version: 3.2.5
+## Version: 3.2.6
 ## SavedVariables: CPRDB2
 ## OptionalDeps: Ace3, LibSharedMedia-3.0
 ## LoadManagers: AddonLoader
 ## X-LoadOn-Always: true
-## X-Curse-Packaged-Version: 3.2.5
+## X-Curse-Packaged-Version: 3.2.6
 ## X-Curse-Project-Name: Combo Points Redux
 ## X-Curse-Project-ID: combo-points-redux
 ## X-Curse-Repository-ID: wow/combo-points-redux/mainline
@@ -18,11 +18,13 @@
 #@no-lib-strip@
 Libs\LibStub\LibStub.lua
 Libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
+Libs\BugGrabber\load.xml
 Libs\AceAddon-3.0\AceAddon-3.0.xml
 Libs\AceEvent-3.0\AceEvent-3.0.xml
 Libs\AceDB-3.0\AceDB-3.0.xml
 Libs\AceConsole-3.0\AceConsole-3.0.xml
 Libs\AceLocale-3.0\AceLocale-3.0.xml
+Libs\AceGUI-3.0\AceGUI-3.0.xml
 Libs\AceConfig-3.0\AceConfig-3.0.xml
 Libs\LibSharedMedia-3.0\lib.xml
 Libs\LibDualSpec-1.0\LibDualSpec-1.0.lua

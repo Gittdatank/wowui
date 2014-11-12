@@ -81,6 +81,7 @@ end
 
 function mod:OnBossEnable()
 	self:RegisterEvent("CHAT_MSG_MONSTER_SAY", "Warmup")
+	self:RegisterEvent("RAID_BOSS_WHISPER")
 
 	if self.db.profile.custom_off_shaman_marker then
 		-- Shaman marking, enabled here for trash
@@ -160,6 +161,11 @@ end
 -- Event Handlers
 --
 
+function mod:RAID_BOSS_WHISPER(_, msg)
+	-- RAID_BOSS_WHISPER#Galakras is hit! Nice shot!#Anti-Air Turret#0#true
+	self:Message("stages", "Personal", nil, msg, "achievement_boss_galakras")
+end
+
 --Galakras
 function mod:FlamesOfGalakrondStacking(args)
 	if args.amount > 2 then
@@ -236,7 +242,7 @@ function mod:SouthTower()
 		self:Bar("towers", 35, L.tower_defender, 85214) -- random orc icon
 		self:ScheduleTimer(firstTowerAdd, 35)
 	else
-		self:Bar("towers", 150, L.north_tower, L.towers_icon) -- XXX verify
+		self:Bar("towers", 150, L.north_tower, L.towers_icon) -- Mythic one seems random
 	end
 end
 
@@ -290,7 +296,7 @@ function mod:Adds(_, _, unit, _, _, target)
 		elseif UnitIsPlayer(target) then
 			self:Message("adds", "Attention", "Info", CL.incoming:format(L.adds), L.adds_icon)
 			addsCounter = addsCounter + 1
-			if (addsCounter + 1) % 4  == 0 then
+			if (addsCounter + 1) % 4 == 0 then
 				self:DelayedMessage("drakes", 55, "Attention", CL.incoming:format(L.drakes), L.drakes_icon, "Info")
 				self:Bar("adds", 110, L.adds, L.adds_icon)
 			else

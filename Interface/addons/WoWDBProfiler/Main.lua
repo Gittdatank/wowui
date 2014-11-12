@@ -14,6 +14,8 @@ local next = _G.next
 local select = _G.select
 local unpack = _G.unpack
 
+local LOOT_SLOT_CURRENCY, LOOT_SLOT_ITEM, LOOT_SLOT_MONEY = _G.LOOT_SLOT_CURRENCY, _G.LOOT_SLOT_ITEM, _G.LOOT_SLOT_MONEY
+
 
 -- ADDON NAMESPACE ----------------------------------------------------
 
@@ -114,7 +116,7 @@ local EVENT_MAPPING = {
     MERCHANT_SHOW = "UpdateMerchantItems",
     MERCHANT_UPDATE = "UpdateMerchantItems",
     PET_BAR_UPDATE = true,
-    PET_JOURNAL_LIST_UPDATE = true,
+    --PET_JOURNAL_LIST_UPDATE = true,
     PLAYER_REGEN_DISABLED = true,
     PLAYER_REGEN_ENABLED = true,
     PLAYER_TARGET_CHANGED = true,
@@ -559,7 +561,14 @@ local function HandleItemUse(item_link, bag_index, slot_index)
     if not is_lootable then
         return
     end
-    DatamineTT:ClearLines()
+
+    table.wipe(current_action)
+    current_loot = nil
+    current_action.target_type = AF.ITEM
+    current_action.identifier = item_id
+    current_action.loot_label = "contains"
+
+    --[[DatamineTT:ClearLines()
     DatamineTT:SetBagItem(bag_index, slot_index)
 
     for line_index = 1, DatamineTT:NumLines() do
@@ -580,7 +589,7 @@ local function HandleItemUse(item_link, bag_index, slot_index)
             return
         end
     end
-    Debug("HandleItemUse: Item with ID %d and link %s did not have a tooltip that contained the string %s.", item_id, item_link, _G.ITEM_OPENABLE)
+    Debug("HandleItemUse: Item with ID %d and link %s did not have a tooltip that contained the string %s.", item_id, item_link, _G.ITEM_OPENABLE)]]--
 end
 
 
@@ -897,12 +906,6 @@ function WDP:OnInitialize()
 
     local raw_db = _G.WoWDBProfilerData
     local build_num = tonumber(private.build_num)
-
-    -- Disable if using a MoP build
-    if build_num < 19000 then
-        WDP:Disable()
-        return
-    end
 
     if (raw_db.version and raw_db.version < DB_VERSION) or (raw_db.build_num and raw_db.build_num < build_num) then
         for entry in pairs(DATABASE_DEFAULTS.global) do
@@ -1370,7 +1373,7 @@ function WDP:SHOW_LOOT_TOAST(event_name, loot_type, item_link, quantity, specID,
             if item_id then
                 Debug("%s: %s X %d (%d)", event_name, item_link, quantity, item_id)
                 RecordItemData(item_id, item_link, true)
-                current_loot.sources[container_id][item_id] = current_loot.sources[container_id][item_id] or 0 + quantity
+                current_loot.sources[container_id][item_id] = (current_loot.sources[container_id][item_id] or 0) + quantity
             else
                 Debug("%s: ItemID is nil, from item link %s", event_name, item_link)
                 current_loot = nil
@@ -1378,13 +1381,13 @@ function WDP:SHOW_LOOT_TOAST(event_name, loot_type, item_link, quantity, specID,
             end
         elseif loot_type == "money" then
             Debug("%s: money X %d", event_name, quantity)
-            current_loot.sources[container_id]["money"] = current_loot.sources[container_id]["money"] or 0 + quantity
+            current_loot.sources[container_id]["money"] = (current_loot.sources[container_id]["money"] or 0) + quantity
         elseif loot_type == "currency" then
             local currency_texture = CurrencyLinkToTexture(item_link)
             if currency_texture and currency_texture ~= "" then
                 Debug("%s: %s X %d", event_name, currency_texture, quantity)
                 local currency_token = ("currency:%s"):format(currency_texture)
-                current_loot.sources[container_id][currency_token] = current_loot.sources[container_id][currency_token] or 0 + quantity
+                current_loot.sources[container_id][currency_token] = (current_loot.sources[container_id][currency_token] or 0) + quantity
             else
                 Debug("%s: Currency texture is nil, from currency link %s", event_name, item_link)
                 current_loot = nil
@@ -1808,7 +1811,7 @@ do
                 end
             end
 
-            if not locked_item_id or (current_action.identifier and current_action.identifier ~= locked_item_id) then
+            if (not current_action.spell_label == "DISENCHANT") and (not locked_item_id or (current_action.identifier and current_action.identifier ~= locked_item_id)) then
                 return false
             end
             current_action.identifier = locked_item_id
@@ -2060,22 +2063,22 @@ do
                         local source_type, source_id = ParseGUID(source_guid)
                         local source_key = ("%s:%d"):format(source_type, source_id)
 
-                        if slot_type == _G.LOOT_SLOT_ITEM then
+                        if slot_type == LOOT_SLOT_ITEM then
                             local item_id = ItemLinkToID(_G.GetLootSlotLink(loot_slot))
                             Debug("GUID: %s - Type:ID: %s - ItemID: %d - Amount: %d (%d)", loot_info[loot_index], source_key, item_id, loot_info[loot_index + 1], slot_quantity)
                             current_loot.sources[source_guid] = current_loot.sources[source_guid] or {}
-                            current_loot.sources[source_guid][item_id] = current_loot.sources[source_guid][item_id] or 0 + loot_quantity
+                            current_loot.sources[source_guid][item_id] = (current_loot.sources[source_guid][item_id] or 0) + loot_quantity
                             guids_used[source_guid] = true
-                        elseif slot_type == _G.LOOT_SLOT_MONEY then
+                        elseif slot_type == LOOT_SLOT_MONEY then
                             Debug("GUID: %s - Type:ID: %s - Money - Amount: %d (%d)", loot_info[loot_index], source_key, loot_info[loot_index + 1], slot_quantity)
                             if current_loot.target_type == AF.ZONE then
                                 table.insert(current_loot.list, ("money:%d"):format(loot_quantity))
                             else
                                 current_loot.sources[source_guid] = current_loot.sources[source_guid] or {}
-                                current_loot.sources[source_guid]["money"] = current_loot.sources[source_guid]["money"] or 0 + loot_quantity
+                                current_loot.sources[source_guid]["money"] = (current_loot.sources[source_guid]["money"] or 0) + loot_quantity
                                 guids_used[source_guid] = true
                             end
-                        elseif slot_type == _G.LOOT_SLOT_CURRENCY then
+                        elseif slot_type == LOOT_SLOT_CURRENCY then
                             -- Same bug with GetLootSlotInfo() will screw up currency when it happens, so we won't process this slot's loot.
                             if icon_texture then
                                 Debug("GUID: %s - Type:ID: %s - Currency: %s - Amount: %d (%d)", loot_info[loot_index], source_key, icon_texture, loot_info[loot_index + 1], slot_quantity)
@@ -2085,7 +2088,7 @@ do
                                     local currency_token = ("currency:%s"):format(icon_texture:match("[^\\]+$"):lower())
 
                                     current_loot.sources[source_guid] = current_loot.sources[source_guid] or {}
-                                    current_loot.sources[source_guid][currency_token] = current_loot.sources[source_guid][currency_token] or 0 + loot_quantity
+                                    current_loot.sources[source_guid][currency_token] = (current_loot.sources[source_guid][currency_token] or 0) + loot_quantity
                                     guids_used[source_guid] = true
                                 end
                             else
@@ -2280,8 +2283,8 @@ function WDP:PET_BAR_UPDATE(event_name)
 end
 
 
-function WDP:PET_JOURNAL_LIST_UPDATE(event_name)
-    -- This function produces data currently unused by wowdb.com and it makes debugging errors in the .lua output nearly impossible due to the massive bloat.
+-- This function produces data currently unused by wowdb.com, and it causes unneeded bloat in the raw lua DB.
+--[[function WDP:PET_JOURNAL_LIST_UPDATE(event_name)
     if DEBUGGING then
         return
     end
@@ -2309,7 +2312,7 @@ function WDP:PET_JOURNAL_LIST_UPDATE(event_name)
             end
         end
     end
-end
+end]]--
 
 
 function WDP:PLAYER_REGEN_DISABLED(event_name)

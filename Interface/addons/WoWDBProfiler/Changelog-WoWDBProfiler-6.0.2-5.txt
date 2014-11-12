@@ -1,0 +1,8 @@
+2014-10-19  MMOSimca  <MMOSimca@gmail.com>
+
+[2e122726c7dd] [6.0.2-5]
+* Main.lua:
+
+Commented out tooltip scanning for OPENABLE and pet journal scanning since one is preventing data and the other is unused and causing bloat.
+
+

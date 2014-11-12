@@ -154,10 +154,6 @@ if L then
 	L.phase3_trigger = "주인님, 도와주소서!"
 	L.phase3_warning = "3 단계, 약 15초 이내 수호자 등장!"
 
-	L.mc_message = "정신 지배: %s"
-	L.mc_warning = "정신 지배 대기시간 종료 - 곧 사용!"
-	L.mc_nextbar = "~정배 대기 시간"
-
 	L.frostblast_bar = "냉기 작렬 가능"
 	L.frostblast_soon_message = "약 5초 이내 냉기 작렬 가능!"
 
@@ -265,10 +261,6 @@ if L then
 	L.lifedrain_bar = "~생명력 흡수 가능"
 
 	L.icebolt_say = "저 방패에요!"
-
-	L.ping = "미니맵 표시"
-	L.ping_desc = "자신이 얼음 화살에 걸렸을 때 현재 위치를 미니맵에 표시합니다."
-	L.ping_message = "방패 - 현재 위치 미니맵에 표시 중!"
 end
 
 L = BigWigs:NewBossLocale("Instructor Razuvious", "koKR")

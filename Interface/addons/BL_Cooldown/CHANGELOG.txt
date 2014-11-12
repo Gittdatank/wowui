@@ -1,3 +1,14 @@
+3.58
+- Fix Spirit Shell CD
+- Fix Stampeding Roar when not glyphed
+- Various bug fixes, trying to fix anchoring interfering with BigWigs
+- Remove sologroup and always show, causing too much pain for now
+
+3.57
+- Add separate battle rez tracker, shows on boss engage. Top of the frame.
+- Handle players that release/insta-res better
+- Add minimap button
+
 3.56
 - Send chat messages to specified channels
 - Fix: Set extras (hopefully)

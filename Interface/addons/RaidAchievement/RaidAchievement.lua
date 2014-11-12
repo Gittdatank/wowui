@@ -6,7 +6,7 @@ if GetLocale()=="deDE" or GetLocale()=="ruRU" or GetLocale()=="zhTW" or GetLocal
 end
 
 
-	raversion=6.002
+	raversion=6.003
 	local raverstiptext="alpha"
 	if string.len(raversion)==6 then
 		raverstiptext="beta"
@@ -2253,6 +2253,6 @@ if (guid.find(guid,"Creature") or guid.find(guid,"Pet-") or guid.find(guid,"Game
 		return 0
 	end
 else
-	return guid
+	return 0
 end
 end

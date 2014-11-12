@@ -2,13 +2,13 @@
 BLCDrosterReload = {
 	["Player-69-08560956"] = {
 		["talents"] = {
-			[19138] = {
-				["name_localized"] = "Avatar",
-				["talent_id"] = 19138,
-				["spell_id"] = 107574,
-				["column"] = 1,
-				["icon"] = "Interface\\Icons\\warrior_talent_icon_avatar",
-				["tier"] = 6,
+			[21791] = {
+				["name_localized"] = "Unquenchable Thirst",
+				["talent_id"] = 21791,
+				["spell_id"] = 169683,
+				["column"] = 3,
+				["icon"] = "Interface\\Icons\\Ability_Warrior_BloodBath",
+				["tier"] = 3,
 			},
 			[16036] = {
 				["name_localized"] = "Enraged Regeneration",
@@ -18,12 +18,20 @@ BLCDrosterReload = {
 				["icon"] = "Interface\\Icons\\Ability_Warrior_FocusedRage",
 				["tier"] = 2,
 			},
-			[16037] = {
-				["name_localized"] = "Dragon Roar",
-				["talent_id"] = 16037,
-				["spell_id"] = 118000,
+			[19140] = {
+				["name_localized"] = "Bladestorm",
+				["talent_id"] = 19140,
+				["spell_id"] = 46924,
 				["column"] = 3,
-				["icon"] = "Interface\\Icons\\ability_warrior_dragonroar",
+				["icon"] = "Interface\\Icons\\Ability_Warrior_Bladestorm",
+				["tier"] = 6,
+			},
+			[15759] = {
+				["name_localized"] = "Storm Bolt",
+				["talent_id"] = 15759,
+				["spell_id"] = 107570,
+				["column"] = 1,
+				["icon"] = "Interface\\Icons\\warrior_talent_icon_stormbolt",
 				["tier"] = 4,
 			},
 			[19676] = {
@@ -54,6 +62,6 @@ BLCDrosterReload = {
 		["name"] = "Git",
 		["extra"] = true,
 		["class"] = "WARRIOR",
-		["spec"] = 73,
+		["spec"] = 72,
 	},
 }

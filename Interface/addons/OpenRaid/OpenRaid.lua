@@ -887,6 +887,7 @@ do
 			OpenRaidConfirmHandle(L["Too many BN friends"], function() OpenRaidRemoveFriends() end)
 			return
 		end
+		print(L["Sending battletag requests"]);
 		for i=1, getn(People) do
 			if People[i] and People[i] ~= "" then
 				local Battle, Name, Server = strsplit("-", People[i])
@@ -896,7 +897,8 @@ do
 						OpenRaidAddMessageToErrorQueue( { format(L["Bad battletag"], Battle), } )
 						break
 					end
-					BNSendFriendInvite(Battle, format(L["Request sent text"], G, OR_db.Raids[Pname][G][1]));
+					--Since 6.0 we have to throttle requests once/10 seconds
+					C_Timer.After((i-1)*10, function() BNSendFriendInvite(Battle, format(L["Request sent text"], G, OR_db.Raids[Pname][G][1])) end);
 					if not OR_db.Notes[strlower(Battle)] then
 						OR_db.Notes[strlower(Battle)] =  date("*t").year .. "^" .. date("*t").month .. "^" .. date("*t").day .. "^" .. Name .. (OR_db.Options["Specialnote"] and ";" .. G .. "," .. RaidName or "");
 					elseif type(OR_db.Notes[strlower(Battle)]) ~= "boolean" and not strfind(OR_db.Notes[strlower(Battle)], Name) then

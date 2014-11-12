@@ -153,10 +153,6 @@ if L then
 	L.phase3_trigger = "Maître, j'ai besoin d'aide !"
 	L.phase3_warning = "Phase 3, gardiens dans ~15 sec. !"
 
-	L.mc_message = "Contrôle mental : %s"
-	L.mc_warning = "Contrôles mentaux imminents !"
-	L.mc_nextbar = "~Contrôles mentaux"
-
 	L.frostblast_bar = "Trait de givre probable"
 	L.frostblast_soon_message = "Trait de givre probable dans ~5 sec. !"
 
@@ -264,10 +260,6 @@ if L then
 	L.lifedrain_bar = "Prochains Drains de vie"
 
 	L.icebolt_say = "Je suis un bloc !"
-
-	L.ping = "Ping"
-	L.ping_desc = "Pinge votre position actuelle si vous subissez les effets de l'Eclair de glace."
-	L.ping_message = "Bloc - Indication de votre position aux autres !"
 end
 
 L = BigWigs:NewBossLocale("Instructor Razuvious", "frFR")

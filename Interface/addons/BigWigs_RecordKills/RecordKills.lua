@@ -172,7 +172,7 @@ function addon:ConvertSiegeRecords()
 
 		--Upgrade the best normal time to heroic
 		if normTen > 0 and normTwentyFive > 0  then
-			if normTen < normTwentFive then
+			if normTen < normTwentyFive then
 				addon:SetBestTime("Siege of Orgrimmar", bossName, 15, normTen)
 			else
 				addon:SetBestTime("Siege of Orgrimmar", bossName, 15, normTwentyFive)

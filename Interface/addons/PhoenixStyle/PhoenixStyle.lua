@@ -11,7 +11,7 @@ pslocale()
 end
 
 
-	psversion=6.004
+	psversion=6.006
 
 
 	psverstiptext="alpha"
@@ -580,7 +580,13 @@ if psneedchangediff and curtime>psneedchangediff and pschangediffonetime==nil th
 psneedchangediff=nil
 if pswhatdiff then
 pschangediffonetime=1
-SetRaidDifficultyID(pswhatdiff+2)
+if pswhatdiff<14 or pswhatdiff>16 then
+	pswhatdiff=pswhatdiff+13
+	if pswhatdiff<14 or pswhatdiff>16 then
+		pswhatdiff=13
+	end
+end
+SetRaidDifficultyID(pswhatdiff)
 end
 end
 
@@ -659,7 +665,7 @@ psinviteonrankgo=nil
 			if UnitInRaid("player") then
 				howmuch=-100
 				pswhatdiff=psautoinvraiddiffsave[2]
-				if pswhatdiff==5 then
+				if pswhatdiff==4 then
 					pswhatdiff=nil
 				end
 				psneedchangediff=GetTime()
@@ -674,7 +680,7 @@ for j=1,#psrankstoinvite do
 			howmuch=howmuch+1
 			if howmuch==5 then
 				pswhatdiff=psautoinvraiddiffsave[2]
-				if pswhatdiff==5 then
+				if pswhatdiff==4 then
 					pswhatdiff=nil
 				end
 				psneedconvertquick=GetTime()-1
@@ -1499,7 +1505,7 @@ end
       psstrazhfdf=psstrazhfdf+1
     end
     if psstrazhfdf==nil or (psstrazhfdf and psstrazhfdf==3) then
-      for i=1,4 do
+      for i=1,#psbossid[2] do
         for j=1,#psbossid[2][i] do
           for t=1,#psbossid[2][i][j] do
             if psbossid[2][i][j][t]==id then
@@ -8460,7 +8466,14 @@ if (guid.find(guid,"Creature") or guid.find(guid,"Pet-") or guid.find(guid,"Game
 	else
 		return 0
 	end
+elseif (guid.find(guid,"Player")) then
+	-- player death
+	return 0
 else
-	return guid
+	if fsdfsdfsdfsdfgfg==nil then
+		--print ("PhoenixStyle: please, post this string on the curse, I need it: "..guid)
+		fsdfsdfsdfsdfgfg=1
+	end
+	return 0
 end
 end

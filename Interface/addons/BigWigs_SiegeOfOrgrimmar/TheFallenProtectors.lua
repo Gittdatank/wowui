@@ -1,7 +1,7 @@
 --[[
 TODO:
 	improve timers by checking how they interact with different Desperate Measures -- Sun Tenderheart fixed, other two still need fixing
-	fix Corrupted Brew timer (in heroic every 2 casts it gets .5s faster) Clash and Vengeful Strikes probably delay it, too
+	fix Corrupted Brew timer (in mythic every 2 casts it gets .5s faster) Clash and Vengeful Strikes probably delay it, too
 	need some data from normal for starting timers at intermission ends
 ]]--
 
@@ -117,7 +117,9 @@ function mod:OnEngage()
 	self:CDBar(143019, 18) -- Corrupted Brew
 	self:CDBar(143027, 44) -- Clash
 	self:CDBar(143330, 23) -- Gouge
-	self:CDBar(143446, 14) -- Bane
+	if self:Dispeller("magic", nil, 143446) then
+		self:CDBar(143446, 14) -- Bane
+	end
 	self:Bar(143491, 29) -- Calamity
 	hcCalamityCount = 30
 end
@@ -145,7 +147,9 @@ do
 			--self:CDBar(143027, ) -- Clash
 		end
 		self:CDBar(143491, 30) -- Calamity
-		self:CDBar(143446, 17) -- Bane
+		if self:Dispeller("magic", nil, 143446) then
+			self:CDBar(143446, 17) -- Bane
+		end
 	end
 
 	function mod:SunIntermission(args)
@@ -213,7 +217,7 @@ do
 end
 
 function mod:Bane(args)
-	if self:Dispeller("magic", nil, 143446) then
+	if self:Dispeller("magic", nil, args.spellId) then
 		self:Message(args.spellId, "Urgent", "Alarm")
 		self:CDBar(args.spellId, 14)
 	end

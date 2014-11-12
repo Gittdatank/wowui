@@ -5,4 +5,6 @@ The slight glassy look over the bars was a steal from the Graphite theme.
 
 All in all, ClassicPlates is the result of <3 of many Tidy Plates themes.
 
-~ Avernus :)
+Special Thanks to Avernus :)
+
+delabarra.-

@@ -291,7 +291,7 @@ if UnitInRaid("player") then
         end
         if found==0 then
           --босс есть но не нашли его в списке на старте, проверим, мб это один из тех что нада трекерить?
-          local id=tonumber(string.sub(UnitGUID(bossesid[bi]),6,10),16)
+          local id=crGetUnitID(UnitGUID(bossesid[bi]))
           for nb=1,#crBossNotAvaialbleOnStart do
             if crBossNotAvaialbleOnStart[nb]==id then
               found=1
@@ -358,7 +358,7 @@ end
 
 
 function crBossExists(guid)
-local id=tonumber(string.sub(guid,6,10),16)
+local id=crGetUnitID(guid)
 if id~=0 then
   for i=1,#crBossID do
     for j=1,#crBossID[i] do

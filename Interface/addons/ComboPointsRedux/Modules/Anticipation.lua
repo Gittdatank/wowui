@@ -4,7 +4,7 @@ CPR is a combo points display addon based on Funkydude's BasicComboPoints
 Anticipation.lua - A module for tracking Anticipation buff stacks
 $Date: 2012-08-30 22:16:36 +0000 (Thu, 30 Aug 2012) $
 $Revision: 267 $
-Project Version: 3.2.5
+Project Version: 3.2.6
 contact: codemaster2010 AT gmail DOT com
 
 Copyright (c) 2007-2012 Michael J. Murray aka Lyte of Lothar(US)

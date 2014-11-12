@@ -1,0 +1,12 @@
+tag v1.4.2
+428aa562906b755ea34540a98c354c2bea8557de
+Adirelle <adirelle@gmail.com>
+2014-11-08 12:10:35 +0100
+
+Fixed addon support.
+
+
+--------------------
+
+Adirelle:
+	- Fixed addon support display.

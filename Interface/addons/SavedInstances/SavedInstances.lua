@@ -13,7 +13,7 @@ local maxdiff = 16 -- max number of instance difficulties
 local maxcol = 4 -- max columns per player+instance
 
 addon.svnrev = {}
-addon.svnrev["SavedInstances.lua"] = tonumber(("$Revision: 394 $"):match("%d+"))
+addon.svnrev["SavedInstances.lua"] = tonumber(("$Revision: 400 $"):match("%d+"))
 
 -- local (optimal) references to provided functions
 local table, math, bit, string, pairs, ipairs, unpack, strsplit, time, type, wipe, tonumber, select, strsub = 
@@ -133,15 +133,15 @@ addon.WorldBosses = {
   [725] = { quest=32098, expansion=4, level=90 }, -- Galleon
   [814] = { quest=32518, expansion=4, level=90 }, -- Nalak 
   [826] = { quest=32519, expansion=4, level=90 }, -- Oondasta 
-  [857] = { quest=nil,   expansion=4, level=90, name=L["The Four Celestials"]  }, -- Chi-Ji
+  [857] = { quest=33117,   expansion=4, level=90, name=L["The Four Celestials"]  }, -- Chi-Ji
   --[858] = { quest=nil, expansion=4, level=90 }, -- Yu'lon
   --[859] = { quest=nil, expansion=4, level=90 }, -- Niuzao
   --[860] = { quest=nil, expansion=4, level=90 }, -- Xuen
   [861] = { quest=nil,   expansion=4, level=90 }, -- Ordos
 
-  [1291] = { quest=nil,  expansion=5, level=100 }, -- Drov the Ruiner
-  [1211] = { quest=nil,  expansion=5, level=100 }, -- Tarina the Ageless
-  [1262] = { quest=nil,  expansion=5, level=100 }, -- Rukhmar
+  [1291] = { quest=37460,  expansion=5, level=100 }, -- Drov the Ruiner
+  [1211] = { quest=37462,  expansion=5, level=100 }, -- Tarina the Ageless
+  [1262] = { quest=37464,  expansion=5, level=100 }, -- Rukhmar
 }
 
 local _specialQuests = {
@@ -703,7 +703,7 @@ function addon:FindInstance(name, raid)
      lid = lid and tonumber(lid)
      local lfdid = lid and addon.transInstance[lid]
      if lname == nname and lfdid then
-       local truename = select(3,addon:UpdateInstance(lfdid))
+       local truename = addon:UpdateInstance(lfdid)
        if truename then
          return truename, lfdid
        end
@@ -729,7 +729,7 @@ function addon:LookupInstance(id, name, raid)
     truename, id = addon:FindInstance(name, raid)
   end
   if id then
-    truename = select(3,addon:UpdateInstance(id))
+    truename = addon:UpdateInstance(id)
   end
   if truename then
     instance = vars.db.Instances[truename]
@@ -939,15 +939,28 @@ function addon:UpdateInstanceData()
   --debug("UpdateInstanceData()")
   if instancesUpdated then return end  -- nil before first use in UI
   instancesUpdated = true
-  local count = 0
+  local added = 0
+  local lfdid_to_name = {}
+  local wbid_to_name = {}
+  local id_blacklist = {}
   local starttime = debugprofilestop()
   local maxid = 1500
   -- previously we used GetFullRaidList() and LFDDungeonList to help populate the instance list
   -- Unfortunately those are loaded lazily, and forcing them to load from here can lead to taint.
   -- They are also somewhat incomplete, so instead we just brute force it, which is reasonably fast anyhow
   for id=1,maxid do
-    if addon:UpdateInstance(id) then
-      count = count + 1
+    local instname, newentry, blacklist = addon:UpdateInstance(id)
+    if newentry then
+      added = added + 1
+    end
+    if blacklist then
+      id_blacklist[id] = true
+    end
+    if instname then
+      if lfdid_to_name[id] then
+        debug("Duplicate entry in lfdid_to_name: "..id..":"..lfdid_to_name[id]..":"..instname)
+      end
+      lfdid_to_name[id] = instname
     end
   end
   for eid,info in pairs(addon.WorldBosses) do
@@ -956,18 +969,76 @@ function addon:UpdateInstanceData()
       info.name = select(2,EJ_GetCreatureInfo(1,eid))
     end
     info.name = info.name or "UNKNOWN"..eid
-    local instance = vars.db.Instances[info.name] or {}
-    vars.db.Instances[info.name] = instance
+    local instance = vars.db.Instances[info.name]
+    if not instance then
+      added = added + 1
+      instance = {}
+      vars.db.Instances[info.name] = instance
+    end
     instance.Show = instance.Show or "saved"
     instance.WorldBoss = eid
     instance.Expansion = info.expansion
     instance.RecLevel = info.level
     instance.Raid = true
+    wbid_to_name[eid] = info.name
   end
-  local chiji = select(2,EJ_GetCreatureInfo(1,857))
-  vars.db.Instances[chiji] = nil -- XXX: correct a data corruption caused by locale string removal on 6.0.2 launch 
+
+  -- instance merging: this algorithm removes duplicate entries created by client locale changes using the same database
+  -- we really should re-key the database by ID, but this is sufficient for now
+  local renames = 0
+  local merges = 0
+  local conflicts = 0
+  for instname, inst in pairs(vars.db.Instances) do
+    local truename
+    if inst.WorldBoss then
+      truename = wbid_to_name[inst.WorldBoss]
+    elseif inst.LFDID then
+      truename = lfdid_to_name[inst.LFDID]
+    else
+      debug("Ignoring bogus entry in instance database: "..instname)
+    end
+    if not truename then
+      if inst.LFDID and id_blacklist[inst.LFDID] then
+        debug("Removing blacklisted entry in instance database: "..instname)
+	vars.db.Instances[instname] = nil
+      else
+        debug("Ignoring unmatched entry in instance database: "..instname)
+      end
+    elseif instname == truename then
+      -- this is the canonical entry, nothing to do
+    else -- this is a stale entry, merge data and remove it
+      local trueinst = vars.db.Instances[truename]
+      if not trueinst or trueinst == inst then
+        debug("Merge error in UpdateInstanceData: "..truename)
+      else
+        for key, info in pairs(inst) do
+          if key:find(" - ") then -- is a character key
+	    if trueinst[key] then 
+	      -- merge conflict: keep the trueinst data
+	      debug("Merge conflict on "..truename..":"..instname..":"..key)
+	      conflicts = conflicts + 1
+	    else
+	      trueinst[key] = info
+	      merges = merges + 1
+	    end
+	  end
+        end
+	-- copy config settings, favoring old entry
+	trueinst.Show = inst.Show or trueinst.Show
+	-- clear stale entry
+	vars.db.Instances[instname] = nil
+        renames = renames + 1
+      end
+    end
+  end
+  -- addon.lfdid_to_name = lfdid_to_name 
+  -- addon.wbid_to_name = wbid_to_name
+
+  vars.config:BuildOptions() -- refresh config table
+  
   starttime = debugprofilestop()-starttime
-  debug("UpdateInstanceData(): completed "..count.." updates in "..string.format("%.6f",starttime/1000.0).." sec.")
+  debug("UpdateInstanceData(): completed in "..string.format("%.6f",starttime/1000.0).." sec : "..
+        added.." added, "..renames.." renames, "..merges.." merges, "..conflicts.." conflicts.")
   if addon.RefreshPending then
     addon.RefreshPending = nil
     core:Refresh()
@@ -975,8 +1046,8 @@ function addon:UpdateInstanceData()
 end
 
 --if LFDParentFrame then hooksecurefunc(LFDParentFrame,"Show",function() addon:UpdateInstanceData() end) end
-
 function addon:UpdateInstance(id)
+  -- returns: <instance_name>, <is_new_instance>, <blacklisted_id>
   --debug("UpdateInstance: "..id)
   if not id or id <= 0 then return end
   local name, typeID, subtypeID, 
@@ -988,23 +1059,17 @@ function addon:UpdateInstance(id)
   -- typeID 4 = outdoor area, typeID 6 = random
   maxPlayers = tonumber(maxPlayers)
   if not name or not expansionLevel or not recLevel or (typeID > 2 and typeID ~= TYPEID_RANDOM_DUNGEON) then return end
-  if name:find(PVP_RATED_BATTLEGROUND) then return end -- ignore 10v10 rated bg
+  if name:find(PVP_RATED_BATTLEGROUND) then return nil, nil, true end -- ignore 10v10 rated bg
   if subtypeID == LFG_SUBTYPEID_SCENARIO and typeID ~= TYPEID_RANDOM_DUNGEON then -- ignore non-random scenarios
-     if vars.db.Instances[name] and vars.db.Instances[name].LFDID == id then
-       vars.db.Instances[name] = nil -- clean old scenario entries
-     end
-     return 
+     return nil, nil, true
   end
   if typeID == 2 and subtypeID == 0 and difficulty == 14 and maxPlayers == 0 then
     --print("ignoring "..id, GetLFGDungeonInfo(id))
-    return -- ignore bogus LFR entries
+    return nil, nil, true -- ignore bogus LFR entries
   end
   if typeID == 1 and subtypeID == 5 and difficulty == 14 and maxPlayers == 25 then
     --print("ignoring "..id, GetLFGDungeonInfo(id))
-    if vars.db.Instances[name] and vars.db.Instances[name].LFDID == id then
-      vars.db.Instances[name] = nil
-    end
-    return -- ignore old Flex entries
+    return nil, nil, true -- ignore old Flex entries
   end
   if addon.LFRInstances[id] then -- ensure uniqueness (eg TeS LFR)
     local lfrid = vars.db.Instances[name] and vars.db.Instances[name].LFDID
@@ -1015,22 +1080,16 @@ function addon:UpdateInstance(id)
     name = L["LFR"]..": "..name
   end
   if id == 852 and expansionLevel == 5 then -- XXX: Molten Core hack
-    return -- ignore Molten Core holiday version, which has no save
+    return nil, nil, true -- ignore Molten Core holiday version, which has no save
   end
   if (id == 897 or id == 900) and expansionLevel == 4 then -- XXX: Highmaul / Blackrock Foundry hack
     expansionLevel = 5 -- fix incorrect expansionLevel
   end
   if id == 767 then -- ignore bogus Ordos entry
-    if vars.db.Instances[name] and vars.db.Instances[name].LFDID == id then
-      vars.db.Instances[name].LFDID = nil
-    end
-    return
+    return nil, nil, true
   end
   if id == 768 then -- ignore bogus Celestials entry
-    if vars.db.Instances[name] and vars.db.Instances[name].LFDID == id then
-      vars.db.Instances[name] = nil
-    end
-    return
+    return nil, nil, true
   end
 
   local instance = vars.db.Instances[name]
@@ -1056,7 +1115,7 @@ function addon:UpdateInstance(id)
   if subtypeID == LFG_SUBTYPEID_SCENARIO then
     instance.Scenario = true
   end
-  return newinst, true, name
+  return name, newinst
 end
 
 function addon:updateSpellTip(spellid)
@@ -3730,9 +3789,11 @@ end
 function core:UNIT_SPELLCAST_SUCCEEDED(evt, unit, spellName, rank, lineID, spellID)
   if unit ~= "player" then return end
   if trade_spells[spellID] then 
+    debug("UNIT_SPELLCAST_SUCCEEDED: "..GetSpellLink(spellID).." ("..spellID..")")
     if not core:record_skill(spellID) then return end
     core:ScheduleTimer("TradeSkillRescan", 0.5, spellID)
   elseif farm_spells[spellID] then
+    debug("UNIT_SPELLCAST_SUCCEEDED: "..GetSpellLink(spellID).." ("..spellID..")")
     core:record_farm(spellID)
   end
 end

@@ -47,11 +47,12 @@
 --    * Share Alike. If you alter, transform, or build upon this work, you may distribute the resulting work only under the same or similar license to this one.
 --
 
+
 -------------------------------
 --  Globals/Default Options  --
 -------------------------------
 DBM = {
-	Revision = tonumber(("$Revision: 11840 $"):sub(12, -3)),
+	Revision = tonumber(("$Revision: 11859 $"):sub(12, -3)),
 	DisplayVersion = "6.0.5 alpha", -- the string that is shown as version
 	ReleaseRevision = 11829 -- the revision of the latest stable version that is available
 }
@@ -201,6 +202,7 @@ DBM.DefaultOptions = {
 	LastRevision = 0,
 	FilterSayAndYell = false,
 	DebugMode = false,
+	DebugLevel = 1,
 	RoleSpecAlert = true,
 	WorldBossAlert = false,
 	AutoAcceptFriendInvite = false,
@@ -237,8 +239,9 @@ local chatPrefixVEM = "<Voice Encounter Mods> "
 local chatPrefixShort = "<DBM> "
 local chatPrefixShortVEM = "<VEM> "
 local ver = ("%s (r%d)"):format(DBM.DisplayVersion, DBM.Revision)
-local mainFrame = CreateFrame("Frame")
+local mainFrame = CreateFrame("Frame", "DBMMainFrame")
 local newerVersionPerson = {}
+local newerRevisionPerson = {}
 local combatInitialized = false
 local healthCombatInitialized = false
 local schedule
@@ -1473,6 +1476,14 @@ SlashCmdList["DEADLYBOSSMODS"] = function(msg)
 			return DBM:AddMsg(DBM_ERROR_NO_RAID)
 		end
 		DBM:RequestInstanceInfo()
+	elseif cmd:sub(1, 10) == "debuglevel" then
+		local level = tonumber(cmd:sub(11)) or 1
+		if level < 1 or level > 3 then
+			DBM:AddMsg("Invalid Value. Debug Level must be between 1 and 3.")
+			return
+		end
+		DBM.Options.DebugLevel = level
+		DBM:AddMsg("Debug Level is " .. level)
 	elseif cmd:sub(1, 5) == "debug" then
 		DBM.Options.DebugMode = DBM.Options.DebugMode == false and true or false
 		DBM:AddMsg("Debug Message is " .. (DBM.Options.DebugMode and "ON" or "OFF"))
@@ -1666,7 +1677,7 @@ do
 	local ignore, cancel
 	local popuplevel = 0
 	local function showPopupConfirmIgnore(ignore, cancel)
-		local popup = CreateFrame("Frame", nil, UIParent)
+		local popup = CreateFrame("Frame", "DBMHyperLinks", UIParent)
 		popup:SetBackdrop({bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background-Dark",
 			edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
 			tile = true, tileSize = 16, edgeSize = 16,
@@ -2623,8 +2634,12 @@ do
 		for i, v in ipairs(DBM.AddOns) do
 			local modTable = v[checkTable]
 			local enabled = GetAddOnEnableState(playerName, v.modId)
-			if enabled ~= 0 and not IsAddOnLoaded(v.modId) and modTable and checkEntry(modTable, checkValue) then
-				self:LoadMod(v)
+			if not IsAddOnLoaded(v.modId) and modTable and checkEntry(modTable, checkValue) then
+				if enabled ~= 0 then
+					self:LoadMod(v)
+				else
+					DBM:Debug("Not loading "..v.name.." because it is not enabled")
+				end
 			end
 		end
 		DBM:ScenarioCheck()--Do not filter. Because ScenarioCheck function includes filter.
@@ -2653,7 +2668,7 @@ function DBM:LoadMod(mod, force)
 		return false
 	end
 	if mod.isWorldBoss and not IsInInstance() and not force then
-		DBM:Debug("LoadMod denied for "..mod.name.." because world boss mods don't load this way")
+		DBM:Debug("LoadMod denied for "..mod.name.." because world boss mods don't load this way", 2)
 		return
 	end--Don't load world boss mod this way.
 	if InCombatLockdown() and not IsEncounterInProgress() and IsInInstance() then
@@ -2874,7 +2889,7 @@ do
 			canSetIcons[optionName] = false
 		end
 		local name = DBM:GetFullPlayerNameByGUID(iconSetPerson[optionName])
-		DBM:Debug(name.." was elected icon setter for "..optionName)
+		DBM:Debug(name.." was elected icon setter for "..optionName, 2)
 	end
 
 	syncHandlers["K"] = function(sender, cId)
@@ -3053,25 +3068,20 @@ do
 	end
 
 	syncHandlers["V"] = function(sender, revision, version, displayVersion, locale, iconEnabled)
-		revision, version = tonumber(revision or ""), tonumber(version or "")
+		revision, version = tonumber(revision), tonumber(version)
 		if revision and version and displayVersion and raid[sender] then
 			raid[sender].revision = revision
 			raid[sender].version = version
 			raid[sender].displayVersion = displayVersion
 			raid[sender].locale = locale
 			raid[sender].enabledIcons = iconEnabled or "false"
+			DBM:Debug("Received version info from "..sender.." : Rev - "..revision..", Ver - "..version..", Rev Diff - "..(revision - DBM.Revision), 2)
 			if version > tonumber(DBM.Version) then -- Update reminder
 				if not checkEntry(newerVersionPerson, sender) then
 					newerVersionPerson[#newerVersionPerson + 1] = sender
+					DBM:Debug("Newer version detected from "..sender.." : Rev - "..revision..", Ver - "..version..", Rev Diff - "..(revision - DBM.Revision), 2)
 				end
 				if #newerVersionPerson < 4 then
-					for i, v in pairs(raid) do
-						if (v.version or 0) >= version and v ~= raid[sender] then
-							if not checkEntry(newerVersionPerson, sender) then
-								newerVersionPerson[#newerVersionPerson + 1] = sender
-							end
-						end
-					end
 					if #newerVersionPerson == 2 and updateNotificationDisplayed < 2 then--Only requires 2 for update notification.
 						--Find min revision.
 						updateNotificationDisplayed = 2
@@ -3097,19 +3107,14 @@ do
 					end
 				end
 			end
-			if DBM.DisplayVersion:find("alpha") and #newerVersionPerson < 2 and (revision - DBM.Revision) > 30 then--Revision 20 can be increased in 1 day, so raised it to 30.
-				local found = false
-				for i, v in pairs(raid) do
-					if (v.revision or 0) >= revision and v ~= raid[sender] then
-						found = true
-						break
-					end
+			if DBM.DisplayVersion:find("alpha") and #newerVersionPerson < 2 and #newerRevisionPerson < 2 and updateNotificationDisplayed < 2 and (revision - DBM.Revision) > 30 then--Revision 20 can be increased in 1 day, so raised it to 30. Requires 2 person.
+				if not checkEntry(newerRevisionPerson, sender) then
+					newerRevisionPerson[#newerRevisionPerson + 1] = sender
+					DBM:Debug("Newer revision detected from "..sender.." : Rev - "..revision..", Ver - "..version..", Rev Diff - "..(revision - DBM.Revision))
 				end
-				if found then--Running alpha version that's out of date
-					if updateNotificationDisplayed < 2 then
-						updateNotificationDisplayed = 2
-						DBM:AddMsg(DBM_CORE_UPDATEREMINDER_HEADER_ALPHA:format(revision - DBM.Revision))
-					end
+				if #newerRevisionPerson == 2 then
+					updateNotificationDisplayed = 2
+					DBM:AddMsg(DBM_CORE_UPDATEREMINDER_HEADER_ALPHA:format(revision - DBM.Revision))
 				end
 			end
 		end
@@ -3595,7 +3600,7 @@ do
 	local frame, fontstring, fontstringFooter
 
 	local function createFrame()
-		frame = CreateFrame("Frame", nil, UIParent)
+		frame = CreateFrame("Frame", "DBMUpdateReminder", UIParent)
 		frame:SetFrameStrata("FULLSCREEN_DIALOG") -- yes, this isn't a fullscreen dialog, but I want it to be in front of other DIALOG frames (like DBM GUI which might open this frame...)
 		frame:SetWidth(430)
 		frame:SetHeight(140)
@@ -3778,7 +3783,7 @@ do
 	end
 	
 	function DBM:UNIT_TARGETABLE_CHANGED()
-		if Transcriptor and Transcriptor:IsLogging() then
+		if DBM.Options.DebugLevel > 2 or (Transcriptor and Transcriptor:IsLogging()) then
 			self:Debug("UNIT_TARGETABLE_CHANGED event fired")
 		end
 	end
@@ -3788,7 +3793,7 @@ do
 	--And I have transcriptor log, i still don't know which event is right one sometimes. It's important to SEE which event is firing during an exact moment of a fight.
 	function DBM:UNIT_SPELLCAST_SUCCEEDED(uId, spellName, _, _, spellId)
 		if not (uId == "boss1" or uId == "boss2" or uId == "boss3" or uId == "boss4" or uId == "boss5") then return end
-		if Transcriptor and Transcriptor:IsLogging() then--Only want this information if it's a new fight we're running transcriptor for, otherwise, no spam.
+		if DBM.Options.DebugLevel > 2 or (Transcriptor and Transcriptor:IsLogging()) then
 			self:Debug("UNIT_SPELLCAST_SUCCEEDED fired: "..UnitName(uId).."'s "..spellName.."("..spellId..")")
 		end
 	end
@@ -5044,11 +5049,13 @@ function DBM:AddMsg(text, prefix)
 	frame:AddMessage(("|cffff7d0a<|r|cffffd200%s|r|cffff7d0a>|r %s"):format(tostring(prefix), tostring(text)), 0.41, 0.8, 0.94)
 end
 
-function DBM:Debug(text)
+function DBM:Debug(text, level)
 	if not self.Options.DebugMode then return end
-	local frame = _G[tostring(DBM.Options.ChatFrame)]
-	frame = frame and frame:IsShown() and frame or DEFAULT_CHAT_FRAME
-	frame:AddMessage("|cffff7d0aDBM Debug:|r "..text, 1, 1, 1)
+	if (level or 1) <= DBM.Options.DebugLevel then
+		local frame = _G[tostring(DBM.Options.ChatFrame)]
+		frame = frame and frame:IsShown() and frame or DEFAULT_CHAT_FRAME
+		frame:AddMessage("|cffff7d0aDBM Debug:|r "..text, 1, 1, 1)
+	end
 end
 
 do
@@ -5687,7 +5694,7 @@ do
 end
 
 do
-	local frame = CreateFrame("Frame") -- frame for CLEU events, we don't want to run all *_MISSED events through the whole DBM event system...
+	local frame = CreateFrame("Frame", "DBMShields") -- frame for CLEU events, we don't want to run all *_MISSED events through the whole DBM event system...
 
 	local activeShields = {}
 	local shieldsByGuid = {}
@@ -6640,7 +6647,7 @@ end
 --  Special Warning Object  --
 ------------------------------
 do
-	local frame = CreateFrame("Frame", nil, UIParent)
+	local frame = CreateFrame("Frame", "DBMSpecialWarning", UIParent)
 	local font = frame:CreateFontString(nil, "OVERLAY", "ZoneTextFont")
 	frame:SetMovable(1)
 	frame:SetWidth(1)

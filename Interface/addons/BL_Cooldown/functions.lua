@@ -6,6 +6,7 @@ local BLCD = BLCD
 local LGIST = LibStub:GetLibrary("LibGroupInSpecT-1.1")
 local CB = LibStub("LibCandyBar-3.0")
 local Elv = IsAddOnLoaded("ElvUI")
+local ACD = LibStub("AceConfigDialog-3.0") -- Also for options panel
 
 if(Elv) then
 	E, L, V, P, G =  unpack(ElvUI);
@@ -15,6 +16,7 @@ local GameFontHighlightSmallOutline = GameFontHighlightSmallOutline
 local _fontName, _fontSize = GameFontHighlightSmallOutline:GetFont()
 local _fontShadowX, _fontShadowY = GameFontHighlightSmallOutline:GetShadowOffset()
 local _fontShadowR, _fontShadowG, _fontShadowB, _fontShadowA = GameFontHighlightSmallOutline:GetShadowColor()
+local bResIDs = {20484, 20707, 61999}
 
 --------------------------------------------------------
 
@@ -105,9 +107,9 @@ end
 -- Display Bar Functions --
 --------------------------------------------------------
 local function barSorter(a, b)
-	local caster1 = a:Get("raidcooldowns:caster")
-	local caster2 = b:Get("raidcooldowns:caster")
 	if a.remaining == b.remaining then
+		local caster1 = a:Get("raidcooldowns:caster")
+		local caster2 = b:Get("raidcooldowns:caster")
 		return caster1 < caster2
 	else
 		return a.remaining < b.remaining
@@ -118,18 +120,20 @@ function BLCD:RearrangeBars(anchor) -- frameicon
 	if not anchor then return end
 	if not next(anchor.bars) then
 		if anchor:IsVisible() then
-			BLCD:BLHeight(anchor:GetParent(), 28*BLCD.profileDB.scale)
+			BLCD:BLHeight(anchor:GetParent(), 28*BLCD.db.profile.scale)
 		end
 	return end
 	local frame = anchor:GetParent()
-	local scale = BLCD.profileDB.scale
-	local growth = BLCD.profileDB.growth
+	local scale = BLCD.db.profile.scale
+	local growth = BLCD.db.profile.growth
 	local currBars = {}
 	
 	for bar in pairs(anchor.bars) do
 		if bar:IsVisible() then
 			currBars[#currBars + 1] = bar
-		else	
+		else
+			--print('hidden', bar:Get("raidcooldowns:caster"), bar:Get("raidcooldowns:spell"))
+			bar:Show()
 			anchor.bars[bar] = nil
 			bar:Stop()
 		end
@@ -209,14 +213,14 @@ function BLCD:CreateBar(frame,cooldown,caster,frameicon,guid,duration,spell)
 	bar:Set("raidcooldowns:cooldown", cooldown)
 	bar:SetParent(frameicon)
 	bar:SetFrameStrata("MEDIUM")
-	if BLCD.profileDB.classcolorbars then
+	if BLCD.db.profile.classcolorbars then
 		local color = RAID_CLASS_COLORS[cooldown['class']] or {r=0.5; g=0.5; b=0.5}
 		bar:SetColor(color.r,color.g,color.b,1)
 	else
 		bar:SetColor(.5,.5,.5,1)
 	end	
 	bar:SetDuration(duration)
-	bar:SetScale(BLCD.profileDB.scale)
+	bar:SetScale(BLCD.db.profile.scale)
 	bar:SetClampedToScreen(true)
 	
 	local caster = strsplit("-",caster)
@@ -251,12 +255,11 @@ function BLCD:StopPausedBar(cooldown,guid)
 end
 
 function BLCD:CheckPausedBars(cooldown,unit)
-	if BLCD.profileDB.availablebars then
+	if BLCD.db.profile.availablebars then
 		local unitDead = UnitIsDeadOrGhost(unit) and true
 		local unitOnline = (UnitIsConnected(unit) or false)
 		local name = UnitName(unit)
 		local guid = UnitGUID(unit)
-		
 		if BLCD.curr[cooldown['spellID']] and BLCD.curr[cooldown['spellID']][guid] then
 			local bar = BLCD.curr[cooldown['spellID']][guid]
 			if unitDead or not unitOnline then
@@ -265,18 +268,14 @@ function BLCD:CheckPausedBars(cooldown,unit)
 				end
 			end
 		end
-		if BLCD.profileDB.cooldown[cooldown.name] and BLCD.cooldownRoster[cooldown['spellID']][guid] and not (BLCD.curr[cooldown['spellID']] and BLCD.curr[cooldown['spellID']][guid]) then
+		if BLCD.db.profile.cooldown[cooldown.name] and BLCD.cooldownRoster[cooldown['spellID']][guid] and not (BLCD.curr[cooldown['spellID']] and BLCD.curr[cooldown['spellID']][guid]) then
 			if not unitDead and unitOnline then
-				BLCD:CreatePausedBar(cooldown,guid)
+				BLCD:CreatePausedBar(cooldown, guid)
 			end
-		end
-		if not unitDead and unitOnline then
-			BLCD:ScheduleTimer( function() BLCD.tmp[name] = 0 end, 1)
 		end
 	end
 end
 
---------------------------------------------------------
 
 --------------------------------------------------------
 -- Visibility Functions --
@@ -284,34 +283,25 @@ end
 function BLCD:CheckVisibility()
 	local frame = BLCooldownBase_Frame
 	local grouptype = BLCD:GetPartyType()
-	if(BLCD.profileDB.show == "always") then
-		frame:Show()
-		BLCD.show = true
-	elseif(BLCD.profileDB.show == "never") then
+	if(BLCD.db.profile.show == "never") then
 		frame:Hide()
 		BLCD.show = nil
-	elseif(BLCD.profileDB.show == "solo" and grouptype == "none") then
+	elseif(BLCD.db.profile.show == "raid" and (grouptype =="raid" or grouptype == "instance")) then
 		frame:Show()
 		BLCD.show = true
-	elseif(BLCD.profileDB.show == "solo" and grouptype ~= "none") then
+	elseif(BLCD.db.profile.show == "raid" and not (grouptype =="raid" or grouptype == "instance")) then
 		frame:Hide()
 		BLCD.show = nil
-	elseif(BLCD.profileDB.show == "raid" and (grouptype =="raid" or grouptype == "instance")) then
+	elseif(BLCD.db.profile.show == "raidorparty" and (grouptype =="raid" or grouptype == "instance" or grouptype=="party")) then
 		frame:Show()
 		BLCD.show = true
-	elseif(BLCD.profileDB.show == "raid" and not (grouptype =="raid" or grouptype == "instance")) then
-		frame:Hide()
-		BLCD.show = nil
-	elseif(BLCD.profileDB.show == "raidorparty" and (grouptype =="raid" or grouptype == "instance" or grouptype=="party")) then
-		frame:Show()
-		BLCD.show = true
-	elseif(BLCD.profileDB.show == "raidorparty" and not (grouptype =="raid" or grouptype == "instance" or grouptype=="party")) then
+	elseif(BLCD.db.profile.show == "raidorparty" and not (grouptype =="raid" or grouptype == "instance" or grouptype=="party")) then
 		frame:Hide()
 		BLCD.show = nil	
-	elseif(BLCD.profileDB.show == "party" and grouptype =="party") then
+	elseif(BLCD.db.profile.show == "party" and grouptype =="party") then
 		frame:Show()
 		BLCD.show = true
-	elseif(BLCD.profileDB.show == "party" and grouptype ~="party") then
+	elseif(BLCD.db.profile.show == "party" and grouptype ~="party") then
 		frame:Hide()
 		BLCD.show = nil
 	end
@@ -343,13 +333,116 @@ function BLCD:ToggleMoversLock()
 		BLCD.locked = true
 		print("locked")
 		local point,_,relPoint,xOfs,yOfs = raidcdbasemover:GetPoint(1)
-		BLCD.profileDB.framePoint = point
-		BLCD.profileDB.relativePoint = relPoint
-		BLCD.profileDB.xOffset = xOfs
-		BLCD.profileDB.yOffset = yOfs
+		BLCD.db.profile.framePoint = point
+		BLCD.db.profile.relativePoint = relPoint
+		BLCD.db.profile.xOffset = xOfs
+		BLCD.db.profile.yOffset = yOfs
 	end
 end
 --------------------------------------------------------
+--------------------------------------------------------
+-- Minimap Button
+
+function BLCD:initMiniMap()
+	button = CreateFrame("Button", "BLCD_MinimapButton", Minimap)
+	button.db = BLCD.db.profile.minimapPos or 0
+	button:SetFrameStrata("MEDIUM")
+	button:SetSize(31, 31)
+	button:SetFrameLevel(8)
+	button:RegisterForClicks("anyUp")
+	button:RegisterForDrag("LeftButton")
+	button:SetHighlightTexture("Interface\\Minimap\\UI-Minimap-ZoomButton-Highlight")
+	local overlay = button:CreateTexture(nil, "OVERLAY")
+	overlay:SetSize(53, 53)
+	overlay:SetTexture("Interface\\Minimap\\MiniMap-TrackingBorder")
+	overlay:SetPoint("TOPLEFT")
+	local background = button:CreateTexture(nil, "BACKGROUND")
+	background:SetSize(20, 20)
+	background:SetTexture("Interface\\Minimap\\UI-Minimap-Background")
+	background:SetPoint("TOPLEFT", 7, -5)
+	local icon = button:CreateTexture(nil, "ARTWORK")
+	icon:SetSize(17, 17)
+	icon:SetTexture("Interface\\Addons\\BL_Cooldown\\media\\BLCD")
+	icon:SetPoint("TOPLEFT", 7, -6)
+	button.icon = icon
+	button.isMouseDown = false
+
+	--button:SetScript("OnEnter", onEnter)
+	--button:SetScript("OnLeave", onLeave)
+
+	local onClick, onMouseUp, onMouseDown, onDragStart, onDragStop, onDragEnd, updatePosition
+
+	local minimapShapes = {
+		["ROUND"] = {true, true, true, true},
+		["SQUARE"] = {false, false, false, false},
+		["CORNER-TOPLEFT"] = {false, false, false, true},
+		["CORNER-TOPRIGHT"] = {false, false, true, false},
+		["CORNER-BOTTOMLEFT"] = {false, true, false, false},
+		["CORNER-BOTTOMRIGHT"] = {true, false, false, false},
+		["SIDE-LEFT"] = {false, true, false, true},
+		["SIDE-RIGHT"] = {true, false, true, false},
+		["SIDE-TOP"] = {false, false, true, true},
+		["SIDE-BOTTOM"] = {true, true, false, false},
+		["TRICORNER-TOPLEFT"] = {false, true, true, true},
+		["TRICORNER-TOPRIGHT"] = {true, false, true, true},
+		["TRICORNER-BOTTOMLEFT"] = {true, true, false, true},
+		["TRICORNER-BOTTOMRIGHT"] = {true, true, true, false},
+	}
+
+	function updatePosition(button)
+		local angle = math.rad(BLCD.db.profile.minimapPos or 225)
+		local x, y, q = math.cos(angle), math.sin(angle), 1
+		if x < 0 then q = q + 1 end
+		if y > 0 then q = q + 2 end
+		local minimapShape = GetMinimapShape and GetMinimapShape() or "ROUND"
+		local quadTable = minimapShapes[minimapShape]
+		if quadTable[q] then
+			x, y = x*80, y*80
+		else
+			local diagRadius = 103.13708498985 --math.sqrt(2*(80)^2)-10
+			x = math.max(-80, math.min(x*diagRadius, 80))
+			y = math.max(-80, math.min(y*diagRadius, 80))
+		end
+		button:SetPoint("CENTER", Minimap, "CENTER", x, y)
+	end
+
+	local function onUpdate(self)
+		local mx, my = Minimap:GetCenter()
+		local px, py = GetCursorPosition()
+		local scale = Minimap:GetEffectiveScale()
+		px, py = px / scale, py / scale
+		BLCD.db.profile.minimapPos = math.deg(math.atan2(py - my, px - mx)) % 360
+		updatePosition(self)
+	end
+
+	function onDragStart(self)
+		self:LockHighlight()
+		self.isMouseDown = true
+		self:SetScript("OnUpdate", onUpdate)
+		self.isMoving = true
+		GameTooltip:Hide()
+	end
+
+	function onDragStop(self)
+		self:SetScript("OnUpdate", nil)
+		self.isMouseDown = false
+		self:UnlockHighlight()
+		self.isMoving = nil
+	end
+
+	button:SetScript("OnClick", function() if ACD.OpenFrames["BLCD"] then ACD:Close("BLCD") else ACD:Open("BLCD") end end)
+	button:SetScript("OnDragStart", onDragStart)
+	button:SetScript("OnDragStop", onDragStop)
+	updatePosition(button)
+	if BLCD.db.profile.minimap then
+		button:Show()
+	else
+		button:Hide()
+	end
+	BLCD.minimapButton = button
+end
+
+---------------------------------------------------------------------------------------
 
 --------------------------------------------------------
 -- Frame Functions --
@@ -393,7 +486,7 @@ function BLCD:OnLeave(self)
 end
 
 function BLCD:PostClick(self, cooldown, rosterCD, onCD)
-	if(BLCD.profileDB.clickannounce) then
+	if(BLCD.db.profile.clickannounce) then
 		--local allCD = BLCD:shallowcopy(rosterCD)
 		--local grouptype = BLCD:GetPartyType()
 		--for i,v in pairs(onCD) do
@@ -442,29 +535,32 @@ end
 function BLCD:Scale()
 	local raidcdbase = BLCooldownBase_Frame
 	local raidcdbasemover = BLCooldownBaseMover_Frame
-	BLCD:BLSize(raidcdbase,32*BLCD.profileDB.scale,(32*BLCD.active)*BLCD.profileDB.scale)
-	BLCD:BLSize(raidcdbasemover,32*BLCD.profileDB.scale,(32*BLCD.active)*BLCD.profileDB.scale)
+	BLCD:BLSize(raidcdbase,32*BLCD.db.profile.scale,32*BLCD.db.profile.scale)
+	BLCD:BLSize(raidcdbasemover,32*BLCD.db.profile.scale,96*BLCD.db.profile.scale)
 	local i,cooldown
 	for i,cooldown in pairs(BLCD.cooldowns) do
 		i = cooldown.index
 		if (BLCD.db.profile.cooldown[cooldown.name]) then
-		BLCD:BLHeight(_G['BLCooldown'..i],28*BLCD.profileDB.scale);
-		BLCD:BLWidth(_G['BLCooldown'..i],145*BLCD.profileDB.scale);	
-		BLCD:BLSize(_G['BLCooldownIcon'..i],28*BLCD.profileDB.scale,28*BLCD.profileDB.scale);
-		BLCD:BLFontTemplate(_G['BLCooldownIcon'..i].text, 20*BLCD.profileDB.scale, 'OUTLINE')
+		BLCD:BLHeight(_G['BLCooldown'..i],28*BLCD.db.profile.scale);
+		BLCD:BLWidth(_G['BLCooldown'..i],145*BLCD.db.profile.scale);	
+		BLCD:BLSize(_G['BLCooldownIcon'..i],28*BLCD.db.profile.scale,28*BLCD.db.profile.scale);
+		BLCD:BLFontTemplate(_G['BLCooldownIcon'..i].text, 20*BLCD.db.profile.scale, 'OUTLINE')
 		end
 	end
+	BLCD:BLSize(BLCD.resFrame,35*BLCD.db.profile.scale,30*BLCD.db.profile.scale);
+	BLCD:BLSize(BLCD.resFrameIcon,35*BLCD.db.profile.scale,30*BLCD.db.profile.scale);
+	BLCD:BLFontTemplate(BLCD.resFrameIcon.text, 14*BLCD.db.profile.scale, 'OUTLINE')
 end
 
 function BLCD:SetBarGrowthDirection(frame, frameicon, index)
-	if(BLCD.profileDB.growth == "left") then
+	if(BLCD.db.profile.growth == "left") then
 		if index == nil then
 			BLCD:BLPoint(frame,'TOPRIGHT', 'BLCooldownBase_Frame', 'TOPRIGHT', 2, -2);
 		else
 			BLCD:BLPoint(frame,'TOPRIGHT', 'BLCooldown'..(index), 'BOTTOMRIGHT', 0, -2);
 		end
 		BLCD:BLPoint(frameicon,'TOPRIGHT', frame, 'TOPRIGHT');
-	elseif(BLCD.profileDB.growth  == "right") then
+	elseif(BLCD.db.profile.growth  == "right") then
 		--[[if index == nil then
 			BLCD:BLPoint(frame,'TOPLEFT', 'BLCooldownBase_Frame', 'TOPLEFT', 2, -2);
 		else
@@ -475,13 +571,13 @@ function BLCD:SetBarGrowthDirection(frame, frameicon, index)
 end
 
 function BLCD:RepositionFrames(frame, index, cooldownFrames)
-	if(BLCD.profileDB.growth == "left") then
+	if(BLCD.db.profile.growth == "left") then
 		if index == nil then
 			BLCD:BLPoint(frame,'TOPRIGHT', 'BLCooldownBase_Frame', 'TOPRIGHT', 2, -2);
 		else
 			BLCD:BLPoint(frame,'TOPRIGHT', 'BLCooldown'..(index), 'BOTTOMRIGHT', 0, -2);
 		end
-	elseif(BLCD.profileDB.growth  == "right") then
+	elseif(BLCD.db.profile.growth  == "right") then
 		if index == nil then
 			BLCD:BLPoint(frame,'TOPLEFT', 'BLCooldownBase_Frame', 'TOPLEFT', 2, -2);
 		else
@@ -528,11 +624,11 @@ function BLCD:BLWidth(frame, width)
 	end
 end
 
-function BLCD:BLSize(frame, height, width)
+function BLCD:BLSize(frame, width, height)
 	if(Elv) then
-		frame:Size(height, width)
+		frame:Size(width, height)
 	else
-		frame:SetSize(height, width)
+		frame:SetSize(width, height)
 	end
 end
 

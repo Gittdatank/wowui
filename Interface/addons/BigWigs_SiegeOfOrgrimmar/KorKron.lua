@@ -41,7 +41,7 @@ function mod:GetOptions()
 		{144005, "FLASH", "SAY"}, {143990, "FLASH", "ICON"}, 143973, -- Wavebinder Kardris
 		-8124, 144302, "berserk", "bosskill",
 	}, {
-		[144330] = "heroic",
+		[144330] = "mythic",
 		[144215] = -8128, -- Earthbreaker Haromm
 		[144005] = -8134, -- Wavebinder Kardris
 		[-8124] = "general",
@@ -49,7 +49,7 @@ function mod:GetOptions()
 end
 
 function mod:OnBossEnable()
-	-- Heroic
+	-- Mythic
 	self:Log("SPELL_AURA_APPLIED", "IronPrison", 144330)
 	self:Log("SPELL_CAST_START", "IronTomb", 144328)
 	-- Earthbreaker Haromm
@@ -74,14 +74,14 @@ function mod:OnEngage()
 	wipe(marksUsed)
 	ashCounter = 1
 	hpWarned = 1
-	self:RegisterUnitEvent("UNIT_HEALTH_FREQUENT", "TotemWarn", "boss1")
+	self:RegisterUnitEvent("UNIT_HEALTH_FREQUENT", "TotemWarn", "boss1", "boss2") -- Check both as one may get out of range when using the splitting tactic
 end
 
 --------------------------------------------------------------------------------
 -- Event Handlers
 --
 
--- Heroic
+-- Mythic
 
 function mod:IronTomb(args)
 	self:Bar(args.spellId, 31)
@@ -231,15 +231,16 @@ function mod:Bloodlust(args)
 end
 
 do
-	local hpWarn = { 87, 68, 53, 28 } -- Poisonmist, Foulstream, Ashflare, Bloodlust
+	local hpWarn = { 87, 68, 53, 28, 0 } -- Poisonmist, Foulstream, Ashflare, Bloodlust. 0 to prevent errors, saves on having a hpWarn[hpWarned] existence check being called every time it fires
 	local warnings = { mod:SpellName(-8125), mod:SpellName(-8126), mod:SpellName(-8127), mod:SpellName(-8120) }
 	function mod:TotemWarn(unit)
 		local hp = UnitHealth(unit)/UnitHealthMax(unit) * 100
 		if hp < hpWarn[hpWarned] then
-			self:Message(-8124, "Neutral", "Info", CL.soon:format(warnings[hpWarned]), false)
+			local msg = CL.soon:format(warnings[hpWarned])
 			hpWarned = hpWarned + 1
-			if hpWarned > #hpWarn then
-				self:UnregisterUnitEvent("UNIT_HEALTH_FREQUENT", unit)
+			self:Message(-8124, "Neutral", "Info", msg, false)
+			if hpWarned > 4 then
+				self:UnregisterUnitEvent("UNIT_HEALTH_FREQUENT", "boss1", "boss2")
 			end
 		end
 	end

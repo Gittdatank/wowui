@@ -3502,9 +3502,9 @@ psdisbandinsec25=GetTime()
 	psleavepartydelay=GetTime()+0.9
 	if #pswaitlisttoreinvite>4 then
 		pswhatdiff=GetRaidDifficultyID()-3
-		if pswhatdiff<1 then
-      pswhatdiff=1
-    end
+		if pswhatdiff<1 or pswhatdiff<14 or pswhatdiff>16 then
+			pswhatdiff=14
+		end
 		psneedconvertquick=GetTime()+1.5
 	end
 else
@@ -3651,7 +3651,7 @@ DropDowndiffrai1:ClearAllPoints()
 DropDowndiffrai1:SetPoint("TOPLEFT", 3, -166)
 DropDowndiffrai1:Show()
 
-local items = {"10, "..psiccnormal, "25, "..psiccnormal, "10, "..psiccheroic, "25, "..psiccheroic}
+local items = {"Normal", "Heroic", "Mythic"}
 
 local function OnClick(self)
 UIDropDownMenu_SetSelectedID(DropDowndiffrai1, self:GetID())
@@ -3690,7 +3690,7 @@ DropDownraiddiff2:ClearAllPoints()
 DropDownraiddiff2:SetPoint("TOPLEFT", 3, -309)
 DropDownraiddiff2:Show()
 
-local items = {"10, "..psiccnormal, "25, "..psiccnormal, "10, "..psiccheroic, "25, "..psiccheroic, pschatlist4}
+local items = {"Normal", "Heroic", "Mythic", pschatlist4}
 
 local function OnClick(self)
 UIDropDownMenu_SetSelectedID(DropDownraiddiff2, self:GetID())

@@ -23,7 +23,7 @@ do
 	--@end-alpha@]===]
 
 	-- This will (in ZIPs), be replaced by the highest revision number in the source tree.
-	myRevision = tonumber("12137")
+	myRevision = tonumber("12186")
 
 	-- If myRevision ends up NOT being a number, it means we're running a SVN copy.
 	if type(myRevision) ~= "number" then
@@ -751,7 +751,7 @@ do
 		if guid then
 			local _, _, _, _, _, id = strsplit("-", guid)
 			local mobId = tonumber(id)
-			if worldBosses[mobId] then
+			if mobId and worldBosses[mobId] then
 				local id = worldBosses[mobId]
 				if InCombatLockdown() or UnitAffectingCombat("player") then
 					if not queueLoad[id] then

@@ -359,8 +359,7 @@ do
 	end
 	function mod:InjectionRemoved(args)
 		if getBossByMobId(71158) then -- no more parasites spawn when boss is dead
-			local diff = self:Difficulty()
-			parasiteCounter = parasiteCounter + ((diff == 4 or diff == 6) and 8 or 5)
+			parasiteCounter = parasiteCounter + 5
 			self:Message(143339, "Attention", nil, L.parasites_up:format(parasiteCounter), 99315) -- spell called parasite, worm look like icon
 		end
 		self:CancelDelayedMessage(L.injection_over_soon:format(args.destName))
@@ -548,10 +547,10 @@ local function iyyokukSelected()
 
 	if mod.db.profile.custom_off_edge_marks then
 		if not raidParsed then
-			for i = 1, GetNumGroupMembers() do
-				local name = GetRaidRosterInfo(i)
-				shape, color, number = parseDebuff(name)
+			for unit in mod:IterateGroup() do
+				shape, color, number = parseDebuff(unit)
 				if shape then
+					local name = mod:UnitName(unit)
 					results[shape][name] = true
 					results[color][name] = true
 					results[number][name] = true
@@ -561,10 +560,10 @@ local function iyyokukSelected()
 		end
 
 		local count = 1
-		for i = 1, GetNumGroupMembers() do
-			local name = GetRaidRosterInfo(i)
+		for unit in mod:IterateGroup() do
+			local name = mod:UnitName(unit)
 			if (results.shape and results[results.shape][name]) or (results.color and results[results.color][name]) or (results.number and results[results.number][name]) then
-				SetRaidTarget(name, count)
+				SetRaidTarget(unit, count)
 				count = count + 1
 				if count > 8 then break end
 			end
@@ -595,7 +594,6 @@ end
 
 function mod:EncaseInEmber(args)
 	if UnitDebuff("player", self:SpellName(148650)) then
-		-- XXX for pulse, maybe should add a custom option description so people know to turn pulse on for this, or turn it on by default?
 		self:Flash(148650) -- Strong Legs
 	end
 	self:TargetMessage(args.spellId, args.destName, "Important", self:Damager() and "Warning")
@@ -640,10 +638,9 @@ do
 	}
 	local function handleCatalystProximity()
 		wipe(redPlayers)
-		for i=1, GetNumGroupMembers() do
-			local name = GetRaidRosterInfo(i)
-			if not UnitIsUnit("player", name) and (UnitDebuff(name, mod:SpellName(142533)) or (mod:Mythic() and UnitDebuff(name, mod:SpellName(142534)))) then -- red or heroic and yellow
-				redPlayers[#redPlayers+1] = name
+		for unit in mod:IterateGroup() do
+			if not UnitIsUnit("player", unit) and (UnitDebuff(unit, mod:SpellName(142533)) or (mod:Mythic() and UnitDebuff(unit, mod:SpellName(142534)))) then -- red or mythic and yellow
+				redPlayers[#redPlayers+1] = mod:UnitName(unit)
 			end
 		end
 		local myDebuff = UnitDebuff("player", mod:SpellName(142532)) or UnitDebuff("player", mod:SpellName(142533)) or UnitDebuff("player", mod:SpellName(142534)) -- blue, red, yellow
@@ -666,7 +663,7 @@ do
 end
 
 function mod:CatalystsSuccess(args)
-	if self:Mythic() then -- on heroic they have flight time
+	if self:Mythic() then -- on mythic they have flight time
 		self:ScheduleTimer("CloseProximity", args.spellId == 142729 and 14 or 4, -8034) -- you want proximity open for purple for full duration of the debuff -- timers might need some adjusting
 	else
 		self:CloseProximity(-8034)

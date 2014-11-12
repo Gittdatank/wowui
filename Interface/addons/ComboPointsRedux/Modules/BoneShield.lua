@@ -4,7 +4,7 @@ CPR is a combo points display addon based on Funkydude's BasicComboPoints
 BoneShield.lua - A module for tracking Bone Shield stacks
 $Date: 2013-11-27 14:36:16 +0000 (Wed, 27 Nov 2013) $
 $Revision: 332 $
-Project Version: 3.2.5
+Project Version: 3.2.6
 contact: codemaster2010 AT gmail DOT com
 
 Copyright (c) 2007-2012 Michael J. Murray aka Lyte of Lothar(US)

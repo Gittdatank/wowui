@@ -4,7 +4,7 @@ CPR is a combo points display addon based on Funkydude's BasicComboPoints
 Combo.lua - A module for tracking combo points
 $Date: 2014-10-21 01:17:32 +0000 (Tue, 21 Oct 2014) $
 $Revision: 343 $
-Project Version: 3.2.5
+Project Version: 3.2.6
 contact: codemaster2010 AT gmail DOT com
 
 Copyright (c) 2007-2012 Michael J. Murray aka Lyte of Lothar(US)
