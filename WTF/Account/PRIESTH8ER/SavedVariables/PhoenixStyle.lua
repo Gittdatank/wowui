@@ -56683,7 +56683,7 @@ pspetstableok = {
 }
 pstrackbadsummons = 1
 psmergepets = 1
-psversionsaved2 = 6.004
+psversionsaved2 = 6.006
 psbossmodnoalphavar = 1
 psdonaspanvar = 3
 psshowaddframe34 = 1

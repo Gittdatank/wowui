@@ -8,7 +8,7 @@ GoldSave = {
 	["Gitt_Arthas::Horde"] = {
 		["show"] = true,
 		["name"] = "Gitt",
-		["gold"] = 79510946,
+		["gold"] = 80991137,
 	},
 	["Git_Azuremyst::Horde"] = {
 		["show"] = true,
@@ -28,6 +28,11 @@ GoldSave = {
 	["Giitt_Silvermoon::Horde"] = {
 		["show"] = true,
 		["name"] = "Giitt",
+		["gold"] = 0,
+	},
+	["Burk_Arthas::Horde"] = {
+		["show"] = true,
+		["name"] = "Burk",
 		["gold"] = 0,
 	},
 	["Spih_Cho'gall::Horde"] = {
@@ -58,17 +63,17 @@ GoldSave = {
 	["Got_Arthas::Horde"] = {
 		["show"] = true,
 		["name"] = "Got",
-		["gold"] = 286423933,
+		["gold"] = 499760065,
 	},
 	["Worgit_Moon Guard::Alliance"] = {
 		["show"] = true,
 		["name"] = "Worgit",
 		["gold"] = 0,
 	},
-	["Giit_Cho'gall::Horde"] = {
+	["Dbyx_Arthas::Horde"] = {
 		["show"] = true,
-		["name"] = "Giit",
-		["gold"] = 0,
+		["name"] = "Dbyx",
+		["gold"] = 9745091,
 	},
 	["Gyit_Area 52::Horde"] = {
 		["show"] = true,
@@ -88,11 +93,11 @@ GoldSave = {
 	["Git_Arthas::Horde"] = {
 		["show"] = true,
 		["name"] = "Git",
-		["gold"] = 8847969497,
+		["gold"] = 8820299198,
 	},
-	["Dbyx_Arthas::Horde"] = {
+	["Giit_Cho'gall::Horde"] = {
 		["show"] = true,
-		["name"] = "Dbyx",
-		["gold"] = 9745091,
+		["name"] = "Giit",
+		["gold"] = 0,
 	},
 }

@@ -34,13 +34,6 @@ X: 8
 Y: 178
 W: 260
 H: 150
-Frame: BLCooldownBaseMover_Frame
-FrameLevel: 1
-Anchor: TOPLEFT
-X: 0
-Y: -70
-W: 42
-H: 127
 Frame: GupPet_InterfaceOptionsFrame
 FrameLevel: 8
 Anchor: RIGHT

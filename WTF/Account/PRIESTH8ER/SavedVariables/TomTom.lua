@@ -6,6 +6,7 @@ TomTomDB = {
 		["Gitt - Arthas"] = "Default",
 		["Evyyn - Azuremyst"] = "Default",
 		["Git - Arthas"] = "Default",
+		["Burk - Arthas"] = "Default",
 		["Git - Cho'gall"] = "Default",
 		["Spih - Cho'gall"] = "Default",
 		["Got - Arthas"] = "Default",
@@ -25,6 +26,7 @@ TomTomWaypointsMF = {
 		["Gitt - Arthas"] = "Gitt - Arthas",
 		["Evyyn - Azuremyst"] = "Evyyn - Azuremyst",
 		["Git - Arthas"] = "Git - Arthas",
+		["Burk - Arthas"] = "Burk - Arthas",
 		["Git - Cho'gall"] = "Git - Cho'gall",
 		["Spih - Cho'gall"] = "Spih - Cho'gall",
 		["Got - Arthas"] = "Got - Arthas",
@@ -262,37 +264,6 @@ TomTomWaypointsMF = {
 					["minimap"] = true,
 					["world"] = true,
 				},
-				["951:0:648000000:288000000:Garnia"] = {
-					951, -- [1]
-					0, -- [2]
-					0.648, -- [3]
-					0.288, -- [4]
-					["arrivaldistance"] = 15,
-					["callbacks"] = {
-						["distance"] = {
-							[10] = nil --[[ skipped inline function ]],
-							[15] = nil --[[ skipped inline function ]],
-						},
-						["world"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
-						},
-						["minimap"] = {
-							["onclick"] = nil --[[ skipped inline function ]],
-							["tooltip_update"] = nil --[[ skipped inline function ]],
-							["tooltip_show"] = nil --[[ skipped inline function ]],
-						},
-					},
-					["persistent"] = true,
-					["desc"] = "Garnia",
-					["silent"] = true,
-					["cleardistance"] = 10,
-					["title"] = "Garnia",
-					["crazy"] = true,
-					["minimap"] = true,
-					["world"] = true,
-				},
 				["951:0:497000000:222000000:Archiereus of Flame (Sanctuary)"] = {
 					951, -- [1]
 					0, -- [2]
@@ -324,7 +295,40 @@ TomTomWaypointsMF = {
 					["minimap"] = true,
 					["world"] = true,
 				},
+				["951:0:648000000:288000000:Garnia"] = {
+					951, -- [1]
+					0, -- [2]
+					0.648, -- [3]
+					0.288, -- [4]
+					["arrivaldistance"] = 15,
+					["callbacks"] = {
+						["distance"] = {
+							[10] = nil --[[ skipped inline function ]],
+							[15] = nil --[[ skipped inline function ]],
+						},
+						["world"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+						["minimap"] = {
+							["onclick"] = nil --[[ skipped inline function ]],
+							["tooltip_update"] = nil --[[ skipped inline function ]],
+							["tooltip_show"] = nil --[[ skipped inline function ]],
+						},
+					},
+					["persistent"] = true,
+					["desc"] = "Garnia",
+					["silent"] = true,
+					["cleardistance"] = 10,
+					["title"] = "Garnia",
+					["crazy"] = true,
+					["minimap"] = true,
+					["world"] = true,
+				},
 			},
+		},
+		["Burk - Arthas"] = {
 		},
 		["Git - Cho'gall"] = {
 			[951] = {

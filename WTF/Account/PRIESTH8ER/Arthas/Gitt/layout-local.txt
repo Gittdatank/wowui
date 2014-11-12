@@ -15,11 +15,11 @@ W: 210
 H: 521
 Frame: AskMrRobot_Dialog
 FrameLevel: 52
-Anchor: TOPRIGHT
+Anchor: RIGHT
 X: -211
-Y: -164
-W: 600
-H: 530
+Y: 161
+W: 615
+H: 550
 Frame: PSFmain1
 FrameLevel: 1
 Anchor: CENTER
@@ -62,3 +62,10 @@ X: -51
 Y: -203
 W: 100
 H: 30
+Frame: VEMMinimapButton
+FrameLevel: 2
+Anchor: TOPRIGHT
+X: -146
+Y: -138
+W: 32
+H: 32

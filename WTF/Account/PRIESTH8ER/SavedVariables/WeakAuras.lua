@@ -30,7 +30,7 @@ WeakAurasSaved = {
 				},
 				["difficulty"] = "heroic",
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -40,8 +40,12 @@ WeakAurasSaved = {
 						["TANK"] = true,
 					},
 				},
-				["use_difficulty"] = true,
 				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["use_difficulty"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -197,17 +201,21 @@ WeakAurasSaved = {
 			["fontSize"] = 8,
 			["displayStacks"] = "%p",
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -339,7 +347,7 @@ WeakAurasSaved = {
 					["duration_type"] = "seconds",
 				},
 			},
-			["height"] = 9.99999713897705,
+			["height"] = 10.0799760818481,
 			["trigger"] = {
 				["name_operator"] = "==",
 				["subeventSuffix"] = "_CAST_START",
@@ -364,7 +372,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["size"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -379,11 +391,10 @@ WeakAurasSaved = {
 						["WARRIOR"] = true,
 					},
 				},
-				["race"] = {
+				["size"] = {
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
 			},
 			["parent"] = "vengeance",
 		},
@@ -434,17 +445,21 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -554,6 +569,10 @@ WeakAurasSaved = {
 			["height"] = 30,
 			["load"] = {
 				["use_never"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
@@ -681,6 +700,21 @@ WeakAurasSaved = {
 			["font"] = "Arial Narrow",
 			["height"] = 64,
 			["load"] = {
+				["use_never"] = true,
+				["zone"] = "Siege of Orgrimmar",
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["use_zone"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["multi"] = {
+					},
+				},
 				["role"] = {
 					["multi"] = {
 					},
@@ -689,17 +723,6 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_never"] = true,
-				["zone"] = "Siege of Orgrimmar",
-				["class"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["use_zone"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -752,17 +775,21 @@ WeakAurasSaved = {
 		},
 		["LC"] = {
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -911,6 +938,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -989,16 +1020,20 @@ WeakAurasSaved = {
 			["height"] = 23.9999923706055,
 			["id"] = "Mass Ress",
 			["load"] = {
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_never"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
 				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -1064,13 +1099,16 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 14,
+				["talent"] = {
+					["single"] = 14,
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -1138,6 +1176,15 @@ WeakAurasSaved = {
 			["fontSize"] = 8,
 			["displayStacks"] = "%p",
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -1150,11 +1197,6 @@ WeakAurasSaved = {
 				},
 				["spec"] = {
 					["single"] = 3,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
 					["multi"] = {
 					},
 				},
@@ -1288,15 +1330,7 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_talent"] = false,
-				["use_spec"] = true,
-				["spec"] = {
-					["single"] = 3,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -1305,7 +1339,18 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
 				["race"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 3,
 					["multi"] = {
 					},
 				},
@@ -1415,22 +1460,26 @@ WeakAurasSaved = {
 			["height"] = 45,
 			["rotate"] = true,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_never"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
 				["spec"] = {
 					["multi"] = {
 					},
@@ -1536,6 +1585,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -1599,7 +1652,11 @@ WeakAurasSaved = {
 			["height"] = 34.75,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 17,
+				["talent"] = {
+					["single"] = 17,
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -1692,17 +1749,21 @@ WeakAurasSaved = {
 		},
 		["GS"] = {
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -1837,16 +1898,7 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 38.9999885559082,
 			["load"] = {
-				["use_name"] = false,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -1855,7 +1907,20 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_name"] = false,
+				["role"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -1966,7 +2031,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -1974,8 +2039,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -2085,13 +2154,16 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 14,
+				["talent"] = {
+					["single"] = 14,
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -2162,6 +2234,10 @@ WeakAurasSaved = {
 			["load"] = {
 				["use_class"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -2312,6 +2388,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -2419,6 +2499,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -2493,6 +2577,14 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 32,
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_name"] = true,
 				["role"] = {
 					["multi"] = {
@@ -2500,10 +2592,6 @@ WeakAurasSaved = {
 				},
 				["name"] = "Spih",
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -2587,21 +2675,25 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 64,
 			["load"] = {
-				["use_name"] = true,
-				["role"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["name"] = "Git",
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
 				["spec"] = {
 					["multi"] = {
 					},
 				},
+				["use_name"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["name"] = "Git",
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
 				["class"] = {
 					["multi"] = {
 					},
@@ -2739,6 +2831,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -2800,6 +2896,14 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 32,
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_name"] = true,
 				["role"] = {
 					["multi"] = {
@@ -2807,10 +2911,6 @@ WeakAurasSaved = {
 				},
 				["name"] = "Spih",
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -2888,18 +2988,6 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["font"] = "Friz Quadrata TT",
 			["load"] = {
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
 				["zone"] = "Siege of Orgrimmar",
 				["class"] = {
 					["single"] = "MAGE",
@@ -2907,8 +2995,24 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
-				["use_combat"] = true,
 				["use_zone"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -3119,7 +3223,11 @@ WeakAurasSaved = {
 			["height"] = 30,
 			["xOffset"] = 0,
 			["load"] = {
-				["talent"] = 6,
+				["talent"] = {
+					["single"] = 6,
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
@@ -3217,6 +3325,10 @@ WeakAurasSaved = {
 			},
 			["load"] = {
 				["use_never"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["multi"] = {
 					},
@@ -3291,7 +3403,11 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 14,
+				["talent"] = {
+					["single"] = 14,
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -3361,17 +3477,21 @@ WeakAurasSaved = {
 		},
 		["TCD: Shiel Wall"] = {
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -3504,7 +3624,11 @@ WeakAurasSaved = {
 			["height"] = 34.75,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 16,
+				["talent"] = {
+					["single"] = 16,
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -3632,6 +3756,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -3726,17 +3854,8 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["sparkOffsetY"] = 0,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
+				["talent"] = {
 					["multi"] = {
-					},
-				},
-				["use_talent"] = false,
-				["use_spec"] = true,
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-						[3] = true,
 					},
 				},
 				["class"] = {
@@ -3744,8 +3863,20 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
 				["race"] = {
 					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+						[3] = true,
 					},
 				},
 				["size"] = {
@@ -3915,6 +4046,10 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -3988,15 +4123,7 @@ WeakAurasSaved = {
 			["fontSize"] = 8,
 			["displayStacks"] = "%p",
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_talent"] = false,
-				["use_spec"] = true,
-				["spec"] = {
-					["single"] = 3,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -4005,7 +4132,18 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
 				["race"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 3,
 					["multi"] = {
 					},
 				},
@@ -4134,18 +4272,6 @@ WeakAurasSaved = {
 			["font"] = "Friz Quadrata TT",
 			["height"] = 64,
 			["load"] = {
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
 				["zone"] = "Siege of Orgrimmar",
 				["class"] = {
 					["single"] = "MAGE",
@@ -4153,8 +4279,24 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
-				["use_combat"] = true,
 				["use_zone"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -4216,17 +4358,21 @@ WeakAurasSaved = {
 			["fontSize"] = 8,
 			["displayStacks"] = "%p",
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -4382,7 +4528,11 @@ WeakAurasSaved = {
 			["rotate"] = true,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 7,
+				["talent"] = {
+					["single"] = 7,
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
@@ -4455,17 +4605,21 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -4544,6 +4698,15 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["sparkOffsetY"] = 0,
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -4556,11 +4719,6 @@ WeakAurasSaved = {
 				},
 				["spec"] = {
 					["single"] = 1,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "MONK",
 					["multi"] = {
 					},
 				},
@@ -4740,7 +4898,11 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 16,
+				["talent"] = {
+					["single"] = 16,
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -4850,12 +5012,12 @@ WeakAurasSaved = {
 				["unit"] = "target",
 			},
 			["frameStrata"] = 1,
-			["width"] = 26.250072479248,
+			["width"] = 8.64000415802002,
 			["id"] = "HP Target",
 			["font"] = "DorisPP",
 			["numTriggers"] = 1,
 			["xOffset"] = 122,
-			["height"] = 11.9999904632568,
+			["height"] = 11.9999961853027,
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
@@ -4873,6 +5035,10 @@ WeakAurasSaved = {
 			["load"] = {
 				["use_class"] = false,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -4900,6 +5066,15 @@ WeakAurasSaved = {
 		},
 		["TCD: Last Stand"] = {
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -4912,11 +5087,6 @@ WeakAurasSaved = {
 				},
 				["spec"] = {
 					["single"] = 3,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
 					["multi"] = {
 					},
 				},
@@ -5053,7 +5223,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -5061,8 +5231,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -5182,22 +5356,26 @@ WeakAurasSaved = {
 			["height"] = 45,
 			["rotate"] = true,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_never"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
 				["spec"] = {
 					["multi"] = {
 					},
@@ -5276,22 +5454,26 @@ WeakAurasSaved = {
 			["height"] = 45,
 			["rotate"] = true,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_never"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
 				["spec"] = {
 					["multi"] = {
 					},
@@ -5374,6 +5556,10 @@ WeakAurasSaved = {
 			},
 			["load"] = {
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -5499,7 +5685,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -5507,8 +5693,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["use_zone"] = true,
+				["use_combat"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -5541,18 +5731,6 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["font"] = "Friz Quadrata TT",
 			["load"] = {
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
 				["zone"] = "Siege of Orgrimmar",
 				["class"] = {
 					["single"] = "MAGE",
@@ -5560,8 +5738,24 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
-				["use_combat"] = true,
 				["use_zone"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -5701,6 +5895,15 @@ WeakAurasSaved = {
 		},
 		["TCD: Charge"] = {
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -5713,11 +5916,6 @@ WeakAurasSaved = {
 				},
 				["spec"] = {
 					["single"] = 3,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
 					["multi"] = {
 					},
 				},
@@ -5848,6 +6046,10 @@ WeakAurasSaved = {
 			["height"] = 34.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -5997,23 +6199,27 @@ WeakAurasSaved = {
 				},
 			},
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["use_role"] = true,
+				["class"] = {
+					["multi"] = {
+					},
+				},
 				["use_name"] = false,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["name"] = "Git",
 				["role"] = {
 					["single"] = "TANK",
 					["multi"] = {
 					},
 				},
-				["name"] = "Git",
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_role"] = true,
 				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
 					["multi"] = {
 					},
 				},
@@ -6082,6 +6288,10 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["multi"] = {
 					},
@@ -6170,6 +6380,10 @@ WeakAurasSaved = {
 			["sparkOffsetY"] = 0,
 			["load"] = {
 				["use_never"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
@@ -6406,6 +6620,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -6489,24 +6707,28 @@ WeakAurasSaved = {
 			["font"] = "Friz Quadrata TT",
 			["height"] = 64,
 			["load"] = {
-				["use_zone"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
+				["zone"] = "Siege of Orgrimmar",
 				["class"] = {
 					["single"] = "MAGE",
 					["multi"] = {
 						["MAGE"] = true,
 					},
 				},
-				["zone"] = "Siege of Orgrimmar",
-				["use_combat"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
+				["use_zone"] = true,
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -6577,17 +6799,8 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_level"] = false,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
+				["use_never"] = true,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -6596,7 +6809,20 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_never"] = true,
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["use_level"] = false,
 				["size"] = {
 					["multi"] = {
 					},
@@ -6725,6 +6951,10 @@ WeakAurasSaved = {
 			["height"] = 40,
 			["yOffset"] = -140,
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -6816,6 +7046,10 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["multi"] = {
 					},
@@ -6926,7 +7160,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -6934,8 +7168,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -7028,17 +7266,8 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_level"] = false,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
+				["use_never"] = true,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -7047,7 +7276,20 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_never"] = true,
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["use_level"] = false,
 				["size"] = {
 					["multi"] = {
 					},
@@ -7144,6 +7386,10 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -7257,6 +7503,10 @@ WeakAurasSaved = {
 			["height"] = 34.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -7406,6 +7656,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -7473,17 +7727,11 @@ WeakAurasSaved = {
 			["font"] = "Friz Quadrata TT",
 			["height"] = 64,
 			["load"] = {
-				["use_class"] = false,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_level"] = false,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["class"] = {
 					["multi"] = {
 						["DRUID"] = true,
@@ -7491,6 +7739,16 @@ WeakAurasSaved = {
 						["ROGUE"] = true,
 					},
 				},
+				["use_class"] = false,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
 				["spec"] = {
 					["multi"] = {
 					},
@@ -7562,6 +7820,10 @@ WeakAurasSaved = {
 			["load"] = {
 				["use_class"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -7754,17 +8016,21 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -7853,6 +8119,10 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -7993,6 +8263,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -8046,17 +8320,21 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -8199,6 +8477,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -8258,6 +8540,21 @@ WeakAurasSaved = {
 			["font"] = "Friz Quadrata TT",
 			["height"] = 64,
 			["load"] = {
+				["use_never"] = true,
+				["zone"] = "Siege of Orgrimmar",
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["use_zone"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["multi"] = {
+					},
+				},
 				["role"] = {
 					["multi"] = {
 					},
@@ -8266,17 +8563,6 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_never"] = true,
-				["zone"] = "Siege of Orgrimmar",
-				["class"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["use_zone"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -8366,6 +8652,10 @@ WeakAurasSaved = {
 			["height"] = 104.50008392334,
 			["load"] = {
 				["use_size"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["multi"] = {
 					},
@@ -8500,7 +8790,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -8508,8 +8798,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -8633,6 +8927,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -8720,6 +9018,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -8810,6 +9112,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -8896,6 +9202,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -8989,6 +9299,10 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 40,
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -9086,17 +9400,21 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -9247,7 +9565,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -9255,8 +9573,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["use_zone"] = true,
+				["use_combat"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -9346,6 +9668,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -9422,13 +9748,16 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 14,
+				["talent"] = {
+					["single"] = 14,
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -9556,7 +9885,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -9564,8 +9893,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -9673,6 +10006,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -9738,14 +10075,24 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
+				["use_never"] = false,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["use_never"] = false,
-				["use_spec"] = true,
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+						["MONK"] = true,
+					},
+				},
+				["use_class"] = true,
 				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -9753,12 +10100,6 @@ WeakAurasSaved = {
 					["single"] = 1,
 					["multi"] = {
 						true, -- [1]
-					},
-				},
-				["class"] = {
-					["single"] = "MONK",
-					["multi"] = {
-						["MONK"] = true,
 					},
 				},
 				["size"] = {
@@ -9852,17 +10193,21 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -9978,13 +10323,16 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 14,
+				["talent"] = {
+					["single"] = 14,
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -10070,17 +10418,11 @@ WeakAurasSaved = {
 			["font"] = "Friz Quadrata TT",
 			["height"] = 64,
 			["load"] = {
-				["use_class"] = false,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_level"] = false,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["class"] = {
 					["multi"] = {
 						["DRUID"] = true,
@@ -10088,6 +10430,16 @@ WeakAurasSaved = {
 						["ROGUE"] = true,
 					},
 				},
+				["use_class"] = false,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
 				["spec"] = {
 					["multi"] = {
 					},
@@ -10196,13 +10548,16 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 14,
+				["talent"] = {
+					["single"] = 14,
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -10379,7 +10734,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -10389,11 +10744,15 @@ WeakAurasSaved = {
 						[2] = true,
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
 					["single"] = "TANK",
 					["multi"] = {
 						["TANK"] = true,
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
+					["multi"] = {
 					},
 				},
 				["size"] = {
@@ -10500,6 +10859,14 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 32,
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_name"] = true,
 				["role"] = {
 					["multi"] = {
@@ -10507,10 +10874,6 @@ WeakAurasSaved = {
 				},
 				["name"] = "Spih",
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -10596,17 +10959,21 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -10738,6 +11105,15 @@ WeakAurasSaved = {
 			["height"] = 30,
 			["stacksPoint"] = "RIGHT",
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -10750,11 +11126,6 @@ WeakAurasSaved = {
 				},
 				["spec"] = {
 					["single"] = 3,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
 					["multi"] = {
 					},
 				},
@@ -10814,24 +11185,28 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_level"] = false,
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 3,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
 				["class"] = {
 					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 3,
 					["multi"] = {
 					},
 				},
@@ -10926,6 +11301,10 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 40,
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -11040,18 +11419,22 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
-				["spec"] = {
-					["single"] = 1,
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -11239,7 +11622,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -11249,9 +11632,13 @@ WeakAurasSaved = {
 						[2] = true,
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
 					["single"] = "TANK",
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -11317,17 +11704,21 @@ WeakAurasSaved = {
 		},
 		["Demo"] = {
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -11481,6 +11872,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -11545,15 +11940,6 @@ WeakAurasSaved = {
 			["font"] = "Friz Quadrata TT",
 			["height"] = 64,
 			["load"] = {
-				["use_zone"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
 				["zone"] = "Siege of Orgrimmar",
 				["class"] = {
 					["single"] = "MAGE",
@@ -11561,8 +11947,21 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["use_zone"] = true,
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -11669,6 +12068,10 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 2,
 					["multi"] = {
@@ -11739,6 +12142,15 @@ WeakAurasSaved = {
 		},
 		["TCD: Heroic Leap"] = {
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -11751,11 +12163,6 @@ WeakAurasSaved = {
 				},
 				["spec"] = {
 					["single"] = 3,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
 					["multi"] = {
 					},
 				},
@@ -11884,24 +12291,28 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_level"] = false,
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 3,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
 				["class"] = {
 					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 3,
 					["multi"] = {
 					},
 				},
@@ -12013,22 +12424,26 @@ WeakAurasSaved = {
 			["height"] = 45,
 			["rotate"] = true,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_never"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
 				["spec"] = {
 					["multi"] = {
 					},
@@ -12101,6 +12516,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -12192,7 +12611,7 @@ WeakAurasSaved = {
 				},
 				["difficulty"] = "heroic",
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -12200,8 +12619,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_difficulty"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_difficulty"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -12318,6 +12741,10 @@ WeakAurasSaved = {
 			["height"] = 34.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -12409,6 +12836,15 @@ WeakAurasSaved = {
 		},
 		["TCD: Rook"] = {
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -12421,11 +12857,6 @@ WeakAurasSaved = {
 				},
 				["spec"] = {
 					["single"] = 3,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
 					["multi"] = {
 					},
 				},
@@ -12579,6 +13010,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -12670,6 +13105,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -12694,17 +13133,21 @@ WeakAurasSaved = {
 			["fontSize"] = 8,
 			["displayStacks"] = "%p",
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -12836,6 +13279,21 @@ WeakAurasSaved = {
 			["font"] = "Friz Quadrata TT",
 			["height"] = 64,
 			["load"] = {
+				["use_never"] = true,
+				["zone"] = "Siege of Orgrimmar",
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["use_zone"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["multi"] = {
+					},
+				},
 				["role"] = {
 					["multi"] = {
 					},
@@ -12844,17 +13302,6 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_never"] = true,
-				["zone"] = "Siege of Orgrimmar",
-				["class"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["use_zone"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -12929,6 +13376,14 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 32,
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_name"] = true,
 				["role"] = {
 					["multi"] = {
@@ -12936,10 +13391,6 @@ WeakAurasSaved = {
 				},
 				["name"] = "Spih",
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -13072,13 +13523,17 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
 				["use_zone"] = false,
-				["use_difficulty"] = false,
 				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["use_difficulty"] = false,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -13094,17 +13549,21 @@ WeakAurasSaved = {
 		},
 		["Reck"] = {
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -13249,6 +13708,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -13309,6 +13772,10 @@ WeakAurasSaved = {
 			["height"] = 50,
 			["load"] = {
 				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
@@ -13462,7 +13929,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -13470,8 +13937,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -13510,7 +13981,11 @@ WeakAurasSaved = {
 			["sparkOffsetY"] = 0,
 			["load"] = {
 				["use_never"] = false,
-				["talent"] = 6,
+				["talent"] = {
+					["single"] = 6,
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
@@ -13660,6 +14135,15 @@ WeakAurasSaved = {
 		},
 		["TCD: Disrupting Shout"] = {
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -13672,11 +14156,6 @@ WeakAurasSaved = {
 				},
 				["spec"] = {
 					["single"] = 3,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
 					["multi"] = {
 					},
 				},
@@ -13830,6 +14309,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -13942,22 +14425,26 @@ WeakAurasSaved = {
 			["height"] = 45,
 			["rotate"] = true,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_never"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
 				["spec"] = {
 					["multi"] = {
 					},
@@ -14016,7 +14503,7 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "text",
 			["frameStrata"] = 1,
-			["width"] = 25.1849975585938,
+			["width"] = 51.749942779541,
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
@@ -14034,7 +14521,7 @@ WeakAurasSaved = {
 			["font"] = "Boris Black Bloxx",
 			["numTriggers"] = 1,
 			["id"] = "Lei Shen Transistions",
-			["height"] = 70.0000686645508,
+			["height"] = 144.000045776367,
 			["xOffset"] = 48.7498779296875,
 			["load"] = {
 				["role"] = {
@@ -14042,6 +14529,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -14106,7 +14597,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -14116,9 +14607,13 @@ WeakAurasSaved = {
 						[2] = true,
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
 					["single"] = "TANK",
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -14314,14 +14809,24 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
+				["use_never"] = false,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["use_never"] = false,
-				["use_spec"] = true,
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+						["MONK"] = true,
+					},
+				},
+				["use_class"] = true,
 				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -14329,12 +14834,6 @@ WeakAurasSaved = {
 					["single"] = 1,
 					["multi"] = {
 						true, -- [1]
-					},
-				},
-				["class"] = {
-					["single"] = "MONK",
-					["multi"] = {
-						["MONK"] = true,
 					},
 				},
 				["size"] = {
@@ -14462,6 +14961,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -14584,7 +15087,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -14592,8 +15095,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["use_zone"] = true,
+				["use_combat"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -14606,6 +15113,15 @@ WeakAurasSaved = {
 			["fontSize"] = 8,
 			["displayStacks"] = "%p",
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -14618,11 +15134,6 @@ WeakAurasSaved = {
 				},
 				["spec"] = {
 					["single"] = 3,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
 					["multi"] = {
 					},
 				},
@@ -14772,6 +15283,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -14858,6 +15373,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -14922,7 +15441,7 @@ WeakAurasSaved = {
 				},
 				["use_class"] = true,
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -14930,8 +15449,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -15042,6 +15565,10 @@ WeakAurasSaved = {
 			["load"] = {
 				["use_class"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -15223,6 +15750,10 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -15403,6 +15934,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -15426,6 +15961,10 @@ WeakAurasSaved = {
 			["load"] = {
 				["use_class"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -15554,7 +16093,7 @@ WeakAurasSaved = {
 			},
 			["id"] = "LS Stacks",
 			["frameStrata"] = 1,
-			["width"] = 18.6150417327881,
+			["width"] = 38.2500305175781,
 			["trigger"] = {
 				["type"] = "aura",
 				["subeventSuffix"] = "_CAST_START",
@@ -15573,7 +16112,7 @@ WeakAurasSaved = {
 			["font"] = "Accidental Presidency",
 			["numTriggers"] = 1,
 			["xOffset"] = 242.999450683594,
-			["height"] = 34.9999923706055,
+			["height"] = 71.9999771118164,
 			["animation"] = {
 				["start"] = {
 					["duration_type"] = "seconds",
@@ -15589,20 +16128,24 @@ WeakAurasSaved = {
 				},
 			},
 			["load"] = {
+				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["multi"] = {
+					},
+				},
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_never"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
 				["use_combat"] = false,
-				["class"] = {
-					["multi"] = {
-					},
-				},
 				["spec"] = {
 					["multi"] = {
 					},
@@ -15643,6 +16186,10 @@ WeakAurasSaved = {
 			["load"] = {
 				["use_class"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -15840,6 +16387,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -15862,6 +16413,15 @@ WeakAurasSaved = {
 		},
 		["TCD: Mocking"] = {
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -15874,11 +16434,6 @@ WeakAurasSaved = {
 				},
 				["spec"] = {
 					["single"] = 3,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
 					["multi"] = {
 					},
 				},
@@ -15970,17 +16525,21 @@ WeakAurasSaved = {
 			["fontSize"] = 8,
 			["displayStacks"] = "%p",
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -16071,24 +16630,28 @@ WeakAurasSaved = {
 			["fontSize"] = 8,
 			["displayStacks"] = "%p",
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_level"] = false,
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 3,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
 				["class"] = {
 					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 3,
 					["multi"] = {
 					},
 				},
@@ -16249,6 +16812,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -16336,7 +16903,11 @@ WeakAurasSaved = {
 			["rotate"] = true,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 8,
+				["talent"] = {
+					["single"] = 8,
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["multi"] = {
 					},
@@ -16408,6 +16979,14 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 32,
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_name"] = true,
 				["role"] = {
 					["multi"] = {
@@ -16415,10 +16994,6 @@ WeakAurasSaved = {
 				},
 				["name"] = "Spih",
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -16510,17 +17085,8 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_level"] = false,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
+				["use_never"] = true,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -16529,7 +17095,20 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_never"] = true,
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["use_level"] = false,
 				["size"] = {
 					["multi"] = {
 					},
@@ -16603,7 +17182,7 @@ WeakAurasSaved = {
 			["constantFactor"] = "RADIUS",
 			["selfPoint"] = "LEFT",
 			["borderOffset"] = 16,
-			["align"] = "CENTER",
+			["id"] = "Tricks of the Trade Group",
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
@@ -16618,6 +17197,14 @@ WeakAurasSaved = {
 					["duration_type"] = "seconds",
 				},
 			},
+			["additional_triggers"] = {
+			},
+			["radius"] = 200,
+			["frameStrata"] = 1,
+			["width"] = 64.0000019073486,
+			["rotation"] = 0,
+			["stagger"] = 0,
+			["numTriggers"] = 1,
 			["trigger"] = {
 				["type"] = "aura",
 				["unit"] = "player",
@@ -16628,18 +17215,14 @@ WeakAurasSaved = {
 				["event"] = "Health",
 				["subeventPrefix"] = "SPELL",
 			},
-			["radius"] = 200,
-			["frameStrata"] = 1,
-			["width"] = 64.0000019073486,
-			["rotation"] = 0,
-			["stagger"] = 0,
-			["numTriggers"] = 1,
-			["additional_triggers"] = {
-			},
 			["height"] = 64.0000610351563,
-			["id"] = "Tricks of the Trade Group",
+			["align"] = "CENTER",
 			["load"] = {
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -16725,7 +17308,11 @@ WeakAurasSaved = {
 			["rotate"] = true,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 8,
+				["talent"] = {
+					["single"] = 8,
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["multi"] = {
 					},
@@ -16763,17 +17350,21 @@ WeakAurasSaved = {
 			["fontSize"] = 8,
 			["displayStacks"] = "%p",
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -16913,24 +17504,28 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_level"] = false,
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 3,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
 				["class"] = {
 					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 3,
 					["multi"] = {
 					},
 				},
@@ -17024,6 +17619,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -17086,17 +17685,21 @@ WeakAurasSaved = {
 			["fontSize"] = 8,
 			["displayStacks"] = "%s",
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "MONK",
 					["multi"] = {
 					},
 				},
@@ -17236,6 +17839,10 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -17356,6 +17963,10 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 40,
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -17458,6 +18069,14 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 32,
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_name"] = true,
 				["role"] = {
 					["multi"] = {
@@ -17465,10 +18084,6 @@ WeakAurasSaved = {
 				},
 				["name"] = "Spih",
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -17548,17 +18163,21 @@ WeakAurasSaved = {
 			["fontSize"] = 8,
 			["displayStacks"] = "%p",
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -17734,6 +18353,21 @@ WeakAurasSaved = {
 			["height"] = 35.9999885559082,
 			["id"] = "Immerseus - Swirl",
 			["load"] = {
+				["use_never"] = true,
+				["zone"] = "Siege of Orgrimmar",
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["use_zone"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["multi"] = {
+					},
+				},
 				["role"] = {
 					["multi"] = {
 					},
@@ -17742,17 +18376,6 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_never"] = true,
-				["zone"] = "Siege of Orgrimmar",
-				["class"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["use_zone"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -17824,6 +18447,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -17872,15 +18499,6 @@ WeakAurasSaved = {
 			["font"] = "Friz Quadrata TT",
 			["height"] = 64,
 			["load"] = {
-				["use_zone"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
 				["zone"] = "Siege of Orgrimmar",
 				["class"] = {
 					["single"] = "MAGE",
@@ -17888,8 +18506,21 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["use_zone"] = true,
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -18020,6 +18651,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -18164,7 +18799,11 @@ WeakAurasSaved = {
 			["height"] = 30,
 			["xOffset"] = 0,
 			["load"] = {
-				["talent"] = 5,
+				["talent"] = {
+					["single"] = 5,
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
@@ -18248,24 +18887,28 @@ WeakAurasSaved = {
 			["font"] = "Friz Quadrata TT",
 			["height"] = 64,
 			["load"] = {
-				["use_zone"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
+				["zone"] = "Siege of Orgrimmar",
 				["spec"] = {
 					["multi"] = {
 					},
 				},
-				["zone"] = "Siege of Orgrimmar",
-				["use_combat"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "MAGE",
 					["multi"] = {
 						["MAGE"] = true,
 					},
 				},
-				["role"] = {
+				["use_zone"] = true,
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -18363,6 +19006,14 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 32,
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_name"] = true,
 				["role"] = {
 					["multi"] = {
@@ -18370,10 +19021,6 @@ WeakAurasSaved = {
 				},
 				["name"] = "Spih",
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -18466,6 +19113,10 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -18594,17 +19245,8 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_level"] = false,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
+				["use_never"] = true,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -18613,7 +19255,20 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_never"] = true,
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["use_level"] = false,
 				["size"] = {
 					["multi"] = {
 					},
@@ -18707,6 +19362,10 @@ WeakAurasSaved = {
 			["height"] = 30,
 			["load"] = {
 				["use_never"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
@@ -18817,6 +19476,14 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 32,
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_name"] = true,
 				["role"] = {
 					["multi"] = {
@@ -18824,10 +19491,6 @@ WeakAurasSaved = {
 				},
 				["name"] = "Spih",
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -18917,6 +19580,10 @@ WeakAurasSaved = {
 			["height"] = 34.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -19071,7 +19738,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -19081,9 +19748,13 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
 					["single"] = "TANK",
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -19220,7 +19891,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -19228,8 +19899,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -19302,6 +19977,10 @@ WeakAurasSaved = {
 			["id"] = "Hp 2",
 			["load"] = {
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -19379,13 +20058,16 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 14,
+				["talent"] = {
+					["single"] = 14,
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -19523,7 +20205,11 @@ WeakAurasSaved = {
 			["height"] = 30,
 			["xOffset"] = 0,
 			["load"] = {
-				["talent"] = 4,
+				["talent"] = {
+					["single"] = 4,
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
@@ -19592,6 +20278,14 @@ WeakAurasSaved = {
 			["progressPrecision"] = 0,
 			["font"] = "DorisPP",
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_name"] = true,
 				["role"] = {
 					["multi"] = {
@@ -19599,10 +20293,6 @@ WeakAurasSaved = {
 				},
 				["name"] = "Spih",
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -19805,17 +20495,21 @@ WeakAurasSaved = {
 			["height"] = 11.9999961853027,
 			["id"] = "HP Target 2",
 			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_never"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -19930,7 +20624,11 @@ WeakAurasSaved = {
 			},
 			["load"] = {
 				["use_never"] = false,
-				["talent"] = 13,
+				["talent"] = {
+					["single"] = 13,
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
@@ -20035,6 +20733,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -20102,6 +20804,14 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 32,
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_name"] = true,
 				["role"] = {
 					["multi"] = {
@@ -20109,10 +20819,6 @@ WeakAurasSaved = {
 				},
 				["name"] = "Spih",
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -20188,6 +20894,10 @@ WeakAurasSaved = {
 			["load"] = {
 				["use_class"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -20402,6 +21112,14 @@ WeakAurasSaved = {
 			["timer"] = true,
 			["timerFlags"] = "None",
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_name"] = true,
 				["role"] = {
 					["multi"] = {
@@ -20409,10 +21127,6 @@ WeakAurasSaved = {
 				},
 				["name"] = "Spih",
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -20441,14 +21155,14 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["borderSize"] = 16,
-			["displayTextRight"] = "%p",
+			["timerSize"] = 12,
 			["border"] = false,
 			["borderEdge"] = "None",
 			["regionType"] = "text",
 			["stacks"] = true,
 			["borderOffset"] = 5,
 			["icon_side"] = "RIGHT",
-			["justify"] = "LEFT",
+			["auto"] = true,
 			["stacksColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -20464,8 +21178,8 @@ WeakAurasSaved = {
 			["texture"] = "Blizzard",
 			["textFont"] = "Friz Quadrata TT",
 			["stacksFont"] = "Friz Quadrata TT",
-			["timerSize"] = 12,
-			["auto"] = true,
+			["displayTextRight"] = "%p",
+			["justify"] = "LEFT",
 			["id"] = "DB: Evangealism 2",
 			["timerFont"] = "Friz Quadrata TT",
 			["alpha"] = 1,
@@ -20521,6 +21235,10 @@ WeakAurasSaved = {
 			["height"] = 30,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "WARRIOR",
 					["multi"] = {
@@ -20664,6 +21382,10 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 2,
 					["multi"] = {
@@ -20804,6 +21526,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -20853,17 +21579,21 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -21011,7 +21741,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -21021,8 +21751,12 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -21122,22 +21856,26 @@ WeakAurasSaved = {
 			["height"] = 45,
 			["rotate"] = true,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_never"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
 				["spec"] = {
 					["multi"] = {
 					},
@@ -21156,17 +21894,21 @@ WeakAurasSaved = {
 		},
 		["Colossus Smash"] = {
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -21306,13 +22048,16 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 14,
+				["talent"] = {
+					["single"] = 14,
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -21401,6 +22146,15 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["sparkOffsetY"] = 0,
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -21413,11 +22167,6 @@ WeakAurasSaved = {
 				},
 				["spec"] = {
 					["single"] = 2,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
 					["multi"] = {
 					},
 				},
@@ -21588,6 +22337,10 @@ WeakAurasSaved = {
 			["height"] = 64,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["multi"] = {
 					},
@@ -21746,7 +22499,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -21754,8 +22507,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -21768,17 +22525,21 @@ WeakAurasSaved = {
 		},
 		["Avoidance"] = {
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -21911,6 +22672,10 @@ WeakAurasSaved = {
 			["height"] = 34.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -22069,6 +22834,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -22137,13 +22906,16 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 14,
+				["talent"] = {
+					["single"] = 14,
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -22272,22 +23044,26 @@ WeakAurasSaved = {
 			["height"] = 45,
 			["rotate"] = true,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_never"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
 				["spec"] = {
 					["multi"] = {
 					},
@@ -22364,22 +23140,26 @@ WeakAurasSaved = {
 			["height"] = 45,
 			["rotate"] = true,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_never"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
 				["spec"] = {
 					["multi"] = {
 					},
@@ -22420,6 +23200,14 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 32,
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_name"] = true,
 				["role"] = {
 					["multi"] = {
@@ -22427,10 +23215,6 @@ WeakAurasSaved = {
 				},
 				["name"] = "Spih",
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -22531,6 +23315,10 @@ WeakAurasSaved = {
 					},
 				},
 				["race"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -22770,7 +23558,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -22778,8 +23566,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["use_zone"] = true,
+				["use_combat"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -22834,6 +23626,10 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 2,
 					["multi"] = {
@@ -22958,16 +23754,20 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "text",
 			["frameStrata"] = 1,
-			["width"] = 21.7500247955322,
+			["width"] = 8.64000415802002,
 			["xOffset"] = 122,
 			["font"] = "DorisPP",
 			["numTriggers"] = 1,
 			["id"] = "HP Target Execute",
-			["height"] = 11.9999904632568,
+			["height"] = 11.9999961853027,
 			["selfPoint"] = "BOTTOMRIGHT",
 			["load"] = {
 				["use_class"] = false,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -23041,13 +23841,16 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 14,
+				["talent"] = {
+					["single"] = 14,
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -23163,6 +23966,10 @@ WeakAurasSaved = {
 			["height"] = 30,
 			["load"] = {
 				["use_never"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
@@ -23304,7 +24111,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -23314,8 +24121,12 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -23420,7 +24231,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -23430,8 +24241,12 @@ WeakAurasSaved = {
 						["MAGE"] = true,
 					},
 				},
-				["use_combat"] = true,
 				["use_zone"] = true,
+				["use_combat"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -23512,17 +24327,21 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -23634,16 +24453,8 @@ WeakAurasSaved = {
 			["height"] = 48.0000076293945,
 			["anchorPoint"] = "CENTER",
 			["load"] = {
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_never"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -23651,7 +24462,19 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
 				["use_zone"] = false,
+				["class"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -23732,24 +24555,28 @@ WeakAurasSaved = {
 			["height"] = 30,
 			["xOffset"] = 0,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_never"] = false,
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "MONK",
+				["talent"] = {
 					["multi"] = {
 					},
 				},
 				["spec"] = {
 					["single"] = 1,
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "MONK",
 					["multi"] = {
 					},
 				},
@@ -23775,24 +24602,28 @@ WeakAurasSaved = {
 			["fontSize"] = 8,
 			["displayStacks"] = "%p",
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_level"] = false,
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 3,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
 				["class"] = {
 					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 3,
 					["multi"] = {
 					},
 				},
@@ -23952,6 +24783,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -24017,6 +24852,10 @@ WeakAurasSaved = {
 			["height"] = 34.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["multi"] = {
 					},
@@ -24106,6 +24945,15 @@ WeakAurasSaved = {
 		},
 		["TCD: Spell Reflection"] = {
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -24118,11 +24966,6 @@ WeakAurasSaved = {
 				},
 				["spec"] = {
 					["single"] = 3,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
 					["multi"] = {
 					},
 				},
@@ -24277,7 +25120,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -24285,8 +25128,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -24374,7 +25221,11 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 16,
+				["talent"] = {
+					["single"] = 16,
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -24506,6 +25357,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -24582,6 +25437,14 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["sparkOffsetY"] = 0,
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_name"] = true,
 				["role"] = {
 					["multi"] = {
@@ -24589,10 +25452,6 @@ WeakAurasSaved = {
 				},
 				["name"] = "Git",
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -24768,14 +25627,24 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
+				["use_never"] = false,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["use_never"] = false,
-				["use_spec"] = true,
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+						["MONK"] = true,
+					},
+				},
+				["use_class"] = true,
 				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -24783,12 +25652,6 @@ WeakAurasSaved = {
 					["single"] = 1,
 					["multi"] = {
 						true, -- [1]
-					},
-				},
-				["class"] = {
-					["single"] = "MONK",
-					["multi"] = {
-						["MONK"] = true,
 					},
 				},
 				["size"] = {
@@ -24890,7 +25753,11 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 18,
+				["talent"] = {
+					["single"] = 18,
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -25029,6 +25896,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -25091,6 +25962,10 @@ WeakAurasSaved = {
 			["height"] = 30,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "WARRIOR",
 					["multi"] = {
@@ -25243,6 +26118,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -25330,17 +26209,21 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -25445,6 +26328,10 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -25555,6 +26442,10 @@ WeakAurasSaved = {
 			["height"] = 30,
 			["load"] = {
 				["use_never"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
@@ -25712,6 +26603,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -25844,7 +26739,7 @@ WeakAurasSaved = {
 				},
 				["difficulty"] = "heroic",
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -25852,8 +26747,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_difficulty"] = true,
 				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["use_difficulty"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -25936,6 +26835,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -26030,6 +26933,10 @@ WeakAurasSaved = {
 			["height"] = 34.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -26186,6 +27093,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -26208,18 +27119,7 @@ WeakAurasSaved = {
 		},
 		["TCD: Avatar"] = {
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["spec"] = {
-					["single"] = 3,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -26228,11 +27128,25 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["fontSize"] = 8,
 			["displayStacks"] = "%p",
@@ -26363,7 +27277,11 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 17,
+				["talent"] = {
+					["single"] = 17,
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -26476,6 +27394,10 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 2,
 					["multi"] = {
@@ -26583,17 +27505,21 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -26736,17 +27662,21 @@ WeakAurasSaved = {
 			["height"] = 30,
 			["parent"] = "Tank DPS Buffs",
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -26836,18 +27766,22 @@ WeakAurasSaved = {
 			["height"] = 100,
 			["displayIcon"] = "Interface\\Icons\\monk_ability_summonoxstatue",
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
-				["spec"] = {
-					["single"] = 1,
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -26873,6 +27807,10 @@ WeakAurasSaved = {
 			["load"] = {
 				["use_class"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -27020,7 +27958,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -27030,8 +27968,12 @@ WeakAurasSaved = {
 						[2] = true,
 					},
 				},
-				["use_combat"] = true,
 				["use_zone"] = true,
+				["use_combat"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -27182,6 +28124,15 @@ WeakAurasSaved = {
 			["fontSize"] = 8,
 			["displayStacks"] = "%p",
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -27194,11 +28145,6 @@ WeakAurasSaved = {
 				},
 				["spec"] = {
 					["single"] = 3,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
 					["multi"] = {
 					},
 				},
@@ -27309,24 +28255,28 @@ WeakAurasSaved = {
 			["progressPrecision"] = 0,
 			["sparkOffsetY"] = 0,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_never"] = false,
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "MONK",
+				["talent"] = {
 					["multi"] = {
 					},
 				},
 				["spec"] = {
 					["single"] = 1,
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "MONK",
 					["multi"] = {
 					},
 				},
@@ -27457,17 +28407,21 @@ WeakAurasSaved = {
 			["fontSize"] = 8,
 			["displayStacks"] = "%p",
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -27653,17 +28607,21 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "MONK",
 					["multi"] = {
 					},
 				},
@@ -27713,7 +28671,11 @@ WeakAurasSaved = {
 			["sparkOffsetY"] = 0,
 			["load"] = {
 				["use_never"] = false,
-				["talent"] = 5,
+				["talent"] = {
+					["single"] = 5,
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
@@ -27935,24 +28897,28 @@ WeakAurasSaved = {
 			["height"] = 30,
 			["parent"] = "Tank CDs",
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_level"] = false,
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 3,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
 				["class"] = {
 					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 3,
 					["multi"] = {
 					},
 				},
@@ -28032,6 +28998,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -28053,17 +29023,21 @@ WeakAurasSaved = {
 		},
 		["Cruelty"] = {
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -28181,6 +29155,10 @@ WeakAurasSaved = {
 			["height"] = 64,
 			["load"] = {
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -28353,7 +29331,11 @@ WeakAurasSaved = {
 			},
 			["load"] = {
 				["use_never"] = false,
-				["talent"] = 13,
+				["talent"] = {
+					["single"] = 13,
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
@@ -28438,7 +29420,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -28446,8 +29428,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -28574,6 +29560,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -28676,6 +29666,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -28769,6 +29763,10 @@ WeakAurasSaved = {
 			["height"] = 40,
 			["parent"] = "Shadow Priest",
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -28833,17 +29831,8 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["sparkOffsetY"] = 0,
 			["load"] = {
-				["use_name"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["name"] = "Git",
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
+				["use_never"] = true,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -28851,7 +29840,20 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_never"] = true,
+				["use_name"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["name"] = "Git",
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -29089,6 +30091,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -29181,6 +30187,10 @@ WeakAurasSaved = {
 			["borderEdge"] = "None",
 			["load"] = {
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -29304,7 +30314,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -29312,8 +30322,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_difficulty"] = true,
 				["use_zone"] = true,
+				["use_difficulty"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -29352,17 +30366,21 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -29479,6 +30497,10 @@ WeakAurasSaved = {
 			["height"] = 30,
 			["load"] = {
 				["use_never"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
@@ -29600,6 +30622,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -29687,6 +30713,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -29784,17 +30814,11 @@ WeakAurasSaved = {
 			["font"] = "Friz Quadrata TT",
 			["height"] = 64,
 			["load"] = {
-				["use_class"] = false,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_level"] = false,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["class"] = {
 					["multi"] = {
 						["DRUID"] = true,
@@ -29802,6 +30826,16 @@ WeakAurasSaved = {
 						["ROGUE"] = true,
 					},
 				},
+				["use_class"] = false,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
 				["spec"] = {
 					["multi"] = {
 					},
@@ -29890,6 +30924,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -30027,6 +31065,10 @@ WeakAurasSaved = {
 			["height"] = 40,
 			["parent"] = "Shadow Priest",
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -30112,7 +31154,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -30120,8 +31162,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -30178,6 +31224,15 @@ WeakAurasSaved = {
 			["fontSize"] = 8,
 			["displayStacks"] = "%p",
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -30190,11 +31245,6 @@ WeakAurasSaved = {
 				},
 				["spec"] = {
 					["single"] = 3,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
 					["multi"] = {
 					},
 				},
@@ -30345,22 +31395,26 @@ WeakAurasSaved = {
 			["height"] = 45,
 			["rotate"] = true,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_never"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
 				["spec"] = {
 					["multi"] = {
 					},
@@ -30374,15 +31428,7 @@ WeakAurasSaved = {
 		},
 		["TCD: Dragon Roar"] = {
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_talent"] = false,
-				["use_spec"] = true,
-				["spec"] = {
-					["single"] = 3,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -30391,7 +31437,18 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
 				["race"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 3,
 					["multi"] = {
 					},
 				},
@@ -30525,24 +31582,28 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_level"] = false,
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 3,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
 				["class"] = {
 					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 3,
 					["multi"] = {
 					},
 				},
@@ -30631,6 +31692,14 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 32,
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_name"] = true,
 				["role"] = {
 					["multi"] = {
@@ -30638,10 +31707,6 @@ WeakAurasSaved = {
 				},
 				["name"] = "Spih",
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -30739,6 +31804,10 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
@@ -30853,6 +31922,10 @@ WeakAurasSaved = {
 			["height"] = 34.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -30984,6 +32057,10 @@ WeakAurasSaved = {
 			["height"] = 34.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -31099,18 +32176,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["sparkOffsetY"] = 0,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["spec"] = {
-					["single"] = 3,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -31119,11 +32185,25 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
 			["timerColor"] = {
 				1, -- [1]
@@ -31275,17 +32355,21 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -31365,15 +32449,7 @@ WeakAurasSaved = {
 		},
 		["TCD: Br"] = {
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_talent"] = false,
-				["use_spec"] = true,
-				["spec"] = {
-					["single"] = 3,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -31382,7 +32458,18 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
 				["race"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 3,
 					["multi"] = {
 					},
 				},
@@ -31501,6 +32588,10 @@ WeakAurasSaved = {
 					},
 				},
 				["race"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -31643,6 +32734,10 @@ WeakAurasSaved = {
 			["load"] = {
 				["use_class"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -31845,7 +32940,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -31853,8 +32948,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -31968,7 +33067,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -31976,8 +33075,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["use_zone"] = true,
+				["use_combat"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -32012,22 +33115,26 @@ WeakAurasSaved = {
 			["height"] = 152.499984741211,
 			["rotate"] = true,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["use_combat"] = true,
 				["spec"] = {
 					["single"] = 3,
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -32092,99 +33199,7 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 		},
-		["BM Main: Guard 2.0"] = {
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["controlledChildren"] = {
-				"Guard Icon 2.0", -- [1]
-				"Guard Not Active 2.0", -- [2]
-				"Guard Cooldown 2.0", -- [3]
-				"Glyphed Guard CD 2.0", -- [4]
-				"Guard Amount 2.0", -- [5]
-			},
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["xOffset"] = -120,
-			["border"] = false,
-			["yOffset"] = -200,
-			["regionType"] = "group",
-			["borderSize"] = 16,
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["expanded"] = false,
-			["borderOffset"] = 5,
-			["selfPoint"] = "BOTTOMLEFT",
-			["id"] = "BM Main: Guard 2.0",
-			["anchorPoint"] = "CENTER",
-			["frameStrata"] = 1,
-			["additional_triggers"] = {
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["borderInset"] = 11,
-			["numTriggers"] = 1,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-			},
-			["trigger"] = {
-				["type"] = "aura",
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HELPFUL",
-				["names"] = {
-				},
-				["event"] = "Health",
-				["subeventPrefix"] = "SPELL",
-			},
-			["borderEdge"] = "None",
-			["load"] = {
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["untrigger"] = {
-			},
-		},
-		["Infusion"] = {
+		["AA ready"] = {
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -32196,7 +33211,6 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["icon"] = true,
 			["fontFlags"] = "OUTLINE",
-			["useTooltip"] = false,
 			["animation"] = {
 				["start"] = {
 					["type"] = "preset",
@@ -32225,8 +33239,8 @@ WeakAurasSaved = {
 				["subeventPrefix"] = "SPELL",
 				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["spellName"] = 81700,
 				["custom_hide"] = "timed",
-				["spellName"] = 10060,
 			},
 			["desaturate"] = false,
 			["progressPrecision"] = 0,
@@ -32234,29 +33248,34 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 14,
-				["class"] = {
-					["single"] = "PRIEST",
+				["talent"] = {
 					["multi"] = {
-						["DRUID"] = true,
 					},
 				},
-				["use_talent"] = true,
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
 				["use_name"] = false,
 				["role"] = {
 					["multi"] = {
 					},
 				},
 				["name"] = "Affinity",
+				["use_spec"] = false,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
-				["spec"] = {
+				["class"] = {
+					["single"] = "PRIEST",
 					["multi"] = {
+						["DRUID"] = true,
 					},
 				},
+				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 						["party"] = true,
@@ -32274,47 +33293,118 @@ WeakAurasSaved = {
 			["stacksContainment"] = "INSIDE",
 			["zoom"] = 0.2,
 			["auto"] = true,
+			["selfPoint"] = "CENTER",
+			["additional_triggers"] = {
+			},
+			["id"] = "AA ready",
+			["frameStrata"] = 1,
+			["width"] = 38.75,
+			["xOffset"] = 144,
+			["stickyDuration"] = false,
+			["numTriggers"] = 1,
+			["inverse"] = false,
+			["untrigger"] = {
+				["spellName"] = 81700,
+			},
 			["actions"] = {
 				["start"] = {
 				},
 				["finish"] = {
 				},
 			},
-			["id"] = "Infusion",
-			["selfPoint"] = "CENTER",
-			["frameStrata"] = 1,
-			["width"] = 38.75,
-			["stickyDuration"] = false,
-			["xOffset"] = 80,
-			["numTriggers"] = 1,
-			["inverse"] = false,
-			["additional_triggers"] = {
-			},
-			["untrigger"] = {
-				["spellName"] = 10060,
-			},
 			["stacksPoint"] = "CENTER",
 			["textColor"] = {
-				0.125490196078431, -- [1]
+				1, -- [1]
 				1, -- [2]
-				0.290196078431373, -- [3]
+				1, -- [3]
 				1, -- [4]
 			},
+		},
+		["Track VT Group"] = {
+			["grow"] = "UP",
+			["controlledChildren"] = {
+				"VT", -- [1]
+			},
+			["animate"] = false,
+			["xOffset"] = 280,
+			["border"] = "None",
+			["yOffset"] = -65,
+			["anchorPoint"] = "CENTER",
+			["untrigger"] = {
+			},
+			["sort"] = "none",
+			["expanded"] = false,
+			["space"] = 2,
+			["background"] = "None",
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["constantFactor"] = "RADIUS",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["borderOffset"] = 16,
+			["align"] = "CENTER",
+			["selfPoint"] = "BOTTOM",
+			["id"] = "Track VT Group",
+			["backgroundInset"] = 0,
+			["frameStrata"] = 1,
+			["width"] = 199.999938964844,
+			["stagger"] = 0,
+			["radius"] = 200,
+			["numTriggers"] = 1,
+			["rotation"] = 0,
+			["height"] = 15,
+			["trigger"] = {
+			},
+			["load"] = {
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["regionType"] = "dynamicgroup",
 		},
 		["TCD: Reck"] = {
 			["stacksPoint"] = "RIGHT",
 			["fontSize"] = 8,
 			["displayStacks"] = "%p",
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_talent"] = false,
-				["use_spec"] = true,
-				["spec"] = {
-					["single"] = 3,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -32323,7 +33413,18 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
 				["race"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 3,
 					["multi"] = {
 					},
 				},
@@ -32407,108 +33508,39 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 		},
-		["AA ready"] = {
-			["color"] = {
+		["BM Main: Guard 2.0"] = {
+			["backdropColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				1, -- [4]
+				0.5, -- [4]
 			},
-			["yOffset"] = 0,
+			["controlledChildren"] = {
+				"Guard Icon 2.0", -- [1]
+				"Guard Not Active 2.0", -- [2]
+				"Guard Cooldown 2.0", -- [3]
+				"Glyphed Guard CD 2.0", -- [4]
+				"Guard Amount 2.0", -- [5]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["xOffset"] = -120,
+			["border"] = false,
+			["yOffset"] = -200,
+			["regionType"] = "group",
+			["borderSize"] = 16,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["expanded"] = false,
+			["borderOffset"] = 5,
+			["selfPoint"] = "BOTTOMLEFT",
+			["id"] = "BM Main: Guard 2.0",
 			["anchorPoint"] = "CENTER",
-			["customTextUpdate"] = "update",
-			["icon"] = true,
-			["fontFlags"] = "OUTLINE",
-			["animation"] = {
-				["start"] = {
-					["type"] = "preset",
-					["duration_type"] = "seconds",
-					["preset"] = "slidetop",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["use_inverse"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
-				["names"] = {
-				},
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["spellName"] = 81700,
-				["custom_hide"] = "timed",
-			},
-			["desaturate"] = false,
-			["progressPrecision"] = 0,
-			["font"] = "ElvUI Font",
-			["height"] = 38.75,
-			["load"] = {
-				["use_never"] = true,
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["use_name"] = false,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["name"] = "Affinity",
-				["use_spec"] = false,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "PRIEST",
-					["multi"] = {
-						["DRUID"] = true,
-					},
-				},
-				["use_class"] = true,
-				["size"] = {
-					["multi"] = {
-						["party"] = true,
-						["ten"] = true,
-						["arena"] = true,
-						["twentyfive"] = true,
-						["pvp"] = true,
-					},
-				},
-			},
-			["fontSize"] = 12,
-			["displayStacks"] = "%p",
-			["regionType"] = "icon",
-			["parent"] = "Priest CD Tracker",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0.2,
-			["auto"] = true,
-			["selfPoint"] = "CENTER",
-			["additional_triggers"] = {
-			},
-			["id"] = "AA ready",
 			["frameStrata"] = 1,
-			["width"] = 38.75,
-			["xOffset"] = 144,
-			["stickyDuration"] = false,
-			["numTriggers"] = 1,
-			["inverse"] = false,
-			["untrigger"] = {
-				["spellName"] = 81700,
+			["additional_triggers"] = {
 			},
 			["actions"] = {
 				["start"] = {
@@ -32516,12 +33548,60 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
-			["stacksPoint"] = "CENTER",
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["borderInset"] = 11,
+			["numTriggers"] = 1,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["trigger"] = {
+				["type"] = "aura",
+				["unit"] = "player",
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+				["names"] = {
+				},
+				["event"] = "Health",
+				["subeventPrefix"] = "SPELL",
+			},
+			["borderEdge"] = "None",
+			["load"] = {
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["untrigger"] = {
 			},
 		},
 		["HOP"] = {
@@ -32529,17 +33609,21 @@ WeakAurasSaved = {
 			["fontSize"] = 8,
 			["displayStacks"] = "%p",
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -32690,6 +33774,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -32762,6 +33850,10 @@ WeakAurasSaved = {
 			["load"] = {
 				["use_class"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -32913,7 +34005,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -32921,8 +34013,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -33011,6 +34107,10 @@ WeakAurasSaved = {
 			["height"] = 40,
 			["parent"] = "Shadow Priest",
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -33146,7 +34246,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -33154,8 +34254,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -33269,7 +34373,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -33277,8 +34381,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["use_zone"] = true,
+				["use_combat"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -33351,7 +34459,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -33359,8 +34467,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -33465,6 +34577,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -33484,33 +34600,24 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "group",
 		},
-		["Track VT Group"] = {
-			["grow"] = "UP",
-			["controlledChildren"] = {
-				"VT", -- [1]
+		["Infusion"] = {
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
-			["animate"] = false,
-			["xOffset"] = 280,
-			["border"] = "None",
-			["yOffset"] = -65,
+			["yOffset"] = 0,
 			["anchorPoint"] = "CENTER",
-			["untrigger"] = {
-			},
-			["sort"] = "none",
-			["expanded"] = false,
-			["space"] = 2,
-			["background"] = "None",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["constantFactor"] = "RADIUS",
+			["customTextUpdate"] = "update",
+			["icon"] = true,
+			["fontFlags"] = "OUTLINE",
+			["useTooltip"] = false,
 			["animation"] = {
 				["start"] = {
+					["type"] = "preset",
 					["duration_type"] = "seconds",
-					["type"] = "none",
+					["preset"] = "slidetop",
 				},
 				["main"] = {
 					["duration_type"] = "seconds",
@@ -33521,43 +34628,98 @@ WeakAurasSaved = {
 					["type"] = "none",
 				},
 			},
-			["borderOffset"] = 16,
-			["align"] = "CENTER",
-			["selfPoint"] = "BOTTOM",
-			["id"] = "Track VT Group",
-			["backgroundInset"] = 0,
-			["frameStrata"] = 1,
-			["width"] = 199.999938964844,
-			["stagger"] = 0,
-			["radius"] = 200,
-			["numTriggers"] = 1,
-			["rotation"] = 0,
-			["height"] = 15,
 			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["use_inverse"] = true,
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["debuffType"] = "HELPFUL",
+				["use_spellName"] = true,
+				["names"] = {
+				},
+				["subeventPrefix"] = "SPELL",
+				["subeventSuffix"] = "_CAST_START",
+				["unit"] = "player",
+				["custom_hide"] = "timed",
+				["spellName"] = 10060,
 			},
+			["desaturate"] = false,
+			["progressPrecision"] = 0,
+			["font"] = "ElvUI Font",
+			["height"] = 38.75,
 			["load"] = {
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
+				["use_never"] = true,
+				["talent"] = {
+					["single"] = 14,
 					["multi"] = {
 					},
 				},
 				["class"] = {
+					["single"] = "PRIEST",
+					["multi"] = {
+						["DRUID"] = true,
+					},
+				},
+				["use_talent"] = true,
+				["use_name"] = false,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["name"] = "Affinity",
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["spec"] = {
 					["multi"] = {
 					},
 				},
 				["size"] = {
 					["multi"] = {
+						["party"] = true,
+						["ten"] = true,
+						["arena"] = true,
+						["twentyfive"] = true,
+						["pvp"] = true,
 					},
 				},
 			},
-			["regionType"] = "dynamicgroup",
+			["fontSize"] = 12,
+			["displayStacks"] = "%p",
+			["regionType"] = "icon",
+			["parent"] = "Priest CD Tracker",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0.2,
+			["auto"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["id"] = "Infusion",
+			["selfPoint"] = "CENTER",
+			["frameStrata"] = 1,
+			["width"] = 38.75,
+			["stickyDuration"] = false,
+			["xOffset"] = 80,
+			["numTriggers"] = 1,
+			["inverse"] = false,
+			["additional_triggers"] = {
+			},
+			["untrigger"] = {
+				["spellName"] = 10060,
+			},
+			["stacksPoint"] = "CENTER",
+			["textColor"] = {
+				0.125490196078431, -- [1]
+				1, -- [2]
+				0.290196078431373, -- [3]
+				1, -- [4]
+			},
 		},
 		["SWP"] = {
 			["sparkWidth"] = 10,
@@ -33585,17 +34747,8 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["sparkOffsetY"] = 0,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
+				["talent"] = {
 					["multi"] = {
-					},
-				},
-				["use_talent"] = false,
-				["use_spec"] = true,
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-						[3] = true,
 					},
 				},
 				["class"] = {
@@ -33603,8 +34756,20 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
 				["race"] = {
 					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+						[3] = true,
 					},
 				},
 				["size"] = {
@@ -33807,7 +34972,11 @@ WeakAurasSaved = {
 			},
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 9,
+				["talent"] = {
+					["single"] = 9,
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
@@ -33852,6 +35021,10 @@ WeakAurasSaved = {
 			["yOffset"] = 185.999877929688,
 			["load"] = {
 				["use_size"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["use_role"] = true,
 				["class"] = {
 					["single"] = "WARRIOR",
@@ -34001,6 +35174,10 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 2,
 					["multi"] = {
@@ -34102,17 +35279,21 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -34193,6 +35374,10 @@ WeakAurasSaved = {
 			["load"] = {
 				["use_class"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -34364,8 +35549,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
-				["spec"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -34374,6 +35558,10 @@ WeakAurasSaved = {
 					["multi"] = {
 						["MONK"] = true,
 						["WARRIOR"] = true,
+					},
+				},
+				["spec"] = {
+					["multi"] = {
 					},
 				},
 				["race"] = {
@@ -34449,6 +35637,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -34499,6 +35691,10 @@ WeakAurasSaved = {
 			["fontSize"] = 12,
 			["displayStacks"] = "%p",
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -34614,6 +35810,10 @@ WeakAurasSaved = {
 			["load"] = {
 				["use_class"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -34813,7 +36013,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -34821,8 +36021,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -34906,15 +36110,7 @@ WeakAurasSaved = {
 			["height"] = 30,
 			["xOffset"] = 0,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_talent"] = false,
-				["use_spec"] = true,
-				["spec"] = {
-					["single"] = 3,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -34923,7 +36119,18 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
 				["race"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 3,
 					["multi"] = {
 					},
 				},
@@ -34976,17 +36183,21 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -35087,6 +36298,21 @@ WeakAurasSaved = {
 			["font"] = "Friz Quadrata TT",
 			["height"] = 64,
 			["load"] = {
+				["use_never"] = true,
+				["zone"] = "Siege of Orgrimmar",
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["use_zone"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["multi"] = {
+					},
+				},
 				["role"] = {
 					["multi"] = {
 					},
@@ -35095,17 +36321,6 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_never"] = true,
-				["zone"] = "Siege of Orgrimmar",
-				["class"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["use_zone"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -35228,7 +36443,11 @@ WeakAurasSaved = {
 			["height"] = 30,
 			["xOffset"] = 0,
 			["load"] = {
-				["talent"] = 5,
+				["talent"] = {
+					["single"] = 5,
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
@@ -35265,6 +36484,15 @@ WeakAurasSaved = {
 		},
 		["TCD: RC"] = {
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -35277,11 +36505,6 @@ WeakAurasSaved = {
 				},
 				["spec"] = {
 					["single"] = 3,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
 					["multi"] = {
 					},
 				},
@@ -35433,17 +36656,21 @@ WeakAurasSaved = {
 				["debuffType"] = "HELPFUL",
 			},
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "MONK",
 					["multi"] = {
 					},
 				},
@@ -35505,7 +36732,11 @@ WeakAurasSaved = {
 			["height"] = 34.75,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 18,
+				["talent"] = {
+					["single"] = 18,
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -35641,6 +36872,14 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 32,
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_name"] = true,
 				["role"] = {
 					["multi"] = {
@@ -35648,10 +36887,6 @@ WeakAurasSaved = {
 				},
 				["name"] = "Spih",
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -35701,17 +36936,21 @@ WeakAurasSaved = {
 		},
 		["Regen"] = {
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -35877,6 +37116,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -35932,7 +37175,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -35942,9 +37185,13 @@ WeakAurasSaved = {
 						[2] = true,
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
 					["single"] = "TANK",
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -36130,7 +37377,11 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["talent"] = 4,
+				["talent"] = {
+					["single"] = 4,
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
@@ -36274,6 +37525,10 @@ WeakAurasSaved = {
 			["load"] = {
 				["use_class"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -36432,6 +37687,10 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 2,
 					["multi"] = {
@@ -36544,7 +37803,7 @@ WeakAurasSaved = {
 					},
 				},
 				["use_zone"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -36552,8 +37811,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -36609,6 +37872,21 @@ WeakAurasSaved = {
 			["fontSize"] = 22,
 			["displayStacks"] = "%p",
 			["load"] = {
+				["use_never"] = true,
+				["zone"] = "",
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["use_zone"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["multi"] = {
+					},
+				},
 				["role"] = {
 					["multi"] = {
 					},
@@ -36617,17 +37895,6 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_never"] = true,
-				["zone"] = "",
-				["class"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["use_zone"] = false,
 				["size"] = {
 					["multi"] = {
 					},
@@ -36770,6 +38037,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -36834,6 +38105,10 @@ WeakAurasSaved = {
 			["height"] = 30,
 			["load"] = {
 				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 3,
 					["multi"] = {
@@ -37016,7 +38291,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -37024,8 +38299,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_difficulty"] = true,
 				["use_zone"] = true,
+				["use_difficulty"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
 				["size"] = {
 					["multi"] = {
 					},
@@ -37060,7 +38339,11 @@ WeakAurasSaved = {
 			["sparkOffsetY"] = 0,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 9,
+				["talent"] = {
+					["single"] = 9,
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
@@ -37224,7 +38507,15 @@ WeakAurasSaved = {
 			["anchorPoint"] = "CENTER",
 			["expanded"] = false,
 			["sort"] = "none",
-			["additional_triggers"] = {
+			["trigger"] = {
+				["type"] = "aura",
+				["subeventPrefix"] = "SPELL",
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+				["names"] = {
+				},
+				["event"] = "Health",
+				["unit"] = "player",
 			},
 			["space"] = 2,
 			["background"] = "None",
@@ -37250,17 +38541,9 @@ WeakAurasSaved = {
 				},
 			},
 			["borderOffset"] = 16,
-			["align"] = "CENTER",
+			["id"] = "weakened armor",
 			["selfPoint"] = "TOP",
-			["trigger"] = {
-				["type"] = "aura",
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HELPFUL",
-				["names"] = {
-				},
-				["event"] = "Health",
-				["unit"] = "player",
+			["additional_triggers"] = {
 			},
 			["radius"] = 200,
 			["frameStrata"] = 1,
@@ -37268,11 +38551,15 @@ WeakAurasSaved = {
 			["rotation"] = 0,
 			["stagger"] = 0,
 			["numTriggers"] = 1,
-			["id"] = "weakened armor",
+			["align"] = "CENTER",
 			["height"] = 262,
 			["backgroundInset"] = 0,
 			["load"] = {
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -37335,6 +38622,10 @@ WeakAurasSaved = {
 			["height"] = 50,
 			["load"] = {
 				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
@@ -37488,6 +38779,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -37569,22 +38864,26 @@ WeakAurasSaved = {
 			["height"] = 45,
 			["rotate"] = true,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_never"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
 				["spec"] = {
 					["multi"] = {
 					},
@@ -37650,24 +38949,28 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_level"] = false,
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 3,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
 				["class"] = {
 					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 3,
 					["multi"] = {
 					},
 				},
@@ -37776,17 +39079,21 @@ WeakAurasSaved = {
 			["height"] = 11.9999961853027,
 			["xOffset"] = 122,
 			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_never"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -37876,6 +39183,10 @@ WeakAurasSaved = {
 			["height"] = 40,
 			["stacksPoint"] = "BOTTOM",
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -37960,7 +39271,11 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 18,
+				["talent"] = {
+					["single"] = 18,
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -38094,6 +39409,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -38188,6 +39507,10 @@ WeakAurasSaved = {
 			["height"] = 34.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -38321,6 +39644,10 @@ WeakAurasSaved = {
 			["height"] = 34.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -38467,6 +39794,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -38572,22 +39903,26 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["use_combat"] = true,
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
@@ -38708,7 +40043,11 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 17,
+				["talent"] = {
+					["single"] = 17,
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -38821,6 +40160,10 @@ WeakAurasSaved = {
 			["height"] = 50,
 			["load"] = {
 				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
@@ -38934,17 +40277,21 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_level"] = false,
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -39050,6 +40397,14 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 32,
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_name"] = true,
 				["role"] = {
 					["multi"] = {
@@ -39057,10 +40412,6 @@ WeakAurasSaved = {
 				},
 				["name"] = "Spih",
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -39178,6 +40529,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -39282,17 +40637,8 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 30,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_level"] = false,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
+				["use_never"] = true,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -39301,7 +40647,20 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_never"] = true,
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["use_level"] = false,
 				["size"] = {
 					["multi"] = {
 					},
@@ -39342,22 +40701,26 @@ WeakAurasSaved = {
 			["yOffset"] = -260,
 			["xOffset"] = 321.313171386719,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["use_combat"] = true,
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
@@ -39515,17 +40878,21 @@ WeakAurasSaved = {
 			["height"] = 48.2499694824219,
 			["rotate"] = true,
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["use_never"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
 				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -39569,6 +40936,10 @@ WeakAurasSaved = {
 					},
 				},
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -39728,6 +41099,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
@@ -39857,20 +41232,20 @@ WeakAurasSaved = {
 				["type"] = "aura",
 				["spellId"] = "109964",
 				["unevent"] = "auto",
-				["unit"] = "player",
 				["fullscan"] = true,
+				["use_unit"] = true,
 				["event"] = "Cooldown Progress (Spell)",
-				["subeventPrefix"] = "SPELL",
+				["names"] = {
+					"Spirit Shell", -- [1]
+				},
 				["use_spellId"] = true,
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["spellName"] = 109964,
 				["subeventSuffix"] = "_CAST_START",
-				["names"] = {
-					"Spirit Shell", -- [1]
-				},
-				["use_unit"] = true,
+				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -39879,6 +41254,10 @@ WeakAurasSaved = {
 			["height"] = 34.75,
 			["load"] = {
 				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "PRIEST",
 					["multi"] = {
@@ -40017,15 +41396,7 @@ WeakAurasSaved = {
 				["spellName"] = 114207,
 			},
 			["load"] = {
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_talent"] = false,
-				["use_spec"] = true,
-				["spec"] = {
-					["single"] = 3,
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -40034,7 +41405,18 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
 				["race"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 3,
 					["multi"] = {
 					},
 				},
@@ -40060,6 +41442,15 @@ WeakAurasSaved = {
 			["fontSize"] = 8,
 			["displayStacks"] = "%s",
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -40070,11 +41461,6 @@ WeakAurasSaved = {
 					},
 				},
 				["use_combat"] = true,
-				["class"] = {
-					["single"] = "MONK",
-					["multi"] = {
-					},
-				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
@@ -40222,6 +41608,14 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 32,
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_name"] = true,
 				["role"] = {
 					["multi"] = {
@@ -40229,10 +41623,6 @@ WeakAurasSaved = {
 				},
 				["name"] = "Spih",
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -40350,6 +41740,10 @@ WeakAurasSaved = {
 			["height"] = 104.50008392334,
 			["load"] = {
 				["use_size"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["multi"] = {
 					},
@@ -40450,6 +41844,14 @@ WeakAurasSaved = {
 			["font"] = "DorisPP",
 			["height"] = 32,
 			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["use_name"] = true,
 				["role"] = {
 					["multi"] = {
@@ -40457,10 +41859,6 @@ WeakAurasSaved = {
 				},
 				["name"] = "Spih",
 				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -40595,13 +41993,16 @@ WeakAurasSaved = {
 			["height"] = 38.75,
 			["load"] = {
 				["use_never"] = true,
-				["talent"] = 14,
+				["talent"] = {
+					["single"] = 14,
+					["multi"] = {
+					},
+				},
 				["spec"] = {
 					["single"] = 1,
 					["multi"] = {
 					},
 				},
-				["use_talent"] = false,
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -40904,16 +42305,16 @@ WeakAurasSaved = {
 		},
 		["PRIEST"] = {
 			{
-				["name"] = "Void Tendrils",
-				["icon"] = "Interface\\Icons\\spell_priest_voidtendrils",
+				["name"] = "Desperate Prayer",
+				["icon"] = "Interface\\Icons\\Spell_Holy_TestOfFaith",
 			}, -- [1]
 			{
-				["name"] = "Psyfiend",
-				["icon"] = "Interface\\Icons\\spell_priest_psyfiend",
+				["name"] = "Spectral Guise",
+				["icon"] = "Interface\\Icons\\spell_priest_spectralguise",
 			}, -- [2]
 			{
-				["name"] = "Dominate Mind",
-				["icon"] = "Interface\\Icons\\Spell_Shadow_ShadowWordDominate",
+				["name"] = "Angelic Bulwark",
+				["icon"] = "Interface\\Icons\\ability_priest_angelicbulwark",
 			}, -- [3]
 			{
 				["name"] = "Body and Soul",
@@ -40928,7 +42329,7 @@ WeakAurasSaved = {
 				["icon"] = "Interface\\Icons\\ability_priest_phantasm",
 			}, -- [6]
 			{
-				["name"] = "From Darkness, Comes Light",
+				["name"] = "Surge of Light",
 				["icon"] = "Interface\\Icons\\Spell_Holy_SurgeOfLight",
 			}, -- [7]
 			{
@@ -40936,20 +42337,20 @@ WeakAurasSaved = {
 				["icon"] = "Interface\\Icons\\Spell_Shadow_SoulLeech_3",
 			}, -- [8]
 			{
-				["name"] = "Solace and Insanity",
+				["name"] = "Power Word: Solace",
 				["icon"] = "Interface\\Icons\\ability_priest_flashoflight",
 			}, -- [9]
 			{
-				["name"] = "Desperate Prayer",
-				["icon"] = "Interface\\Icons\\Spell_Holy_TestOfFaith",
+				["name"] = "Void Tendrils",
+				["icon"] = "Interface\\Icons\\spell_priest_voidtendrils",
 			}, -- [10]
 			{
-				["name"] = "Spectral Guise",
-				["icon"] = "Interface\\Icons\\spell_priest_spectralguise",
+				["name"] = "Psychic Scream",
+				["icon"] = "Interface\\Icons\\Spell_Shadow_PsychicScream",
 			}, -- [11]
 			{
-				["name"] = "Angelic Bulwark",
-				["icon"] = "Interface\\Icons\\ability_priest_angelicbulwark",
+				["name"] = "Dominate Mind",
+				["icon"] = "Interface\\Icons\\Spell_Shadow_ShadowWordDominate",
 			}, -- [12]
 			{
 				["name"] = "Twist of Fate",
@@ -40960,8 +42361,8 @@ WeakAurasSaved = {
 				["icon"] = "Interface\\Icons\\Spell_Holy_PowerInfusion",
 			}, -- [14]
 			{
-				["name"] = "Divine Insight",
-				["icon"] = "Interface\\Icons\\spell_priest_burningwill",
+				["name"] = "Spirit Shell",
+				["icon"] = "Interface\\Icons\\ability_shaman_astralshift",
 			}, -- [15]
 			{
 				["name"] = "Cascade",
@@ -40975,6 +42376,18 @@ WeakAurasSaved = {
 				["name"] = "Halo",
 				["icon"] = "Interface\\Icons\\ability_priest_halo",
 			}, -- [18]
+			{
+				["name"] = "Clarity of Will",
+				["icon"] = "Interface\\Icons\\ability_priest_clarityofwill",
+			}, -- [19]
+			{
+				["name"] = "Words of Mending",
+				["icon"] = "Interface\\Icons\\ability_priest_wordsofmeaning",
+			}, -- [20]
+			{
+				["name"] = "Saving Grace",
+				["icon"] = "Interface\\Icons\\ability_priest_savinggrace",
+			}, -- [21]
 		},
 		["WARLOCK"] = {
 			{
@@ -40986,12 +42399,12 @@ WeakAurasSaved = {
 				["icon"] = "Interface\\Icons\\warlock_siphonlife",
 			}, -- [2]
 			{
-				["name"] = "Harvest Life",
-				["icon"] = "Interface\\Icons\\spell_warlock_harvestoflife",
+				["name"] = "Searing Flames",
+				["icon"] = "Interface\\Icons\\inv_ember",
 			}, -- [3]
 			{
-				["name"] = "Demonic Breath",
-				["icon"] = "Interface\\Icons\\Ability_Warlock_ShadowFlame",
+				["name"] = "Howl of Terror",
+				["icon"] = "Interface\\Icons\\ability_warlock_howlofterror",
 			}, -- [4]
 			{
 				["name"] = "Mortal Coil",
@@ -41049,6 +42462,18 @@ WeakAurasSaved = {
 				["name"] = "Mannoroth's Fury",
 				["icon"] = "Interface\\Icons\\Achievement_Boss_Magtheridon",
 			}, -- [18]
+			{
+				["name"] = "Charred Remains",
+				["icon"] = "Interface\\Icons\\warlock_charredremains",
+			}, -- [19]
+			{
+				["name"] = "Cataclysm",
+				["icon"] = "INTERFACE\\ICONS\\achievement_zone_cataclysm",
+			}, -- [20]
+			{
+				["name"] = "Demonic Servitude",
+				["icon"] = "Interface\\Icons\\spell_warlock_demonicservitude",
+			}, -- [21]
 		},
 		["PALADIN"] = {
 			{
@@ -41168,7 +42593,7 @@ WeakAurasSaved = {
 				["icon"] = "Interface\\Icons\\Ability_Druid_ManaTree",
 			}, -- [10]
 			{
-				["name"] = "Incarnation",
+				["name"] = "Incarnation: Son of Ursoc",
 				["icon"] = "Interface\\Icons\\spell_druid_incarnation",
 			}, -- [11]
 			{
@@ -41176,7 +42601,7 @@ WeakAurasSaved = {
 				["icon"] = "Interface\\Icons\\Ability_Druid_ForceofNature",
 			}, -- [12]
 			{
-				["name"] = "Disorienting Roar",
+				["name"] = "Incapacitating Roar",
 				["icon"] = "Interface\\Icons\\Ability_Druid_DemoralizingRoar",
 			}, -- [13]
 			{
@@ -41199,6 +42624,18 @@ WeakAurasSaved = {
 				["name"] = "Nature's Vigil",
 				["icon"] = "Interface\\Icons\\Achievement_Zone_Feralas",
 			}, -- [18]
+			{
+				["name"] = "Guardian of Elune",
+				["icon"] = "Interface\\Icons\\spell_druid_guardianofelune",
+			}, -- [19]
+			{
+				["name"] = "Pulverize",
+				["icon"] = "Interface\\Icons\\spell_druid_malfurionstenacity",
+			}, -- [20]
+			{
+				["name"] = "Bristling Fur",
+				["icon"] = "Interface\\Icons\\spell_druid_bristlingfur",
+			}, -- [21]
 		},
 		["MONK"] = {
 			{
@@ -41273,6 +42710,18 @@ WeakAurasSaved = {
 				["name"] = "Chi Torpedo",
 				["icon"] = "Interface\\Icons\\ability_monk_quitornado",
 			}, -- [18]
+			{
+				["name"] = "Soul Dance",
+				["icon"] = "Interface\\Icons\\ability_monk_souldance",
+			}, -- [19]
+			{
+				["name"] = "Chi Explosion",
+				["icon"] = "Interface\\Icons\\ability_monk_chiexplosion",
+			}, -- [20]
+			{
+				["name"] = "Serenity",
+				["icon"] = "Interface\\Icons\\ability_monk_serenity",
+			}, -- [21]
 		},
 		["SHAMAN"] = {
 			{
@@ -41347,6 +42796,18 @@ WeakAurasSaved = {
 				["name"] = "Elemental Blast",
 				["icon"] = "Interface\\Icons\\shaman_talent_elementalblast",
 			}, -- [18]
+			{
+				["name"] = "Elemental Fusion",
+				["icon"] = "Interface\\Icons\\spell_shaman_shockinglava",
+			}, -- [19]
+			{
+				["name"] = "Storm Elemental Totem",
+				["icon"] = "Interface\\Icons\\spell_shaman_stormtotem",
+			}, -- [20]
+			{
+				["name"] = "Liquid Magma",
+				["icon"] = "Interface\\Icons\\spell_shaman_spewlava",
+			}, -- [21]
 		},
 	},
 	["registered"] = {

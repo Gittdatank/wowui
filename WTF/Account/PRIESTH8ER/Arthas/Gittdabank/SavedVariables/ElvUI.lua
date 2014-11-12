@@ -206,9 +206,9 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_BN_WHISPER",
 		},
-		["1404604012.772"] = {
-			"still raiding tomorrow", -- [1]
-			"|Kf524|k000000000000|k", -- [2]
+		["1404603848.881"] = {
+			"They don't want to do the raid tonight cause we normally do it on fridays, but a lot of people are out for the holliday. So if you still want to do that 10 man tomorrow I can tank it, but next week it'll be back to normal friday/monday night.", -- [1]
+			"|Kf579|k000000|k", -- [2]
 			"", -- [3]
 			"", -- [4]
 			"", -- [5]
@@ -217,12 +217,12 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1896, -- [11]
+			1854, -- [11]
 			false, -- [12]
-			524, -- [13]
+			579, -- [13]
 			false, -- [14]
 			false, -- [15]
-			[20] = "CHAT_MSG_BN_WHISPER_INFORM",
+			[20] = "CHAT_MSG_BN_WHISPER",
 		},
 		["1404604058.602"] = {
 			"http://openraid.us/events/view/210370", -- [1]
@@ -296,9 +296,9 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_BN_WHISPER",
 		},
-		["1404603848.881"] = {
-			"They don't want to do the raid tonight cause we normally do it on fridays, but a lot of people are out for the holliday. So if you still want to do that 10 man tomorrow I can tank it, but next week it'll be back to normal friday/monday night.", -- [1]
-			"|Kf579|k000000|k", -- [2]
+		["1404604012.772"] = {
+			"still raiding tomorrow", -- [1]
+			"|Kf524|k000000000000|k", -- [2]
 			"", -- [3]
 			"", -- [4]
 			"", -- [5]
@@ -307,12 +307,12 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1854, -- [11]
+			1896, -- [11]
 			false, -- [12]
-			579, -- [13]
+			524, -- [13]
 			false, -- [14]
 			false, -- [15]
-			[20] = "CHAT_MSG_BN_WHISPER",
+			[20] = "CHAT_MSG_BN_WHISPER_INFORM",
 		},
 	},
 }

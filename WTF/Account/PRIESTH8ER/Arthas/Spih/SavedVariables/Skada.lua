@@ -6,6 +6,7 @@ SkadaPerCharDB = {
 		["ccbreaks"] = 0,
 		["time"] = 21,
 		["interrupts"] = 0,
+		["mobdone"] = 1002571,
 		["damage"] = 225864,
 		["players"] = {
 			{
@@ -17,16 +18,22 @@ SkadaPerCharDB = {
 				["ccbreaks"] = 0,
 				["time"] = 4,
 				["interrupts"] = 0,
-				["power"] = {
-					[12] = {
-						["amount"] = 3,
-						["spells"] = {
-							[121283] = 1,
-							[115072] = 2,
-						},
+				["overhealing"] = 0,
+				["healingspells"] = {
+					["Expel Harm"] = {
+						["shielding"] = 0,
+						["id"] = 115072,
+						["healing"] = 43373,
+						["min"] = 43373,
+						["absorbed"] = 43372,
+						["name"] = "Expel Harm",
+						["critical"] = 0,
+						["max"] = 43373,
+						["overhealing"] = 0,
+						["hits"] = 1,
+						["multistrikes"] = 0,
 					},
 				},
-				["overhealing"] = 0,
 				["damage"] = 44603,
 				["damagespells"] = {
 					["Xuen: Crackling Tiger Lightning"] = {
@@ -49,37 +56,33 @@ SkadaPerCharDB = {
 						["damage"] = 15521,
 					},
 				},
-				["healingspells"] = {
-					["Expel Harm"] = {
-						["shielding"] = 0,
-						["id"] = 115072,
-						["healing"] = 43373,
-						["min"] = 43373,
-						["name"] = "Expel Harm",
-						["max"] = 43373,
-						["critical"] = 0,
-						["absorbed"] = 43372,
-						["overhealing"] = 0,
-						["hits"] = 1,
-					},
-				},
-				["damagetaken"] = 0,
 				["deathlog"] = {
 					{
 						["absorb"] = 43372,
 						["amount"] = 1,
-						["hp"] = 499760,
 						["ts"] = 1405026953.285,
-						["spellid"] = 115072,
+						["hp"] = 499760,
 						["srcname"] = "Pandalos-Gallywix",
+						["spellid"] = 115072,
 					}, -- [1]
 					["pos"] = 2,
 				},
+				["damagetaken"] = 0,
+				["power"] = {
+					[12] = {
+						["amount"] = 3,
+						["spells"] = {
+							[121283] = 1,
+							[115072] = 2,
+						},
+					},
+				},
 				["id"] = "0x02000000071F51B6",
+				["maxhp"] = 499761,
 				["shielding"] = 0,
 				["damagetakenspells"] = {
 				},
-				["healing"] = 43373,
+				["alertDamage"] = 0,
 				["healed"] = {
 					["0x02000000071F51B6"] = {
 						["shielding"] = 0,
@@ -90,7 +93,6 @@ SkadaPerCharDB = {
 				},
 				["name"] = "Pandalos",
 				["alertCount"] = 0,
-				["alertDamage"] = 0,
 				["auras"] = {
 					["Xuen: Tiger Lust"] = {
 						["name"] = "Xuen: Tiger Lust",
@@ -100,9 +102,10 @@ SkadaPerCharDB = {
 						["uptime"] = 17,
 					},
 				},
+				["healing"] = 43373,
 				["alert"] = {
 				},
-				["maxhp"] = 499761,
+				["multistrikes"] = 0,
 			}, -- [1]
 			{
 				["healingabsorbed"] = 0,
@@ -113,9 +116,8 @@ SkadaPerCharDB = {
 				["ccbreaks"] = 0,
 				["time"] = 3,
 				["interrupts"] = 0,
-				["power"] = {
-				},
 				["overhealing"] = 0,
+				["dispells"] = 0,
 				["damage"] = 13962,
 				["damagespells"] = {
 					["Flame Shock"] = {
@@ -127,10 +129,10 @@ SkadaPerCharDB = {
 						["damage"] = 13962,
 					},
 				},
-				["healingspells"] = {
+				["deathlog"] = {
 				},
 				["damagetaken"] = 0,
-				["deathlog"] = {
+				["power"] = {
 				},
 				["id"] = "0x020000000563E9B6",
 				["maxhp"] = 0,
@@ -143,9 +145,11 @@ SkadaPerCharDB = {
 				["name"] = "Spazzbot",
 				["alertCount"] = 0,
 				["alertDamage"] = 0,
+				["healingspells"] = {
+				},
 				["alert"] = {
 				},
-				["dispells"] = 0,
+				["multistrikes"] = 0,
 			}, -- [2]
 			{
 				["healingabsorbed"] = 21622,
@@ -156,9 +160,48 @@ SkadaPerCharDB = {
 				["ccbreaks"] = 0,
 				["time"] = 10,
 				["interrupts"] = 0,
-				["power"] = {
-				},
 				["overhealing"] = 2,
+				["healingspells"] = {
+					["Power Word: Solace"] = {
+						["shielding"] = 0,
+						["id"] = 140815,
+						["healing"] = 5010,
+						["min"] = 1002,
+						["absorbed"] = 5007,
+						["name"] = "Power Word: Solace",
+						["critical"] = 0,
+						["max"] = 2004,
+						["overhealing"] = 0,
+						["hits"] = 3,
+						["multistrikes"] = 0,
+					},
+					["Cleave"] = {
+						["shielding"] = 0,
+						["id"] = 148234,
+						["healing"] = 1001,
+						["min"] = 1001,
+						["absorbed"] = 1001,
+						["name"] = "Cleave",
+						["critical"] = 0,
+						["max"] = 1001,
+						["overhealing"] = 1,
+						["hits"] = 1,
+						["multistrikes"] = 0,
+					},
+					["Touch of the Grave"] = {
+						["shielding"] = 0,
+						["id"] = 127802,
+						["healing"] = 15614,
+						["min"] = 15614,
+						["absorbed"] = 15614,
+						["name"] = "Touch of the Grave",
+						["critical"] = 0,
+						["max"] = 15614,
+						["overhealing"] = 1,
+						["hits"] = 1,
+						["multistrikes"] = 0,
+					},
+				},
 				["damage"] = 74348,
 				["damagespells"] = {
 					["Power Word: Solace"] = {
@@ -178,84 +221,45 @@ SkadaPerCharDB = {
 						["damage"] = 14872,
 					},
 				},
-				["healingspells"] = {
-					["Power Word: Solace"] = {
-						["shielding"] = 0,
-						["id"] = 140815,
-						["healing"] = 5010,
-						["min"] = 1002,
-						["name"] = "Power Word: Solace",
-						["max"] = 2004,
-						["critical"] = 0,
-						["absorbed"] = 5007,
-						["overhealing"] = 0,
-						["hits"] = 3,
-					},
-					["Cleave"] = {
-						["shielding"] = 0,
-						["id"] = 148234,
-						["healing"] = 1001,
-						["min"] = 1001,
-						["name"] = "Cleave",
-						["max"] = 1001,
-						["critical"] = 0,
-						["absorbed"] = 1001,
-						["overhealing"] = 1,
-						["hits"] = 1,
-					},
-					["Touch of the Grave"] = {
-						["shielding"] = 0,
-						["id"] = 127802,
-						["healing"] = 15614,
-						["min"] = 15614,
-						["name"] = "Touch of the Grave",
-						["max"] = 15614,
-						["critical"] = 0,
-						["absorbed"] = 15614,
-						["overhealing"] = 1,
-						["hits"] = 1,
-					},
-				},
-				["damagetaken"] = 335740,
 				["deathlog"] = {
 					{
 						["absorb"] = 15614,
 						["amount"] = 0,
-						["hp"] = 658036,
 						["ts"] = 1405026953.583,
-						["spellid"] = 127802,
+						["hp"] = 658036,
 						["srcname"] = "Spih",
+						["spellid"] = 127802,
 					}, -- [1]
 					{
 						["absorb"] = -113990,
 						["amount"] = -320466,
-						["hp"] = 658036,
 						["ts"] = 1405026954.778,
-						["spellid"] = 88163,
+						["hp"] = 658036,
 						["srcname"] = "Malkorok",
+						["spellid"] = 88163,
 					}, -- [2]
 					{
 						["ts"] = 1405026954.813,
 						["amount"] = -15274,
-						["hp"] = 322296,
 						["spellid"] = 142906,
 						["srcname"] = "Malkorok",
+						["hp"] = 322296,
 					}, -- [3]
 					{
 						["absorb"] = 1001,
 						["amount"] = 1,
-						["hp"] = 322297,
 						["ts"] = 1405026955.194,
-						["spellid"] = 140815,
+						["hp"] = 322297,
 						["srcname"] = "Spih",
+						["spellid"] = 140815,
 					}, -- [4]
 					{
 						["absorb"] = 25593,
 						["amount"] = 1,
-						["hp"] = 322298,
 						["ts"] = 1405026955.584,
-						["spellid"] = 145110,
+						["hp"] = 322298,
 						["srcname"] = "Tripleclaw-Illidan",
+						["spellid"] = 145110,
 					}, -- [5]
 					{
 						["spellname"] = "Falling",
@@ -266,23 +270,27 @@ SkadaPerCharDB = {
 					{
 						["absorb"] = 0,
 						["amount"] = 25594,
-						["hp"] = 241985,
 						["ts"] = 1405026960.415,
-						["spellid"] = 145110,
+						["hp"] = 241985,
 						["srcname"] = "Tripleclaw-Illidan",
+						["spellid"] = 145110,
 					}, -- [7]
 					["pos"] = 8,
 				},
+				["damagetaken"] = 335740,
+				["power"] = {
+				},
 				["id"] = "0x0200000008617ABD",
+				["maxhp"] = 658036,
 				["shielding"] = 0,
 				["damagetakenspells"] = {
 					["Ancient Miasma"] = {
 						["crushing"] = 0,
 						["id"] = 142906,
+						["absorbed"] = 0,
+						["glancing"] = 0,
 						["min"] = 15274,
 						["critical"] = 0,
-						["glancing"] = 0,
-						["absorbed"] = 0,
 						["name"] = "Ancient Miasma",
 						["blocked"] = 0,
 						["totalhits"] = 1,
@@ -293,10 +301,10 @@ SkadaPerCharDB = {
 					["Attack"] = {
 						["crushing"] = 0,
 						["id"] = 6603,
+						["absorbed"] = 113990,
+						["glancing"] = 0,
 						["min"] = 320466,
 						["critical"] = 0,
-						["glancing"] = 0,
-						["absorbed"] = 113990,
 						["name"] = "Attack",
 						["blocked"] = 0,
 						["totalhits"] = 1,
@@ -305,7 +313,7 @@ SkadaPerCharDB = {
 						["damage"] = 320466,
 					},
 				},
-				["healing"] = 21625,
+				["alertDamage"] = 0,
 				["healed"] = {
 					["0x0200000008751C4F"] = {
 						["shielding"] = 0,
@@ -334,7 +342,6 @@ SkadaPerCharDB = {
 				},
 				["name"] = "Spih",
 				["alertCount"] = 0,
-				["alertDamage"] = 0,
 				["auras"] = {
 					["Inner Fire"] = {
 						["name"] = "Inner Fire",
@@ -400,9 +407,10 @@ SkadaPerCharDB = {
 						["uptime"] = 20,
 					},
 				},
+				["healing"] = 21625,
 				["alert"] = {
 				},
-				["maxhp"] = 658036,
+				["multistrikes"] = 0,
 			}, -- [3]
 			{
 				["healingabsorbed"] = 0,
@@ -413,27 +421,27 @@ SkadaPerCharDB = {
 				["ccbreaks"] = 0,
 				["time"] = 0,
 				["interrupts"] = 0,
-				["power"] = {
-				},
 				["overhealing"] = 0,
+				["healingspells"] = {
+				},
 				["damage"] = 0,
 				["damagespells"] = {
 				},
-				["healingspells"] = {
-				},
-				["damagetaken"] = 0,
 				["deathlog"] = {
 				},
+				["damagetaken"] = 0,
+				["power"] = {
+				},
 				["id"] = "0x0480000005B801C7",
+				["maxhp"] = 769594,
 				["shielding"] = 0,
 				["damagetakenspells"] = {
 				},
-				["healing"] = 0,
+				["alertDamage"] = 0,
 				["healed"] = {
 				},
 				["name"] = "Ørcrux",
 				["alertCount"] = 0,
-				["alertDamage"] = 0,
 				["auras"] = {
 					["Vengeance"] = {
 						["name"] = "Vengeance",
@@ -443,9 +451,10 @@ SkadaPerCharDB = {
 						["uptime"] = 20,
 					},
 				},
+				["healing"] = 0,
 				["alert"] = {
 				},
-				["maxhp"] = 769594,
+				["multistrikes"] = 0,
 			}, -- [4]
 			{
 				["healingabsorbed"] = 0,
@@ -456,9 +465,9 @@ SkadaPerCharDB = {
 				["ccbreaks"] = 0,
 				["time"] = 6,
 				["interrupts"] = 0,
-				["power"] = {
-				},
 				["overhealing"] = 0,
+				["healingspells"] = {
+				},
 				["damage"] = 33902,
 				["damagespells"] = {
 					["Auto Shot"] = {
@@ -494,9 +503,6 @@ SkadaPerCharDB = {
 						["damage"] = 0,
 					},
 				},
-				["healingspells"] = {
-				},
-				["damagetaken"] = 0,
 				["deathlog"] = {
 					{
 						["spellname"] = "Falling",
@@ -506,16 +512,19 @@ SkadaPerCharDB = {
 					}, -- [1]
 					["pos"] = 2,
 				},
+				["damagetaken"] = 0,
+				["power"] = {
+				},
 				["id"] = "0x0480000007268863",
+				["maxhp"] = 492984,
 				["shielding"] = 0,
 				["damagetakenspells"] = {
 				},
-				["healing"] = 0,
+				["alertDamage"] = 0,
 				["healed"] = {
 				},
 				["name"] = "Ceta",
 				["alertCount"] = 0,
-				["alertDamage"] = 0,
 				["auras"] = {
 					["Trueshot Aura"] = {
 						["name"] = "Trueshot Aura",
@@ -532,9 +541,10 @@ SkadaPerCharDB = {
 						["uptime"] = 1,
 					},
 				},
+				["healing"] = 0,
 				["alert"] = {
 				},
-				["maxhp"] = 492984,
+				["multistrikes"] = 0,
 			}, -- [5]
 			{
 				["healingabsorbed"] = 0,
@@ -545,42 +555,43 @@ SkadaPerCharDB = {
 				["ccbreaks"] = 0,
 				["time"] = 6,
 				["interrupts"] = 0,
-				["power"] = {
-				},
 				["overhealing"] = 0,
+				["healingspells"] = {
+				},
 				["damage"] = 0,
 				["damagespells"] = {
 				},
-				["healingspells"] = {
-				},
-				["damagetaken"] = 36300,
 				["deathlog"] = {
 					{
 						["ts"] = 1405026956.767,
 						["amount"] = -18150,
-						["hp"] = 468954,
 						["spellid"] = 142906,
 						["srcname"] = "Malkorok",
+						["hp"] = 468954,
 					}, -- [1]
 					{
 						["ts"] = 1405026958.766,
 						["amount"] = -18150,
-						["hp"] = 450804,
 						["spellid"] = 142906,
 						["srcname"] = "Malkorok",
+						["hp"] = 450804,
 					}, -- [2]
 					["pos"] = 3,
 				},
+				["damagetaken"] = 36300,
+				["power"] = {
+				},
 				["id"] = "0x0200000008C66FCC",
+				["maxhp"] = 487104,
 				["shielding"] = 0,
 				["damagetakenspells"] = {
 					["Ancient Miasma"] = {
 						["crushing"] = 0,
 						["id"] = 142906,
+						["absorbed"] = 0,
+						["glancing"] = 0,
 						["min"] = 18150,
 						["critical"] = 0,
-						["glancing"] = 0,
-						["absorbed"] = 0,
 						["name"] = "Ancient Miasma",
 						["blocked"] = 0,
 						["totalhits"] = 2,
@@ -589,12 +600,11 @@ SkadaPerCharDB = {
 						["damage"] = 36300,
 					},
 				},
-				["healing"] = 0,
+				["alertDamage"] = 0,
 				["healed"] = {
 				},
 				["name"] = "Hantz",
 				["alertCount"] = 0,
-				["alertDamage"] = 0,
 				["auras"] = {
 					["Tiger's Lust"] = {
 						["name"] = "Tiger's Lust",
@@ -604,9 +614,10 @@ SkadaPerCharDB = {
 						["uptime"] = 6,
 					},
 				},
+				["healing"] = 0,
 				["alert"] = {
 				},
-				["maxhp"] = 487104,
+				["multistrikes"] = 0,
 			}, -- [6]
 			{
 				["healingabsorbed"] = 0,
@@ -617,9 +628,9 @@ SkadaPerCharDB = {
 				["ccbreaks"] = 0,
 				["time"] = 6,
 				["interrupts"] = 0,
-				["power"] = {
-				},
 				["overhealing"] = 0,
+				["healingspells"] = {
+				},
 				["damage"] = 59049,
 				["damagespells"] = {
 					["Xorgok: Tongue Lash"] = {
@@ -640,9 +651,6 @@ SkadaPerCharDB = {
 						["damage"] = 10642,
 					},
 				},
-				["healingspells"] = {
-				},
-				["damagetaken"] = 36300,
 				["deathlog"] = {
 					{
 						["spellname"] = "Falling",
@@ -653,29 +661,33 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1405026956.767,
 						["amount"] = -18150,
-						["hp"] = 489567,
 						["spellid"] = 142906,
 						["srcname"] = "Malkorok",
+						["hp"] = 489567,
 					}, -- [2]
 					{
 						["ts"] = 1405026958.766,
 						["amount"] = -18150,
-						["hp"] = 490146,
 						["spellid"] = 142906,
 						["srcname"] = "Malkorok",
+						["hp"] = 490146,
 					}, -- [3]
 					["pos"] = 4,
 				},
+				["damagetaken"] = 36300,
+				["power"] = {
+				},
 				["id"] = "0x048000000606A2BC",
+				["maxhp"] = 619957,
 				["shielding"] = 0,
 				["damagetakenspells"] = {
 					["Ancient Miasma"] = {
 						["crushing"] = 0,
 						["id"] = 142906,
+						["absorbed"] = 0,
+						["glancing"] = 0,
 						["min"] = 18150,
 						["critical"] = 0,
-						["glancing"] = 0,
-						["absorbed"] = 0,
 						["name"] = "Ancient Miasma",
 						["blocked"] = 0,
 						["totalhits"] = 2,
@@ -684,17 +696,17 @@ SkadaPerCharDB = {
 						["damage"] = 36300,
 					},
 				},
-				["healing"] = 0,
+				["alertDamage"] = 0,
 				["healed"] = {
 				},
 				["name"] = "Togare",
 				["alertCount"] = 0,
-				["alertDamage"] = 0,
 				["auras"] = {
 				},
+				["healing"] = 0,
 				["alert"] = {
 				},
-				["maxhp"] = 619957,
+				["multistrikes"] = 0,
 			}, -- [7]
 			{
 				["healingabsorbed"] = 0,
@@ -705,23 +717,20 @@ SkadaPerCharDB = {
 				["ccbreaks"] = 0,
 				["time"] = 7,
 				["interrupts"] = 0,
-				["power"] = {
-				},
 				["overhealing"] = 0,
+				["healingspells"] = {
+				},
 				["damage"] = 0,
 				["damagespells"] = {
 				},
-				["healingspells"] = {
-				},
-				["damagetaken"] = 0,
 				["deathlog"] = {
 					{
 						["absorb"] = 2003,
 						["amount"] = 1,
-						["hp"] = 555444,
 						["ts"] = 1405026953.976,
-						["spellid"] = 140815,
+						["hp"] = 555444,
 						["srcname"] = "Spih",
+						["spellid"] = 140815,
 					}, -- [1]
 					{
 						["spellname"] = "Falling",
@@ -731,16 +740,19 @@ SkadaPerCharDB = {
 					}, -- [2]
 					["pos"] = 3,
 				},
+				["damagetaken"] = 0,
+				["power"] = {
+				},
 				["id"] = "0x048000000648F7ED",
+				["maxhp"] = 555445,
 				["shielding"] = 0,
 				["damagetakenspells"] = {
 				},
-				["healing"] = 0,
+				["alertDamage"] = 0,
 				["healed"] = {
 				},
 				["name"] = "Shockscream",
 				["alertCount"] = 0,
-				["alertDamage"] = 0,
 				["auras"] = {
 					["Elemental Oath"] = {
 						["name"] = "Elemental Oath",
@@ -764,9 +776,10 @@ SkadaPerCharDB = {
 						["uptime"] = 1,
 					},
 				},
+				["healing"] = 0,
 				["alert"] = {
 				},
-				["maxhp"] = 555445,
+				["multistrikes"] = 0,
 			}, -- [8]
 			{
 				["healingabsorbed"] = 0,
@@ -777,32 +790,33 @@ SkadaPerCharDB = {
 				["ccbreaks"] = 0,
 				["time"] = 4,
 				["interrupts"] = 0,
-				["power"] = {
-				},
 				["overhealing"] = 0,
+				["healingspells"] = {
+				},
 				["damage"] = 0,
 				["damagespells"] = {
 				},
-				["healingspells"] = {
-				},
-				["damagetaken"] = 0,
 				["deathlog"] = {
 				},
+				["damagetaken"] = 0,
+				["power"] = {
+				},
 				["id"] = "0x040000000647EED3",
+				["maxhp"] = 690193,
 				["shielding"] = 0,
 				["damagetakenspells"] = {
 				},
-				["healing"] = 0,
+				["alertDamage"] = 0,
 				["healed"] = {
 				},
 				["name"] = "Ðarknëssoul",
 				["alertCount"] = 0,
-				["alertDamage"] = 0,
 				["auras"] = {
 				},
+				["healing"] = 0,
 				["alert"] = {
 				},
-				["maxhp"] = 690193,
+				["multistrikes"] = 0,
 			}, -- [9]
 			{
 				["healingabsorbed"] = 0,
@@ -813,35 +827,36 @@ SkadaPerCharDB = {
 				["ccbreaks"] = 0,
 				["time"] = 5,
 				["interrupts"] = 0,
-				["power"] = {
-				},
 				["overhealing"] = 0,
+				["healingspells"] = {
+				},
 				["damage"] = 0,
 				["damagespells"] = {
 				},
-				["healingspells"] = {
-				},
-				["damagetaken"] = 16335,
 				["deathlog"] = {
 					{
 						["ts"] = 1405026956.767,
 						["amount"] = -16335,
-						["hp"] = 564629,
 						["spellid"] = 142906,
 						["srcname"] = "Malkorok",
+						["hp"] = 564629,
 					}, -- [1]
 					["pos"] = 2,
 				},
+				["damagetaken"] = 16335,
+				["power"] = {
+				},
 				["id"] = "0x0200000008A9D206",
+				["maxhp"] = 580964,
 				["shielding"] = 0,
 				["damagetakenspells"] = {
 					["Ancient Miasma"] = {
 						["crushing"] = 0,
 						["id"] = 142906,
+						["absorbed"] = 0,
+						["glancing"] = 0,
 						["min"] = 16335,
 						["critical"] = 0,
-						["glancing"] = 0,
-						["absorbed"] = 0,
 						["name"] = "Ancient Miasma",
 						["blocked"] = 0,
 						["totalhits"] = 1,
@@ -850,17 +865,17 @@ SkadaPerCharDB = {
 						["damage"] = 16335,
 					},
 				},
-				["healing"] = 0,
+				["alertDamage"] = 0,
 				["healed"] = {
 				},
 				["name"] = "Snickerdodle",
 				["alertCount"] = 0,
-				["alertDamage"] = 0,
 				["auras"] = {
 				},
+				["healing"] = 0,
 				["alert"] = {
 				},
-				["maxhp"] = 580964,
+				["multistrikes"] = 0,
 			}, -- [10]
 			{
 				["healingabsorbed"] = 0,
@@ -871,35 +886,36 @@ SkadaPerCharDB = {
 				["ccbreaks"] = 0,
 				["time"] = 5,
 				["interrupts"] = 0,
-				["power"] = {
-				},
 				["overhealing"] = 0,
+				["healingspells"] = {
+				},
 				["damage"] = 0,
 				["damagespells"] = {
 				},
-				["healingspells"] = {
-				},
-				["damagetaken"] = 18150,
 				["deathlog"] = {
 					{
 						["ts"] = 1405026956.767,
 						["amount"] = -18150,
-						["hp"] = 510261,
 						["spellid"] = 142906,
 						["srcname"] = "Malkorok",
+						["hp"] = 510261,
 					}, -- [1]
 					["pos"] = 2,
 				},
+				["damagetaken"] = 18150,
+				["power"] = {
+				},
 				["id"] = "0x02800000069426FC",
+				["maxhp"] = 528411,
 				["shielding"] = 0,
 				["damagetakenspells"] = {
 					["Ancient Miasma"] = {
 						["crushing"] = 0,
 						["id"] = 142906,
+						["absorbed"] = 0,
+						["glancing"] = 0,
 						["min"] = 18150,
 						["critical"] = 0,
-						["glancing"] = 0,
-						["absorbed"] = 0,
 						["name"] = "Ancient Miasma",
 						["blocked"] = 0,
 						["totalhits"] = 1,
@@ -908,17 +924,17 @@ SkadaPerCharDB = {
 						["damage"] = 18150,
 					},
 				},
-				["healing"] = 0,
+				["alertDamage"] = 0,
 				["healed"] = {
 				},
 				["name"] = "Daydreaming",
 				["alertCount"] = 0,
-				["alertDamage"] = 0,
 				["auras"] = {
 				},
+				["healing"] = 0,
 				["alert"] = {
 				},
-				["maxhp"] = 528411,
+				["multistrikes"] = 0,
 			}, -- [11]
 			{
 				["healingabsorbed"] = 56304,
@@ -929,43 +945,45 @@ SkadaPerCharDB = {
 				["ccbreaks"] = 0,
 				["time"] = 7,
 				["interrupts"] = 0,
-				["power"] = {
-				},
 				["overhealing"] = 0,
-				["damage"] = 0,
-				["damagespells"] = {
-				},
 				["healingspells"] = {
 					["Ysera's Gift"] = {
 						["shielding"] = 0,
 						["id"] = 145110,
 						["healing"] = 81900,
 						["min"] = 25594,
-						["name"] = "Ysera's Gift",
-						["max"] = 30712,
-						["critical"] = 0,
 						["absorbed"] = 56304,
+						["name"] = "Ysera's Gift",
+						["critical"] = 0,
+						["max"] = 30712,
 						["overhealing"] = 0,
 						["hits"] = 3,
+						["multistrikes"] = 0,
 					},
 				},
-				["damagetaken"] = 0,
+				["damage"] = 0,
+				["damagespells"] = {
+				},
 				["deathlog"] = {
 					{
 						["absorb"] = 30711,
 						["amount"] = 1,
-						["hp"] = 487498,
 						["ts"] = 1405027060.334,
-						["spellid"] = 145109,
+						["hp"] = 487498,
 						["srcname"] = "Tripleclaw-Illidan",
+						["spellid"] = 145109,
 					}, -- [1]
 					["pos"] = 2,
 				},
+				["damagetaken"] = 0,
+				["power"] = {
+				},
 				["id"] = "0x04000000078E6533",
+				["maxhp"] = 487498,
 				["shielding"] = 0,
 				["damagetakenspells"] = {
 				},
-				["healing"] = 81900,
+				["alertDamage"] = 0,
 				["healed"] = {
 					["0x04000000078E6533"] = {
 						["shielding"] = 0,
@@ -982,12 +1000,12 @@ SkadaPerCharDB = {
 				},
 				["name"] = "Tripleclaw",
 				["alertCount"] = 0,
-				["alertDamage"] = 0,
 				["auras"] = {
 				},
+				["healing"] = 81900,
 				["alert"] = {
 				},
-				["maxhp"] = 487498,
+				["multistrikes"] = 0,
 			}, -- [12]
 			{
 				["healingabsorbed"] = 0,
@@ -998,50 +1016,51 @@ SkadaPerCharDB = {
 				["ccbreaks"] = 0,
 				["time"] = 4,
 				["interrupts"] = 0,
-				["power"] = {
-				},
 				["overhealing"] = 0,
+				["healingspells"] = {
+				},
 				["damage"] = 0,
 				["damagespells"] = {
 				},
-				["healingspells"] = {
-				},
-				["damagetaken"] = 34122,
 				["deathlog"] = {
 					{
 						["absorb"] = 2003,
 						["amount"] = 1,
-						["hp"] = 635616,
 						["ts"] = 1405026954.778,
-						["spellid"] = 140815,
+						["hp"] = 635616,
 						["srcname"] = "Spih",
+						["spellid"] = 140815,
 					}, -- [1]
 					{
 						["ts"] = 1405026956.767,
 						["amount"] = -17061,
-						["hp"] = 618555,
 						["spellid"] = 142906,
 						["srcname"] = "Malkorok",
+						["hp"] = 618555,
 					}, -- [2]
 					{
 						["ts"] = 1405026958.766,
 						["amount"] = -17061,
-						["hp"] = 601494,
 						["spellid"] = 142906,
 						["srcname"] = "Malkorok",
+						["hp"] = 601494,
 					}, -- [3]
 					["pos"] = 4,
 				},
+				["damagetaken"] = 34122,
+				["power"] = {
+				},
 				["id"] = "0x0400000005BD2508",
+				["maxhp"] = 635618,
 				["shielding"] = 0,
 				["damagetakenspells"] = {
 					["Ancient Miasma"] = {
 						["crushing"] = 0,
 						["id"] = 142906,
+						["absorbed"] = 0,
+						["glancing"] = 0,
 						["min"] = 17061,
 						["critical"] = 0,
-						["glancing"] = 0,
-						["absorbed"] = 0,
 						["name"] = "Ancient Miasma",
 						["blocked"] = 0,
 						["totalhits"] = 2,
@@ -1050,17 +1069,17 @@ SkadaPerCharDB = {
 						["damage"] = 34122,
 					},
 				},
-				["healing"] = 0,
+				["alertDamage"] = 0,
 				["healed"] = {
 				},
 				["name"] = "Luvzguinness",
 				["alertCount"] = 0,
-				["alertDamage"] = 0,
 				["auras"] = {
 				},
+				["healing"] = 0,
 				["alert"] = {
 				},
-				["maxhp"] = 635618,
+				["multistrikes"] = 0,
 			}, -- [13]
 			{
 				["healingabsorbed"] = 0,
@@ -1071,23 +1090,20 @@ SkadaPerCharDB = {
 				["ccbreaks"] = 0,
 				["time"] = 5,
 				["interrupts"] = 0,
-				["power"] = {
-				},
 				["overhealing"] = 0,
+				["healingspells"] = {
+				},
 				["damage"] = 0,
 				["damagespells"] = {
 				},
-				["healingspells"] = {
-				},
-				["damagetaken"] = 40836,
 				["deathlog"] = {
 					{
 						["absorb"] = 1001,
 						["amount"] = 0,
-						["hp"] = 608615,
 						["ts"] = 1405026955.982,
-						["spellid"] = 148234,
+						["hp"] = 608615,
 						["srcname"] = "Spih",
+						["spellid"] = 148234,
 					}, -- [1]
 					{
 						["ts"] = 1405026956.483,
@@ -1099,36 +1115,40 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1405026956.767,
 						["amount"] = -13612,
-						["hp"] = 485818,
 						["spellid"] = 142906,
 						["srcname"] = "Malkorok",
+						["hp"] = 485818,
 					}, -- [3]
 					{
 						["ts"] = 1405026958.766,
 						["amount"] = -13612,
-						["hp"] = 472206,
 						["spellid"] = 142906,
 						["srcname"] = "Malkorok",
+						["hp"] = 472206,
 					}, -- [4]
 					{
 						["ts"] = 1405026960.766,
 						["amount"] = -13612,
-						["hp"] = 458594,
 						["spellid"] = 142906,
 						["srcname"] = "Malkorok",
+						["hp"] = 458594,
 					}, -- [5]
 					["pos"] = 6,
 				},
+				["damagetaken"] = 40836,
+				["power"] = {
+				},
 				["id"] = "0x0200000008751C4F",
+				["maxhp"] = 608615,
 				["shielding"] = 0,
 				["damagetakenspells"] = {
 					["Ancient Miasma"] = {
 						["crushing"] = 0,
 						["id"] = 142906,
+						["absorbed"] = 0,
+						["glancing"] = 0,
 						["min"] = 13612,
 						["critical"] = 0,
-						["glancing"] = 0,
-						["absorbed"] = 0,
 						["name"] = "Ancient Miasma",
 						["blocked"] = 0,
 						["totalhits"] = 3,
@@ -1137,17 +1157,17 @@ SkadaPerCharDB = {
 						["damage"] = 40836,
 					},
 				},
-				["healing"] = 0,
+				["alertDamage"] = 0,
 				["healed"] = {
 				},
 				["name"] = "Masrur",
 				["alertCount"] = 0,
-				["alertDamage"] = 0,
 				["auras"] = {
 				},
+				["healing"] = 0,
 				["alert"] = {
 				},
-				["maxhp"] = 608615,
+				["multistrikes"] = 0,
 			}, -- [14]
 			{
 				["healingabsorbed"] = 0,
@@ -1158,15 +1178,12 @@ SkadaPerCharDB = {
 				["ccbreaks"] = 0,
 				["time"] = 0,
 				["interrupts"] = 0,
-				["power"] = {
-				},
 				["overhealing"] = 0,
+				["healingspells"] = {
+				},
 				["damage"] = 0,
 				["damagespells"] = {
 				},
-				["healingspells"] = {
-				},
-				["damagetaken"] = 0,
 				["deathlog"] = {
 					{
 						["spellname"] = "Falling",
@@ -1176,21 +1193,25 @@ SkadaPerCharDB = {
 					}, -- [1]
 					["pos"] = 2,
 				},
+				["damagetaken"] = 0,
+				["power"] = {
+				},
 				["id"] = "0x0200000006D3F249",
+				["maxhp"] = 642630,
 				["shielding"] = 0,
 				["damagetakenspells"] = {
 				},
-				["healing"] = 0,
+				["alertDamage"] = 0,
 				["healed"] = {
 				},
 				["name"] = "Nisdenar",
 				["alertCount"] = 0,
-				["alertDamage"] = 0,
 				["auras"] = {
 				},
+				["healing"] = 0,
 				["alert"] = {
 				},
-				["maxhp"] = 642630,
+				["multistrikes"] = 0,
 			}, -- [15]
 			{
 				["healingabsorbed"] = 0,
@@ -1201,15 +1222,12 @@ SkadaPerCharDB = {
 				["ccbreaks"] = 0,
 				["time"] = 3,
 				["interrupts"] = 0,
-				["power"] = {
-				},
 				["overhealing"] = 0,
+				["healingspells"] = {
+				},
 				["damage"] = 0,
 				["damagespells"] = {
 				},
-				["healingspells"] = {
-				},
-				["damagetaken"] = 36300,
 				["deathlog"] = {
 					{
 						["spellname"] = "Falling",
@@ -1220,29 +1238,33 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1405026956.767,
 						["amount"] = -18150,
-						["hp"] = 405771,
 						["spellid"] = 142906,
 						["srcname"] = "Malkorok",
+						["hp"] = 405771,
 					}, -- [2]
 					{
 						["ts"] = 1405026958.766,
 						["amount"] = -18150,
-						["hp"] = 392834,
 						["spellid"] = 142906,
 						["srcname"] = "Malkorok",
+						["hp"] = 392834,
 					}, -- [3]
 					["pos"] = 4,
 				},
+				["damagetaken"] = 36300,
+				["power"] = {
+				},
 				["id"] = "0x0700000004DE1A5A",
+				["maxhp"] = 517636,
 				["shielding"] = 0,
 				["damagetakenspells"] = {
 					["Ancient Miasma"] = {
 						["crushing"] = 0,
 						["id"] = 142906,
+						["absorbed"] = 0,
+						["glancing"] = 0,
 						["min"] = 18150,
 						["critical"] = 0,
-						["glancing"] = 0,
-						["absorbed"] = 0,
 						["name"] = "Ancient Miasma",
 						["blocked"] = 0,
 						["totalhits"] = 2,
@@ -1251,17 +1273,17 @@ SkadaPerCharDB = {
 						["damage"] = 36300,
 					},
 				},
-				["healing"] = 0,
+				["alertDamage"] = 0,
 				["healed"] = {
 				},
 				["name"] = "Kithkanen",
 				["alertCount"] = 0,
-				["alertDamage"] = 0,
 				["auras"] = {
 				},
+				["healing"] = 0,
 				["alert"] = {
 				},
-				["maxhp"] = 517636,
+				["multistrikes"] = 0,
 			}, -- [16]
 			{
 				["healingabsorbed"] = 0,
@@ -1272,27 +1294,27 @@ SkadaPerCharDB = {
 				["ccbreaks"] = 0,
 				["time"] = 2,
 				["interrupts"] = 0,
-				["power"] = {
-				},
 				["overhealing"] = 0,
+				["healingspells"] = {
+				},
 				["damage"] = 0,
 				["damagespells"] = {
 				},
-				["healingspells"] = {
-				},
-				["damagetaken"] = 0,
 				["deathlog"] = {
 				},
+				["damagetaken"] = 0,
+				["power"] = {
+				},
 				["id"] = "0x02800000066A59B8",
+				["maxhp"] = 603470,
 				["shielding"] = 0,
 				["damagetakenspells"] = {
 				},
-				["healing"] = 0,
+				["alertDamage"] = 0,
 				["healed"] = {
 				},
 				["name"] = "Sétesh",
 				["alertCount"] = 0,
-				["alertDamage"] = 0,
 				["auras"] = {
 					["Horn of Winter"] = {
 						["name"] = "Horn of Winter",
@@ -1302,9 +1324,10 @@ SkadaPerCharDB = {
 						["uptime"] = 16,
 					},
 				},
+				["healing"] = 0,
 				["alert"] = {
 				},
-				["maxhp"] = 603470,
+				["multistrikes"] = 0,
 			}, -- [17]
 			{
 				["healingabsorbed"] = 0,
@@ -1317,9 +1340,9 @@ SkadaPerCharDB = {
 				["interrupts"] = 0,
 				["healingspells"] = {
 				},
-				["power"] = {
-				},
 				["overhealing"] = 0,
+				["deathlog"] = {
+				},
 				["damage"] = 0,
 				["damagespells"] = {
 				},
@@ -1338,9 +1361,9 @@ SkadaPerCharDB = {
 								["ts"] = 1405026958.14402,
 								["amount"] = -1000000000,
 								["spellname"] = "Sacrifice",
-								["hp"] = 509142,
 								["spellid"] = 140271,
 								["srcname"] = "Juampay-Ragnaros",
+								["hp"] = 509142,
 							}, -- [2]
 							{
 								["spellname"] = "Juampay dies",
@@ -1353,23 +1376,24 @@ SkadaPerCharDB = {
 					}, -- [1]
 				},
 				["damagetaken"] = 0,
-				["deathlog"] = {
+				["power"] = {
 				},
 				["id"] = "0x028000000328148B",
+				["maxhp"] = 621698,
 				["shielding"] = 0,
 				["damagetakenspells"] = {
 				},
-				["healing"] = 0,
+				["alertDamage"] = 0,
 				["healed"] = {
 				},
 				["name"] = "Juampay",
 				["alertCount"] = 0,
-				["alertDamage"] = 0,
 				["auras"] = {
 				},
+				["healing"] = 0,
 				["alert"] = {
 				},
-				["maxhp"] = 621698,
+				["multistrikes"] = 0,
 			}, -- [18]
 			{
 				["healingabsorbed"] = 0,
@@ -1380,35 +1404,36 @@ SkadaPerCharDB = {
 				["ccbreaks"] = 0,
 				["time"] = 0,
 				["interrupts"] = 0,
-				["power"] = {
-				},
 				["overhealing"] = 0,
+				["healingspells"] = {
+				},
 				["damage"] = 0,
 				["damagespells"] = {
 				},
-				["healingspells"] = {
-				},
-				["damagetaken"] = 18150,
 				["deathlog"] = {
 					{
 						["ts"] = 1405026956.767,
 						["amount"] = -18150,
-						["hp"] = 491019,
 						["spellid"] = 142906,
 						["srcname"] = "Malkorok",
+						["hp"] = 491019,
 					}, -- [1]
 					["pos"] = 2,
 				},
+				["damagetaken"] = 18150,
+				["power"] = {
+				},
 				["id"] = "0x04800000075CD869",
+				["maxhp"] = 509169,
 				["shielding"] = 0,
 				["damagetakenspells"] = {
 					["Ancient Miasma"] = {
 						["crushing"] = 0,
 						["id"] = 142906,
+						["absorbed"] = 0,
+						["glancing"] = 0,
 						["min"] = 18150,
 						["critical"] = 0,
-						["glancing"] = 0,
-						["absorbed"] = 0,
 						["name"] = "Ancient Miasma",
 						["blocked"] = 0,
 						["totalhits"] = 1,
@@ -1417,17 +1442,17 @@ SkadaPerCharDB = {
 						["damage"] = 18150,
 					},
 				},
-				["healing"] = 0,
+				["alertDamage"] = 0,
 				["healed"] = {
 				},
 				["name"] = "Azaledra",
 				["alertCount"] = 0,
-				["alertDamage"] = 0,
 				["auras"] = {
 				},
+				["healing"] = 0,
 				["alert"] = {
 				},
-				["maxhp"] = 509169,
+				["multistrikes"] = 0,
 			}, -- [19]
 			{
 				["healingabsorbed"] = 0,
@@ -1440,9 +1465,9 @@ SkadaPerCharDB = {
 				["interrupts"] = 0,
 				["healingspells"] = {
 				},
-				["power"] = {
-				},
 				["overhealing"] = 0,
+				["deathlog"] = {
+				},
 				["damage"] = 0,
 				["damagespells"] = {
 				},
@@ -1454,16 +1479,16 @@ SkadaPerCharDB = {
 							{
 								["ts"] = 1405026956.76801,
 								["amount"] = -18150,
-								["hp"] = 489902,
 								["spellid"] = 142906,
 								["srcname"] = "Malkorok",
+								["hp"] = 489902,
 							}, -- [1]
 							{
 								["ts"] = 1405027059.13402,
 								["amount"] = -412188,
-								["hp"] = 322227,
 								["spellid"] = 88163,
 								["srcname"] = "Malkorok",
+								["hp"] = 322227,
 							}, -- [2]
 							{
 								["spellname"] = "Shanho dies",
@@ -1476,18 +1501,19 @@ SkadaPerCharDB = {
 					}, -- [1]
 				},
 				["damagetaken"] = 430338,
-				["deathlog"] = {
+				["power"] = {
 				},
 				["id"] = "0x0200000006EBC6F4",
+				["maxhp"] = 508052,
 				["shielding"] = 0,
 				["damagetakenspells"] = {
 					["Ancient Miasma"] = {
 						["crushing"] = 0,
 						["id"] = 142906,
+						["absorbed"] = 0,
+						["glancing"] = 0,
 						["min"] = 18150,
 						["critical"] = 0,
-						["glancing"] = 0,
-						["absorbed"] = 0,
 						["name"] = "Ancient Miasma",
 						["blocked"] = 0,
 						["totalhits"] = 1,
@@ -1498,10 +1524,10 @@ SkadaPerCharDB = {
 					["Attack"] = {
 						["crushing"] = 0,
 						["id"] = 6603,
+						["absorbed"] = 0,
+						["glancing"] = 0,
 						["min"] = 412188,
 						["critical"] = 0,
-						["glancing"] = 0,
-						["absorbed"] = 0,
 						["name"] = "Attack",
 						["blocked"] = 0,
 						["totalhits"] = 1,
@@ -1510,17 +1536,17 @@ SkadaPerCharDB = {
 						["damage"] = 412188,
 					},
 				},
-				["healing"] = 0,
+				["alertDamage"] = 0,
 				["healed"] = {
 				},
 				["name"] = "Shanho",
 				["alertCount"] = 0,
-				["alertDamage"] = 0,
 				["auras"] = {
 				},
+				["healing"] = 0,
 				["alert"] = {
 				},
-				["maxhp"] = 508052,
+				["multistrikes"] = 0,
 			}, -- [20]
 			{
 				["healingabsorbed"] = 0,
@@ -1531,32 +1557,33 @@ SkadaPerCharDB = {
 				["ccbreaks"] = 0,
 				["time"] = 0,
 				["interrupts"] = 0,
-				["power"] = {
-				},
 				["overhealing"] = 0,
+				["healingspells"] = {
+				},
 				["damage"] = 0,
 				["damagespells"] = {
 				},
-				["healingspells"] = {
-				},
-				["damagetaken"] = 0,
 				["deathlog"] = {
 				},
+				["damagetaken"] = 0,
+				["power"] = {
+				},
 				["id"] = "0x0280000003E45DA7",
+				["maxhp"] = 522972,
 				["shielding"] = 0,
 				["damagetakenspells"] = {
 				},
-				["healing"] = 0,
+				["alertDamage"] = 0,
 				["healed"] = {
 				},
 				["name"] = "Amandarock",
 				["alertCount"] = 0,
-				["alertDamage"] = 0,
 				["auras"] = {
 				},
+				["healing"] = 0,
 				["alert"] = {
 				},
-				["maxhp"] = 522972,
+				["multistrikes"] = 0,
 			}, -- [21]
 		},
 		["deaths"] = 2,
@@ -1583,25 +1610,25 @@ SkadaPerCharDB = {
 						["done"] = 36300,
 						["class"] = "PALADIN",
 					},
-					["Ceta-TolBarad"] = {
-						["taken"] = 33902,
-						["done"] = 0,
-						["class"] = "HUNTER",
-					},
 					["Snickerdodle"] = {
 						["taken"] = 0,
 						["done"] = 16335,
 						["class"] = "HUNTER",
+					},
+					["Masrur"] = {
+						["taken"] = 0,
+						["done"] = 40836,
+						["class"] = "WARRIOR",
 					},
 					["Shanho-Mannoroth"] = {
 						["taken"] = 0,
 						["done"] = 430338,
 						["class"] = "MONK",
 					},
-					["Masrur"] = {
-						["taken"] = 0,
-						["done"] = 40836,
-						["class"] = "WARRIOR",
+					["Ceta-TolBarad"] = {
+						["taken"] = 33902,
+						["done"] = 0,
+						["class"] = "HUNTER",
 					},
 					["Luvzguinness-Whisperwind"] = {
 						["taken"] = 0,
@@ -1629,10 +1656,10 @@ SkadaPerCharDB = {
 					},
 				},
 				["hdone"] = 0,
+				["done"] = 1002571,
+				["taken"] = 225864,
 				["htakenspell"] = {
 				},
-				["taken"] = 225864,
-				["done"] = 1002571,
 				["htaken"] = 0,
 				["hdonespell"] = {
 				},
@@ -1644,26 +1671,28 @@ SkadaPerCharDB = {
 		},
 		["healing"] = 146898,
 		["overhealing"] = 2,
-		["shielding"] = 0,
 		["alertDamage"] = 0,
+		["damagetaken"] = 1002571,
 		["starttime"] = 1405026810,
 		["name"] = "Total",
 		["alertCount"] = 0,
-		["damagetaken"] = 1002571,
+		["shielding"] = 0,
 		["mobhdone"] = 0,
 		["last_action"] = 1405026810,
-		["mobdone"] = 1002571,
+		["multistrikes"] = 0,
 	},
 	["sets"] = {
 		{
 			["healingabsorbed"] = 30711,
 			["dispells"] = 0,
+			["endtime"] = 1405027064,
 			["ccbreaks"] = 0,
 			["time"] = 11,
 			["interrupts"] = 0,
-			["endtime"] = 1405027064,
-			["gotboss"] = true,
-			["mobname"] = "Malkorok",
+			["mobdone"] = 412188,
+			["power"] = {
+			},
+			["overhealing"] = 0,
 			["damage"] = 0,
 			["players"] = {
 				{
@@ -1676,26 +1705,26 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 2,
 					["interrupts"] = 0,
+					["overhealing"] = 0,
 					["power"] = {
 					},
 					["damage"] = 0,
 					["damagespells"] = {
 					},
-					["overhealing"] = 0,
+					["healingspells"] = {
+					},
 					["damagetaken"] = 0,
 					["shielding"] = 0,
 					["id"] = "0x048000000648F7ED",
-					["first"] = 1405027053,
-					["healingspells"] = {
-					},
+					["maxhp"] = 555445,
+					["healing"] = 0,
 					["damagetakenspells"] = {
 					},
-					["healing"] = 0,
+					["alertDamage"] = 0,
 					["healed"] = {
 					},
 					["name"] = "Shockscream",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 						["Elemental Oath"] = {
 							["name"] = "Elemental Oath",
@@ -1719,9 +1748,10 @@ SkadaPerCharDB = {
 							["uptime"] = 1,
 						},
 					},
+					["first"] = 1405027053,
 					["alert"] = {
 					},
-					["maxhp"] = 555445,
+					["multistrikes"] = 0,
 				}, -- [1]
 				{
 					["last"] = 1405027055,
@@ -1736,6 +1766,8 @@ SkadaPerCharDB = {
 					["overhealing"] = 0,
 					["power"] = {
 					},
+					["healingspells"] = {
+					},
 					["damage"] = 0,
 					["damagespells"] = {
 					},
@@ -1747,16 +1779,16 @@ SkadaPerCharDB = {
 								{
 									["ts"] = 1405026956.76801,
 									["amount"] = -18150,
-									["hp"] = 489902,
 									["spellid"] = 142906,
 									["srcname"] = "Malkorok",
+									["hp"] = 489902,
 								}, -- [1]
 								{
 									["ts"] = 1405027059.13402,
 									["amount"] = -412188,
-									["hp"] = 322227,
 									["spellid"] = 88163,
 									["srcname"] = "Malkorok",
+									["hp"] = 322227,
 								}, -- [2]
 								{
 									["spellname"] = "Shanho dies",
@@ -1771,17 +1803,16 @@ SkadaPerCharDB = {
 					["damagetaken"] = 412188,
 					["shielding"] = 0,
 					["id"] = "0x0200000006EBC6F4",
-					["first"] = 1405027055,
-					["healingspells"] = {
-					},
+					["maxhp"] = 508052,
+					["healing"] = 0,
 					["damagetakenspells"] = {
 						["Attack"] = {
 							["crushing"] = 0,
 							["id"] = 6603,
+							["absorbed"] = 0,
+							["glancing"] = 0,
 							["min"] = 412188,
 							["critical"] = 0,
-							["glancing"] = 0,
-							["absorbed"] = 0,
 							["name"] = "Attack",
 							["blocked"] = 0,
 							["totalhits"] = 1,
@@ -1790,17 +1821,17 @@ SkadaPerCharDB = {
 							["damage"] = 412188,
 						},
 					},
-					["healing"] = 0,
+					["alertDamage"] = 0,
 					["healed"] = {
 					},
 					["name"] = "Shanho",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 					},
+					["first"] = 1405027055,
 					["alert"] = {
 					},
-					["maxhp"] = 508052,
+					["multistrikes"] = 0,
 				}, -- [2]
 				{
 					["last"] = 1405027055,
@@ -1812,31 +1843,32 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 0,
 					["interrupts"] = 0,
+					["overhealing"] = 0,
 					["power"] = {
 					},
 					["damage"] = 0,
 					["damagespells"] = {
 					},
-					["overhealing"] = 0,
+					["healingspells"] = {
+					},
 					["damagetaken"] = 0,
 					["shielding"] = 0,
 					["id"] = "0x0480000007268863",
-					["first"] = 1405027055,
-					["healingspells"] = {
-					},
+					["maxhp"] = 492984,
+					["healing"] = 0,
 					["damagetakenspells"] = {
 					},
-					["healing"] = 0,
+					["alertDamage"] = 0,
 					["healed"] = {
 					},
 					["name"] = "Ceta",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 					},
+					["first"] = 1405027055,
 					["alert"] = {
 					},
-					["maxhp"] = 492984,
+					["multistrikes"] = 0,
 				}, -- [3]
 				{
 					["last"] = 1405027055,
@@ -1848,31 +1880,32 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 0,
 					["interrupts"] = 0,
+					["overhealing"] = 0,
 					["power"] = {
 					},
 					["damage"] = 0,
 					["damagespells"] = {
 					},
-					["overhealing"] = 0,
+					["healingspells"] = {
+					},
 					["damagetaken"] = 0,
 					["shielding"] = 0,
 					["id"] = "0x040000000647EED3",
-					["first"] = 1405027055,
-					["healingspells"] = {
-					},
+					["maxhp"] = 690193,
+					["healing"] = 0,
 					["damagetakenspells"] = {
 					},
-					["healing"] = 0,
+					["alertDamage"] = 0,
 					["healed"] = {
 					},
 					["name"] = "Ðarknëssoul",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 					},
+					["first"] = 1405027055,
 					["alert"] = {
 					},
-					["maxhp"] = 690193,
+					["multistrikes"] = 0,
 				}, -- [4]
 				{
 					["last"] = 1405027055,
@@ -1884,31 +1917,32 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 0,
 					["interrupts"] = 0,
+					["overhealing"] = 0,
 					["power"] = {
 					},
 					["damage"] = 0,
 					["damagespells"] = {
 					},
-					["overhealing"] = 0,
+					["healingspells"] = {
+					},
 					["damagetaken"] = 0,
 					["shielding"] = 0,
 					["id"] = "0x0280000003E45DA7",
-					["first"] = 1405027055,
-					["healingspells"] = {
-					},
+					["maxhp"] = 522972,
+					["healing"] = 0,
 					["damagetakenspells"] = {
 					},
-					["healing"] = 0,
+					["alertDamage"] = 0,
 					["healed"] = {
 					},
 					["name"] = "Amandarock",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 					},
+					["first"] = 1405027055,
 					["alert"] = {
 					},
-					["maxhp"] = 522972,
+					["multistrikes"] = 0,
 				}, -- [5]
 				{
 					["last"] = 1405027056,
@@ -1920,33 +1954,35 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 1,
 					["interrupts"] = 0,
+					["overhealing"] = 0,
 					["power"] = {
 					},
 					["damage"] = 0,
 					["damagespells"] = {
 					},
-					["overhealing"] = 0,
-					["damagetaken"] = 0,
-					["shielding"] = 0,
-					["id"] = "0x04000000078E6533",
-					["first"] = 1405027055,
 					["healingspells"] = {
 						["Ysera's Gift"] = {
 							["shielding"] = 0,
 							["id"] = 145109,
 							["healing"] = 30712,
 							["min"] = 30712,
-							["name"] = "Ysera's Gift",
-							["max"] = 30712,
-							["critical"] = 0,
 							["absorbed"] = 30711,
+							["name"] = "Ysera's Gift",
+							["critical"] = 0,
+							["max"] = 30712,
 							["overhealing"] = 0,
 							["hits"] = 1,
+							["multistrikes"] = 0,
 						},
 					},
+					["damagetaken"] = 0,
+					["shielding"] = 0,
+					["id"] = "0x04000000078E6533",
+					["maxhp"] = 487498,
+					["healing"] = 30712,
 					["damagetakenspells"] = {
 					},
-					["healing"] = 30712,
+					["alertDamage"] = 0,
 					["healed"] = {
 						["0x04000000078E6533"] = {
 							["shielding"] = 0,
@@ -1957,12 +1993,12 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Tripleclaw",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 					},
+					["first"] = 1405027055,
 					["alert"] = {
 					},
-					["maxhp"] = 487498,
+					["multistrikes"] = 0,
 				}, -- [6]
 				{
 					["last"] = 1405027060,
@@ -1974,26 +2010,26 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 0,
 					["interrupts"] = 0,
+					["overhealing"] = 0,
 					["power"] = {
 					},
 					["damage"] = 0,
 					["damagespells"] = {
 					},
-					["overhealing"] = 0,
+					["healingspells"] = {
+					},
 					["damagetaken"] = 0,
 					["shielding"] = 0,
 					["id"] = "0x0200000008617ABD",
-					["first"] = 1405027060,
-					["healingspells"] = {
-					},
+					["maxhp"] = 658036,
+					["healing"] = 0,
 					["damagetakenspells"] = {
 					},
-					["healing"] = 0,
+					["alertDamage"] = 0,
 					["healed"] = {
 					},
 					["name"] = "Spih",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 						["Inner Fire"] = {
 							["name"] = "Inner Fire",
@@ -2010,9 +2046,10 @@ SkadaPerCharDB = {
 							["uptime"] = 3,
 						},
 					},
+					["first"] = 1405027060,
 					["alert"] = {
 					},
-					["maxhp"] = 658036,
+					["multistrikes"] = 0,
 				}, -- [7]
 			},
 			["deaths"] = 1,
@@ -2026,39 +2063,41 @@ SkadaPerCharDB = {
 						},
 					},
 					["hdone"] = 0,
+					["done"] = 412188,
+					["taken"] = 0,
 					["htakenspell"] = {
 					},
-					["taken"] = 0,
-					["done"] = 412188,
 					["htaken"] = 0,
 					["hdonespell"] = {
 					},
 				},
 			},
 			["mobtaken"] = 0,
-			["power"] = {
-			},
+			["mobname"] = "Malkorok",
 			["healing"] = 30712,
-			["overhealing"] = 0,
-			["shielding"] = 0,
+			["damagetaken"] = 412188,
 			["alertDamage"] = 0,
 			["starttime"] = 1405027053,
+			["shielding"] = 0,
 			["name"] = "Malkorok",
 			["alertCount"] = 0,
-			["damagetaken"] = 412188,
+			["gotboss"] = true,
 			["mobhdone"] = 0,
 			["last_action"] = 1405027053,
-			["mobdone"] = 412188,
+			["multistrikes"] = 0,
 		}, -- [1]
 		{
 			["healingabsorbed"] = 90587,
 			["dispells"] = 0,
+			["endtime"] = 1405026958,
 			["ccbreaks"] = 0,
 			["time"] = 10,
 			["interrupts"] = 0,
-			["endtime"] = 1405026958,
-			["gotboss"] = true,
-			["mobname"] = "Malkorok",
+			["mobdone"] = 590383,
+			["power"] = {
+				[12] = 3,
+			},
+			["overhealing"] = 2,
 			["damage"] = 225864,
 			["players"] = {
 				{
@@ -2072,6 +2111,7 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 4,
 					["interrupts"] = 0,
+					["overhealing"] = 0,
 					["power"] = {
 						[12] = {
 							["amount"] = 3,
@@ -2103,28 +2143,29 @@ SkadaPerCharDB = {
 							["damage"] = 15521,
 						},
 					},
-					["overhealing"] = 0,
-					["damagetaken"] = 0,
-					["shielding"] = 0,
-					["id"] = "0x02000000071F51B6",
-					["first"] = 1405026948,
 					["healingspells"] = {
 						["Expel Harm"] = {
 							["shielding"] = 0,
 							["id"] = 115072,
 							["healing"] = 43373,
 							["min"] = 43373,
-							["name"] = "Expel Harm",
-							["max"] = 43373,
-							["critical"] = 0,
 							["absorbed"] = 43372,
+							["name"] = "Expel Harm",
+							["critical"] = 0,
+							["max"] = 43373,
 							["overhealing"] = 0,
 							["hits"] = 1,
+							["multistrikes"] = 0,
 						},
 					},
+					["damagetaken"] = 0,
+					["shielding"] = 0,
+					["id"] = "0x02000000071F51B6",
+					["maxhp"] = 499761,
+					["healing"] = 43373,
 					["damagetakenspells"] = {
 					},
-					["healing"] = 43373,
+					["alertDamage"] = 0,
 					["healed"] = {
 						["0x02000000071F51B6"] = {
 							["shielding"] = 0,
@@ -2135,7 +2176,6 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Pandalos",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 						["Xuen: Tiger Lust"] = {
 							["name"] = "Xuen: Tiger Lust",
@@ -2145,9 +2185,10 @@ SkadaPerCharDB = {
 							["uptime"] = 6,
 						},
 					},
+					["first"] = 1405026948,
 					["alert"] = {
 					},
-					["maxhp"] = 499761,
+					["multistrikes"] = 0,
 				}, -- [1]
 				{
 					["last"] = 1405026951,
@@ -2160,8 +2201,8 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 3,
 					["interrupts"] = 0,
-					["power"] = {
-					},
+					["overhealing"] = 0,
+					["dispells"] = 0,
 					["damage"] = 13962,
 					["damagespells"] = {
 						["Flame Shock"] = {
@@ -2173,25 +2214,26 @@ SkadaPerCharDB = {
 							["damage"] = 13962,
 						},
 					},
-					["overhealing"] = 0,
+					["healingspells"] = {
+					},
 					["damagetaken"] = 0,
 					["shielding"] = 0,
 					["id"] = "0x020000000563E9B6",
 					["maxhp"] = 0,
-					["healingspells"] = {
-					},
+					["healing"] = 0,
 					["damagetakenspells"] = {
 					},
-					["healing"] = 0,
+					["alertDamage"] = 0,
 					["healed"] = {
 					},
 					["name"] = "Spazzbot",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["first"] = 1405026948,
+					["power"] = {
+					},
 					["alert"] = {
 					},
-					["dispells"] = 0,
+					["multistrikes"] = 0,
 				}, -- [2]
 				{
 					["last"] = 1405026958,
@@ -2204,6 +2246,7 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 10,
 					["interrupts"] = 0,
+					["overhealing"] = 2,
 					["power"] = {
 					},
 					["damage"] = 74348,
@@ -2225,57 +2268,60 @@ SkadaPerCharDB = {
 							["damage"] = 14872,
 						},
 					},
-					["overhealing"] = 2,
-					["damagetaken"] = 335740,
-					["shielding"] = 0,
-					["id"] = "0x0200000008617ABD",
-					["first"] = 1405026948,
 					["healingspells"] = {
 						["Power Word: Solace"] = {
 							["shielding"] = 0,
 							["id"] = 140815,
 							["healing"] = 5010,
 							["min"] = 1002,
-							["name"] = "Power Word: Solace",
-							["max"] = 2004,
-							["critical"] = 0,
 							["absorbed"] = 5007,
+							["name"] = "Power Word: Solace",
+							["critical"] = 0,
+							["max"] = 2004,
 							["overhealing"] = 0,
 							["hits"] = 3,
+							["multistrikes"] = 0,
 						},
 						["Cleave"] = {
 							["shielding"] = 0,
 							["id"] = 148234,
 							["healing"] = 1001,
 							["min"] = 1001,
-							["name"] = "Cleave",
-							["max"] = 1001,
-							["critical"] = 0,
 							["absorbed"] = 1001,
+							["name"] = "Cleave",
+							["critical"] = 0,
+							["max"] = 1001,
 							["overhealing"] = 1,
 							["hits"] = 1,
+							["multistrikes"] = 0,
 						},
 						["Touch of the Grave"] = {
 							["shielding"] = 0,
 							["id"] = 127802,
 							["healing"] = 15614,
 							["min"] = 15614,
-							["name"] = "Touch of the Grave",
-							["max"] = 15614,
-							["critical"] = 0,
 							["absorbed"] = 15614,
+							["name"] = "Touch of the Grave",
+							["critical"] = 0,
+							["max"] = 15614,
 							["overhealing"] = 1,
 							["hits"] = 1,
+							["multistrikes"] = 0,
 						},
 					},
+					["damagetaken"] = 335740,
+					["shielding"] = 0,
+					["id"] = "0x0200000008617ABD",
+					["maxhp"] = 658036,
+					["healing"] = 21625,
 					["damagetakenspells"] = {
 						["Ancient Miasma"] = {
 							["crushing"] = 0,
 							["id"] = 142906,
+							["absorbed"] = 0,
+							["glancing"] = 0,
 							["min"] = 15274,
 							["critical"] = 0,
-							["glancing"] = 0,
-							["absorbed"] = 0,
 							["name"] = "Ancient Miasma",
 							["blocked"] = 0,
 							["totalhits"] = 1,
@@ -2286,10 +2332,10 @@ SkadaPerCharDB = {
 						["Attack"] = {
 							["crushing"] = 0,
 							["id"] = 6603,
+							["absorbed"] = 113990,
+							["glancing"] = 0,
 							["min"] = 320466,
 							["critical"] = 0,
-							["glancing"] = 0,
-							["absorbed"] = 113990,
 							["name"] = "Attack",
 							["blocked"] = 0,
 							["totalhits"] = 1,
@@ -2298,7 +2344,7 @@ SkadaPerCharDB = {
 							["damage"] = 320466,
 						},
 					},
-					["healing"] = 21625,
+					["alertDamage"] = 0,
 					["healed"] = {
 						["0x0200000008751C4F"] = {
 							["shielding"] = 0,
@@ -2327,7 +2373,6 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Spih",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 						["Power Word: Solace"] = {
 							["name"] = "Power Word: Solace",
@@ -2379,9 +2424,10 @@ SkadaPerCharDB = {
 							["uptime"] = 8,
 						},
 					},
+					["first"] = 1405026948,
 					["alert"] = {
 					},
-					["maxhp"] = 658036,
+					["multistrikes"] = 0,
 				}, -- [3]
 				{
 					["last"] = 1405026949,
@@ -2393,26 +2439,26 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 0,
 					["interrupts"] = 0,
+					["overhealing"] = 0,
 					["power"] = {
 					},
 					["damage"] = 0,
 					["damagespells"] = {
 					},
-					["overhealing"] = 0,
+					["healingspells"] = {
+					},
 					["damagetaken"] = 0,
 					["shielding"] = 0,
 					["id"] = "0x0480000005B801C7",
-					["first"] = 1405026949,
-					["healingspells"] = {
-					},
+					["maxhp"] = 769594,
+					["healing"] = 0,
 					["damagetakenspells"] = {
 					},
-					["healing"] = 0,
+					["alertDamage"] = 0,
 					["healed"] = {
 					},
 					["name"] = "Ørcrux",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 						["Vengeance"] = {
 							["name"] = "Vengeance",
@@ -2422,9 +2468,10 @@ SkadaPerCharDB = {
 							["uptime"] = 9,
 						},
 					},
+					["first"] = 1405026949,
 					["alert"] = {
 					},
-					["maxhp"] = 769594,
+					["multistrikes"] = 0,
 				}, -- [4]
 				{
 					["last"] = 1405026955,
@@ -2437,6 +2484,7 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 6,
 					["interrupts"] = 0,
+					["overhealing"] = 0,
 					["power"] = {
 					},
 					["damage"] = 33902,
@@ -2474,21 +2522,20 @@ SkadaPerCharDB = {
 							["damage"] = 0,
 						},
 					},
-					["overhealing"] = 0,
+					["healingspells"] = {
+					},
 					["damagetaken"] = 0,
 					["shielding"] = 0,
 					["id"] = "0x0480000007268863",
-					["first"] = 1405026949,
-					["healingspells"] = {
-					},
+					["maxhp"] = 492984,
+					["healing"] = 0,
 					["damagetakenspells"] = {
 					},
-					["healing"] = 0,
+					["alertDamage"] = 0,
 					["healed"] = {
 					},
 					["name"] = "Ceta",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 						["Trueshot Aura"] = {
 							["name"] = "Trueshot Aura",
@@ -2505,9 +2552,10 @@ SkadaPerCharDB = {
 							["uptime"] = 1,
 						},
 					},
+					["first"] = 1405026949,
 					["alert"] = {
 					},
-					["maxhp"] = 492984,
+					["multistrikes"] = 0,
 				}, -- [5]
 				{
 					["last"] = 1405026955,
@@ -2519,26 +2567,27 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 6,
 					["interrupts"] = 0,
+					["overhealing"] = 0,
 					["power"] = {
 					},
 					["damage"] = 0,
 					["damagespells"] = {
 					},
-					["overhealing"] = 0,
+					["healingspells"] = {
+					},
 					["damagetaken"] = 36300,
 					["shielding"] = 0,
 					["id"] = "0x0200000008C66FCC",
-					["first"] = 1405026949,
-					["healingspells"] = {
-					},
+					["maxhp"] = 487104,
+					["healing"] = 0,
 					["damagetakenspells"] = {
 						["Ancient Miasma"] = {
 							["crushing"] = 0,
 							["id"] = 142906,
+							["absorbed"] = 0,
+							["glancing"] = 0,
 							["min"] = 18150,
 							["critical"] = 0,
-							["glancing"] = 0,
-							["absorbed"] = 0,
 							["name"] = "Ancient Miasma",
 							["blocked"] = 0,
 							["totalhits"] = 2,
@@ -2547,12 +2596,11 @@ SkadaPerCharDB = {
 							["damage"] = 36300,
 						},
 					},
-					["healing"] = 0,
+					["alertDamage"] = 0,
 					["healed"] = {
 					},
 					["name"] = "Hantz",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 						["Tiger's Lust"] = {
 							["name"] = "Tiger's Lust",
@@ -2562,9 +2610,10 @@ SkadaPerCharDB = {
 							["uptime"] = 6,
 						},
 					},
+					["first"] = 1405026949,
 					["alert"] = {
 					},
-					["maxhp"] = 487104,
+					["multistrikes"] = 0,
 				}, -- [6]
 				{
 					["last"] = 1405026955,
@@ -2577,6 +2626,7 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 6,
 					["interrupts"] = 0,
+					["overhealing"] = 0,
 					["power"] = {
 					},
 					["damage"] = 59049,
@@ -2599,21 +2649,21 @@ SkadaPerCharDB = {
 							["damage"] = 10642,
 						},
 					},
-					["overhealing"] = 0,
+					["healingspells"] = {
+					},
 					["damagetaken"] = 36300,
 					["shielding"] = 0,
 					["id"] = "0x048000000606A2BC",
-					["first"] = 1405026949,
-					["healingspells"] = {
-					},
+					["maxhp"] = 619957,
+					["healing"] = 0,
 					["damagetakenspells"] = {
 						["Ancient Miasma"] = {
 							["crushing"] = 0,
 							["id"] = 142906,
+							["absorbed"] = 0,
+							["glancing"] = 0,
 							["min"] = 18150,
 							["critical"] = 0,
-							["glancing"] = 0,
-							["absorbed"] = 0,
 							["name"] = "Ancient Miasma",
 							["blocked"] = 0,
 							["totalhits"] = 2,
@@ -2622,17 +2672,17 @@ SkadaPerCharDB = {
 							["damage"] = 36300,
 						},
 					},
-					["healing"] = 0,
+					["alertDamage"] = 0,
 					["healed"] = {
 					},
 					["name"] = "Togare",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 					},
+					["first"] = 1405026949,
 					["alert"] = {
 					},
-					["maxhp"] = 619957,
+					["multistrikes"] = 0,
 				}, -- [7]
 				{
 					["last"] = 1405026954,
@@ -2644,31 +2694,32 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 4,
 					["interrupts"] = 0,
+					["overhealing"] = 0,
 					["power"] = {
 					},
 					["damage"] = 0,
 					["damagespells"] = {
 					},
-					["overhealing"] = 0,
+					["healingspells"] = {
+					},
 					["damagetaken"] = 0,
 					["shielding"] = 0,
 					["id"] = "0x040000000647EED3",
-					["first"] = 1405026950,
-					["healingspells"] = {
-					},
+					["maxhp"] = 690193,
+					["healing"] = 0,
 					["damagetakenspells"] = {
 					},
-					["healing"] = 0,
+					["alertDamage"] = 0,
 					["healed"] = {
 					},
 					["name"] = "Ðarknëssoul",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 					},
+					["first"] = 1405026950,
 					["alert"] = {
 					},
-					["maxhp"] = 690193,
+					["multistrikes"] = 0,
 				}, -- [8]
 				{
 					["last"] = 1405026955,
@@ -2680,26 +2731,26 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 5,
 					["interrupts"] = 0,
+					["overhealing"] = 0,
 					["power"] = {
 					},
 					["damage"] = 0,
 					["damagespells"] = {
 					},
-					["overhealing"] = 0,
+					["healingspells"] = {
+					},
 					["damagetaken"] = 0,
 					["shielding"] = 0,
 					["id"] = "0x048000000648F7ED",
-					["first"] = 1405026950,
-					["healingspells"] = {
-					},
+					["maxhp"] = 555445,
+					["healing"] = 0,
 					["damagetakenspells"] = {
 					},
-					["healing"] = 0,
+					["alertDamage"] = 0,
 					["healed"] = {
 					},
 					["name"] = "Shockscream",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 						["Burning Wrath"] = {
 							["name"] = "Burning Wrath",
@@ -2709,9 +2760,10 @@ SkadaPerCharDB = {
 							["uptime"] = 0,
 						},
 					},
+					["first"] = 1405026950,
 					["alert"] = {
 					},
-					["maxhp"] = 555445,
+					["multistrikes"] = 0,
 				}, -- [9]
 				{
 					["last"] = 1405026955,
@@ -2723,26 +2775,27 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 5,
 					["interrupts"] = 0,
+					["overhealing"] = 0,
 					["power"] = {
 					},
 					["damage"] = 0,
 					["damagespells"] = {
 					},
-					["overhealing"] = 0,
+					["healingspells"] = {
+					},
 					["damagetaken"] = 16335,
 					["shielding"] = 0,
 					["id"] = "0x0200000008A9D206",
-					["first"] = 1405026950,
-					["healingspells"] = {
-					},
+					["maxhp"] = 580964,
+					["healing"] = 0,
 					["damagetakenspells"] = {
 						["Ancient Miasma"] = {
 							["crushing"] = 0,
 							["id"] = 142906,
+							["absorbed"] = 0,
+							["glancing"] = 0,
 							["min"] = 16335,
 							["critical"] = 0,
-							["glancing"] = 0,
-							["absorbed"] = 0,
 							["name"] = "Ancient Miasma",
 							["blocked"] = 0,
 							["totalhits"] = 1,
@@ -2751,17 +2804,17 @@ SkadaPerCharDB = {
 							["damage"] = 16335,
 						},
 					},
-					["healing"] = 0,
+					["alertDamage"] = 0,
 					["healed"] = {
 					},
 					["name"] = "Snickerdodle",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 					},
+					["first"] = 1405026950,
 					["alert"] = {
 					},
-					["maxhp"] = 580964,
+					["multistrikes"] = 0,
 				}, -- [10]
 				{
 					["last"] = 1405026955,
@@ -2773,26 +2826,27 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 5,
 					["interrupts"] = 0,
+					["overhealing"] = 0,
 					["power"] = {
 					},
 					["damage"] = 0,
 					["damagespells"] = {
 					},
-					["overhealing"] = 0,
+					["healingspells"] = {
+					},
 					["damagetaken"] = 18150,
 					["shielding"] = 0,
 					["id"] = "0x02800000069426FC",
-					["first"] = 1405026950,
-					["healingspells"] = {
-					},
+					["maxhp"] = 528411,
+					["healing"] = 0,
 					["damagetakenspells"] = {
 						["Ancient Miasma"] = {
 							["crushing"] = 0,
 							["id"] = 142906,
+							["absorbed"] = 0,
+							["glancing"] = 0,
 							["min"] = 18150,
 							["critical"] = 0,
-							["glancing"] = 0,
-							["absorbed"] = 0,
 							["name"] = "Ancient Miasma",
 							["blocked"] = 0,
 							["totalhits"] = 1,
@@ -2801,17 +2855,17 @@ SkadaPerCharDB = {
 							["damage"] = 18150,
 						},
 					},
-					["healing"] = 0,
+					["alertDamage"] = 0,
 					["healed"] = {
 					},
 					["name"] = "Daydreaming",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 					},
+					["first"] = 1405026950,
 					["alert"] = {
 					},
-					["maxhp"] = 528411,
+					["multistrikes"] = 0,
 				}, -- [11]
 				{
 					["last"] = 1405026956,
@@ -2823,33 +2877,35 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 6,
 					["interrupts"] = 0,
+					["overhealing"] = 0,
 					["power"] = {
 					},
 					["damage"] = 0,
 					["damagespells"] = {
 					},
-					["overhealing"] = 0,
-					["damagetaken"] = 0,
-					["shielding"] = 0,
-					["id"] = "0x04000000078E6533",
-					["first"] = 1405026950,
 					["healingspells"] = {
 						["Ysera's Gift"] = {
 							["shielding"] = 0,
 							["id"] = 145110,
 							["healing"] = 51188,
 							["min"] = 25594,
-							["name"] = "Ysera's Gift",
-							["max"] = 25594,
-							["critical"] = 0,
 							["absorbed"] = 25593,
+							["name"] = "Ysera's Gift",
+							["critical"] = 0,
+							["max"] = 25594,
 							["overhealing"] = 0,
 							["hits"] = 2,
+							["multistrikes"] = 0,
 						},
 					},
+					["damagetaken"] = 0,
+					["shielding"] = 0,
+					["id"] = "0x04000000078E6533",
+					["maxhp"] = 487498,
+					["healing"] = 51188,
 					["damagetakenspells"] = {
 					},
-					["healing"] = 51188,
+					["alertDamage"] = 0,
 					["healed"] = {
 						["0x0200000008617ABD"] = {
 							["shielding"] = 0,
@@ -2860,12 +2916,12 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Tripleclaw",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 					},
+					["first"] = 1405026950,
 					["alert"] = {
 					},
-					["maxhp"] = 487498,
+					["multistrikes"] = 0,
 				}, -- [12]
 				{
 					["last"] = 1405026954,
@@ -2877,26 +2933,26 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 2,
 					["interrupts"] = 0,
+					["overhealing"] = 0,
 					["power"] = {
 					},
 					["damage"] = 0,
 					["damagespells"] = {
 					},
-					["overhealing"] = 0,
+					["healingspells"] = {
+					},
 					["damagetaken"] = 0,
 					["shielding"] = 0,
 					["id"] = "0x02800000066A59B8",
-					["first"] = 1405026952,
-					["healingspells"] = {
-					},
+					["maxhp"] = 603470,
+					["healing"] = 0,
 					["damagetakenspells"] = {
 					},
-					["healing"] = 0,
+					["alertDamage"] = 0,
 					["healed"] = {
 					},
 					["name"] = "Sétesh",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 						["Horn of Winter"] = {
 							["name"] = "Horn of Winter",
@@ -2906,9 +2962,10 @@ SkadaPerCharDB = {
 							["uptime"] = 5,
 						},
 					},
+					["first"] = 1405026952,
 					["alert"] = {
 					},
-					["maxhp"] = 603470,
+					["multistrikes"] = 0,
 				}, -- [13]
 				{
 					["last"] = 1405026953,
@@ -2920,26 +2977,27 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 0,
 					["interrupts"] = 0,
+					["overhealing"] = 0,
 					["power"] = {
 					},
 					["damage"] = 0,
 					["damagespells"] = {
 					},
-					["overhealing"] = 0,
+					["healingspells"] = {
+					},
 					["damagetaken"] = 18150,
 					["shielding"] = 0,
 					["id"] = "0x04800000075CD869",
-					["first"] = 1405026953,
-					["healingspells"] = {
-					},
+					["maxhp"] = 509169,
+					["healing"] = 0,
 					["damagetakenspells"] = {
 						["Ancient Miasma"] = {
 							["crushing"] = 0,
 							["id"] = 142906,
+							["absorbed"] = 0,
+							["glancing"] = 0,
 							["min"] = 18150,
 							["critical"] = 0,
-							["glancing"] = 0,
-							["absorbed"] = 0,
 							["name"] = "Ancient Miasma",
 							["blocked"] = 0,
 							["totalhits"] = 1,
@@ -2948,17 +3006,17 @@ SkadaPerCharDB = {
 							["damage"] = 18150,
 						},
 					},
-					["healing"] = 0,
+					["alertDamage"] = 0,
 					["healed"] = {
 					},
 					["name"] = "Azaledra",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 					},
+					["first"] = 1405026953,
 					["alert"] = {
 					},
-					["maxhp"] = 509169,
+					["multistrikes"] = 0,
 				}, -- [14]
 				{
 					["last"] = 1405026957,
@@ -2970,26 +3028,27 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 4,
 					["interrupts"] = 0,
+					["overhealing"] = 0,
 					["power"] = {
 					},
 					["damage"] = 0,
 					["damagespells"] = {
 					},
-					["overhealing"] = 0,
+					["healingspells"] = {
+					},
 					["damagetaken"] = 40836,
 					["shielding"] = 0,
 					["id"] = "0x0200000008751C4F",
-					["first"] = 1405026953,
-					["healingspells"] = {
-					},
+					["maxhp"] = 608615,
+					["healing"] = 0,
 					["damagetakenspells"] = {
 						["Ancient Miasma"] = {
 							["crushing"] = 0,
 							["id"] = 142906,
+							["absorbed"] = 0,
+							["glancing"] = 0,
 							["min"] = 13612,
 							["critical"] = 0,
-							["glancing"] = 0,
-							["absorbed"] = 0,
 							["name"] = "Ancient Miasma",
 							["blocked"] = 0,
 							["totalhits"] = 3,
@@ -2998,17 +3057,17 @@ SkadaPerCharDB = {
 							["damage"] = 40836,
 						},
 					},
-					["healing"] = 0,
+					["alertDamage"] = 0,
 					["healed"] = {
 					},
 					["name"] = "Masrur",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 					},
+					["first"] = 1405026953,
 					["alert"] = {
 					},
-					["maxhp"] = 608615,
+					["multistrikes"] = 0,
 				}, -- [15]
 				{
 					["last"] = 1405026953,
@@ -3020,26 +3079,27 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 0,
 					["interrupts"] = 0,
+					["overhealing"] = 0,
 					["power"] = {
 					},
 					["damage"] = 0,
 					["damagespells"] = {
 					},
-					["overhealing"] = 0,
+					["healingspells"] = {
+					},
 					["damagetaken"] = 18150,
 					["shielding"] = 0,
 					["id"] = "0x0200000006EBC6F4",
-					["first"] = 1405026953,
-					["healingspells"] = {
-					},
+					["maxhp"] = 508052,
+					["healing"] = 0,
 					["damagetakenspells"] = {
 						["Ancient Miasma"] = {
 							["crushing"] = 0,
 							["id"] = 142906,
+							["absorbed"] = 0,
+							["glancing"] = 0,
 							["min"] = 18150,
 							["critical"] = 0,
-							["glancing"] = 0,
-							["absorbed"] = 0,
 							["name"] = "Ancient Miasma",
 							["blocked"] = 0,
 							["totalhits"] = 1,
@@ -3048,17 +3108,17 @@ SkadaPerCharDB = {
 							["damage"] = 18150,
 						},
 					},
-					["healing"] = 0,
+					["alertDamage"] = 0,
 					["healed"] = {
 					},
 					["name"] = "Shanho",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 					},
+					["first"] = 1405026953,
 					["alert"] = {
 					},
-					["maxhp"] = 508052,
+					["multistrikes"] = 0,
 				}, -- [16]
 				{
 					["last"] = 1405026955,
@@ -3070,26 +3130,27 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 2,
 					["interrupts"] = 0,
+					["overhealing"] = 0,
 					["power"] = {
 					},
 					["damage"] = 0,
 					["damagespells"] = {
 					},
-					["overhealing"] = 0,
+					["healingspells"] = {
+					},
 					["damagetaken"] = 34122,
 					["shielding"] = 0,
 					["id"] = "0x0400000005BD2508",
-					["first"] = 1405026953,
-					["healingspells"] = {
-					},
+					["maxhp"] = 635618,
+					["healing"] = 0,
 					["damagetakenspells"] = {
 						["Ancient Miasma"] = {
 							["crushing"] = 0,
 							["id"] = 142906,
+							["absorbed"] = 0,
+							["glancing"] = 0,
 							["min"] = 17061,
 							["critical"] = 0,
-							["glancing"] = 0,
-							["absorbed"] = 0,
 							["name"] = "Ancient Miasma",
 							["blocked"] = 0,
 							["totalhits"] = 2,
@@ -3098,17 +3159,17 @@ SkadaPerCharDB = {
 							["damage"] = 34122,
 						},
 					},
-					["healing"] = 0,
+					["alertDamage"] = 0,
 					["healed"] = {
 					},
 					["name"] = "Luvzguinness",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 					},
+					["first"] = 1405026953,
 					["alert"] = {
 					},
-					["maxhp"] = 635618,
+					["multistrikes"] = 0,
 				}, -- [17]
 				{
 					["last"] = 1405026955,
@@ -3120,26 +3181,27 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 2,
 					["interrupts"] = 0,
+					["overhealing"] = 0,
 					["power"] = {
 					},
 					["damage"] = 0,
 					["damagespells"] = {
 					},
-					["overhealing"] = 0,
+					["healingspells"] = {
+					},
 					["damagetaken"] = 36300,
 					["shielding"] = 0,
 					["id"] = "0x0700000004DE1A5A",
-					["first"] = 1405026953,
-					["healingspells"] = {
-					},
+					["maxhp"] = 517636,
+					["healing"] = 0,
 					["damagetakenspells"] = {
 						["Ancient Miasma"] = {
 							["crushing"] = 0,
 							["id"] = 142906,
+							["absorbed"] = 0,
+							["glancing"] = 0,
 							["min"] = 18150,
 							["critical"] = 0,
-							["glancing"] = 0,
-							["absorbed"] = 0,
 							["name"] = "Ancient Miasma",
 							["blocked"] = 0,
 							["totalhits"] = 2,
@@ -3148,17 +3210,17 @@ SkadaPerCharDB = {
 							["damage"] = 36300,
 						},
 					},
-					["healing"] = 0,
+					["alertDamage"] = 0,
 					["healed"] = {
 					},
 					["name"] = "Kithkanen",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 					},
+					["first"] = 1405026953,
 					["alert"] = {
 					},
-					["maxhp"] = 517636,
+					["multistrikes"] = 0,
 				}, -- [18]
 				{
 					["last"] = 1405026954,
@@ -3170,31 +3232,32 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 0,
 					["interrupts"] = 0,
+					["overhealing"] = 0,
 					["power"] = {
 					},
 					["damage"] = 0,
 					["damagespells"] = {
 					},
-					["overhealing"] = 0,
+					["healingspells"] = {
+					},
 					["damagetaken"] = 0,
 					["shielding"] = 0,
 					["id"] = "0x0280000003E45DA7",
-					["first"] = 1405026954,
-					["healingspells"] = {
-					},
+					["maxhp"] = 522972,
+					["healing"] = 0,
 					["damagetakenspells"] = {
 					},
-					["healing"] = 0,
+					["alertDamage"] = 0,
 					["healed"] = {
 					},
 					["name"] = "Amandarock",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 					},
+					["first"] = 1405026954,
 					["alert"] = {
 					},
-					["maxhp"] = 522972,
+					["multistrikes"] = 0,
 				}, -- [19]
 				{
 					["last"] = 1405026954,
@@ -3208,6 +3271,8 @@ SkadaPerCharDB = {
 					["interrupts"] = 0,
 					["overhealing"] = 0,
 					["power"] = {
+					},
+					["healingspells"] = {
 					},
 					["damage"] = 0,
 					["damagespells"] = {
@@ -3227,9 +3292,9 @@ SkadaPerCharDB = {
 									["ts"] = 1405026958.14402,
 									["amount"] = -1000000000,
 									["spellname"] = "Sacrifice",
-									["hp"] = 509142,
 									["spellid"] = 140271,
 									["srcname"] = "Juampay-Ragnaros",
+									["hp"] = 509142,
 								}, -- [2]
 								{
 									["spellname"] = "Juampay dies",
@@ -3244,22 +3309,21 @@ SkadaPerCharDB = {
 					["damagetaken"] = 0,
 					["shielding"] = 0,
 					["id"] = "0x028000000328148B",
-					["first"] = 1405026954,
-					["healingspells"] = {
-					},
+					["maxhp"] = 621698,
+					["healing"] = 0,
 					["damagetakenspells"] = {
 					},
-					["healing"] = 0,
+					["alertDamage"] = 0,
 					["healed"] = {
 					},
 					["name"] = "Juampay",
 					["alertCount"] = 0,
-					["alertDamage"] = 0,
 					["auras"] = {
 					},
+					["first"] = 1405026954,
 					["alert"] = {
 					},
-					["maxhp"] = 621698,
+					["multistrikes"] = 0,
 				}, -- [20]
 			},
 			["deaths"] = 1,
@@ -3286,25 +3350,25 @@ SkadaPerCharDB = {
 							["done"] = 36300,
 							["class"] = "PALADIN",
 						},
-						["Ceta-TolBarad"] = {
-							["taken"] = 33902,
-							["done"] = 0,
-							["class"] = "HUNTER",
-						},
 						["Snickerdodle"] = {
 							["taken"] = 0,
 							["done"] = 16335,
 							["class"] = "HUNTER",
+						},
+						["Masrur"] = {
+							["taken"] = 0,
+							["done"] = 40836,
+							["class"] = "WARRIOR",
 						},
 						["Shanho-Mannoroth"] = {
 							["taken"] = 0,
 							["done"] = 18150,
 							["class"] = "MONK",
 						},
-						["Masrur"] = {
-							["taken"] = 0,
-							["done"] = 40836,
-							["class"] = "WARRIOR",
+						["Ceta-TolBarad"] = {
+							["taken"] = 33902,
+							["done"] = 0,
+							["class"] = "HUNTER",
 						},
 						["Luvzguinness-Whisperwind"] = {
 							["taken"] = 0,
@@ -3332,30 +3396,28 @@ SkadaPerCharDB = {
 						},
 					},
 					["hdone"] = 0,
+					["done"] = 590383,
+					["taken"] = 225864,
 					["htakenspell"] = {
 					},
-					["taken"] = 225864,
-					["done"] = 590383,
 					["htaken"] = 0,
 					["hdonespell"] = {
 					},
 				},
 			},
 			["mobtaken"] = 225864,
-			["power"] = {
-				[12] = 3,
-			},
+			["mobname"] = "Malkorok",
 			["healing"] = 116186,
-			["overhealing"] = 2,
-			["shielding"] = 0,
+			["damagetaken"] = 590383,
 			["alertDamage"] = 0,
 			["starttime"] = 1405026948,
+			["shielding"] = 0,
 			["name"] = "Malkorok",
 			["alertCount"] = 0,
-			["damagetaken"] = 590383,
+			["gotboss"] = true,
 			["mobhdone"] = 0,
 			["last_action"] = 1405026948,
-			["mobdone"] = 590383,
+			["multistrikes"] = 0,
 		}, -- [2]
 	},
 }

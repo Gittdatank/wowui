@@ -3,13 +3,13 @@ OR_db = {
 	["Notes"] = {
 	},
 	["Options"] = {
-		["Tutorial"] = false,
-		["Automatically send requests"] = true,
 		["Auto enable sent"] = false,
+		["Automatically send requests"] = true,
+		["Tutorial"] = false,
 		["DontCheckForChar"] = false,
 		["Clean up time"] = 7,
 		["Whisperword"] = false,
-		["Auto enable accept"] = true,
+		["Specialnote"] = true,
 		["Personal send message"] = "Adding you as friend for OpenRaid event %d named %s",
 		["Defaultpage"] = "Index",
 		["Filter have invited"] = true,
@@ -19,7 +19,7 @@ OR_db = {
 		},
 		["Clear raids after X days"] = false,
 		["Filter joined your group"] = false,
-		["Specialnote"] = true,
+		["Auto enable accept"] = true,
 	},
 	["Raids"] = {
 		["Git-Arthas"] = {
@@ -34,6 +34,10 @@ OR_db = {
 				"30", -- [6]
 				"marcusdapimp#1309-Totemebanana-Cho'gall,Gauge#1109-Blooddrakin-Cho'gall,Anshe#1863-Hippölyte-Thrall,Rebelled#1811-Rebelled-Thrall,nathreizm#1583-Mithrios-Rexxar,calade#1839-Saxtris-Arthas,Nytsong#1625-Nytkite-Arthas,TheDarklock#1394-Apokalock-Turalyon,Invictum#1351-Invictum-Goldrinn,Zavinn#1156-Adynne-Zul'jin,ullin#1594-Stormthief-Bloodhoof,Invictum#1351-Milinhabr-Goldrinn,Shedu#1729-Shedu-Zul'jin,xandrria#1154-Mayurii-Zul'jin,dratheron#1757-Dratheron-Dalaran,arnoldlayne#1800-Arnoldlul-Hyjal,wibber#1862-Endernx-Arthas,xaru#1391-Raru-Mal'Ganis,Destroyer#1862-Themerciless-Terokkar,jimbonyc718#1949-Nycfinest-Turalyon,gramz#1716-Gramztwo-Hyjal", -- [7]
 			},
+		},
+		["Burk-Arthas"] = {
+		},
+		["Got-Arthas"] = {
 		},
 		["Dbyx-Arthas"] = {
 		},

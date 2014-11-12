@@ -30,9 +30,9 @@ GUPPET_SAVEDDATA = {
 	},
 	["Companion"] = {
 		{
-			["Id"] = "BattlePet-0-000003332FE1",
-			["CreatureID"] = 32841,
-			["Name"] = "Baby Blizzard Bear",
+			["Id"] = "BattlePet-0-000004773B22",
+			["Name"] = "Iron Starlette",
+			["CreatureID"] = 77221,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -43,9 +43,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [1]
 		{
-			["Id"] = "BattlePet-0-000003332FF7",
-			["CreatureID"] = 42177,
-			["Name"] = "Blue Mini Jouster",
+			["Id"] = "BattlePet-0-000003332FE1",
+			["Name"] = "Baby Blizzard Bear",
+			["CreatureID"] = 32841,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -56,9 +56,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [2]
 		{
-			["Id"] = "BattlePet-0-000003332FED",
-			["CreatureID"] = 32591,
-			["Name"] = "Cobra Hatchling",
+			["Id"] = "BattlePet-0-000003332FF7",
+			["Name"] = "Blue Mini Jouster",
+			["CreatureID"] = 42177,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -69,9 +69,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [3]
 		{
-			["Id"] = "BattlePet-0-000003332FFF",
-			["CreatureID"] = 7390,
-			["Name"] = "Cockatiel",
+			["Id"] = "BattlePet-0-000003332FED",
+			["Name"] = "Cobra Hatchling",
+			["CreatureID"] = 32591,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -82,9 +82,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [4]
 		{
-			["Id"] = "BattlePet-0-000003332FF9",
-			["CreatureID"] = 7390,
+			["Id"] = "BattlePet-0-000003332FFF",
 			["Name"] = "Cockatiel",
+			["CreatureID"] = 7390,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -95,9 +95,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [5]
 		{
-			["Id"] = "BattlePet-0-000003332FF1",
-			["CreatureID"] = 36871,
-			["Name"] = "Core Hound Pup",
+			["Id"] = "BattlePet-0-000003332FF9",
+			["Name"] = "Cockatiel",
+			["CreatureID"] = 7390,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -108,9 +108,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [6]
 		{
-			["Id"] = "BattlePet-0-00000375C728",
-			["CreatureID"] = 73532,
-			["Name"] = "Dandelion Frolicker",
+			["Id"] = "BattlePet-0-000003332FF1",
+			["Name"] = "Core Hound Pup",
+			["CreatureID"] = 36871,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -121,9 +121,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [7]
 		{
-			["Id"] = "BattlePet-0-00000375C729",
-			["CreatureID"] = 33198,
-			["Name"] = "Durotar Scorpion",
+			["Id"] = "BattlePet-0-00000375C728",
+			["Name"] = "Dandelion Frolicker",
+			["CreatureID"] = 73532,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -134,9 +134,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [8]
 		{
-			["Id"] = "BattlePet-0-000003332FEC",
-			["CreatureID"] = 33200,
-			["Name"] = "Elwynn Lamb",
+			["Id"] = "BattlePet-0-00000375C729",
+			["Name"] = "Durotar Scorpion",
+			["CreatureID"] = 33198,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -147,9 +147,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [9]
 		{
-			["Id"] = "BattlePet-0-000003332FFA",
-			["CreatureID"] = 71201,
-			["Name"] = "Filthling",
+			["Id"] = "BattlePet-0-000003332FEC",
+			["Name"] = "Elwynn Lamb",
+			["CreatureID"] = 33200,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -160,9 +160,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [10]
 		{
-			["Id"] = "BattlePet-0-00000364C6DD",
-			["CreatureID"] = 62829,
-			["Name"] = "Fishy",
+			["Id"] = "BattlePet-0-000003332FFA",
+			["Name"] = "Filthling",
+			["CreatureID"] = 71201,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -173,9 +173,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [11]
 		{
-			["Id"] = "BattlePet-0-000003332FF5",
-			["CreatureID"] = 45340,
-			["Name"] = "Fossilized Hatchling",
+			["Id"] = "BattlePet-0-00000364C6DD",
+			["Name"] = "Fishy",
+			["CreatureID"] = 62829,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -186,9 +186,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [12]
 		{
-			["Id"] = "BattlePet-0-000003332FEF",
-			["CreatureID"] = 31575,
-			["Name"] = "Giant Sewer Rat",
+			["Id"] = "BattlePet-0-000003332FF5",
+			["Name"] = "Fossilized Hatchling",
+			["CreatureID"] = 45340,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -199,9 +199,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [13]
 		{
-			["Id"] = "BattlePet-0-000003332FF6",
-			["CreatureID"] = 7387,
-			["Name"] = "Green Wing Macaw",
+			["Id"] = "BattlePet-0-000003332FEF",
+			["Name"] = "Giant Sewer Rat",
+			["CreatureID"] = 31575,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -212,9 +212,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [14]
 		{
-			["Id"] = "BattlePet-0-00000406A519",
-			["CreatureID"] = 73359,
-			["Name"] = "Gulp Froglet",
+			["Id"] = "BattlePet-0-000003332FF6",
+			["Name"] = "Green Wing Macaw",
+			["CreatureID"] = 7387,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -225,9 +225,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [15]
 		{
-			["Id"] = "BattlePet-0-000003905058",
-			["CreatureID"] = 67233,
-			["Name"] = "Imperial Silkworm",
+			["Id"] = "BattlePet-0-0000048A95B0",
+			["Name"] = "Grommloc",
+			["CreatureID"] = 88805,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -238,9 +238,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [16]
 		{
-			["Id"] = "BattlePet-0-000003332FFC",
-			["CreatureID"] = 67233,
-			["Name"] = "Imperial Silkworm",
+			["Id"] = "BattlePet-0-00000406A519",
+			["Name"] = "Gulp Froglet",
+			["CreatureID"] = 73359,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -251,9 +251,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [17]
 		{
-			["Id"] = "BattlePet-0-000004773B22",
-			["CreatureID"] = 77221,
-			["Name"] = "Iron Starlette",
+			["Id"] = "BattlePet-0-000003332FFC",
+			["Name"] = "Imperial Silkworm",
+			["CreatureID"] = 67233,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -264,9 +264,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [18]
 		{
-			["Id"] = "BattlePet-0-0000035485F2",
-			["CreatureID"] = 73354,
-			["Name"] = "Kovok",
+			["Id"] = "BattlePet-0-000003905058",
+			["Name"] = "Imperial Silkworm",
+			["CreatureID"] = 67233,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -277,9 +277,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [19]
 		{
-			["Id"] = "BattlePet-0-000003332FEE",
-			["CreatureID"] = 36979,
-			["Name"] = "Lil' K.T.",
+			["Id"] = "BattlePet-0-0000035485F2",
+			["Name"] = "Kovok",
+			["CreatureID"] = 73354,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -290,9 +290,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [20]
 		{
-			["Id"] = "BattlePet-0-000003332FFD",
-			["CreatureID"] = 54027,
-			["Name"] = "Lil' Tarecgosa",
+			["Id"] = "BattlePet-0-000003332FEE",
+			["Name"] = "Lil' K.T.",
+			["CreatureID"] = 36979,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -303,9 +303,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [21]
 		{
-			["Id"] = "BattlePet-0-000003332FF4",
-			["CreatureID"] = 22445,
-			["Name"] = "Miniwing",
+			["Id"] = "BattlePet-0-000003332FFD",
+			["Name"] = "Lil' Tarecgosa",
+			["CreatureID"] = 54027,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -316,9 +316,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [22]
 		{
-			["Id"] = "BattlePet-0-000003332FE2",
-			["CreatureID"] = 22445,
+			["Id"] = "BattlePet-0-000003332FF4",
 			["Name"] = "Miniwing",
+			["CreatureID"] = 22445,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -329,9 +329,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [23]
 		{
-			["Id"] = "BattlePet-0-000003332FF0",
-			["CreatureID"] = 29726,
-			["Name"] = "Mr. Chilly",
+			["Id"] = "BattlePet-0-000003332FE2",
+			["Name"] = "Miniwing",
+			["CreatureID"] = 22445,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -342,9 +342,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [24]
 		{
-			["Id"] = "BattlePet-0-0000039572A5",
-			["CreatureID"] = 50586,
-			["Name"] = "Mr. Grubbs",
+			["Id"] = "BattlePet-0-000003332FF0",
+			["Name"] = "Mr. Chilly",
+			["CreatureID"] = 29726,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -355,9 +355,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [25]
 		{
-			["Id"] = "BattlePet-0-000003332FE8",
-			["CreatureID"] = 16548,
-			["Name"] = "Mr. Wiggles",
+			["Id"] = "BattlePet-0-0000039572A5",
+			["Name"] = "Mr. Grubbs",
+			["CreatureID"] = 50586,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -368,9 +368,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [26]
 		{
-			["Id"] = "BattlePet-0-000003332FF3",
-			["CreatureID"] = 36607,
-			["Name"] = "Onyxian Whelpling",
+			["Id"] = "BattlePet-0-000003332FE8",
+			["Name"] = "Mr. Wiggles",
+			["CreatureID"] = 16548,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -381,9 +381,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [27]
 		{
-			["Id"] = "BattlePet-0-000003332FF2",
-			["CreatureID"] = 36911,
-			["Name"] = "Pandaren Monk",
+			["Id"] = "BattlePet-0-000003332FF3",
+			["Name"] = "Onyxian Whelpling",
+			["CreatureID"] = 36607,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -394,9 +394,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [28]
 		{
-			["Id"] = "BattlePet-0-000003332FE9",
-			["CreatureID"] = 32595,
-			["Name"] = "Pengu",
+			["Id"] = "BattlePet-0-000003332FF2",
+			["Name"] = "Pandaren Monk",
+			["CreatureID"] = 36911,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -407,9 +407,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [29]
 		{
-			["Id"] = "BattlePet-0-000003332FF8",
-			["CreatureID"] = 37865,
-			["Name"] = "Perky Pug",
+			["Id"] = "BattlePet-0-000003332FE9",
+			["Name"] = "Pengu",
+			["CreatureID"] = 32595,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -420,9 +420,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [30]
 		{
-			["Id"] = "BattlePet-0-000003332FE6",
-			["CreatureID"] = 32592,
-			["Name"] = "Proto-Drake Whelp",
+			["Id"] = "BattlePet-0-000003332FF8",
+			["Name"] = "Perky Pug",
+			["CreatureID"] = 37865,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -433,9 +433,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [31]
 		{
-			["Id"] = "BattlePet-0-000003332FFE",
-			["CreatureID"] = 7389,
-			["Name"] = "Senegal",
+			["Id"] = "BattlePet-0-000003332FE6",
+			["Name"] = "Proto-Drake Whelp",
+			["CreatureID"] = 32592,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -446,9 +446,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [32]
 		{
-			["Id"] = "BattlePet-0-000003332FE5",
-			["CreatureID"] = 23909,
-			["Name"] = "Sinister Squashling",
+			["Id"] = "BattlePet-0-000003332FFE",
+			["Name"] = "Senegal",
+			["CreatureID"] = 7389,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -459,9 +459,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [33]
 		{
-			["Id"] = "BattlePet-0-000003332FFB",
-			["CreatureID"] = 10598,
-			["Name"] = "Smolderweb Hatchling",
+			["Id"] = "BattlePet-0-000003332FE5",
+			["Name"] = "Sinister Squashling",
+			["CreatureID"] = 23909,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -472,9 +472,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [34]
 		{
-			["Id"] = "BattlePet-0-000003332FE4",
-			["CreatureID"] = 10598,
+			["Id"] = "BattlePet-0-000003332FFB",
 			["Name"] = "Smolderweb Hatchling",
+			["CreatureID"] = 10598,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -485,9 +485,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [35]
 		{
-			["Id"] = "BattlePet-0-000003332FE7",
-			["CreatureID"] = 33226,
-			["Name"] = "Strand Crawler",
+			["Id"] = "BattlePet-0-000003332FE4",
+			["Name"] = "Smolderweb Hatchling",
+			["CreatureID"] = 10598,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -498,9 +498,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [36]
 		{
-			["Id"] = "BattlePet-0-000003332FEB",
-			["CreatureID"] = 32589,
-			["Name"] = "Tickbird Hatchling",
+			["Id"] = "BattlePet-0-000003332FE7",
+			["Name"] = "Strand Crawler",
+			["CreatureID"] = 33226,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -511,9 +511,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [37]
 		{
-			["Id"] = "BattlePet-0-000003332FEA",
-			["CreatureID"] = 32590,
-			["Name"] = "White Tickbird Hatchling",
+			["Id"] = "BattlePet-0-000003332FEB",
+			["Name"] = "Tickbird Hatchling",
+			["CreatureID"] = 32589,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -524,9 +524,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [38]
 		{
-			["Id"] = "BattlePet-0-000003332FE3",
-			["CreatureID"] = 10259,
-			["Name"] = "Worg Pup",
+			["Id"] = "BattlePet-0-000003332FEA",
+			["Name"] = "White Tickbird Hatchling",
+			["CreatureID"] = 32590,
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -536,15 +536,28 @@ GUPPET_SAVEDDATA = {
 				["Global World"] = 1,
 			},
 		}, -- [39]
+		{
+			["Id"] = "BattlePet-0-000003332FE3",
+			["Name"] = "Worg Pup",
+			["CreatureID"] = 10259,
+			["Weight"] = {
+				["BattleGrounds"] = 0,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
+				["Arenas"] = 0,
+				["Cities"] = 0,
+				["Global World"] = 1,
+			},
+		}, -- [40]
+		["Total"] = 40,
 		["TotalWeight"] = {
 			["BattleGrounds"] = 0,
 			["Instances"] = 0,
 			["Shrine of Two Moons"] = 0,
 			["Arenas"] = 0,
 			["Cities"] = 0,
-			["Global World"] = 39,
+			["Global World"] = 40,
 		},
-		["Total"] = 39,
 	},
 	["Ground"] = {
 		["TotalWeight"] = {
@@ -604,16 +617,6 @@ GUPPET_OPTIONS = {
 	["NewVersion"] = 0,
 	["PreviewFrameSpeed"] = 1,
 	["AutoDismount"] = true,
-	["Mode"] = "Expert_",
-	["MinimapButton"] = {
-		["Show"] = false,
-		["Radius"] = 78,
-		["Position"] = 355,
-		["xOffset"] = 0,
-		["RelativePoint"] = "",
-		["Lock"] = true,
-		["yOffset"] = 0,
-	},
 	["AutoCompanion"] = {
 		["Enabled"] = false,
 		["PetOfTheDay"] = {
@@ -629,8 +632,18 @@ GUPPET_OPTIONS = {
 		["City"] = true,
 		["DismissMounted"] = false,
 		["Resummon"] = 0,
-		["Raid"] = true,
-		["Delay"] = 2,
 		["Arena"] = true,
+		["Delay"] = 2,
+		["Raid"] = true,
 	},
+	["MinimapButton"] = {
+		["Show"] = false,
+		["Radius"] = 78,
+		["Position"] = 355,
+		["xOffset"] = 0,
+		["RelativePoint"] = "",
+		["Lock"] = true,
+		["yOffset"] = 0,
+	},
+	["Mode"] = "Expert_",
 }

@@ -10,10 +10,11 @@ MasqueDB = {
 		["Gimm - Cho'gall"] = "Default",
 		["Gitt - Arthas"] = "Default",
 		["Evyyn - Azuremyst"] = "Default",
-		["Greny - Azuremyst"] = "Default",
 		["Git - Arthas"] = "Default",
+		["Burk - Arthas"] = "Default",
 		["Git - Cho'gall"] = "Default",
 		["Got - Arthas"] = "Default",
+		["Greny - Azuremyst"] = "Default",
 		["Spih - Arthas"] = "Default",
 	},
 	["profiles"] = {

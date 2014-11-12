@@ -44,6 +44,9 @@ TauntAware_PC = {
 		["Got"] = {
 			["MsgFrameSet"] = true,
 		},
+		["Burk"] = {
+			["MsgFrameSet"] = true,
+		},
 	},
 	["Azuremyst"] = {
 		["Evyyn"] = {

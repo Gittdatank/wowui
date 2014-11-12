@@ -1,0 +1,11 @@
+
+PasteDB = {
+	["profileKeys"] = {
+		["Git - Arthas"] = "Git - Arthas",
+	},
+	["profiles"] = {
+		["Git - Arthas"] = {
+			["loaded"] = true,
+		},
+	},
+}

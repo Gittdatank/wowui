@@ -20,3 +20,10 @@ X: -2
 Y: -65
 W: 56
 H: 42
+Frame: VEMMinimapButton
+FrameLevel: 5
+Anchor: TOPRIGHT
+X: -164
+Y: -116
+W: 32
+H: 32
