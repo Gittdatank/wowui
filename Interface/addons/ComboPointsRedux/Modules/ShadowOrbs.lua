@@ -4,7 +4,7 @@ CPR is a combo points display addon based on Funkydude's BasicComboPoints
 ShadowOrbs.lua - A module for tracking Shadow Orbs stacks for shadow priests
 $Date: 2014-10-31 16:04:39 +0000 (Fri, 31 Oct 2014) $
 $Revision: 354 $
-Project Version: 3.2.6
+Project Version: 3.2.7
 contact: codemaster2010 AT gmail DOT com
 
 Copyright (c) 2007-2012 Michael J. Murray aka Lyte of Lothar(US)

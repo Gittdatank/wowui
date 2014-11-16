@@ -4,7 +4,7 @@ CPR is a combo points display addon based on Funkydude's BasicComboPoints
 Arcane.lua - A module for tracking Arcane Charge debuff stacks
 $Date: 2013-05-05 19:58:33 +0000 (Sun, 05 May 2013) $
 $Revision: 317 $
-Project Version: 3.2.6
+Project Version: 3.2.7
 contact: codemaster2010 AT gmail DOT com
 
 Copyright (c) 2007-2012 Michael J. Murray aka Lyte of Lothar(US)

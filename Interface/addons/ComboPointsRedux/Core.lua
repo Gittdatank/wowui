@@ -3,7 +3,7 @@ Author: Starinnia
 CPR is a combo points display addon based on Funkydude's BasicComboPoints
 $Date: 2014-10-28 15:05:44 +0000 (Tue, 28 Oct 2014) $
 $Revision: 351 $
-Project Version: 3.2.6
+Project Version: 3.2.7
 contact: codemaster2010 AT gmail DOT com
 
 Copyright (c) 2007-2014 Michael J. Murray aka Lyte of Lothar(US)

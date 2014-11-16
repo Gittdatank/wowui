@@ -4,8 +4,8 @@
 ## LoadOnDemand: 1
 ## Dependencies: ComboPointsRedux
 ## Author: Starinnia
-## Version: 3.2.6
-## X-Curse-Packaged-Version: 3.2.6
+## Version: 3.2.7
+## X-Curse-Packaged-Version: 3.2.7
 ## X-Curse-Project-Name: Combo Points Redux
 ## X-Curse-Project-ID: combo-points-redux
 ## X-Curse-Repository-ID: wow/combo-points-redux/mainline

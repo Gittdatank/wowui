@@ -11,7 +11,7 @@ pslocale()
 end
 
 
-	psversion=6.006
+	psversion=6.007
 
 
 	psverstiptext="alpha"
@@ -160,23 +160,25 @@ psdeathgriplocal=GetSpellInfo(49560)
 
 
 --cataclysm & Panda data
-pslocations={{752,754,758,773,800,824},{77777,897,896,886,930,953}}
-pslocationnamesdef={{"Baradin Hold","Blackwing Descent","The Bastion of Twilight","Throne of the Four Winds","Firelands", "Dragon Soul"},{"New Baradin Hold","Heart of Fear","Mogu'shan Vaults","Terrace of Endless Spring","Throne of Thunder","Siege of Orgrimmar"}}
-psaddontoload={{"PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_Firelands","PhoenixStyleMod_DragonSoul"},{"PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier2","PhoenixStyleMod_Panda_tier3"}}
+pslocations={{752,754,758,773,800,824},{77777,897,896,886,930,953},{99999}}
+pslocationnamesdef={{"Baradin Hold","Blackwing Descent","The Bastion of Twilight","Throne of the Four Winds","Firelands", "Dragon Soul"},{"New Baradin Hold","Heart of Fear","Mogu'shan Vaults","Terrace of Endless Spring","Throne of Thunder","Siege of Orgrimmar"},{"Highmaul"}}
+psaddontoload={{"PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_Firelands","PhoenixStyleMod_DragonSoul"},{"PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier2","PhoenixStyleMod_Panda_tier3"},{"PhoenixStyleMod_WoD_Highmaul"}}
 
 psbossnamesdef={
 {{"Argaloth","Occu'thar", "Alizabal, Mistress of Hate"},{"Magmaw","Omnitron Defense System","Maloriak","Atramedes","Chimaeron","Nefarian"},{"Halfus Wyrmbreaker","Valiona & Theralion","Twilight Ascendant Council","Cho'gall","Sinestra"},{"Conclave of Wind", "Al'Akir"},{"Beth'tilac", "Lord Rhyolith","Alysrazor","Shannox","Baleroc","Majordomo Staghelm","Ragnaros"},{"Morchok","Warlord Zon'ozz","Yor'sahj the Unsleeping","Hagara the Stormbinder","Ultraxion","Warmaster Blackhorn","Spine of Deathwing","Madness of Deathwing"}},
 {{"Unknown"}, {"Imperial Vizier Zor'lok","Blade Lord Ta'yak","Garalon","Wind Lord Mel'jarak","Amber-Shaper Un'sok","Grand Empress Shek'zeer"}, {"The Stone Guard","Feng the Accursed","Gara'jal the Spiritbinder","The Spirit Kings","Elegon","Will of the Emperor"},{"Protectors of the Endless","Tsulong","Lei Shi","Sha of Fear"},
 {"Jin'rokh the Breaker","Horridon","The Council of Elders","Tortos","Megaera","Ji-Kun","Durumu the Forgotten","Primordius","Dark Animus","Iron Qon","Twin Consorts","Lei Shen","Ra-den"},
 {"Immerseus","The Fallen Protectors","Norushen","Sha of Pride","Galakras","Iron Juggernaut","Kor'kron Dark Shaman","General Nazgrim","Malkorok","Spoils of Pandaria","Thok the Bloodthirsty","Siegecrafter Blackfuse","Paragons of the Klaxxi","Garrosh Hellscream"},
-}
+},
+{{"The Butcher","Kargath Bladefist","Twin Ogron"}}
 }
 psbossid={
 {{{47120},{52363},{55869}},{{41570},{0,42180,42166,42178,42179},{41378},{41442},{43296},{41376}},{{44600},{0,45992,45993},{0,43735,43686,43687,43688,43689},{43324},{45213}},{{0,45871,45870,45872},{46753}},{{52498},{52558},{52530},{53691},{53494},{52571},{52409}},{{55265},{55308},{55312},{55689},{55294},{56427},{0,53879, 56598, 55870},{0,53879}}},
 {{{0}},{{62980},{62543},{63191},{62397},{62511},{62837}},{{0,60051,60043,59915,60047},{60009},{60143},{0,60701,60708,60709,60710},{60410},{0,60399,60400}},{{0,60585,60586,60583},{62442},{62983},{60999}},
 {{69465},{68476},{0,69078,69132,69134,69131},{67977},{0,68065,70212,70235,70247},{69712},{68036},{69017},{69427},{0,68079,68080,68081,68078},{0,68905,68904},{68397},{62983}},
 {{0,71543, 72436},{0,71479, 71475, 71480},{72276},{71734},{72249},{71466},{0,71859, 71858},{71515},{71454},{71889},{71529},{71504},{0,71152, 71153, 71154, 71155, 71156, 71157, 71158, 71160, 71161},{71865}},
-}
+},
+{{{87447},{87444},{87449}}}
 }
 
 --obj.modelId = select(4, EJ_GetCreatureInfo(1, tonumber(name)))
@@ -187,17 +189,20 @@ ps_modelid={
 {{{0}},{{42807},{43141},{42368},{42645},{43126},{42730}},{{41892},{41192},{41256},{41813},{41399},{41391}},{{41503},{42532},{42811},{41772}},
 {{47552},{47325},{47229},{46559},{47414},{46675},{47189},{47009},{47527},{46627},{46975},{46770},{47739}},
 {{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0}},
-}
+},
+{{{0},{0},{0}}}
 }
 
 --options for SayAnnouncer
 ps_saoptions_def={
 {{{},{},{}},{{},{1,1,1,1},{},{1,1},{},{1}},{{},{1,1,0},{1,0},{1}},{{},{1}},{{},{},{},{1,1},{1},{1},{1}}, {{},{1},{},{1,1},{},{1},{},{}}},
-{{{}},{{},{1},{},{1,1},{},{}},{{0},{1,1},{},{0},{},{}},{{1},{},{},{}},{{1},{1},{},{},{1},{},{},{},{},{},{},{},{}}}
+{{{}},{{},{1},{},{1,1},{},{}},{{0},{1,1},{},{0},{},{}},{{1},{},{},{}},{{1},{1},{},{},{1},{},{},{},{},{},{},{},{}}},
+{{{},{},{}}}
 }
 ps_sa_id={
 {{{},{},{}},{{},{79501,79888,92053,80157},{},{78092,92677},{},{79339}},{{},{86622,86788,86369},{92075,92067},{81685}},{{},{89668}},{{},{},{},{99836,99839},{99516},{98535},{98164}},{{},{"103434|AddComm"..psiccheroic},{},{109541,109325},{},{108046},{},{}}}, --не забыть дефалт добавить вкл/выкл
-{{{}},{{},{122949},{},{121881,122064},{},{}},{{130395},{116784,116417},{},{118303},{},{}},{{111850},{},{},{}},{{137399},{136769},{},{},{139822},{},{},{},{},{},{},{},{}},{{},{},{},{},{},{},{},{},{},{},{},{},{},{}}}
+{{{}},{{},{122949},{},{121881,122064},{},{}},{{130395},{116784,116417},{},{118303},{},{}},{{111850},{},{},{}},{{137399},{136769},{},{},{139822},{},{},{},{},{},{},{},{}},{{},{},{},{},{},{},{},{},{},{},{},{},{},{}}},
+{{{},{},{}}}
 }
 --"106794|AddComm"..psmainbutdragonsoul1
 
@@ -5875,7 +5880,7 @@ DropDownMenusaybossadexp:ClearAllPoints()
 DropDownMenusaybossadexp:SetPoint("TOPLEFT", 8, -190)
 DropDownMenusaybossadexp:Show()
 
-local items={"Cataclysm", "Pandaria"}
+local items={"Cataclysm", "Pandaria", "Warlords of Draenor"}
 SetMapToCurrentZone()
 ps_sa_menuchooseexp1=#items
 ps_sa_menuchoose1=1
@@ -7953,7 +7958,7 @@ end
 
 
 function psdamageceildeathrep(dmg)
-if dmg==nil or dmg==false then
+if dmg==nil or dmg==false or dmg==true then
 	return ""
 else
 	local he=0
@@ -8235,11 +8240,11 @@ DropDownMenuexpans:SetPoint("TOPLEFT", 8, -40)
 DropDownMenuexpans:Show()
 
 if pssetexpans==nil then
-  pssetexpans=2
+  pssetexpans=3
   psmenuchoose1=#pslocations[2]
   psmenuchoose2=1
 end
-local items= {"Cataclysm", "Pandaria"}
+local items= {"Cataclysm", "Pandaria", "Warlords of Draenor"}
 SetMapToCurrentZone()
 for t=1,#pslocations do
   if #pslocations[t]>0 then

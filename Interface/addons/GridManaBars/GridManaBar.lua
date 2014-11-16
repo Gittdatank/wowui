@@ -129,13 +129,15 @@ function GridMBFrame:OnInitialize()
                 --healthBar:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -offset, offset)
             end
             
-            frame.indicators.text:SetParent(self)
-            frame.indicators.text2:SetParent(self)
-            frame.indicators.corner1:SetParent(self)
-            frame.indicators.corner2:SetParent(self)
-            frame.indicators.corner3:SetParent(self)
-            frame.indicators.corner4:SetParent(self)
-            frame.indicators.icon:SetParent(self)
+            if self:IsShown() then
+                frame.indicators.text:SetParent(self)
+                frame.indicators.text2:SetParent(self)
+                frame.indicators.corner1:SetParent(self)
+                frame.indicators.corner2:SetParent(self)
+                frame.indicators.corner3:SetParent(self)
+                frame.indicators.corner4:SetParent(self)
+                frame.indicators.icon:SetParent(self)
+            end
             
             self:SetStatusBarTexture(texture)
             self.bg:SetTexture(texture)
@@ -157,11 +159,32 @@ function GridMBFrame:OnInitialize()
                 end
             end
             
+            if not self:IsShown() then
+                local frame = self.__owner
+                frame.indicators.text:SetParent(self)
+                frame.indicators.text2:SetParent(self)
+                frame.indicators.corner1:SetParent(self)
+                frame.indicators.corner2:SetParent(self)
+                frame.indicators.corner3:SetParent(self)
+                frame.indicators.corner4:SetParent(self)
+                frame.indicators.icon:SetParent(self)                
+            end
             self:Show()
         end,
 
         -- ClearStatus
         function(self)
+            if self:IsShown() then
+                local frame = self.__owner
+                local healthBar = frame.indicators.bar
+                frame.indicators.text:SetParent(healthBar)
+                frame.indicators.text2:SetParent(healthBar)
+                frame.indicators.corner1:SetParent(healthBar)
+                frame.indicators.corner2:SetParent(healthBar)
+                frame.indicators.corner3:SetParent(healthBar)
+                frame.indicators.corner4:SetParent(healthBar)
+                frame.indicators.icon:SetParent(healthBar)
+            end
             self:Hide()
             self:SetValue(0)
         end

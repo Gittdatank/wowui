@@ -4,12 +4,12 @@
 ## Author: Starinnia
 ## X-Category: Combat
 ## X-Credits: Funkydude (inspiration for the mod)
-## Version: 3.2.6
+## Version: 3.2.7
 ## SavedVariables: CPRDB2
 ## OptionalDeps: Ace3, LibSharedMedia-3.0
 ## LoadManagers: AddonLoader
 ## X-LoadOn-Always: true
-## X-Curse-Packaged-Version: 3.2.6
+## X-Curse-Packaged-Version: 3.2.7
 ## X-Curse-Project-Name: Combo Points Redux
 ## X-Curse-Project-ID: combo-points-redux
 ## X-Curse-Repository-ID: wow/combo-points-redux/mainline
