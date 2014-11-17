@@ -256,9 +256,9 @@ TargetForMe: disabled
 TB_Core: disabled
 TB_Misdirector: disabled
 TB_RaidHelper: disabled
-TidyPlates: disabled
-TidyPlates_Grey: disabled
-TidyPlates_Neon: disabled
+TidyPlates: enabled
+TidyPlates_Grey: enabled
+TidyPlates_Neon: enabled
 TidyPlates_CleanPlates: disabled
 TidyPlates_ThreatPlates: enabled
 TimeToDie: enabled
@@ -364,7 +364,7 @@ GatherMate2: disabled
 GatherMate2_Data: disabled
 PhoenixStyleMod_CataMiniRaids: enabled
 TankWarnings: disabled
-TidyPlates_Graphite: disabled
+TidyPlates_Graphite: enabled
 TitanGold: enabled
 DBM: enabled
 GupPet_ButtonFacade: disabled
@@ -398,11 +398,11 @@ Arh: disabled
 GCD: disabled
 AtlasLoot_Loader: disabled
 GuildMacros: disabled
-TidyPlatesHub: disabled
+TidyPlatesHub: enabled
 AtramedesShieldClicker: disabled
 EclipseBarPlus: disabled
 SellJunk: disabled
-TidyPlates_Quatre: disabled
+TidyPlates_Quatre: enabled
 AutomateMe: enabled
 MikScrollingBattleText: enabled
 MSBTOptions: enabled
@@ -451,7 +451,7 @@ SkadaDamage: enabled
 SkadaDebuffs: enabled
 SkadaDispels: enabled
 SkadaEnemies: enabled
-TidyPlatesWidgets: disabled
+TidyPlatesWidgets: enabled
 VisualCombatTable: disabled
 YorsahjPriority: disabled
 Yorsahj Automatic Raidwarnings: disabled
@@ -591,8 +591,8 @@ TrainAlert: enabled
 Bazooka: disabled
 Bazooka_Options: disabled
 Bazooka_ShowUpdates: disabled
-TidyPlates_ClassicPlates: disabled
-TidyPlates_Simple: disabled
+TidyPlates_ClassicPlates: enabled
+TidyPlates_Simple: enabled
 Fonter: disabled
 Scrap_Spotlight: disabled
 Raven: enabled

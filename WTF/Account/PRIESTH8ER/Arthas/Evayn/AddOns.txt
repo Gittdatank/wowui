@@ -1,6 +1,6 @@
-TidyPlates: disabled
-TidyPlatesHub: disabled
-TidyPlatesWidgets: disabled
+TidyPlates: enabled
+TidyPlatesHub: enabled
+TidyPlatesWidgets: enabled
 Bagnon: enabled
 Bagnon_Config: enabled
 Auc-Advanced: enabled
@@ -12,3 +12,9 @@ Auc-Stat-Simple: enabled
 Auc-Stat-Purchased: enabled
 Auc-ScanData: enabled
 Auc-Stat-Histogram: enabled
+TidyPlates_ClassicPlates: enabled
+TidyPlates_Graphite: enabled
+TidyPlates_Grey: enabled
+TidyPlates_Neon: enabled
+TidyPlates_Quatre: enabled
+TidyPlates_Simple: enabled

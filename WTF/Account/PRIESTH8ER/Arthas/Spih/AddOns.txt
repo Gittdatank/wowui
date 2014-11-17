@@ -49,9 +49,9 @@ SexyMap: disabled
 ShadowedUF_Options: disabled
 ShadowedUnitFrames: disabled
 Skada: enabled
-TidyPlates: disabled
-TidyPlatesHub: disabled
-TidyPlatesWidgets: disabled
+TidyPlates: enabled
+TidyPlatesHub: enabled
+TidyPlatesWidgets: enabled
 TidyPlates_ThreatPlates: disabled
 TimeToDie: disabled
 TipTac: disabled
@@ -90,3 +90,9 @@ Auc-Stat-Simple: enabled
 Auc-Stat-Purchased: enabled
 Auc-ScanData: enabled
 Auc-Stat-Histogram: enabled
+TidyPlates_ClassicPlates: enabled
+TidyPlates_Graphite: enabled
+TidyPlates_Grey: enabled
+TidyPlates_Neon: enabled
+TidyPlates_Quatre: enabled
+TidyPlates_Simple: enabled

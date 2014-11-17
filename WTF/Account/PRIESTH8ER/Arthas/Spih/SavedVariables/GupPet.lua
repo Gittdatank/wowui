@@ -3,49 +3,6 @@ GUPPET_SAVEDDATA = {
 	["MultiGround"] = {
 		["Total"] = 0,
 	},
-	["Multi"] = {
-		["TotalWeight"] = {
-			["BattleGrounds"] = 0,
-			["Instances"] = 0,
-			["Arenas"] = 0,
-			["Cities"] = 0,
-			["Global World"] = 0,
-		},
-		["Total"] = 0,
-	},
-	["Aquatic"] = {
-		["TotalWeight"] = {
-			["BattleGrounds"] = 0,
-			["Instances"] = 0,
-			["Arenas"] = 0,
-			["Cities"] = 0,
-			["Global World"] = 0,
-		},
-		["Total"] = 0,
-	},
-	["Fly"] = {
-		["TotalWeight"] = {
-			["BattleGrounds"] = 0,
-			["Instances"] = 0,
-			["Arenas"] = 0,
-			["Cities"] = 0,
-			["Global World"] = 0,
-		},
-		["Total"] = 0,
-	},
-	["Unknown"] = {
-		["Total"] = 0,
-	},
-	["Ground"] = {
-		["TotalWeight"] = {
-			["BattleGrounds"] = 0,
-			["Instances"] = 0,
-			["Arenas"] = 0,
-			["Cities"] = 0,
-			["Global World"] = 0,
-		},
-		["Total"] = 0,
-	},
 	["Companion"] = {
 		{
 			["Id"] = "BattlePet-0-000004773B22",
@@ -252,9 +209,9 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [17]
 		{
-			["Id"] = "BattlePet-0-000003332FFC",
-			["CreatureID"] = 67233,
-			["Name"] = "Imperial Silkworm",
+			["Id"] = "BattlePet-0-0000049FC60A",
+			["CreatureID"] = 86447,
+			["Name"] = "Ikky",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
 				["Instances"] = 0,
@@ -264,7 +221,7 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [18]
 		{
-			["Id"] = "BattlePet-0-000003905058",
+			["Id"] = "BattlePet-0-000003332FFC",
 			["CreatureID"] = 67233,
 			["Name"] = "Imperial Silkworm",
 			["Weight"] = {
@@ -276,6 +233,18 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [19]
 		{
+			["Id"] = "BattlePet-0-000003905058",
+			["CreatureID"] = 67233,
+			["Name"] = "Imperial Silkworm",
+			["Weight"] = {
+				["BattleGrounds"] = 0,
+				["Instances"] = 0,
+				["Arenas"] = 0,
+				["Cities"] = 0,
+				["Global World"] = 1,
+			},
+		}, -- [20]
+		{
 			["Id"] = "BattlePet-0-0000035485F2",
 			["CreatureID"] = 73354,
 			["Name"] = "Kovok",
@@ -286,7 +255,7 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [20]
+		}, -- [21]
 		{
 			["Id"] = "BattlePet-0-000003332FEE",
 			["CreatureID"] = 36979,
@@ -298,7 +267,7 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [21]
+		}, -- [22]
 		{
 			["Id"] = "BattlePet-0-000003332FFD",
 			["CreatureID"] = 54027,
@@ -310,7 +279,7 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [22]
+		}, -- [23]
 		{
 			["Id"] = "BattlePet-0-000003332FF4",
 			["CreatureID"] = 22445,
@@ -322,7 +291,7 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [23]
+		}, -- [24]
 		{
 			["Id"] = "BattlePet-0-000003332FE2",
 			["CreatureID"] = 22445,
@@ -334,7 +303,7 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [24]
+		}, -- [25]
 		{
 			["Id"] = "BattlePet-0-000003332FF0",
 			["CreatureID"] = 29726,
@@ -346,7 +315,7 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [25]
+		}, -- [26]
 		{
 			["Id"] = "BattlePet-0-0000039572A5",
 			["CreatureID"] = 50586,
@@ -358,7 +327,7 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [26]
+		}, -- [27]
 		{
 			["Id"] = "BattlePet-0-000003332FE8",
 			["CreatureID"] = 16548,
@@ -370,7 +339,7 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [27]
+		}, -- [28]
 		{
 			["Id"] = "BattlePet-0-000003332FF3",
 			["CreatureID"] = 36607,
@@ -382,7 +351,7 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [28]
+		}, -- [29]
 		{
 			["Id"] = "BattlePet-0-000003332FF2",
 			["CreatureID"] = 36911,
@@ -394,7 +363,7 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [29]
+		}, -- [30]
 		{
 			["Id"] = "BattlePet-0-000003332FE9",
 			["CreatureID"] = 32595,
@@ -406,7 +375,7 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [30]
+		}, -- [31]
 		{
 			["Id"] = "BattlePet-0-000003332FF8",
 			["CreatureID"] = 37865,
@@ -418,7 +387,7 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [31]
+		}, -- [32]
 		{
 			["Id"] = "BattlePet-0-000003332FE6",
 			["CreatureID"] = 32592,
@@ -430,7 +399,7 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [32]
+		}, -- [33]
 		{
 			["Id"] = "BattlePet-0-000003332FFE",
 			["CreatureID"] = 7389,
@@ -442,7 +411,7 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [33]
+		}, -- [34]
 		{
 			["Id"] = "BattlePet-0-000003332FE5",
 			["CreatureID"] = 23909,
@@ -454,7 +423,7 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [34]
+		}, -- [35]
 		{
 			["Id"] = "BattlePet-0-000003332FFB",
 			["CreatureID"] = 10598,
@@ -466,7 +435,7 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [35]
+		}, -- [36]
 		{
 			["Id"] = "BattlePet-0-000003332FE4",
 			["CreatureID"] = 10598,
@@ -478,7 +447,7 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [36]
+		}, -- [37]
 		{
 			["Id"] = "BattlePet-0-000003332FE7",
 			["CreatureID"] = 33226,
@@ -490,7 +459,19 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [37]
+		}, -- [38]
+		{
+			["Id"] = "BattlePet-0-0000049B2339",
+			["CreatureID"] = 81431,
+			["Name"] = "Teroclaw Hatchling",
+			["Weight"] = {
+				["BattleGrounds"] = 0,
+				["Instances"] = 0,
+				["Arenas"] = 0,
+				["Cities"] = 0,
+				["Global World"] = 1,
+			},
+		}, -- [39]
 		{
 			["Id"] = "BattlePet-0-000003332FEB",
 			["CreatureID"] = 32589,
@@ -502,7 +483,7 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [38]
+		}, -- [40]
 		{
 			["Id"] = "BattlePet-0-000003332FEA",
 			["CreatureID"] = 32590,
@@ -514,7 +495,7 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [39]
+		}, -- [41]
 		{
 			["Id"] = "BattlePet-0-000003332FE3",
 			["CreatureID"] = 10259,
@@ -526,15 +507,58 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [40]
+		}, -- [42]
 		["TotalWeight"] = {
 			["BattleGrounds"] = 0,
 			["Instances"] = 0,
 			["Arenas"] = 0,
 			["Cities"] = 0,
-			["Global World"] = 40,
+			["Global World"] = 42,
 		},
-		["Total"] = 40,
+		["Total"] = 42,
+	},
+	["Aquatic"] = {
+		["TotalWeight"] = {
+			["BattleGrounds"] = 0,
+			["Instances"] = 0,
+			["Arenas"] = 0,
+			["Cities"] = 0,
+			["Global World"] = 0,
+		},
+		["Total"] = 0,
+	},
+	["Fly"] = {
+		["TotalWeight"] = {
+			["BattleGrounds"] = 0,
+			["Instances"] = 0,
+			["Arenas"] = 0,
+			["Cities"] = 0,
+			["Global World"] = 0,
+		},
+		["Total"] = 0,
+	},
+	["Multi"] = {
+		["TotalWeight"] = {
+			["BattleGrounds"] = 0,
+			["Instances"] = 0,
+			["Arenas"] = 0,
+			["Cities"] = 0,
+			["Global World"] = 0,
+		},
+		["Total"] = 0,
+	},
+	["Ground"] = {
+		["TotalWeight"] = {
+			["BattleGrounds"] = 0,
+			["Instances"] = 0,
+			["Arenas"] = 0,
+			["Cities"] = 0,
+			["Global World"] = 0,
+		},
+		["Total"] = 0,
+	},
+	["Unknown"] = {
+		["Total"] = 0,
 	},
 }
 GUPPET_SAVEDLOCATIONS = {

@@ -1,9 +1,217 @@
 
 pslocationnames = {
 	{
-		"Baradin Hold", -- [1]
-		"Blackwing Descent", -- [2]
-		"The Bastion of Twilight", -- [3]
+		{
+			{
+				{
+					{
+						{
+							{
+								{
+									{
+										{
+											{
+												{
+													{
+														{
+															"Baradin Hold", -- [1]
+															"Blackwing Descent", -- [2]
+															"The Bastion of Twilight", -- [3]
+															"Throne of the Four Winds", -- [4]
+															"Firelands", -- [5]
+															"Dragon Soul", -- [6]
+														}, -- [1]
+														{
+															"New Baradin Hold", -- [1]
+															"Heart of Fear", -- [2]
+															"Mogu'shan Vaults", -- [3]
+															"Terrace of Endless Spring", -- [4]
+															"Throne of Thunder", -- [5]
+															"Siege of Orgrimmar", -- [6]
+														}, -- [2]
+														{
+															"Highmaul", -- [1]
+														}, -- [3]
+														"Throne of the Four Winds", -- [4]
+														"Firelands", -- [5]
+														"Dragon Soul", -- [6]
+													}, -- [1]
+													{
+														"New Baradin Hold", -- [1]
+														"Heart of Fear", -- [2]
+														"Mogu'shan Vaults", -- [3]
+														"Terrace of Endless Spring", -- [4]
+														"Throne of Thunder", -- [5]
+														"Siege of Orgrimmar", -- [6]
+													}, -- [2]
+													{
+														"Highmaul", -- [1]
+													}, -- [3]
+													"Throne of the Four Winds", -- [4]
+													"Firelands", -- [5]
+													"Dragon Soul", -- [6]
+												}, -- [1]
+												{
+													"New Baradin Hold", -- [1]
+													"Heart of Fear", -- [2]
+													"Mogu'shan Vaults", -- [3]
+													"Terrace of Endless Spring", -- [4]
+													"Throne of Thunder", -- [5]
+													"Siege of Orgrimmar", -- [6]
+												}, -- [2]
+												{
+													"Highmaul", -- [1]
+												}, -- [3]
+												"Throne of the Four Winds", -- [4]
+												"Firelands", -- [5]
+												"Dragon Soul", -- [6]
+											}, -- [1]
+											{
+												"New Baradin Hold", -- [1]
+												"Heart of Fear", -- [2]
+												"Mogu'shan Vaults", -- [3]
+												"Terrace of Endless Spring", -- [4]
+												"Throne of Thunder", -- [5]
+												"Siege of Orgrimmar", -- [6]
+											}, -- [2]
+											{
+												"Highmaul", -- [1]
+											}, -- [3]
+											"Throne of the Four Winds", -- [4]
+											"Firelands", -- [5]
+											"Dragon Soul", -- [6]
+										}, -- [1]
+										{
+											"New Baradin Hold", -- [1]
+											"Heart of Fear", -- [2]
+											"Mogu'shan Vaults", -- [3]
+											"Terrace of Endless Spring", -- [4]
+											"Throne of Thunder", -- [5]
+											"Siege of Orgrimmar", -- [6]
+										}, -- [2]
+										{
+											"Highmaul", -- [1]
+										}, -- [3]
+										"Throne of the Four Winds", -- [4]
+										"Firelands", -- [5]
+										"Dragon Soul", -- [6]
+									}, -- [1]
+									{
+										"New Baradin Hold", -- [1]
+										"Heart of Fear", -- [2]
+										"Mogu'shan Vaults", -- [3]
+										"Terrace of Endless Spring", -- [4]
+										"Throne of Thunder", -- [5]
+										"Siege of Orgrimmar", -- [6]
+									}, -- [2]
+									{
+										"Highmaul", -- [1]
+									}, -- [3]
+									"Throne of the Four Winds", -- [4]
+									"Firelands", -- [5]
+									"Dragon Soul", -- [6]
+								}, -- [1]
+								{
+									"New Baradin Hold", -- [1]
+									"Heart of Fear", -- [2]
+									"Mogu'shan Vaults", -- [3]
+									"Terrace of Endless Spring", -- [4]
+									"Throne of Thunder", -- [5]
+									"Siege of Orgrimmar", -- [6]
+								}, -- [2]
+								{
+									"Highmaul", -- [1]
+								}, -- [3]
+								"Throne of the Four Winds", -- [4]
+								"Firelands", -- [5]
+								"Dragon Soul", -- [6]
+							}, -- [1]
+							{
+								"New Baradin Hold", -- [1]
+								"Heart of Fear", -- [2]
+								"Mogu'shan Vaults", -- [3]
+								"Terrace of Endless Spring", -- [4]
+								"Throne of Thunder", -- [5]
+								"Siege of Orgrimmar", -- [6]
+							}, -- [2]
+							{
+								"Highmaul", -- [1]
+							}, -- [3]
+							"Throne of the Four Winds", -- [4]
+							"Firelands", -- [5]
+							"Dragon Soul", -- [6]
+						}, -- [1]
+						{
+							"New Baradin Hold", -- [1]
+							"Heart of Fear", -- [2]
+							"Mogu'shan Vaults", -- [3]
+							"Terrace of Endless Spring", -- [4]
+							"Throne of Thunder", -- [5]
+							"Siege of Orgrimmar", -- [6]
+						}, -- [2]
+						{
+							"Highmaul", -- [1]
+						}, -- [3]
+						"Throne of the Four Winds", -- [4]
+						"Firelands", -- [5]
+						"Dragon Soul", -- [6]
+					}, -- [1]
+					{
+						"New Baradin Hold", -- [1]
+						"Heart of Fear", -- [2]
+						"Mogu'shan Vaults", -- [3]
+						"Terrace of Endless Spring", -- [4]
+						"Throne of Thunder", -- [5]
+						"Siege of Orgrimmar", -- [6]
+					}, -- [2]
+					{
+						"Highmaul", -- [1]
+					}, -- [3]
+					"Throne of the Four Winds", -- [4]
+					"Firelands", -- [5]
+					"Dragon Soul", -- [6]
+				}, -- [1]
+				{
+					"New Baradin Hold", -- [1]
+					"Heart of Fear", -- [2]
+					"Mogu'shan Vaults", -- [3]
+					"Terrace of Endless Spring", -- [4]
+					"Throne of Thunder", -- [5]
+					"Siege of Orgrimmar", -- [6]
+				}, -- [2]
+				{
+					"Highmaul", -- [1]
+				}, -- [3]
+				"Throne of the Four Winds", -- [4]
+				"Firelands", -- [5]
+				"Dragon Soul", -- [6]
+			}, -- [1]
+			{
+				"New Baradin Hold", -- [1]
+				"Heart of Fear", -- [2]
+				"Mogu'shan Vaults", -- [3]
+				"Terrace of Endless Spring", -- [4]
+				"Throne of Thunder", -- [5]
+				"Siege of Orgrimmar", -- [6]
+			}, -- [2]
+			{
+				"Highmaul", -- [1]
+			}, -- [3]
+			"Throne of the Four Winds", -- [4]
+			"Firelands", -- [5]
+			"Dragon Soul", -- [6]
+		}, -- [1]
+		{
+			"New Baradin Hold", -- [1]
+			"Heart of Fear", -- [2]
+			"Mogu'shan Vaults", -- [3]
+			"Terrace of Endless Spring", -- [4]
+			"Throne of Thunder", -- [5]
+			"Siege of Orgrimmar", -- [6]
+		}, -- [2]
+		{
+			"Highmaul", -- [1]
+		}, -- [3]
 		"Throne of the Four Winds", -- [4]
 		"Firelands", -- [5]
 		"Dragon Soul", -- [6]
@@ -16,17 +224,20 @@ pslocationnames = {
 		"Throne of Thunder", -- [5]
 		"Siege of Orgrimmar", -- [6]
 	}, -- [2]
+	{
+		"Highmaul", -- [1]
+	}, -- [3]
 }
 psbossnames = {
 	{
 		{
 			"Argaloth", -- [1]
 			"Occu'thar", -- [2]
-			"Alizabal", -- [3]
+			"Alizabal, Mistress of Hate", -- [3]
 		}, -- [1]
 		{
 			"Magmaw", -- [1]
-			"Omnotron Defense System", -- [2]
+			"Omnitron Defense System", -- [2]
 			"Maloriak", -- [3]
 			"Atramedes", -- [4]
 			"Chimaeron", -- [5]
@@ -107,7 +318,7 @@ psbossnames = {
 		{
 			"Immerseus", -- [1]
 			"The Fallen Protectors", -- [2]
-			"Amalgam of Corruption", -- [3]
+			"Norushen", -- [3]
 			"Sha of Pride", -- [4]
 			"Galakras", -- [5]
 			"Iron Juggernaut", -- [6]
@@ -121,6 +332,13 @@ psbossnames = {
 			"Garrosh Hellscream", -- [14]
 		}, -- [6]
 	}, -- [2]
+	{
+		{
+			"The Butcher", -- [1]
+			"Kargath Bladefist", -- [2]
+			"Twin Ogron", -- [3]
+		}, -- [1]
+	}, -- [3]
 }
 pssisavedbossinfo = {
 	{
@@ -56614,6 +56832,16 @@ ps_saoptions = {
 			}, -- [13]
 		}, -- [5]
 	}, -- [2]
+	{
+		{
+			{
+			}, -- [1]
+			{
+			}, -- [2]
+			{
+			}, -- [3]
+		}, -- [1]
+	}, -- [3]
 }
 psbosssmodchosesort = 1
 psbossmodelshow = 1
@@ -56683,7 +56911,7 @@ pspetstableok = {
 }
 pstrackbadsummons = 1
 psmergepets = 1
-psversionsaved2 = 6.006
+psversionsaved2 = 6.007
 psbossmodnoalphavar = 1
 psdonaspanvar = 3
 psshowaddframe34 = 1

@@ -24,10 +24,10 @@ SexyMap: disabled
 ShadowedUnitFrames: disabled
 ShadowedUF_Options: disabled
 SimpleRaidTargetIcons: disabled
-TidyPlates: disabled
+TidyPlates: enabled
 TidyPlates_ThreatPlates: disabled
-TidyPlatesHub: disabled
-TidyPlatesWidgets: disabled
+TidyPlatesHub: enabled
+TidyPlatesWidgets: enabled
 TipTac: disabled
 TipTacItemRef: disabled
 TipTacOptions: disabled
@@ -58,3 +58,9 @@ Auc-Stat-Simple: enabled
 Auc-Stat-Purchased: enabled
 Auc-ScanData: enabled
 Auc-Stat-Histogram: enabled
+TidyPlates_ClassicPlates: enabled
+TidyPlates_Graphite: enabled
+TidyPlates_Grey: enabled
+TidyPlates_Neon: enabled
+TidyPlates_Quatre: enabled
+TidyPlates_Simple: enabled

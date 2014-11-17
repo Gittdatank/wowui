@@ -1,14 +1,18 @@
 
 PasteDB = {
 	["profileKeys"] = {
-		["Spih - Arthas"] = "Spih - Arthas",
 		["Git - Arthas"] = "Git - Arthas",
+		["Spih - Arthas"] = "Spih - Arthas",
 	},
 	["profiles"] = {
-		["Spih - Arthas"] = {
-			["loaded"] = true,
-		},
 		["Git - Arthas"] = {
+			["loaded"] = true,
+			["where"] = "Default",
+			["whispertarget"] = "",
+			["pos"] = {
+			},
+		},
+		["Spih - Arthas"] = {
 			["loaded"] = true,
 		},
 	},

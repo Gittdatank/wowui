@@ -4,20 +4,17 @@ thisaddonwork = true
 secrefmark = 2
 pssetmarknew = {
 	{
-		"Gramz", -- [1]
 	}, -- [1]
 	{
-		"Git", -- [1]
 	}, -- [2]
 	{
 	}, -- [3]
 	{
-		"Shinerr", -- [1]
 	}, -- [4]
 	{
-		"Primalfears", -- [1]
 	}, -- [5]
 	{
+		"Git", -- [1]
 	}, -- [6]
 	{
 	}, -- [7]
