@@ -460,7 +460,7 @@ VuhDoOptions: disabled
 GridStatusRD_Cata: enabled
 GridUnitMenu: disabled
 RaidAchievement_CataRaids: disabled
-RaidAchievement: disabled
+RaidAchievement: enabled
 DBM-DragonSoul: disabled
 SpineCounter: disabled
 GuildMaster: disabled
@@ -555,7 +555,7 @@ _NPCScan: disabled
 _NPCScan.AutoAdd: disabled
 _NPCScan.Overlay: disabled
 _NPCScan.Overlay.Broker: disabled
-BigWigs: disabled
+BigWigs: enabled
 CombatReplay: disabled
 CombatReplay_Logger: enabled
 CombatReplay_SavedData: enabled
@@ -620,3 +620,6 @@ DBM-Highmaul: disabled
 DBM-Draenor: disabled
 DBM-BlackrockFoundry: disabled
 ArkInventoryRules_Example: enabled
+BlockChinese: enabled
+VEM-Core: disabled
+MarketWatcher: disabled

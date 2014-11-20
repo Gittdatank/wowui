@@ -1,8 +1,1 @@
 Version: 1
-Frame: VEMMinimapButton
-FrameLevel: 3
-Anchor: TOPRIGHT
-X: -136
-Y: -125
-W: 32
-H: 32

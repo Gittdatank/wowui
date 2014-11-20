@@ -42,9 +42,9 @@ TimeToDieDB = {
 			["size"] = 8,
 			["justify"] = "LEFT",
 			["algorithm"] = "WeightedLeastSquares",
-			["x"] = 197.122528076172,
-			["y"] = -98.2376708984375,
 			["font"] = "DorisPP",
+			["y"] = -98.2376708984375,
+			["x"] = 197.122528076172,
 		},
 		["Gitt Tank"] = {
 			["y"] = 176.26181898132,

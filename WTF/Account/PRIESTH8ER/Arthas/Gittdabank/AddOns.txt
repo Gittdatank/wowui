@@ -26,7 +26,7 @@ Bazooka_Options: disabled
 Bazooka_ShowUpdates: disabled
 BeanCounter: disabled
 BetterPowerBarAlt: disabled
-BigWigs: disabled
+BigWigs: enabled
 BigWigs_Core: disabled
 BigWigs_HeartOfFear: disabled
 BigWigs_Mogushan: disabled
@@ -41,7 +41,7 @@ BigWigs_ThroneOfThunder: disabled
 BigWigs_Horridon_Marker: disabled
 BigWigs_CommonAuras: disabled
 BigWigs_Ra-denAssist: disabled
-BlockChinese: disabled
+BlockChinese: enabled
 BossNotes: disabled
 BossNotes_Abilities: disabled
 BossNotes_Emotes: disabled
@@ -190,7 +190,7 @@ Quartz: disabled
 Quote: disabled
 RaidBoss: disabled
 RaidBuffStatus: disabled
-RaidAchievement: disabled
+RaidAchievement: enabled
 RaidAchievement_PandaHeroics: disabled
 RaidAchievement_PandaRaids: disabled
 RaidAchievement_PandaScenarios: disabled
@@ -333,3 +333,5 @@ BigWigs_BurningCrusade: disabled
 BigWigs_Cataclysm: disabled
 BigWigs_Classic: disabled
 oqueue: disabled
+VEM-Core: disabled
+MarketWatcher: disabled

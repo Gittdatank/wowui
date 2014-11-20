@@ -1,4 +1,7 @@
 subversion:
+	- nbluewiz via svn r11869: # koKR update.
+	- Omega via svn r11868: fix lua error
+	- ultrashining via svn r11867: zhTW update
 	- Omega via svn r11866: disable time to feed timer, it's quite wrong now. need more data to enable a new better one.
 	- Omega via svn r11865: First flame slash is 5 seconds, not 8
 	- Omega via svn r11864: Health based, no timer

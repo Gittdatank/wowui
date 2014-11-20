@@ -6,17 +6,3 @@ X: 0
 Y: 0
 W: 365
 H: 240
-Frame: VEMMinimapButton
-FrameLevel: 5
-Anchor: CENTER
-X: 434
-Y: 252
-W: 32
-H: 32
-Frame: BagnonFrameinventory
-FrameLevel: 1
-Anchor: TOP
-X: 354
-Y: -104
-W: 340
-H: 714

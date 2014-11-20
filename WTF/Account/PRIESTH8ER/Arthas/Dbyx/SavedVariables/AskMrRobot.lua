@@ -41,21 +41,19 @@ AmrDb = {
 	["Region"] = "US",
 	["Currencies"] = {
 	},
-	["Glyphs"] = {
-	},
+	["Class"] = "WARLOCK",
 	["LogData"] = {
 		["_wipes"] = {
 		},
 		["_autoLog"] = {
 			[1136] = "disabled",
 		},
-		["_lastDiff"] = 0,
 		["_lastZone"] = "Mogu Island Daily Area",
+		["_lastDiff"] = 0,
 	},
 	["BagItems"] = {
 	},
-	["BankItems"] = {
-	},
+	["RealmName"] = "Arthas",
 	["LastCharacterImport"] = "",
 	["Reps"] = {
 	},
@@ -64,6 +62,8 @@ AmrDb = {
 	},
 	["Professions"] = {
 	},
-	["RealmName"] = "Arthas",
-	["Class"] = "WARLOCK",
+	["BankItems"] = {
+	},
+	["Glyphs"] = {
+	},
 }

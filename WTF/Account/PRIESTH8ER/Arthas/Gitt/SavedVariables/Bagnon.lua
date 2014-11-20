@@ -1,8 +1,8 @@
 
 BagnonFrameSettings = {
-	["version"] = "6.0.13",
 	["frames"] = {
 		["inventory"] = {
 		},
 	},
+	["version"] = "6.0.15",
 }

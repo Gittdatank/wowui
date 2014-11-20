@@ -18,3 +18,8 @@ TidyPlates_Grey: enabled
 TidyPlates_Neon: enabled
 TidyPlates_Quatre: enabled
 TidyPlates_Simple: enabled
+BlockChinese: enabled
+BigWigs: enabled
+VEM-Core: disabled
+RaidAchievement: enabled
+MarketWatcher: disabled

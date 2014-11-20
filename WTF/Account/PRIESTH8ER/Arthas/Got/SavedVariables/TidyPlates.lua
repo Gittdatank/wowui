@@ -1,7 +1,7 @@
 
 TidyPlatesOptions = {
-	["WelcomeShown"] = true,
 	["DisableSoftTransitions"] = false,
+	["WelcomeShown"] = true,
 	["FriendlyAutomation"] = "No Automation",
 	["EnemyAutomation"] = "No Automation",
 	["primary"] = "Neon/|cFFFF4400Damage",
