@@ -15,19 +15,20 @@ AUCTIONATOR_PRICING_HISTORY = {
 AUCTIONATOR_SHOPPING_LISTS = {
 	{
 		["items"] = {
-			"Signet of the Traitor General", -- [1]
-			"Helmet of Vile Indignation", -- [2]
-			"Gorget of Primal Might", -- [3]
+			"Draenic Dust", -- [1]
+			"Signet of the Traitor General", -- [2]
+			"Helmet of Vile Indignation", -- [3]
 			"Gorenscale Mesh cloak", -- [4]
-			"Blackrock Bulwark", -- [5]
-			"Gorenscale Meshcloak", -- [6]
-			"Battle Hardened Gorget", -- [7]
-			"Botani-Barbed Pauldrons", -- [8]
-			"Ashelia's Adorned Waistguard", -- [9]
-			"Doomslag Greatboots", -- [10]
-			"Bracers of Visceral Force", -- [11]
-			"Gauntlets of the Heavy Hand", -- [12]
-			"Blackrock", -- [13]
+			"Gorget of Primal Might", -- [5]
+			"Blackrock Bulwark", -- [6]
+			"Gorenscale Meshcloak", -- [7]
+			"Battle Hardened Gorget", -- [8]
+			"Botani-Barbed Pauldrons", -- [9]
+			"Ashelia's Adorned Waistguard", -- [10]
+			"Doomslag Greatboots", -- [11]
+			"Bracers of Visceral Force", -- [12]
+			"Gauntlets of the Heavy Hand", -- [13]
+			"Blackrock", -- [14]
 		},
 		["isRecents"] = 1,
 		["name"] = "Recent Searches",
@@ -55,86 +56,96 @@ AUCTIONATOR_SHOPPING_LISTS = {
 AUCTIONATOR_PRICE_DATABASE = {
 	["__dbversion"] = 4,
 	["Arthas_Horde"] = {
+		["Draenic Dust"] = {
+			["mr"] = 257395,
+			["cc"] = 6,
+			["id"] = "109693",
+			["H1466"] = 257395,
+			["sc"] = 7,
+		},
 		["Blackrock Ore"] = {
 			["mr"] = 22599,
 			["cc"] = 6,
 			["id"] = "109118",
-			["H1464"] = 22599,
 			["sc"] = 4,
+			["H1464"] = 22599,
 		},
 		["Gorenscale Mesh Cloak"] = {
-			["mr"] = 1000000000,
-			["H1465"] = 1000000000,
-			["id"] = "118816",
+			["mr"] = 1450000000,
 			["sc"] = 2,
+			["id"] = "118816",
+			["H1466"] = 1450000000,
+			["H1465"] = 1000000000,
 			["cc"] = 2,
-		},
-		["Helmet of Vile Indignation"] = {
-			["L1464"] = 1000000000,
-			["mr"] = 750000000,
-			["H1465"] = 990000000,
-			["cc"] = 2,
-			["id"] = "118896",
-			["sc"] = 5,
-			["L1465"] = 750000000,
-			["H1464"] = 1100000000,
-		},
-		["Botani-Barbed Pauldrons"] = {
-			["mr"] = 2250000000,
-			["H1465"] = 2250000000,
-			["id"] = "118892",
-			["cc"] = 2,
-			["sc"] = 5,
-		},
-		["Signet of the Traitor General"] = {
-			["L1464"] = 874999995,
-			["mr"] = 975104455,
-			["H1465"] = 975120446,
-			["cc"] = 2,
-			["id"] = "118870",
-			["sc"] = 1,
-			["L1465"] = 975104455,
-			["H1464"] = 989969995,
-		},
-		["Battle Hardened Gorget"] = {
-			["mr"] = 990000000,
-			["H1465"] = 990000000,
-			["H1464"] = 969999999,
-			["cc"] = 2,
-			["sc"] = 1,
-			["id"] = "118848",
-		},
-		["Gorget of Primal Might"] = {
-			["L1464"] = 1159989995,
-			["mr"] = 1150000000,
-			["cc"] = 2,
-			["id"] = "118846",
-			["H1465"] = 1150000000,
-			["H1464"] = 1159999995,
-			["sc"] = 1,
-		},
-		["Blackrock Fragment"] = {
-			["mr"] = 4099,
-			["cc"] = 6,
-			["id"] = "109992",
-			["H1464"] = 4099,
-			["sc"] = 4,
-		},
-		["Ashelia's Adorned Waistguard"] = {
-			["mr"] = 1200000000,
-			["H1465"] = 1200000000,
-			["id"] = "118888",
-			["cc"] = 2,
-			["sc"] = 5,
 		},
 		["Blackrock Bulwark"] = {
 			["L1464"] = 1250009999,
 			["mr"] = 1199999999,
 			["sc"] = 7,
 			["H1464"] = 1449999995,
-			["H1465"] = 1199999999,
-			["id"] = "118874",
 			["cc"] = 2,
+			["id"] = "118874",
+			["H1465"] = 1199999999,
+		},
+		["Botani-Barbed Pauldrons"] = {
+			["mr"] = 2250000000,
+			["sc"] = 5,
+			["id"] = "118892",
+			["cc"] = 2,
+			["H1465"] = 2250000000,
+		},
+		["Signet of the Traitor General"] = {
+			["L1464"] = 874999995,
+			["H1464"] = 989969995,
+			["H1466"] = 971000000,
+			["mr"] = 971000000,
+			["cc"] = 2,
+			["id"] = "118870",
+			["H1465"] = 975120446,
+			["L1465"] = 975104455,
+			["sc"] = 1,
+		},
+		["Battle Hardened Gorget"] = {
+			["mr"] = 990000000,
+			["H1465"] = 990000000,
+			["H1464"] = 969999999,
+			["id"] = "118848",
+			["sc"] = 1,
+			["cc"] = 2,
+		},
+		["Gorget of Primal Might"] = {
+			["L1464"] = 1159989995,
+			["mr"] = 1150000000,
+			["cc"] = 2,
+			["id"] = "118846",
+			["sc"] = 1,
+			["H1464"] = 1159999995,
+			["H1465"] = 1150000000,
+		},
+		["Blackrock Fragment"] = {
+			["mr"] = 4099,
+			["cc"] = 6,
+			["id"] = "109992",
+			["sc"] = 4,
+			["H1464"] = 4099,
+		},
+		["Helmet of Vile Indignation"] = {
+			["L1464"] = 1000000000,
+			["H1464"] = 1100000000,
+			["H1466"] = 990000000,
+			["mr"] = 990000000,
+			["cc"] = 2,
+			["id"] = "118896",
+			["H1465"] = 990000000,
+			["L1465"] = 750000000,
+			["sc"] = 5,
+		},
+		["Ashelia's Adorned Waistguard"] = {
+			["mr"] = 1200000000,
+			["sc"] = 5,
+			["id"] = "118888",
+			["cc"] = 2,
+			["H1465"] = 1200000000,
 		},
 	},
 }

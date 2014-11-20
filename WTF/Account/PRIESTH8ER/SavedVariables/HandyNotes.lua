@@ -2,42 +2,42 @@
 HandyNotesDB = {
 	["profileKeys"] = {
 		["Got - Arthas"] = "Got - Arthas",
-		["Spih - Arthas"] = "Spih - Arthas",
+		["Git - Arthas"] = "Git - Arthas",
 		["Gitt - Arthas"] = "Gitt - Arthas",
 		["Dbyx - Arthas"] = "Dbyx - Arthas",
-		["Git - Arthas"] = "Git - Arthas",
+		["Spih - Arthas"] = "Spih - Arthas",
 	},
 	["profiles"] = {
 		["Got - Arthas"] = {
 		},
-		["Spih - Arthas"] = {
+		["Git - Arthas"] = {
 		},
 		["Gitt - Arthas"] = {
 		},
 		["Dbyx - Arthas"] = {
 		},
-		["Git - Arthas"] = {
+		["Spih - Arthas"] = {
 		},
 	},
 }
 HandyNotes_HandyNotesDB = {
 	["profileKeys"] = {
 		["Got - Arthas"] = "Got - Arthas",
-		["Spih - Arthas"] = "Spih - Arthas",
+		["Git - Arthas"] = "Git - Arthas",
 		["Gitt - Arthas"] = "Gitt - Arthas",
 		["Dbyx - Arthas"] = "Dbyx - Arthas",
-		["Git - Arthas"] = "Git - Arthas",
+		["Spih - Arthas"] = "Spih - Arthas",
 	},
 	["profiles"] = {
 		["Got - Arthas"] = {
 		},
-		["Spih - Arthas"] = {
+		["Git - Arthas"] = {
 		},
 		["Gitt - Arthas"] = {
 		},
 		["Dbyx - Arthas"] = {
 		},
-		["Git - Arthas"] = {
+		["Spih - Arthas"] = {
 		},
 	},
 }

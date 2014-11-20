@@ -3,15 +3,7 @@ GUPPET_SAVEDDATA = {
 	["MultiGround"] = {
 		["Total"] = 0,
 	},
-	["Multi"] = {
-		["TotalWeight"] = {
-			["BattleGrounds"] = 0,
-			["Global World"] = 0,
-			["Shrine of Two Moons"] = 0,
-			["Arenas"] = 0,
-			["Cities"] = 0,
-			["Instances"] = 0,
-		},
+	["Unknown"] = {
 		["Total"] = 0,
 	},
 	["Aquatic"] = {
@@ -26,20 +18,6 @@ GUPPET_SAVEDDATA = {
 		["Total"] = 0,
 	},
 	["Fly"] = {
-		["TotalWeight"] = {
-			["BattleGrounds"] = 0,
-			["Global World"] = 0,
-			["Shrine of Two Moons"] = 0,
-			["Arenas"] = 0,
-			["Cities"] = 0,
-			["Instances"] = 0,
-		},
-		["Total"] = 0,
-	},
-	["Unknown"] = {
-		["Total"] = 0,
-	},
-	["Ground"] = {
 		["TotalWeight"] = {
 			["BattleGrounds"] = 0,
 			["Global World"] = 0,
@@ -619,6 +597,28 @@ GUPPET_SAVEDDATA = {
 			["Instances"] = 0,
 		},
 		["Total"] = 43,
+	},
+	["Ground"] = {
+		["TotalWeight"] = {
+			["BattleGrounds"] = 0,
+			["Global World"] = 0,
+			["Shrine of Two Moons"] = 0,
+			["Arenas"] = 0,
+			["Cities"] = 0,
+			["Instances"] = 0,
+		},
+		["Total"] = 0,
+	},
+	["Multi"] = {
+		["TotalWeight"] = {
+			["BattleGrounds"] = 0,
+			["Global World"] = 0,
+			["Shrine of Two Moons"] = 0,
+			["Arenas"] = 0,
+			["Cities"] = 0,
+			["Instances"] = 0,
+		},
+		["Total"] = 0,
 	},
 }
 GUPPET_SAVEDLOCATIONS = {

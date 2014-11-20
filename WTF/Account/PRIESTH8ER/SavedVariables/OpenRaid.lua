@@ -3,34 +3,23 @@ OR_db = {
 	["Notes"] = {
 	},
 	["Options"] = {
-		["Auto enable accept"] = true,
+		["Tutorial"] = false,
 		["Automatically send requests"] = true,
 		["Auto enable sent"] = false,
 		["DontCheckForChar"] = false,
-		["Filter joined your group"] = false,
+		["Clean up time"] = 7,
 		["Whisperword"] = false,
-		["Specialnote"] = true,
+		["Auto enable accept"] = true,
 		["Personal send message"] = "Adding you as friend for OpenRaid event %d named %s",
+		["Defaultpage"] = "Index",
+		["Filter have invited"] = true,
+		["Version"] = 2.1,
+		["Filter already in group"] = true,
 		["Ignore when removing"] = {
 		},
-		["Filter already in group"] = true,
-		["Version"] = 2.1,
-		["Filter have invited"] = true,
-		["Defaultpage"] = "Index",
 		["Clear raids after X days"] = false,
-		["Clean up time"] = 7,
-		["Tutorial"] = false,
-	},
-	["String"] = {
-	},
-	["Group"] = {
-	},
-	["Leader"] = {
-	},
-	["Rate"] = {
-		["Raid"] = {
-			["Name"] = "Raid",
-		},
+		["Filter joined your group"] = false,
+		["Specialnote"] = true,
 	},
 	["Raids"] = {
 		["Git-Arthas"] = {
@@ -50,6 +39,8 @@ OR_db = {
 		},
 		["Got-Arthas"] = {
 		},
+		["Dbyx-Arthas"] = {
+		},
 		["Gitt-Arthas"] = {
 			["210731"] = {
 				"Lusting's 25 H SoO  - 6/14H", -- [1]
@@ -63,9 +54,18 @@ OR_db = {
 		},
 		["Evyyn-Azuremyst"] = {
 		},
-		["Dbyx-Arthas"] = {
-		},
 		["Greny-Azuremyst"] = {
 		},
+	},
+	["Group"] = {
+	},
+	["Rate"] = {
+		["Raid"] = {
+			["Name"] = "Raid",
+		},
+	},
+	["Leader"] = {
+	},
+	["String"] = {
 	},
 }

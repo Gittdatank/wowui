@@ -21,4 +21,4 @@ rasoundtoplay = {
 }
 raenablebg = 1
 psdonaspanvar = 3
-radonateq1 = 28
+radonateq1 = 36

@@ -10,30 +10,30 @@ MasqueDB = {
 		["Gimm - Cho'gall"] = "Default",
 		["Gitt - Arthas"] = "Default",
 		["Evyyn - Azuremyst"] = "Default",
-		["Git - Arthas"] = "Default",
-		["Burk - Arthas"] = "Default",
-		["Git - Cho'gall"] = "Default",
-		["Got - Arthas"] = "Default",
-		["Greny - Azuremyst"] = "Default",
 		["Spih - Arthas"] = "Default",
+		["Burk - Arthas"] = "Default",
+		["Greny - Azuremyst"] = "Default",
+		["Got - Arthas"] = "Default",
+		["Git - Cho'gall"] = "Default",
+		["Git - Arthas"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
 			["Groups"] = {
 				["Bagnon"] = {
-					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
+					["SkinID"] = "Zoomed",
 				},
 				["SBF_oh shit"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["Bartender4_StanceBar"] = {
 					["SkinID"] = "Zoomed",
 				},
 				["Raven_Special Buffs"] = {
-					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
+					["SkinID"] = "Zoomed",
 				},
 				["Bartender4_1"] = {
 					["SkinID"] = "Zoomed",
@@ -45,113 +45,113 @@ MasqueDB = {
 					["SkinID"] = "Zoomed",
 				},
 				["GupPet_Action Buttons"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["Raven_Buffs"] = {
-					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
+					["SkinID"] = "Zoomed",
 				},
 				["Bartender4_5"] = {
 					["SkinID"] = "Zoomed",
 				},
 				["SBF_Target Debuffs"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["SBF_Small Notes"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["Bartender4_MicroMenu"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["SBF_Target Buffs"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["SBF_Buffs"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["Bartender4_6"] = {
 					["SkinID"] = "Zoomed",
 				},
 				["Raven_Debuffs"] = {
-					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
+					["SkinID"] = "Zoomed",
 				},
 				["Raven_Debuffs2"] = {
-					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
+					["SkinID"] = "Zoomed",
 				},
 				["Bartender4_Vehicle"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["GupPet"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["Bagnon_voidstorage"] = {
-					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
+					["SkinID"] = "Zoomed",
 				},
 				["Bartender4_2"] = {
 					["SkinID"] = "Zoomed",
 				},
 				["Bartender4_BagBar"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["SBF_Debuffs"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["Raven"] = {
+					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
-					["Inherit"] = false,
 				},
-				["SBF_ToT Debuffs"] = {
-					["Inherit"] = false,
+				["Masque"] = {
 					["SkinID"] = "Zoomed",
 				},
 				["Bartender4"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["Bartender4_PetBar"] = {
+				["Bagnon_bank"] = {
+					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
 				["Bagnon_inventory"] = {
-					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
+					["SkinID"] = "Zoomed",
 				},
 				["Bartender4_7"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["SBF"] = {
+				["Bagnon_guildbank"] = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
-				["Bagnon_guildbank"] = {
+				["SBF"] = {
 					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
 				},
 				["DiminishingReturns"] = {
-					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["Raven_blah"] = {
+					["Inherit"] = false,
+					["SkinID"] = "Zoomed",
+				},
+				["Bartender4_PetBar"] = {
+					["SkinID"] = "Zoomed",
+				},
+				["SBF_ToT Debuffs"] = {
 					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
-				},
-				["Bagnon_bank"] = {
-					["SkinID"] = "Zoomed",
-					["Inherit"] = false,
-				},
-				["Masque"] = {
-					["SkinID"] = "Zoomed",
 				},
 			},
 		},

@@ -104,8 +104,8 @@ AmrDb = {
 		["_autoLog"] = {
 			[1136] = "disabled",
 		},
-		["_lastDiff"] = 8,
-		["_lastZone"] = "The Everbloom",
+		["_lastDiff"] = 0,
+		["_lastZone"] = "Draenor",
 	},
 	["BagItems"] = {
 		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [1]
@@ -162,7 +162,6 @@ AmrDb = {
 		"|cff0070dd|Hitem:109946:0:0:0:0:0:0:0:100:0:2:1:524|h[Gutcrusher Shoulderplates]|h|r", -- [52]
 		"|cff0070dd|Hitem:109966:0:0:0:0:0:0:0:100:0:2:2:499:524|h[Reinforced Bloodsteel Gorget]|h|r", -- [53]
 	},
-	["LastCharacterImport"] = "",
 	["VoidItems"] = {
 		"|cffa335ee|Hitem:34011:0:0:0:0:0:0:1582692992:100:0:0:0|h[Illidari Runeshield]|h|r", -- [1]
 		"|cffa335ee|Hitem:50729:0:0:0:0:0:0:1185718912:100:0:0:0|h[Icecrown Glacial Wall]|h|r", -- [2]
@@ -244,6 +243,7 @@ AmrDb = {
 		"|cffa335ee|Hitem:103649:0:0:0:0:0:0:683148160:100:491:0:0|h[Xal'atoh, Desecrated Image of Gorehowl]|h|r", -- [78]
 		"|cffa335ee|Hitem:30874:0:0:0:0:0:0:34031104:100:0:0:0|h[The Unbreakable Will]|h|r", -- [79]
 	},
+	["LastCharacterImport"] = "",
 	["Reps"] = {
 		[1269] = 7,
 		[1337] = 6,
@@ -271,10 +271,10 @@ AmrDb = {
 		[74247] = 5,
 		[74249] = 32,
 		[76140] = 2,
-		[54849] = 19,
-		[72988] = 7,
 		[89112] = 522,
+		[72988] = 7,
 		[76061] = 18,
+		[54849] = 19,
 		[72095] = 5,
 		[76131] = 1,
 		[72104] = 3,

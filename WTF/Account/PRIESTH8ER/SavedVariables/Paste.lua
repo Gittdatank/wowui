@@ -2,17 +2,21 @@
 PasteDB = {
 	["profileKeys"] = {
 		["Got - Arthas"] = "Got - Arthas",
-		["Spih - Arthas"] = "Spih - Arthas",
+		["Git - Arthas"] = "Git - Arthas",
 		["Gitt - Arthas"] = "Gitt - Arthas",
 		["Dbyx - Arthas"] = "Dbyx - Arthas",
-		["Git - Arthas"] = "Git - Arthas",
+		["Spih - Arthas"] = "Spih - Arthas",
 	},
 	["profiles"] = {
 		["Got - Arthas"] = {
 			["loaded"] = true,
 		},
-		["Spih - Arthas"] = {
+		["Git - Arthas"] = {
 			["loaded"] = true,
+			["whispertarget"] = "",
+			["where"] = "Default",
+			["pos"] = {
+			},
 		},
 		["Gitt - Arthas"] = {
 			["loaded"] = true,
@@ -20,12 +24,8 @@ PasteDB = {
 		["Dbyx - Arthas"] = {
 			["loaded"] = true,
 		},
-		["Git - Arthas"] = {
+		["Spih - Arthas"] = {
 			["loaded"] = true,
-			["where"] = "Default",
-			["whispertarget"] = "",
-			["pos"] = {
-			},
 		},
 	},
 }

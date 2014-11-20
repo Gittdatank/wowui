@@ -14,15 +14,15 @@ LoggerHeadDB = {
 		["Gitt - Cho'gall"] = "Default",
 		["Gimm - Cho'gall"] = "Default",
 		["Gitt - Arthas"] = "Default",
-		["Git - Arthas"] = "Default",
+		["Spih - Arthas"] = "Default",
+		["Giit - Cho'gall"] = "Default",
+		["Burk - Arthas"] = "Default",
+		["Giitt - Feathermoon"] = "Default",
 		["Greny - Azuremyst"] = "Default",
-		["Git - Cho'gall"] = "Default",
 		["Spih - Cho'gall"] = "Default",
 		["Git - Azuremyst"] = "Default",
-		["Giitt - Feathermoon"] = "Default",
-		["Burk - Arthas"] = "Default",
-		["Giit - Cho'gall"] = "Default",
-		["Spih - Arthas"] = "Default",
+		["Git - Cho'gall"] = "Default",
+		["Git - Arthas"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -95,30 +95,27 @@ LoggerHeadDB = {
 						false, -- [2]
 						[8] = false,
 					},
-					["Skyreach"] = {
-						[2] = true,
-						[8] = true,
+					["FW Horde Garrison Level 3"] = {
+						false, -- [1]
 					},
 					["Upper Blackrock Spire"] = {
 						false, -- [1]
 						true, -- [2]
 					},
-					["Shadowmoon Burial Grounds"] = {
-						true, -- [1]
-						false, -- [2]
-						[8] = false,
+					["Iron Docks"] = {
+						[2] = true,
 					},
-					["Scholomance"] = {
-						[2] = false,
-						[8] = false,
+					["Halls of Origination"] = {
+						false, -- [1]
+						false, -- [2]
 					},
 					["Throne of the Tides"] = {
 						false, -- [1]
 						false, -- [2]
 					},
-					["Halls of Origination"] = {
-						false, -- [1]
-						false, -- [2]
+					["Scholomance"] = {
+						[2] = false,
+						[8] = false,
 					},
 					["Ragefire Chasm"] = {
 						false, -- [1]
@@ -132,13 +129,14 @@ LoggerHeadDB = {
 					["FW Horde Garrison Level 1"] = {
 						false, -- [1]
 					},
-					["Stormstout Brewery"] = {
-						false, -- [1]
-						false, -- [2]
-						[8] = false,
+					["The Everbloom"] = {
+						[2] = true,
+						[8] = true,
 					},
-					["Sunken Temple"] = {
+					["Shado-Pan Monastery"] = {
 						false, -- [1]
+						true, -- [2]
+						[8] = false,
 					},
 					["Shadowfang Keep"] = {
 						[2] = false,
@@ -153,13 +151,7 @@ LoggerHeadDB = {
 						[2] = false,
 						[8] = false,
 					},
-					["Zul'Gurub"] = {
-						[2] = false,
-					},
-					["Halls of Stone"] = {
-						[2] = false,
-					},
-					["The Stonecore"] = {
+					["Lost City of the Tol'vir"] = {
 						false, -- [1]
 						false, -- [2]
 					},
@@ -167,27 +159,35 @@ LoggerHeadDB = {
 						false, -- [1]
 						false, -- [2]
 					},
-					["Lost City of the Tol'vir"] = {
+					["The Stonecore"] = {
 						false, -- [1]
 						false, -- [2]
 					},
-					["Shado-Pan Monastery"] = {
-						false, -- [1]
-						true, -- [2]
-						[8] = false,
+					["Halls of Stone"] = {
+						[2] = false,
 					},
-					["The Everbloom"] = {
-						[2] = true,
-						[8] = true,
+					["Zul'Gurub"] = {
+						[2] = false,
+					},
+					["Sunken Temple"] = {
+						false, -- [1]
+					},
+					["Stormstout Brewery"] = {
+						false, -- [1]
+						false, -- [2]
+						[8] = false,
 					},
 					["Blackrock Depths"] = {
 						false, -- [1]
 					},
-					["Iron Docks"] = {
-						[2] = true,
+					["Shadowmoon Burial Grounds"] = {
+						true, -- [1]
+						false, -- [2]
+						[8] = false,
 					},
-					["FW Horde Garrison Level 3"] = {
-						false, -- [1]
+					["Skyreach"] = {
+						[2] = true,
+						[8] = true,
 					},
 				},
 				["scenario"] = {
@@ -200,22 +200,44 @@ LoggerHeadDB = {
 					["Arena of Annihilation"] = {
 						false, -- [1]
 					},
-					["Proving Grounds"] = {
-						false, -- [1]
-					},
 					["Vol'jin Ambush Scenario"] = {
 						false, -- [1]
 					},
+					["Proving Grounds"] = {
+						false, -- [1]
+					},
 				},
-				["none"] = {
-					["Kalimdor"] = {
-						[0] = false,
+				["pvp"] = {
+					["Strand of the Ancients"] = {
+						[8] = false,
 					},
-					["Tol Barad"] = {
-						true, -- [1]
+					["Warsong Gulch"] = {
+						[8] = false,
+						[3] = false,
 					},
-					["Pandaria"] = {
-						[0] = false,
+					["Twin Peaks"] = {
+						[8] = false,
+						[3] = false,
+					},
+					["The Battle for Gilneas"] = {
+						[3] = false,
+						[8] = false,
+					},
+					["Alterac Valley"] = {
+						[8] = false,
+					},
+					["Arathi Basin"] = {
+						[8] = false,
+						[3] = false,
+					},
+					["Rated Eye of the Storm"] = {
+						[3] = false,
+					},
+					["Isle of Conquest"] = {
+						[8] = false,
+					},
+					["Eye of the Storm"] = {
+						[8] = false,
 					},
 				},
 				["arena"] = {
@@ -300,6 +322,14 @@ LoggerHeadDB = {
 						[3] = true,
 						[4] = true,
 					},
+					["Molten Core"] = {
+						[8] = false,
+					},
+					["Blackwing Descent"] = {
+						[3] = true,
+						[4] = true,
+						[5] = true,
+					},
 					["Throne of Thunder"] = {
 						nil, -- [1]
 						nil, -- [2]
@@ -309,50 +339,20 @@ LoggerHeadDB = {
 						true, -- [6]
 						true, -- [7]
 					},
-					["Blackwing Descent"] = {
-						[3] = true,
-						[4] = true,
-						[5] = true,
-					},
-					["Molten Core"] = {
-						[8] = false,
-					},
 					["Firelands"] = {
 						[3] = true,
 						[4] = true,
 					},
 				},
-				["pvp"] = {
-					["Strand of the Ancients"] = {
-						[8] = false,
+				["none"] = {
+					["Kalimdor"] = {
+						[0] = false,
 					},
-					["Warsong Gulch"] = {
-						[8] = false,
-						[3] = false,
+					["Tol Barad"] = {
+						true, -- [1]
 					},
-					["Twin Peaks"] = {
-						[8] = false,
-						[3] = false,
-					},
-					["The Battle for Gilneas"] = {
-						[3] = false,
-						[8] = false,
-					},
-					["Alterac Valley"] = {
-						[8] = false,
-					},
-					["Arathi Basin"] = {
-						[8] = false,
-						[3] = false,
-					},
-					["Rated Eye of the Storm"] = {
-						[3] = false,
-					},
-					["Isle of Conquest"] = {
-						[8] = false,
-					},
-					["Eye of the Storm"] = {
-						[8] = false,
+					["Pandaria"] = {
+						[0] = false,
 					},
 				},
 			},

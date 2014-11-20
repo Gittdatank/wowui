@@ -55,9 +55,153 @@ pslocationnames = {
 																																																					{
 																																																						{
 																																																							{
-																																																								"Baradin Hold", -- [1]
-																																																								"Blackwing Descent", -- [2]
-																																																								"The Bastion of Twilight", -- [3]
+																																																								{
+																																																									{
+																																																										{
+																																																											{
+																																																												{
+																																																													{
+																																																														{
+																																																															{
+																																																																{
+																																																																	"Baradin Hold", -- [1]
+																																																																	"Blackwing Descent", -- [2]
+																																																																	"The Bastion of Twilight", -- [3]
+																																																																	"Throne of the Four Winds", -- [4]
+																																																																	"Firelands", -- [5]
+																																																																	"Dragon Soul", -- [6]
+																																																																}, -- [1]
+																																																																{
+																																																																	"New Baradin Hold", -- [1]
+																																																																	"Heart of Fear", -- [2]
+																																																																	"Mogu'shan Vaults", -- [3]
+																																																																	"Terrace of Endless Spring", -- [4]
+																																																																	"Throne of Thunder", -- [5]
+																																																																	"Siege of Orgrimmar", -- [6]
+																																																																}, -- [2]
+																																																																{
+																																																																	"Highmaul", -- [1]
+																																																																}, -- [3]
+																																																																"Throne of the Four Winds", -- [4]
+																																																																"Firelands", -- [5]
+																																																																"Dragon Soul", -- [6]
+																																																															}, -- [1]
+																																																															{
+																																																																"New Baradin Hold", -- [1]
+																																																																"Heart of Fear", -- [2]
+																																																																"Mogu'shan Vaults", -- [3]
+																																																																"Terrace of Endless Spring", -- [4]
+																																																																"Throne of Thunder", -- [5]
+																																																																"Siege of Orgrimmar", -- [6]
+																																																															}, -- [2]
+																																																															{
+																																																																"Highmaul", -- [1]
+																																																															}, -- [3]
+																																																															"Throne of the Four Winds", -- [4]
+																																																															"Firelands", -- [5]
+																																																															"Dragon Soul", -- [6]
+																																																														}, -- [1]
+																																																														{
+																																																															"New Baradin Hold", -- [1]
+																																																															"Heart of Fear", -- [2]
+																																																															"Mogu'shan Vaults", -- [3]
+																																																															"Terrace of Endless Spring", -- [4]
+																																																															"Throne of Thunder", -- [5]
+																																																															"Siege of Orgrimmar", -- [6]
+																																																														}, -- [2]
+																																																														{
+																																																															"Highmaul", -- [1]
+																																																														}, -- [3]
+																																																														"Throne of the Four Winds", -- [4]
+																																																														"Firelands", -- [5]
+																																																														"Dragon Soul", -- [6]
+																																																													}, -- [1]
+																																																													{
+																																																														"New Baradin Hold", -- [1]
+																																																														"Heart of Fear", -- [2]
+																																																														"Mogu'shan Vaults", -- [3]
+																																																														"Terrace of Endless Spring", -- [4]
+																																																														"Throne of Thunder", -- [5]
+																																																														"Siege of Orgrimmar", -- [6]
+																																																													}, -- [2]
+																																																													{
+																																																														"Highmaul", -- [1]
+																																																													}, -- [3]
+																																																													"Throne of the Four Winds", -- [4]
+																																																													"Firelands", -- [5]
+																																																													"Dragon Soul", -- [6]
+																																																												}, -- [1]
+																																																												{
+																																																													"New Baradin Hold", -- [1]
+																																																													"Heart of Fear", -- [2]
+																																																													"Mogu'shan Vaults", -- [3]
+																																																													"Terrace of Endless Spring", -- [4]
+																																																													"Throne of Thunder", -- [5]
+																																																													"Siege of Orgrimmar", -- [6]
+																																																												}, -- [2]
+																																																												{
+																																																													"Highmaul", -- [1]
+																																																												}, -- [3]
+																																																												"Throne of the Four Winds", -- [4]
+																																																												"Firelands", -- [5]
+																																																												"Dragon Soul", -- [6]
+																																																											}, -- [1]
+																																																											{
+																																																												"New Baradin Hold", -- [1]
+																																																												"Heart of Fear", -- [2]
+																																																												"Mogu'shan Vaults", -- [3]
+																																																												"Terrace of Endless Spring", -- [4]
+																																																												"Throne of Thunder", -- [5]
+																																																												"Siege of Orgrimmar", -- [6]
+																																																											}, -- [2]
+																																																											{
+																																																												"Highmaul", -- [1]
+																																																											}, -- [3]
+																																																											"Throne of the Four Winds", -- [4]
+																																																											"Firelands", -- [5]
+																																																											"Dragon Soul", -- [6]
+																																																										}, -- [1]
+																																																										{
+																																																											"New Baradin Hold", -- [1]
+																																																											"Heart of Fear", -- [2]
+																																																											"Mogu'shan Vaults", -- [3]
+																																																											"Terrace of Endless Spring", -- [4]
+																																																											"Throne of Thunder", -- [5]
+																																																											"Siege of Orgrimmar", -- [6]
+																																																										}, -- [2]
+																																																										{
+																																																											"Highmaul", -- [1]
+																																																										}, -- [3]
+																																																										"Throne of the Four Winds", -- [4]
+																																																										"Firelands", -- [5]
+																																																										"Dragon Soul", -- [6]
+																																																									}, -- [1]
+																																																									{
+																																																										"New Baradin Hold", -- [1]
+																																																										"Heart of Fear", -- [2]
+																																																										"Mogu'shan Vaults", -- [3]
+																																																										"Terrace of Endless Spring", -- [4]
+																																																										"Throne of Thunder", -- [5]
+																																																										"Siege of Orgrimmar", -- [6]
+																																																									}, -- [2]
+																																																									{
+																																																										"Highmaul", -- [1]
+																																																									}, -- [3]
+																																																									"Throne of the Four Winds", -- [4]
+																																																									"Firelands", -- [5]
+																																																									"Dragon Soul", -- [6]
+																																																								}, -- [1]
+																																																								{
+																																																									"New Baradin Hold", -- [1]
+																																																									"Heart of Fear", -- [2]
+																																																									"Mogu'shan Vaults", -- [3]
+																																																									"Terrace of Endless Spring", -- [4]
+																																																									"Throne of Thunder", -- [5]
+																																																									"Siege of Orgrimmar", -- [6]
+																																																								}, -- [2]
+																																																								{
+																																																									"Highmaul", -- [1]
+																																																								}, -- [3]
 																																																								"Throne of the Four Winds", -- [4]
 																																																								"Firelands", -- [5]
 																																																								"Dragon Soul", -- [6]
@@ -57555,14 +57699,19 @@ pssichatrepdef = "raid"
 pssaveexpradiobutset = 1
 pspetstableok = {
 	{
+		"Pet-0-1426-1191-28-84955-050298135C", -- [1]
 	}, -- [1]
 	{
+		"Player-69-05C36C10", -- [1]
 	}, -- [2]
 	{
+		2493.917, -- [1]
 	}, -- [3]
 	{
+		"Plaj", -- [1]
 	}, -- [4]
 	{
+		2, -- [1]
 	}, -- [5]
 }
 pstrackbadsummons = 1
