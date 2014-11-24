@@ -264,8 +264,8 @@ RKDatabase = {
 			},
 			["firstLoad"] = false,
 			["warlordsUpdate"] = true,
-			["diffShown"] = 6,
 			["prevDiffShown"] = 6,
+			["diffShown"] = 6,
 		},
 	},
 }

@@ -11,7 +11,7 @@ pslocale()
 end
 
 
-	psversion=6.007
+	psversion=6.008
 
 
 	psverstiptext="alpha"
@@ -6023,6 +6023,7 @@ UIDropDownMenu_JustifyText(DropDownMenubossic, "LEFT")
 end
 
 function openbossic2()
+
 if not DropDownMenubossic2 then
 CreateFrame("Frame", "DropDownMenubossic2", PSFmainic1, "UIDropDownMenuTemplate")
 end
@@ -8241,7 +8242,7 @@ DropDownMenuexpans:Show()
 
 if pssetexpans==nil then
   pssetexpans=3
-  psmenuchoose1=#pslocations[2]
+  psmenuchoose1=#pslocations[pssetexpans]
   psmenuchoose2=1
 end
 local items= {"Cataclysm", "Pandaria", "Warlords of Draenor"}

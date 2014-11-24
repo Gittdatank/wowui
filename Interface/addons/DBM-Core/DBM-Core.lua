@@ -52,9 +52,9 @@
 --  Globals/Default Options  --
 -------------------------------
 DBM = {
-	Revision = tonumber(("$Revision: 11869 $"):sub(12, -3)),
-	DisplayVersion = "6.0.5 alpha", -- the string that is shown as version
-	ReleaseRevision = 11829 -- the revision of the latest stable version that is available
+	Revision = tonumber(("$Revision: 11873 $"):sub(12, -3)),
+	DisplayVersion = "6.0.5", -- the string that is shown as version
+	ReleaseRevision = 11873 -- the revision of the latest stable version that is available
 }
 
 -- Legacy crap; that stupid "Version" field was never a good idea.
@@ -193,6 +193,7 @@ DBM.DefaultOptions = {
 	SettingsMessageShown = false,
 	ForumsMessageShown = false,
 	PGMessageShown = false,
+	MCMessageShown = false,
 	AlwaysShowSpeedKillTimer = true,
 	CRT_Enabled = false,
 --	HelpMessageShown = false,
@@ -2621,6 +2622,9 @@ do
 		if not DBM.Options.PGMessageShown and LastInstanceMapID == 1148 and not GetAddOnInfo("DBM-ProvingGrounds") then
 			DBM.Options.PGMessageShown = true
 			DBM:AddMsg(DBM_CORE_PROVINGGROUNDS_AD)
+		elseif not DBM.Options.MCMessageShown and LastInstanceMapID == 409 and not GetAddOnInfo("DBM-MC") then
+			DBM.Options.MCMessageShown = true
+			DBM:AddMsg(DBM_CORE_MOLTENCORE_AD)
 		end
 	end
 	--Faster and more accurate loading for instances, but useless outside of them
@@ -4136,7 +4140,7 @@ function DBM:StartCombat(mod, delay, event, synced, syncedStartHp)
 					speedTimer:Start()
 				end
 			end
-			if DBM.Options.CRT_Enabled and difficultyIndex >= 14 then--14-17 difficulties, all of the difficulty sizes of WoD.
+			if DBM.Options.CRT_Enabled and difficultyIndex >= 14 and difficultyIndex < 18 then--14-17 difficulties, all of the difficulty sizes of WoD.
 				local time = 90/LastGroupSize
 				time = time * 60
 				loopCRTimer(time, mod)
@@ -5424,6 +5428,14 @@ end
 function bossModPrototype:IsMythic()
 	local diff = DBM:GetCurrentInstanceDifficulty()
 	if diff == "mythic" then
+		return true
+	end
+	return false
+end
+
+function bossModPrototype:IsEvent()
+	local diff = DBM:GetCurrentInstanceDifficulty()
+	if diff == "event5" or diff == "event20" or diff == "event40" then
 		return true
 	end
 	return false

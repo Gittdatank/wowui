@@ -3,7 +3,7 @@ ElvUI: enabled
 Bartender4: disabled
 BetterPowerBarAlt: disabled
 Chatter: disabled
-DerpEP: disabled
+DerpEP: enabled
 EnsidiaFails: disabled
 Fonter: disabled
 Grid: disabled
@@ -49,8 +49,8 @@ oqueue: enabled
 ACP: disabled
 Bagnon: enabled
 Bagnon_Config: enabled
-Auc-Advanced: enabled
-Auc-Filter-Basic: enabled
+Auc-Advanced: disabled
+Auc-Filter-Basic: disabled
 Auc-Stat-iLevel: enabled
 Auc-Util-FixAH: enabled
 Auc-Stat-StdDev: enabled
@@ -69,3 +69,17 @@ BigWigs: enabled
 VEM-Core: disabled
 RaidAchievement: enabled
 MarketWatcher: disabled
+HandyNotes: disabled
+TheUndermineJournalGE: disabled
+LibStub: disabled
+ArkInventory: disabled
+ArkInventoryConfig: enabled
+ArkInventoryRules: enabled
+ArkInventoryRules_Example: enabled
+Auctionator: enabled
+LibSharedMedia-3.0: disabled
+GCD: disabled
+epgp: enabled
+epgp_lootmaster: enabled
+epgp_lootmaster_ml: enabled
+MoveAnything: enabled

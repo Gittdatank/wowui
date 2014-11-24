@@ -1,3 +1,4 @@
+
 --------------------------------------------------------------------------------
 -- Module declaration
 --
@@ -8,13 +9,25 @@ mod:RegisterEnableMob(12057)
 mod.toggleOptions = {19492, "bosskill"}
 
 --------------------------------------------------------------------------------
+-- Localization
+--
+
+local L = mod:NewLocale("enUS", true)
+if L then
+	L.bossName = "Garr"
+end
+L = mod:GetLocale()
+mod.displayName = L.bossName
+
+--------------------------------------------------------------------------------
 -- Initialization
 --
 
 function mod:OnBossEnable()
+	self:RegisterEvent("INSTANCE_ENCOUNTER_ENGAGE_UNIT", "CheckBossStatus")
+
 	self:Log("SPELL_CAST_SUCCESS", "Pulse", 19492)
 
-	self:RegisterEvent("PLAYER_REGEN_ENABLED", "CheckForWipe")
 	self:Death("Win", 12057)
 end
 

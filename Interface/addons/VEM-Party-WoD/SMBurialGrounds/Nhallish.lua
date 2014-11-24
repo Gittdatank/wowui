@@ -1,6 +1,6 @@
 local mod	= VEM:NewMod(1168, "VEM-Party-WoD", 6, 537)
 local L		= mod:GetLocalizedStrings()
-local sndWOP	= mod:NewSound(nil, "SoundWOP", true)
+local sndWOP	= mod:SoundMM("SoundWOP")
 
 mod:SetRevision(("$Revision: 11370 $"):sub(12, -3))
 mod:SetCreatureID(75829)
@@ -43,6 +43,7 @@ function mod:SPELL_AURA_APPLIED(args)
 		warnSoulShred:Show()
 		specWarnSoulShred:Show()
 		timerSoulShredCD:Start()
+		sndWOP:Play("killspirit")
 	elseif spellId == 153067 then--SPELL_CAST_SUCCESS is usually missing so have to scan for debuffs
 		warnVoidDevastation:Show()
 		specWarnVoidDevastation:Show()

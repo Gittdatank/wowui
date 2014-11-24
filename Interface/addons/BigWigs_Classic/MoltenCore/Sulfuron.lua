@@ -1,3 +1,4 @@
+
 --------------------------------------------------------------------------------
 -- Module declaration
 --
@@ -8,15 +9,26 @@ mod:RegisterEnableMob(12098)
 mod.toggleOptions = {19779, 19775, "bosskill"}
 
 --------------------------------------------------------------------------------
+-- Localization
+--
+
+local L = mod:NewLocale("enUS", true)
+if L then
+	L.bossName = "Sulfuron Harbinger"
+end
+L = mod:GetLocale()
+mod.displayName = L.bossName
+
+--------------------------------------------------------------------------------
 -- Initialization
 --
 
 function mod:OnBossEnable()
+	self:RegisterEvent("INSTANCE_ENCOUNTER_ENGAGE_UNIT", "CheckBossStatus")
+
 	self:Log("SPELL_CAST_START", "SulfuronHeal", 19775)
 	self:Log("SPELL_CAST_SUCCESS", "Inspire", 19779)
 
-	self:RegisterEvent("PLAYER_REGEN_DISABLED", "CheckForEngage")
-	self:RegisterEvent("PLAYER_REGEN_ENABLED", "CheckForWipe")
 	self:Death("Win", 12098)
  end
 

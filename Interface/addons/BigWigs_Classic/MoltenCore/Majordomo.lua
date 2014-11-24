@@ -1,3 +1,4 @@
+
 --------------------------------------------------------------------------------
 -- Module declaration
 --
@@ -13,21 +14,24 @@ mod.toggleOptions = {20619, 21075, "bosskill"}
 
 local L = mod:NewLocale("enUS", true)
 if L then
+	L.bossName = "Majordomo Executus"
+
 	L.disabletrigger = "Impossible! Stay your attack, mortals... I submit! I submit!"
 	L.power_next = "Next Power"
 end
 L = mod:GetLocale()
+mod.displayName = L.bossName
 
 --------------------------------------------------------------------------------
 -- Initialization
 --
 
 function mod:OnBossEnable()
+	self:RegisterEvent("INSTANCE_ENCOUNTER_ENGAGE_UNIT", "CheckBossStatus")
+
 	self:Log("SPELL_CAST_SUCCESS", "MagicReflection", 20619)
 	self:Log("SPELL_CAST_SUCCESS", "DamageShield", 21075)
 
-	self:RegisterEvent("PLAYER_REGEN_DISABLED", "CheckForEngage")
-	self:RegisterEvent("PLAYER_REGEN_ENABLED", "CheckForWipe")
 	self:Yell("Win", L.disabletrigger)
 end
 

@@ -13,7 +13,7 @@ local Leech = CreateFrame("frame")
 
 -- Data Input
 Multistrike:SetScript("OnUpdate", function(self, elap)
-	local Multistrike = GetCombatRatingBonus("12")
+	local Multistrike = GetMultistrike("player")
 	Multistrike_Frame.text = string.format("%.2f%%", Multistrike)
 end)
 

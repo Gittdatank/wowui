@@ -1,7 +1,7 @@
 
 AmrDb = {
 	["Talents"] = {
-		"2112323", -- [1]
+		"2112322", -- [1]
 		"0000000", -- [2]
 	},
 	["Glyphs"] = {
@@ -35,23 +35,23 @@ AmrDb = {
 			"|cffa335ee|Hitem:118846:0:0:0:0:0:0:0:100:0:0:0|h[Gorget of Primal Might]|h|r", -- [2]
 			"|cff0070dd|Hitem:109944:0:0:0:0:0:0:0:100:0:2:1:524|h[Verdant Plate Spaulders]|h|r", -- [3]
 			nil, -- [4]
-			"|cff0070dd|Hitem:119943:0:0:0:0:0:0:0:100:0:14:0|h[Primal Combatant's Plate Chestpiece]|h|r", -- [5]
-			"|cff0070dd|Hitem:109837:0:0:0:0:0:0:0:100:0:2:1:524|h[Incarnadine Girdle]|h|r", -- [6]
+			"|cff0070dd|Hitem:109892:0:0:0:0:0:0:0:100:0:2:2:499:524|h[Incarnadine Breastplate]|h|r", -- [5]
+			"|cffa335ee|Hitem:118888:0:0:0:0:0:0:0:100:0:0:0|h[Ashelia's Adorned Waistguard]|h|r", -- [6]
 			"|cffa335ee|Hitem:118950:0:0:0:0:0:0:0:100:0:11:1:102|h[Bouldercrush Legplates of the Quickblade]|h|r", -- [7]
 			"|cff0070dd|Hitem:109803:0:0:0:0:0:0:0:100:0:2:1:524|h[Rivet-Sealed Treads]|h|r", -- [8]
 			"|cff0070dd|Hitem:109879:0:0:0:0:0:0:0:100:0:2:2:499:524|h[Gutcrusher Bracers]|h|r", -- [9]
 			"|cff0070dd|Hitem:109856:0:0:0:0:0:0:0:100:0:2:1:524|h[Incarnadine Gauntlets]|h|r", -- [10]
-			"|cff0070dd|Hitem:109783:0:0:0:0:0:0:0:100:0:2:1:524|h[Band of the Stalwart Stanchion]|h|r", -- [11]
+			"|cffa335ee|Hitem:119005:0:0:0:0:0:0:0:100:0:11:1:179|h[Mordant Signet of the Merciless]|h|r", -- [11]
 			"|cffa335ee|Hitem:118298:0:0:0:0:0:0:0:100:0:11:0|h[Timeless Solium Band of the Bulwark]|h|r", -- [12]
 			"|cff0070dd|Hitem:110010:0:0:0:0:0:0:0:100:0:2:1:524|h[Mote of Corruption]|h|r", -- [13]
-			"|cff0070dd|Hitem:110015:0:0:0:0:0:0:0:100:0:2:2:499:524|h[Toria's Unseeing Eye]|h|r", -- [14]
+			"|cffa335ee|Hitem:112319:0:0:0:0:0:0:0:100:0:13:2:525:530|h[Knight's Badge]|h|r", -- [14]
 			"|cff0070dd|Hitem:109929:0:0:0:0:0:0:0:100:0:2:2:499:524|h[Cloak of Steeled Nerves]|h|r", -- [15]
 			"|cffe6cc80|Hitem:105691:0:4650:4650:0:0:0:631955328:100:0:0:0|h[Hellscream's Doomblade]|h|r", -- [16]
 			"|cffa335ee|Hitem:118874:0:0:0:0:0:0:0:100:0:0:0|h[Blackrock Bulwark]|h|r", -- [17]
 		}, -- [1]
 		{
 			"|cff0070dd|Hitem:109986:0:0:0:0:0:0:0:100:0:2:1:524|h[Verdant Plate Crown]|h|r", -- [1]
-			"|cffa335ee|Hitem:119010:0:0:0:0:0:0:0:100:0:11:1:150|h[Doomchain Collar of the Aurora]|h|r", -- [2]
+			"|cffa335ee|Hitem:118846:0:0:0:0:0:0:0:100:0:0:0|h[Gorget of Primal Might]|h|r", -- [2]
 			"|cff0070dd|Hitem:109944:0:0:0:0:0:0:0:100:0:2:1:524|h[Verdant Plate Spaulders]|h|r", -- [3]
 			nil, -- [4]
 			"|cff0070dd|Hitem:119943:0:0:0:0:0:0:0:100:0:14:0|h[Primal Combatant's Plate Chestpiece]|h|r", -- [5]
@@ -66,35 +66,35 @@ AmrDb = {
 			"|cff0070dd|Hitem:110015:0:0:0:0:0:0:0:100:0:2:2:499:524|h[Toria's Unseeing Eye]|h|r", -- [14]
 			"|cff0070dd|Hitem:109929:0:0:0:0:0:0:0:100:0:2:2:499:524|h[Cloak of Steeled Nerves]|h|r", -- [15]
 			"|cffe6cc80|Hitem:105691:0:4650:4650:0:0:0:631955328:100:0:0:0|h[Hellscream's Doomblade]|h|r", -- [16]
-			"|cff0070dd|Hitem:110053:0:0:0:0:0:0:0:100:0:2:1:524|h[Arrowbreaker Greatshield]|h|r", -- [17]
+			"|cffa335ee|Hitem:118874:0:0:0:0:0:0:0:100:0:0:0|h[Blackrock Bulwark]|h|r", -- [17]
 		}, -- [2]
 	},
 	["LastCharacterImportDate"] = "",
-	["RealmName"] = "Arthas",
+	["BankItems"] = {
+		"|cffffffff|Hitem:22574:0:0:0:0:0:0:2147150336:100:0:0:0|h[Mote of Fire]|h|r", -- [1]
+		"|cff0070dd|Hitem:76131:0:0:0:0:0:0:1673828608:100:0:0:0|h[Primordial Ruby]|h|r", -- [2]
+	},
 	["Specs"] = {
 		34, -- [1]
 		32, -- [2]
 	},
 	["Options"] = {
 	},
-	["BankItems"] = {
-		"|cffffffff|Hitem:22574:0:0:0:0:0:0:2147150336:100:0:0:0|h[Mote of Fire]|h|r", -- [1]
-		"|cff0070dd|Hitem:76131:0:0:0:0:0:0:1673828608:100:0:0:0|h[Primordial Ruby]|h|r", -- [2]
-	},
+	["Region"] = "US",
 	["Currencies"] = {
 		[81] = 48,
 		[614] = 7,
 		[384] = 12,
 		[416] = 45,
 		[402] = 27,
-		[-1] = 7533959233,
-		[241] = 40,
-		[823] = 5227,
+		[361] = 6,
 		[391] = 46,
-		[392] = 321,
+		[823] = 7940,
+		[-1] = 6774661133,
+		[392] = 822,
 		[393] = 4,
 		[394] = 13,
-		[361] = 6,
+		[241] = 40,
 	},
 	["IconInfo"] = {
 	},
@@ -104,8 +104,8 @@ AmrDb = {
 		["_autoLog"] = {
 			[1136] = "disabled",
 		},
-		["_lastDiff"] = 0,
-		["_lastZone"] = "Draenor",
+		["_lastDiff"] = 1,
+		["_lastZone"] = "FW Horde Garrison Level 3",
 	},
 	["BagItems"] = {
 		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [1]
@@ -114,54 +114,66 @@ AmrDb = {
 		"|cffffffff|Hitem:110292:0:0:0:0:0:0:0:100:0:0:0|h[Sea Scorpion Bait]|h|r", -- [4]
 		"|cffffffff|Hitem:110290:0:0:0:0:0:0:0:100:0:0:0|h[Blind Lake Sturgeon Bait]|h|r", -- [5]
 		"|cff1eff00|Hitem:118236:0:0:0:0:0:0:0:100:0:0:0|h[Counterfeit Coin]|h|r", -- [6]
-		"|cff1eff00|Hitem:116413:0:0:0:0:0:0:0:100:0:0:0|h[Scroll of Town Portal]|h|r", -- [7]
-		"|cff1eff00|Hitem:116411:0:0:0:0:0:0:0:100:0:0:0|h[Scroll of Protection]|h|r", -- [8]
-		"|cff0070dd|Hitem:118475:0:0:0:0:0:0:0:100:0:1:0|h[Hearthstone Strategy Guide]|h|r", -- [9]
-		"|cffffffff|Hitem:109152:0:0:0:0:0:0:0:100:0:0:0|h[Draenic Stamina Flask]|h|r", -- [10]
-		"|cffffffff|Hitem:118705:0:0:0:0:0:0:0:100:0:0:0|h[Warm Goren Egg]|h|r", -- [11]
-		"|cffffffff|Hitem:118414:0:0:0:0:0:0:0:100:0:0:0|h[Awesomefish]|h|r", -- [12]
-		"|cffffffff|Hitem:111407:0:0:0:0:0:0:0:100:0:0:0|h[Waterlogged Journal]|h|r", -- [13]
-		"|cffa335ee|Hitem:44050:0:0:0:0:0:0:0:100:0:0:0|h[Mastercraft Kalu'ak Fishing Pole]|h|r", -- [14]
-		"|cff0070dd|Hitem:109987:0:0:0:0:0:0:0:100:0:2:2:523:524|h[Goldsteel Greathelm]|h|r", -- [15]
-		"|cff0070dd|Hitem:109943:0:0:0:0:0:0:0:100:0:2:1:524|h[Incarnadine Shoulderguard]|h|r", -- [16]
-		"|cff0070dd|Hitem:109877:0:0:0:0:0:0:0:100:0:2:1:524|h[Verdant Plate Wristguards]|h|r", -- [17]
-		"|cffa335ee|Hitem:104537:0:4610:4592:4647:0:0:1349315200:100:491:0:0|h[Ashen Wall Girdle]|h|r", -- [18]
-		"|cff0070dd|Hitem:109916:0:0:0:0:0:0:0:100:0:2:1:524|h[Drape of Swirling Deflection]|h|r", -- [19]
-		"|cff1eff00|Hitem:63353:0:0:0:0:0:0:0:100:0:0:0|h[Shroud of Cooperation]|h|r", -- [20]
-		"|cffffffff|Hitem:112238:0:0:0:0:0:0:0:100:0:2:0|h[]|h|r", -- [21]
-		"|cff0070dd|Hitem:110011:0:0:0:0:0:0:0:100:0:2:1:524|h[Fires of the Sun]|h|r", -- [22]
-		"|cff0070dd|Hitem:118690:0:0:0:0:0:0:0:100:0:0:0|h[Empty Crawdad Trap]|h|r", -- [23]
-		"|cffa335ee|Hitem:118229:0:0:0:0:0:0:0:100:0:0:1:545|h[Resonant Hidecrystal of the Gorger]|h|r", -- [24]
-		"|cff1eff00|Hitem:114616:0:0:0:0:0:0:0:100:0:0:0|h[War Ravaged Weaponry]|h|r", -- [25]
-		"|cff1eff00|Hitem:109585:0:0:0:0:0:0:0:100:0:0:0|h[Arakkoa Cipher]|h|r", -- [26]
-		"|cff0070dd|Hitem:115502:0:0:0:0:0:0:0:100:0:0:0|h[Small Luminous Shard]|h|r", -- [27]
-		"|cffffffff|Hitem:87216:0:0:0:0:0:0:1716311936:100:0:0:0|h[Thermal Anvil]|h|r", -- [28]
-		"|cff0070dd|Hitem:60854:0:0:0:0:0:0:0:100:0:0:0|h[Loot-A-Rang]|h|r", -- [29]
-		"|cff0070dd|Hitem:40768:0:0:0:0:0:0:413039488:100:0:0:0|h[MOLL-E]|h|r", -- [30]
-		"|cffffffff|Hitem:40772:0:0:0:0:0:0:2086946028:100:0:0:0|h[Gnomish Army Knife]|h|r", -- [31]
-		"|cffffffff|Hitem:111652:0:0:0:0:0:0:0:100:0:0:0|h[Small Blind Lake Sturgeon]|h|r", -- [32]
-		"|cff1eff00|Hitem:113264:0:0:0:0:0:0:0:100:0:0:0|h[Sorcerous Air]|h|r", -- [33]
-		"|cffa335ee|Hitem:114849:0:0:0:0:0:0:0:100:0:0:0|h[Manual Of Spell Reflection]|h|r", -- [34]
-		"|cffffffff|Hitem:97979:0:0:0:0:0:0:0:100:0:0:0|h[The Bear and the Lady Fair]|h|r", -- [35]
-		"|cff0070dd|Hitem:114965:0:0:0:0:0:0:0:100:0:0:0|h[Fractured Forge Hammer]|h|r", -- [36]
-		"|cffffffff|Hitem:116759:0:0:0:0:0:0:0:100:0:11:0|h[Blixthraz's Frightening Grudgesolver]|h|r", -- [37]
-		"|cffffffff|Hitem:113272:0:0:0:0:0:0:0:100:0:0:0|h[Mysterious Artifact]|h|r", -- [38]
-		"|cffffffff|Hitem:112199:0:0:0:0:0:0:0:100:0:0:0|h[Ravenspeaker Scroll Fragment]|h|r", -- [39]
-		"|cffffffff|Hitem:110470:0:0:0:0:0:0:0:100:0:0:0|h[Mysterious Hat]|h|r", -- [40]
-		"|cffffffff|Hitem:110560:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Hearthstone]|h|r", -- [41]
-		"|cff0070dd|Hitem:119001:0:0:0:0:0:0:0:100:0:11:0|h[Mystery Keg]|h|r", -- [42]
-		"|cff0070dd|Hitem:88566:0:0:0:0:0:0:1294903296:100:0:0:0|h[Krastinov's Bag of Horrors]|h|r", -- [43]
-		"|cff1eff00|Hitem:108735:0:0:0:0:0:0:0:100:0:0:0|h[Arena Master's War Horn]|h|r", -- [44]
-		"|cffffffff|Hitem:113991:0:0:0:0:0:0:0:100:0:11:0|h[Iron Trap]|h|r", -- [45]
-		"|cff1eff00|Hitem:120301:0:0:0:0:0:0:0:100:0:1:0|h[Armor Enhancement Token]|h|r", -- [46]
-		"|cff0070dd|Hitem:109878:0:0:0:0:0:0:0:100:0:2:1:524|h[Goldsteel Bindings]|h|r", -- [47]
-		"|cff0070dd|Hitem:109987:0:0:0:0:0:0:0:100:0:2:2:523:524|h[Goldsteel Greathelm]|h|r", -- [48]
-		"|cffffffff|Hitem:5512:0:0:0:0:0:0:0:100:0:2:0|h[Healthstone]|h|r", -- [49]
-		"|cff0070dd|Hitem:110053:0:0:0:0:0:0:0:100:0:2:1:524|h[Arrowbreaker Greatshield]|h|r", -- [50]
-		"|cffa335ee|Hitem:119010:0:0:0:0:0:0:0:100:0:11:1:150|h[Doomchain Collar of the Aurora]|h|r", -- [51]
-		"|cff0070dd|Hitem:109946:0:0:0:0:0:0:0:100:0:2:1:524|h[Gutcrusher Shoulderplates]|h|r", -- [52]
-		"|cff0070dd|Hitem:109966:0:0:0:0:0:0:0:100:0:2:2:499:524|h[Reinforced Bloodsteel Gorget]|h|r", -- [53]
+		"|cff1eff00|Hitem:114128:0:0:0:0:0:0:0:100:0:0:0|h[Balanced Weapon Enhancement]|h|r", -- [7]
+		"|cff1eff00|Hitem:114128:0:0:0:0:0:0:0:100:0:0:0|h[Balanced Weapon Enhancement]|h|r", -- [8]
+		"|cff0070dd|Hitem:117013:0:0:0:0:0:0:0:100:0:0:0|h[Wand of Lightning Shield]|h|r", -- [9]
+		"|cff1eff00|Hitem:116999:0:0:0:0:0:0:0:100:0:0:0|h[Scroll of Replenishment]|h|r", -- [10]
+		"|cff1eff00|Hitem:116413:0:0:0:0:0:0:0:100:0:0:0|h[Scroll of Town Portal]|h|r", -- [11]
+		"|cff1eff00|Hitem:116411:0:0:0:0:0:0:0:100:0:0:0|h[Scroll of Protection]|h|r", -- [12]
+		"|cff0070dd|Hitem:118475:0:0:0:0:0:0:0:100:0:1:0|h[Hearthstone Strategy Guide]|h|r", -- [13]
+		"|cffffffff|Hitem:109223:0:0:0:0:0:0:0:100:0:0:0|h[Healing Tonic]|h|r", -- [14]
+		"|cff0070dd|Hitem:113570:0:0:0:0:0:0:0:100:0:0:0|h[Ancient's Bloom]|h|r", -- [15]
+		"|cffffffff|Hitem:118706:0:0:0:0:0:0:0:100:0:0:0|h[Cracked Goren Egg]|h|r", -- [16]
+		"|cffffffff|Hitem:118414:0:0:0:0:0:0:0:100:0:0:0|h[Awesomefish]|h|r", -- [17]
+		"|cffffffff|Hitem:111407:0:0:0:0:0:0:0:100:0:0:0|h[Waterlogged Journal]|h|r", -- [18]
+		"|cff0070dd|Hitem:110052:0:0:0:0:0:0:0:100:0:2:2:499:524|h[Scepter of Brutality]|h|r", -- [19]
+		"|cffa335ee|Hitem:44050:0:0:0:0:0:0:0:100:0:0:0|h[Mastercraft Kalu'ak Fishing Pole]|h|r", -- [20]
+		"|cff0070dd|Hitem:109987:0:0:0:0:0:0:0:100:0:2:2:523:524|h[Goldsteel Greathelm]|h|r", -- [21]
+		"|cff0070dd|Hitem:109877:0:0:0:0:0:0:0:100:0:2:1:524|h[Verdant Plate Wristguards]|h|r", -- [22]
+		"|cffa335ee|Hitem:104537:0:4610:4592:4647:0:0:1349315200:100:491:0:0|h[Ashen Wall Girdle]|h|r", -- [23]
+		"|cff0070dd|Hitem:113541:0:0:0:0:0:0:0:100:0:0:0|h[Darktalon's Drape]|h|r", -- [24]
+		"|cff1eff00|Hitem:63353:0:0:0:0:0:0:0:100:0:0:0|h[Shroud of Cooperation]|h|r", -- [25]
+		"|cffffffff|Hitem:112238:0:0:0:0:0:0:0:100:0:2:0|h[]|h|r", -- [26]
+		"|cff0070dd|Hitem:110015:0:0:0:0:0:0:0:100:0:2:2:499:524|h[Toria's Unseeing Eye]|h|r", -- [27]
+		"|cff0070dd|Hitem:110011:0:0:0:0:0:0:0:100:0:2:1:524|h[Fires of the Sun]|h|r", -- [28]
+		"|cff0070dd|Hitem:118690:0:0:0:0:0:0:0:100:0:0:0|h[Empty Crawdad Trap]|h|r", -- [29]
+		"|cffa335ee|Hitem:118229:0:0:0:0:0:0:0:100:0:0:1:545|h[Resonant Hidecrystal of the Gorger]|h|r", -- [30]
+		"|cff0070dd|Hitem:113527:0:0:0:0:0:0:0:100:0:0:0|h[Legacy of Om'ra]|h|r", -- [31]
+		"|cff1eff00|Hitem:109585:0:0:0:0:0:0:0:100:0:0:0|h[Arakkoa Cipher]|h|r", -- [32]
+		"|cffffffff|Hitem:87216:0:0:0:0:0:0:1716311936:100:0:0:0|h[Thermal Anvil]|h|r", -- [33]
+		"|cff0070dd|Hitem:60854:0:0:0:0:0:0:0:100:0:0:0|h[Loot-A-Rang]|h|r", -- [34]
+		"|cff0070dd|Hitem:40768:0:0:0:0:0:0:413039488:100:0:0:0|h[MOLL-E]|h|r", -- [35]
+		"|cffffffff|Hitem:115508:0:0:0:0:0:0:0:100:0:0:0|h[Draenic Stone]|h|r", -- [36]
+		"|cffffffff|Hitem:40772:0:0:0:0:0:0:2086946028:100:0:0:0|h[Gnomish Army Knife]|h|r", -- [37]
+		"|cffffffff|Hitem:111652:0:0:0:0:0:0:0:100:0:0:0|h[Small Blind Lake Sturgeon]|h|r", -- [38]
+		"|cff1eff00|Hitem:113264:0:0:0:0:0:0:0:100:0:0:0|h[Sorcerous Air]|h|r", -- [39]
+		"|cffffffff|Hitem:118313:0:0:0:0:0:0:0:100:0:0:0|h[Recipe Idea: Braised Riverbeast]|h|r", -- [40]
+		"|cffffffff|Hitem:97979:0:0:0:0:0:0:0:100:0:0:0|h[The Bear and the Lady Fair]|h|r", -- [41]
+		"|cff0070dd|Hitem:114965:0:0:0:0:0:0:0:100:0:0:0|h[Fractured Forge Hammer]|h|r", -- [42]
+		"|cffffffff|Hitem:116759:0:0:0:0:0:0:0:100:0:11:0|h[Blixthraz's Frightening Grudgesolver]|h|r", -- [43]
+		"|cffffffff|Hitem:113272:0:0:0:0:0:0:0:100:0:0:0|h[Mysterious Artifact]|h|r", -- [44]
+		"|cffffffff|Hitem:112199:0:0:0:0:0:0:0:100:0:0:0|h[Ravenspeaker Scroll Fragment]|h|r", -- [45]
+		"|cffffffff|Hitem:110470:0:0:0:0:0:0:0:100:0:0:0|h[Mysterious Hat]|h|r", -- [46]
+		"|cff0070dd|Hitem:118110:0:0:0:0:0:0:0:100:0:11:0|h[Disposable Pocket Flying Machine]|h|r", -- [47]
+		"|cffffffff|Hitem:110560:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Hearthstone]|h|r", -- [48]
+		"|cff0070dd|Hitem:119001:0:0:0:0:0:0:0:100:0:11:0|h[Mystery Keg]|h|r", -- [49]
+		"|cffffffff|Hitem:113991:0:0:0:0:0:0:0:100:0:11:0|h[Iron Trap]|h|r", -- [50]
+		"|cffffffff|Hitem:5512:0:0:0:0:0:0:0:100:0:0:0|h[Healthstone]|h|r", -- [51]
+		"|cff0070dd|Hitem:109913:0:0:0:0:0:0:0:100:0:2:2:41:524|h[Headscythe Greatcloak]|h|r", -- [52]
+		"|cff0070dd|Hitem:17010:0:0:0:0:0:0:0:100:0:0:0|h[Fiery Core]|h|r", -- [53]
+		"|cffa335ee|Hitem:118940:0:0:0:0:0:0:0:100:0:0:0|h[Crown of Desolation]|h|r", -- [54]
+		"|cff1eff00|Hitem:24829:0:0:0:0:0:-24:939982864:100:0:0:0|h[Netherstalker Bracer of Intellect]|h|r", -- [55]
+		"|cffa335ee|Hitem:119005:0:0:0:0:0:0:0:100:0:11:1:179|h[Mordant Signet of the Merciless]|h|r", -- [56]
+		"|cff1eff00|Hitem:113261:0:0:0:0:0:0:0:100:0:0:0|h[Sorcerous Fire]|h|r", -- [57]
+		"|cff1eff00|Hitem:114119:0:0:0:0:0:0:0:100:0:0:0|h[Crate of Salvage]|h|r", -- [58]
+		"|cff1eff00|Hitem:114119:0:0:0:0:0:0:0:100:0:0:0|h[Crate of Salvage]|h|r", -- [59]
+		"|cff0070dd|Hitem:118475:0:0:0:0:0:0:0:100:0:1:0|h[Hearthstone Strategy Guide]|h|r", -- [60]
+		"|cff0070dd|Hitem:118427:0:0:0:0:0:0:0:100:0:0:0|h[Autographed Hearthstone Card]|h|r", -- [61]
+		"|cff1eff00|Hitem:114119:0:0:0:0:0:0:0:100:0:0:0|h[Crate of Salvage]|h|r", -- [62]
+		"|cff0070dd|Hitem:118631:0:0:0:0:0:0:0:100:0:0:0|h[Stout Augment Rune]|h|r", -- [63]
+		"|cffffffff|Hitem:118197:0:0:0:0:0:0:0:100:0:2:0|h[Auction Memory Socket]|h|r", -- [64]
 	},
+	["LastCharacterImport"] = "",
 	["VoidItems"] = {
 		"|cffa335ee|Hitem:34011:0:0:0:0:0:0:1582692992:100:0:0:0|h[Illidari Runeshield]|h|r", -- [1]
 		"|cffa335ee|Hitem:50729:0:0:0:0:0:0:1185718912:100:0:0:0|h[Icecrown Glacial Wall]|h|r", -- [2]
@@ -243,7 +255,6 @@ AmrDb = {
 		"|cffa335ee|Hitem:103649:0:0:0:0:0:0:683148160:100:491:0:0|h[Xal'atoh, Desecrated Image of Gorehowl]|h|r", -- [78]
 		"|cffa335ee|Hitem:30874:0:0:0:0:0:0:34031104:100:0:0:0|h[The Unbreakable Will]|h|r", -- [79]
 	},
-	["LastCharacterImport"] = "",
 	["Reps"] = {
 		[1269] = 7,
 		[1337] = 6,
@@ -251,14 +262,14 @@ AmrDb = {
 		[1375] = 4,
 		[1387] = 0,
 		[1376] = 0,
-		[1270] = 7,
-		[1388] = 7,
 		[1435] = 7,
+		[1388] = 7,
+		[1270] = 7,
 	},
 	["Faction"] = "Horde",
 	["Professions"] = {
 	},
-	["Region"] = "US",
+	["RealmName"] = "Arthas",
 	["Class"] = "WARRIOR",
 	["BankItemsAndCounts"] = {
 		[74248] = 2,
@@ -271,15 +282,15 @@ AmrDb = {
 		[74247] = 5,
 		[74249] = 32,
 		[76140] = 2,
-		[89112] = 522,
-		[72988] = 7,
-		[76061] = 18,
 		[54849] = 19,
-		[72095] = 5,
+		[72988] = 7,
+		[89112] = 522,
+		[76061] = 18,
+		[22574] = 1,
 		[76131] = 1,
 		[72104] = 3,
 		[94111] = 16,
-		[22574] = 1,
+		[72095] = 5,
 		[98717] = 15,
 		[77467] = 4,
 	},

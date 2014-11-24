@@ -1,13 +1,14 @@
 
 MADB = {
+	["noMMMW"] = false,
 	["autoShowNext"] = true,
 	["characters"] = {
 		["Arthas Git"] = {
 			["profile"] = "Git - Mar 2014",
 		},
 	},
-	["tooltips"] = 1,
-	["frameListRows"] = 18,
+	["alwaysShowNudger"] = false,
+	["tooltips"] = true,
 	["profiles"] = {
 		["default"] = {
 			["name"] = "default",
@@ -20,4 +21,8 @@ MADB = {
 			},
 		},
 	},
+	["frameListRows"] = 18,
+	["noBags"] = false,
+	["playSound"] = false,
+	["closeGUIOnEscape"] = false,
 }

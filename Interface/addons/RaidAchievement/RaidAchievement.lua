@@ -6,7 +6,7 @@ if GetLocale()=="deDE" or GetLocale()=="ruRU" or GetLocale()=="zhTW" or GetLocal
 end
 
 
-	raversion=6.003
+	raversion=6.004
 	local raverstiptext="alpha"
 	if string.len(raversion)==6 then
 		raverstiptext="beta"
@@ -1142,7 +1142,7 @@ local loaded, reason = LoadAddOn("RaidAchievement_PandaRaids")
 if loaded then
 print("|cff99ffffRaidAchievement|r - "..pseamoduleload.." "..psealeftmenupanda2.."!")
 else
-print("|cff99ffffRaidAchievement|r - "..pseamodulenotload.." "..psealeftmenupanda2.."!")
+print("|cff99ffffRaidAchievement|r - "..pseamodulenotload.." "..psealeftmenupanda2.."! "..raerrormodulereq.." RaidAchievement_Pandaria")
 end
 end
 end
@@ -1241,7 +1241,7 @@ local loaded, reason = LoadAddOn("RaidAchievement_PandaHeroics")
 if loaded then
 print("|cff99ffffRaidAchievement|r - "..pseamoduleload.." "..psealeftmenupanda.."!")
 else
-print("|cff99ffffRaidAchievement|r - "..pseamodulenotload.." "..psealeftmenupanda.."!")
+print("|cff99ffffRaidAchievement|r - "..pseamodulenotload.." "..psealeftmenupanda.."! "..raerrormodulereq.." RaidAchievement_Pandaria")
 end
 end
 end
@@ -1275,7 +1275,7 @@ local loaded, reason = LoadAddOn("RaidAchievement_PandaScenarios")
 if loaded then
 print("|cff99ffffRaidAchievement|r - "..pseamoduleload.." "..psealeftmenupanda3.."!")
 else
-print("|cff99ffffRaidAchievement|r - "..pseamodulenotload.." "..psealeftmenupanda3.."!")
+print("|cff99ffffRaidAchievement|r - "..pseamodulenotload.." "..psealeftmenupanda3.."! "..raerrormodulereq.." RaidAchievement_Pandaria")
 end
 end
 end

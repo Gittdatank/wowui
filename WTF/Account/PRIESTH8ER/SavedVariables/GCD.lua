@@ -12,10 +12,13 @@ GCDDB = {
 				["Gimm - Cho'gall"] = {
 					["version"] = 1,
 				},
+				["Git - Arthas"] = {
+					["version"] = 1,
+				},
 				["Gitt - Arthas"] = {
 					["version"] = 1,
 				},
-				["Git - Arthas"] = {
+				["Got - Arthas"] = {
 					["version"] = 1,
 				},
 				["Giit - Cho'gall"] = {
@@ -24,15 +27,15 @@ GCDDB = {
 				["Evyyn - Azuremyst"] = {
 					["version"] = 1,
 				},
+				["Git - Cho'gall"] = {
+					["version"] = 1,
+					["radius"] = 52,
+				},
 				["Burk - Arthas"] = {
 					["version"] = 1,
 				},
 				["Greny - Azuremyst"] = {
 					["version"] = 1,
-				},
-				["Git - Cho'gall"] = {
-					["version"] = 1,
-					["radius"] = 52,
 				},
 				["Spih - Cho'gall"] = {
 					["version"] = 1,
@@ -40,7 +43,7 @@ GCDDB = {
 				["Lihte - Cho'gall"] = {
 					["version"] = 1,
 				},
-				["Got - Arthas"] = {
+				["Gittdabank - Arthas"] = {
 					["version"] = 1,
 				},
 				["Spih - Arthas"] = {
@@ -59,10 +62,13 @@ GCDDB = {
 				["Gimm - Cho'gall"] = {
 					["version"] = 1,
 				},
+				["Git - Arthas"] = {
+					["version"] = 1,
+				},
 				["Gitt - Arthas"] = {
 					["version"] = 1,
 				},
-				["Git - Arthas"] = {
+				["Got - Arthas"] = {
 					["version"] = 1,
 				},
 				["Giit - Cho'gall"] = {
@@ -71,15 +77,15 @@ GCDDB = {
 				["Evyyn - Azuremyst"] = {
 					["version"] = 1,
 				},
+				["Git - Cho'gall"] = {
+					["thickness"] = 15,
+					["radius"] = 10,
+					["version"] = 1,
+				},
 				["Burk - Arthas"] = {
 					["version"] = 1,
 				},
 				["Greny - Azuremyst"] = {
-					["version"] = 1,
-				},
-				["Git - Cho'gall"] = {
-					["thickness"] = 15,
-					["radius"] = 10,
 					["version"] = 1,
 				},
 				["Spih - Cho'gall"] = {
@@ -88,7 +94,7 @@ GCDDB = {
 				["Lihte - Cho'gall"] = {
 					["version"] = 1,
 				},
-				["Got - Arthas"] = {
+				["Gittdabank - Arthas"] = {
 					["version"] = 1,
 				},
 				["Spih - Arthas"] = {
@@ -107,22 +113,19 @@ GCDDB = {
 				["Gimm - Cho'gall"] = {
 					["version"] = 1,
 				},
+				["Git - Arthas"] = {
+					["version"] = 1,
+				},
 				["Gitt - Arthas"] = {
 					["version"] = 1,
 				},
-				["Git - Arthas"] = {
+				["Got - Arthas"] = {
 					["version"] = 1,
 				},
 				["Giit - Cho'gall"] = {
 					["version"] = 1,
 				},
 				["Evyyn - Azuremyst"] = {
-					["version"] = 1,
-				},
-				["Burk - Arthas"] = {
-					["version"] = 1,
-				},
-				["Greny - Azuremyst"] = {
 					["version"] = 1,
 				},
 				["Git - Cho'gall"] = {
@@ -142,13 +145,19 @@ GCDDB = {
 						["b"] = 0,
 					},
 				},
+				["Burk - Arthas"] = {
+					["version"] = 1,
+				},
+				["Greny - Azuremyst"] = {
+					["version"] = 1,
+				},
 				["Spih - Cho'gall"] = {
 					["version"] = 1,
 				},
 				["Lihte - Cho'gall"] = {
 					["version"] = 1,
 				},
-				["Got - Arthas"] = {
+				["Gittdabank - Arthas"] = {
 					["version"] = 1,
 				},
 				["Spih - Arthas"] = {
@@ -194,10 +203,13 @@ GCDDB = {
 				["Gimm - Cho'gall"] = {
 					["version"] = 1,
 				},
+				["Git - Arthas"] = {
+					["version"] = 1,
+				},
 				["Gitt - Arthas"] = {
 					["version"] = 1,
 				},
-				["Git - Arthas"] = {
+				["Got - Arthas"] = {
 					["version"] = 1,
 				},
 				["Giit - Cho'gall"] = {
@@ -206,13 +218,13 @@ GCDDB = {
 				["Evyyn - Azuremyst"] = {
 					["version"] = 1,
 				},
+				["Git - Cho'gall"] = {
+					["version"] = 1,
+				},
 				["Burk - Arthas"] = {
 					["version"] = 1,
 				},
 				["Greny - Azuremyst"] = {
-					["version"] = 1,
-				},
-				["Git - Cho'gall"] = {
 					["version"] = 1,
 				},
 				["Spih - Cho'gall"] = {
@@ -221,7 +233,7 @@ GCDDB = {
 				["Lihte - Cho'gall"] = {
 					["version"] = 1,
 				},
-				["Got - Arthas"] = {
+				["Gittdabank - Arthas"] = {
 					["version"] = 1,
 				},
 				["Spih - Arthas"] = {
@@ -240,10 +252,13 @@ GCDDB = {
 				["Gimm - Cho'gall"] = {
 					["version"] = 1,
 				},
+				["Git - Arthas"] = {
+					["version"] = 1,
+				},
 				["Gitt - Arthas"] = {
 					["version"] = 1,
 				},
-				["Git - Arthas"] = {
+				["Got - Arthas"] = {
 					["version"] = 1,
 				},
 				["Giit - Cho'gall"] = {
@@ -252,13 +267,13 @@ GCDDB = {
 				["Evyyn - Azuremyst"] = {
 					["version"] = 1,
 				},
+				["Git - Cho'gall"] = {
+					["version"] = 1,
+				},
 				["Burk - Arthas"] = {
 					["version"] = 1,
 				},
 				["Greny - Azuremyst"] = {
-					["version"] = 1,
-				},
-				["Git - Cho'gall"] = {
 					["version"] = 1,
 				},
 				["Spih - Cho'gall"] = {
@@ -267,7 +282,7 @@ GCDDB = {
 				["Lihte - Cho'gall"] = {
 					["version"] = 1,
 				},
-				["Got - Arthas"] = {
+				["Gittdabank - Arthas"] = {
 					["version"] = 1,
 				},
 				["Spih - Arthas"] = {
@@ -280,16 +295,17 @@ GCDDB = {
 		["Dbyx - Arthas"] = "Dbyx - Arthas",
 		["Gitt - Cho'gall"] = "Gitt - Cho'gall",
 		["Gimm - Cho'gall"] = "Gimm - Cho'gall",
-		["Gitt - Arthas"] = "Gitt - Arthas",
 		["Git - Arthas"] = "Git - Arthas",
+		["Gitt - Arthas"] = "Gitt - Arthas",
+		["Got - Arthas"] = "Got - Arthas",
 		["Giit - Cho'gall"] = "Giit - Cho'gall",
 		["Evyyn - Azuremyst"] = "Evyyn - Azuremyst",
+		["Git - Cho'gall"] = "Git - Cho'gall",
 		["Burk - Arthas"] = "Burk - Arthas",
 		["Greny - Azuremyst"] = "Greny - Azuremyst",
-		["Git - Cho'gall"] = "Git - Cho'gall",
 		["Spih - Cho'gall"] = "Spih - Cho'gall",
 		["Lihte - Cho'gall"] = "Lihte - Cho'gall",
-		["Got - Arthas"] = "Got - Arthas",
+		["Gittdabank - Arthas"] = "Gittdabank - Arthas",
 		["Spih - Arthas"] = "Spih - Arthas",
 	},
 	["profiles"] = {
@@ -300,6 +316,9 @@ GCDDB = {
 			["version"] = 1,
 		},
 		["Gimm - Cho'gall"] = {
+			["version"] = 1,
+		},
+		["Git - Arthas"] = {
 			["version"] = 1,
 		},
 		["Gitt - Arthas"] = {
@@ -315,19 +334,13 @@ GCDDB = {
 				["x"] = 724.9599609375,
 			},
 		},
-		["Git - Arthas"] = {
+		["Got - Arthas"] = {
 			["version"] = 1,
 		},
 		["Giit - Cho'gall"] = {
 			["version"] = 1,
 		},
 		["Evyyn - Azuremyst"] = {
-			["version"] = 1,
-		},
-		["Burk - Arthas"] = {
-			["version"] = 1,
-		},
-		["Greny - Azuremyst"] = {
 			["version"] = 1,
 		},
 		["Git - Cho'gall"] = {
@@ -344,13 +357,19 @@ GCDDB = {
 				["x"] = 694.240051269531,
 			},
 		},
+		["Burk - Arthas"] = {
+			["version"] = 1,
+		},
+		["Greny - Azuremyst"] = {
+			["version"] = 1,
+		},
 		["Spih - Cho'gall"] = {
 			["version"] = 1,
 		},
 		["Lihte - Cho'gall"] = {
 			["version"] = 1,
 		},
-		["Got - Arthas"] = {
+		["Gittdabank - Arthas"] = {
 			["version"] = 1,
 		},
 		["Spih - Arthas"] = {

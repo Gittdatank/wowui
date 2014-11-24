@@ -1,8 +1,8 @@
 Version: 1
-Frame: GridLayoutFrame
+Frame: LibDebug-1.0_Frame
 FrameLevel: 1
-Anchor: BOTTOM
-X: -129
-Y: 250
-W: 2
-H: 2
+Anchor: CENTER
+X: -115
+Y: 100
+W: 400
+H: 400

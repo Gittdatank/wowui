@@ -1,8 +1,0 @@
-## Interface: 50400
-## Title: The Undermine Journal GE
-## Notes: Mon, July 14
-## Version: 2.3.20140714
-## OptionalDeps: TheUndermineJournal
-TheUndermineJournalGE.lua
-SpellToItem.lua
-GEMarketData.lua

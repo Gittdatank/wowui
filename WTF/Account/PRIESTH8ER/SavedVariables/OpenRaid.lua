@@ -3,13 +3,13 @@ OR_db = {
 	["Notes"] = {
 	},
 	["Options"] = {
-		["Tutorial"] = false,
-		["Automatically send requests"] = true,
 		["Auto enable sent"] = false,
+		["Automatically send requests"] = true,
+		["Tutorial"] = false,
 		["DontCheckForChar"] = false,
 		["Clean up time"] = 7,
 		["Whisperword"] = false,
-		["Auto enable accept"] = true,
+		["Specialnote"] = true,
 		["Personal send message"] = "Adding you as friend for OpenRaid event %d named %s",
 		["Defaultpage"] = "Index",
 		["Filter have invited"] = true,
@@ -19,7 +19,7 @@ OR_db = {
 		},
 		["Clear raids after X days"] = false,
 		["Filter joined your group"] = false,
-		["Specialnote"] = true,
+		["Auto enable accept"] = true,
 	},
 	["Raids"] = {
 		["Git-Arthas"] = {
@@ -41,6 +41,8 @@ OR_db = {
 		},
 		["Dbyx-Arthas"] = {
 		},
+		["Evyyn-Azuremyst"] = {
+		},
 		["Gitt-Arthas"] = {
 			["210731"] = {
 				"Lusting's 25 H SoO  - 6/14H", -- [1]
@@ -51,8 +53,6 @@ OR_db = {
 				"30", -- [6]
 				"marcusdapimp#1309-Marcuspimp-Cho'gall,TConroy#1952-Klendariah-Hyjal,Primal#1419-Primalfearz-Arthas,Nytsong#1625-Nytbolt-Arthas,Elzie#1506-Caylie-Thaurissan,rahdaDM6t9#1290-Askiastout-Aggramar,gramz#1716-Gramz-Hyjal,phunk#1103-Hopslam-Mug'thol,Joeyf#1783-Mystranama-Blackhand,alex#14118-Chalkie-Maelstrom,DATA#1246-Drukor-Arthas,Wowaddicted#1898-Pandemonia-Steamwheedle Cartel,-Dustya-Arthas,Shiel#1167-Tomsawyer-Arthas,Magic#1967-Badboymagic-Turalyon,irdaq23#1246-Irdaq-Barthilas,wibber#1862-Notdotsfired-Arthas,ktok#1256-Ktok-Tichondrius,anthony#1574-Varelice-Ravencrest,-Hotsfired-Arthas,-Clancey-Arthas,Rastafaree#1362-Hashkilledme-Arthas,-Waze-Arthas", -- [7]
 			},
-		},
-		["Evyyn-Azuremyst"] = {
 		},
 		["Greny-Azuremyst"] = {
 		},

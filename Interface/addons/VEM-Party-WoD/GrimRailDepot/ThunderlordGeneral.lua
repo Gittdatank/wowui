@@ -1,6 +1,6 @@
 local mod	= VEM:NewMod(1133, "VEM-Party-WoD", 3, 536)
 local L		= mod:GetLocalizedStrings()
-local sndWOP	= mod:NewSound(nil, "SoundWOP", true)
+local sndWOP	= mod:SoundMM("SoundWOP")
 
 mod:SetRevision(("$Revision: 11582 $"):sub(12, -3))
 mod:SetCreatureID(80005)
@@ -92,12 +92,9 @@ function mod:SPELL_CAST_START(args)
 	if spellId == 162066 then
 		self:BossTargetScanner(80005, "FreezingSnareTarget", 0.04, 15)
 		timerFreezingSnareCD:Start()
-		if mod:IsHealer() then
-			sndWOP:Play("Interface\\AddOns\\"..VEM.Options.CountdownVoice.."\\dispelnow.ogg")
-		end
 	elseif spellId == 162058 then
 		warnSpinningSpear:Show()
 		timerSpinningSpearCD:Start()
-		sndWOP:Play("Interface\\AddOns\\"..VEM.Options.CountdownVoice.."\\runaway.ogg")
+		sndWOP:Play("runaway")
 	end
 end

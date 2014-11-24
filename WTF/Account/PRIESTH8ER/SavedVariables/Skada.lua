@@ -101,49 +101,14 @@ SkadaDB = {
 			},
 		},
 		["Git - Mar 2014"] = {
-			["report"] = {
-				["number"] = 7,
-				["channel"] = "officer",
-				["target"] = "Aprilseventh",
-				["mode"] = "Healing",
-				["set"] = 6,
-			},
-			["tooltiprows"] = 10,
 			["windows"] = {
 				{
 					["barheight"] = 11,
-					["bartexture"] = "Minimalist",
-					["barwidth"] = 267.657745361328,
-					["barfontsize"] = 7,
-					["y"] = 0,
-					["barfont"] = "DorisPP",
 					["barslocked"] = true,
-					["x"] = 402.417297363281,
-					["point"] = "BOTTOM",
 					["background"] = {
 						["height"] = 258.045837402344,
 					},
-					["mode"] = "DPS",
-					["title"] = {
-						["height"] = 14,
-						["font"] = "DorisPP",
-						["fontsize"] = 9,
-						["texture"] = "Flat",
-					},
-				}, -- [1]
-			},
-			["icon"] = {
-				["hide"] = true,
-			},
-			["reset"] = {
-				["join"] = 2,
-			},
-		},
-		["Default"] = {
-			["windows"] = {
-				{
-					["barheight"] = 11,
-					["y"] = 36.0227661132813,
+					["y"] = 0,
 					["barfont"] = "DorisPP",
 					["title"] = {
 						["font"] = "DorisPP",
@@ -152,14 +117,55 @@ SkadaDB = {
 						["texture"] = "Flat",
 					},
 					["mode"] = "Damage",
-					["barwidth"] = 197.90754699707,
-					["point"] = "LEFT",
+					["barwidth"] = 267.657745361328,
+					["point"] = "BOTTOM",
 					["barfontsize"] = 7,
+					["bartexture"] = "Minimalist",
+					["x"] = 402.417297363281,
+				}, -- [1]
+			},
+			["icon"] = {
+				["hide"] = true,
+			},
+			["report"] = {
+				["number"] = 7,
+				["channel"] = "officer",
+				["target"] = "Aprilseventh",
+				["mode"] = "Healing",
+				["set"] = 6,
+			},
+			["tooltiprows"] = 10,
+			["reset"] = {
+				["join"] = 2,
+			},
+		},
+		["Default"] = {
+			["report"] = {
+				["number"] = 3,
+				["target"] = "Aprilseventh",
+				["channel"] = "guild",
+			},
+			["tooltiprows"] = 10,
+			["windows"] = {
+				{
+					["barheight"] = 11,
+					["bartexture"] = "Minimalist",
+					["barwidth"] = 197.90754699707,
+					["barfontsize"] = 7,
+					["y"] = 36.0227661132813,
+					["barfont"] = "DorisPP",
+					["title"] = {
+						["height"] = 14,
+						["font"] = "DorisPP",
+						["fontsize"] = 9,
+						["texture"] = "Flat",
+					},
+					["x"] = 4.58843469619751,
+					["mode"] = "Damage",
 					["background"] = {
 						["height"] = 111.045631408691,
 					},
-					["bartexture"] = "Minimalist",
-					["x"] = 4.58843469619751,
+					["point"] = "LEFT",
 				}, -- [1]
 				{
 					["titleset"] = true,
@@ -244,12 +250,6 @@ SkadaDB = {
 			["icon"] = {
 				["hide"] = true,
 			},
-			["report"] = {
-				["number"] = 3,
-				["channel"] = "guild",
-				["target"] = "Aprilseventh",
-			},
-			["tooltiprows"] = 10,
 			["reset"] = {
 				["join"] = 2,
 			},

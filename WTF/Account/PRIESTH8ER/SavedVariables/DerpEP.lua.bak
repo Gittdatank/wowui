@@ -1,0 +1,5 @@
+
+DerpDB = {
+	["name"] = "taco",
+	["counter"] = 1,
+}

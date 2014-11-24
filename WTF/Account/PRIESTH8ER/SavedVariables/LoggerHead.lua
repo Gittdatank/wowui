@@ -16,12 +16,12 @@ LoggerHeadDB = {
 		["Gitt - Arthas"] = "Default",
 		["Spih - Arthas"] = "Default",
 		["Giit - Cho'gall"] = "Default",
-		["Burk - Arthas"] = "Default",
-		["Giitt - Feathermoon"] = "Default",
-		["Greny - Azuremyst"] = "Default",
-		["Spih - Cho'gall"] = "Default",
-		["Git - Azuremyst"] = "Default",
 		["Git - Cho'gall"] = "Default",
+		["Giitt - Feathermoon"] = "Default",
+		["Git - Azuremyst"] = "Default",
+		["Spih - Cho'gall"] = "Default",
+		["Greny - Azuremyst"] = "Default",
+		["Burk - Arthas"] = "Default",
 		["Git - Arthas"] = "Default",
 	},
 	["profiles"] = {
@@ -101,9 +101,11 @@ LoggerHeadDB = {
 					["Upper Blackrock Spire"] = {
 						false, -- [1]
 						true, -- [2]
+						[8] = true,
 					},
 					["Iron Docks"] = {
 						[2] = true,
+						[8] = true,
 					},
 					["Halls of Origination"] = {
 						false, -- [1]
