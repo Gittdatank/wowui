@@ -369,7 +369,7 @@ Bagnon_Facade: disabled
 Bagnon_AccountSearch: disabled
 BigWigs_WrathOfTheLichKing: disabled
 Broker_StatsNow_Secondary: disabled
-FriendGroups: disabled
+FriendGroups: enabled
 Paste: disabled
 TradeForwarder: disabled
 Tukui_Config: disabled

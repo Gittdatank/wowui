@@ -3,7 +3,6 @@
 -- Module Declaration
 --
 
-if not BigWigs.isWOD then return end -- XXX compat
 local mod, CL = BigWigs:NewBoss("Beastlord Darmac", 988, 1122)
 if not mod then return end
 mod:RegisterEnableMob(76865)
@@ -53,7 +52,7 @@ function mod:GetOptions()
 		[155061] = -9301, -- Cruelfang
 		[155030] = -9302, -- Dreadwing
 		[155236] = -9303, -- Ironcrusher
-		[155284] = ("%s (%s)"):format(EJ_GetSectionInfo(9304), CL.mythic), -- Faultline (Mythic)
+		[155284] = ("%s (%s)"):format(self:SpellName(-9304), CL.mythic), -- Faultline (Mythic)
 		["stages"] = "general",
 	}
 end

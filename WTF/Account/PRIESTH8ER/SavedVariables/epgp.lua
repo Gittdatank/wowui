@@ -12,6 +12,12 @@ EPGP_DB = {
 		},
 		["warnings"] = {
 		},
+		["whisper"] = {
+		},
+		["gptooltip"] = {
+		},
+		["announce"] = {
+		},
 		["log"] = {
 			["profiles"] = {
 				["Rusting On Trash"] = {
@@ -40,7 +46,7 @@ EPGP_DB = {
 				["Lusting on Trash"] = {
 					["snapshot"] = {
 						["guild_info"] = "@DECAY_P:10\n@EXTRAS_P:100\n@MIN_EP:100\n@BASE_GP:2000",
-						["time"] = 1416844500,
+						["time"] = 1416893820,
 						["roster_info"] = {
 							{
 								"Totemebanana", -- [1]
@@ -133,8 +139,8 @@ EPGP_DB = {
 								"Lilprincess", -- [3]
 							}, -- [18]
 							{
-								"Sneeksies", -- [1]
-								"ROGUE", -- [2]
+								"Saintdiablo", -- [1]
+								"PRIEST", -- [2]
 								"50,0", -- [3]
 							}, -- [19]
 							{
@@ -153,8 +159,8 @@ EPGP_DB = {
 								"266,0", -- [3]
 							}, -- [22]
 							{
-								"Djfallyfal", -- [1]
-								"SHAMAN", -- [2]
+								"Siege", -- [1]
+								"WARLOCK", -- [2]
 								"50,0", -- [3]
 							}, -- [23]
 							{
@@ -348,9 +354,9 @@ EPGP_DB = {
 								"50,0", -- [3]
 							}, -- [61]
 							{
-								"Frendship", -- [1]
+								"Bloodballs", -- [1]
 								"MONK", -- [2]
-								"50,0", -- [3]
+								"500,2555", -- [3]
 							}, -- [62]
 							{
 								"Clanceylight", -- [1]
@@ -438,8 +444,8 @@ EPGP_DB = {
 								"Shinerr", -- [3]
 							}, -- [79]
 							{
-								"Deliahlight", -- [1]
-								"PALADIN", -- [2]
+								"Galey", -- [1]
+								"ROGUE", -- [2]
 								"50,0", -- [3]
 							}, -- [80]
 							{
@@ -545,7 +551,7 @@ EPGP_DB = {
 							{
 								"Primalfears", -- [1]
 								"DRUID", -- [2]
-								"500,0", -- [3]
+								"730,0", -- [3]
 							}, -- [101]
 							{
 								"Bludspoyl", -- [1]
@@ -773,8 +779,8 @@ EPGP_DB = {
 								"50,0", -- [3]
 							}, -- [146]
 							{
-								"Wayze", -- [1]
-								"ROGUE", -- [2]
+								"Grumpyballz", -- [1]
+								"SHAMAN", -- [2]
 								"50,0", -- [3]
 							}, -- [147]
 							{
@@ -793,8 +799,8 @@ EPGP_DB = {
 								"50,0", -- [3]
 							}, -- [150]
 							{
-								"Currant", -- [1]
-								"ROGUE", -- [2]
+								"Fullofbeef", -- [1]
+								"SHAMAN", -- [2]
 								"50,0", -- [3]
 							}, -- [151]
 							{
@@ -848,14 +854,14 @@ EPGP_DB = {
 								"Dotsfired", -- [3]
 							}, -- [161]
 							{
-								"Bufalosoljer", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"50,0", -- [3]
-							}, -- [162]
-							{
 								"Dotsfired", -- [1]
 								"WARLOCK", -- [2]
 								"740,0", -- [3]
+							}, -- [162]
+							{
+								"Bufalosoljer", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"50,0", -- [3]
 							}, -- [163]
 							{
 								"Tydison", -- [1]
@@ -863,128 +869,128 @@ EPGP_DB = {
 								"Tydesin", -- [3]
 							}, -- [164]
 							{
+								"Pandaìd", -- [1]
+								"MONK", -- [2]
+								"Shinerr", -- [3]
+							}, -- [165]
+							{
 								"Miseryfears", -- [1]
 								"WARLOCK", -- [2]
 								"50,0", -- [3]
-							}, -- [165]
+							}, -- [166]
 							{
 								"Primaltaichi", -- [1]
 								"MONK", -- [2]
 								"Primalfears", -- [3]
-							}, -- [166]
+							}, -- [167]
 							{
 								"Gosublacbear", -- [1]
 								"PALADIN", -- [2]
 								"Cùddlywùddly", -- [3]
-							}, -- [167]
+							}, -- [168]
 							{
 								"Primalsmite", -- [1]
 								"PRIEST", -- [2]
 								"Primalfears", -- [3]
-							}, -- [168]
+							}, -- [169]
 							{
 								"Digit", -- [1]
 								"WARLOCK", -- [2]
 								"50,0", -- [3]
-							}, -- [169]
-							{
-								"Tàb", -- [1]
-								"WARRIOR", -- [2]
-								"Soméone", -- [3]
 							}, -- [170]
-							{
-								"Wafflesrbetr", -- [1]
-								"WARRIOR", -- [2]
-								"50,0", -- [3]
-							}, -- [171]
-							{
-								"Surpderprise", -- [1]
-								"PALADIN", -- [2]
-								"50,0", -- [3]
-							}, -- [172]
-							{
-								"Shocksfired", -- [1]
-								"SHAMAN", -- [2]
-								"50,0", -- [3]
-							}, -- [173]
-							{
-								"Cailleách", -- [1]
-								"WARLOCK", -- [2]
-								"50,0", -- [3]
-							}, -- [174]
-							{
-								"Xareil", -- [1]
-								"SHAMAN", -- [2]
-								"50,0", -- [3]
-							}, -- [175]
-							{
-								"Pandaìd", -- [1]
-								"MONK", -- [2]
-								"Shinerr", -- [3]
-							}, -- [176]
-							{
-								"Divacup", -- [1]
-								"PRIEST", -- [2]
-								"50,0", -- [3]
-							}, -- [177]
-							{
-								"Wasy", -- [1]
-								"PALADIN", -- [2]
-								"wasse", -- [3]
-							}, -- [178]
-							{
-								"Capobeara", -- [1]
-								"MONK", -- [2]
-								"Rastafaree", -- [3]
-							}, -- [179]
-							{
-								"Lovtoospooge", -- [1]
-								"HUNTER", -- [2]
-								"50,0", -- [3]
-							}, -- [180]
 							{
 								"Incisioned", -- [1]
 								"WARRIOR", -- [2]
 								"Dotsfired", -- [3]
-							}, -- [181]
+							}, -- [171]
 							{
-								"Got", -- [1]
-								"DRUID", -- [2]
-								"Git", -- [3]
-							}, -- [182]
-							{
-								"Bigestbanana", -- [1]
-								"MAGE", -- [2]
-								"50,0", -- [3]
-							}, -- [183]
-							{
-								"Fallenfears", -- [1]
+								"Wafflesrbetr", -- [1]
 								"WARRIOR", -- [2]
 								"50,0", -- [3]
-							}, -- [184]
+							}, -- [172]
+							{
+								"Surpderprise", -- [1]
+								"PALADIN", -- [2]
+								"50,0", -- [3]
+							}, -- [173]
 							{
 								"Evldotsfired", -- [1]
 								"DEATHKNIGHT", -- [2]
 								"Dotsfired", -- [3]
-							}, -- [185]
+							}, -- [174]
 							{
-								"Khnight", -- [1]
-								"DEATHKNIGHT", -- [2]
+								"Tàb", -- [1]
+								"WARRIOR", -- [2]
+								"Soméone", -- [3]
+							}, -- [175]
+							{
+								"Xareil", -- [1]
+								"SHAMAN", -- [2]
 								"50,0", -- [3]
-							}, -- [186]
+							}, -- [176]
+							{
+								"Shocksfired", -- [1]
+								"SHAMAN", -- [2]
+								"50,0", -- [3]
+							}, -- [177]
+							{
+								"Divacup", -- [1]
+								"PRIEST", -- [2]
+								"50,0", -- [3]
+							}, -- [178]
+							{
+								"Wasy", -- [1]
+								"PALADIN", -- [2]
+								"wasse", -- [3]
+							}, -- [179]
+							{
+								"Cailleách", -- [1]
+								"WARLOCK", -- [2]
+								"50,0", -- [3]
+							}, -- [180]
+							{
+								"Lovtoospooge", -- [1]
+								"HUNTER", -- [2]
+								"50,0", -- [3]
+							}, -- [181]
+							{
+								"Nð", -- [1]
+								"WARLOCK", -- [2]
+								"50,0", -- [3]
+							}, -- [182]
+							{
+								"Got", -- [1]
+								"DRUID", -- [2]
+								"Git", -- [3]
+							}, -- [183]
+							{
+								"Bigestbanana", -- [1]
+								"MAGE", -- [2]
+								"50,0", -- [3]
+							}, -- [184]
+							{
+								"Fallenfears", -- [1]
+								"WARRIOR", -- [2]
+								"50,0", -- [3]
+							}, -- [185]
 							{
 								"Bleww", -- [1]
 								"HUNTER", -- [2]
 								"Shinerr", -- [3]
-							}, -- [187]
+							}, -- [186]
 							{
-								"Arrowenima", -- [1]
-								"HUNTER", -- [2]
+								"Khnight", -- [1]
+								"DEATHKNIGHT", -- [2]
 								"50,0", -- [3]
-							}, -- [188]
+							}, -- [187]
 							{
 								"Billfnmurray", -- [1]
 								"PRIEST", -- [2]
+								"50,0", -- [3]
+							}, -- [188]
+							{
+								"Arrowenima", -- [1]
+								"HUNTER", -- [2]
 								"50,0", -- [3]
 							}, -- [189]
 							{
@@ -998,18 +1004,18 @@ EPGP_DB = {
 								"Shinerr", -- [3]
 							}, -- [191]
 							{
+								"Capobeara", -- [1]
+								"MONK", -- [2]
+								"Rastafaree", -- [3]
+							}, -- [192]
+							{
 								"Fistsfired", -- [1]
 								"MONK", -- [2]
 								"50,0", -- [3]
-							}, -- [192]
+							}, -- [193]
 							{
 								"Nina", -- [1]
 								"PRIEST", -- [2]
-								"50,0", -- [3]
-							}, -- [193]
-							{
-								"Nytkite", -- [1]
-								"HUNTER", -- [2]
 								"50,0", -- [3]
 							}, -- [194]
 							{
@@ -1018,19 +1024,19 @@ EPGP_DB = {
 								"740,0", -- [3]
 							}, -- [195]
 							{
+								"Wazze", -- [1]
+								"PRIEST", -- [2]
+								"370,0", -- [3]
+							}, -- [196]
+							{
 								"Bloodbubbles", -- [1]
 								"PRIEST", -- [2]
 								"50,0", -- [3]
-							}, -- [196]
+							}, -- [197]
 							{
 								"Mojoform", -- [1]
 								"DRUID", -- [2]
 								"50,0", -- [3]
-							}, -- [197]
-							{
-								"Wazze", -- [1]
-								"PRIEST", -- [2]
-								"140,0", -- [3]
 							}, -- [198]
 							{
 								"Vamprixlz", -- [1]
@@ -1038,18 +1044,18 @@ EPGP_DB = {
 								"730,0", -- [3]
 							}, -- [199]
 							{
-								"Progeria", -- [1]
-								"WARRIOR", -- [2]
-								"50,0", -- [3]
-							}, -- [200]
-							{
 								"Realistic", -- [1]
 								"DRUID", -- [2]
 								"586,0", -- [3]
+							}, -- [200]
+							{
+								"Progeria", -- [1]
+								"WARRIOR", -- [2]
+								"50,0", -- [3]
 							}, -- [201]
 							{
-								"Plainshifter", -- [1]
-								"WARLOCK", -- [2]
+								"Stonesreach", -- [1]
+								"PALADIN", -- [2]
 								"50,0", -- [3]
 							}, -- [202]
 							{
@@ -1068,24 +1074,24 @@ EPGP_DB = {
 								"730,0", -- [3]
 							}, -- [205]
 							{
+								"Dreltrak", -- [1]
+								"PRIEST", -- [2]
+								"740,0", -- [3]
+							}, -- [206]
+							{
 								"Jesseßrew", -- [1]
 								"MONK", -- [2]
 								"50,0", -- [3]
-							}, -- [206]
-							{
-								"Dreltrak", -- [1]
-								"PRIEST", -- [2]
-								"510,0", -- [3]
 							}, -- [207]
-							{
-								"Saitama", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"50,0", -- [3]
-							}, -- [208]
 							{
 								"Clancey", -- [1]
 								"WARRIOR", -- [2]
 								"266,0", -- [3]
+							}, -- [208]
+							{
+								"Saitama", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"50,0", -- [3]
 							}, -- [209]
 							{
 								"Chugnoris", -- [1]
@@ -1093,23 +1099,23 @@ EPGP_DB = {
 								"439,0", -- [3]
 							}, -- [210]
 							{
-								"Cattitudy", -- [1]
-								"MONK", -- [2]
+								"Daidric", -- [1]
+								"DRUID", -- [2]
 								"50,0", -- [3]
 							}, -- [211]
 							{
-								"Papamistspin", -- [1]
+								"Cattitudy", -- [1]
 								"MONK", -- [2]
 								"50,0", -- [3]
 							}, -- [212]
 							{
-								"Splice", -- [1]
-								"WARRIOR", -- [2]
+								"Papamistspin", -- [1]
+								"MONK", -- [2]
 								"50,0", -- [3]
 							}, -- [213]
 							{
-								"Saintdiablo", -- [1]
-								"PRIEST", -- [2]
+								"Solayre", -- [1]
+								"PALADIN", -- [2]
 								"50,0", -- [3]
 							}, -- [214]
 							{
@@ -1118,22 +1124,22 @@ EPGP_DB = {
 								"50,0", -- [3]
 							}, -- [215]
 							{
-								"Meticulus", -- [1]
-								"ROGUE", -- [2]
-								"50,0", -- [3]
-							}, -- [216]
-							{
 								"Boostingbads", -- [1]
 								"DEATHKNIGHT", -- [2]
 								"50,0", -- [3]
+							}, -- [216]
+							{
+								"Camnont", -- [1]
+								"PRIEST", -- [2]
+								"50,0", -- [3]
 							}, -- [217]
 							{
-								"Stârdust", -- [1]
+								"Gyrase", -- [1]
 								"PRIEST", -- [2]
 								"50,0", -- [3]
 							}, -- [218]
 							{
-								"Camnont", -- [1]
+								"Stârdust", -- [1]
 								"PRIEST", -- [2]
 								"50,0", -- [3]
 							}, -- [219]
@@ -1143,33 +1149,33 @@ EPGP_DB = {
 								"50,0", -- [3]
 							}, -- [220]
 							{
-								"Gyrase", -- [1]
-								"PRIEST", -- [2]
+								"Djfallyfal", -- [1]
+								"SHAMAN", -- [2]
 								"50,0", -- [3]
 							}, -- [221]
 							{
-								"Dustya", -- [1]
-								"SHAMAN", -- [2]
+								"Ookini", -- [1]
+								"HUNTER", -- [2]
 								"50,0", -- [3]
 							}, -- [222]
-							{
-								"Höurglass", -- [1]
-								"WARLOCK", -- [2]
-								"50,0", -- [3]
-							}, -- [223]
 							{
 								"Falænx", -- [1]
 								"ROGUE", -- [2]
 								"50,0", -- [3]
+							}, -- [223]
+							{
+								"Höurglass", -- [1]
+								"WARLOCK", -- [2]
+								"50,0", -- [3]
 							}, -- [224]
 							{
-								"Cuminmyass", -- [1]
-								"WARRIOR", -- [2]
+								"Nytkite", -- [1]
+								"HUNTER", -- [2]
 								"50,0", -- [3]
 							}, -- [225]
 							{
-								"Ookini", -- [1]
-								"HUNTER", -- [2]
+								"Cuminmyass", -- [1]
+								"WARRIOR", -- [2]
 								"50,0", -- [3]
 							}, -- [226]
 							{
@@ -1178,29 +1184,29 @@ EPGP_DB = {
 								"50,0", -- [3]
 							}, -- [227]
 							{
-								"Ishjr", -- [1]
-								"WARRIOR", -- [2]
-								"50,0", -- [3]
-							}, -- [228]
-							{
 								"Emmagan", -- [1]
 								"DRUID", -- [2]
 								"50,0", -- [3]
+							}, -- [228]
+							{
+								"Ishjr", -- [1]
+								"WARRIOR", -- [2]
+								"50,0", -- [3]
 							}, -- [229]
 							{
-								"Shv", -- [1]
-								"MAGE", -- [2]
-								"Tydeson", -- [3]
+								"Meticulus", -- [1]
+								"ROGUE", -- [2]
+								"50,0", -- [3]
 							}, -- [230]
+							{
+								"Shv", -- [1]
+								"ROGUE", -- [2]
+								"", -- [3]
+							}, -- [231]
 							{
 								"Notdotsfired", -- [1]
 								"WARLOCK", -- [2]
 								"Dotsfired", -- [3]
-							}, -- [231]
-							{
-								"Nð", -- [1]
-								"WARLOCK", -- [2]
-								"50,0", -- [3]
 							}, -- [232]
 							{
 								"Pox", -- [1]
@@ -1208,309 +1214,309 @@ EPGP_DB = {
 								"50,0", -- [3]
 							}, -- [233]
 							{
-								"Swifterino", -- [1]
-								"WARRIOR", -- [2]
-								"50,0", -- [3]
-							}, -- [234]
-							{
 								"Nytcort", -- [1]
 								"ROGUE", -- [2]
 								"740,0", -- [3]
+							}, -- [234]
+							{
+								"Dustya", -- [1]
+								"SHAMAN", -- [2]
+								"50,0", -- [3]
 							}, -- [235]
-							{
-								"Fuqgirlqt", -- [1]
-								"WARRIOR", -- [2]
-								"50,0", -- [3]
-							}, -- [236]
-							{
-								"Daidric", -- [1]
-								"DRUID", -- [2]
-								"50,0", -- [3]
-							}, -- [237]
-							{
-								"Ðeleteð", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"50,0", -- [3]
-							}, -- [238]
-							{
-								"Bonenarrow", -- [1]
-								"HUNTER", -- [2]
-								"50,0", -- [3]
-							}, -- [239]
-							{
-								"Nytgard", -- [1]
-								"WARRIOR", -- [2]
-								"50,0", -- [3]
-							}, -- [240]
 							{
 								"Tomsawyer", -- [1]
 								"HUNTER", -- [2]
 								"50,0", -- [3]
-							}, -- [241]
+							}, -- [236]
 							{
-								"Vìvere", -- [1]
+								"Zaedric", -- [1]
 								"PALADIN", -- [2]
 								"50,0", -- [3]
-							}, -- [242]
+							}, -- [237]
 							{
-								"Nytmayr", -- [1]
+								"Sneeksies", -- [1]
+								"ROGUE", -- [2]
+								"50,0", -- [3]
+							}, -- [238]
+							{
+								"Ðeleteð", -- [1]
 								"DEATHKNIGHT", -- [2]
 								"50,0", -- [3]
-							}, -- [243]
+							}, -- [239]
 							{
-								"Calade", -- [1]
-								"ROGUE", -- [2]
-								"155,0", -- [3]
-							}, -- [244]
-							{
-								"Zaltek", -- [1]
-								"DRUID", -- [2]
+								"Bonenarrow", -- [1]
+								"HUNTER", -- [2]
 								"50,0", -- [3]
-							}, -- [245]
+							}, -- [240]
 							{
-								"Dónn", -- [1]
-								"MONK", -- [2]
+								"Nytgard", -- [1]
+								"WARRIOR", -- [2]
 								"50,0", -- [3]
-							}, -- [246]
-							{
-								"Siege", -- [1]
-								"WARLOCK", -- [2]
-								"50,0", -- [3]
-							}, -- [247]
+							}, -- [241]
 							{
 								"Icydeadpeopl", -- [1]
 								"MAGE", -- [2]
 								"50,0", -- [3]
-							}, -- [248]
+							}, -- [242]
+							{
+								"Vìvere", -- [1]
+								"PALADIN", -- [2]
+								"50,0", -- [3]
+							}, -- [243]
+							{
+								"Nytmayr", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"50,0", -- [3]
+							}, -- [244]
+							{
+								"Calade", -- [1]
+								"ROGUE", -- [2]
+								"155,0", -- [3]
+							}, -- [245]
+							{
+								"Zaltek", -- [1]
+								"DRUID", -- [2]
+								"50,0", -- [3]
+							}, -- [246]
+							{
+								"Dónn", -- [1]
+								"MONK", -- [2]
+								"50,0", -- [3]
+							}, -- [247]
 							{
 								"Bullshïft", -- [1]
 								"DRUID", -- [2]
 								"50,0", -- [3]
+							}, -- [248]
+							{
+								"Plainshifter", -- [1]
+								"WARLOCK", -- [2]
+								"50,0", -- [3]
 							}, -- [249]
+							{
+								"Wayze", -- [1]
+								"ROGUE", -- [2]
+								"50,0", -- [3]
+							}, -- [250]
 							{
 								"Nytbolt", -- [1]
 								"SHAMAN", -- [2]
 								"Nytcort", -- [3]
-							}, -- [250]
+							}, -- [251]
 							{
 								"Drdbag", -- [1]
 								"DEATHKNIGHT", -- [2]
 								"50,0", -- [3]
-							}, -- [251]
+							}, -- [252]
 							{
 								"Ukigumo", -- [1]
 								"WARLOCK", -- [2]
 								"50,0", -- [3]
-							}, -- [252]
-							{
-								"Piggaa", -- [1]
-								"ROGUE", -- [2]
-								"50,0", -- [3]
 							}, -- [253]
+							{
+								"Zarraynna", -- [1]
+								"HUNTER", -- [2]
+								"50,0", -- [3]
+							}, -- [254]
 							{
 								"Gawdric", -- [1]
 								"DEATHKNIGHT", -- [2]
 								"50,0", -- [3]
-							}, -- [254]
-							{
-								"Grumpyballz", -- [1]
-								"SHAMAN", -- [2]
-								"50,0", -- [3]
 							}, -- [255]
-							{
-								"Sincore", -- [1]
-								"WARLOCK", -- [2]
-								"50,0", -- [3]
-							}, -- [256]
-							{
-								"Stonesreach", -- [1]
-								"PALADIN", -- [2]
-								"50,0", -- [3]
-							}, -- [257]
-							{
-								"Yaboi", -- [1]
-								"WARRIOR", -- [2]
-								"Wazze", -- [3]
-							}, -- [258]
-							{
-								"Moobella", -- [1]
-								"PALADIN", -- [2]
-								"50,0", -- [3]
-							}, -- [259]
-							{
-								"Chrønux", -- [1]
-								"WARLOCK", -- [2]
-								"50,0", -- [3]
-							}, -- [260]
-							{
-								"Myztryss", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"50,0", -- [3]
-							}, -- [261]
-							{
-								"Xanthia", -- [1]
-								"PRIEST", -- [2]
-								"50,0", -- [3]
-							}, -- [262]
 							{
 								"Ricflare", -- [1]
 								"HUNTER", -- [2]
 								"50,0", -- [3]
-							}, -- [263]
+							}, -- [256]
 							{
-								"Fullofbeef", -- [1]
-								"SHAMAN", -- [2]
+								"Sincore", -- [1]
+								"WARLOCK", -- [2]
 								"50,0", -- [3]
-							}, -- [264]
+							}, -- [257]
 							{
 								"Wàke", -- [1]
 								"PALADIN", -- [2]
 								"50,0", -- [3]
-							}, -- [265]
+							}, -- [258]
+							{
+								"Yaboi", -- [1]
+								"WARRIOR", -- [2]
+								"Wazze", -- [3]
+							}, -- [259]
+							{
+								"Potatoocanno", -- [1]
+								"PRIEST", -- [2]
+								"50,0", -- [3]
+							}, -- [260]
+							{
+								"Chrønux", -- [1]
+								"WARLOCK", -- [2]
+								"50,0", -- [3]
+							}, -- [261]
+							{
+								"Myztryss", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"50,0", -- [3]
+							}, -- [262]
+							{
+								"Xanthia", -- [1]
+								"PRIEST", -- [2]
+								"50,0", -- [3]
+							}, -- [263]
 							{
 								"Bskerd", -- [1]
 								"HUNTER", -- [2]
 								"50,0", -- [3]
-							}, -- [266]
-							{
-								"Urtagdk", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"50,0", -- [3]
-							}, -- [267]
-							{
-								"Jessaßoo", -- [1]
-								"HUNTER", -- [2]
-								"50,0", -- [3]
-							}, -- [268]
-							{
-								"Mula", -- [1]
-								"DRUID", -- [2]
-								"50,0", -- [3]
-							}, -- [269]
-							{
-								"Onedirection", -- [1]
-								"PALADIN", -- [2]
-								"Shotsfired", -- [3]
-							}, -- [270]
-							{
-								"Bloodballs", -- [1]
-								"MONK", -- [2]
-								"500,2555", -- [3]
-							}, -- [271]
-							{
-								"Varadric", -- [1]
-								"PRIEST", -- [2]
-								"50,0", -- [3]
-							}, -- [272]
-							{
-								"Bowvine", -- [1]
-								"WARRIOR", -- [2]
-								"50,0", -- [3]
-							}, -- [273]
-							{
-								"Soggyshields", -- [1]
-								"PRIEST", -- [2]
-								"50,0", -- [3]
-							}, -- [274]
-							{
-								"Soloestus", -- [1]
-								"WARLOCK", -- [2]
-								"50,0", -- [3]
-							}, -- [275]
-							{
-								"Majiker", -- [1]
-								"MAGE", -- [2]
-								"50,0", -- [3]
-							}, -- [276]
-							{
-								"Vertebreaker", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"50,0", -- [3]
-							}, -- [277]
-							{
-								"Morgandruid", -- [1]
-								"DRUID", -- [2]
-								"50,0", -- [3]
-							}, -- [278]
-							{
-								"Prôsthetics", -- [1]
-								"WARRIOR", -- [2]
-								"50,0", -- [3]
-							}, -- [279]
-							{
-								"Hashkilledme", -- [1]
-								"WARLOCK", -- [2]
-								"50,0", -- [3]
-							}, -- [280]
-							{
-								"Momonstream", -- [1]
-								"DRUID", -- [2]
-								"Dekenut", -- [3]
-							}, -- [281]
-							{
-								"Solayre", -- [1]
-								"PALADIN", -- [2]
-								"50,0", -- [3]
-							}, -- [282]
-							{
-								"Crazaydo", -- [1]
-								"WARRIOR", -- [2]
-								"50,0", -- [3]
-							}, -- [283]
-							{
-								"Maÿbe", -- [1]
-								"SHAMAN", -- [2]
-								"50,0", -- [3]
-							}, -- [284]
-							{
-								"Derem", -- [1]
-								"ROGUE", -- [2]
-								"Realistic", -- [3]
-							}, -- [285]
-							{
-								"Lemongee", -- [1]
-								"PRIEST", -- [2]
-								"50,0", -- [3]
-							}, -- [286]
-							{
-								"Thallade", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"50,0", -- [3]
-							}, -- [287]
-							{
-								"Sparkletíts", -- [1]
-								"MAGE", -- [2]
-								"50,0", -- [3]
-							}, -- [288]
-							{
-								"Nnab", -- [1]
-								"MAGE", -- [2]
-								"50,0", -- [3]
-							}, -- [289]
+							}, -- [264]
 							{
 								"Galiza", -- [1]
 								"MAGE", -- [2]
 								"50,0", -- [3]
-							}, -- [290]
+							}, -- [265]
 							{
-								"Yvesaben", -- [1]
-								"DRUID", -- [2]
+								"Urtagdk", -- [1]
+								"DEATHKNIGHT", -- [2]
 								"50,0", -- [3]
-							}, -- [291]
+							}, -- [266]
 							{
-								"Merteroll", -- [1]
+								"Jessaßoo", -- [1]
+								"HUNTER", -- [2]
+								"50,0", -- [3]
+							}, -- [267]
+							{
+								"Onedirection", -- [1]
+								"PALADIN", -- [2]
+								"Shotsfired", -- [3]
+							}, -- [268]
+							{
+								"Swifterino", -- [1]
 								"WARRIOR", -- [2]
 								"50,0", -- [3]
-							}, -- [292]
+							}, -- [269]
 							{
-								"Meishao", -- [1]
+								"Mula", -- [1]
+								"DRUID", -- [2]
+								"50,0", -- [3]
+							}, -- [270]
+							{
+								"Varadric", -- [1]
+								"PRIEST", -- [2]
+								"50,0", -- [3]
+							}, -- [271]
+							{
+								"Piggaa", -- [1]
+								"ROGUE", -- [2]
+								"50,0", -- [3]
+							}, -- [272]
+							{
+								"Morgandruid", -- [1]
+								"DRUID", -- [2]
+								"50,0", -- [3]
+							}, -- [273]
+							{
+								"Bowvine", -- [1]
+								"WARRIOR", -- [2]
+								"50,0", -- [3]
+							}, -- [274]
+							{
+								"Soggyshields", -- [1]
+								"PRIEST", -- [2]
+								"50,0", -- [3]
+							}, -- [275]
+							{
+								"Slushpriest", -- [1]
+								"PRIEST", -- [2]
+								"50,0", -- [3]
+							}, -- [276]
+							{
+								"Majiker", -- [1]
+								"MAGE", -- [2]
+								"50,0", -- [3]
+							}, -- [277]
+							{
+								"Vertebreaker", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"50,0", -- [3]
+							}, -- [278]
+							{
+								"Momonstream", -- [1]
+								"DRUID", -- [2]
+								"Dekenut", -- [3]
+							}, -- [279]
+							{
+								"Prôsthetics", -- [1]
+								"WARRIOR", -- [2]
+								"50,0", -- [3]
+							}, -- [280]
+							{
+								"Hashkilledme", -- [1]
 								"WARLOCK", -- [2]
 								"50,0", -- [3]
-							}, -- [293]
+							}, -- [281]
+							{
+								"Lohegaron", -- [1]
+								"PALADIN", -- [2]
+								"50,0", -- [3]
+							}, -- [282]
+							{
+								"Sparkletíts", -- [1]
+								"MAGE", -- [2]
+								"50,0", -- [3]
+							}, -- [283]
+							{
+								"Crazaydo", -- [1]
+								"WARRIOR", -- [2]
+								"50,0", -- [3]
+							}, -- [284]
+							{
+								"Maÿbe", -- [1]
+								"SHAMAN", -- [2]
+								"50,0", -- [3]
+							}, -- [285]
+							{
+								"Derem", -- [1]
+								"ROGUE", -- [2]
+								"Realistic", -- [3]
+							}, -- [286]
+							{
+								"Lemongee", -- [1]
+								"PRIEST", -- [2]
+								"50,0", -- [3]
+							}, -- [287]
+							{
+								"Thallade", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"50,0", -- [3]
+							}, -- [288]
 							{
 								"Emilioemilio", -- [1]
 								"PRIEST", -- [2]
 								"Bigmccaw", -- [3]
+							}, -- [289]
+							{
+								"Nnab", -- [1]
+								"MAGE", -- [2]
+								"50,0", -- [3]
+							}, -- [290]
+							{
+								"Meishao", -- [1]
+								"WARLOCK", -- [2]
+								"50,0", -- [3]
+							}, -- [291]
+							{
+								"Yvesaben", -- [1]
+								"DRUID", -- [2]
+								"50,0", -- [3]
+							}, -- [292]
+							{
+								"Merteroll", -- [1]
+								"WARRIOR", -- [2]
+								"50,0", -- [3]
+							}, -- [293]
+							{
+								"Endernx", -- [1]
+								"ROGUE", -- [2]
+								"", -- [3]
 							}, -- [294]
 							{
 								"Clanceylock", -- [1]
@@ -1518,130 +1524,135 @@ EPGP_DB = {
 								"50,0", -- [3]
 							}, -- [295]
 							{
+								"Kodaa", -- [1]
+								"SHAMAN", -- [2]
+								"50,0", -- [3]
+							}, -- [296]
+							{
 								"Ardler", -- [1]
 								"MAGE", -- [2]
 								"50,0", -- [3]
-							}, -- [296]
+							}, -- [297]
 							{
 								"Ardilah", -- [1]
 								"WARLOCK", -- [2]
 								"50,0", -- [3]
-							}, -- [297]
-							{
-								"Kodaa", -- [1]
-								"SHAMAN", -- [2]
-								"50,0", -- [3]
 							}, -- [298]
 							{
-								"Allidoisspin", -- [1]
+								"Frendship", -- [1]
 								"MONK", -- [2]
 								"50,0", -- [3]
 							}, -- [299]
 							{
+								"Allidoisspin", -- [1]
+								"MONK", -- [2]
+								"50,0", -- [3]
+							}, -- [300]
+							{
 								"Reccylops", -- [1]
 								"WARLOCK", -- [2]
 								"Shinerr", -- [3]
-							}, -- [300]
+							}, -- [301]
 							{
 								"Morganshammy", -- [1]
 								"SHAMAN", -- [2]
 								"50,0", -- [3]
-							}, -- [301]
+							}, -- [302]
 							{
 								"Kritties", -- [1]
 								"HUNTER", -- [2]
 								"50,0", -- [3]
-							}, -- [302]
-							{
-								"Potatoocanno", -- [1]
-								"PRIEST", -- [2]
-								"50,0", -- [3]
 							}, -- [303]
 							{
-								"Sudoshi", -- [1]
-								"MONK", -- [2]
+								"Soloestus", -- [1]
+								"WARLOCK", -- [2]
 								"50,0", -- [3]
 							}, -- [304]
+							{
+								"Splice", -- [1]
+								"WARRIOR", -- [2]
+								"50,0", -- [3]
+							}, -- [305]
 							{
 								"Dangrousdani", -- [1]
 								"DEATHKNIGHT", -- [2]
 								"50,0", -- [3]
-							}, -- [305]
-							{
-								"Ëx", -- [1]
-								"PRIEST", -- [2]
-								"50,0", -- [3]
 							}, -- [306]
+							{
+								"Deliahlight", -- [1]
+								"PALADIN", -- [2]
+								"50,0", -- [3]
+							}, -- [307]
 							{
 								"Bloodblock", -- [1]
 								"MAGE", -- [2]
 								"50,0", -- [3]
-							}, -- [307]
-							{
-								"Lohegaron", -- [1]
-								"PALADIN", -- [2]
-								"50,0", -- [3]
 							}, -- [308]
+							{
+								"Currant", -- [1]
+								"ROGUE", -- [2]
+								"50,0", -- [3]
+							}, -- [309]
 							{
 								"Múrica", -- [1]
 								"DEATHKNIGHT", -- [2]
 								"Kwiqast", -- [3]
-							}, -- [309]
+							}, -- [310]
 							{
 								"Nalani", -- [1]
 								"SHAMAN", -- [2]
 								"50,0", -- [3]
-							}, -- [310]
+							}, -- [311]
 							{
 								"Dëstruct", -- [1]
 								"HUNTER", -- [2]
 								"50,0", -- [3]
-							}, -- [311]
+							}, -- [312]
 							{
 								"Soggytotems", -- [1]
 								"SHAMAN", -- [2]
 								"50,0", -- [3]
-							}, -- [312]
+							}, -- [313]
 							{
 								"Pandcåke", -- [1]
 								"MONK", -- [2]
 								"50,0", -- [3]
-							}, -- [313]
-							{
-								"Zarraynna", -- [1]
-								"HUNTER", -- [2]
-								"50,0", -- [3]
 							}, -- [314]
 							{
-								"Galey", -- [1]
-								"ROGUE", -- [2]
+								"Ëx", -- [1]
+								"PRIEST", -- [2]
 								"50,0", -- [3]
 							}, -- [315]
+							{
+								"Sudoshi", -- [1]
+								"MONK", -- [2]
+								"50,0", -- [3]
+							}, -- [316]
 							{
 								"Jaedin", -- [1]
 								"SHAMAN", -- [2]
 								"50,0", -- [3]
-							}, -- [316]
+							}, -- [317]
 							{
 								"Chopnoris", -- [1]
 								"WARRIOR", -- [2]
 								"50,0", -- [3]
-							}, -- [317]
+							}, -- [318]
+							{
+								"Fuqgirlqt", -- [1]
+								"WARRIOR", -- [2]
+								"50,0", -- [3]
+							}, -- [319]
 							{
 								"Òctavian", -- [1]
 								"HUNTER", -- [2]
 								"", -- [3]
-							}, -- [318]
+							}, -- [320]
 							{
-								"Slushpriest", -- [1]
-								"PRIEST", -- [2]
-								"50,0", -- [3]
-							}, -- [319]
-							{
-								"Zaedric", -- [1]
+								"Moobella", -- [1]
 								"PALADIN", -- [2]
 								"50,0", -- [3]
-							}, -- [320]
+							}, -- [321]
 						},
 					},
 					["log"] = {
@@ -6867,9 +6878,34 @@ EPGP_DB = {
 							"mats", -- [4]
 							230, -- [5]
 						}, -- [746]
+						{
+							1416882240, -- [1]
+							"EP", -- [2]
+							"Dreltrak", -- [3]
+							"mats", -- [4]
+							230, -- [5]
+						}, -- [747]
+						{
+							1416886620, -- [1]
+							"EP", -- [2]
+							"Primalfears", -- [3]
+							"mats", -- [4]
+							230, -- [5]
+						}, -- [748]
 					},
 				},
 				["Lusting on Trash Bank"] = {
+					["snapshot"] = {
+						["guild_info"] = "@BASE_GP:100\n@DECAY_P:7\n@MIN_EP:2500\n@EXTRAS_P:50",
+						["roster_info"] = {
+							{
+								"Gittdabank", -- [1]
+								"MAGE", -- [2]
+								"116,0", -- [3]
+							}, -- [1]
+						},
+						["time"] = 1416783960,
+					},
 					["log"] = {
 						{
 							1416780060, -- [1]
@@ -6900,39 +6936,22 @@ EPGP_DB = {
 							-1, -- [5]
 						}, -- [4]
 					},
-					["snapshot"] = {
-						["guild_info"] = "@BASE_GP:100\n@DECAY_P:7\n@MIN_EP:2500\n@EXTRAS_P:50",
-						["roster_info"] = {
-							{
-								"Gittdabank", -- [1]
-								"MAGE", -- [2]
-								"116,0", -- [3]
-							}, -- [1]
-						},
-						["time"] = 1416783960,
-					},
 				},
 			},
 		},
-		["announce"] = {
-		},
-		["gptooltip"] = {
-		},
-		["whisper"] = {
-		},
-	},
-	["global"] = {
-		["last_version"] = "5.10.8",
-		["last_tier"] = 600,
 	},
 	["profileKeys"] = {
 		["Dbyx - Arthas"] = "Lusting on Trash",
-		["Spih - Arthas"] = "Lusting on Trash",
+		["Git - Arthas"] = "Lusting on Trash",
 		["Burk - Arthas"] = "Burk - Arthas",
 		["Got - Arthas"] = "Lusting on Trash",
 		["Gitt - Arthas"] = "Lusting on Trash",
 		["Gittdabank - Arthas"] = "Lusting on Trash Bank",
-		["Git - Arthas"] = "Lusting on Trash",
+		["Spih - Arthas"] = "Lusting on Trash",
+	},
+	["global"] = {
+		["last_version"] = "5.10.8",
+		["last_tier"] = 600,
 	},
 	["profiles"] = {
 		["Got - Arthas"] = {
@@ -6947,7 +6966,7 @@ EPGP_DB = {
 			["decay_p"] = 10,
 			["outsiders"] = 0,
 		},
-		["Spih - Arthas"] = {
+		["Git - Arthas"] = {
 			["min_ep"] = 100,
 			["base_gp"] = 2000,
 			["decay_p"] = 10,
@@ -6960,11 +6979,11 @@ EPGP_DB = {
 			["decay_p"] = 10,
 		},
 		["Lusting on Trash Bank"] = {
-			["outsiders"] = 0,
 			["decay_p"] = 7,
-			["base_gp"] = 100,
-			["min_ep"] = 2500,
+			["outsiders"] = 0,
 			["extras_p"] = 50,
+			["min_ep"] = 2500,
+			["base_gp"] = 100,
 			["last_awards"] = {
 				["no reason"] = -1,
 				["Blackrock Foundry"] = 100,
@@ -6979,8 +6998,8 @@ EPGP_DB = {
 			["base_gp"] = 2000,
 			["bonus_loot_log"] = {
 				{
-					["player"] = "Hashkilledme",
 					["timestamp"] = "2014-05-19 21:15:00",
+					["player"] = "Hashkilledme",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:96401:0:0:0:0:0:0:770738176:90:0:465|h[Dinomancer's Spiritbinding Spire]|h|r",
 				}, -- [1]
@@ -7005,8 +7024,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-19 21:54:00",
 				}, -- [5]
 				{
-					["timestamp"] = "2014-05-20 21:06:00",
 					["player"] = "Bigmccaw",
+					["timestamp"] = "2014-05-20 21:06:00",
 					["coinsLeft"] = "5",
 					["reward"] = "|cffa335ee|Hitem:104424:0:0:0:0:0:0:1568642432:90:0:491|h[Hood of Swirling Senses]|h|r",
 				}, -- [6]
@@ -7021,8 +7040,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-20 21:06:00",
 				}, -- [8]
 				{
-					["timestamp"] = "2014-05-20 21:06:00",
 					["player"] = "Urtag",
+					["timestamp"] = "2014-05-20 21:06:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104411:0:0:0:0:0:0:467903488:90:0:491|h[Immerseus' Crystalline Eye]|h|r",
 				}, -- [9]
@@ -7032,14 +7051,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-20 21:06:00",
 				}, -- [10]
 				{
-					["timestamp"] = "2014-05-20 21:06:00",
 					["player"] = "Nytcort",
+					["timestamp"] = "2014-05-20 21:06:00",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:104411:0:0:0:0:0:0:1688028288:90:0:491|h[Immerseus' Crystalline Eye]|h|r",
 				}, -- [11]
 				{
-					["timestamp"] = "2014-05-20 21:07:00",
 					["player"] = "Nazuna",
+					["timestamp"] = "2014-05-20 21:07:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104424:0:0:0:0:0:0:1349849984:90:0:491|h[Hood of Swirling Senses]|h|r",
 				}, -- [12]
@@ -7049,8 +7068,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-20 21:07:00",
 				}, -- [13]
 				{
-					["timestamp"] = "2014-05-20 21:07:00",
 					["player"] = "Shinerr",
+					["timestamp"] = "2014-05-20 21:07:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104427:0:0:0:0:0:0:1466640256:90:0:491|h[Seal of Eternal Sorrow]|h|r",
 				}, -- [14]
@@ -7060,8 +7079,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-20 21:08:00",
 				}, -- [15]
 				{
-					["timestamp"] = "2014-05-20 21:08:00",
 					["player"] = "Calade",
+					["timestamp"] = "2014-05-20 21:08:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104413:0:0:0:0:0:0:2084016512:90:0:491|h[Hood of Blackened Tears]|h|r",
 				}, -- [16]
@@ -7076,14 +7095,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-20 21:28:00",
 				}, -- [18]
 				{
-					["timestamp"] = "2014-05-20 21:28:00",
 					["player"] = "Mani",
+					["timestamp"] = "2014-05-20 21:28:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:105458:0:0:0:0:0:0:1842732416:90:0:491|h[Drape of the Despairing Pit]|h|r",
 				}, -- [19]
 				{
-					["timestamp"] = "2014-05-20 21:29:00",
 					["player"] = "Razercrow",
+					["timestamp"] = "2014-05-20 21:29:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104459:0:0:0:0:0:0:1505527808:90:0:491|h[Quarantine Shoulderguards]|h|r",
 				}, -- [20]
@@ -7093,8 +7112,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-20 21:39:00",
 				}, -- [21]
 				{
-					["timestamp"] = "2014-05-20 21:39:00",
 					["player"] = "Rastafaree",
+					["timestamp"] = "2014-05-20 21:39:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:99716:0:0:0:0:0:0:427957504:90:0:491|h[Chest of the Cursed Protector]|h|r",
 				}, -- [22]
@@ -7104,8 +7123,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-20 21:39:00",
 				}, -- [23]
 				{
-					["timestamp"] = "2014-05-20 21:53:00",
 					["player"] = "Urtag",
+					["timestamp"] = "2014-05-20 21:53:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104490:0:0:0:0:0:0:1338039936:90:0:491|h[Cannoneer's Multipocket Gunbelt]|h|r",
 				}, -- [24]
@@ -7115,8 +7134,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-20 21:53:00",
 				}, -- [25]
 				{
-					["timestamp"] = "2014-05-20 21:53:00",
 					["player"] = "Morgàn",
+					["timestamp"] = "2014-05-20 21:53:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:105491:0:0:0:0:0:0:1344038016:90:0:491|h[Evil Eye of Galakras]|h|r",
 				}, -- [26]
@@ -7181,8 +7200,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-20 22:27:00",
 				}, -- [38]
 				{
-					["timestamp"] = "2014-05-20 22:27:00",
 					["player"] = "Dotsfired",
+					["timestamp"] = "2014-05-20 22:27:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104543:0:0:0:0:0:0:1700673280:90:0:491|h[Ashflare Pendant]|h|r",
 				}, -- [39]
@@ -7207,8 +7226,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-20 22:28:00",
 				}, -- [43]
 				{
-					["timestamp"] = "2014-05-20 22:45:00",
 					["player"] = "Tydeson",
+					["timestamp"] = "2014-05-20 22:45:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104557:0:0:0:0:0:0:149326336:90:0:491|h[Ravager's Pathwalkers]|h|r",
 				}, -- [44]
@@ -7243,8 +7262,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-20 23:01:00",
 				}, -- [50]
 				{
-					["timestamp"] = "2014-05-20 23:01:00",
 					["player"] = "Clancey",
+					["timestamp"] = "2014-05-20 23:01:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104567:0:0:0:0:0:0:918096768:90:0:491|h[Malkorok's Giant Stompers]|h|r",
 				}, -- [51]
@@ -7254,8 +7273,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-20 23:02:00",
 				}, -- [52]
 				{
-					["timestamp"] = "2014-05-20 23:18:00",
 					["player"] = "Eetheer",
+					["timestamp"] = "2014-05-20 23:18:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:105594:0:0:0:0:0:0:1729086464:90:0:491|h[Immaculately Preserved Wand]|h|r",
 				}, -- [53]
@@ -7270,20 +7289,20 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-20 23:19:00",
 				}, -- [55]
 				{
-					["timestamp"] = "2014-05-20 23:19:00",
 					["player"] = "Clancey",
+					["timestamp"] = "2014-05-20 23:19:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104593:0:0:0:0:0:0:2034640768:90:0:491|h[Seal of the Forgotten Kings]|h|r",
 				}, -- [56]
 				{
-					["timestamp"] = "2014-05-20 23:39:00",
 					["player"] = "Excrusader",
+					["timestamp"] = "2014-05-20 23:39:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104611:0:0:0:0:0:0:1292077312:90:0:491|h[Thok's Acid-Grooved Tooth]|h|r",
 				}, -- [57]
 				{
-					["timestamp"] = "2014-05-20 23:39:00",
 					["player"] = "Bigmccaw",
+					["timestamp"] = "2014-05-20 23:39:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104611:0:0:0:0:0:0:670787072:90:0:491|h[Thok's Acid-Grooved Tooth]|h|r",
 				}, -- [58]
@@ -7308,8 +7327,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-20 23:39:00",
 				}, -- [62]
 				{
-					["timestamp"] = "2014-05-20 23:40:00",
 					["player"] = "Nathreizm",
+					["timestamp"] = "2014-05-20 23:40:00",
 					["coinsLeft"] = "7",
 					["reward"] = "|cffa335ee|Hitem:104606:0:0:0:0:0:0:576233472:90:0:491|h[Gleaming Eye of the Devilsaur]|h|r",
 				}, -- [63]
@@ -7334,8 +7353,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-20 23:40:00",
 				}, -- [67]
 				{
-					["timestamp"] = "2014-05-20 23:40:00",
 					["player"] = "Lifeconsumer",
+					["timestamp"] = "2014-05-20 23:40:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104613:0:0:0:0:0:0:1637319296:90:0:491|h[Thok's Tail Tip]|h|r",
 				}, -- [68]
@@ -7410,8 +7429,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-21 00:55:00",
 				}, -- [82]
 				{
-					["timestamp"] = "2014-05-21 00:55:00",
 					["player"] = "Multichill",
+					["timestamp"] = "2014-05-21 00:55:00",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:105868:0:0:0:0:0:0:596773888:90:0:491|h[Essence of the Cursed Vanquisher]|h|r",
 				}, -- [83]
@@ -7421,8 +7440,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-21 00:55:00",
 				}, -- [84]
 				{
-					["timestamp"] = "2014-05-21 00:55:00",
 					["player"] = "Soméone",
+					["timestamp"] = "2014-05-21 00:55:00",
 					["coinsLeft"] = "7",
 					["reward"] = "|cffa335ee|Hitem:105867:0:0:0:0:0:0:1637677056:90:0:491|h[Essence of the Cursed Conqueror]|h|r",
 				}, -- [85]
@@ -7432,8 +7451,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-21 00:55:00",
 				}, -- [86]
 				{
-					["timestamp"] = "2014-05-21 00:55:00",
 					["player"] = "Simplelove",
+					["timestamp"] = "2014-05-21 00:55:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:105868:0:0:0:0:0:0:1696941056:90:0:491|h[Essence of the Cursed Vanquisher]|h|r",
 				}, -- [87]
@@ -7488,8 +7507,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-27 21:14:00",
 				}, -- [97]
 				{
-					["player"] = "Bigmccaw",
 					["timestamp"] = "2014-05-27 21:14:00",
+					["player"] = "Bigmccaw",
 					["coinsLeft"] = "5",
 					["reward"] = "|cffa335ee|Hitem:104422:0:0:0:0:0:0:520261376:90:0:491|h[Bolt-Burster Grips]|h|r",
 				}, -- [98]
@@ -7514,8 +7533,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-27 21:15:00",
 				}, -- [102]
 				{
-					["player"] = "Git",
 					["timestamp"] = "2014-05-27 21:15:00",
+					["player"] = "Git",
 					["coinsLeft"] = "3",
 					["reward"] = "|cffa335ee|Hitem:104421:0:0:0:0:0:0:1429513344:90:0:491|h[Encapsulated Essence of Immerseus]|h|r",
 				}, -- [103]
@@ -7525,8 +7544,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-27 21:16:00",
 				}, -- [104]
 				{
-					["player"] = "Valteros",
 					["timestamp"] = "2014-05-27 21:28:00",
+					["player"] = "Valteros",
 					["coinsLeft"] = "6",
 					["reward"] = "|cffa335ee|Hitem:104447:0:0:0:0:0:0:936462208:90:0:491|h[Petrified Pennyroyal Ring]|h|r",
 				}, -- [105]
@@ -7536,8 +7555,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-27 21:28:00",
 				}, -- [106]
 				{
-					["player"] = "Calade",
 					["timestamp"] = "2014-05-27 21:38:00",
+					["player"] = "Calade",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:105453:0:0:0:0:0:0:219682048:90:0:491|h[Gloves of the Golden Protector]|h|r",
 				}, -- [107]
@@ -7557,14 +7576,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-27 21:48:00",
 				}, -- [110]
 				{
-					["player"] = "Bigmccaw",
 					["timestamp"] = "2014-05-27 21:48:00",
+					["player"] = "Bigmccaw",
 					["coinsLeft"] = "4",
 					["reward"] = "|cffa335ee|Hitem:99715:0:0:0:0:0:0:676923648:90:0:491|h[Chest of the Cursed Conqueror]|h|r",
 				}, -- [111]
 				{
-					["player"] = "Calade",
 					["timestamp"] = "2014-05-27 22:03:00",
+					["player"] = "Calade",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104489:0:0:0:0:0:0:734190848:90:0:491|h[Korgra's Venom-Soaked Gauntlets]|h|r",
 				}, -- [112]
@@ -7574,8 +7593,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-27 22:03:00",
 				}, -- [113]
 				{
-					["player"] = "Mani",
 					["timestamp"] = "2014-05-27 22:03:00",
+					["player"] = "Mani",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104494:0:0:0:0:0:0:1424402560:90:0:491|h[Krugruk's Rigid Shoulderplates]|h|r",
 				}, -- [114]
@@ -7595,8 +7614,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-27 22:17:00",
 				}, -- [117]
 				{
-					["player"] = "Primalfears",
 					["timestamp"] = "2014-05-27 22:17:00",
+					["player"] = "Primalfears",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:105520:0:0:0:0:0:0:483107200:90:0:491|h[Laser-Slice Signet]|h|r",
 				}, -- [118]
@@ -7611,8 +7630,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-27 22:17:00",
 				}, -- [120]
 				{
-					["player"] = "Dekenut",
 					["timestamp"] = "2014-05-27 22:18:00",
+					["player"] = "Dekenut",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104525:0:0:0:0:0:0:1814716416:90:0:491|h[Juggernaut's Power Core]|h|r",
 				}, -- [121]
@@ -7657,8 +7676,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-27 22:37:00",
 				}, -- [129]
 				{
-					["player"] = "Memori",
 					["timestamp"] = "2014-05-27 22:37:00",
+					["player"] = "Memori",
 					["coinsLeft"] = "5",
 					["reward"] = "|cffa335ee|Hitem:104549:0:0:0:0:0:0:2078873216:90:0:491|h[Shackles of Stinking Slime]|h|r",
 				}, -- [130]
@@ -7668,8 +7687,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-27 22:51:00",
 				}, -- [131]
 				{
-					["player"] = "Dekenut",
 					["timestamp"] = "2014-05-27 22:51:00",
+					["player"] = "Dekenut",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104553:0:0:0:0:0:0:1086540160:90:0:491|h[Nazgrim's Burnished Insignia]|h|r",
 				}, -- [132]
@@ -7714,8 +7733,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-27 23:30:00",
 				}, -- [140]
 				{
-					["player"] = "Valteros",
 					["timestamp"] = "2014-05-27 23:54:00",
+					["player"] = "Valteros",
 					["coinsLeft"] = "4",
 					["reward"] = "|cffa335ee|Hitem:104609:0:0:0:0:0:0:338737920:90:0:491|h[Festering Primordial Globule]|h|r",
 				}, -- [141]
@@ -7730,14 +7749,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-27 23:54:00",
 				}, -- [143]
 				{
-					["player"] = "Shotsfired",
 					["timestamp"] = "2014-05-27 23:54:00",
+					["player"] = "Shotsfired",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:99725:0:0:0:0:0:0:1721037824:90:0:491|h[Helm of the Cursed Protector]|h|r",
 				}, -- [144]
 				{
-					["player"] = "Excrusader",
 					["timestamp"] = "2014-05-27 23:54:00",
+					["player"] = "Excrusader",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:99723:0:0:0:0:0:0:1955197184:90:0:491|h[Helm of the Cursed Vanquisher]|h|r",
 				}, -- [145]
@@ -7817,14 +7836,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-28 00:29:00",
 				}, -- [160]
 				{
-					["timestamp"] = "2014-05-28 00:29:00",
 					["player"] = "Eetheer",
+					["timestamp"] = "2014-05-28 00:29:00",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:104632:0:0:0:0:0:0:1694295808:90:0:491|h[Iyyokuk's Hereditary Seal]|h|r",
 				}, -- [161]
 				{
-					["timestamp"] = "2014-05-28 00:29:00",
 					["player"] = "Layonhooves",
+					["timestamp"] = "2014-05-28 00:29:00",
 					["coinsLeft"] = "3",
 					["reward"] = "|cffa335ee|Hitem:99712:0:0:0:0:0:0:727160064:90:0:491|h[Leggings of the Cursed Conqueror]|h|r",
 				}, -- [162]
@@ -7849,8 +7868,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-28 01:12:00",
 				}, -- [166]
 				{
-					["timestamp"] = "2014-05-28 01:12:00",
 					["player"] = "Wazze",
+					["timestamp"] = "2014-05-28 01:12:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104650:0:0:0:0:0:0:589129344:90:0:491|h[Belt of the Broken Pact]|h|r",
 				}, -- [167]
@@ -7900,8 +7919,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-28 23:52:00",
 				}, -- [176]
 				{
-					["player"] = "Dotsfired",
 					["timestamp"] = "2014-05-28 23:59:00",
+					["player"] = "Dotsfired",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:89936:0:0:0:0:0:0:874820352:90:0:445|h[Mindshard Drape]|h|r",
 				}, -- [177]
@@ -7916,14 +7935,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-29 21:39:00",
 				}, -- [179]
 				{
-					["player"] = "Drukor",
 					["timestamp"] = "2014-05-29 21:39:00",
+					["player"] = "Drukor",
 					["coinsLeft"] = "7",
 					["reward"] = "|cffa335ee|Hitem:104430:0:0:0:0:0:0:1040138368:90:0:491|h[Soul-Soaked Gloves]|h|r",
 				}, -- [180]
 				{
-					["player"] = "Hashkilledme",
 					["timestamp"] = "2014-05-29 23:11:00",
+					["player"] = "Hashkilledme",
 					["coinsLeft"] = "3",
 					["reward"] = "|cffa335ee|Hitem:104443:0:0:0:0:0:0:1324617216:90:0:491|h[Sha-Seared Sandals]|h|r",
 				}, -- [181]
@@ -7938,14 +7957,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-29 23:26:00",
 				}, -- [183]
 				{
-					["player"] = "Hashkilledme",
 					["timestamp"] = "2014-05-29 23:26:00",
+					["player"] = "Hashkilledme",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:105462:0:0:0:0:0:0:2016272640:90:0:491|h[Blight Hurlers]|h|r",
 				}, -- [184]
 				{
-					["player"] = "Frostnbieber",
 					["timestamp"] = "2014-05-29 23:27:00",
+					["player"] = "Frostnbieber",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104469:0:0:0:0:0:0:760866560:90:0:491|h[Untainted Guardian's Chain]|h|r",
 				}, -- [185]
@@ -7955,8 +7974,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-29 23:59:00",
 				}, -- [186]
 				{
-					["timestamp"] = "2014-05-29 23:59:00",
 					["player"] = "Gitt",
+					["timestamp"] = "2014-05-29 23:59:00",
 					["coinsLeft"] = "7",
 					["reward"] = "|cffa335ee|Hitem:104487:0:0:0:0:0:0:1584256128:90:0:491|h[Swift Serpent Signet]|h|r",
 				}, -- [187]
@@ -7966,8 +7985,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-29 23:59:00",
 				}, -- [188]
 				{
-					["timestamp"] = "2014-05-29 23:59:00",
 					["player"] = "Bloodballs",
+					["timestamp"] = "2014-05-29 23:59:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:105500:0:0:0:0:0:0:1627888768:90:0:491|h[Dragonmaw Emergency Strap]|h|r",
 				}, -- [189]
@@ -7977,14 +7996,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-05-30 00:00:00",
 				}, -- [190]
 				{
-					["player"] = "Nathreizm",
 					["timestamp"] = "2014-06-03 21:05:00",
+					["player"] = "Nathreizm",
 					["coinsLeft"] = "7",
 					["reward"] = "|cffa335ee|Hitem:104411:0:0:0:0:0:0:1099369856:90:0:491|h[Immerseus' Crystalline Eye]|h|r",
 				}, -- [191]
 				{
-					["player"] = "Primalfears",
 					["timestamp"] = "2014-06-03 21:05:00",
+					["player"] = "Primalfears",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:104427:0:0:0:0:0:0:1432017280:90:0:491|h[Seal of Eternal Sorrow]|h|r",
 				}, -- [192]
@@ -7999,8 +8018,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-03 21:05:00",
 				}, -- [194]
 				{
-					["player"] = "Nytcort",
 					["timestamp"] = "2014-06-03 21:05:00",
+					["player"] = "Nytcort",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:105407:0:0:0:0:0:0:111692032:90:0:491|h[Immerseus' Crystalline Eye]|h|r",
 				}, -- [195]
@@ -8010,8 +8029,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-03 21:05:00",
 				}, -- [196]
 				{
-					["player"] = "Nazuna",
 					["timestamp"] = "2014-06-03 21:05:00",
+					["player"] = "Nazuna",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104426:0:0:0:0:0:0:1696897536:90:0:491|h[Purified Bindings of Immerseus]|h|r",
 				}, -- [197]
@@ -8021,20 +8040,20 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-03 21:05:00",
 				}, -- [198]
 				{
-					["player"] = "Gramzs-Hyjal",
 					["timestamp"] = "2014-06-03 21:06:00",
+					["player"] = "Gramzs-Hyjal",
 					["coinsLeft"] = "4",
 					["reward"] = "|cffa335ee|Hitem:104417:0:0:0:0:0:0:895089664:90:0:491|h[Corruption-Rotted Gauntlets]|h|r",
 				}, -- [199]
 				{
-					["player"] = "Shinerr",
 					["timestamp"] = "2014-06-03 21:06:00",
+					["player"] = "Shinerr",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:105425:0:0:0:0:0:0:1138202368:90:0:491|h[Bracers of Purified Spirit]|h|r",
 				}, -- [200]
 				{
-					["player"] = "Excrusader",
 					["timestamp"] = "2014-06-03 21:06:00",
+					["player"] = "Excrusader",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104427:0:0:0:0:0:0:973552384:90:0:491|h[Seal of Eternal Sorrow]|h|r",
 				}, -- [201]
@@ -8079,8 +8098,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-03 21:33:00",
 				}, -- [209]
 				{
-					["player"] = "Rastafaree",
 					["timestamp"] = "2014-06-03 21:33:00",
+					["player"] = "Rastafaree",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:99716:0:0:0:0:0:0:185078528:90:0:491|h[Chest of the Cursed Protector]|h|r",
 				}, -- [210]
@@ -8090,8 +8109,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-03 21:33:00",
 				}, -- [211]
 				{
-					["player"] = "Tydeson",
 					["timestamp"] = "2014-06-03 21:33:00",
+					["player"] = "Tydeson",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:105472:0:0:0:0:0:0:2116923904:90:0:491|h[Assurance of Consequence]|h|r",
 				}, -- [212]
@@ -8131,32 +8150,32 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-03 21:58:00",
 				}, -- [219]
 				{
-					["player"] = "Chugnoris",
 					["timestamp"] = "2014-06-03 21:59:00",
+					["player"] = "Chugnoris",
 					["coinsLeft"] = "3",
 					["reward"] = "|cffa335ee|Hitem:104510:0:0:0:0:0:0:995852800:90:0:491|h[Ricocheting Shoulderguards]|h|r",
 				}, -- [220]
 				{
-					["player"] = "Ookiniz-Hyjal",
 					["timestamp"] = "2014-06-03 22:19:00",
+					["player"] = "Ookiniz-Hyjal",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104546:0:0:0:0:0:0:15536128:90:0:491|h[Darkfang Mask]|h|r",
 				}, -- [221]
 				{
-					["player"] = "Multichill",
 					["timestamp"] = "2014-06-03 22:19:00",
+					["player"] = "Multichill",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:105539:0:0:0:0:0:0:1806253184:90:0:491|h[Ashflare Pendant]|h|r",
 				}, -- [222]
 				{
-					["player"] = "Kwiqast",
 					["timestamp"] = "2014-06-03 22:19:00",
+					["player"] = "Kwiqast",
 					["coinsLeft"] = "6",
 					["reward"] = "|cffa335ee|Hitem:104544:0:0:0:0:0:0:2041639936:90:0:491|h[Kardris' Toxic Totem]|h|r",
 				}, -- [223]
 				{
-					["player"] = "Calade",
 					["timestamp"] = "2014-06-03 22:19:00",
+					["player"] = "Calade",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:104532:0:0:0:0:0:0:1468936576:90:0:491|h[Damron's Belt of Darkness]|h|r",
 				}, -- [224]
@@ -8221,14 +8240,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-03 22:46:00",
 				}, -- [236]
 				{
-					["player"] = "Git",
 					["timestamp"] = "2014-06-03 22:46:00",
+					["player"] = "Git",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104572:0:0:0:0:0:0:521048192:90:0:491|h[Vial of Living Corruption]|h|r",
 				}, -- [237]
 				{
-					["player"] = "Shinerr",
 					["timestamp"] = "2014-06-03 22:47:00",
+					["player"] = "Shinerr",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104577:0:0:0:0:0:0:1278636544:90:0:491|h[Black-Blooded Drape]|h|r",
 				}, -- [238]
@@ -8258,8 +8277,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-03 23:06:00",
 				}, -- [243]
 				{
-					["player"] = "Tydeson",
 					["timestamp"] = "2014-06-03 23:06:00",
+					["player"] = "Tydeson",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:105584:0:0:0:0:0:0:1393950080:90:0:491|h[Arrowflight Girdle]|h|r",
 				}, -- [244]
@@ -8269,8 +8288,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-03 23:32:00",
 				}, -- [245]
 				{
-					["player"] = "Soméone",
 					["timestamp"] = "2014-06-03 23:32:00",
+					["player"] = "Soméone",
 					["coinsLeft"] = "5",
 					["reward"] = "|cffa335ee|Hitem:99724:0:0:0:0:0:0:1462166400:90:0:491|h[Helm of the Cursed Conqueror]|h|r",
 				}, -- [246]
@@ -8355,8 +8374,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-03 23:49:00",
 				}, -- [262]
 				{
-					["player"] = "Simplelove",
 					["timestamp"] = "2014-06-03 23:49:00",
+					["player"] = "Simplelove",
 					["coinsLeft"] = "3",
 					["reward"] = "|cffa335ee|Hitem:104617:0:0:0:0:0:0:201278336:90:0:491|h[Fusespark Gloves]|h|r",
 				}, -- [263]
@@ -8406,8 +8425,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-04 00:33:00",
 				}, -- [272]
 				{
-					["player"] = "Tydeson",
 					["timestamp"] = "2014-06-04 00:34:00",
+					["player"] = "Tydeson",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:104628:0:0:0:0:0:0:1680819968:90:0:491|h[Kil'ruk's Band of Ascendancy]|h|r",
 				}, -- [273]
@@ -8487,26 +8506,26 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-07 23:06:00",
 				}, -- [288]
 				{
-					["timestamp"] = "2014-06-07 23:13:00",
 					["player"] = "Rawlings-BoreanTundra",
+					["timestamp"] = "2014-06-07 23:13:00",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:104727:0:0:0:0:0:0:848924416:90:0:491|h[Prismatic Prison of Pride]|h|r",
 				}, -- [289]
 				{
-					["timestamp"] = "2014-06-07 23:13:00",
 					["player"] = "Saxtris",
+					["timestamp"] = "2014-06-07 23:13:00",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:104725:0:0:0:0:0:0:1157174528:90:0:491|h[Assurance of Consequence]|h|r",
 				}, -- [290]
 				{
-					["timestamp"] = "2014-06-07 23:13:00",
 					["player"] = "Dekenut-WyrmrestAccord",
+					["timestamp"] = "2014-06-07 23:13:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104725:0:0:0:0:0:0:484644480:90:0:491|h[Assurance of Consequence]|h|r",
 				}, -- [291]
 				{
-					["timestamp"] = "2014-06-07 23:29:00",
 					["player"] = "Dekenut-WyrmrestAccord",
+					["timestamp"] = "2014-06-07 23:29:00",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:104812:0:0:0:0:0:0:670779136:90:0:491|h[Kor'kron Hand Cannon]|h|r",
 				}, -- [292]
@@ -8526,14 +8545,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-08 20:31:00",
 				}, -- [295]
 				{
-					["timestamp"] = "2014-06-10 21:08:00",
 					["player"] = "Simplelove",
+					["timestamp"] = "2014-06-10 21:08:00",
 					["coinsLeft"] = "3",
 					["reward"] = "|cffa335ee|Hitem:105421:0:0:0:0:0:0:1780358656:90:0:491|h[Cloak of Misguided Power]|h|r",
 				}, -- [296]
 				{
-					["timestamp"] = "2014-06-10 21:08:00",
 					["player"] = "Primalfears",
+					["timestamp"] = "2014-06-10 21:08:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104427:0:0:0:0:0:0:1453179136:90:0:491|h[Seal of Eternal Sorrow]|h|r",
 				}, -- [297]
@@ -8543,20 +8562,20 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-10 21:09:00",
 				}, -- [298]
 				{
-					["timestamp"] = "2014-06-10 21:09:00",
 					["player"] = "Realistic",
+					["timestamp"] = "2014-06-10 21:09:00",
 					["coinsLeft"] = "4",
 					["reward"] = "|cffa335ee|Hitem:104425:0:0:0:0:0:0:1454083200:90:0:491|h[Cloak of Misguided Power]|h|r",
 				}, -- [299]
 				{
-					["timestamp"] = "2014-06-10 21:09:00",
 					["player"] = "Eetheer",
+					["timestamp"] = "2014-06-10 21:09:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104425:0:0:0:0:0:0:1170492544:90:0:491|h[Cloak of Misguided Power]|h|r",
 				}, -- [300]
 				{
-					["timestamp"] = "2014-06-10 21:09:00",
 					["player"] = "Bigmccaw",
+					["timestamp"] = "2014-06-10 21:09:00",
 					["coinsLeft"] = "3",
 					["reward"] = "|cffa335ee|Hitem:105419:0:0:0:0:0:0:676670080:90:0:491|h[Ichor-Dripping Shoulderpads]|h|r",
 				}, -- [301]
@@ -8576,14 +8595,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-10 21:09:00",
 				}, -- [304]
 				{
-					["timestamp"] = "2014-06-10 21:10:00",
 					["player"] = "Nazuna",
+					["timestamp"] = "2014-06-10 21:10:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104424:0:0:0:0:0:0:1140055808:90:0:491|h[Hood of Swirling Senses]|h|r",
 				}, -- [305]
 				{
-					["timestamp"] = "2014-06-10 21:32:00",
 					["player"] = "Realistic",
+					["timestamp"] = "2014-06-10 21:32:00",
 					["coinsLeft"] = "3",
 					["reward"] = "|cffa335ee|Hitem:104456:0:0:0:0:0:0:672010752:90:0:491|h[Robes of the Blackened Watcher]|h|r",
 				}, -- [306]
@@ -8598,8 +8617,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-10 21:33:00",
 				}, -- [308]
 				{
-					["timestamp"] = "2014-06-10 21:42:00",
 					["player"] = "Moarbacon",
+					["timestamp"] = "2014-06-10 21:42:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104478:0:0:0:0:0:0:99717760:90:0:491|h[Prismatic Prison of Pride]|h|r",
 				}, -- [309]
@@ -8614,8 +8633,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-10 21:42:00",
 				}, -- [311]
 				{
-					["timestamp"] = "2014-06-10 21:42:00",
 					["player"] = "Memori",
+					["timestamp"] = "2014-06-10 21:42:00",
 					["coinsLeft"] = "5",
 					["reward"] = "|cffa335ee|Hitem:99715:0:0:0:0:0:0:1178945152:90:0:491|h[Chest of the Cursed Conqueror]|h|r",
 				}, -- [312]
@@ -8665,8 +8684,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-10 22:09:00",
 				}, -- [321]
 				{
-					["player"] = "Chugnoris",
 					["timestamp"] = "2014-06-10 22:09:00",
+					["player"] = "Chugnoris",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:104508:0:0:0:0:0:0:1949230464:90:0:491|h[Seismic Bore]|h|r",
 				}, -- [322]
@@ -8686,8 +8705,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-10 22:29:00",
 				}, -- [325]
 				{
-					["player"] = "Morgàn",
 					["timestamp"] = "2014-06-10 22:29:00",
+					["player"] = "Morgàn",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:105531:0:0:0:0:0:0:266332288:90:0:491|h[Wolf-Rider Spurs]|h|r",
 				}, -- [326]
@@ -8712,8 +8731,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-10 22:43:00",
 				}, -- [330]
 				{
-					["player"] = "Nytcort",
 					["timestamp"] = "2014-06-10 22:43:00",
+					["player"] = "Nytcort",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:99720:0:0:0:0:0:0:1228047872:90:0:491|h[Gauntlets of the Cursed Vanquisher]|h|r",
 				}, -- [331]
@@ -8728,14 +8747,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-10 22:43:00",
 				}, -- [333]
 				{
-					["player"] = "Morgàn",
 					["timestamp"] = "2014-06-10 22:57:00",
+					["player"] = "Morgàn",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104569:0:0:0:0:0:0:2108680960:90:0:491|h[Legplates of Willful Doom]|h|r",
 				}, -- [334]
 				{
-					["player"] = "Realistic",
 					["timestamp"] = "2014-06-10 22:58:00",
+					["player"] = "Realistic",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104565:0:0:0:0:0:0:1873938816:90:0:491|h[Lazahk's Lost Shadowrap]|h|r",
 				}, -- [335]
@@ -8760,8 +8779,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-10 22:58:00",
 				}, -- [339]
 				{
-					["player"] = "Clancey",
 					["timestamp"] = "2014-06-10 22:58:00",
+					["player"] = "Clancey",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104570:0:0:0:0:0:0:1960212992:90:0:491|h[Malkorok's Tainted Dog Tags]|h|r",
 				}, -- [340]
@@ -8771,8 +8790,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-10 22:59:00",
 				}, -- [341]
 				{
-					["player"] = "Simplelove",
 					["timestamp"] = "2014-06-10 23:15:00",
+					["player"] = "Simplelove",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:104598:0:0:0:0:0:0:1180741248:90:0:491|h[Immaculately Preserved Wand]|h|r",
 				}, -- [342]
@@ -8782,8 +8801,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-10 23:15:00",
 				}, -- [343]
 				{
-					["player"] = "Memori",
 					["timestamp"] = "2014-06-10 23:16:00",
+					["player"] = "Memori",
 					["coinsLeft"] = "3",
 					["reward"] = "|cffa335ee|Hitem:104593:0:0:0:0:0:0:51970944:90:0:491|h[Seal of the Forgotten Kings]|h|r",
 				}, -- [344]
@@ -8838,8 +8857,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-10 23:33:00",
 				}, -- [354]
 				{
-					["timestamp"] = "2014-06-10 23:33:00",
 					["player"] = "Memori",
+					["timestamp"] = "2014-06-10 23:33:00",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:104611:0:0:0:0:0:0:2122300672:90:0:491|h[Thok's Acid-Grooved Tooth]|h|r",
 				}, -- [355]
@@ -8859,14 +8878,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-10 23:47:00",
 				}, -- [358]
 				{
-					["timestamp"] = "2014-06-10 23:48:00",
 					["player"] = "Tydeson",
+					["timestamp"] = "2014-06-10 23:48:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104616:0:0:0:0:0:0:1704478720:90:0:491|h[Ticking Ebon Detonator]|h|r",
 				}, -- [359]
 				{
-					["timestamp"] = "2014-06-10 23:48:00",
 					["player"] = "Layonhooves",
+					["timestamp"] = "2014-06-10 23:48:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104626:0:0:0:0:0:0:1973225344:90:0:491|h[Blackfuse's Blasting Cord]|h|r",
 				}, -- [360]
@@ -8876,8 +8895,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-10 23:49:00",
 				}, -- [361]
 				{
-					["timestamp"] = "2014-06-11 00:21:00",
 					["player"] = "Multichill",
+					["timestamp"] = "2014-06-11 00:21:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:99726:0:0:0:0:0:0:630659840:90:0:491|h[Leggings of the Cursed Vanquisher]|h|r",
 				}, -- [362]
@@ -8892,14 +8911,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-11 00:21:00",
 				}, -- [364]
 				{
-					["timestamp"] = "2014-06-11 00:21:00",
 					["player"] = "Valteros",
+					["timestamp"] = "2014-06-11 00:21:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104631:0:0:0:0:0:0:1926243584:90:0:491|h[Rik'kal's Bloody Scalpel]|h|r",
 				}, -- [365]
 				{
-					["timestamp"] = "2014-06-11 00:21:00",
 					["player"] = "Tydeson",
+					["timestamp"] = "2014-06-11 00:21:00",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:104627:0:0:0:0:0:0:52808192:90:0:491|h[Hisek's Reserve Longbow]|h|r",
 				}, -- [366]
@@ -8934,20 +8953,20 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-11 22:14:00",
 				}, -- [372]
 				{
-					["player"] = "Valteros",
 					["timestamp"] = "2014-06-11 22:14:00",
+					["player"] = "Valteros",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104654:0:0:0:0:0:0:804469120:90:0:491|h[Revelations of Y'Shaarj]|h|r",
 				}, -- [373]
 				{
-					["player"] = "Morgàn",
 					["timestamp"] = "2014-06-11 22:14:00",
+					["player"] = "Morgàn",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:104645:0:0:0:0:0:0:612771200:90:0:491|h[Spaulders of the Fallen Warchief]|h|r",
 				}, -- [374]
 				{
-					["player"] = "Mani",
 					["timestamp"] = "2014-06-11 22:14:00",
+					["player"] = "Mani",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:104645:0:0:0:0:0:0:1436028800:90:0:491|h[Spaulders of the Fallen Warchief]|h|r",
 				}, -- [375]
@@ -8997,8 +9016,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-11 22:14:00",
 				}, -- [384]
 				{
-					["player"] = "Layonhooves",
 					["timestamp"] = "2014-06-11 22:14:00",
+					["player"] = "Layonhooves",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:105641:0:0:0:0:0:0:1790075392:90:0:491|h[Spaulders of the Fallen Warchief]|h|r",
 				}, -- [385]
@@ -9018,8 +9037,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-17 21:08:00",
 				}, -- [388]
 				{
-					["timestamp"] = "2014-06-17 21:08:00",
 					["player"] = "Wazze",
+					["timestamp"] = "2014-06-17 21:08:00",
 					["coinsLeft"] = "5",
 					["reward"] = "|cffa335ee|Hitem:105423:0:0:0:0:0:0:2060759552:90:0:491|h[Seal of Eternal Sorrow]|h|r",
 				}, -- [389]
@@ -9044,8 +9063,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-17 21:08:00",
 				}, -- [393]
 				{
-					["timestamp"] = "2014-06-17 21:08:00",
 					["player"] = "Shinerr",
+					["timestamp"] = "2014-06-17 21:08:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104429:0:0:0:0:0:0:1788001664:90:0:491|h[Bracers of Purified Spirit]|h|r",
 				}, -- [394]
@@ -9055,14 +9074,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-17 21:08:00",
 				}, -- [395]
 				{
-					["timestamp"] = "2014-06-17 21:08:00",
 					["player"] = "Excrusader",
+					["timestamp"] = "2014-06-17 21:08:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104427:0:0:0:0:0:0:1596272384:90:0:491|h[Seal of Eternal Sorrow]|h|r",
 				}, -- [396]
 				{
-					["timestamp"] = "2014-06-17 21:09:00",
 					["player"] = "Memori",
+					["timestamp"] = "2014-06-17 21:09:00",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:104416:0:0:0:0:0:0:2071175936:90:0:491|h[Chestplate of Congealed Corrosion]|h|r",
 				}, -- [397]
@@ -9097,8 +9116,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-17 21:27:00",
 				}, -- [403]
 				{
-					["player"] = "Nathreizm",
 					["timestamp"] = "2014-06-17 21:36:00",
+					["player"] = "Nathreizm",
 					["coinsLeft"] = "6",
 					["reward"] = "|cffa335ee|Hitem:104476:0:0:0:0:0:0:77783680:90:0:491|h[Assurance of Consequence]|h|r",
 				}, -- [404]
@@ -9133,8 +9152,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-17 21:51:00",
 				}, -- [410]
 				{
-					["player"] = "Calade",
 					["timestamp"] = "2014-06-17 21:52:00",
+					["player"] = "Calade",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104489:0:0:0:0:0:0:1906702720:90:0:491|h[Korgra's Venom-Soaked Gauntlets]|h|r",
 				}, -- [411]
@@ -9159,8 +9178,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-17 22:16:00",
 				}, -- [415]
 				{
-					["player"] = "Ookiniz",
 					["timestamp"] = "2014-06-17 22:16:00",
+					["player"] = "Ookiniz",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:105539:0:0:0:0:0:0:718164224:90:0:491|h[Ashflare Pendant]|h|r",
 				}, -- [416]
@@ -9180,8 +9199,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-17 22:16:00",
 				}, -- [419]
 				{
-					["player"] = "Kwiqast",
 					["timestamp"] = "2014-06-17 22:16:00",
+					["player"] = "Kwiqast",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:104541:0:0:0:0:0:0:2030518784:90:0:491|h[Toxic Tornado Treads]|h|r",
 				}, -- [420]
@@ -9211,20 +9230,20 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-17 22:29:00",
 				}, -- [425]
 				{
-					["player"] = "Bloodballs",
 					["timestamp"] = "2014-06-17 22:30:00",
+					["player"] = "Bloodballs",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:104556:0:0:0:0:0:0:485245312:90:0:491|h[Robes of the Warrior's Fall]|h|r",
 				}, -- [426]
 				{
-					["player"] = "Bigmccaw",
 					["timestamp"] = "2014-06-17 22:41:00",
+					["player"] = "Bigmccaw",
 					["coinsLeft"] = "4",
 					["reward"] = "|cffa335ee|Hitem:105570:0:0:0:0:0:0:1798373504:90:0:491|h[Hood of Perpetual Implosion]|h|r",
 				}, -- [427]
 				{
-					["player"] = "Ookiniz",
 					["timestamp"] = "2014-06-17 22:41:00",
+					["player"] = "Ookiniz",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:104576:0:0:0:0:0:0:445318272:90:0:491|h[Frenzied Crystal of Rage]|h|r",
 				}, -- [428]
@@ -9239,8 +9258,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-17 22:41:00",
 				}, -- [430]
 				{
-					["player"] = "Shinerr",
 					["timestamp"] = "2014-06-17 22:41:00",
+					["player"] = "Shinerr",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:105577:0:0:0:0:0:0:20161664:90:0:491|h[Bracers of Averted Fatality]|h|r",
 				}, -- [431]
@@ -9265,8 +9284,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-17 22:42:00",
 				}, -- [435]
 				{
-					["player"] = "Simplelove",
 					["timestamp"] = "2014-06-17 22:56:00",
+					["player"] = "Simplelove",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104595:0:0:0:0:0:0:2073392640:90:0:491|h[Avool's Ancestral Bracers]|h|r",
 				}, -- [436]
@@ -9316,8 +9335,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-17 23:10:00",
 				}, -- [445]
 				{
-					["player"] = "Eetheer",
 					["timestamp"] = "2014-06-17 23:10:00",
+					["player"] = "Eetheer",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:99724:0:0:0:0:0:0:331293824:90:0:491|h[Helm of the Cursed Conqueror]|h|r",
 				}, -- [446]
@@ -9327,8 +9346,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-17 23:10:00",
 				}, -- [447]
 				{
-					["player"] = "Shotsfired",
 					["timestamp"] = "2014-06-17 23:10:00",
+					["player"] = "Shotsfired",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:105602:0:0:0:0:0:0:261575936:90:0:491|h[Gleaming Eye of the Devilsaur]|h|r",
 				}, -- [448]
@@ -9378,14 +9397,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-18 00:09:00",
 				}, -- [457]
 				{
-					["timestamp"] = "2014-06-18 00:09:00",
 					["player"] = "Shotsfired",
+					["timestamp"] = "2014-06-18 00:09:00",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:104627:0:0:0:0:0:0:777344:90:0:491|h[Hisek's Reserve Longbow]|h|r",
 				}, -- [458]
 				{
-					["timestamp"] = "2014-06-18 00:09:00",
 					["player"] = "Shotsfired",
+					["timestamp"] = "2014-06-18 00:09:00",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cff0070dd|Hitem:104165:0:0:0:0:0:0:777344:90:0:0|h[Kovok]|h|r",
 				}, -- [459]
@@ -9405,8 +9424,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-18 00:37:00",
 				}, -- [462]
 				{
-					["timestamp"] = "2014-06-18 00:37:00",
 					["player"] = "Dotsfired",
+					["timestamp"] = "2014-06-18 00:37:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:105867:0:0:0:0:0:0:28390528:90:0:491|h[Essence of the Cursed Conqueror]|h|r",
 				}, -- [463]
@@ -9421,8 +9440,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-18 00:37:00",
 				}, -- [465]
 				{
-					["timestamp"] = "2014-06-18 00:37:00",
 					["player"] = "Simplelove",
+					["timestamp"] = "2014-06-18 00:37:00",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:104654:0:0:0:0:0:0:2144656640:90:0:491|h[Revelations of Y'Shaarj]|h|r",
 				}, -- [466]
@@ -9447,8 +9466,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-18 00:38:00",
 				}, -- [470]
 				{
-					["timestamp"] = "2014-06-18 00:40:00",
 					["player"] = "Memori",
+					["timestamp"] = "2014-06-18 00:40:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:105867:0:0:0:0:0:0:1663345792:90:0:491|h[Essence of the Cursed Conqueror]|h|r",
 				}, -- [471]
@@ -9463,8 +9482,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-18 23:31:00",
 				}, -- [473]
 				{
-					["timestamp"] = "2014-06-18 23:31:00",
 					["player"] = "Wafflesrbetr",
+					["timestamp"] = "2014-06-18 23:31:00",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:104732:0:0:0:0:0:0:88602624:90:0:491|h[Greatsword of Pride's Fall]|h|r",
 				}, -- [474]
@@ -9484,8 +9503,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-19 00:26:00",
 				}, -- [477]
 				{
-					["player"] = "Fizzled-Cho'gall",
 					["timestamp"] = "2014-06-19 00:43:00",
+					["player"] = "Fizzled-Cho'gall",
 					["coinsLeft"] = "4",
 					["reward"] = "|cffa335ee|Hitem:104809:0:0:0:0:0:0:1489414016:90:0:491|h[Bulwark of the Fallen General]|h|r",
 				}, -- [478]
@@ -9500,8 +9519,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-19 22:25:00",
 				}, -- [480]
 				{
-					["timestamp"] = "2014-06-19 22:25:00",
 					["player"] = "Tomsawyer",
+					["timestamp"] = "2014-06-19 22:25:00",
 					["coinsLeft"] = "8",
 					["reward"] = "|cffa335ee|Hitem:104436:0:0:0:0:0:0:1076752512:90:0:491|h[Grips of Unending Anguish]|h|r",
 				}, -- [481]
@@ -9516,8 +9535,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-19 22:42:00",
 				}, -- [483]
 				{
-					["timestamp"] = "2014-06-19 22:42:00",
 					["player"] = "Hashkilledme",
+					["timestamp"] = "2014-06-19 22:42:00",
 					["coinsLeft"] = "7",
 					["reward"] = "|cffa335ee|Hitem:104466:0:0:0:0:0:0:1106075904:90:0:491|h[Blight Hurlers]|h|r",
 				}, -- [484]
@@ -9532,8 +9551,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-19 22:43:00",
 				}, -- [486]
 				{
-					["timestamp"] = "2014-06-19 22:59:00",
 					["player"] = "Nutterrs",
+					["timestamp"] = "2014-06-19 22:59:00",
 					["coinsLeft"] = "3",
 					["reward"] = "|cffa335ee|Hitem:104479:0:0:0:0:0:0:1978139008:90:0:491|h[Gaze of Arrogance]|h|r",
 				}, -- [487]
@@ -9563,14 +9582,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-19 23:48:00",
 				}, -- [492]
 				{
-					["timestamp"] = "2014-06-19 23:49:00",
 					["player"] = "Gitt",
+					["timestamp"] = "2014-06-19 23:49:00",
 					["coinsLeft"] = "5",
 					["reward"] = "|cffa335ee|Hitem:104487:0:0:0:0:0:0:1931626112:90:0:491|h[Swift Serpent Signet]|h|r",
 				}, -- [493]
 				{
-					["player"] = "Spih",
 					["timestamp"] = "2014-06-20 00:48:00",
+					["player"] = "Spih",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104845:0:0:0:0:0:0:235092224:90:0:491|h[Mantid Vizier's Robes]|h|r",
 				}, -- [494]
@@ -9580,8 +9599,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-20 01:03:00",
 				}, -- [495]
 				{
-					["player"] = "Icydeadpeopl",
 					["timestamp"] = "2014-06-20 01:03:00",
+					["player"] = "Icydeadpeopl",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:99748:0:0:0:0:0:0:931108736:90:0:491|h[Helm of the Cursed Vanquisher]|h|r",
 				}, -- [496]
@@ -9596,20 +9615,20 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-22 11:53:00",
 				}, -- [498]
 				{
-					["timestamp"] = "2014-06-23 22:31:00",
 					["player"] = "Mithrios-Rexxar",
+					["timestamp"] = "2014-06-23 22:31:00",
 					["coinsLeft"] = "7",
 					["reward"] = "|cffa335ee|Hitem:103798:0:0:0:0:0:0:312723456:90:0:491|h[Bloodclaw Band]|h|r",
 				}, -- [499]
 				{
-					["timestamp"] = "2014-06-23 23:54:00",
 					["player"] = "Primalfearz",
+					["timestamp"] = "2014-06-23 23:54:00",
 					["coinsLeft"] = "8",
 					["reward"] = "|cffa335ee|Hitem:104554:0:0:0:0:0:0:242037120:90:0:491|h[Arcweaver Spell Sword]|h|r",
 				}, -- [500]
 				{
-					["timestamp"] = "2014-06-23 23:54:00",
 					["player"] = "Nytbolt",
+					["timestamp"] = "2014-06-23 23:54:00",
 					["coinsLeft"] = "6",
 					["reward"] = "|cffa335ee|Hitem:99722:0:0:0:0:0:0:1723940992:90:0:491|h[Gauntlets of the Cursed Protector]|h|r",
 				}, -- [501]
@@ -9644,8 +9663,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-24 21:07:00",
 				}, -- [507]
 				{
-					["timestamp"] = "2014-06-24 21:07:00",
 					["player"] = "Burritobowl",
+					["timestamp"] = "2014-06-24 21:07:00",
 					["coinsLeft"] = "4",
 					["reward"] = "|cffa335ee|Hitem:104426:0:0:0:0:0:0:1968483200:90:0:491|h[Purified Bindings of Immerseus]|h|r",
 				}, -- [508]
@@ -9690,14 +9709,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-24 21:08:00",
 				}, -- [516]
 				{
-					["timestamp"] = "2014-06-24 21:08:00",
 					["player"] = "Nytbolt",
+					["timestamp"] = "2014-06-24 21:08:00",
 					["coinsLeft"] = "8",
 					["reward"] = "|cffa335ee|Hitem:104430:0:0:0:0:0:0:641985664:90:0:491|h[Soul-Soaked Gloves]|h|r",
 				}, -- [517]
 				{
-					["timestamp"] = "2014-06-24 21:08:00",
 					["player"] = "Memori",
+					["timestamp"] = "2014-06-24 21:08:00",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:105428:0:0:0:0:0:0:1585316608:90:0:491|h[Waterwalker Greatboots]|h|r",
 				}, -- [518]
@@ -9707,8 +9726,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-24 21:17:00",
 				}, -- [519]
 				{
-					["timestamp"] = "2014-06-24 21:17:00",
 					["player"] = "Morgàn",
+					["timestamp"] = "2014-06-24 21:17:00",
 					["coinsLeft"] = "4",
 					["reward"] = "|cffa335ee|Hitem:104438:0:0:0:0:0:0:707873024:90:0:491|h[Darkfallen Shoulderplates]|h|r",
 				}, -- [520]
@@ -9758,20 +9777,20 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-24 21:37:00",
 				}, -- [529]
 				{
-					["timestamp"] = "2014-06-24 21:37:00",
 					["player"] = "Git",
+					["timestamp"] = "2014-06-24 21:37:00",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:105478:0:0:0:0:0:0:1172929792:90:0:491|h[Greaves of Sublime Superiority]|h|r",
 				}, -- [530]
 				{
-					["timestamp"] = "2014-06-24 21:38:00",
 					["player"] = "Memori",
+					["timestamp"] = "2014-06-24 21:38:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:105474:0:0:0:0:0:0:226185472:90:0:491|h[Prismatic Prison of Pride]|h|r",
 				}, -- [531]
 				{
-					["timestamp"] = "2014-06-24 21:38:00",
 					["player"] = "Memori",
+					["timestamp"] = "2014-06-24 21:38:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cff0070dd|Hitem:104162:0:0:0:0:0:0:226185472:90:0:0|h[Droplet of Y'Shaarj]|h|r",
 				}, -- [532]
@@ -9791,14 +9810,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-24 21:51:00",
 				}, -- [535]
 				{
-					["timestamp"] = "2014-06-24 21:51:00",
 					["player"] = "Realistic",
+					["timestamp"] = "2014-06-24 21:51:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:105483:0:0:0:0:0:0:1043418880:90:0:491|h[Swift Serpent Signet]|h|r",
 				}, -- [536]
 				{
-					["timestamp"] = "2014-06-24 21:51:00",
 					["player"] = "Eetheer",
+					["timestamp"] = "2014-06-24 21:51:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104497:0:0:0:0:0:0:798777728:90:0:491|h[Bone-Inlaid Sandals]|h|r",
 				}, -- [537]
@@ -9823,8 +9842,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-24 22:01:00",
 				}, -- [541]
 				{
-					["timestamp"] = "2014-06-24 22:18:00",
 					["player"] = "Kwiqast",
+					["timestamp"] = "2014-06-24 22:18:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:105537:0:0:0:0:0:0:491022464:90:0:491|h[Toxic Tornado Treads]|h|r",
 				}, -- [542]
@@ -9834,8 +9853,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-24 22:18:00",
 				}, -- [543]
 				{
-					["timestamp"] = "2014-06-24 22:18:00",
 					["player"] = "Wazze",
+					["timestamp"] = "2014-06-24 22:18:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:105541:0:0:0:0:0:0:77071872:90:0:491|h[Kardris' Scepter]|h|r",
 				}, -- [544]
@@ -9850,14 +9869,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-24 22:18:00",
 				}, -- [546]
 				{
-					["timestamp"] = "2014-06-24 22:18:00",
 					["player"] = "Bloodbolts",
+					["timestamp"] = "2014-06-24 22:18:00",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:105541:0:0:0:0:0:0:990212608:90:0:491|h[Kardris' Scepter]|h|r",
 				}, -- [547]
 				{
-					["timestamp"] = "2014-06-24 22:19:00",
 					["player"] = "Morgàn",
+					["timestamp"] = "2014-06-24 22:19:00",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:104538:0:0:0:0:0:0:1861603456:90:0:491|h[Bloodclaw Band]|h|r",
 				}, -- [548]
@@ -9897,8 +9916,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-24 22:44:00",
 				}, -- [555]
 				{
-					["player"] = "Layonhooves",
 					["timestamp"] = "2014-06-24 22:44:00",
+					["player"] = "Layonhooves",
 					["coinsLeft"] = "5",
 					["reward"] = "|cffa335ee|Hitem:104570:0:0:0:0:0:0:2133281152:90:0:491|h[Malkorok's Tainted Dog Tags]|h|r",
 				}, -- [556]
@@ -9908,14 +9927,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-24 22:45:00",
 				}, -- [557]
 				{
-					["player"] = "Excrusader",
 					["timestamp"] = "2014-06-24 22:45:00",
+					["player"] = "Excrusader",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104577:0:0:0:0:0:0:218935296:90:0:491|h[Black-Blooded Drape]|h|r",
 				}, -- [558]
 				{
-					["player"] = "Chugnoris",
 					["timestamp"] = "2014-06-24 22:45:00",
+					["player"] = "Chugnoris",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:104565:0:0:0:0:0:0:11743360:90:0:491|h[Lazahk's Lost Shadowrap]|h|r",
 				}, -- [559]
@@ -9940,8 +9959,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-24 23:09:00",
 				}, -- [563]
 				{
-					["player"] = "Nazuna",
 					["timestamp"] = "2014-06-24 23:10:00",
+					["player"] = "Nazuna",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:105592:0:0:0:0:0:0:363476864:90:0:491|h[Mantid Vizier's Robes]|h|r",
 				}, -- [564]
@@ -9966,8 +9985,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-24 23:25:00",
 				}, -- [568]
 				{
-					["player"] = "Bigmccaw",
 					["timestamp"] = "2014-06-24 23:25:00",
+					["player"] = "Bigmccaw",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104611:0:0:0:0:0:0:1856134912:90:0:491|h[Thok's Acid-Grooved Tooth]|h|r",
 				}, -- [569]
@@ -9997,8 +10016,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-24 23:25:00",
 				}, -- [574]
 				{
-					["player"] = "Memori",
 					["timestamp"] = "2014-06-24 23:25:00",
+					["player"] = "Memori",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104610:0:0:0:0:0:0:287984000:90:0:491|h[Signet of the Dinomancers]|h|r",
 				}, -- [575]
@@ -10033,14 +10052,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-24 23:49:00",
 				}, -- [581]
 				{
-					["player"] = "Memori",
 					["timestamp"] = "2014-06-24 23:50:00",
+					["player"] = "Memori",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:99718:0:0:0:0:0:0:1627817728:90:0:491|h[Shoulders of the Cursed Conqueror]|h|r",
 				}, -- [582]
 				{
-					["player"] = "Gramz",
 					["timestamp"] = "2014-06-24 23:51:00",
+					["player"] = "Gramz",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:105620:0:0:0:0:0:0:1796841472:90:0:491|h[Asgorathian Blood Seal]|h|r",
 				}, -- [583]
@@ -10060,8 +10079,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-25 00:17:00",
 				}, -- [586]
 				{
-					["player"] = "Nytcort",
 					["timestamp"] = "2014-06-25 00:17:00",
+					["player"] = "Nytcort",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:99726:0:0:0:0:0:0:842791808:90:0:491|h[Leggings of the Cursed Vanquisher]|h|r",
 				}, -- [587]
@@ -10086,8 +10105,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-25 01:01:00",
 				}, -- [591]
 				{
-					["player"] = "Urtag",
 					["timestamp"] = "2014-06-25 01:01:00",
+					["player"] = "Urtag",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:105639:0:0:0:0:0:0:490477568:90:0:491|h[Shoulderguards of Intended Power]|h|r",
 				}, -- [592]
@@ -10117,8 +10136,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-25 01:02:00",
 				}, -- [597]
 				{
-					["player"] = "Primalfears",
 					["timestamp"] = "2014-06-25 01:02:00",
+					["player"] = "Primalfears",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:105868:0:0:0:0:0:0:388147456:90:0:491|h[Essence of the Cursed Vanquisher]|h|r",
 				}, -- [598]
@@ -10148,14 +10167,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-25 01:03:00",
 				}, -- [603]
 				{
-					["timestamp"] = "2014-06-26 21:51:00",
 					["player"] = "Mslysergic-Cho'gall",
+					["timestamp"] = "2014-06-26 21:51:00",
 					["coinsLeft"] = "4",
 					["reward"] = "|cffa335ee|Hitem:104426:0:0:0:0:0:0:906872960:90:0:491|h[Purified Bindings of Immerseus]|h|r",
 				}, -- [604]
 				{
-					["timestamp"] = "2014-06-26 21:52:00",
 					["player"] = "Primalfearz",
+					["timestamp"] = "2014-06-26 21:52:00",
 					["coinsLeft"] = "7",
 					["reward"] = "|cffa335ee|Hitem:105421:0:0:0:0:0:0:1390915968:90:0:491|h[Cloak of Misguided Power]|h|r",
 				}, -- [605]
@@ -10180,14 +10199,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-26 22:13:00",
 				}, -- [609]
 				{
-					["player"] = "Primalfearz",
 					["timestamp"] = "2014-06-26 22:13:00",
+					["player"] = "Primalfearz",
 					["coinsLeft"] = "6",
 					["reward"] = "|cffa335ee|Hitem:104444:0:0:0:0:0:0:1712338944:90:0:491|h[Robes of the Tendered Heart]|h|r",
 				}, -- [610]
 				{
-					["player"] = "Dustya",
 					["timestamp"] = "2014-06-26 22:13:00",
+					["player"] = "Dustya",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104450:0:0:0:0:0:0:187085184:90:0:491|h[Sabatons of Defilement]|h|r",
 				}, -- [611]
@@ -10202,8 +10221,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-26 22:27:00",
 				}, -- [613]
 				{
-					["player"] = "Mslysergic-Cho'gall",
 					["timestamp"] = "2014-06-26 22:39:00",
+					["player"] = "Mslysergic-Cho'gall",
 					["coinsLeft"] = "3",
 					["reward"] = "|cffa335ee|Hitem:99715:0:0:0:0:0:0:1056058112:90:0:491|h[Chest of the Cursed Conqueror]|h|r",
 				}, -- [614]
@@ -10218,8 +10237,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-26 22:39:00",
 				}, -- [616]
 				{
-					["player"] = "Hashkilledme",
 					["timestamp"] = "2014-06-26 22:57:00",
+					["player"] = "Hashkilledme",
 					["coinsLeft"] = "3",
 					["reward"] = "|cffa335ee|Hitem:104499:0:0:0:0:0:0:705917056:90:0:491|h[Flameslinger's Fiery Cowl]|h|r",
 				}, -- [617]
@@ -10239,8 +10258,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-06-26 22:58:00",
 				}, -- [620]
 				{
-					["player"] = "Hashkilledme",
 					["timestamp"] = "2014-06-26 23:16:00",
+					["player"] = "Hashkilledme",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:104519:0:0:0:0:0:0:1515286400:90:0:491|h[Belt of Ominous Trembles]|h|r",
 				}, -- [621]
@@ -10275,8 +10294,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-01 21:09:00",
 				}, -- [627]
 				{
-					["player"] = "Urtag",
 					["timestamp"] = "2014-07-01 21:10:00",
+					["player"] = "Urtag",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:104414:0:0:0:0:0:0:910233728:90:0:491|h[Puddle Punishers]|h|r",
 				}, -- [628]
@@ -10316,8 +10335,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-01 21:10:00",
 				}, -- [635]
 				{
-					["player"] = "Memori",
 					["timestamp"] = "2014-07-01 21:11:00",
+					["player"] = "Memori",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104432:0:0:0:0:0:0:1297919488:90:0:491|h[Waterwalker Greatboots]|h|r",
 				}, -- [636]
@@ -10337,8 +10356,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-01 21:28:00",
 				}, -- [639]
 				{
-					["player"] = "Tydeson",
 					["timestamp"] = "2014-07-01 21:28:00",
+					["player"] = "Tydeson",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104459:0:0:0:0:0:0:724617216:90:0:491|h[Quarantine Shoulderguards]|h|r",
 				}, -- [640]
@@ -10363,20 +10382,20 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-01 21:38:00",
 				}, -- [644]
 				{
-					["player"] = "Lifeconsumer",
 					["timestamp"] = "2014-07-01 21:38:00",
+					["player"] = "Lifeconsumer",
 					["coinsLeft"] = "7",
 					["reward"] = "|cffa335ee|Hitem:104482:0:0:0:0:0:0:109134464:90:0:491|h[Greaves of Sublime Superiority]|h|r",
 				}, -- [645]
 				{
-					["player"] = "Layonhooves",
 					["timestamp"] = "2014-07-01 21:39:00",
+					["player"] = "Layonhooves",
 					["coinsLeft"] = "4",
 					["reward"] = "|cffa335ee|Hitem:99715:0:0:0:0:0:0:78172416:90:0:491|h[Chest of the Cursed Conqueror]|h|r",
 				}, -- [646]
 				{
-					["timestamp"] = "2014-07-01 21:52:00",
 					["player"] = "Urtag",
+					["timestamp"] = "2014-07-01 21:52:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104486:0:0:0:0:0:0:1239668608:90:0:491|h[Dagryn's Discarded Longbow]|h|r",
 				}, -- [647]
@@ -10411,32 +10430,32 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-01 22:16:00",
 				}, -- [653]
 				{
-					["player"] = "Dotdropnroll-ShadowCouncil",
 					["timestamp"] = "2014-07-01 22:17:00",
+					["player"] = "Dotdropnroll-ShadowCouncil",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:105537:0:0:0:0:0:0:239955968:90:0:491|h[Toxic Tornado Treads]|h|r",
 				}, -- [654]
 				{
-					["player"] = "Lifeconsumer",
 					["timestamp"] = "2014-07-01 22:17:00",
+					["player"] = "Lifeconsumer",
 					["coinsLeft"] = "5",
 					["reward"] = "|cffa335ee|Hitem:104537:0:0:0:0:0:0:1403986944:90:0:491|h[Ashen Wall Girdle]|h|r",
 				}, -- [655]
 				{
-					["player"] = "Gramz",
 					["timestamp"] = "2014-07-01 22:17:00",
+					["player"] = "Gramz",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104538:0:0:0:0:0:0:1190161024:90:0:491|h[Bloodclaw Band]|h|r",
 				}, -- [656]
 				{
-					["player"] = "Calade",
 					["timestamp"] = "2014-07-01 22:17:00",
+					["player"] = "Calade",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:105528:0:0:0:0:0:0:325937280:90:0:491|h[Damron's Belt of Darkness]|h|r",
 				}, -- [657]
 				{
-					["player"] = "Clancey",
 					["timestamp"] = "2014-07-01 22:17:00",
+					["player"] = "Clancey",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:105532:0:0:0:0:0:0:1713042944:90:0:491|h[Breastplate of Shamanic Mirrors]|h|r",
 				}, -- [658]
@@ -10446,8 +10465,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-01 22:18:00",
 				}, -- [659]
 				{
-					["player"] = "Realistic",
 					["timestamp"] = "2014-07-01 22:18:00",
+					["player"] = "Realistic",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104545:0:0:0:0:0:0:1316763648:90:0:491|h[Kardris' Scepter]|h|r",
 				}, -- [660]
@@ -10477,8 +10496,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-01 22:49:00",
 				}, -- [665]
 				{
-					["player"] = "Shinerr",
 					["timestamp"] = "2014-07-01 22:49:00",
+					["player"] = "Shinerr",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104577:0:0:0:0:0:0:798382208:90:0:491|h[Black-Blooded Drape]|h|r",
 				}, -- [666]
@@ -10498,26 +10517,26 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-01 23:13:00",
 				}, -- [669]
 				{
-					["player"] = "Multichill",
 					["timestamp"] = "2014-07-01 23:13:00",
+					["player"] = "Multichill",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:105591:0:0:0:0:0:0:1940019968:90:0:491|h[Avool's Ancestral Bracers]|h|r",
 				}, -- [670]
 				{
-					["player"] = "Wazze",
 					["timestamp"] = "2014-07-01 23:13:00",
+					["player"] = "Wazze",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:104595:0:0:0:0:0:0:427918208:90:0:491|h[Avool's Ancestral Bracers]|h|r",
 				}, -- [671]
 				{
-					["player"] = "Bloodbolts",
 					["timestamp"] = "2014-07-01 23:13:00",
+					["player"] = "Bloodbolts",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104601:0:0:0:0:0:0:1845796736:90:0:491|h[Chitin-Link Chain Belt]|h|r",
 				}, -- [672]
 				{
-					["player"] = "Nazuna",
 					["timestamp"] = "2014-07-01 23:14:00",
+					["player"] = "Nazuna",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104598:0:0:0:0:0:0:2036032384:90:0:491|h[Immaculately Preserved Wand]|h|r",
 				}, -- [673]
@@ -10587,8 +10606,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-01 23:38:00",
 				}, -- [686]
 				{
-					["player"] = "Burritobowl",
 					["timestamp"] = "2014-07-01 23:58:00",
+					["player"] = "Burritobowl",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104622:0:0:0:0:0:0:1062253568:90:0:491|h[Powder-Stained Totemic Treads]|h|r",
 				}, -- [687]
@@ -10613,14 +10632,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-01 23:59:00",
 				}, -- [691]
 				{
-					["player"] = "Lifeconsumer",
 					["timestamp"] = "2014-07-01 23:59:00",
+					["player"] = "Lifeconsumer",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:104624:0:0:0:0:0:0:180134144:90:0:491|h[Asgorathian Blood Seal]|h|r",
 				}, -- [692]
 				{
-					["player"] = "Nytcort",
 					["timestamp"] = "2014-07-01 23:59:00",
+					["player"] = "Nytcort",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:99717:0:0:0:0:0:0:257830656:90:0:491|h[Shoulders of the Cursed Vanquisher]|h|r",
 				}, -- [693]
@@ -10655,14 +10674,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-02 00:28:00",
 				}, -- [699]
 				{
-					["player"] = "Layonhooves",
 					["timestamp"] = "2014-07-02 00:28:00",
+					["player"] = "Layonhooves",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:99712:0:0:0:0:0:0:1428107136:90:0:491|h[Leggings of the Cursed Conqueror]|h|r",
 				}, -- [700]
 				{
-					["player"] = "Layonhooves",
 					["timestamp"] = "2014-07-02 00:28:00",
+					["player"] = "Layonhooves",
 					["coinsLeft"] = "1",
 					["reward"] = "|cff0070dd|Hitem:104165:0:0:0:0:0:0:1428107136:90:0:0|h[Kovok]|h|r",
 				}, -- [701]
@@ -10677,8 +10696,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-02 00:29:00",
 				}, -- [703]
 				{
-					["timestamp"] = "2014-07-02 00:56:00",
 					["player"] = "Urtag",
+					["timestamp"] = "2014-07-02 00:56:00",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:105866:0:0:0:0:0:0:1062526336:90:0:491|h[Essence of the Cursed Protector]|h|r",
 				}, -- [704]
@@ -10728,14 +10747,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-02 00:57:00",
 				}, -- [713]
 				{
-					["timestamp"] = "2014-07-02 00:57:00",
 					["player"] = "Gramz",
+					["timestamp"] = "2014-07-02 00:57:00",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:105867:0:0:0:0:0:0:9069568:90:0:491|h[Essence of the Cursed Conqueror]|h|r",
 				}, -- [714]
 				{
-					["timestamp"] = "2014-07-02 00:57:00",
 					["player"] = "Chugnoris",
+					["timestamp"] = "2014-07-02 00:57:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:105866:0:0:0:0:0:0:1143922432:90:0:491|h[Essence of the Cursed Protector]|h|r",
 				}, -- [715]
@@ -10755,14 +10774,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-02 00:57:00",
 				}, -- [718]
 				{
-					["timestamp"] = "2014-07-02 22:43:00",
 					["player"] = "Rämpage-Cho'gall",
+					["timestamp"] = "2014-07-02 22:43:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104865:0:0:0:0:0:0:85876608:90:0:491|h[Ticking Ebon Detonator]|h|r",
 				}, -- [719]
 				{
-					["timestamp"] = "2014-07-02 22:55:00",
 					["player"] = "Saxtris",
+					["timestamp"] = "2014-07-02 22:55:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104878:0:0:0:0:0:0:1619794304:90:0:491|h[Korven's Crimson Crescent]|h|r",
 				}, -- [720]
@@ -10772,8 +10791,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-02 22:55:00",
 				}, -- [721]
 				{
-					["player"] = "Rämpage-Cho'gall",
 					["timestamp"] = "2014-07-02 23:15:00",
+					["player"] = "Rämpage-Cho'gall",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:104888:0:0:0:0:0:0:1444576512:90:0:491|h[Cord of Black Dreams]|h|r",
 				}, -- [722]
@@ -10788,8 +10807,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-03 01:34:00",
 				}, -- [724]
 				{
-					["timestamp"] = "2014-07-03 01:34:00",
 					["player"] = "Frostnbieber",
+					["timestamp"] = "2014-07-03 01:34:00",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:104792:0:0:0:0:0:0:256786688:90:0:491|h[Ashflare Pendant]|h|r",
 				}, -- [725]
@@ -10839,14 +10858,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-03 21:37:00",
 				}, -- [734]
 				{
-					["player"] = "Tomsawyer",
 					["timestamp"] = "2014-07-03 21:37:00",
+					["player"] = "Tomsawyer",
 					["coinsLeft"] = "7",
 					["reward"] = "|cffa335ee|Hitem:104458:0:0:0:0:0:0:2040116096:90:0:491|h[Leggings of Unabashed Anger]|h|r",
 				}, -- [735]
 				{
-					["player"] = "Hashkilledme",
 					["timestamp"] = "2014-07-03 21:48:00",
+					["player"] = "Hashkilledme",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104479:0:0:0:0:0:0:547751808:90:0:491|h[Gaze of Arrogance]|h|r",
 				}, -- [736]
@@ -10866,14 +10885,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-03 22:18:00",
 				}, -- [739]
 				{
-					["player"] = "Nytbolt",
 					["timestamp"] = "2014-07-03 22:19:00",
+					["player"] = "Nytbolt",
 					["coinsLeft"] = "6",
 					["reward"] = "|cffa335ee|Hitem:104490:0:0:0:0:0:0:119610240:90:0:491|h[Cannoneer's Multipocket Gunbelt]|h|r",
 				}, -- [740]
 				{
-					["player"] = "Gitt",
 					["timestamp"] = "2014-07-03 22:19:00",
+					["player"] = "Gitt",
 					["coinsLeft"] = "5",
 					["reward"] = "|cffa335ee|Hitem:104488:0:0:0:0:0:0:1539656192:90:0:491|h[Unrepentant Heels]|h|r",
 				}, -- [741]
@@ -10883,8 +10902,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-03 22:31:00",
 				}, -- [742]
 				{
-					["player"] = "Maleek-Thrall",
 					["timestamp"] = "2014-07-05 21:46:00",
+					["player"] = "Maleek-Thrall",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:103497:0:0:0:0:0:0:2088441088:90:0:0|h[Prideful Gladiator's Mail Gauntlets]|h|r",
 				}, -- [743]
@@ -10899,20 +10918,20 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-06 19:34:00",
 				}, -- [745]
 				{
-					["timestamp"] = "2014-07-06 20:02:00",
 					["player"] = "Endernx",
+					["timestamp"] = "2014-07-06 20:02:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:105255:0:0:0:0:0:0:1849619200:90:0:491|h[Seismic Bore]|h|r",
 				}, -- [746]
 				{
-					["timestamp"] = "2014-07-06 20:19:00",
 					["player"] = "Mithrios-Rexxar",
+					["timestamp"] = "2014-07-06 20:19:00",
 					["coinsLeft"] = "8",
 					["reward"] = "|cffa335ee|Hitem:105284:0:0:0:0:0:0:1080306048:90:0:491|h[Ashen Wall Girdle]|h|r",
 				}, -- [747]
 				{
-					["timestamp"] = "2014-07-06 21:08:00",
 					["player"] = "Mithrios-Rexxar",
+					["timestamp"] = "2014-07-06 21:08:00",
 					["coinsLeft"] = "7",
 					["reward"] = "|cffa335ee|Hitem:105315:0:0:0:0:0:0:654330624:90:0:491|h[Blood Rage Bracers]|h|r",
 				}, -- [748]
@@ -10952,14 +10971,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-07 21:58:00",
 				}, -- [755]
 				{
-					["player"] = "Gitt",
 					["timestamp"] = "2014-07-07 21:58:00",
+					["player"] = "Gitt",
 					["coinsLeft"] = "4",
 					["reward"] = "|cffa335ee|Hitem:105526:0:0:0:0:0:0:37625984:90:0:491|h[Poisonmist Nightcloak]|h|r",
 				}, -- [756]
 				{
-					["player"] = "Nightfears",
 					["timestamp"] = "2014-07-07 21:58:00",
+					["player"] = "Nightfears",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:104537:0:0:0:0:0:0:849322496:90:0:491|h[Ashen Wall Girdle]|h|r",
 				}, -- [757]
@@ -10999,14 +11018,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-08 21:05:00",
 				}, -- [764]
 				{
-					["timestamp"] = "2014-07-08 21:05:00",
 					["player"] = "Excrusader",
+					["timestamp"] = "2014-07-08 21:05:00",
 					["coinsLeft"] = "4",
 					["reward"] = "|cffa335ee|Hitem:104425:0:0:0:0:0:0:1840276480:90:0:491|h[Cloak of Misguided Power]|h|r",
 				}, -- [765]
 				{
-					["timestamp"] = "2014-07-08 21:05:00",
 					["player"] = "Realistic",
+					["timestamp"] = "2014-07-08 21:05:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104425:0:0:0:0:0:0:1208666496:90:0:491|h[Cloak of Misguided Power]|h|r",
 				}, -- [766]
@@ -11046,8 +11065,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-08 21:13:00",
 				}, -- [773]
 				{
-					["timestamp"] = "2014-07-08 21:13:00",
 					["player"] = "Morgàn",
+					["timestamp"] = "2014-07-08 21:13:00",
 					["coinsLeft"] = "5",
 					["reward"] = "|cffa335ee|Hitem:104437:0:0:0:0:0:0:40844160:90:0:491|h[Poisonbinder Girth]|h|r",
 				}, -- [774]
@@ -11057,14 +11076,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-08 21:26:00",
 				}, -- [775]
 				{
-					["timestamp"] = "2014-07-08 21:26:00",
 					["player"] = "Tàb",
+					["timestamp"] = "2014-07-08 21:26:00",
 					["coinsLeft"] = "7",
 					["reward"] = "|cffa335ee|Hitem:104464:0:0:0:0:0:0:27615360:90:0:491|h[Xifeng, Longblade of the Titanic Guardian]|h|r",
 				}, -- [776]
 				{
-					["timestamp"] = "2014-07-08 21:27:00",
 					["player"] = "Morgàn",
+					["timestamp"] = "2014-07-08 21:27:00",
 					["coinsLeft"] = "4",
 					["reward"] = "|cffa335ee|Hitem:104463:0:0:0:0:0:0:427872896:90:0:491|h[Fusion-Fire Core]|h|r",
 				}, -- [777]
@@ -11089,8 +11108,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-08 21:37:00",
 				}, -- [781]
 				{
-					["timestamp"] = "2014-07-08 21:37:00",
 					["player"] = "Nathreizm",
+					["timestamp"] = "2014-07-08 21:37:00",
 					["coinsLeft"] = "7",
 					["reward"] = "|cffa335ee|Hitem:104476:0:0:0:0:0:0:1169086720:90:0:491|h[Assurance of Consequence]|h|r",
 				}, -- [782]
@@ -11105,8 +11124,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-08 21:37:00",
 				}, -- [784]
 				{
-					["timestamp"] = "2014-07-08 21:38:00",
 					["player"] = "Spih",
+					["timestamp"] = "2014-07-08 21:38:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:99715:0:0:0:0:0:0:1117159936:90:0:491|h[Chest of the Cursed Conqueror]|h|r",
 				}, -- [785]
@@ -11136,14 +11155,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-08 21:52:00",
 				}, -- [790]
 				{
-					["timestamp"] = "2014-07-08 21:59:00",
 					["player"] = "Yaboi",
+					["timestamp"] = "2014-07-08 21:59:00",
 					["coinsLeft"] = "5",
 					["reward"] = "|cffa335ee|Hitem:105513:0:0:0:0:0:0:412791936:90:0:491|h[Juggernaut's Ignition Keys]|h|r",
 				}, -- [791]
 				{
-					["timestamp"] = "2014-07-08 21:59:00",
 					["player"] = "Tàb",
+					["timestamp"] = "2014-07-08 21:59:00",
 					["coinsLeft"] = "4",
 					["reward"] = "|cffa335ee|Hitem:104518:0:0:0:0:0:0:219138944:90:0:491|h[Juggernaut's Focusing Crystal]|h|r",
 				}, -- [792]
@@ -11183,8 +11202,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-08 22:37:00",
 				}, -- [799]
 				{
-					["player"] = "Ookiniz",
 					["timestamp"] = "2014-07-08 22:37:00",
+					["player"] = "Ookiniz",
 					["coinsLeft"] = "3",
 					["reward"] = "|cffa335ee|Hitem:104580:0:0:0:0:0:0:1284497280:90:0:491|h[Boots of Perilous Infusion]|h|r",
 				}, -- [800]
@@ -11204,8 +11223,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-08 22:38:00",
 				}, -- [803]
 				{
-					["player"] = "Layonhooves",
 					["timestamp"] = "2014-07-08 22:38:00",
+					["player"] = "Layonhooves",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:104567:0:0:0:0:0:0:716423552:90:0:491|h[Malkorok's Giant Stompers]|h|r",
 				}, -- [804]
@@ -11225,8 +11244,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-08 22:38:00",
 				}, -- [807]
 				{
-					["player"] = "Bigmccaw",
 					["timestamp"] = "2014-07-08 23:11:00",
+					["player"] = "Bigmccaw",
 					["coinsLeft"] = "3",
 					["reward"] = "|cffa335ee|Hitem:104598:0:0:0:0:0:0:1280816640:90:0:491|h[Immaculately Preserved Wand]|h|r",
 				}, -- [808]
@@ -11241,8 +11260,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-08 23:12:00",
 				}, -- [810]
 				{
-					["player"] = "Realistic",
 					["timestamp"] = "2014-07-08 23:12:00",
+					["player"] = "Realistic",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104584:0:0:0:0:0:0:834585984:90:0:491|h[Sigil of Rampage]|h|r",
 				}, -- [811]
@@ -11292,26 +11311,26 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-08 23:27:00",
 				}, -- [820]
 				{
-					["player"] = "Simplelove",
 					["timestamp"] = "2014-07-08 23:27:00",
+					["player"] = "Simplelove",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:99723:0:0:0:0:0:0:869403008:90:0:491|h[Helm of the Cursed Vanquisher]|h|r",
 				}, -- [821]
 				{
-					["player"] = "Primalfears",
 					["timestamp"] = "2014-07-08 23:28:00",
+					["player"] = "Primalfears",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:99723:0:0:0:0:0:0:248845312:90:0:491|h[Helm of the Cursed Vanquisher]|h|r",
 				}, -- [822]
 				{
-					["player"] = "Clancey",
 					["timestamp"] = "2014-07-08 23:28:00",
+					["player"] = "Clancey",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104614:0:0:0:0:0:0:1482859008:90:0:491|h[Britomart's Jagged Pike]|h|r",
 				}, -- [823]
 				{
-					["player"] = "Shotsfired",
 					["timestamp"] = "2014-07-09 00:02:00",
+					["player"] = "Shotsfired",
 					["coinsLeft"] = "0",
 					["reward"] = "|cff0070dd|Hitem:104158:0:0:0:0:0:0:870317696:90:0:0|h[Blackfuse Bombling]|h|r",
 				}, -- [824]
@@ -11341,14 +11360,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-09 00:03:00",
 				}, -- [829]
 				{
-					["player"] = "Multichill",
 					["timestamp"] = "2014-07-09 00:49:00",
+					["player"] = "Multichill",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:105628:0:0:0:0:0:0:270125312:90:0:491|h[Iyyokuk's Hereditary Seal]|h|r",
 				}, -- [830]
 				{
-					["player"] = "Urtag",
 					["timestamp"] = "2014-07-09 00:49:00",
+					["player"] = "Urtag",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:105623:0:0:0:0:0:0:1512157824:90:0:491|h[Hisek's Reserve Longbow]|h|r",
 				}, -- [831]
@@ -11363,8 +11382,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-09 00:49:00",
 				}, -- [833]
 				{
-					["player"] = "Tydeson",
 					["timestamp"] = "2014-07-09 00:49:00",
+					["player"] = "Tydeson",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:104628:0:0:0:0:0:0:1516315264:90:0:491|h[Kil'ruk's Band of Ascendancy]|h|r",
 				}, -- [834]
@@ -11374,8 +11393,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-09 21:28:00",
 				}, -- [835]
 				{
-					["timestamp"] = "2014-07-09 21:28:00",
 					["player"] = "Soméone",
+					["timestamp"] = "2014-07-09 21:28:00",
 					["coinsLeft"] = "6",
 					["reward"] = "|cffa335ee|Hitem:104651:0:0:0:0:0:0:1814128384:90:0:491|h[Ebon Ritual Hood]|h|r",
 				}, -- [836]
@@ -11390,8 +11409,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-09 21:28:00",
 				}, -- [838]
 				{
-					["timestamp"] = "2014-07-09 21:28:00",
 					["player"] = "Shotsfired",
+					["timestamp"] = "2014-07-09 21:28:00",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:104641:0:0:0:0:0:0:1279949312:90:0:491|h[Chestguard of Relentless Tyranny]|h|r",
 				}, -- [839]
@@ -11416,8 +11435,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-09 21:28:00",
 				}, -- [843]
 				{
-					["timestamp"] = "2014-07-09 21:31:00",
 					["player"] = "Chugnoris",
+					["timestamp"] = "2014-07-09 21:31:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104649:0:0:0:0:0:0:1149382016:90:0:491|h[Curse of Hubris]|h|r",
 				}, -- [844]
@@ -11427,8 +11446,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-07-09 22:35:00",
 				}, -- [845]
 				{
-					["timestamp"] = "2014-07-09 22:49:00",
 					["player"] = "Icydeadpeopl",
+					["timestamp"] = "2014-07-09 22:49:00",
 					["coinsLeft"] = "4",
 					["reward"] = "|cffa335ee|Hitem:99684:0:0:0:0:0:0:1084191488:90:0:491|h[Leggings of the Cursed Vanquisher]|h|r",
 				}, -- [846]
@@ -11478,8 +11497,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-02 21:04:00",
 				}, -- [855]
 				{
-					["timestamp"] = "2014-09-02 21:04:00",
 					["player"] = "Calade",
+					["timestamp"] = "2014-09-02 21:04:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104413:0:0:0:0:0:0:2022177408:90:0:491|h[Hood of Blackened Tears]|h|r",
 				}, -- [856]
@@ -11489,14 +11508,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-02 21:04:00",
 				}, -- [857]
 				{
-					["timestamp"] = "2014-09-02 21:04:00",
 					["player"] = "Hammarfallqt",
+					["timestamp"] = "2014-09-02 21:04:00",
 					["coinsLeft"] = "6",
 					["reward"] = "|cffa335ee|Hitem:105417:0:0:0:0:0:0:465200384:90:0:491|h[Encapsulated Essence of Immerseus]|h|r",
 				}, -- [858]
 				{
-					["timestamp"] = "2014-09-02 21:12:00",
 					["player"] = "Excrusader",
+					["timestamp"] = "2014-09-02 21:12:00",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:104449:0:0:0:0:0:0:1952376320:90:0:491|h[Shoulders of the Roiling Inferno]|h|r",
 				}, -- [859]
@@ -11526,8 +11545,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-02 21:22:00",
 				}, -- [864]
 				{
-					["timestamp"] = "2014-09-02 21:30:00",
 					["player"] = "Rastafaree",
+					["timestamp"] = "2014-09-02 21:30:00",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:99716:0:0:0:0:0:0:1863529984:90:0:491|h[Chest of the Cursed Protector]|h|r",
 				}, -- [865]
@@ -11577,8 +11596,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-02 22:07:00",
 				}, -- [874]
 				{
-					["timestamp"] = "2014-09-02 22:07:00",
 					["player"] = "Marcusdapimp",
+					["timestamp"] = "2014-09-02 22:07:00",
 					["coinsLeft"] = "5",
 					["reward"] = "|cffa335ee|Hitem:104545:0:0:0:0:0:0:1881282688:90:0:491|h[Kardris' Scepter]|h|r",
 				}, -- [875]
@@ -11613,8 +11632,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-02 22:31:00",
 				}, -- [881]
 				{
-					["timestamp"] = "2014-09-02 22:32:00",
 					["player"] = "Chugnoris",
+					["timestamp"] = "2014-09-02 22:32:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104572:0:0:0:0:0:0:1772957568:90:0:491|h[Vial of Living Corruption]|h|r",
 				}, -- [882]
@@ -11624,8 +11643,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-02 22:46:00",
 				}, -- [883]
 				{
-					["timestamp"] = "2014-09-02 22:46:00",
 					["player"] = "Wazze",
+					["timestamp"] = "2014-09-02 22:46:00",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:104595:0:0:0:0:0:0:1748804736:90:0:491|h[Avool's Ancestral Bracers]|h|r",
 				}, -- [884]
@@ -11640,14 +11659,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-02 22:46:00",
 				}, -- [886]
 				{
-					["timestamp"] = "2014-09-02 22:46:00",
 					["player"] = "Chugnoris",
+					["timestamp"] = "2014-09-02 22:46:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104586:0:0:0:0:0:0:195089408:90:0:491|h[Pandaren Roofsprinters]|h|r",
 				}, -- [887]
 				{
-					["timestamp"] = "2014-09-02 22:46:00",
 					["player"] = "Shotsfired",
+					["timestamp"] = "2014-09-02 22:46:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:105580:0:0:0:0:0:0:790481024:90:0:491|h[Sigil of Rampage]|h|r",
 				}, -- [888]
@@ -11707,14 +11726,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-02 23:11:00",
 				}, -- [899]
 				{
-					["timestamp"] = "2014-09-02 23:11:00",
 					["player"] = "Realistic",
+					["timestamp"] = "2014-09-02 23:11:00",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:104616:0:0:0:0:0:0:403906688:90:0:491|h[Ticking Ebon Detonator]|h|r",
 				}, -- [900]
 				{
-					["timestamp"] = "2014-09-02 23:11:00",
 					["player"] = "Layonhooves",
+					["timestamp"] = "2014-09-02 23:11:00",
 					["coinsLeft"] = "3",
 					["reward"] = "|cffa335ee|Hitem:104625:0:0:0:0:0:0:1334166912:90:0:491|h[Siegecrafter's Forge Hammer]|h|r",
 				}, -- [901]
@@ -11739,8 +11758,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-02 23:55:00",
 				}, -- [905]
 				{
-					["timestamp"] = "2014-09-02 23:55:00",
 					["player"] = "Urtag",
+					["timestamp"] = "2014-09-02 23:55:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:99713:0:0:0:0:0:0:1812760064:90:0:491|h[Leggings of the Cursed Protector]|h|r",
 				}, -- [906]
@@ -11780,8 +11799,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-03 01:10:00",
 				}, -- [913]
 				{
-					["timestamp"] = "2014-09-03 01:10:00",
 					["player"] = "Soméone",
+					["timestamp"] = "2014-09-03 01:10:00",
 					["coinsLeft"] = "6",
 					["reward"] = "|cffa335ee|Hitem:105867:0:0:0:0:0:0:1350413696:90:0:491|h[Essence of the Cursed Conqueror]|h|r",
 				}, -- [914]
@@ -11801,8 +11820,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-03 01:10:00",
 				}, -- [917]
 				{
-					["timestamp"] = "2014-09-03 01:10:00",
 					["player"] = "Excrusader",
+					["timestamp"] = "2014-09-03 01:10:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104653:0:0:0:0:0:0:460504832:90:0:491|h[Horned Mace of the Old Ones]|h|r",
 				}, -- [918]
@@ -11822,8 +11841,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-03 01:12:00",
 				}, -- [921]
 				{
-					["timestamp"] = "2014-09-10 22:25:00",
 					["player"] = "Vamprixlz",
+					["timestamp"] = "2014-09-10 22:25:00",
 					["coinsLeft"] = "7",
 					["reward"] = "|cffa335ee|Hitem:104652:0:0:0:0:0:0:343569536:90:0:491|h[Black Blood of Y'Shaarj]|h|r",
 				}, -- [922]
@@ -11833,8 +11852,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-10 22:25:00",
 				}, -- [923]
 				{
-					["timestamp"] = "2014-09-10 22:26:00",
 					["player"] = "Simplelove",
+					["timestamp"] = "2014-09-10 22:26:00",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:104654:0:0:0:0:0:0:1415474304:90:0:491|h[Revelations of Y'Shaarj]|h|r",
 				}, -- [924]
@@ -11859,8 +11878,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-10 22:26:00",
 				}, -- [928]
 				{
-					["timestamp"] = "2014-09-10 22:26:00",
 					["player"] = "Âwàke",
+					["timestamp"] = "2014-09-10 22:26:00",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:104658:0:0:0:0:0:0:1605075200:90:0:491|h[Chestplate of Fallen Passion]|h|r",
 				}, -- [929]
@@ -11875,8 +11894,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-10 22:26:00",
 				}, -- [931]
 				{
-					["timestamp"] = "2014-09-10 22:27:00",
 					["player"] = "Layonhooves",
+					["timestamp"] = "2014-09-10 22:27:00",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:104644:0:0:0:0:0:0:28990208:90:0:491|h[Legplates of Unthinking Strife]|h|r",
 				}, -- [932]
@@ -11891,8 +11910,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-23 21:04:00",
 				}, -- [934]
 				{
-					["timestamp"] = "2014-09-23 21:04:00",
 					["player"] = "Bloodbolts",
+					["timestamp"] = "2014-09-23 21:04:00",
 					["coinsLeft"] = "4",
 					["reward"] = "|cffa335ee|Hitem:105422:0:0:0:0:0:0:1026287360:90:0:491|h[Purified Bindings of Immerseus]|h|r",
 				}, -- [935]
@@ -11907,14 +11926,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-23 21:04:00",
 				}, -- [937]
 				{
-					["timestamp"] = "2014-09-23 21:04:00",
 					["player"] = "Simplelove",
+					["timestamp"] = "2014-09-23 21:04:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:105420:0:0:0:0:0:0:705773184:90:0:491|h[Hood of Swirling Senses]|h|r",
 				}, -- [938]
 				{
-					["timestamp"] = "2014-09-23 21:05:00",
 					["player"] = "Realistic",
+					["timestamp"] = "2014-09-23 21:05:00",
 					["coinsLeft"] = "5",
 					["reward"] = "|cffa335ee|Hitem:105423:0:0:0:0:0:0:1635749760:90:0:491|h[Seal of Eternal Sorrow]|h|r",
 				}, -- [939]
@@ -11934,8 +11953,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-23 21:05:00",
 				}, -- [942]
 				{
-					["timestamp"] = "2014-09-23 21:05:00",
 					["player"] = "Excrusader",
+					["timestamp"] = "2014-09-23 21:05:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104427:0:0:0:0:0:0:1358323200:90:0:491|h[Seal of Eternal Sorrow]|h|r",
 				}, -- [943]
@@ -11975,8 +11994,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-23 21:40:00",
 				}, -- [950]
 				{
-					["timestamp"] = "2014-09-23 21:40:00",
 					["player"] = "Bloodbolts",
+					["timestamp"] = "2014-09-23 21:40:00",
 					["coinsLeft"] = "3",
 					["reward"] = "|cffa335ee|Hitem:104478:0:0:0:0:0:0:1982756736:90:0:491|h[Prismatic Prison of Pride]|h|r",
 				}, -- [951]
@@ -11996,8 +12015,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-23 21:54:00",
 				}, -- [954]
 				{
-					["timestamp"] = "2014-09-23 21:54:00",
 					["player"] = "Âwàke",
+					["timestamp"] = "2014-09-23 21:54:00",
 					["coinsLeft"] = "2",
 					["reward"] = "|cffa335ee|Hitem:104507:0:0:0:0:0:0:1223708416:90:0:491|h[Windfire Legplates]|h|r",
 				}, -- [955]
@@ -12017,20 +12036,20 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-23 22:02:00",
 				}, -- [958]
 				{
-					["timestamp"] = "2014-09-23 22:02:00",
 					["player"] = "Lustoise",
+					["timestamp"] = "2014-09-23 22:02:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:105508:0:0:0:0:0:0:344183168:90:0:491|h[Precision Cutters]|h|r",
 				}, -- [959]
 				{
-					["timestamp"] = "2014-09-23 22:02:00",
 					["player"] = "Kwiqast",
+					["timestamp"] = "2014-09-23 22:02:00",
 					["coinsLeft"] = "5",
 					["reward"] = "|cffa335ee|Hitem:104525:0:0:0:0:0:0:1855607424:90:0:491|h[Juggernaut's Power Core]|h|r",
 				}, -- [960]
 				{
-					["timestamp"] = "2014-09-23 22:20:00",
 					["player"] = "Tydesin",
+					["timestamp"] = "2014-09-23 22:20:00",
 					["coinsLeft"] = "5",
 					["reward"] = "|cffa335ee|Hitem:104543:0:0:0:0:0:0:1075585664:90:0:491|h[Ashflare Pendant]|h|r",
 				}, -- [961]
@@ -12045,20 +12064,20 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-23 22:20:00",
 				}, -- [963]
 				{
-					["timestamp"] = "2014-09-23 22:20:00",
 					["player"] = "Nytbolt",
+					["timestamp"] = "2014-09-23 22:20:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104530:0:0:0:0:0:0:683042432:90:0:491|h[Poisonmist Nightcloak]|h|r",
 				}, -- [964]
 				{
-					["timestamp"] = "2014-09-23 22:20:00",
 					["player"] = "Kwiqast",
+					["timestamp"] = "2014-09-23 22:20:00",
 					["coinsLeft"] = "4",
 					["reward"] = "|cffa335ee|Hitem:104541:0:0:0:0:0:0:205652352:90:0:491|h[Toxic Tornado Treads]|h|r",
 				}, -- [965]
 				{
-					["timestamp"] = "2014-09-23 22:21:00",
 					["player"] = "Slenderfugi",
+					["timestamp"] = "2014-09-23 22:21:00",
 					["coinsLeft"] = "4",
 					["reward"] = "|cffa335ee|Hitem:105526:0:0:0:0:0:0:580200832:90:0:491|h[Poisonmist Nightcloak]|h|r",
 				}, -- [966]
@@ -12078,8 +12097,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-23 22:43:00",
 				}, -- [969]
 				{
-					["timestamp"] = "2014-09-23 22:43:00",
 					["player"] = "Morgàn",
+					["timestamp"] = "2014-09-23 22:43:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:104569:0:0:0:0:0:0:1174453632:90:0:491|h[Legplates of Willful Doom]|h|r",
 				}, -- [970]
@@ -12109,8 +12128,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-23 22:44:00",
 				}, -- [975]
 				{
-					["timestamp"] = "2014-09-23 22:59:00",
 					["player"] = "Kwiqast",
+					["timestamp"] = "2014-09-23 22:59:00",
 					["coinsLeft"] = "3",
 					["reward"] = "|cffa335ee|Hitem:104595:0:0:0:0:0:0:471682432:90:0:491|h[Avool's Ancestral Bracers]|h|r",
 				}, -- [976]
@@ -12170,8 +12189,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-23 23:14:00",
 				}, -- [987]
 				{
-					["timestamp"] = "2014-09-23 23:26:00",
 					["player"] = "Calade",
+					["timestamp"] = "2014-09-23 23:26:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104616:0:0:0:0:0:0:98607232:90:0:491|h[Ticking Ebon Detonator]|h|r",
 				}, -- [988]
@@ -12201,8 +12220,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-23 23:26:00",
 				}, -- [993]
 				{
-					["timestamp"] = "2014-09-23 23:53:00",
 					["player"] = "Urtag",
+					["timestamp"] = "2014-09-23 23:53:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:104627:0:0:0:0:0:0:973973120:90:0:491|h[Hisek's Reserve Longbow]|h|r",
 				}, -- [994]
@@ -12212,8 +12231,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-23 23:53:00",
 				}, -- [995]
 				{
-					["timestamp"] = "2014-09-23 23:53:00",
 					["player"] = "Simplelove",
+					["timestamp"] = "2014-09-23 23:53:00",
 					["coinsLeft"] = "0",
 					["reward"] = "|cffa335ee|Hitem:105626:0:0:0:0:0:0:1396758016:90:0:491|h[Bracers of Sonic Projection]|h|r",
 				}, -- [996]
@@ -12278,14 +12297,14 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-24 00:55:00",
 				}, -- [1008]
 				{
-					["timestamp"] = "2014-09-24 00:55:00",
 					["player"] = "Vamprixlz",
+					["timestamp"] = "2014-09-24 00:55:00",
 					["coinsLeft"] = "6",
 					["reward"] = "|cffa335ee|Hitem:104654:0:0:0:0:0:0:925892608:90:0:491|h[Revelations of Y'Shaarj]|h|r",
 				}, -- [1009]
 				{
-					["timestamp"] = "2014-09-24 00:55:00",
 					["player"] = "Âwàke",
+					["timestamp"] = "2014-09-24 00:55:00",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:105867:0:0:0:0:0:0:208602112:90:0:491|h[Essence of the Cursed Conqueror]|h|r",
 				}, -- [1010]
@@ -12320,8 +12339,8 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-24 00:55:00",
 				}, -- [1016]
 				{
-					["timestamp"] = "2014-09-24 00:55:00",
 					["player"] = "Nazuna",
+					["timestamp"] = "2014-09-24 00:55:00",
 					["coinsLeft"] = "-1",
 					["reward"] = "|cffa335ee|Hitem:105648:0:0:0:0:0:0:261897984:90:0:491|h[Black Blood of Y'Shaarj]|h|r",
 				}, -- [1017]
@@ -12331,20 +12350,20 @@ EPGP_DB = {
 					["timestamp"] = "2014-09-24 00:55:00",
 				}, -- [1018]
 				{
-					["timestamp"] = "2014-10-14 21:10:00",
 					["player"] = "Frostnbieber",
+					["timestamp"] = "2014-10-14 21:10:00",
 					["coinsLeft"] = "13",
 					["currencyID"] = "0",
 				}, -- [1019]
 				{
-					["timestamp"] = "2014-10-14 21:10:00",
 					["player"] = "Urtag",
+					["timestamp"] = "2014-10-14 21:10:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [1020]
 				{
-					["timestamp"] = "2014-10-14 21:11:00",
 					["player"] = "Primalfears",
+					["timestamp"] = "2014-10-14 21:11:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "0",
 				}, -- [1021]
@@ -12352,12 +12371,12 @@ EPGP_DB = {
 					["player"] = "Nytbolt",
 					["coinsLeft"] = "10",
 					["timestamp"] = "2014-10-14 21:11:00",
-					["reward"] = "|cffa335ee|Hitem:110761:0:0:0:0:0:0:0:90:0:6:1:450|h[Immerseus' Crystalline Eye]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:110761:0:0:0:0:0:0:0:90:0:6:1:450|h[Immerseus' Crystalline Eye]|h|r",
 				}, -- [1022]
 				{
-					["timestamp"] = "2014-10-14 21:11:00",
 					["player"] = "Dotsfired",
+					["timestamp"] = "2014-10-14 21:11:00",
 					["coinsLeft"] = "15",
 					["currencyID"] = "0",
 				}, -- [1023]
@@ -12365,66 +12384,66 @@ EPGP_DB = {
 					["player"] = "Shinerr",
 					["coinsLeft"] = "4",
 					["timestamp"] = "2014-10-14 21:11:00",
-					["reward"] = "|cffa335ee|Hitem:112428:0:0:0:0:0:0:0:90:0:6:1:450|h[Salt Water Sandals]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112428:0:0:0:0:0:0:0:90:0:6:1:450|h[Salt Water Sandals]|h|r",
 				}, -- [1024]
 				{
-					["timestamp"] = "2014-10-14 21:11:00",
 					["player"] = "Bloodbolts",
+					["timestamp"] = "2014-10-14 21:11:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1025]
 				{
-					["timestamp"] = "2014-10-14 21:11:00",
 					["player"] = "Âwàke",
+					["timestamp"] = "2014-10-14 21:11:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1026]
 				{
-					["timestamp"] = "2014-10-14 21:11:00",
 					["player"] = "Calade",
+					["timestamp"] = "2014-10-14 21:11:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [1027]
 				{
-					["timestamp"] = "2014-10-14 21:21:00",
 					["player"] = "Dotsfired",
+					["timestamp"] = "2014-10-14 21:21:00",
 					["coinsLeft"] = "14",
 					["currencyID"] = "0",
 				}, -- [1028]
 				{
-					["timestamp"] = "2014-10-14 21:21:00",
 					["player"] = "Bloodbolts",
+					["timestamp"] = "2014-10-14 21:21:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1029]
 				{
-					["timestamp"] = "2014-10-14 21:21:00",
 					["player"] = "Frostnbieber",
+					["timestamp"] = "2014-10-14 21:21:00",
 					["coinsLeft"] = "12",
 					["currencyID"] = "0",
 				}, -- [1030]
 				{
-					["timestamp"] = "2014-10-14 21:22:00",
 					["player"] = "Morgàn",
+					["timestamp"] = "2014-10-14 21:22:00",
 					["coinsLeft"] = "18",
 					["currencyID"] = "0",
 				}, -- [1031]
 				{
-					["player"] = "Layonhooves",
 					["timestamp"] = "2014-10-14 21:22:00",
+					["player"] = "Layonhooves",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [1032]
 				{
-					["player"] = "Frostnbieber",
 					["timestamp"] = "2014-10-14 21:32:00",
+					["player"] = "Frostnbieber",
 					["coinsLeft"] = "11",
 					["currencyID"] = "0",
 				}, -- [1033]
 				{
-					["player"] = "Lustoise",
 					["timestamp"] = "2014-10-14 21:32:00",
+					["player"] = "Lustoise",
 					["coinsLeft"] = "11",
 					["currencyID"] = "0",
 				}, -- [1034]
@@ -12432,24 +12451,24 @@ EPGP_DB = {
 					["player"] = "Bloodbolts",
 					["coinsLeft"] = "3",
 					["timestamp"] = "2014-10-14 21:33:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112559:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Untainted Guardian's Chain]|h|r",
+					["currencyID"] = "0",
 				}, -- [1035]
 				{
-					["player"] = "Nytbolt",
 					["timestamp"] = "2014-10-14 21:33:00",
+					["player"] = "Nytbolt",
 					["coinsLeft"] = "9",
 					["currencyID"] = "0",
 				}, -- [1036]
 				{
-					["player"] = "Frostnbieber",
 					["timestamp"] = "2014-10-14 21:41:00",
+					["player"] = "Frostnbieber",
 					["coinsLeft"] = "10",
 					["currencyID"] = "0",
 				}, -- [1037]
 				{
-					["player"] = "Bloodbolts",
 					["timestamp"] = "2014-10-14 21:41:00",
+					["player"] = "Bloodbolts",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1038]
@@ -12457,12 +12476,12 @@ EPGP_DB = {
 					["player"] = "Lustoise",
 					["coinsLeft"] = "10",
 					["timestamp"] = "2014-10-14 21:41:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:99716:0:0:0:0:0:0:0:90:0:0:0|h[Chest of the Cursed Protector]|h|r",
+					["currencyID"] = "0",
 				}, -- [1039]
 				{
-					["player"] = "Layonhooves",
 					["timestamp"] = "2014-10-14 21:41:00",
+					["player"] = "Layonhooves",
 					["coinsLeft"] = "7",
 					["currencyID"] = "0",
 				}, -- [1040]
@@ -12470,24 +12489,24 @@ EPGP_DB = {
 					["player"] = "Morgàn",
 					["coinsLeft"] = "17",
 					["timestamp"] = "2014-10-14 21:42:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112949:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Greatsword of Pride's Fall]|h|r",
+					["currencyID"] = "0",
 				}, -- [1041]
 				{
-					["player"] = "Nytbolt",
 					["timestamp"] = "2014-10-14 21:42:00",
+					["player"] = "Nytbolt",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [1042]
 				{
-					["player"] = "Frostnbieber",
 					["timestamp"] = "2014-10-14 21:57:00",
+					["player"] = "Frostnbieber",
 					["coinsLeft"] = "9",
 					["currencyID"] = "0",
 				}, -- [1043]
 				{
-					["player"] = "Lustoise",
 					["timestamp"] = "2014-10-14 21:57:00",
+					["player"] = "Lustoise",
 					["coinsLeft"] = "9",
 					["currencyID"] = "0",
 				}, -- [1044]
@@ -12495,30 +12514,30 @@ EPGP_DB = {
 					["player"] = "Âwàke",
 					["coinsLeft"] = "4",
 					["timestamp"] = "2014-10-14 21:57:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112727:0:0:0:0:0:0:0:90:0:6:1:450|h[Smoldering Drakescale Bracers]|h|r",
+					["currencyID"] = "0",
 				}, -- [1045]
 				{
-					["player"] = "Tydeson",
 					["timestamp"] = "2014-10-14 21:58:00",
+					["player"] = "Tydeson",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [1046]
 				{
-					["player"] = "Frostnbieber",
 					["timestamp"] = "2014-10-14 22:08:00",
+					["player"] = "Frostnbieber",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [1047]
 				{
-					["player"] = "Lustoise",
 					["timestamp"] = "2014-10-14 22:08:00",
+					["player"] = "Lustoise",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [1048]
 				{
-					["player"] = "Nytbolt",
 					["timestamp"] = "2014-10-14 22:09:00",
+					["player"] = "Nytbolt",
 					["coinsLeft"] = "7",
 					["currencyID"] = "0",
 				}, -- [1049]
@@ -12526,48 +12545,48 @@ EPGP_DB = {
 					["player"] = "Frostnbieber",
 					["coinsLeft"] = "7",
 					["timestamp"] = "2014-10-14 22:33:00",
-					["reward"] = "|cffa335ee|Hitem:112767:0:0:0:0:0:0:0:90:0:6:1:450|h[Ashflare Pendant]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112767:0:0:0:0:0:0:0:90:0:6:1:450|h[Ashflare Pendant]|h|r",
 				}, -- [1050]
 				{
-					["timestamp"] = "2014-10-14 22:34:00",
 					["player"] = "Lustoise",
+					["timestamp"] = "2014-10-14 22:34:00",
 					["coinsLeft"] = "7",
 					["currencyID"] = "0",
 				}, -- [1051]
 				{
-					["timestamp"] = "2014-10-14 22:34:00",
 					["player"] = "Dotsfired",
+					["timestamp"] = "2014-10-14 22:34:00",
 					["coinsLeft"] = "13",
 					["currencyID"] = "0",
 				}, -- [1052]
 				{
-					["timestamp"] = "2014-10-14 22:34:00",
 					["player"] = "Dreltrak",
+					["timestamp"] = "2014-10-14 22:34:00",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [1053]
 				{
-					["timestamp"] = "2014-10-14 22:34:00",
 					["player"] = "Layonhooves",
+					["timestamp"] = "2014-10-14 22:34:00",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [1054]
 				{
-					["timestamp"] = "2014-10-14 22:34:00",
 					["player"] = "Nytbolt",
+					["timestamp"] = "2014-10-14 22:34:00",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [1055]
 				{
-					["timestamp"] = "2014-10-14 22:34:00",
 					["player"] = "Clancey",
+					["timestamp"] = "2014-10-14 22:34:00",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [1056]
 				{
-					["timestamp"] = "2014-10-14 22:47:00",
 					["player"] = "Dotsfired",
+					["timestamp"] = "2014-10-14 22:47:00",
 					["coinsLeft"] = "12",
 					["currencyID"] = "0",
 				}, -- [1057]
@@ -12575,48 +12594,48 @@ EPGP_DB = {
 					["player"] = "Frostnbieber",
 					["coinsLeft"] = "6",
 					["timestamp"] = "2014-10-14 22:47:00",
-					["reward"] = "|cffa335ee|Hitem:112787:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Arcweaver Spell Sword]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112787:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Arcweaver Spell Sword]|h|r",
 				}, -- [1058]
 				{
-					["timestamp"] = "2014-10-14 22:47:00",
 					["player"] = "Lustoise",
+					["timestamp"] = "2014-10-14 22:47:00",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [1059]
 				{
-					["timestamp"] = "2014-10-14 23:06:00",
 					["player"] = "Dotsfired",
+					["timestamp"] = "2014-10-14 23:06:00",
 					["coinsLeft"] = "11",
 					["currencyID"] = "0",
 				}, -- [1060]
 				{
-					["timestamp"] = "2014-10-14 23:06:00",
 					["player"] = "Frostnbieber",
+					["timestamp"] = "2014-10-14 23:06:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1061]
 				{
-					["timestamp"] = "2014-10-14 23:06:00",
 					["player"] = "Shinerr",
+					["timestamp"] = "2014-10-14 23:06:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [1062]
 				{
-					["timestamp"] = "2014-10-14 23:06:00",
 					["player"] = "Bloodbolts",
+					["timestamp"] = "2014-10-14 23:06:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [1063]
 				{
-					["timestamp"] = "2014-10-14 23:06:00",
 					["player"] = "Marcusdapimp",
+					["timestamp"] = "2014-10-14 23:06:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1064]
 				{
-					["timestamp"] = "2014-10-14 23:06:00",
 					["player"] = "Layonhooves",
+					["timestamp"] = "2014-10-14 23:06:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1065]
@@ -12624,30 +12643,30 @@ EPGP_DB = {
 					["player"] = "Morgàn",
 					["coinsLeft"] = "16",
 					["timestamp"] = "2014-10-14 23:06:00",
-					["reward"] = "|cffa335ee|Hitem:112793:0:0:0:0:0:0:0:90:0:6:1:450|h[Blood Rage Bracers]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112793:0:0:0:0:0:0:0:90:0:6:1:450|h[Blood Rage Bracers]|h|r",
 				}, -- [1066]
 				{
-					["timestamp"] = "2014-10-14 23:24:00",
 					["player"] = "Dotsfired",
+					["timestamp"] = "2014-10-14 23:24:00",
 					["coinsLeft"] = "10",
 					["currencyID"] = "0",
 				}, -- [1067]
 				{
-					["timestamp"] = "2014-10-14 23:24:00",
 					["player"] = "Tydeson",
+					["timestamp"] = "2014-10-14 23:24:00",
 					["coinsLeft"] = "7",
 					["currencyID"] = "0",
 				}, -- [1068]
 				{
-					["timestamp"] = "2014-10-14 23:24:00",
 					["player"] = "Vamprixlz",
+					["timestamp"] = "2014-10-14 23:24:00",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [1069]
 				{
-					["timestamp"] = "2014-10-14 23:24:00",
 					["player"] = "Frostnbieber",
+					["timestamp"] = "2014-10-14 23:24:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1070]
@@ -12655,48 +12674,48 @@ EPGP_DB = {
 					["player"] = "Nytbolt",
 					["coinsLeft"] = "5",
 					["timestamp"] = "2014-10-14 23:24:00",
-					["reward"] = "|cffa335ee|Hitem:112844:0:0:0:0:0:0:0:90:0:6:1:450|h[Chitin-Link Chain Belt]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112844:0:0:0:0:0:0:0:90:0:6:1:450|h[Chitin-Link Chain Belt]|h|r",
 				}, -- [1071]
 				{
-					["timestamp"] = "2014-10-14 23:25:00",
 					["player"] = "Layonhooves",
+					["timestamp"] = "2014-10-14 23:25:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1072]
 				{
-					["timestamp"] = "2014-10-14 23:25:00",
 					["player"] = "Morgàn",
+					["timestamp"] = "2014-10-14 23:25:00",
 					["coinsLeft"] = "15",
 					["currencyID"] = "0",
 				}, -- [1073]
 				{
-					["timestamp"] = "2014-10-14 23:43:00",
 					["player"] = "Dotsfired",
+					["timestamp"] = "2014-10-14 23:43:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "0",
 				}, -- [1074]
 				{
-					["timestamp"] = "2014-10-14 23:43:00",
 					["player"] = "Frostnbieber",
+					["timestamp"] = "2014-10-14 23:43:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [1075]
 				{
-					["timestamp"] = "2014-10-14 23:43:00",
 					["player"] = "Bloodbolts",
+					["timestamp"] = "2014-10-14 23:43:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [1076]
 				{
-					["timestamp"] = "2014-10-14 23:43:00",
 					["player"] = "Nytbolt",
+					["timestamp"] = "2014-10-14 23:43:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1077]
 				{
-					["timestamp"] = "2014-10-14 23:43:00",
 					["player"] = "Gramz",
+					["timestamp"] = "2014-10-14 23:43:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1078]
@@ -12704,18 +12723,18 @@ EPGP_DB = {
 					["player"] = "Âwàke",
 					["coinsLeft"] = "3",
 					["timestamp"] = "2014-10-14 23:44:00",
-					["reward"] = "|cffa335ee|Hitem:112861:0:0:0:0:0:0:0:90:0:6:1:450|h[Festering Primordial Globule]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112861:0:0:0:0:0:0:0:90:0:6:1:450|h[Festering Primordial Globule]|h|r",
 				}, -- [1079]
 				{
-					["timestamp"] = "2014-10-14 23:44:00",
 					["player"] = "Shinerr",
+					["timestamp"] = "2014-10-14 23:44:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1080]
 				{
-					["timestamp"] = "2014-10-15 00:07:00",
 					["player"] = "Frostnbieber",
+					["timestamp"] = "2014-10-15 00:07:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1081]
@@ -12723,42 +12742,42 @@ EPGP_DB = {
 					["player"] = "Dotsfired",
 					["coinsLeft"] = "8",
 					["timestamp"] = "2014-10-15 00:07:00",
-					["reward"] = "|cffa335ee|Hitem:112898:0:0:0:0:0:0:0:90:0:6:1:450|h[Fusespark Gloves]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112898:0:0:0:0:0:0:0:90:0:6:1:450|h[Fusespark Gloves]|h|r",
 				}, -- [1082]
 				{
-					["timestamp"] = "2014-10-15 00:07:00",
 					["player"] = "Realistic",
+					["timestamp"] = "2014-10-15 00:07:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [1083]
 				{
-					["timestamp"] = "2014-10-15 00:07:00",
 					["player"] = "Nytbolt",
+					["timestamp"] = "2014-10-15 00:07:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [1084]
 				{
-					["timestamp"] = "2014-10-15 00:07:00",
 					["player"] = "Calade",
+					["timestamp"] = "2014-10-15 00:07:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [1085]
 				{
-					["timestamp"] = "2014-10-15 00:07:00",
 					["player"] = "Marcusdapimp",
+					["timestamp"] = "2014-10-15 00:07:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [1086]
 				{
-					["timestamp"] = "2014-10-15 00:07:00",
 					["player"] = "Tydeson",
+					["timestamp"] = "2014-10-15 00:07:00",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [1087]
 				{
-					["timestamp"] = "2014-10-15 00:07:00",
 					["player"] = "Layonhooves",
+					["timestamp"] = "2014-10-15 00:07:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [1088]
@@ -12766,72 +12785,72 @@ EPGP_DB = {
 					["player"] = "Dotsfired",
 					["coinsLeft"] = "7",
 					["timestamp"] = "2014-10-15 00:25:00",
-					["reward"] = "|cffa335ee|Hitem:112916:0:0:0:0:0:0:0:90:0:6:1:450|h[Iyyokuk's Hereditary Seal]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112916:0:0:0:0:0:0:0:90:0:6:1:450|h[Iyyokuk's Hereditary Seal]|h|r",
 				}, -- [1089]
 				{
-					["timestamp"] = "2014-10-15 00:25:00",
 					["player"] = "Vamprixlz",
+					["timestamp"] = "2014-10-15 00:25:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1090]
 				{
-					["timestamp"] = "2014-10-15 00:26:00",
 					["player"] = "Frostnbieber",
+					["timestamp"] = "2014-10-15 00:26:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [1091]
 				{
-					["timestamp"] = "2014-10-15 00:26:00",
 					["player"] = "Nytbolt",
+					["timestamp"] = "2014-10-15 00:26:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1092]
 				{
-					["timestamp"] = "2014-10-15 00:26:00",
 					["player"] = "Wazze",
+					["timestamp"] = "2014-10-15 00:26:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1093]
 				{
-					["timestamp"] = "2014-10-15 00:26:00",
 					["player"] = "Âwàke",
+					["timestamp"] = "2014-10-15 00:26:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1094]
 				{
-					["timestamp"] = "2014-10-15 00:26:00",
 					["player"] = "Tydeson",
+					["timestamp"] = "2014-10-15 00:26:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1095]
 				{
-					["timestamp"] = "2014-10-15 00:26:00",
 					["player"] = "Urtag",
+					["timestamp"] = "2014-10-15 00:26:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1096]
 				{
-					["timestamp"] = "2014-10-15 00:26:00",
 					["player"] = "Dreltrak",
+					["timestamp"] = "2014-10-15 00:26:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1097]
 				{
-					["timestamp"] = "2014-10-15 00:26:00",
 					["player"] = "Layonhooves",
+					["timestamp"] = "2014-10-15 00:26:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1098]
 				{
-					["timestamp"] = "2014-10-21 20:59:00",
 					["player"] = "Ookiniz",
+					["timestamp"] = "2014-10-21 20:59:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1099]
 				{
-					["timestamp"] = "2014-10-21 20:59:00",
 					["player"] = "Frostnbieber",
+					["timestamp"] = "2014-10-21 20:59:00",
 					["coinsLeft"] = "14",
 					["currencyID"] = "0",
 				}, -- [1100]
@@ -12839,54 +12858,54 @@ EPGP_DB = {
 					["player"] = "Calade",
 					["coinsLeft"] = "9",
 					["timestamp"] = "2014-10-21 20:59:00",
-					["reward"] = "|cffa335ee|Hitem:112382:0:0:0:0:0:0:0:90:0:6:1:450|h[Hood of Blackened Tears]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112382:0:0:0:0:0:0:0:90:0:6:1:450|h[Hood of Blackened Tears]|h|r",
 				}, -- [1101]
 				{
-					["timestamp"] = "2014-10-21 20:59:00",
 					["player"] = "Blastbeatx",
+					["timestamp"] = "2014-10-21 20:59:00",
 					["coinsLeft"] = "11",
 					["currencyID"] = "0",
 				}, -- [1102]
 				{
-					["timestamp"] = "2014-10-21 20:59:00",
 					["player"] = "Shinerr",
+					["timestamp"] = "2014-10-21 20:59:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [1103]
 				{
-					["timestamp"] = "2014-10-21 20:59:00",
 					["player"] = "Primalfears",
+					["timestamp"] = "2014-10-21 20:59:00",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [1104]
 				{
-					["timestamp"] = "2014-10-21 20:59:00",
 					["player"] = "Lustoise",
+					["timestamp"] = "2014-10-21 20:59:00",
 					["coinsLeft"] = "13",
 					["currencyID"] = "0",
 				}, -- [1105]
 				{
-					["timestamp"] = "2014-10-21 20:59:00",
 					["player"] = "Bloodbolts",
+					["timestamp"] = "2014-10-21 20:59:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1106]
 				{
-					["timestamp"] = "2014-10-21 20:59:00",
 					["player"] = "Excrusader",
+					["timestamp"] = "2014-10-21 20:59:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1107]
 				{
-					["timestamp"] = "2014-10-21 20:59:00",
 					["player"] = "Realistic",
+					["timestamp"] = "2014-10-21 20:59:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1108]
 				{
-					["timestamp"] = "2014-10-21 20:59:00",
 					["player"] = "Nytbolt",
+					["timestamp"] = "2014-10-21 20:59:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [1109]
@@ -12894,12 +12913,12 @@ EPGP_DB = {
 					["player"] = "Layonhooves",
 					["coinsLeft"] = "15",
 					["timestamp"] = "2014-10-21 21:00:00",
-					["reward"] = "|cffa335ee|Hitem:112416:0:0:0:0:0:0:0:90:0:6:2:448:450|h[Bubble-Burst Bracers]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112416:0:0:0:0:0:0:0:90:0:6:2:448:450|h[Bubble-Burst Bracers]|h|r",
 				}, -- [1110]
 				{
-					["timestamp"] = "2014-10-21 21:00:00",
 					["player"] = "Âwàke",
+					["timestamp"] = "2014-10-21 21:00:00",
 					["coinsLeft"] = "10",
 					["currencyID"] = "0",
 				}, -- [1111]
@@ -12907,18 +12926,18 @@ EPGP_DB = {
 					["player"] = "Frostnbieber",
 					["coinsLeft"] = "13",
 					["timestamp"] = "2014-10-21 21:05:00",
-					["reward"] = "|cffa335ee|Hitem:112490:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Petrified Pennyroyal Ring]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112490:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Petrified Pennyroyal Ring]|h|r",
 				}, -- [1112]
 				{
-					["timestamp"] = "2014-10-21 21:05:00",
 					["player"] = "Dreltrak",
+					["timestamp"] = "2014-10-21 21:05:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "0",
 				}, -- [1113]
 				{
-					["timestamp"] = "2014-10-21 21:05:00",
 					["player"] = "Ookiniz",
+					["timestamp"] = "2014-10-21 21:05:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1114]
@@ -12926,25 +12945,25 @@ EPGP_DB = {
 					["player"] = "Lustoise",
 					["coinsLeft"] = "12",
 					["timestamp"] = "2014-10-21 21:05:00",
-					["reward"] = "|cffa335ee|Hitem:112477:0:0:0:0:0:0:0:90:0:6:1:450|h[Softfoot's Last Resort]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112477:0:0:0:0:0:0:0:90:0:6:1:450|h[Softfoot's Last Resort]|h|r",
 				}, -- [1115]
 				{
 					["player"] = "Bloodbolts",
 					["coinsLeft"] = "1",
 					["timestamp"] = "2014-10-21 21:05:00",
-					["reward"] = "|cffa335ee|Hitem:112493:0:0:0:0:0:0:0:90:0:6:1:450|h[Sabatons of Defilement]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112493:0:0:0:0:0:0:0:90:0:6:1:450|h[Sabatons of Defilement]|h|r",
 				}, -- [1116]
 				{
-					["timestamp"] = "2014-10-21 21:05:00",
 					["player"] = "Calade",
+					["timestamp"] = "2014-10-21 21:05:00",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [1117]
 				{
-					["timestamp"] = "2014-10-21 21:05:00",
 					["player"] = "Excrusader",
+					["timestamp"] = "2014-10-21 21:05:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1118]
@@ -12952,19 +12971,19 @@ EPGP_DB = {
 					["player"] = "Blastbeatx",
 					["coinsLeft"] = "10",
 					["timestamp"] = "2014-10-21 21:06:00",
-					["reward"] = "|cffa335ee|Hitem:112479:0:0:0:0:0:0:0:90:0:6:1:450|h[Stonetoe's Tormented Treads]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112479:0:0:0:0:0:0:0:90:0:6:1:450|h[Stonetoe's Tormented Treads]|h|r",
 				}, -- [1119]
 				{
 					["player"] = "Frostnbieber",
 					["coinsLeft"] = "12",
 					["timestamp"] = "2014-10-21 21:12:00",
-					["reward"] = "|cffa335ee|Hitem:112559:0:0:0:0:0:0:0:90:0:6:1:450|h[Untainted Guardian's Chain]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112559:0:0:0:0:0:0:0:90:0:6:1:450|h[Untainted Guardian's Chain]|h|r",
 				}, -- [1120]
 				{
-					["timestamp"] = "2014-10-21 21:13:00",
 					["player"] = "Calade",
+					["timestamp"] = "2014-10-21 21:13:00",
 					["coinsLeft"] = "7",
 					["currencyID"] = "0",
 				}, -- [1121]
@@ -12972,18 +12991,18 @@ EPGP_DB = {
 					["player"] = "Layonhooves",
 					["coinsLeft"] = "14",
 					["timestamp"] = "2014-10-21 21:13:00",
-					["reward"] = "|cffa335ee|Hitem:112554:0:0:0:0:0:0:0:90:0:6:1:450|h[Drape of the Despairing Pit]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112554:0:0:0:0:0:0:0:90:0:6:1:450|h[Drape of the Despairing Pit]|h|r",
 				}, -- [1122]
 				{
-					["timestamp"] = "2014-10-21 21:13:00",
 					["player"] = "Lustoise",
+					["timestamp"] = "2014-10-21 21:13:00",
 					["coinsLeft"] = "11",
 					["currencyID"] = "0",
 				}, -- [1123]
 				{
-					["timestamp"] = "2014-10-21 21:13:00",
 					["player"] = "Chronux",
+					["timestamp"] = "2014-10-21 21:13:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1124]
@@ -12991,42 +13010,42 @@ EPGP_DB = {
 					["player"] = "Calade",
 					["coinsLeft"] = "6",
 					["timestamp"] = "2014-10-21 21:18:00",
-					["reward"] = "|cffa335ee|Hitem:112947:0:0:0:0:0:0:0:90:0:6:1:450|h[Assurance of Consequence]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112947:0:0:0:0:0:0:0:90:0:6:1:450|h[Assurance of Consequence]|h|r",
 				}, -- [1125]
 				{
-					["timestamp"] = "2014-10-21 21:18:00",
 					["player"] = "Rastafaree",
+					["timestamp"] = "2014-10-21 21:18:00",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [1126]
 				{
-					["timestamp"] = "2014-10-21 21:18:00",
 					["player"] = "Chronux",
+					["timestamp"] = "2014-10-21 21:18:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1127]
 				{
-					["timestamp"] = "2014-10-21 21:18:00",
 					["player"] = "Bloodbolts",
+					["timestamp"] = "2014-10-21 21:18:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [1128]
 				{
-					["timestamp"] = "2014-10-21 21:18:00",
 					["player"] = "Nytbolt",
+					["timestamp"] = "2014-10-21 21:18:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1129]
 				{
-					["timestamp"] = "2014-10-21 21:18:00",
 					["player"] = "Blastbeatx",
+					["timestamp"] = "2014-10-21 21:18:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "0",
 				}, -- [1130]
 				{
-					["timestamp"] = "2014-10-21 21:18:00",
 					["player"] = "Lustoise",
+					["timestamp"] = "2014-10-21 21:18:00",
 					["coinsLeft"] = "10",
 					["currencyID"] = "0",
 				}, -- [1131]
@@ -13034,49 +13053,49 @@ EPGP_DB = {
 					["player"] = "Layonhooves",
 					["coinsLeft"] = "13",
 					["timestamp"] = "2014-10-21 21:18:00",
-					["reward"] = "|cffa335ee|Hitem:112949:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Greatsword of Pride's Fall]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112949:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Greatsword of Pride's Fall]|h|r",
 				}, -- [1132]
 				{
 					["player"] = "Gramz",
 					["coinsLeft"] = "2",
 					["timestamp"] = "2014-10-21 21:18:00",
-					["reward"] = "|cffa335ee|Hitem:112702:0:0:0:0:0:0:0:90:0:6:1:450|h[Crown of Boastful Words]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112702:0:0:0:0:0:0:0:90:0:6:1:450|h[Crown of Boastful Words]|h|r",
 				}, -- [1133]
 				{
-					["timestamp"] = "2014-10-21 21:32:00",
 					["player"] = "Frostnbieber",
+					["timestamp"] = "2014-10-21 21:32:00",
 					["coinsLeft"] = "11",
 					["currencyID"] = "0",
 				}, -- [1134]
 				{
-					["timestamp"] = "2014-10-21 21:32:00",
 					["player"] = "Calade",
+					["timestamp"] = "2014-10-21 21:32:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1135]
 				{
-					["timestamp"] = "2014-10-21 21:32:00",
 					["player"] = "Tydeson",
+					["timestamp"] = "2014-10-21 21:32:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1136]
 				{
-					["timestamp"] = "2014-10-21 21:32:00",
 					["player"] = "Ookiniz",
+					["timestamp"] = "2014-10-21 21:32:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [1137]
 				{
-					["timestamp"] = "2014-10-21 21:32:00",
 					["player"] = "Chronux",
+					["timestamp"] = "2014-10-21 21:32:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [1138]
 				{
-					["timestamp"] = "2014-10-21 21:32:00",
 					["player"] = "Âwàke",
+					["timestamp"] = "2014-10-21 21:32:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "0",
 				}, -- [1139]
@@ -13084,24 +13103,24 @@ EPGP_DB = {
 					["player"] = "Dreltrak",
 					["coinsLeft"] = "8",
 					["timestamp"] = "2014-10-21 21:32:00",
-					["reward"] = "|cffa335ee|Hitem:112718:0:0:0:0:0:0:0:90:0:6:1:450|h[Skydancer Boots]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112718:0:0:0:0:0:0:0:90:0:6:1:450|h[Skydancer Boots]|h|r",
 				}, -- [1140]
 				{
-					["timestamp"] = "2014-10-21 21:33:00",
 					["player"] = "Layonhooves",
+					["timestamp"] = "2014-10-21 21:33:00",
 					["coinsLeft"] = "12",
 					["currencyID"] = "0",
 				}, -- [1141]
 				{
-					["timestamp"] = "2014-10-21 21:37:00",
 					["player"] = "Frostnbieber",
+					["timestamp"] = "2014-10-21 21:37:00",
 					["coinsLeft"] = "10",
 					["currencyID"] = "0",
 				}, -- [1142]
 				{
-					["timestamp"] = "2014-10-21 21:37:00",
 					["player"] = "Blastbeatx",
+					["timestamp"] = "2014-10-21 21:37:00",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [1143]
@@ -13109,24 +13128,24 @@ EPGP_DB = {
 					["player"] = "Lustoise",
 					["coinsLeft"] = "9",
 					["timestamp"] = "2014-10-21 21:37:00",
-					["reward"] = "|cffa335ee|Hitem:112734:0:0:0:0:0:0:0:90:0:6:1:450|h[Precision Cutters]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112734:0:0:0:0:0:0:0:90:0:6:1:450|h[Precision Cutters]|h|r",
 				}, -- [1144]
 				{
-					["timestamp"] = "2014-10-21 21:37:00",
 					["player"] = "Rastafaree",
+					["timestamp"] = "2014-10-21 21:37:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1145]
 				{
-					["timestamp"] = "2014-10-21 21:37:00",
 					["player"] = "Calade",
+					["timestamp"] = "2014-10-21 21:37:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1146]
 				{
-					["timestamp"] = "2014-10-21 21:38:00",
 					["player"] = "Chronux",
+					["timestamp"] = "2014-10-21 21:38:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1147]
@@ -13134,12 +13153,12 @@ EPGP_DB = {
 					["player"] = "Layonhooves",
 					["coinsLeft"] = "11",
 					["timestamp"] = "2014-10-21 21:39:00",
-					["reward"] = "|cffa335ee|Hitem:112742:0:0:0:0:0:0:0:90:0:6:1:450|h[Juggernaut's Ignition Keys]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112742:0:0:0:0:0:0:0:90:0:6:1:450|h[Juggernaut's Ignition Keys]|h|r",
 				}, -- [1148]
 				{
-					["timestamp"] = "2014-10-21 21:49:00",
 					["player"] = "Frostnbieber",
+					["timestamp"] = "2014-10-21 21:49:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "0",
 				}, -- [1149]
@@ -13147,79 +13166,79 @@ EPGP_DB = {
 					["player"] = "Dreltrak",
 					["coinsLeft"] = "7",
 					["timestamp"] = "2014-10-21 21:49:00",
-					["reward"] = "|cffa335ee|Hitem:112768:0:0:0:0:0:0:0:90:0:6:1:450|h[Kardris' Toxic Totem]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112768:0:0:0:0:0:0:0:90:0:6:1:450|h[Kardris' Toxic Totem]|h|r",
 				}, -- [1150]
 				{
 					["player"] = "Blastbeatx",
 					["coinsLeft"] = "7",
 					["timestamp"] = "2014-10-21 21:49:00",
-					["reward"] = "|cffa335ee|Hitem:112761:0:0:0:0:0:0:0:90:0:6:1:450|h[Riou's Vigilant Leggings]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112761:0:0:0:0:0:0:0:90:0:6:1:450|h[Riou's Vigilant Leggings]|h|r",
 				}, -- [1151]
 				{
-					["timestamp"] = "2014-10-21 21:49:00",
 					["player"] = "Calade",
+					["timestamp"] = "2014-10-21 21:49:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [1152]
 				{
-					["timestamp"] = "2014-10-21 21:49:00",
 					["player"] = "Lustoise",
+					["timestamp"] = "2014-10-21 21:49:00",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [1153]
 				{
-					["timestamp"] = "2014-10-21 21:50:00",
 					["player"] = "Layonhooves",
+					["timestamp"] = "2014-10-21 21:50:00",
 					["coinsLeft"] = "10",
 					["currencyID"] = "0",
 				}, -- [1154]
 				{
-					["timestamp"] = "2014-10-21 21:50:00",
 					["player"] = "Clancey",
+					["timestamp"] = "2014-10-21 21:50:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [1155]
 				{
-					["timestamp"] = "2014-10-21 22:00:00",
 					["player"] = "Chronux",
+					["timestamp"] = "2014-10-21 22:00:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [1156]
 				{
-					["timestamp"] = "2014-10-21 22:00:00",
 					["player"] = "Frostnbieber",
+					["timestamp"] = "2014-10-21 22:00:00",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [1157]
 				{
-					["timestamp"] = "2014-10-21 22:00:00",
 					["player"] = "Calade",
+					["timestamp"] = "2014-10-21 22:00:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1158]
 				{
-					["timestamp"] = "2014-10-21 22:00:00",
 					["player"] = "Âwàke",
+					["timestamp"] = "2014-10-21 22:00:00",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [1159]
 				{
-					["timestamp"] = "2014-10-21 22:00:00",
 					["player"] = "Nytbolt",
+					["timestamp"] = "2014-10-21 22:00:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1160]
 				{
-					["timestamp"] = "2014-10-21 22:00:00",
 					["player"] = "Lustoise",
+					["timestamp"] = "2014-10-21 22:00:00",
 					["coinsLeft"] = "7",
 					["currencyID"] = "0",
 				}, -- [1161]
 				{
-					["timestamp"] = "2014-10-21 22:00:00",
 					["player"] = "Morgàn",
+					["timestamp"] = "2014-10-21 22:00:00",
 					["coinsLeft"] = "13",
 					["currencyID"] = "0",
 				}, -- [1162]
@@ -13227,42 +13246,42 @@ EPGP_DB = {
 					["player"] = "Frostnbieber",
 					["coinsLeft"] = "7",
 					["timestamp"] = "2014-10-21 22:09:00",
-					["reward"] = "|cffa335ee|Hitem:112814:0:0:0:0:0:0:0:90:0:6:1:450|h[Robes of Riven Dreams]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112814:0:0:0:0:0:0:0:90:0:6:1:450|h[Robes of Riven Dreams]|h|r",
 				}, -- [1163]
 				{
-					["timestamp"] = "2014-10-21 22:09:00",
 					["player"] = "Urtag",
+					["timestamp"] = "2014-10-21 22:09:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1164]
 				{
-					["timestamp"] = "2014-10-21 22:09:00",
 					["player"] = "Shinerr",
+					["timestamp"] = "2014-10-21 22:09:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [1165]
 				{
-					["timestamp"] = "2014-10-21 22:09:00",
 					["player"] = "Layonhooves",
+					["timestamp"] = "2014-10-21 22:09:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "0",
 				}, -- [1166]
 				{
-					["timestamp"] = "2014-10-21 22:09:00",
 					["player"] = "Ookiniz",
+					["timestamp"] = "2014-10-21 22:09:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1167]
 				{
-					["timestamp"] = "2014-10-21 22:09:00",
 					["player"] = "Tydeson",
+					["timestamp"] = "2014-10-21 22:09:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [1168]
 				{
-					["timestamp"] = "2014-10-21 22:09:00",
 					["player"] = "Morgàn",
+					["timestamp"] = "2014-10-21 22:09:00",
 					["coinsLeft"] = "12",
 					["currencyID"] = "0",
 				}, -- [1169]
@@ -13270,18 +13289,18 @@ EPGP_DB = {
 					["player"] = "Chronux",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2014-10-21 22:10:00",
-					["reward"] = "|cffa335ee|Hitem:112820:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Bracers of Averted Fatality]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112820:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Bracers of Averted Fatality]|h|r",
 				}, -- [1170]
 				{
-					["timestamp"] = "2014-10-21 22:20:00",
 					["player"] = "Frostnbieber",
+					["timestamp"] = "2014-10-21 22:20:00",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [1171]
 				{
-					["timestamp"] = "2014-10-21 22:20:00",
 					["player"] = "Blastbeatx",
+					["timestamp"] = "2014-10-21 22:20:00",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [1172]
@@ -13289,48 +13308,48 @@ EPGP_DB = {
 					["player"] = "Lustoise",
 					["coinsLeft"] = "6",
 					["timestamp"] = "2014-10-21 22:20:00",
-					["reward"] = "|cffa335ee|Hitem:112895:0:0:0:0:0:0:0:90:0:6:1:450|h[Bracers of Infinite Pipes]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112895:0:0:0:0:0:0:0:90:0:6:1:450|h[Bracers of Infinite Pipes]|h|r",
 				}, -- [1173]
 				{
-					["timestamp"] = "2014-10-21 22:20:00",
 					["player"] = "Âwàke",
+					["timestamp"] = "2014-10-21 22:20:00",
 					["coinsLeft"] = "7",
 					["currencyID"] = "0",
 				}, -- [1174]
 				{
-					["timestamp"] = "2014-10-21 22:20:00",
 					["player"] = "Nytbolt",
+					["timestamp"] = "2014-10-21 22:20:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [1175]
 				{
-					["timestamp"] = "2014-10-21 22:20:00",
 					["player"] = "Layonhooves",
+					["timestamp"] = "2014-10-21 22:20:00",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [1176]
 				{
-					["timestamp"] = "2014-10-21 22:36:00",
 					["player"] = "Frostnbieber",
+					["timestamp"] = "2014-10-21 22:36:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1177]
 				{
-					["timestamp"] = "2014-10-21 22:36:00",
 					["player"] = "Lustoise",
+					["timestamp"] = "2014-10-21 22:36:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1178]
 				{
-					["timestamp"] = "2014-10-21 22:36:00",
 					["player"] = "Urtag",
+					["timestamp"] = "2014-10-21 22:36:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [1179]
 				{
-					["timestamp"] = "2014-10-21 22:36:00",
 					["player"] = "Dreltrak",
+					["timestamp"] = "2014-10-21 22:36:00",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [1180]
@@ -13338,18 +13357,18 @@ EPGP_DB = {
 					["player"] = "Tydeson",
 					["coinsLeft"] = "2",
 					["timestamp"] = "2014-10-21 22:36:00",
-					["reward"] = "|cffa335ee|Hitem:112825:0:0:0:0:0:0:0:90:0:6:1:450|h[Sigil of Rampage]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112825:0:0:0:0:0:0:0:90:0:6:1:450|h[Sigil of Rampage]|h|r",
 				}, -- [1181]
 				{
-					["timestamp"] = "2014-10-21 22:36:00",
 					["player"] = "Blastbeatx",
+					["timestamp"] = "2014-10-21 22:36:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1182]
 				{
-					["timestamp"] = "2014-10-21 22:36:00",
 					["player"] = "Realistic",
+					["timestamp"] = "2014-10-21 22:36:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1183]
@@ -13357,25 +13376,25 @@ EPGP_DB = {
 					["player"] = "Layonhooves",
 					["coinsLeft"] = "7",
 					["timestamp"] = "2014-10-21 22:37:00",
-					["reward"] = "|cffa335ee|Hitem:112834:0:0:0:0:0:0:0:90:0:6:1:450|h[Untarnishable Greatbelt]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112834:0:0:0:0:0:0:0:90:0:6:1:450|h[Untarnishable Greatbelt]|h|r",
 				}, -- [1184]
 				{
 					["player"] = "Ookiniz",
 					["coinsLeft"] = "1",
 					["timestamp"] = "2014-10-21 22:43:00",
-					["reward"] = "|cffa335ee|Hitem:99723:0:0:0:0:0:0:0:90:0:0:0|h[Helm of the Cursed Vanquisher]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:99723:0:0:0:0:0:0:0:90:0:0:0|h[Helm of the Cursed Vanquisher]|h|r",
 				}, -- [1185]
 				{
-					["timestamp"] = "2014-10-21 22:43:00",
 					["player"] = "Simplelove",
+					["timestamp"] = "2014-10-21 22:43:00",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [1186]
 				{
-					["timestamp"] = "2014-10-21 22:43:00",
 					["player"] = "Gramz",
+					["timestamp"] = "2014-10-21 22:43:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [1187]
@@ -13383,48 +13402,48 @@ EPGP_DB = {
 					["player"] = "Blastbeatx",
 					["coinsLeft"] = "4",
 					["timestamp"] = "2014-10-21 22:43:00",
-					["reward"] = "|cffa335ee|Hitem:112851:0:0:0:0:0:0:0:90:0:6:1:450|h[Gleaming Eye of the Devilsaur]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112851:0:0:0:0:0:0:0:90:0:6:1:450|h[Gleaming Eye of the Devilsaur]|h|r",
 				}, -- [1188]
 				{
-					["timestamp"] = "2014-10-21 22:43:00",
 					["player"] = "Rastafaree",
+					["timestamp"] = "2014-10-21 22:43:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1189]
 				{
-					["timestamp"] = "2014-10-21 22:43:00",
 					["player"] = "Âwàke",
+					["timestamp"] = "2014-10-21 22:43:00",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [1190]
 				{
-					["timestamp"] = "2014-10-21 22:43:00",
 					["player"] = "Frostnbieber",
+					["timestamp"] = "2014-10-21 22:43:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1191]
 				{
-					["timestamp"] = "2014-10-21 22:44:00",
 					["player"] = "Layonhooves",
+					["timestamp"] = "2014-10-21 22:44:00",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [1192]
 				{
-					["timestamp"] = "2014-10-21 22:54:00",
 					["player"] = "Nytbolt",
+					["timestamp"] = "2014-10-21 22:54:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1193]
 				{
-					["timestamp"] = "2014-10-21 22:54:00",
 					["player"] = "Dreltrak",
+					["timestamp"] = "2014-10-21 22:54:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1194]
 				{
-					["timestamp"] = "2014-10-21 22:54:00",
 					["player"] = "Blastbeatx",
+					["timestamp"] = "2014-10-21 22:54:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [1195]
@@ -13432,36 +13451,36 @@ EPGP_DB = {
 					["player"] = "Frostnbieber",
 					["coinsLeft"] = "3",
 					["timestamp"] = "2014-10-21 22:54:00",
-					["reward"] = "|cffa335ee|Hitem:112916:0:0:0:0:0:0:0:90:0:6:1:450|h[Iyyokuk's Hereditary Seal]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112916:0:0:0:0:0:0:0:90:0:6:1:450|h[Iyyokuk's Hereditary Seal]|h|r",
 				}, -- [1196]
 				{
-					["timestamp"] = "2014-10-21 22:54:00",
 					["player"] = "Urtag",
+					["timestamp"] = "2014-10-21 22:54:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1197]
 				{
-					["timestamp"] = "2014-10-21 22:54:00",
 					["player"] = "Tydeson",
+					["timestamp"] = "2014-10-21 22:54:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [1198]
 				{
-					["timestamp"] = "2014-10-21 22:54:00",
 					["player"] = "Lustoise",
+					["timestamp"] = "2014-10-21 22:54:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1199]
 				{
-					["timestamp"] = "2014-10-21 22:54:00",
 					["player"] = "Layonhooves",
+					["timestamp"] = "2014-10-21 22:54:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1200]
 				{
-					["timestamp"] = "2014-10-21 23:15:00",
 					["player"] = "Frostnbieber",
+					["timestamp"] = "2014-10-21 23:15:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1201]
@@ -13469,49 +13488,49 @@ EPGP_DB = {
 					["player"] = "Urtag",
 					["coinsLeft"] = "1",
 					["timestamp"] = "2014-10-21 23:15:00",
-					["reward"] = "|cffa335ee|Hitem:112930:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Penetrating Gaze of Y'Shaarj]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112930:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Penetrating Gaze of Y'Shaarj]|h|r",
 				}, -- [1202]
 				{
 					["player"] = "Rastafaree",
 					["coinsLeft"] = "3",
 					["timestamp"] = "2014-10-21 23:15:00",
-					["reward"] = "|cffa335ee|Hitem:112938:0:0:0:0:0:0:0:90:0:6:1:450|h[Black Blood of Y'Shaarj]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112938:0:0:0:0:0:0:0:90:0:6:1:450|h[Black Blood of Y'Shaarj]|h|r",
 				}, -- [1203]
 				{
-					["timestamp"] = "2014-10-21 23:15:00",
 					["player"] = "Ookiniz",
+					["timestamp"] = "2014-10-21 23:15:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [1204]
 				{
-					["timestamp"] = "2014-10-21 23:15:00",
 					["player"] = "Vamprixlz",
+					["timestamp"] = "2014-10-21 23:15:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [1205]
 				{
-					["timestamp"] = "2014-10-21 23:15:00",
 					["player"] = "Clancey",
+					["timestamp"] = "2014-10-21 23:15:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [1206]
 				{
-					["timestamp"] = "2014-10-21 23:15:00",
 					["player"] = "Dreltrak",
+					["timestamp"] = "2014-10-21 23:15:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1207]
 				{
-					["timestamp"] = "2014-10-21 23:15:00",
 					["player"] = "Morgàn",
+					["timestamp"] = "2014-10-21 23:15:00",
 					["coinsLeft"] = "11",
 					["currencyID"] = "0",
 				}, -- [1208]
 				{
-					["timestamp"] = "2014-10-21 23:15:00",
 					["player"] = "Lustoise",
+					["timestamp"] = "2014-10-21 23:15:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [1209]
@@ -13519,18 +13538,18 @@ EPGP_DB = {
 					["player"] = "Tydeson",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2014-10-21 23:16:00",
-					["reward"] = "|cffa335ee|Hitem:105866:0:0:0:0:0:0:0:90:0:0:0|h[Essence of the Cursed Protector]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:105866:0:0:0:0:0:0:0:90:0:0:0|h[Essence of the Cursed Protector]|h|r",
 				}, -- [1210]
 				{
-					["timestamp"] = "2014-10-21 23:16:00",
 					["player"] = "Layonhooves",
+					["timestamp"] = "2014-10-21 23:16:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1211]
 				{
-					["timestamp"] = "2014-10-21 23:16:00",
 					["player"] = "Âwàke",
+					["timestamp"] = "2014-10-21 23:16:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1212]
@@ -13538,43 +13557,43 @@ EPGP_DB = {
 					["player"] = "Mlgblazeit",
 					["coinsLeft"] = "1",
 					["timestamp"] = "2014-10-28 21:03:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112422:0:0:0:0:0:0:0:90:0:6:1:450|h[Bolt-Burster Grips]|h|r",
+					["currencyID"] = "0",
 				}, -- [1213]
 				{
 					["player"] = "Oné",
 					["coinsLeft"] = "12",
 					["timestamp"] = "2014-10-28 21:03:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112417:0:0:0:0:0:0:0:90:0:6:1:450|h[Chestplate of Congealed Corrosion]|h|r",
+					["currencyID"] = "0",
 				}, -- [1214]
 				{
-					["player"] = "Shinerr",
 					["timestamp"] = "2014-10-28 21:03:00",
+					["player"] = "Shinerr",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1215]
 				{
-					["player"] = "Primalfears",
 					["timestamp"] = "2014-10-28 21:03:00",
+					["player"] = "Primalfears",
 					["coinsLeft"] = "7",
 					["currencyID"] = "0",
 				}, -- [1216]
 				{
-					["player"] = "Realistic",
 					["timestamp"] = "2014-10-28 21:03:00",
+					["player"] = "Realistic",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [1217]
 				{
-					["player"] = "Bloodbolts",
 					["timestamp"] = "2014-10-28 21:03:00",
+					["player"] = "Bloodbolts",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [1218]
 				{
-					["player"] = "Lustoise",
 					["timestamp"] = "2014-10-28 21:03:00",
+					["player"] = "Lustoise",
 					["coinsLeft"] = "14",
 					["currencyID"] = "0",
 				}, -- [1219]
@@ -13582,30 +13601,30 @@ EPGP_DB = {
 					["player"] = "Nytbolt",
 					["coinsLeft"] = "7",
 					["timestamp"] = "2014-10-28 21:03:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112383:0:0:0:0:0:0:0:90:0:6:1:450|h[Puddle Punishers]|h|r",
+					["currencyID"] = "0",
 				}, -- [1220]
 				{
-					["player"] = "Blastbeatx",
 					["timestamp"] = "2014-10-28 21:04:00",
+					["player"] = "Blastbeatx",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1221]
 				{
-					["player"] = "Marcusdapimp",
 					["timestamp"] = "2014-10-28 21:04:00",
+					["player"] = "Marcusdapimp",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [1222]
 				{
-					["player"] = "Gramz",
 					["timestamp"] = "2014-10-28 21:04:00",
+					["player"] = "Gramz",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [1223]
 				{
-					["player"] = "Oné",
 					["timestamp"] = "2014-10-28 21:10:00",
+					["player"] = "Oné",
 					["coinsLeft"] = "11",
 					["currencyID"] = "0",
 				}, -- [1224]
@@ -13613,24 +13632,24 @@ EPGP_DB = {
 					["player"] = "Bloodbolts",
 					["coinsLeft"] = "7",
 					["timestamp"] = "2014-10-28 21:10:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112493:0:0:0:0:0:0:0:90:0:6:1:450|h[Sabatons of Defilement]|h|r",
+					["currencyID"] = "0",
 				}, -- [1225]
 				{
-					["player"] = "Lustoise",
 					["timestamp"] = "2014-10-28 21:10:00",
+					["player"] = "Lustoise",
 					["coinsLeft"] = "13",
 					["currencyID"] = "0",
 				}, -- [1226]
 				{
-					["player"] = "Dreltrak",
 					["timestamp"] = "2014-10-28 21:11:00",
+					["player"] = "Dreltrak",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [1227]
 				{
-					["player"] = "Mlgblazeit",
 					["timestamp"] = "2014-10-28 21:16:00",
+					["player"] = "Mlgblazeit",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [1228]
@@ -13638,48 +13657,48 @@ EPGP_DB = {
 					["player"] = "Lustoise",
 					["coinsLeft"] = "12",
 					["timestamp"] = "2014-10-28 21:16:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112553:0:0:0:0:0:0:0:90:0:6:1:450|h[Reality Ripper Ring]|h|r",
+					["currencyID"] = "0",
 				}, -- [1229]
 				{
-					["player"] = "Oné",
 					["timestamp"] = "2014-10-28 21:16:00",
+					["player"] = "Oné",
 					["coinsLeft"] = "10",
 					["currencyID"] = "0",
 				}, -- [1230]
 				{
-					["player"] = "Bloodbolts",
 					["timestamp"] = "2014-10-28 21:17:00",
+					["player"] = "Bloodbolts",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [1231]
 				{
-					["player"] = "Bloodbolts",
 					["timestamp"] = "2014-10-28 21:22:00",
+					["player"] = "Bloodbolts",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1232]
 				{
-					["player"] = "Blastbeatx",
 					["timestamp"] = "2014-10-28 21:22:00",
+					["player"] = "Blastbeatx",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [1233]
 				{
-					["player"] = "Oné",
 					["timestamp"] = "2014-10-28 21:22:00",
+					["player"] = "Oné",
 					["coinsLeft"] = "9",
 					["currencyID"] = "0",
 				}, -- [1234]
 				{
-					["player"] = "Lustoise",
 					["timestamp"] = "2014-10-28 21:22:00",
+					["player"] = "Lustoise",
 					["coinsLeft"] = "11",
 					["currencyID"] = "0",
 				}, -- [1235]
 				{
-					["player"] = "Nytbolt",
 					["timestamp"] = "2014-10-28 21:22:00",
+					["player"] = "Nytbolt",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [1236]
@@ -13687,48 +13706,48 @@ EPGP_DB = {
 					["player"] = "Nathreizm",
 					["coinsLeft"] = "9",
 					["timestamp"] = "2014-10-28 21:22:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112947:0:0:0:0:0:0:0:90:0:6:1:450|h[Assurance of Consequence]|h|r",
+					["currencyID"] = "0",
 				}, -- [1237]
 				{
-					["player"] = "Oné",
 					["timestamp"] = "2014-10-28 21:33:00",
+					["player"] = "Oné",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [1238]
 				{
-					["player"] = "Lustoise",
 					["timestamp"] = "2014-10-28 21:33:00",
+					["player"] = "Lustoise",
 					["coinsLeft"] = "10",
 					["currencyID"] = "0",
 				}, -- [1239]
 				{
-					["player"] = "Dreltrak",
 					["timestamp"] = "2014-10-28 21:34:00",
+					["player"] = "Dreltrak",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1240]
 				{
-					["player"] = "Âwàke",
 					["timestamp"] = "2014-10-28 21:34:00",
+					["player"] = "Âwàke",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1241]
 				{
-					["player"] = "Gramz",
 					["timestamp"] = "2014-10-28 21:34:00",
+					["player"] = "Gramz",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1242]
 				{
-					["player"] = "Lustoise",
 					["timestamp"] = "2014-10-28 21:40:00",
+					["player"] = "Lustoise",
 					["coinsLeft"] = "9",
 					["currencyID"] = "0",
 				}, -- [1243]
 				{
-					["player"] = "Nytbolt",
 					["timestamp"] = "2014-10-28 21:40:00",
+					["player"] = "Nytbolt",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1244]
@@ -13736,48 +13755,48 @@ EPGP_DB = {
 					["player"] = "Oné",
 					["coinsLeft"] = "7",
 					["timestamp"] = "2014-10-28 21:40:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112732:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Tar-Coated Gauntlets]|h|r",
+					["currencyID"] = "0",
 				}, -- [1245]
 				{
-					["player"] = "Simplelove",
 					["timestamp"] = "2014-10-28 21:40:00",
+					["player"] = "Simplelove",
 					["coinsLeft"] = "16",
 					["currencyID"] = "0",
 				}, -- [1246]
 				{
-					["player"] = "Oné",
 					["timestamp"] = "2014-10-28 21:52:00",
+					["player"] = "Oné",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [1247]
 				{
-					["player"] = "Lustoise",
 					["timestamp"] = "2014-10-28 21:52:00",
+					["player"] = "Lustoise",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [1248]
 				{
-					["player"] = "Simplelove",
 					["timestamp"] = "2014-10-28 21:52:00",
+					["player"] = "Simplelove",
 					["coinsLeft"] = "15",
 					["currencyID"] = "0",
 				}, -- [1249]
 				{
-					["player"] = "Dreltrak",
 					["timestamp"] = "2014-10-28 21:52:00",
+					["player"] = "Dreltrak",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [1250]
 				{
-					["player"] = "Bloodbolts",
 					["timestamp"] = "2014-10-28 21:52:00",
+					["player"] = "Bloodbolts",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1251]
 				{
-					["player"] = "Blastbeatx",
 					["timestamp"] = "2014-10-28 21:53:00",
+					["player"] = "Blastbeatx",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [1252]
@@ -13785,24 +13804,24 @@ EPGP_DB = {
 					["player"] = "Clancey",
 					["coinsLeft"] = "5",
 					["timestamp"] = "2014-10-28 21:53:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112757:0:0:0:0:0:0:0:90:0:6:1:450|h[Wolf-Rider Spurs]|h|r",
+					["currencyID"] = "0",
 				}, -- [1253]
 				{
-					["player"] = "Nathreizm",
 					["timestamp"] = "2014-10-28 21:53:00",
+					["player"] = "Nathreizm",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [1254]
 				{
-					["player"] = "Lustoise",
 					["timestamp"] = "2014-10-28 22:00:00",
+					["player"] = "Lustoise",
 					["coinsLeft"] = "7",
 					["currencyID"] = "0",
 				}, -- [1255]
 				{
-					["player"] = "Oné",
 					["timestamp"] = "2014-10-28 22:00:00",
+					["player"] = "Oné",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1256]
@@ -13810,48 +13829,48 @@ EPGP_DB = {
 					["player"] = "Morgàn",
 					["coinsLeft"] = "10",
 					["timestamp"] = "2014-10-28 22:00:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112785:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Gar'tok, Strength of the Faithful]|h|r",
+					["currencyID"] = "0",
 				}, -- [1257]
 				{
-					["player"] = "Bloodbolts",
 					["timestamp"] = "2014-10-28 22:00:00",
+					["player"] = "Bloodbolts",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [1258]
 				{
-					["player"] = "Simplelove",
 					["timestamp"] = "2014-10-28 22:09:00",
+					["player"] = "Simplelove",
 					["coinsLeft"] = "14",
 					["currencyID"] = "0",
 				}, -- [1259]
 				{
-					["player"] = "Lustoise",
 					["timestamp"] = "2014-10-28 22:09:00",
+					["player"] = "Lustoise",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [1260]
 				{
-					["player"] = "Oné",
 					["timestamp"] = "2014-10-28 22:09:00",
+					["player"] = "Oné",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1261]
 				{
-					["player"] = "Shinerr",
 					["timestamp"] = "2014-10-28 22:09:00",
+					["player"] = "Shinerr",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [1262]
 				{
-					["player"] = "Marcusdapimp",
 					["timestamp"] = "2014-10-28 22:09:00",
+					["player"] = "Marcusdapimp",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [1263]
 				{
-					["player"] = "Layonhooves",
 					["timestamp"] = "2014-10-28 22:09:00",
+					["player"] = "Layonhooves",
 					["coinsLeft"] = "15",
 					["currencyID"] = "0",
 				}, -- [1264]
@@ -13859,12 +13878,12 @@ EPGP_DB = {
 					["player"] = "Morgàn",
 					["coinsLeft"] = "9",
 					["timestamp"] = "2014-10-28 22:09:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112803:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Malkorok's Tainted Dog Tags]|h|r",
+					["currencyID"] = "0",
 				}, -- [1265]
 				{
-					["player"] = "Nytbolt",
 					["timestamp"] = "2014-10-28 22:20:00",
+					["player"] = "Nytbolt",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1266]
@@ -13872,18 +13891,18 @@ EPGP_DB = {
 					["player"] = "Lustoise",
 					["coinsLeft"] = "5",
 					["timestamp"] = "2014-10-28 22:20:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:99719:0:0:0:0:0:0:0:90:0:0:0|h[Shoulders of the Cursed Protector]|h|r",
+					["currencyID"] = "0",
 				}, -- [1267]
 				{
-					["player"] = "Realistic",
 					["timestamp"] = "2014-10-28 22:20:00",
+					["player"] = "Realistic",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1268]
 				{
-					["player"] = "Simplelove",
 					["timestamp"] = "2014-10-28 22:20:00",
+					["player"] = "Simplelove",
 					["coinsLeft"] = "13",
 					["currencyID"] = "0",
 				}, -- [1269]
@@ -13891,24 +13910,24 @@ EPGP_DB = {
 					["player"] = "Layonhooves",
 					["coinsLeft"] = "14",
 					["timestamp"] = "2014-10-28 22:20:00",
-					["currencyID"] = "0",
 					["reward"] = "|cff0070dd|Hitem:104158:0:0:0:0:0:0:0:90:0:6:0|h[Blackfuse Bombling]|h|r",
+					["currencyID"] = "0",
 				}, -- [1270]
 				{
-					["player"] = "Layonhooves",
 					["timestamp"] = "2014-10-28 22:20:00",
+					["player"] = "Layonhooves",
 					["coinsLeft"] = "14",
 					["currencyID"] = "0",
 				}, -- [1271]
 				{
-					["player"] = "Lustoise",
 					["timestamp"] = "2014-10-28 22:29:00",
+					["player"] = "Lustoise",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1272]
 				{
-					["player"] = "Simplelove",
 					["timestamp"] = "2014-10-28 22:29:00",
+					["player"] = "Simplelove",
 					["coinsLeft"] = "12",
 					["currencyID"] = "0",
 				}, -- [1273]
@@ -13916,30 +13935,30 @@ EPGP_DB = {
 					["player"] = "Oné",
 					["coinsLeft"] = "3",
 					["timestamp"] = "2014-10-28 22:29:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112828:0:0:0:0:0:0:0:90:0:6:1:450|h[Seal of the Forgotten Kings]|h|r",
+					["currencyID"] = "0",
 				}, -- [1274]
 				{
-					["player"] = "Vamprixlz",
 					["timestamp"] = "2014-10-28 22:29:00",
+					["player"] = "Vamprixlz",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1275]
 				{
-					["player"] = "Morgàn",
 					["timestamp"] = "2014-10-28 22:29:00",
+					["player"] = "Morgàn",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [1276]
 				{
-					["player"] = "Layonhooves",
 					["timestamp"] = "2014-10-28 22:30:00",
+					["player"] = "Layonhooves",
 					["coinsLeft"] = "13",
 					["currencyID"] = "0",
 				}, -- [1277]
 				{
-					["player"] = "Oné",
 					["timestamp"] = "2014-10-28 22:36:00",
+					["player"] = "Oné",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1278]
@@ -13947,24 +13966,24 @@ EPGP_DB = {
 					["player"] = "Simplelove",
 					["coinsLeft"] = "11",
 					["timestamp"] = "2014-10-28 22:36:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112854:0:0:0:0:0:0:0:90:0:6:1:450|h[Montak's Grips of Scorching Breath]|h|r",
+					["currencyID"] = "0",
 				}, -- [1279]
 				{
-					["player"] = "Gramz",
 					["timestamp"] = "2014-10-28 22:36:00",
+					["player"] = "Gramz",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [1280]
 				{
-					["player"] = "Rastafaree",
 					["timestamp"] = "2014-10-28 22:36:00",
+					["player"] = "Rastafaree",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [1281]
 				{
-					["player"] = "Shinerr",
 					["timestamp"] = "2014-10-28 22:36:00",
+					["player"] = "Shinerr",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [1282]
@@ -13972,72 +13991,72 @@ EPGP_DB = {
 					["player"] = "Âwàke",
 					["coinsLeft"] = "3",
 					["timestamp"] = "2014-10-28 22:36:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112852:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Signet of the Dinomancers]|h|r",
+					["currencyID"] = "0",
 				}, -- [1283]
 				{
-					["player"] = "Layonhooves",
 					["timestamp"] = "2014-10-28 22:36:00",
+					["player"] = "Layonhooves",
 					["coinsLeft"] = "12",
 					["currencyID"] = "0",
 				}, -- [1284]
 				{
-					["player"] = "Oné",
 					["timestamp"] = "2014-10-28 22:46:00",
+					["player"] = "Oné",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [1285]
 				{
-					["player"] = "Simplelove",
 					["timestamp"] = "2014-10-28 22:46:00",
+					["player"] = "Simplelove",
 					["coinsLeft"] = "10",
 					["currencyID"] = "0",
 				}, -- [1286]
 				{
-					["player"] = "Rastafaree",
 					["timestamp"] = "2014-10-28 22:46:00",
+					["player"] = "Rastafaree",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [1287]
 				{
-					["player"] = "Nytbolt",
 					["timestamp"] = "2014-10-28 22:46:00",
+					["player"] = "Nytbolt",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [1288]
 				{
-					["player"] = "Dreltrak",
 					["timestamp"] = "2014-10-28 22:46:00",
+					["player"] = "Dreltrak",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [1289]
 				{
-					["player"] = "Layonhooves",
 					["timestamp"] = "2014-10-28 22:46:00",
+					["player"] = "Layonhooves",
 					["coinsLeft"] = "11",
 					["currencyID"] = "0",
 				}, -- [1290]
 				{
-					["player"] = "Urtag",
 					["timestamp"] = "2014-10-28 22:59:00",
+					["player"] = "Urtag",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [1291]
 				{
-					["player"] = "Simplelove",
 					["timestamp"] = "2014-10-28 22:59:00",
+					["player"] = "Simplelove",
 					["coinsLeft"] = "9",
 					["currencyID"] = "0",
 				}, -- [1292]
 				{
-					["player"] = "Rastafaree",
 					["timestamp"] = "2014-10-28 22:59:00",
+					["player"] = "Rastafaree",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [1293]
 				{
-					["player"] = "Bloodbolts",
 					["timestamp"] = "2014-10-28 22:59:00",
+					["player"] = "Bloodbolts",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1294]
@@ -14045,12 +14064,12 @@ EPGP_DB = {
 					["player"] = "Vamprixlz",
 					["coinsLeft"] = "1",
 					["timestamp"] = "2014-10-28 22:59:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112936:0:0:0:0:0:0:0:90:0:6:1:450|h[Belt of the Broken Pact]|h|r",
+					["currencyID"] = "0",
 				}, -- [1295]
 				{
-					["player"] = "Morgàn",
 					["timestamp"] = "2014-10-28 22:59:00",
+					["player"] = "Morgàn",
 					["coinsLeft"] = "7",
 					["currencyID"] = "0",
 				}, -- [1296]
@@ -14058,24 +14077,24 @@ EPGP_DB = {
 					["player"] = "Oné",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2014-10-28 22:59:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112928:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Greathelm of the Warchief]|h|r",
+					["currencyID"] = "0",
 				}, -- [1297]
 				{
-					["player"] = "Nytbolt",
 					["timestamp"] = "2014-10-28 22:59:00",
+					["player"] = "Nytbolt",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1298]
 				{
-					["player"] = "Lustoise",
 					["timestamp"] = "2014-10-28 22:59:00",
+					["player"] = "Lustoise",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [1299]
 				{
-					["player"] = "Âwàke",
 					["timestamp"] = "2014-10-28 23:00:00",
+					["player"] = "Âwàke",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [1300]
@@ -14083,18 +14102,18 @@ EPGP_DB = {
 					["player"] = "Clancey",
 					["coinsLeft"] = "4",
 					["timestamp"] = "2014-10-28 23:00:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112933:0:0:0:0:0:0:0:90:0:6:1:450|h[Legplates of Unthinking Strife]|h|r",
+					["currencyID"] = "0",
 				}, -- [1301]
 				{
-					["player"] = "Gramz",
 					["timestamp"] = "2014-10-28 23:00:00",
+					["player"] = "Gramz",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [1302]
 				{
-					["player"] = "Layonhooves",
 					["timestamp"] = "2014-10-28 23:01:00",
+					["player"] = "Layonhooves",
 					["coinsLeft"] = "10",
 					["currencyID"] = "0",
 				}, -- [1303]
@@ -14102,16 +14121,16 @@ EPGP_DB = {
 			["decay_p"] = 10,
 			["sort_order"] = "EP",
 			["last_awards"] = {
-				["End of Raid"] = 50,
-				["Farm"] = 2,
 				["Overtime"] = 3,
 				["Derp: Dummy Strike"] = -5,
-				["Full Clear"] = 100,
+				["End of Raid"] = 50,
+				["Farm"] = 2,
 				["Siege of Orgrimmar"] = 2,
+				["Full Clear"] = 100,
 				["Start of Raid"] = 50,
 				["UNDO Derp: Dummy Strike"] = 5,
 			},
-			["blizzard_show_offline"] = true,
+			["blizzard_show_offline"] = false,
 		},
 		["Dbyx - Arthas"] = {
 			["outsiders"] = 0,
@@ -14125,7 +14144,7 @@ EPGP_DB = {
 		["Gittdabank - Arthas"] = {
 			["outsiders"] = 0,
 		},
-		["Git - Arthas"] = {
+		["Spih - Arthas"] = {
 			["min_ep"] = 100,
 			["base_gp"] = 2000,
 			["decay_p"] = 10,

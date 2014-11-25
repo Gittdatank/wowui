@@ -15,15 +15,15 @@ EPGPLootMaster = {
 		["Gitt - Cho'gall"] = "Gitt - Cho'gall",
 		["Gimm - Cho'gall"] = "Gimm - Cho'gall",
 		["Gitt - Arthas"] = "Gitt - Arthas",
-		["Git - Arthas"] = "Git - Arthas",
+		["Spih - Arthas"] = "Spih - Arthas",
+		["Giit - Cho'gall"] = "Giit - Cho'gall",
 		["Burk - Arthas"] = "Burk - Arthas",
+		["Spih - Cho'gall"] = "Spih - Cho'gall",
 		["Git - Cho'gall"] = "Git - Cho'gall",
 		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
-		["Git - Azuremyst"] = "Git - Azuremyst",
-		["Spih - Cho'gall"] = "Spih - Cho'gall",
 		["Greny - Azuremyst"] = "Greny - Azuremyst",
-		["Giit - Cho'gall"] = "Giit - Cho'gall",
-		["Spih - Arthas"] = "Spih - Arthas",
+		["Git - Azuremyst"] = "Git - Azuremyst",
+		["Git - Arthas"] = "Git - Arthas",
 	},
 	["profiles"] = {
 		["Dbyx - Arthas"] = {
@@ -33,8 +33,8 @@ EPGPLootMaster = {
 			["buttonNum"] = 2,
 			["button3_fallback"] = "",
 			["button2_color"] = "faec9b",
-			["hideMLOnCombat"] = false,
 			["button2_fallback"] = "OFFSPEC",
+			["hideMLOnCombat"] = false,
 		},
 		["Giit - Cho'gall"] = {
 		},
@@ -46,10 +46,54 @@ EPGPLootMaster = {
 			["button2_gp"] = "0",
 			["button2_gpValue"] = 0,
 			["button2_color"] = "ffd93c",
-			["buttonNum"] = 2,
 			["AutoLooter"] = "Nytbolt",
+			["buttonNum"] = 2,
 		},
 		["Giit - Azuremyst"] = {
+		},
+		["Spih - Arthas"] = {
+		},
+		["Gimm - Cho'gall"] = {
+		},
+		["Git - Azuremyst"] = {
+			["button2"] = "Offspec",
+			["mainUIScale"] = 1.06666677792867,
+			["button2_fallback"] = "",
+			["hideMLOnCombat"] = false,
+			["votingSendGuildRankList"] = {
+				nil, -- [1]
+				nil, -- [2]
+				true, -- [3]
+			},
+			["monitorSendAssistantOnly"] = false,
+			["votingSendGuildRank"] = true,
+			["button2_color"] = "836f27",
+			["blizzard_show_offline"] = 1,
+			["buttonNum"] = 2,
+			["votingSendAssistantOnly"] = false,
+		},
+		["Ezyn - Azuremyst"] = {
+		},
+		["Gilt - Azuremyst"] = {
+		},
+		["Git - Cho'gall"] = {
+			["biddingWhen"] = "always",
+			["hideMLOnCombat"] = false,
+			["button3_gp"] = "0%",
+			["button2_gp"] = "0%",
+			["button2"] = "Offspec",
+			["buttonNum"] = 2,
+			["button2_gpIsPercentage"] = true,
+			["button2_fallback"] = "OFFSPEC",
+			["button3_gpValue"] = 0,
+			["mainUIScale"] = 1.06666666666667,
+			["bidding"] = false,
+			["button2_color"] = "832700",
+			["button2_gpValue"] = 0,
+			["AutoLooter"] = "Dotsfired",
+			["button3_fallback"] = "",
+			["button3_gpIsPercentage"] = true,
+			["monitorSendAssistantOnly"] = false,
 		},
 		["Git - Arthas"] = {
 			["mainUIScale"] = 1.00000000397364,
@@ -66,50 +110,6 @@ EPGPLootMaster = {
 			["button2"] = "Offspec",
 			["button2_gpIsPercentage"] = true,
 			["button3_gpIsPercentage"] = true,
-		},
-		["Git - Cho'gall"] = {
-			["biddingWhen"] = "always",
-			["hideMLOnCombat"] = false,
-			["button3_gp"] = "0%",
-			["button2_gp"] = "0%",
-			["button2"] = "Offspec",
-			["buttonNum"] = 2,
-			["button2_gpIsPercentage"] = true,
-			["monitorSendAssistantOnly"] = false,
-			["button3_gpIsPercentage"] = true,
-			["button3_fallback"] = "",
-			["bidding"] = false,
-			["AutoLooter"] = "Dotsfired",
-			["button2_gpValue"] = 0,
-			["button2_color"] = "832700",
-			["mainUIScale"] = 1.06666666666667,
-			["button3_gpValue"] = 0,
-			["button2_fallback"] = "OFFSPEC",
-		},
-		["Git - Azuremyst"] = {
-			["button2"] = "Offspec",
-			["mainUIScale"] = 1.06666677792867,
-			["button2_fallback"] = "",
-			["hideMLOnCombat"] = false,
-			["votingSendGuildRankList"] = {
-				nil, -- [1]
-				nil, -- [2]
-				true, -- [3]
-			},
-			["monitorSendAssistantOnly"] = false,
-			["votingSendGuildRank"] = true,
-			["button2_color"] = "836f27",
-			["votingSendAssistantOnly"] = false,
-			["buttonNum"] = 2,
-			["blizzard_show_offline"] = 1,
-		},
-		["Ezyn - Azuremyst"] = {
-		},
-		["Gilt - Azuremyst"] = {
-		},
-		["Gimm - Cho'gall"] = {
-		},
-		["Spih - Arthas"] = {
 		},
 	},
 }

@@ -3,7 +3,6 @@
 -- Module Declaration
 --
 
-if not BigWigs.isWOD then return end -- XXX compat
 local mod, CL = BigWigs:NewBoss("Operator Thogar", 988, 1147)
 if not mod then return end
 mod:RegisterEnableMob(76906, 80791) -- Operator Thogar, Grom'kar Man-at-Arms
@@ -125,7 +124,7 @@ if L then
 	L.big_add_train_icon = "warrior_talent_icon_skirmisher" -- one dude standing alone
 	L.cannon_train = "Cannon train"
 	L.cannon_train_icon = "ability_vehicle_siegeenginecannon" -- cannon ball, duh
-	L.deforester = EJ_GetSectionInfo(10329)
+	L.deforester = mod:SpellName(-10329)
 	L.deforester_icon = "spell_shaman_lavasurge"
 	L.random = "Random trains"
 	L.random_icon = "ability_foundryraid_traindeath"

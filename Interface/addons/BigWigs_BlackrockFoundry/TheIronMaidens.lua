@@ -3,7 +3,6 @@
 -- Module Declaration
 --
 
-if not BigWigs.isWOD then return end -- XXX compat
 local mod, CL = BigWigs:NewBoss("The Iron Maidens", 988, 1203)
 if not mod then return end
 mod:RegisterEnableMob(77477, 77557, 77231) -- Marak the Blooded, Admiral Gar'an, Enforcer Sorka
@@ -33,7 +32,7 @@ if L then
 	L.ship = "Jump to Ship: %s" -- 137266
 	L.ship_icon = "ability_vehicle_siegeenginecannon"
 
-	L.bombardment = GetSpellInfo(147135)
+	L.bombardment = mod:SpellName(147135)
 	L.bombardment_desc = select(2, EJ_GetSectionInfo(10019))
 	L.bombardment_icon = "ability_ironmaidens_bombardment"
 

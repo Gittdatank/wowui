@@ -14,7 +14,7 @@ local pName = UnitName("player")
 local bossUtilityFrame = CreateFrame("Frame")
 local enabledModules = {}
 local allowedEvents = {}
-local difficulty = 16 -- Mythic
+local difficulty = 0
 local UpdateDispelStatus = nil
 local myGUID = nil
 local myRole = nil
@@ -129,7 +129,9 @@ function boss:OnEnable(isWipe)
 		self:CheckForEncounterEngage("NoEngage") -- Prevent engaging if enabling during a boss fight (after a DC)
 	end
 
-	self:SendMessage("BigWigs_OnBossEnable", self)
+	if not isWipe then
+		self:SendMessage("BigWigs_OnBossEnable", self)
+	end
 end
 function boss:OnDisable(isWipe)
 	if debug then dbg(self, isWipe and "OnDisable() via Wipe()" or "OnDisable()") end
@@ -172,7 +174,9 @@ function boss:OnDisable(isWipe)
 	self.isWiping = nil
 	self.isEngaged = nil
 
-	self:SendMessage("BigWigs_OnBossDisable", self)
+	if not isWipe then
+		self:SendMessage("BigWigs_OnBossDisable", self)
+	end
 end
 function boss:GetOption(spellId)
 	return self.db.profile[spells[spellId]]
@@ -433,7 +437,7 @@ do
 		local hasBoss = UnitHealth("boss1") > 0 or UnitHealth("boss2") > 0 or UnitHealth("boss3") > 0 or UnitHealth("boss4") > 0 or UnitHealth("boss5") > 0
 		if not hasBoss and self.isEngaged then
 			if debug then dbg(self, ":CheckBossStatus wipeCheck scheduled.") end
-			self:ScheduleTimer(wipeCheck, 3, self)
+			self:ScheduleTimer(wipeCheck, 4, self)
 		elseif not self.isEngaged and hasBoss then
 			if debug then dbg(self, ":CheckBossStatus Engage called.") end
 			self:CheckForEncounterEngage()
@@ -732,8 +736,8 @@ do
 			-- Tranq (Hunter), Soothe (Druid), Shiv (Rogue)
 			offDispel = offDispel .. "enrage,"
 		end
-		if IsSpellKnown(19801) or IsSpellKnown(32375) or IsSpellKnown(528) or IsSpellKnown(370) or IsSpellKnown(30449) or IsSpellKnown(110707) or IsSpellKnown(110802) then
-			-- Tranq (Hunter), Mass Dispel (Priest), Dispel Magic (Priest), Purge (Shaman), Spellsteal (Mage), Mass Dispel (Symbiosis), Purge (Symbiosis)
+		if IsSpellKnown(19801) or IsSpellKnown(32375) or IsSpellKnown(528) or IsSpellKnown(370) or IsSpellKnown(30449) then
+			-- Tranq (Hunter), Mass Dispel (Priest), Dispel Magic (Priest), Purge (Shaman), Spellsteal (Mage)
 			offDispel = offDispel .. "magic,"
 		end
 		if IsSpellKnown(527) or IsSpellKnown(77130) or (IsSpellKnown(115450) and IsSpellKnown(115451)) or (IsSpellKnown(4987) and IsSpellKnown(53551)) or IsSpellKnown(88423) then

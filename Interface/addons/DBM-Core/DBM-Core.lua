@@ -47,13 +47,12 @@
 --    * Share Alike. If you alter, transform, or build upon this work, you may distribute the resulting work only under the same or similar license to this one.
 --
 
-
 -------------------------------
 --  Globals/Default Options  --
 -------------------------------
 DBM = {
-	Revision = tonumber(("$Revision: 11873 $"):sub(12, -3)),
-	DisplayVersion = "6.0.5", -- the string that is shown as version
+	Revision = tonumber(("$Revision: 11878 $"):sub(12, -3)),
+	DisplayVersion = "6.0.6 alpha", -- the string that is shown as version
 	ReleaseRevision = 11873 -- the revision of the latest stable version that is available
 }
 
@@ -1965,6 +1964,7 @@ do
 					raidUIds[v.id] = nil
 					raidGuids[v.guid] = nil
 					raid[i] = nil
+					removeEntry(newerVersionPerson, i)
 					fireEvent("raidLeave", i)
 				else
 					v.updated = nil
@@ -2027,6 +2027,7 @@ do
 					raidUIds[v.id] = nil
 					raidGuids[v.guid] = nil
 					raid[i] = nil
+					removeEntry(newerVersionPerson, i)
 					fireEvent("partyLeave", i)
 				else
 					v.updated = nil
@@ -2048,6 +2049,7 @@ do
 			enableIcons = true
 			fireEvent("raidLeave", playerName)
 			twipe(raid)
+			twipe(newerVersionPerson)
 			-- restore playerinfo into raid table on raidleave. (for solo raid)
 			raid[playerName] = {}
 			raid[playerName].name = playerName

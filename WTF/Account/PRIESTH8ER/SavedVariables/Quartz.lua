@@ -15,7 +15,7 @@ Quartz3DB = {
 					["y"] = 336.184681421329,
 					["x"] = 1284.61537897067,
 				},
-				["Gilt Tank"] = {
+				["Gilt Heals"] = {
 					["y"] = 336.184681421329,
 					["x"] = 1284.61537897067,
 				},
@@ -33,21 +33,21 @@ Quartz3DB = {
 				},
 				["Gimm"] = {
 					["scale"] = 0.400000005960465,
-					["w"] = 310,
 					["border"] = "None",
+					["w"] = 310,
 					["font"] = "DorisPP",
 					["y"] = 1117.11108398438,
 					["h"] = 30,
 					["fontsize"] = 20,
 					["iconalpha"] = 1,
-					["timefontsize"] = 20,
 					["noInterruptBorder"] = "Blizzard Tooltip",
+					["timefontsize"] = 20,
 					["x"] = 4092.61279296875,
 					["texture"] = "Smooth",
 				},
-				["Gimm - Tank"] = {
-					["y"] = 336.184681421329,
-					["x"] = 1284.61537897067,
+				["Spih - DPS"] = {
+					["y"] = 303.934814453125,
+					["x"] = 1256.11535644531,
 				},
 				["Giit tank"] = {
 					["y"] = 336.184681421329,
@@ -73,17 +73,15 @@ Quartz3DB = {
 					["y"] = 303.934814453125,
 					["x"] = 1256.11535644531,
 				},
-				["Spih - DPS"] = {
-					["y"] = 303.934814453125,
-					["x"] = 1256.11535644531,
+				["Gimm - Tank"] = {
+					["y"] = 336.184681421329,
+					["x"] = 1284.61537897067,
 				},
-				["Gilt Heals"] = {
+				["Gilt Tank"] = {
 					["y"] = 336.184681421329,
 					["x"] = 1284.61537897067,
 				},
 			},
-		},
-		["EnemyCasts"] = {
 		},
 		["Player"] = {
 			["profiles"] = {
@@ -91,50 +89,43 @@ Quartz3DB = {
 					["y"] = 225.409000361354,
 					["x"] = 860.28136231465,
 					["font"] = "DorisPP",
+					["border"] = "None",
+					["w"] = 220,
+					["texture"] = "Smooth",
+				},
+				["Gilt Heals"] = {
+					["y"] = 225.409000361354,
+					["x"] = 860.28136231465,
+					["font"] = "DorisPP",
 					["w"] = 220,
 					["border"] = "None",
 					["texture"] = "Smooth",
 				},
-				["Gilt Tank"] = {
-					["w"] = 310,
-					["scale"] = 0.550000011920929,
-					["font"] = "DorisPP",
-					["border"] = "None",
-					["timefontsize"] = 20,
-					["y"] = 529.869049039045,
-					["h"] = 30,
-					["fontsize"] = 20,
-					["iconalpha"] = 1,
-					["noInterruptBorder"] = "Blizzard Tooltip",
-					["icongap"] = 1,
-					["x"] = 810.704810715868,
-					["texture"] = "Smooth",
-				},
 				["Gitt"] = {
 					["scale"] = 0.550000011920929,
-					["w"] = 490,
 					["border"] = "None",
+					["w"] = 490,
 					["font"] = "DorisPP",
 					["y"] = 1346.68725585938,
 					["x"] = 1530.70495605469,
 					["fontsize"] = 20,
 					["iconalpha"] = 1,
-					["noInterruptBorder"] = "Blizzard Tooltip",
 					["timefontsize"] = 20,
+					["noInterruptBorder"] = "Blizzard Tooltip",
 					["h"] = 38,
 					["texture"] = "Smooth",
 				},
 				["Spih"] = {
 					["scale"] = 0.75,
 					["w"] = 380,
-					["h"] = 21,
-					["y"] = 694.413879394531,
 					["x"] = 1093.7060546875,
-					["border"] = "None",
-					["iconalpha"] = 1,
-					["noInterruptBorder"] = "Blizzard Tooltip",
-					["timefontsize"] = 14,
+					["y"] = 694.413879394531,
+					["h"] = 21,
 					["font"] = "DorisPP",
+					["iconalpha"] = 1,
+					["timefontsize"] = 14,
+					["noInterruptBorder"] = "Blizzard Tooltip",
+					["border"] = "None",
 					["texture"] = "Flat",
 				},
 				["Git - Mar 2014"] = {
@@ -154,129 +145,138 @@ Quartz3DB = {
 					["y"] = 436.631225585938,
 					["h"] = 38,
 					["font"] = "DorisPP",
-					["w"] = 275,
-					["x"] = 807.730895996094,
 					["border"] = "None",
+					["x"] = 807.730895996094,
+					["w"] = 275,
 					["texture"] = "Smooth",
 				},
-				["Gimm - Tank"] = {
+				["Spih - DPS"] = {
 					["scale"] = 0.550000011920929,
-					["border"] = "None",
 					["w"] = 490,
-					["h"] = 38,
-					["y"] = 1346.68725585938,
 					["font"] = "DorisPP",
-					["fontsize"] = 20,
+					["y"] = 1004.41442871094,
+					["h"] = 38,
+					["x"] = 1485.70556640625,
 					["iconalpha"] = 1,
-					["timefontsize"] = 20,
+					["timefontsize"] = 14,
 					["noInterruptBorder"] = "Blizzard Tooltip",
-					["x"] = 1530.70495605469,
-					["texture"] = "Smooth",
+					["border"] = "None",
+					["texture"] = "Minimalist",
 				},
 				["Giit tank"] = {
 					["scale"] = 0.550000011920929,
-					["border"] = "None",
 					["w"] = 310,
+					["border"] = "None",
 					["x"] = 810.704810715868,
 					["y"] = 529.869049039045,
 					["font"] = "DorisPP",
 					["fontsize"] = 20,
 					["iconalpha"] = 1,
-					["noInterruptBorder"] = "Blizzard Tooltip",
 					["timefontsize"] = 20,
+					["noInterruptBorder"] = "Blizzard Tooltip",
 					["h"] = 30,
 					["texture"] = "Smooth",
 				},
 				["Gitt-Amber"] = {
-					["w"] = 720,
 					["border"] = "None",
+					["w"] = 720,
 					["h"] = 50,
 					["y"] = 930.499938964844,
 					["x"] = 589.5,
 					["fontsize"] = 20,
 					["iconalpha"] = 1,
-					["noInterruptBorder"] = "Blizzard Tooltip",
 					["timefontsize"] = 20,
+					["noInterruptBorder"] = "Blizzard Tooltip",
 					["font"] = "DorisPP",
 					["texture"] = "Smooth",
 				},
 				["Default"] = {
 					["scale"] = 0.550000011920929,
 					["w"] = 490,
-					["font"] = "DorisPP",
-					["y"] = 1114.86755371094,
 					["h"] = 38,
-					["x"] = 1478.88659667969,
-					["iconalpha"] = 1,
-					["timefontsize"] = 14,
-					["noInterruptBorder"] = "Blizzard Tooltip",
+					["y"] = 1114.86755371094,
+					["font"] = "DorisPP",
 					["border"] = "None",
+					["iconalpha"] = 1,
+					["noInterruptBorder"] = "Blizzard Tooltip",
+					["timefontsize"] = 14,
+					["x"] = 1478.88659667969,
 					["texture"] = "Minimalist",
 				},
 				["Git Custom"] = {
-					["w"] = 310,
+					["border"] = "None",
 					["scale"] = 0.550000011920929,
 					["font"] = "DorisPP",
-					["border"] = "None",
-					["timefontsize"] = 20,
+					["w"] = 310,
+					["icongap"] = 1,
 					["y"] = 529.869049039045,
 					["x"] = 810.704810715868,
 					["fontsize"] = 20,
 					["iconalpha"] = 1,
 					["noInterruptBorder"] = "Blizzard Tooltip",
-					["icongap"] = 1,
+					["timefontsize"] = 20,
 					["h"] = 30,
 					["texture"] = "Smooth",
 				},
 				["Giit - Tank"] = {
 					["scale"] = 0.550000011920929,
-					["border"] = "None",
 					["w"] = 310,
+					["border"] = "None",
 					["font"] = "DorisPP",
 					["y"] = 529.869049039045,
 					["x"] = 810.704810715868,
 					["fontsize"] = 20,
 					["iconalpha"] = 1,
-					["timefontsize"] = 20,
 					["noInterruptBorder"] = "Blizzard Tooltip",
+					["timefontsize"] = 20,
 					["h"] = 30,
 					["texture"] = "Smooth",
 				},
 				["Git - New Tank"] = {
 					["scale"] = 0.550000011920929,
 					["w"] = 490,
-					["x"] = 2111.6142578125,
-					["y"] = 617.141784667969,
 					["h"] = 38,
-					["font"] = "DorisPP",
-					["iconalpha"] = 1,
-					["timefontsize"] = 14,
-					["noInterruptBorder"] = "Blizzard Tooltip",
+					["y"] = 617.141784667969,
+					["x"] = 2111.6142578125,
 					["border"] = "None",
+					["iconalpha"] = 1,
+					["noInterruptBorder"] = "Blizzard Tooltip",
+					["timefontsize"] = 14,
+					["font"] = "DorisPP",
 					["texture"] = "Minimalist",
 				},
-				["Spih - DPS"] = {
+				["Gimm - Tank"] = {
 					["scale"] = 0.550000011920929,
 					["w"] = 490,
-					["h"] = 38,
-					["y"] = 1004.41442871094,
-					["font"] = "DorisPP",
 					["border"] = "None",
+					["h"] = 38,
+					["y"] = 1346.68725585938,
+					["font"] = "DorisPP",
+					["fontsize"] = 20,
 					["iconalpha"] = 1,
 					["noInterruptBorder"] = "Blizzard Tooltip",
-					["timefontsize"] = 14,
-					["x"] = 1485.70556640625,
-					["texture"] = "Minimalist",
+					["timefontsize"] = 20,
+					["x"] = 1530.70495605469,
+					["texture"] = "Smooth",
 				},
-				["Gilt Heals"] = {
-					["y"] = 225.409000361354,
-					["x"] = 860.28136231465,
-					["font"] = "DorisPP",
+				["Gilt Tank"] = {
 					["border"] = "None",
-					["w"] = 220,
+					["scale"] = 0.550000011920929,
+					["font"] = "DorisPP",
+					["w"] = 310,
+					["icongap"] = 1,
+					["y"] = 529.869049039045,
+					["h"] = 30,
+					["fontsize"] = 20,
+					["iconalpha"] = 1,
+					["noInterruptBorder"] = "Blizzard Tooltip",
+					["timefontsize"] = 20,
+					["x"] = 810.704810715868,
 					["texture"] = "Smooth",
 				},
 			},
+		},
+		["EnemyCasts"] = {
 		},
 		["GCD"] = {
 		},
@@ -287,7 +287,7 @@ Quartz3DB = {
 					["x"] = 1504.67749472466,
 					["texture"] = "Minimalist",
 				},
-				["Gilt Tank"] = {
+				["Gilt Heals"] = {
 					["y"] = 1007.66154728763,
 					["x"] = 1504.67749472466,
 					["texture"] = "Minimalist",
@@ -321,12 +321,12 @@ Quartz3DB = {
 					["x"] = 1504.67749472466,
 					["texture"] = "Minimalist",
 				},
-				["Gimm - Tank"] = {
-					["y"] = 1124.66125488281,
-					["h"] = 32,
-					["x"] = 819.176391601563,
+				["Spih - DPS"] = {
+					["y"] = 386.661010742188,
+					["h"] = 28,
+					["x"] = 1399.67639160156,
 					["font"] = "DorisPP",
-					["w"] = 260,
+					["w"] = 310,
 					["texture"] = "Minimalist",
 				},
 				["Giit tank"] = {
@@ -368,15 +368,15 @@ Quartz3DB = {
 					["w"] = 310,
 					["texture"] = "Minimalist",
 				},
-				["Spih - DPS"] = {
-					["y"] = 386.661010742188,
-					["h"] = 28,
-					["x"] = 1399.67639160156,
+				["Gimm - Tank"] = {
+					["y"] = 1124.66125488281,
+					["h"] = 32,
+					["x"] = 819.176391601563,
 					["font"] = "DorisPP",
-					["w"] = 310,
+					["w"] = 260,
 					["texture"] = "Minimalist",
 				},
-				["Gilt Heals"] = {
+				["Gilt Tank"] = {
 					["y"] = 1007.66154728763,
 					["x"] = 1504.67749472466,
 					["texture"] = "Minimalist",
@@ -386,6 +386,29 @@ Quartz3DB = {
 		["Target"] = {
 			["profiles"] = {
 				["Ezyn heals"] = {
+					["texture"] = "Smooth",
+					["border"] = "None",
+					["noInterruptBorderColor"] = {
+						0.729411764705882, -- [1]
+						0, -- [2]
+						0.0745098039215686, -- [3]
+						1, -- [4]
+					},
+					["noInterruptBorder"] = "Blizzard Tooltip",
+					["scale"] = 0.400000005960465,
+					["noInterruptChangeBorder"] = false,
+					["w"] = 310,
+					["font"] = "DorisPP",
+					["y"] = 756.866010250473,
+					["h"] = 30,
+					["fontsize"] = 20,
+					["iconalpha"] = 1,
+					["x"] = 1295.0001570951,
+					["icongap"] = 1,
+					["timefontsize"] = 20,
+					["iconposition"] = "left",
+				},
+				["Gilt Heals"] = {
 					["iconposition"] = "left",
 					["timefontsize"] = 20,
 					["noInterruptBorderColor"] = {
@@ -398,37 +421,15 @@ Quartz3DB = {
 					["scale"] = 0.400000005960465,
 					["noInterruptChangeBorder"] = false,
 					["border"] = "None",
-					["font"] = "DorisPP",
+					["x"] = 1295.0001570951,
 					["y"] = 756.866010250473,
 					["h"] = 30,
 					["fontsize"] = 20,
 					["iconalpha"] = 1,
-					["x"] = 1295.0001570951,
-					["noInterruptBorder"] = "Blizzard Tooltip",
-					["w"] = 310,
-					["texture"] = "Smooth",
-				},
-				["Gilt Tank"] = {
-					["texture"] = "Smooth",
-					["noInterruptBorderColor"] = {
-						0.729411764705882, -- [1]
-						0, -- [2]
-						0.0745098039215686, -- [3]
-						1, -- [4]
-					},
-					["border"] = "None",
-					["noInterruptBorder"] = "Blizzard Tooltip",
-					["noInterruptChangeBorder"] = false,
-					["w"] = 310,
-					["x"] = 813.892752334971,
-					["y"] = 522.773482150306,
-					["h"] = 30,
-					["fontsize"] = 20,
-					["iconalpha"] = 1,
 					["font"] = "DorisPP",
-					["icongap"] = 1,
-					["timefontsize"] = 20,
-					["iconposition"] = "left",
+					["noInterruptBorder"] = "Blizzard Tooltip",
+					["w"] = 310,
+					["texture"] = "Smooth",
 				},
 				["Gitt"] = {
 					["noInterruptBorderColor"] = {
@@ -437,19 +438,19 @@ Quartz3DB = {
 						0.0745098039215686, -- [3]
 						1, -- [4]
 					},
-					["iconposition"] = "left",
+					["texture"] = "Smooth",
 					["x"] = 813.892752334971,
 					["noInterruptChangeBorder"] = false,
 					["w"] = 310,
-					["noInterruptBorder"] = "Blizzard Tooltip",
+					["timefontsize"] = 20,
 					["y"] = 522.773482150306,
 					["h"] = 30,
 					["fontsize"] = 20,
 					["iconalpha"] = 1,
 					["border"] = "None",
-					["timefontsize"] = 20,
+					["noInterruptBorder"] = "Blizzard Tooltip",
 					["font"] = "DorisPP",
-					["texture"] = "Smooth",
+					["iconposition"] = "left",
 				},
 				["Spih"] = {
 					["noInterruptBorderColor"] = {
@@ -458,19 +459,19 @@ Quartz3DB = {
 						0.0745098039215686, -- [3]
 						1, -- [4]
 					},
-					["iconposition"] = "left",
+					["texture"] = "Smooth",
 					["h"] = 30,
 					["noInterruptChangeBorder"] = false,
 					["w"] = 310,
-					["noInterruptBorder"] = "Blizzard Tooltip",
+					["timefontsize"] = 20,
 					["y"] = 662.273498535156,
 					["font"] = "DorisPP",
 					["fontsize"] = 20,
 					["iconalpha"] = 1,
 					["border"] = "None",
-					["timefontsize"] = 20,
+					["noInterruptBorder"] = "Blizzard Tooltip",
 					["x"] = 811.642700195313,
-					["texture"] = "Smooth",
+					["iconposition"] = "left",
 				},
 				["Git - Mar 2014"] = {
 					["h"] = 28,
@@ -482,19 +483,19 @@ Quartz3DB = {
 					},
 					["w"] = 310,
 					["y"] = 576.773803710938,
-					["x"] = 795.142883300781,
+					["font"] = "DorisPP",
 					["iconalpha"] = 1,
 					["iconposition"] = "left",
 					["border"] = "None",
 					["fontsize"] = 10,
 					["noInterruptBorder"] = "Blizzard Tooltip",
 					["texture"] = "Minimalist",
-					["font"] = "DorisPP",
+					["x"] = 795.142883300781,
 					["noInterruptChangeBorder"] = false,
 					["timefontsize"] = 8,
 				},
 				["Gimm"] = {
-					["iconposition"] = "left",
+					["texture"] = "Smooth",
 					["noInterruptBorderColor"] = {
 						0.729411764705882, -- [1]
 						0, -- [2]
@@ -505,162 +506,14 @@ Quartz3DB = {
 					["scale"] = 0.400000005960465,
 					["noInterruptChangeBorder"] = false,
 					["w"] = 310,
-					["noInterruptBorder"] = "Blizzard Tooltip",
+					["timefontsize"] = 20,
 					["y"] = 756.866010250473,
 					["h"] = 30,
 					["fontsize"] = 20,
 					["iconalpha"] = 1,
 					["border"] = "None",
-					["timefontsize"] = 20,
+					["noInterruptBorder"] = "Blizzard Tooltip",
 					["x"] = 1295.0001570951,
-					["texture"] = "Smooth",
-				},
-				["Gimm - Tank"] = {
-					["noInterruptBorderColor"] = {
-						0.729411764705882, -- [1]
-						0, -- [2]
-						0.0745098039215686, -- [3]
-						1, -- [4]
-					},
-					["texture"] = "Smooth",
-					["font"] = "DorisPP",
-					["noInterruptChangeBorder"] = false,
-					["w"] = 310,
-					["timefontsize"] = 20,
-					["y"] = 522.773482150306,
-					["x"] = 813.892752334971,
-					["fontsize"] = 20,
-					["iconalpha"] = 1,
-					["border"] = "None",
-					["noInterruptBorder"] = "Blizzard Tooltip",
-					["h"] = 30,
-					["iconposition"] = "left",
-				},
-				["Giit tank"] = {
-					["noInterruptBorderColor"] = {
-						0.729411764705882, -- [1]
-						0, -- [2]
-						0.0745098039215686, -- [3]
-						1, -- [4]
-					},
-					["texture"] = "Smooth",
-					["font"] = "DorisPP",
-					["noInterruptChangeBorder"] = false,
-					["w"] = 310,
-					["timefontsize"] = 20,
-					["y"] = 522.773482150306,
-					["x"] = 813.892752334971,
-					["fontsize"] = 20,
-					["iconalpha"] = 1,
-					["border"] = "None",
-					["noInterruptBorder"] = "Blizzard Tooltip",
-					["h"] = 30,
-					["iconposition"] = "left",
-				},
-				["Gitt-Amber"] = {
-					["noInterruptBorderColor"] = {
-						0.729411764705882, -- [1]
-						0, -- [2]
-						0.0745098039215686, -- [3]
-						1, -- [4]
-					},
-					["iconposition"] = "left",
-					["font"] = "DorisPP",
-					["noInterruptChangeBorder"] = false,
-					["w"] = 310,
-					["noInterruptBorder"] = "Blizzard Tooltip",
-					["y"] = 522.773482150306,
-					["x"] = 813.892752334971,
-					["fontsize"] = 20,
-					["iconalpha"] = 1,
-					["border"] = "None",
-					["timefontsize"] = 20,
-					["h"] = 30,
-					["texture"] = "Smooth",
-				},
-				["Default"] = {
-					["noInterruptBorderColor"] = {
-						0.729411764705882, -- [1]
-						0, -- [2]
-						0.0745098039215686, -- [3]
-						1, -- [4]
-					},
-					["texture"] = "Minimalist",
-					["x"] = 795.142883300781,
-					["noInterruptChangeBorder"] = false,
-					["w"] = 310,
-					["timefontsize"] = 8,
-					["y"] = 576.773803710938,
-					["font"] = "DorisPP",
-					["fontsize"] = 10,
-					["iconalpha"] = 1,
-					["border"] = "None",
-					["noInterruptBorder"] = "Blizzard Tooltip",
-					["h"] = 28,
-					["iconposition"] = "left",
-				},
-				["Git Custom"] = {
-					["texture"] = "Smooth",
-					["noInterruptBorderColor"] = {
-						0.729411764705882, -- [1]
-						0, -- [2]
-						0.0745098039215686, -- [3]
-						1, -- [4]
-					},
-					["border"] = "None",
-					["noInterruptBorder"] = "Blizzard Tooltip",
-					["noInterruptChangeBorder"] = false,
-					["w"] = 310,
-					["x"] = 813.892752334971,
-					["y"] = 522.773482150306,
-					["font"] = "DorisPP",
-					["fontsize"] = 20,
-					["iconalpha"] = 1,
-					["h"] = 30,
-					["icongap"] = 1,
-					["timefontsize"] = 20,
-					["iconposition"] = "left",
-				},
-				["Giit - Tank"] = {
-					["noInterruptBorderColor"] = {
-						0.729411764705882, -- [1]
-						0, -- [2]
-						0.0745098039215686, -- [3]
-						1, -- [4]
-					},
-					["texture"] = "Smooth",
-					["x"] = 813.892752334971,
-					["noInterruptChangeBorder"] = false,
-					["w"] = 310,
-					["noInterruptBorder"] = "Blizzard Tooltip",
-					["y"] = 522.773482150306,
-					["h"] = 30,
-					["fontsize"] = 20,
-					["iconalpha"] = 1,
-					["border"] = "None",
-					["timefontsize"] = 20,
-					["font"] = "DorisPP",
-					["iconposition"] = "left",
-				},
-				["Git - New Tank"] = {
-					["noInterruptBorderColor"] = {
-						0.729411764705882, -- [1]
-						0, -- [2]
-						0.0745098039215686, -- [3]
-						1, -- [4]
-					},
-					["texture"] = "Minimalist",
-					["font"] = "DorisPP",
-					["noInterruptChangeBorder"] = false,
-					["w"] = 310,
-					["timefontsize"] = 8,
-					["y"] = 576.773803710938,
-					["x"] = 795.142883300781,
-					["fontsize"] = 10,
-					["iconalpha"] = 1,
-					["border"] = "None",
-					["noInterruptBorder"] = "Blizzard Tooltip",
-					["h"] = 28,
 					["iconposition"] = "left",
 				},
 				["Spih - DPS"] = {
@@ -670,8 +523,135 @@ Quartz3DB = {
 						0.0745098039215686, -- [3]
 						1, -- [4]
 					},
-					["iconposition"] = "left",
+					["texture"] = "Minimalist",
 					["h"] = 28,
+					["noInterruptChangeBorder"] = false,
+					["w"] = 310,
+					["timefontsize"] = 8,
+					["y"] = 576.773803710938,
+					["x"] = 795.142883300781,
+					["fontsize"] = 10,
+					["iconalpha"] = 1,
+					["border"] = "None",
+					["noInterruptBorder"] = "Blizzard Tooltip",
+					["font"] = "DorisPP",
+					["iconposition"] = "left",
+				},
+				["Giit tank"] = {
+					["noInterruptBorderColor"] = {
+						0.729411764705882, -- [1]
+						0, -- [2]
+						0.0745098039215686, -- [3]
+						1, -- [4]
+					},
+					["iconposition"] = "left",
+					["font"] = "DorisPP",
+					["noInterruptChangeBorder"] = false,
+					["w"] = 310,
+					["noInterruptBorder"] = "Blizzard Tooltip",
+					["y"] = 522.773482150306,
+					["x"] = 813.892752334971,
+					["fontsize"] = 20,
+					["iconalpha"] = 1,
+					["border"] = "None",
+					["timefontsize"] = 20,
+					["h"] = 30,
+					["texture"] = "Smooth",
+				},
+				["Gitt-Amber"] = {
+					["noInterruptBorderColor"] = {
+						0.729411764705882, -- [1]
+						0, -- [2]
+						0.0745098039215686, -- [3]
+						1, -- [4]
+					},
+					["texture"] = "Smooth",
+					["font"] = "DorisPP",
+					["noInterruptChangeBorder"] = false,
+					["w"] = 310,
+					["timefontsize"] = 20,
+					["y"] = 522.773482150306,
+					["x"] = 813.892752334971,
+					["fontsize"] = 20,
+					["iconalpha"] = 1,
+					["border"] = "None",
+					["noInterruptBorder"] = "Blizzard Tooltip",
+					["h"] = 30,
+					["iconposition"] = "left",
+				},
+				["Default"] = {
+					["noInterruptBorderColor"] = {
+						0.729411764705882, -- [1]
+						0, -- [2]
+						0.0745098039215686, -- [3]
+						1, -- [4]
+					},
+					["iconposition"] = "left",
+					["x"] = 795.142883300781,
+					["noInterruptChangeBorder"] = false,
+					["w"] = 310,
+					["noInterruptBorder"] = "Blizzard Tooltip",
+					["y"] = 576.773803710938,
+					["font"] = "DorisPP",
+					["fontsize"] = 10,
+					["iconalpha"] = 1,
+					["border"] = "None",
+					["timefontsize"] = 8,
+					["h"] = 28,
+					["texture"] = "Minimalist",
+				},
+				["Git Custom"] = {
+					["iconposition"] = "left",
+					["noInterruptBorderColor"] = {
+						0.729411764705882, -- [1]
+						0, -- [2]
+						0.0745098039215686, -- [3]
+						1, -- [4]
+					},
+					["icongap"] = 1,
+					["timefontsize"] = 20,
+					["noInterruptChangeBorder"] = false,
+					["w"] = 310,
+					["x"] = 813.892752334971,
+					["y"] = 522.773482150306,
+					["font"] = "DorisPP",
+					["fontsize"] = 20,
+					["iconalpha"] = 1,
+					["h"] = 30,
+					["noInterruptBorder"] = "Blizzard Tooltip",
+					["border"] = "None",
+					["texture"] = "Smooth",
+				},
+				["Giit - Tank"] = {
+					["noInterruptBorderColor"] = {
+						0.729411764705882, -- [1]
+						0, -- [2]
+						0.0745098039215686, -- [3]
+						1, -- [4]
+					},
+					["iconposition"] = "left",
+					["x"] = 813.892752334971,
+					["noInterruptChangeBorder"] = false,
+					["w"] = 310,
+					["timefontsize"] = 20,
+					["y"] = 522.773482150306,
+					["h"] = 30,
+					["fontsize"] = 20,
+					["iconalpha"] = 1,
+					["border"] = "None",
+					["noInterruptBorder"] = "Blizzard Tooltip",
+					["font"] = "DorisPP",
+					["texture"] = "Smooth",
+				},
+				["Git - New Tank"] = {
+					["noInterruptBorderColor"] = {
+						0.729411764705882, -- [1]
+						0, -- [2]
+						0.0745098039215686, -- [3]
+						1, -- [4]
+					},
+					["iconposition"] = "left",
+					["font"] = "DorisPP",
 					["noInterruptChangeBorder"] = false,
 					["w"] = 310,
 					["noInterruptBorder"] = "Blizzard Tooltip",
@@ -681,37 +661,57 @@ Quartz3DB = {
 					["iconalpha"] = 1,
 					["border"] = "None",
 					["timefontsize"] = 8,
-					["font"] = "DorisPP",
+					["h"] = 28,
 					["texture"] = "Minimalist",
 				},
-				["Gilt Heals"] = {
-					["texture"] = "Smooth",
-					["w"] = 310,
+				["Gimm - Tank"] = {
 					["noInterruptBorderColor"] = {
 						0.729411764705882, -- [1]
 						0, -- [2]
 						0.0745098039215686, -- [3]
 						1, -- [4]
 					},
-					["noInterruptBorder"] = "Blizzard Tooltip",
-					["scale"] = 0.400000005960465,
+					["iconposition"] = "left",
+					["font"] = "DorisPP",
 					["noInterruptChangeBorder"] = false,
+					["w"] = 310,
+					["noInterruptBorder"] = "Blizzard Tooltip",
+					["y"] = 522.773482150306,
+					["x"] = 813.892752334971,
+					["fontsize"] = 20,
+					["iconalpha"] = 1,
 					["border"] = "None",
-					["x"] = 1295.0001570951,
-					["y"] = 756.866010250473,
+					["timefontsize"] = 20,
+					["h"] = 30,
+					["texture"] = "Smooth",
+				},
+				["Gilt Tank"] = {
+					["iconposition"] = "left",
+					["noInterruptBorderColor"] = {
+						0.729411764705882, -- [1]
+						0, -- [2]
+						0.0745098039215686, -- [3]
+						1, -- [4]
+					},
+					["icongap"] = 1,
+					["timefontsize"] = 20,
+					["noInterruptChangeBorder"] = false,
+					["w"] = 310,
+					["x"] = 813.892752334971,
+					["y"] = 522.773482150306,
 					["h"] = 30,
 					["fontsize"] = 20,
 					["iconalpha"] = 1,
 					["font"] = "DorisPP",
-					["timefontsize"] = 20,
-					["icongap"] = 1,
-					["iconposition"] = "left",
+					["noInterruptBorder"] = "Blizzard Tooltip",
+					["border"] = "None",
+					["texture"] = "Smooth",
 				},
 			},
 		},
-		["Range"] = {
-		},
 		["Mirror"] = {
+		},
+		["Range"] = {
 		},
 		["Latency"] = {
 		},
@@ -730,18 +730,18 @@ Quartz3DB = {
 		["Got - Arthas"] = "Default",
 		["Gitt - Cho'gall"] = "Gitt-Amber",
 		["Giit - Cho'gall"] = "Giit tank",
-		["Git - Arthas"] = "Git - Mar 2014",
+		["Spih - Arthas"] = "Spih - DPS",
 		["Gitt - Arthas"] = "Default",
+		["Gimm - Cho'gall"] = "Gimm - Tank",
 		["Greny - Azuremyst"] = "Default",
-		["Burk - Arthas"] = "Default",
-		["Spih - Cho'gall"] = "Spih",
+		["Giitt - Feathermoon"] = "Default",
 		["Burk - Azuremyst"] = "Default",
 		["Git - Cho'gall"] = "Git - New Tank",
-		["Git - Azuremyst"] = "Git Custom",
-		["Giitt - Feathermoon"] = "Default",
+		["Burk - Arthas"] = "Default",
+		["Spih - Cho'gall"] = "Spih",
 		["Lihte - Cho'gall"] = "Default",
-		["Gimm - Cho'gall"] = "Gimm - Tank",
-		["Spih - Arthas"] = "Spih - DPS",
+		["Git - Azuremyst"] = "Git Custom",
+		["Git - Arthas"] = "Git - Mar 2014",
 	},
 	["profiles"] = {
 		["Ezyn heals"] = {
@@ -754,14 +754,14 @@ Quartz3DB = {
 				["Range"] = false,
 			},
 		},
-		["Gilt Tank"] = {
+		["Gilt Heals"] = {
 			["modules"] = {
 				["Swing"] = false,
 				["GCD"] = false,
 				["Buff"] = false,
 				["Timer"] = false,
-				["Mirror"] = false,
 				["Range"] = false,
+				["Mirror"] = false,
 			},
 		},
 		["Gitt"] = {
@@ -779,9 +779,9 @@ Quartz3DB = {
 				["Swing"] = false,
 				["Buff"] = false,
 				["Target"] = false,
-				["Mirror"] = false,
-				["Range"] = false,
 				["Timer"] = false,
+				["Range"] = false,
+				["Mirror"] = false,
 			},
 		},
 		["Git - Mar 2014"] = {
@@ -804,7 +804,7 @@ Quartz3DB = {
 				["Mirror"] = false,
 			},
 		},
-		["Gimm - Tank"] = {
+		["Spih - DPS"] = {
 			["modules"] = {
 				["Swing"] = false,
 				["GCD"] = false,
@@ -874,7 +874,7 @@ Quartz3DB = {
 				["Mirror"] = false,
 			},
 		},
-		["Spih - DPS"] = {
+		["Gimm - Tank"] = {
 			["modules"] = {
 				["Swing"] = false,
 				["GCD"] = false,
@@ -884,14 +884,14 @@ Quartz3DB = {
 				["Range"] = false,
 			},
 		},
-		["Gilt Heals"] = {
+		["Gilt Tank"] = {
 			["modules"] = {
 				["Swing"] = false,
 				["GCD"] = false,
 				["Buff"] = false,
 				["Timer"] = false,
-				["Range"] = false,
 				["Mirror"] = false,
+				["Range"] = false,
 			},
 		},
 	},

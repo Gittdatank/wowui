@@ -29,9 +29,6 @@ local SendAddonMessage = BigWigsLoader.SendAddonMessage
 -- Upvalues
 local next, type = next, type
 
--- XXX compat
-addon.isWOD = GetExpansionLevel() == 5
-
 -------------------------------------------------------------------------------
 -- Event handling
 --
@@ -79,6 +76,7 @@ do
 		addon:ClearSyncListeners(module) -- Also remove sync events
 	end
 	addon:RegisterMessage("BigWigs_OnBossDisable", UnregisterAllEvents)
+	addon:RegisterMessage("BigWigs_OnBossReboot", UnregisterAllEvents)
 	addon:RegisterMessage("BigWigs_OnPluginDisable", UnregisterAllEvents)
 end
 
@@ -237,7 +235,11 @@ do
 		["953:8"] = true, -- Blackfuse room opening, just outside the door
 		["953:9"] = true, -- Blackfuse room opening, in Thok area
 		["953:12"] = true, -- Mythic Garrosh Phase 4
+		["964:1"] = true, -- Bloodmaul Slag Mines, activating bridge to Roltall
 		["969:2"] = true, -- Shadowmoon Burial Grounds, final boss introduction
+		-- 984:1 is Auchindoun, but it unfortunately has 2 cinematics. 1 before the first boss and 1 before the last boss. Workaround?
+		["993:2"] = true, -- Grimrail Depot, boarding the train
+		["993:4"] = true, -- Grimrail Depot, destroying the train
 	}
 
 	-- Cinematic skipping hack to workaround an item (Vision of Time) that creates cinematics in Siege of Orgrimmar.

@@ -42,3 +42,4 @@ epgp: enabled
 epgp_lootmaster: enabled
 epgp_lootmaster_ml: enabled
 MoveAnything: enabled
+FriendGroups: enabled

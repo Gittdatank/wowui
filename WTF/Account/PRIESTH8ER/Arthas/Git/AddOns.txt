@@ -608,7 +608,7 @@ ElvUI_Config: disabled
 ElvUI: disabled
 Bagnon_Scrap: disabled
 Bagnon_Facade: disabled
-FriendGroups: disabled
+FriendGroups: enabled
 oqueue: disabled
 LibCandyBar-3.0: enabled
 LibDDI-1.0: enabled

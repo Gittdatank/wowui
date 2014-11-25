@@ -112,3 +112,4 @@ ArkInventoryRules_Example: enabled
 Auctionator: enabled
 LibSharedMedia-3.0: disabled
 MoveAnything: enabled
+FriendGroups: enabled

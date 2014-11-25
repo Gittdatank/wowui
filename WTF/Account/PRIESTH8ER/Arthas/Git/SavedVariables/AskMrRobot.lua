@@ -45,8 +45,8 @@ AmrDb = {
 			"|cffa335ee|Hitem:118298:0:0:0:0:0:0:0:100:0:11:0|h[Timeless Solium Band of the Bulwark]|h|r", -- [12]
 			"|cff0070dd|Hitem:110010:0:0:0:0:0:0:0:100:0:2:1:524|h[Mote of Corruption]|h|r", -- [13]
 			"|cffa335ee|Hitem:112319:0:0:0:0:0:0:0:100:0:13:2:525:530|h[Knight's Badge]|h|r", -- [14]
-			"|cff0070dd|Hitem:109929:0:0:0:0:0:0:0:100:0:2:2:499:524|h[Cloak of Steeled Nerves]|h|r", -- [15]
-			"|cffe6cc80|Hitem:105691:0:4650:4650:0:0:0:631955328:100:0:0:0|h[Hellscream's Doomblade]|h|r", -- [16]
+			"|cffa335ee|Hitem:119014:0:0:0:0:0:0:0:100:0:11:1:101|h[Doomchain Drape of the Quickblade]|h|r", -- [15]
+			"|cff0070dd|Hitem:110052:0:0:0:0:0:0:0:100:0:2:2:499:524|h[Scepter of Brutality]|h|r", -- [16]
 			"|cffa335ee|Hitem:118874:0:0:0:0:0:0:0:100:0:0:0|h[Blackrock Bulwark]|h|r", -- [17]
 		}, -- [1]
 		{
@@ -69,11 +69,8 @@ AmrDb = {
 			"|cffa335ee|Hitem:118874:0:0:0:0:0:0:0:100:0:0:0|h[Blackrock Bulwark]|h|r", -- [17]
 		}, -- [2]
 	},
-	["LastCharacterImportDate"] = "",
-	["BankItems"] = {
-		"|cffffffff|Hitem:22574:0:0:0:0:0:0:2147150336:100:0:0:0|h[Mote of Fire]|h|r", -- [1]
-		"|cff0070dd|Hitem:76131:0:0:0:0:0:0:1673828608:100:0:0:0|h[Primordial Ruby]|h|r", -- [2]
-	},
+	["Class"] = "WARRIOR",
+	["RealmName"] = "Arthas",
 	["Specs"] = {
 		34, -- [1]
 		32, -- [2]
@@ -87,16 +84,16 @@ AmrDb = {
 		[384] = 12,
 		[416] = 45,
 		[402] = 27,
-		[361] = 6,
-		[391] = 46,
-		[823] = 7940,
 		[-1] = 6774661133,
+		[241] = 40,
+		[823] = 7940,
+		[391] = 46,
 		[392] = 822,
 		[393] = 4,
 		[394] = 13,
-		[241] = 40,
+		[361] = 6,
 	},
-	["IconInfo"] = {
+	["Professions"] = {
 	},
 	["LogData"] = {
 		["_wipes"] = {
@@ -104,8 +101,8 @@ AmrDb = {
 		["_autoLog"] = {
 			[1136] = "disabled",
 		},
-		["_lastDiff"] = 1,
-		["_lastZone"] = "FW Horde Garrison Level 3",
+		["_lastZone"] = "Draenor",
+		["_lastDiff"] = 0,
 	},
 	["BagItems"] = {
 		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [1]
@@ -262,15 +259,18 @@ AmrDb = {
 		[1375] = 4,
 		[1387] = 0,
 		[1376] = 0,
-		[1435] = 7,
-		[1388] = 7,
 		[1270] = 7,
+		[1388] = 7,
+		[1435] = 7,
 	},
 	["Faction"] = "Horde",
-	["Professions"] = {
+	["IconInfo"] = {
 	},
-	["RealmName"] = "Arthas",
-	["Class"] = "WARRIOR",
+	["BankItems"] = {
+		"|cffffffff|Hitem:22574:0:0:0:0:0:0:2147150336:100:0:0:0|h[Mote of Fire]|h|r", -- [1]
+		"|cff0070dd|Hitem:76131:0:0:0:0:0:0:1673828608:100:0:0:0|h[Primordial Ruby]|h|r", -- [2]
+	},
+	["LastCharacterImportDate"] = "",
 	["BankItemsAndCounts"] = {
 		[74248] = 2,
 		[40195] = 20,
@@ -281,17 +281,17 @@ AmrDb = {
 		[90146] = 11,
 		[74247] = 5,
 		[74249] = 32,
-		[76140] = 2,
-		[54849] = 19,
-		[72988] = 7,
-		[89112] = 522,
-		[76061] = 18,
-		[22574] = 1,
-		[76131] = 1,
-		[72104] = 3,
-		[94111] = 16,
-		[72095] = 5,
-		[98717] = 15,
 		[77467] = 4,
+		[98717] = 15,
+		[72988] = 7,
+		[22574] = 1,
+		[89112] = 522,
+		[72095] = 5,
+		[94111] = 16,
+		[72104] = 3,
+		[76131] = 1,
+		[54849] = 19,
+		[76061] = 18,
+		[76140] = 2,
 	},
 }

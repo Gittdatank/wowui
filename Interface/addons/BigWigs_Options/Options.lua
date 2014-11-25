@@ -398,7 +398,7 @@ function options:OnEnable()
 	local tmp, tmpZone = {}, {}
 	for k in next, BigWigsLoader:GetZoneMenus() do
 		local zone = translateZoneID(k)
-		if zone and (BigWigs.isWOD or (k ~= 988 and k ~= 994 and k ~= 962)) then -- XXX compat
+		if zone then
 			tmp[zone] = k
 			tmpZone[#tmpZone+1] = zone
 		end
@@ -829,23 +829,23 @@ do
 			end
 			if type(o) == "number" then
 				if o > 0 then
-					local l = GetSpellLink(o)
-					if currentSize + #l + 1 > 255 then
+					local link = GetSpellLink(o)
+					if currentSize + #link + 1 > 255 then
 						printList(channel, header, abilities)
 						wipe(abilities)
 						currentSize = 0
 					end
-					abilities[#abilities + 1] = l
-					currentSize = currentSize + #l + 1
+					abilities[#abilities + 1] = link
+					currentSize = currentSize + #link + 1
 				else
-					local l = select(9, EJ_GetSectionInfo(-o))
-					if currentSize + #l + 1 > 255 then
+					local _, _, _, _, _, _, _, _, link = EJ_GetSectionInfo(-o)
+					if currentSize + #link + 1 > 255 then
 						printList(channel, header, abilities)
 						wipe(abilities)
 						currentSize = 0
 					end
-					abilities[#abilities + 1] = l
-					currentSize = currentSize + #l + 1
+					abilities[#abilities + 1] = link
+					currentSize = currentSize + #link + 1
 				end
 			end
 		end
@@ -1295,8 +1295,8 @@ do
 		BigWigs_BurningCrusade = "Big Wigs ".. EJ_GetTierInfo(2),
 		BigWigs_WrathOfTheLichKing = "Big Wigs ".. EJ_GetTierInfo(3),
 		BigWigs_Cataclysm = "Big Wigs ".. EJ_GetTierInfo(4),
-		BigWigs_MistsOfPandaria = BigWigs.isWOD and "Big Wigs ".. EJ_GetTierInfo(5) or "Big Wigs |cFF62B1F6".. EJ_GetTierInfo(5) .."|r", -- XXX compat
-		BigWigs_WarlordsOfDraenor = BigWigs.isWOD and "Big Wigs |cFF62B1F6".. EJ_GetTierInfo(6) .."|r" or false, -- XXX compat
+		BigWigs_MistsOfPandaria = "Big Wigs ".. EJ_GetTierInfo(5),
+		BigWigs_WarlordsOfDraenor = "Big Wigs |cFF62B1F6".. EJ_GetTierInfo(6) .."|r",
 		LittleWigs = "Little Wigs",
 	}
 
@@ -1343,7 +1343,7 @@ do
 
 	function options:GetZonePanel(zoneId)
 		local zoneName = translateZoneID(zoneId)
-		local parent = BigWigsLoader.zoneTbl[zoneId] and addonNameToHeader[BigWigsLoader.zoneTbl[zoneId]] or addonNameToHeader.BigWigs_WarlordsOfDraenor or addonNameToHeader.BigWigs_MistsOfPandaria -- XXX compat
+		local parent = BigWigsLoader.zoneTbl[zoneId] and addonNameToHeader[BigWigsLoader.zoneTbl[zoneId]] or addonNameToHeader.BigWigs_WarlordsOfDraenor
 		local panel, justCreated = self:GetPanel(zoneName, parent, zoneId)
 		if justCreated then
 			panel:SetScript("OnShow", onZoneShow)
@@ -1374,7 +1374,7 @@ do
 			local name = module.subPanelOptions.name
 			local options = module.subPanelOptions.options
 			acr:RegisterOptionsTable(key, options, true)
-			acd:AddToBlizOptions(key, name, "Big Wigs")
+			module.subPanelOptionsPanel = acd:AddToBlizOptions(key, name, "Big Wigs")
 		end
 	end
 end

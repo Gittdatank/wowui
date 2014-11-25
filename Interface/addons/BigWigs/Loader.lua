@@ -23,7 +23,7 @@ do
 	--@end-alpha@]===]
 
 	-- This will (in ZIPs), be replaced by the highest revision number in the source tree.
-	myRevision = tonumber("12186")
+	myRevision = tonumber("12211")
 
 	-- If myRevision ends up NOT being a number, it means we're running a SVN copy.
 	if type(myRevision) ~= "number" then
@@ -411,6 +411,12 @@ do
 		BigWigs_DragonSoul = "BigWigs_Cataclysm",
 		BigWigs_Firelands = "BigWigs_Cataclysm",
 		BigWigs_Throne = "BigWigs_Cataclysm",
+		--BigWigs_EndlessSpring = "BigWigs_MistsOfPandaria",
+		--BigWigs_HeartOfFear = "BigWigs_MistsOfPandaria",
+		--BigWigs_Mogushan = "BigWigs_MistsOfPandaria",
+		--BigWigs_Pandaria = "BigWigs_MistsOfPandaria",
+		--BigWigs_SiegeOfOrgrimmar = "BigWigs_MistsOfPandaria",
+		--BigWigs_ThroneOfThunder = "BigWigs_MistsOfPandaria",
 		LittleWigs_ShadoPanMonastery = "LittleWigs",
 		LittleWigs_ScarletHalls = "LittleWigs",
 		LittleWigs_ScarletMonastery = "LittleWigs",
@@ -471,9 +477,9 @@ end
 
 do
 	-- This is a crapfest mainly because DBM's actual handling of versions is a crapfest, I'll try explain how this works...
-	local DBMdotRevision = "11829" -- The changing version of the local client, changes with every alpha revision using an SVN keyword.
-	local DBMdotReleaseRevision = "11829" -- This is manually changed by them every release, they use it to track the highest release version, a new DBM release is the only time it will change.
-	local DBMdotDisplayVersion = "6.0.4" -- Same as above but is changed between alpha and release cycles e.g. "N.N.N" for a release and "N.N.N alpha" for the alpha duration
+	local DBMdotRevision = "11873" -- The changing version of the local client, changes with every alpha revision using an SVN keyword.
+	local DBMdotReleaseRevision = "11873" -- This is manually changed by them every release, they use it to track the highest release version, a new DBM release is the only time it will change.
+	local DBMdotDisplayVersion = "6.0.5" -- Same as above but is changed between alpha and release cycles e.g. "N.N.N" for a release and "N.N.N alpha" for the alpha duration
 	function mod:DBM_VersionCheck(prefix, sender, revision, releaseRevision, displayVersion)
 		if prefix == "H" and (BigWigs and BigWigs.db.profile.fakeDBMVersion or self.isFakingDBM) then
 			SendAddonMessage("D4", "V\t"..DBMdotRevision.."\t"..DBMdotReleaseRevision.."\t"..DBMdotDisplayVersion.."\t"..GetLocale(), IsInGroup(2) and "INSTANCE_CHAT" or "RAID")
@@ -538,6 +544,7 @@ do
 		end
 	end
 	public.RegisterMessage(mod, "BigWigs_OnBossDisable", UnregisterAllMessages)
+	public.RegisterMessage(mod, "BigWigs_OnBossReboot", UnregisterAllMessages)
 	public.RegisterMessage(mod, "BigWigs_OnPluginDisable", UnregisterAllMessages)
 	public.RegisterMessage(mod, "BigWigs_BossModuleRegistered")
 	public.RegisterMessage(mod, "BigWigs_CoreLoaded")
@@ -824,13 +831,11 @@ do
 		-- Lacking zone modules
 		if (BigWigs and BigWigs.db.profile.showZoneMessages == false) or self.isShowingZoneMessages == false then return end
 		local zoneAddon = public.zoneTbl[id]
-		if zoneAddon and not warnedThisZone[id] and zoneAddon ~= "BigWigs_MistsOfPandaria" then -- XXX compat
-			if not IsAddOnEnabled(zoneAddon) then
-				warnedThisZone[id] = true
-				local msg = L.missingAddOn:format(zoneAddon)
-				sysprint(msg)
-				RaidNotice_AddMessage(RaidWarningFrame, msg:gsub("|", "\124"), {r=1,g=1,b=1}) -- XXX wowace packager doesn't keep my escape codes and RW doesn't like pipes :(
-			end
+		if zoneAddon and not warnedThisZone[id] and zoneAddon ~= "BigWigs_MistsOfPandaria" and not IsAddOnEnabled(zoneAddon) then -- XXX compat
+			warnedThisZone[id] = true
+			local msg = L.missingAddOn:format(zoneAddon)
+			sysprint(msg)
+			RaidNotice_AddMessage(RaidWarningFrame, msg:gsub("|", "\124"), {r=1,g=1,b=1}) -- XXX wowace packager doesn't keep my escape codes and RW doesn't like pipes :(
 		end
 	end
 end

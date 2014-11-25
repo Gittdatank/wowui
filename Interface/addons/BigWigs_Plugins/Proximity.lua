@@ -54,7 +54,7 @@ local unitList = nil
 local blipList = {}
 local updater = false
 local functionToFire = nil
-local proxAnchor, proxTitle, proxCircle = nil, nil, nil
+local proxAnchor, proxTitle, proxCircle, proxPulseOut, proxPulseIn = nil, nil, nil, nil, nil
 
 -- Upvalues
 local CTimerAfter = BigWigsLoader.CTimerAfter
@@ -103,6 +103,7 @@ local function onResize(self, width, height)
 		local range = activeRange > 0 and activeRange or 10
 		local pixperyard = min(width, height) / (range*3)
 		proxCircle:SetSize(range*2*pixperyard, range*2*pixperyard)
+		proxAnchor.rangePulse:SetSize(range*2*pixperyard, range*2*pixperyard)
 	end
 end
 
@@ -208,18 +209,14 @@ do
 	end
 
 	testDots = function()
-		for i = 1, 40 do
-			blipList[i].isShown = nil
-			blipList[i]:Hide()
-		end
-
-		setDot(10, 10, blipList[1])
-		setDot(5, 0, blipList[2])
-		setDot(3, 10, blipList[3])
-		setDot(-9, -7, blipList[4])
-		setDot(0, 10, blipList[5])
+		setDot(10, 10, blipList["raid1"])
+		setDot(5, 0, blipList["raid2"])
+		setDot(3, 10, blipList["raid3"])
+		setDot(-9, -7, blipList["raid4"])
+		setDot(0, 10, blipList["raid5"])
 		local width, height = proxAnchor:GetWidth(), proxAnchor:GetHeight()
 		local pixperyard = min(width, height) / 30
+		proxAnchor.rangePulse:SetSize(pixperyard * 20, pixperyard * 20)
 		proxCircle:SetSize(pixperyard * 20, pixperyard * 20)
 		proxCircle:SetVertexColor(1,0,0)
 		proxCircle:Show()
@@ -244,17 +241,17 @@ do
 			local range = dx * dx + dy * dy
 			if mapId == tarMapId and range < activeRangeSquared*2.5 then
 				if myGUID ~= UnitGUID(n) and not UnitIsDead(n) then
-					setDot(dx, dy, blipList[i])
+					setDot(dx, dy, blipList[n])
 					if range <= activeRangeSquared then
 						anyoneClose = anyoneClose + 1
 					end
-				elseif blipList[i].isShown then -- A unit may die next to us
-					blipList[i]:Hide()
-					blipList[i].isShown = nil
+				elseif blipList[n].isShown then -- A unit may die next to us
+					blipList[n]:Hide()
+					blipList[n].isShown = nil
 				end
-			elseif blipList[i].isShown then
-				blipList[i]:Hide()
-				blipList[i].isShown = nil
+			elseif blipList[n].isShown then
+				blipList[n]:Hide()
+				blipList[n].isShown = nil
 			end
 		end
 
@@ -286,10 +283,13 @@ do
 		local dx = unitX - srcX
 		local dy = unitY - srcY
 		local range = dx * dx + dy * dy
-		setDot(dx, dy, blipList[1])
+		setDot(dx, dy, blipList[proximityPlayer])
 		if range <= activeRangeSquared then
 			proxCircle:SetVertexColor(1, 0, 0)
 			proxTitle:SetFormattedText(L_proximityTitle, activeRange, 1)
+			if not proxPulseOut.playing then
+				proxPulseOut:Play()
+			end
 			if not db.sound then return end
 			local t = GetTime()
 			if t > (lastplayed + 1) and not UnitIsDead("player") and InCombatLockdown() then
@@ -299,6 +299,9 @@ do
 		else
 			proxCircle:SetVertexColor(0, 1, 0)
 			proxTitle:SetFormattedText(L_proximityTitle, activeRange, 0)
+			if proxPulseOut.playing then
+				proxPulseOut:Stop()
+			end
 		end
 	end
 
@@ -318,7 +321,7 @@ do
 			local dx = unitX - srcX
 			local dy = unitY - srcY
 			local range = dx * dx + dy * dy
-			setDot(dx, dy, blipList[i])
+			setDot(dx, dy, blipList[player])
 			if range <= activeRangeSquared then
 				anyoneClose = anyoneClose + 1
 			end
@@ -328,8 +331,14 @@ do
 
 		if anyoneClose == 0 then
 			proxCircle:SetVertexColor(0, 1, 0)
+			if proxPulseOut.playing then
+				proxPulseOut:Stop()
+			end
 		else
 			proxCircle:SetVertexColor(1, 0, 0)
+			if not proxPulseOut.playing then
+				proxPulseOut:Play()
+			end
 			if not db.sound then return end
 			local t = GetTime()
 			if t > (lastplayed + 1) and not UnitIsDead("player") and InCombatLockdown() then
@@ -357,17 +366,17 @@ do
 			local range = dx * dx + dy * dy
 			if mapId == tarMapId and range < activeRangeSquared*2.5 then
 				if myGUID ~= UnitGUID(n) and not UnitIsDead(n) then
-					setDot(dx, dy, blipList[i])
+					setDot(dx, dy, blipList[n])
 					if range <= activeRangeSquared then
 						anyoneClose = anyoneClose + 1
 					end
-				elseif blipList[i].isShown then -- A unit may die next to us
-					blipList[i]:Hide()
-					blipList[i].isShown = nil
+				elseif blipList[n].isShown then -- A unit may die next to us
+					blipList[n]:Hide()
+					blipList[n].isShown = nil
 				end
-			elseif blipList[i].isShown then
-				blipList[i]:Hide()
-				blipList[i].isShown = nil
+			elseif blipList[n].isShown then
+				blipList[n]:Hide()
+				blipList[n].isShown = nil
 			end
 		end
 
@@ -398,13 +407,19 @@ do
 		local dx = unitX - srcX
 		local dy = unitY - srcY
 		local range = dx * dx + dy * dy
-		setDot(dx, dy, blipList[1])
+		setDot(dx, dy, blipList[proximityPlayer])
 		if range <= activeRangeSquared then
 			proxCircle:SetVertexColor(0, 1, 0)
 			proxTitle:SetFormattedText(L_proximityTitle, activeRange, 1)
+			if proxPulseIn.playing then
+				proxPulseIn:Stop()
+			end
 		else
 			proxCircle:SetVertexColor(1, 0, 0)
 			proxTitle:SetFormattedText(L_proximityTitle, activeRange, 0)
+			if not proxPulseIn.playing then
+				proxPulseIn:Play()
+			end
 			if not db.sound then return end
 			local t = GetTime()
 			if t > (lastplayed + 1) and not UnitIsDead("player") and InCombatLockdown() then
@@ -430,7 +445,7 @@ do
 			local dx = unitX - srcX
 			local dy = unitY - srcY
 			local range = dx * dx + dy * dy
-			setDot(dx, dy, blipList[i])
+			setDot(dx, dy, blipList[player])
 			if range <= activeRangeSquared then
 				anyoneClose = anyoneClose + 1
 			end
@@ -440,8 +455,20 @@ do
 
 		if anyoneClose == 0 then
 			proxCircle:SetVertexColor(1, 0, 0)
+			if not proxPulseIn.playing then
+				proxPulseIn:Play()
+			end
+			if not db.sound then return end
+			local t = GetTime()
+			if t > (lastplayed + db.soundDelay) and not UnitIsDead("player") and InCombatLockdown() then
+				lastplayed = t
+				plugin:SendMessage("BigWigs_Sound", db.soundName, true)
+			end
 		else
 			proxCircle:SetVertexColor(0, 1, 0)
+			if proxPulseIn.playing then
+				proxPulseIn:Stop()
+			end
 		end
 	end
 end
@@ -449,7 +476,7 @@ end
 local function updateBlipIcons()
 	for i = 1, maxPlayers do
 		local n = unitList[i]
-		local blip = blipList[i]
+		local blip = blipList[n]
 		local icon = GetRaidTargetIndex(n)
 		if icon and not blip.hasIcon then
 			blip:SetTexture(format("Interface\\TARGETINGFRAME\\UI-RaidTargetingIcon_%d.blp", icon))
@@ -479,7 +506,7 @@ local function updateBlipColors()
 	for i = 1, maxPlayers do
 		local n = unitList[i]
 		if not GetRaidTargetIndex(n) then
-			local blip = blipList[i]
+			local blip = blipList[n]
 			blip:SetTexture("Interface\\AddOns\\BigWigs\\Textures\\blip")
 			local _, class = UnitClass(n)
 			if class then
@@ -626,6 +653,66 @@ do
 		proxAnchor.rangeCircle = rangeCircle
 		proxCircle = rangeCircle
 
+		local rangePulse = proxAnchor:CreateTexture(nil, "ARTWORK")
+		rangePulse:SetPoint("CENTER")
+		rangePulse:SetAtlas("GarrLanding-CircleGlow")
+		rangePulse:SetBlendMode("ADD")
+		rangePulse:Hide()
+		proxAnchor.rangePulse = rangePulse
+
+		local function showAnimParent(frame) frame:GetParent():Show() frame.playing = true end
+		local function hideAnimParent(frame) frame:GetParent():Hide() frame.playing = nil end
+
+		-- Push outwards
+		local animGroupOutbound = rangePulse:CreateAnimationGroup()
+		animGroupOutbound:SetLooping("REPEAT")
+		animGroupOutbound:SetScript("OnPlay", showAnimParent)
+		animGroupOutbound:SetScript("OnStop", hideAnimParent)
+		animGroupOutbound:SetScript("OnFinished", hideAnimParent)
+		local alpha1Out = animGroupOutbound:CreateAnimation("Alpha")
+		alpha1Out:SetOrder(1)
+		alpha1Out:SetDuration(0.5)
+		alpha1Out:SetFromAlpha(0)
+		alpha1Out:SetToAlpha(1)
+		local alpha2Out = animGroupOutbound:CreateAnimation("Alpha")
+		alpha2Out:SetOrder(1)
+		alpha2Out:SetStartDelay(0.5)
+		alpha2Out:SetDuration(1)
+		alpha2Out:SetFromAlpha(1)
+		alpha2Out:SetToAlpha(0)
+		local scaleOut = animGroupOutbound:CreateAnimation("Scale")
+		scaleOut:SetOrder(1)
+		scaleOut:SetFromScale(0.75,0.75)
+		scaleOut:SetToScale(1.3,1.3)
+		scaleOut:SetDuration(1)
+		proxAnchor.rangePulseAnimOut = animGroupOutbound
+		proxPulseOut = animGroupOutbound
+
+		-- Pull inwards
+		local animGroupInbound = rangePulse:CreateAnimationGroup()
+		animGroupInbound:SetLooping("REPEAT")
+		animGroupInbound:SetScript("OnPlay", showAnimParent)
+		animGroupInbound:SetScript("OnStop", hideAnimParent)
+		animGroupInbound:SetScript("OnFinished", hideAnimParent)
+		local alpha1In = animGroupInbound:CreateAnimation("Alpha")
+		alpha1In:SetOrder(1)
+		alpha1In:SetDuration(0.5)
+		alpha1In:SetFromAlpha(0)
+		alpha1In:SetToAlpha(1)
+		local alpha2In = animGroupInbound:CreateAnimation("Alpha")
+		alpha2In:SetOrder(1)
+		alpha2In:SetStartDelay(0.5)
+		alpha2In:SetDuration(1)
+		alpha2In:SetFromAlpha(1)
+		alpha2In:SetToAlpha(0)
+		local scaleIn = animGroupInbound:CreateAnimation("Scale")
+		scaleIn:SetOrder(1)
+		scaleIn:SetFromScale(1.5,1.5)
+		scaleIn:SetToScale(1,1)
+		scaleIn:SetDuration(1)
+		proxAnchor.rangePulseAnimIn = animGroupInbound
+		proxPulseIn = animGroupInbound
+
 		local playerDot = proxAnchor:CreateTexture(nil, "OVERLAY")
 		playerDot:SetSize(32, 32)
 		playerDot:SetTexture("Interface\\Minimap\\MinimapArrow")
@@ -667,11 +754,19 @@ do
 
 		proxAnchor:Hide()
 
+		local rList = plugin:GetRaidList()
 		for i = 1, 40 do
 			local blip = proxAnchor:CreateTexture(nil, "OVERLAY")
 			blip:SetSize(16, 16)
 			blip:SetTexture("Interface\\AddOns\\BigWigs\\Textures\\blip")
-			blipList[i] = blip
+			blipList[rList[i]] = blip
+		end
+		local pList = plugin:GetPartyList()
+		for i = 1, 5 do
+			local blip = proxAnchor:CreateTexture(nil, "OVERLAY")
+			blip:SetSize(16, 16)
+			blip:SetTexture("Interface\\AddOns\\BigWigs\\Textures\\blip")
+			blipList[pList[i]] = blip
 		end
 
 		proxAnchor:SetScript("OnEvent", function(_, event)
@@ -696,6 +791,7 @@ do
 		self:RegisterMessage("BigWigs_ShowProximity")
 		self:RegisterMessage("BigWigs_HideProximity", "Close")
 		self:RegisterMessage("BigWigs_OnBossDisable")
+		self:RegisterMessage("BigWigs_OnBossReboot", "BigWigs_OnBossDisable")
 
 		self:RegisterMessage("BigWigs_StartConfigureMode")
 		self:RegisterMessage("BigWigs_StopConfigureMode")
@@ -890,7 +986,7 @@ do
 		self:Open(range, module, ...)
 	end
 
-	function plugin:BigWigs_OnBossDisable(event, module, optionKey)
+	function plugin:BigWigs_OnBossDisable(event, module)
 		if module ~= opener then return end
 		self:Close()
 	end
@@ -907,10 +1003,10 @@ function plugin:Close()
 	proxAnchor:UnregisterEvent("GROUP_ROSTER_UPDATE")
 	proxAnchor:UnregisterEvent("RAID_TARGET_UPDATE")
 
-	for i = 1, 40 do
-		if blipList[i].isShown then
-			blipList[i].isShown = nil
-			blipList[i]:Hide()
+	for k,v in next, blipList do
+		if v.isShown then
+			v.isShown = nil
+			v:Hide()
 		end
 	end
 
@@ -923,6 +1019,8 @@ function plugin:Close()
 	proxAnchor.ability:SetFormattedText("|TInterface\\Icons\\spell_nature_chainlightning:20:20:-5:0:64:64:4:60:4:60|t%s", L.abilityName)
 	-- Just in case we were the last target of configure mode, reset the background color.
 	proxAnchor.background:SetTexture(0, 0, 0, 0.3)
+	proxPulseIn:Stop()
+	proxPulseOut:Stop()
 	proxAnchor:Hide()
 end
 
@@ -993,6 +1091,7 @@ do
 		local width, height = proxAnchor:GetWidth(), proxAnchor:GetHeight()
 		local ppy = min(width, height) / (range * 3)
 		proxCircle:SetSize(ppy * range * 2, ppy * range * 2)
+		proxAnchor.rangePulse:SetSize(ppy * range * 2, ppy * range * 2)
 
 		-- Update the ability name display
 		if module and key then
@@ -1023,6 +1122,7 @@ function plugin:Test()
 	end
 	testDots()
 	proxAnchor:Show()
+	proxPulseOut:Play()
 end
 
 -------------------------------------------------------------------------------

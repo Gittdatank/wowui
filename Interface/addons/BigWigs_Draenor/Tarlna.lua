@@ -3,7 +3,6 @@
 -- Module Declaration
 --
 
-if not BigWigs.isWOD then return end -- XXX compat
 local mod, CL = BigWigs:NewBoss("Tarlna the Ageless", 949, 1211)
 if not mod then return end
 mod:RegisterEnableMob(81535)
@@ -56,7 +55,7 @@ end
 
 function mod:Genesis(args)
 	self:Message(args.spellId, "Attention")
-	self:Bar(args.spellId, 6, CL.cast:format(args.spellName))
+	self:Bar(args.spellId, 8, CL.cast:format(args.spellName))
 end
 
 function mod:GrowMandragora(args)

@@ -26,7 +26,7 @@ L["intermission"] = "Unterbrechung"
 L["interrupted"] = "%s unterbrochen"
 L["mob_killed"] = "%s getötet! (%d/%d)"
 L["mob_remaining"] = "%s getötet, noch %d übrig"
-L["mythic"] = "Mythisch Modus" -- Needs review
+L["mythic"] = "Mythisch Modus"
 L["near"] = "%s in DEINER Nähe!"
 L["next_add"] = "Nächstes Add"
 L["no"] = "Kein %s!"
@@ -43,7 +43,7 @@ L["soon"] = "%s bald!"
 L["spawning"] = "%s entsteht!"
 L["stack"] = "%dx %s auf %s"
 L["stage"] = "Phase %d"
-L["trash"] = "Trash" -- Needs review
+L["trash"] = "Trash"
 L["underyou"] = "%s unter DIR!"
 L["you"] = "%s auf DIR!"
 

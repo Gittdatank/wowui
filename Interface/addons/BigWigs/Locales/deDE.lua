@@ -100,12 +100,12 @@ L["resetPositions"] = "Positionen zurücksetzen"
 L["SAY"] = "Sagen"
 L["SAY_desc"] = "Chatblasen sind leicht zu sehen. Big Wigs benutzt eine /sagen-Nachricht, um Leute um dich herum auf Effekte auf dir aufmerksam zu machen."
 L["selectEncounter"] = "Wähle Begegnung"
-L["severelyOutdated"] = "|cffff0000Dein Big Wigs ist über 300 Revisionen veraltet! Es wird DRINGEND zu einem Update geraten um Synchronisierungsfehler mit anderen Spielern zu vermeiden!|r" -- Needs review
+L["severelyOutdated"] = "|cffff0000Dein Big Wigs ist über 300 Revisionen veraltet! Es wird DRINGEND zu einem Update geraten um Synchronisierungsfehler mit anderen Spielern zu vermeiden!|r"
 L["showBlizzWarnings"] = "Blizzards Warnungen anzeigen"
 L["showBlizzWarningsDesc"] = [=[Blizzard stellt eigene Nachrichten für einige Fähigkeiten in ein paar Begegnungen zur Verfügung. Unserer Meinung nach sind diese aber zu lang und erklären zu viel. Wir versuchen kurze, passende Nachrichten zu generieren, die das Gameplay nicht beeinflussen und die dir nicht sagen, was du tun sollst.
 
 |cffff4411Wenn die Option ausgeschaltet ist, werden Blizzards Warnungen nicht mehr mittig angezeigt, wohl aber immer noch im Chatfenster.|r]=]
-L["slashDescBreak"] = "|cFFFED000/break:|r Sendet einen Pausentimer an den Schlachtzug." -- Needs review
+L["slashDescBreak"] = "|cFFFED000/break:|r Sendet einen Pausentimer an den Schlachtzug."
 L["slashDescConfig"] = "|cFFFED000/bw:|r Öffnet die Big Wigs Konfiguration."
 L["slashDescLocalBar"] = "|cFFFED000/localbar:|r Erstellt eine Custombar, welche nur Du sehen kannst."
 L["slashDescPull"] = "|cFFFED000/pull:|r Sendet einen Countdown zum Pull an den Raid."
