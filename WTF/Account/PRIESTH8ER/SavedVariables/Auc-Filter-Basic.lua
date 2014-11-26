@@ -4,19 +4,7 @@ AucAdvancedFilterBasic_IgnoreList = {
 		["Alliance"] = {
 		},
 	},
-	["Feathermoon"] = {
-		["Horde"] = {
-		},
-	},
-	["Azuremyst"] = {
-		["Horde"] = {
-		},
-	},
-	["Area 52"] = {
-		["Horde"] = {
-		},
-	},
-	["Cho'gall"] = {
+	["Silvermoon"] = {
 		["Horde"] = {
 		},
 	},
@@ -24,7 +12,19 @@ AucAdvancedFilterBasic_IgnoreList = {
 		["Horde"] = {
 		},
 	},
-	["Silvermoon"] = {
+	["Cho'gall"] = {
+		["Horde"] = {
+		},
+	},
+	["Area 52"] = {
+		["Horde"] = {
+		},
+	},
+	["Feathermoon"] = {
+		["Horde"] = {
+		},
+	},
+	["Azuremyst"] = {
 		["Horde"] = {
 		},
 	},

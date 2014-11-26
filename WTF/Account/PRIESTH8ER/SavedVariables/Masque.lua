@@ -10,12 +10,12 @@ MasqueDB = {
 		["Gimm - Cho'gall"] = "Default",
 		["Gitt - Arthas"] = "Default",
 		["Evyyn - Azuremyst"] = "Default",
-		["Git - Arthas"] = "Default",
-		["Burk - Arthas"] = "Default",
-		["Git - Cho'gall"] = "Default",
-		["Got - Arthas"] = "Default",
-		["Greny - Azuremyst"] = "Default",
 		["Spih - Arthas"] = "Default",
+		["Burk - Arthas"] = "Default",
+		["Greny - Azuremyst"] = "Default",
+		["Got - Arthas"] = "Default",
+		["Git - Cho'gall"] = "Default",
+		["Git - Arthas"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -113,14 +113,14 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
-				["SBF_ToT Debuffs"] = {
+				["Masque"] = {
 					["SkinID"] = "Zoomed",
-					["Inherit"] = false,
 				},
 				["Bartender4"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["Bartender4_PetBar"] = {
+				["Bagnon_bank"] = {
+					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
 				["Bagnon_inventory"] = {
@@ -130,13 +130,13 @@ MasqueDB = {
 				["Bartender4_7"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["SBF"] = {
-					["SkinID"] = "Zoomed",
-					["Inherit"] = false,
-				},
 				["Bagnon_guildbank"] = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+				},
+				["SBF"] = {
+					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["DiminishingReturns"] = {
 					["SkinID"] = "Zoomed",
@@ -146,12 +146,12 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
-				["Bagnon_bank"] = {
-					["Inherit"] = false,
+				["Bartender4_PetBar"] = {
 					["SkinID"] = "Zoomed",
 				},
-				["Masque"] = {
+				["SBF_ToT Debuffs"] = {
 					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 			},
 		},

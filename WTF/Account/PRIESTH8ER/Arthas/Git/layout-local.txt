@@ -1,8 +1,8 @@
 Version: 1
-Frame: LibDebug-1.0_Frame
-FrameLevel: 1
-Anchor: CENTER
-X: -115
-Y: 100
-W: 400
-H: 400
+Frame: AuctionFrame
+FrameLevel: 112
+Anchor: TOPLEFT
+X: 16
+Y: -116
+W: 832
+H: 447

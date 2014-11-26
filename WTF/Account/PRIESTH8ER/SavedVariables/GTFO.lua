@@ -13,7 +13,7 @@ GTFOData = {
 	["Volume"] = 1,
 	["IgnoreOptions"] = {
 	},
-	["UnmuteMode"] = false,
 	["SoundChannel"] = "Master",
+	["UnmuteMode"] = false,
 	["TrivialMode"] = true,
 }
