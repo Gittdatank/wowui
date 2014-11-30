@@ -5,7 +5,7 @@ if GetLocale()=="deDE" or GetLocale()=="ruRU" or GetLocale()=="zhTW" or GetLocal
 rsclocalel()
 end
 
-rscversion=6.001
+rscversion=6.002
 
 
 --zone ID where addon check flasks
@@ -51,14 +51,27 @@ rscpotiontable = {
 --79475, --Earthen Potion
 
 --Pandaria
-105704, --Alchemist's Rejuvenation
-105708, --Healing Potion
-105709, --Restore Mana
-105706, --Potion of Mogu Power
-105701, --Potion of Focus
-105697, --Virmen's Bite
-105702, --Potion of the Jade Serpent
-105698, --Potion of the Mountains
+--105704, --Alchemist's Rejuvenation
+--105708, --Healing Potion
+--105709, --Restore Mana
+--105706, --Potion of Mogu Power
+--105701, --Potion of Focus
+--105697, --Virmen's Bite
+--105702, --Potion of the Jade Serpent
+--105698, --Potion of the Mountains
+
+--WOD
+175821,
+175790,
+175817,
+156428,
+156445,
+156436,
+156426,
+156432,
+156430,
+156423,
+
 }
 
 --==============FOOD=================
@@ -95,18 +108,18 @@ rscfoodtable={
   -- +415??
   --104282,
   -- +300 stats:
-  146804, -- new
-  146805, -- new
-  146806, -- new
-  146807, -- new
-  146808, -- new 450 stam
-  146809, -- new 5.4
-  101618, -- new
-  104272,
-  104277,
-  104275,
-  104280,
-  104283, --450 sta
+  --146804, -- new
+  --146805, -- new
+  --146806, -- new
+  --146807, -- new
+  --146808, -- new 450 stam
+  --146809, -- new 5.4
+  --101618, -- new
+  --104272,
+  --104277,
+  --104275,
+  --104280,
+  --104283, --450 sta
   
  
   
@@ -118,13 +131,13 @@ rscfoodtable={
 rscfoodtable_additional={
 
   -- +275 stats:
-  104271,
-  104274,
-  104276,
-  104282,
-  104279,
-  101617, -- new highest stat feast 275
-  104282, -- +415 Stamina
+  --104271,
+  --104274,
+  --104276,
+  --104282,
+  --104279,
+  --101617, -- new highest stat feast 275
+  --104282, -- +415 Stamina
   
 
 }
@@ -132,11 +145,11 @@ rscfoodtable_additional={
 rscfoodtable_additional2={
 
  -- +250 stats: low food21.
- 104264, -- Intellect 
- 104267, -- Strength23
- 104273, -- Agility24
- 104278, -- Spirit25
- 104281, -- 375 Stamina
+ --104264, -- Intellect 
+ --104267, -- Strength23
+ --104273, -- Agility24
+ --104278, -- Spirit25
+ --104281, -- 375 Stamina
 }
 
 --==============FLASKS===============
@@ -157,36 +170,46 @@ rscflasktable={
 	--79472, --Flask of Titanic Strength
 	
 --Pandaria
-  105693, --Flask of Falling Leaves
-  105689, --Flask of Spring Blossoms
-  105694, --Flask of the Earth
-  105691, --Flask of the Warm Sun
-  105696, --Flask of Winter's Bite
+  --105693, --Flask of Falling Leaves
+  --105689, --Flask of Spring Blossoms
+  --105694, --Flask of the Earth
+  --105691, --Flask of the Warm Sun
+  --105696, --Flask of Winter's Bite
   
   
-  127230, --crystal of insanity
+  --127230, --crystal of insanity
   
+  
+  --wod
+  156073,
+  156070,
+  156071,
+  156077,
+  156064,
+  156079,
+  156080,
+  156084,
 }
 
 rscflasktableold={
-	92679, --Flask of Battle
-	94160, --Flask of Flowing Water
-	79469, --Flask of Steelskin
-	79470, --Flask of the Draconic Mind
-	79471, --Flask of the Winds
-	79472, --Flask of Titanic Strength
+	--92679, --Flask of Battle
+	--94160, --Flask of Flowing Water
+	--79469, --Flask of Steelskin
+	--79470, --Flask of the Draconic Mind
+	--79471, --Flask of the Winds
+	--79472, --Flask of Titanic Strength
 	--the same flasks with different ID ?!
-	92730,
-	92729,
-	92725,
-	92731,
+	--92730,
+	--92729,
+	--92725,
+	--92731,
 	
 	--alchemy
-	79640,
-	79639,
-	79638,
+	--79640,
+	--79639,
+	--79638,
 	
-	105617,
+	--105617,
 	
 	
 }
@@ -235,14 +258,14 @@ rscelixirtable2={
 	--89342, --Spirit Scroll
 	
 	--Pandaria
-	105685, --elixir-of-peace
-	105686, --elixir-of-perfection
-	105684, --elixir-of-the-rapids
-	105683, --elixir-of-weaponry
-	105688, --monks-elixir
-	105682, --mad-hozen-elixir
+	--105685, --elixir-of-peace
+	--105686, --elixir-of-perfection
+	--105684, --elixir-of-the-rapids
+	--105683, --elixir-of-weaponry
+	--105688, --monks-elixir
+	--105682, --mad-hozen-elixir
 
-  109933,
+  --109933,
 }
 
 
@@ -1370,7 +1393,7 @@ local mojn=1
 if #rscignorezone6[1]>0 then
 	for ug=1,#rscignorezone6[1] do
 		if rscignorezone6[1][ug]==GetCurrentMapAreaID() then
-			rscignorezone6[2][ug]=GetRealZoneText()
+			rscignorezone6[2][ug]=GetMapNameByID(GetCurrentMapAreaID())
 			mojn=0
 		end
 	end
@@ -3249,6 +3272,9 @@ if rsclastfightdelay==nil or (rsclastfightdelay and GetTime()-rsclastfightdelay>
 
 		local rscskokagrup=5
 		if GetRaidDifficultyID()==3 or GetRaidDifficultyID()==5 then
+			rscskokagrup=2
+		end
+		if GetRaidDifficultyID()==18 then
 			rscskokagrup=2
 		end
 		for i = 1,GetNumGroupMembers() do local name,rank,subgroup = GetRaidRosterInfo(i)

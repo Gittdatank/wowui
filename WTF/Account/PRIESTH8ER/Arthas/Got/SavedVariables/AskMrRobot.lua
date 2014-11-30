@@ -41,21 +41,21 @@ AmrDb = {
 	["Region"] = "US",
 	["Currencies"] = {
 	},
-	["Glyphs"] = {
-	},
+	["Class"] = "DRUID",
 	["LogData"] = {
 		["_wipes"] = {
 		},
 		["_autoLog"] = {
+			[1228] = "disabled",
 			[1136] = "disabled",
+			[1205] = "disabled",
 		},
-		["_lastDiff"] = 0,
 		["_lastZone"] = "Pandaria",
+		["_lastDiff"] = 0,
 	},
 	["BagItems"] = {
 	},
-	["BankItems"] = {
-	},
+	["RealmName"] = "Arthas",
 	["LastCharacterImport"] = "",
 	["Reps"] = {
 	},
@@ -64,6 +64,8 @@ AmrDb = {
 	},
 	["Professions"] = {
 	},
-	["RealmName"] = "Arthas",
-	["Class"] = "DRUID",
+	["BankItems"] = {
+	},
+	["Glyphs"] = {
+	},
 }

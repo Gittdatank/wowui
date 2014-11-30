@@ -1,0 +1,12 @@
+tag v5.11.2
+67b4221b6b08a244c0a9937f1db17a6d43e6bc24
+Chip Turner <cturner@pattern.net>
+2014-11-29 01:25:09 -0800
+
+fix price for socketed items
+
+
+--------------------
+
+Chip Turner:
+	- apparently there are multiple bonus IDs for a bonus socket

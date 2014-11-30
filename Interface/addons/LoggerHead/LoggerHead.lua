@@ -21,6 +21,15 @@ local disabled_text = RED_FONT_COLOR_CODE..VIDEO_OPTIONS_DISABLED..FONT_COLOR_CO
 local enabled_icon  = "Interface\\AddOns\\"..ADDON_NAME.."\\enabled"
 local disabled_icon = "Interface\\AddOns\\"..ADDON_NAME.."\\disabled"
 
+local garrisonmaps = {
+	[1152] = true,  -- Horde level 1
+	[1330] = true,  -- Horde level 2
+	[1153] = true,  -- Horde level 3
+	[1158] = true,  -- Alliance level 1
+	[1331] = true,  -- Alliance level 2
+	[1159] = true,  -- Alliance level 3
+}
+
 local difficultyLookup = {
 	DUNGEON_DIFFICULTY1,
 	DUNGEON_DIFFICULTY2,
@@ -35,7 +44,10 @@ local difficultyLookup = {
 	nil, -- Norm scen
 	nil, -- heroic scen
 	nil,
-	PLAYER_DIFFICULTY4
+	PLAYER_DIFFICULTY1, --14: Normal
+	PLAYER_DIFFICULTY2, -- 15: Heroic
+	PLAYER_DIFFICULTY6, -- 16: Mythic
+	PLAYER_DIFFICULTY3 -- 17: Raid Finder
 }
 
 local db
@@ -204,13 +216,13 @@ function LoggerHead:EnableLogging()
 	if not LoggingCombat() then
 		self:Pour(COMBATLOGENABLED)
 	end
-	LoggingCombat(1)
+	LoggingCombat(true)
 
 	if db.chat then
 		if not LoggingChat() then
 			self:Pour(CHATLOGENABLED)
 		end
-		LoggingChat(1)
+		LoggingChat(true)
 	end
 	self:UpdateLDB()
 end
@@ -219,13 +231,13 @@ function LoggerHead:DisableLogging()
 	if LoggingCombat() then
 		self:Pour(COMBATLOGDISABLED)
 	end
-	LoggingCombat(0)
+	LoggingCombat(false)
 
 	if db.chat then
 		if LoggingChat() then
 			self:Pour(CHATLOGDISABLED)
 		end
-		LoggingChat(0)
+		LoggingChat(nil)
 	end
 	self:UpdateLDB()
 end
@@ -378,12 +390,9 @@ function LoggerHead.GenerateOptionsInternal()
 end
 
 function LoggerHead:GetInstanceInformation()
-	local zone, zonetype, difficultyIndex, difficultyName, maxPlayers, dynamicDifficulty, isDynamic = GetInstanceInfo()
-	local difficulty = difficultyIndex
-	-- Unless Blizzard fixes scenarios to not return nil, let's hardcode this into returning "scenario" -Znuff
-	if zonetype == nil and difficultyIndex == 1 then
-		zonetype = "scenario"
-	end
+	local zone, zonetype, difficultyIndex, difficultyName, maxPlayers, dynamicDifficulty, isDynamic, mapid = GetInstanceInfo()
+	if garrisonmaps[mapid] then return nil end
+	local difficulty = difficultyIndex	
 	return zone, zonetype, difficulty, difficultyLookup[difficulty]
 end
 

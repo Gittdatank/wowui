@@ -20,6 +20,11 @@ ChatterDB = {
 			},
 		},
 		["AltLinks"] = {
+			["realm"] = {
+				["Arthas"] = {
+					["Git"] = "Git",
+				},
+			},
 			["profiles"] = {
 				["Gitt Tank"] = {
 					["guildranks"] = {
@@ -363,9 +368,9 @@ ChatterDB = {
 							["g"] = 1,
 							["r"] = 1,
 						},
-						["RESTRICTED"] = {
-							["b"] = 0,
-							["g"] = 0,
+						["MONSTER_SAY"] = {
+							["b"] = 0.623529434204102,
+							["g"] = 1,
 							["r"] = 1,
 						},
 						["COMBAT_HONOR_GAIN"] = {
@@ -378,9 +383,9 @@ ChatterDB = {
 							["g"] = 0.752941250801086,
 							["r"] = 1,
 						},
-						["TRADESKILLS"] = {
-							["b"] = 1,
-							["g"] = 1,
+						["RESTRICTED"] = {
+							["b"] = 0,
+							["g"] = 0,
 							["r"] = 1,
 						},
 						["shv"] = {
@@ -478,15 +483,15 @@ ChatterDB = {
 							["g"] = 0.501960813999176,
 							["r"] = 0.752941250801086,
 						},
-						["Battleground"] = {
-							["r"] = 1.00000005913898,
-							["g"] = 0.498039245139808,
-							["b"] = 0,
-						},
 						["Real ID Conversation"] = {
 							["b"] = 0.941176533699036,
 							["g"] = 0.694117665290833,
 							["r"] = 0,
+						},
+						["CHANNEL10"] = {
+							["b"] = 0.752941250801086,
+							["g"] = 0.752941250801086,
+							["r"] = 1,
 						},
 						["ACHIEVEMENT"] = {
 							["b"] = 0,
@@ -498,10 +503,10 @@ ChatterDB = {
 							["g"] = 0.501960813999176,
 							["r"] = 0.501960813999176,
 						},
-						["CHANNEL10"] = {
-							["b"] = 0.752941250801086,
-							["g"] = 0.752941250801086,
-							["r"] = 1,
+						["Battleground"] = {
+							["r"] = 1.00000005913898,
+							["g"] = 0.498039245139808,
+							["b"] = 0,
 						},
 						["RealID Conversation"] = {
 							["r"] = 0,
@@ -613,8 +618,8 @@ ChatterDB = {
 							["g"] = 0,
 							["r"] = 1.00000005913898,
 						},
-						["MONSTER_SAY"] = {
-							["b"] = 0.623529434204102,
+						["TRADESKILLS"] = {
+							["b"] = 1,
 							["g"] = 1,
 							["r"] = 1,
 						},
@@ -1476,8 +1481,8 @@ ChatterDB = {
 							["g"] = 0.498039245139808,
 							["b"] = 0,
 						},
-						["MONSTER_SAY"] = {
-							["b"] = 0.623529434204102,
+						["TRADESKILLS"] = {
+							["b"] = 1,
 							["g"] = 1,
 							["r"] = 1,
 						},
@@ -1491,9 +1496,9 @@ ChatterDB = {
 							["g"] = 0.592156887054443,
 							["r"] = 0.43921571969986,
 						},
-						["RESTRICTED"] = {
-							["b"] = 0,
-							["g"] = 0,
+						["MONSTER_SAY"] = {
+							["b"] = 0.623529434204102,
+							["g"] = 1,
 							["r"] = 1,
 						},
 						["Whisper"] = {
@@ -1591,15 +1596,15 @@ ChatterDB = {
 							["g"] = 0.501960813999176,
 							["r"] = 0.752941250801086,
 						},
-						["CHANNEL10"] = {
-							["b"] = 0.752941250801086,
-							["g"] = 0.752941250801086,
-							["r"] = 1,
-						},
 						["Battleground"] = {
 							["r"] = 1.00000005913898,
 							["g"] = 0.498039245139808,
 							["b"] = 0,
+						},
+						["Real ID Conversation"] = {
+							["r"] = 0,
+							["g"] = 0.694117665290833,
+							["b"] = 0.941176533699036,
 						},
 						["ARENA_POINTS"] = {
 							["b"] = 1,
@@ -1611,10 +1616,10 @@ ChatterDB = {
 							["g"] = 0.501960813999176,
 							["r"] = 0.501960813999176,
 						},
-						["Real ID Conversation"] = {
-							["r"] = 0,
-							["g"] = 0.694117665290833,
-							["b"] = 0.941176533699036,
+						["CHANNEL10"] = {
+							["b"] = 0.752941250801086,
+							["g"] = 0.752941250801086,
+							["r"] = 1,
 						},
 						["RealID Conversation"] = {
 							["r"] = 0,
@@ -1726,9 +1731,9 @@ ChatterDB = {
 							["g"] = 0.666666706092656,
 							["b"] = 1.00000005913898,
 						},
-						["TRADESKILLS"] = {
-							["b"] = 1,
-							["g"] = 1,
+						["RESTRICTED"] = {
+							["b"] = 0,
+							["g"] = 0,
 							["r"] = 1,
 						},
 						["BN_INLINE_TOAST_CONVERSATION"] = {
@@ -2165,19 +2170,19 @@ ChatterDB = {
 							["g"] = 0.501960813999176,
 							["b"] = 0.501960813999176,
 						},
-						["Real ID Conversation"] = {
-							["b"] = 0.941176533699036,
-							["g"] = 0.694117665290833,
-							["r"] = 0,
+						["Battleground"] = {
+							["b"] = 0,
+							["g"] = 0.498039245139808,
+							["r"] = 1.00000005913898,
 						},
 						["ARENA_POINTS"] = {
 							["r"] = 1,
 							["g"] = 1,
 							["b"] = 1,
 						},
-						["General"] = {
-							["b"] = 0.752941250801086,
-							["g"] = 0.752941250801086,
+						["INSTANCE_CHAT"] = {
+							["b"] = 0,
+							["g"] = 0.498039245605469,
 							["r"] = 1,
 						},
 						["PET_INFO"] = {
@@ -2185,10 +2190,10 @@ ChatterDB = {
 							["g"] = 0.501960813999176,
 							["b"] = 1,
 						},
-						["CHANNEL10"] = {
-							["r"] = 1,
-							["g"] = 0.752941250801086,
-							["b"] = 0.752941250801086,
+						["Real ID Conversation"] = {
+							["b"] = 0.941176533699036,
+							["g"] = 0.694117665290833,
+							["r"] = 0,
 						},
 						["RealID Conversation"] = {
 							["b"] = 0.941176526248455,
@@ -2200,10 +2205,10 @@ ChatterDB = {
 							["g"] = 1,
 							["b"] = 0,
 						},
-						["BN_WHISPER_INFORM"] = {
-							["r"] = 0,
-							["g"] = 1,
-							["b"] = 0.964705944061279,
+						["General"] = {
+							["b"] = 0.752941250801086,
+							["g"] = 0.752941250801086,
+							["r"] = 1,
 						},
 						["Instance Leader"] = {
 							["b"] = 0.0352941192686558,
@@ -2240,20 +2245,20 @@ ChatterDB = {
 							["g"] = 0.682352960109711,
 							["b"] = 0.937254965305328,
 						},
-						["INSTANCE_CHAT"] = {
-							["b"] = 0,
-							["g"] = 0.498039245605469,
-							["r"] = 1,
+						["BN_WHISPER_INFORM"] = {
+							["r"] = 0,
+							["g"] = 1,
+							["b"] = 0.964705944061279,
 						},
 						["PARTY_LEADER"] = {
 							["r"] = 0.462745130062103,
 							["g"] = 0.784313797950745,
 							["b"] = 1,
 						},
-						["Battleground"] = {
-							["b"] = 0,
-							["g"] = 0.498039245139808,
-							["r"] = 1.00000005913898,
+						["CHANNEL10"] = {
+							["r"] = 1,
+							["g"] = 0.752941250801086,
+							["b"] = 0.752941250801086,
 						},
 						["CHANNEL_NOTICE"] = {
 							["r"] = 0.752941250801086,
@@ -2609,10 +2614,10 @@ ChatterDB = {
 							["g"] = 0,
 							["b"] = 0,
 						},
-						["RESTRICTED"] = {
+						["TRADESKILLS"] = {
 							["r"] = 1,
-							["g"] = 0,
-							["b"] = 0,
+							["g"] = 1,
+							["b"] = 1,
 						},
 						["MONSTER_WHISPER"] = {
 							["r"] = 1,
@@ -2659,15 +2664,15 @@ ChatterDB = {
 							["g"] = 0.752941250801086,
 							["b"] = 0.752941250801086,
 						},
-						["MONSTER_SAY"] = {
+						["RESTRICTED"] = {
 							["r"] = 1,
-							["g"] = 1,
-							["b"] = 0.623529434204102,
+							["g"] = 0,
+							["b"] = 0,
 						},
-						["BATTLEGROUND_LEADER"] = {
-							["r"] = 1.00000005913898,
-							["g"] = 0.858823580201715,
-							["b"] = 0.717647101264447,
+						["FILTERED"] = {
+							["r"] = 1,
+							["g"] = 0,
+							["b"] = 0,
 						},
 						["Party"] = {
 							["b"] = 1.00000005913898,
@@ -2689,10 +2694,10 @@ ChatterDB = {
 							["g"] = 0.470588266849518,
 							["b"] = 0.0392156876623631,
 						},
-						["MONEY"] = {
-							["r"] = 1,
-							["g"] = 1,
-							["b"] = 0,
+						["BATTLEGROUND_LEADER"] = {
+							["r"] = 1.00000005913898,
+							["g"] = 0.858823580201715,
+							["b"] = 0.717647101264447,
 						},
 						["Battleground Leader"] = {
 							["b"] = 0.717647101264447,
@@ -2729,10 +2734,10 @@ ChatterDB = {
 							["g"] = 0.501960813999176,
 							["b"] = 1,
 						},
-						["BN_WHISPER_INFORM"] = {
-							["r"] = 0,
-							["g"] = 1,
-							["b"] = 0.964705944061279,
+						["INSTANCE_CHAT"] = {
+							["r"] = 1,
+							["g"] = 0.498039245605469,
+							["b"] = 0,
 						},
 						["ACHIEVEMENT"] = {
 							["r"] = 1,
@@ -2759,10 +2764,10 @@ ChatterDB = {
 							["g"] = 0.501960813999176,
 							["b"] = 0.501960813999176,
 						},
-						["INSTANCE_CHAT"] = {
+						["General"] = {
+							["b"] = 0.752941250801086,
+							["g"] = 0.752941250801086,
 							["r"] = 1,
-							["g"] = 0.498039245605469,
-							["b"] = 0,
 						},
 						["gitgroup"] = {
 							["r"] = 1,
@@ -2779,10 +2784,10 @@ ChatterDB = {
 							["g"] = 0.501960813999176,
 							["b"] = 1,
 						},
-						["CHANNEL10"] = {
-							["r"] = 1,
-							["g"] = 0.752941250801086,
-							["b"] = 0.752941250801086,
+						["Real ID Conversation"] = {
+							["r"] = 0,
+							["g"] = 0.694117665290833,
+							["b"] = 0.941176533699036,
 						},
 						["RealID Conversation"] = {
 							["b"] = 0.941176526248455,
@@ -2794,10 +2799,10 @@ ChatterDB = {
 							["g"] = 1,
 							["b"] = 1,
 						},
-						["General"] = {
-							["b"] = 0.752941250801086,
-							["g"] = 0.752941250801086,
-							["r"] = 1,
+						["BN_WHISPER_INFORM"] = {
+							["r"] = 0,
+							["g"] = 1,
+							["b"] = 0.964705944061279,
 						},
 						["Instance Leader"] = {
 							["r"] = 1,
@@ -2834,20 +2839,20 @@ ChatterDB = {
 							["g"] = 0.682352960109711,
 							["b"] = 0.937254965305328,
 						},
-						["Real ID Conversation"] = {
-							["r"] = 0,
-							["g"] = 0.694117665290833,
-							["b"] = 0.941176533699036,
+						["Battleground"] = {
+							["b"] = 0,
+							["g"] = 0.498039245139808,
+							["r"] = 1.00000005913898,
 						},
 						["PARTY_LEADER"] = {
 							["r"] = 0.462745130062103,
 							["g"] = 0.784313797950745,
 							["b"] = 1,
 						},
-						["Battleground"] = {
-							["b"] = 0,
-							["g"] = 0.498039245139808,
-							["r"] = 1.00000005913898,
+						["CHANNEL10"] = {
+							["r"] = 1,
+							["g"] = 0.752941250801086,
+							["b"] = 0.752941250801086,
 						},
 						["CHANNEL_NOTICE"] = {
 							["r"] = 0.752941250801086,
@@ -2864,9 +2869,9 @@ ChatterDB = {
 							["g"] = 0.282352954149246,
 							["b"] = 0.0352941192686558,
 						},
-						["FILTERED"] = {
+						["MONEY"] = {
 							["r"] = 1,
-							["g"] = 0,
+							["g"] = 1,
 							["b"] = 0,
 						},
 						["TARGETICONS"] = {
@@ -2879,10 +2884,10 @@ ChatterDB = {
 							["g"] = 0.717647101264447,
 							["r"] = 0.101960790343583,
 						},
-						["TRADESKILLS"] = {
+						["MONSTER_SAY"] = {
 							["r"] = 1,
 							["g"] = 1,
-							["b"] = 1,
+							["b"] = 0.623529434204102,
 						},
 						["Instance"] = {
 							["r"] = 1,
@@ -2982,16 +2987,23 @@ ChatterDB = {
 				},
 				["Default"] = {
 					["frames"] = {
+						["FRAME_1"] = {
+							["edgeSize"] = 11,
+							["border"] = "RothSquare",
+							["tileSize"] = 1,
+							["background"] = "Solid",
+							["backgroundColor"] = {
+								["a"] = 0,
+							},
+						},
 						["FRAME_10"] = {
 							["enable"] = false,
 						},
-						["FRAME_1"] = {
-							["edgeSize"] = 11,
-							["tileSize"] = 1,
+						["FRAME_3"] = {
 							["background"] = "Solid",
 							["border"] = "RothSquare",
 							["backgroundColor"] = {
-								["a"] = 0,
+								["a"] = 0.460000038146973,
 							},
 						},
 						["FRAME_4"] = {
@@ -3002,13 +3014,6 @@ ChatterDB = {
 						},
 						["FRAME_2"] = {
 							["enable"] = false,
-							["border"] = "RothSquare",
-						},
-						["FRAME_3"] = {
-							["background"] = "Solid",
-							["backgroundColor"] = {
-								["a"] = 0.460000038146973,
-							},
 							["border"] = "RothSquare",
 						},
 					},
@@ -3067,23 +3072,16 @@ ChatterDB = {
 				},
 				["Git - Mar 2014"] = {
 					["frames"] = {
-						["FRAME_1"] = {
-							["edgeSize"] = 11,
-							["border"] = "RothSquare",
-							["tileSize"] = 1,
-							["background"] = "Solid",
-							["backgroundColor"] = {
-								["a"] = 0,
-							},
-						},
 						["FRAME_10"] = {
 							["enable"] = false,
 						},
-						["FRAME_3"] = {
+						["FRAME_1"] = {
+							["edgeSize"] = 11,
+							["tileSize"] = 1,
 							["background"] = "Solid",
 							["border"] = "RothSquare",
 							["backgroundColor"] = {
-								["a"] = 0.460000038146973,
+								["a"] = 0,
 							},
 						},
 						["FRAME_4"] = {
@@ -3094,6 +3092,13 @@ ChatterDB = {
 						},
 						["FRAME_2"] = {
 							["enable"] = false,
+							["border"] = "RothSquare",
+						},
+						["FRAME_3"] = {
+							["background"] = "Solid",
+							["backgroundColor"] = {
+								["a"] = 0.460000038146973,
+							},
 							["border"] = "RothSquare",
 						},
 					},
@@ -3117,8 +3122,8 @@ ChatterDB = {
 					["font"] = "Accidental Presidency",
 				},
 				["Default"] = {
-					["fontsize"] = 12,
 					["font"] = "Accidental Presidency",
+					["fontsize"] = 12,
 				},
 				["Giit"] = {
 					["fontsize"] = 12,
@@ -3129,8 +3134,8 @@ ChatterDB = {
 					["font"] = "Accidental Presidency",
 				},
 				["Git - Mar 2014"] = {
-					["font"] = "Accidental Presidency",
 					["fontsize"] = 12,
+					["font"] = "Accidental Presidency",
 				},
 			},
 		},
@@ -3151,37 +3156,37 @@ ChatterDB = {
 				},
 				["Arthas"] = {
 					["history"] = {
-						"/cw Blastbeatx get that summon?", -- [1]
-						"/cw Blastbeatx-Arthas will come down in a bit", -- [2]
-						"/p don't worry about CC's", -- [3]
-						"/p just make sure you get Flags right away", -- [4]
-						"/p also, stun hunters", -- [5]
-						"/p melee watch cleave", -- [6]
-						"/p raping ur faces", -- [7]
-						"/o ?", -- [8]
-						"/o  |cffa335ee|Hitem:118884:0:0:0:0:0:0:0:100:0:2:0|h[Kyb's Foolish Perseverance]|h|r", -- [9]
-						"/o nybolt again", -- [10]
-						"/o no surprise", -- [11]
-						" i got it for 65 already", -- [12]
-						" bought it last night", -- [13]
-						" it's crazy stam for sure", -- [14]
-						"/quit", -- [15]
-						"/cw Nina-Arthas hey", -- [16]
-						"/o inv", -- [17]
-						"/o shat in 1 hr", -- [18]
-						"/o was planning on it", -- [19]
-						"/o but shinerr being slow", -- [20]
-						"/o mumble for a sec?", -- [21]
-						"/o dots can you join?", -- [22]
-						"/invite tydeson", -- [23]
-						"/p share daily plz", -- [24]
-						"/WHO AIYANN", -- [25]
-						"/who taake", -- [26]
-						" no work today", -- [27]
-						" not right now, no sockets atm =P", -- [28]
-						" lol hopefully i will get some sockets eventually", -- [29]
-						" cool", -- [30]
-						"/2 WTB Truesteel Crafted PST", -- [31]
+						"/who bombadilz", -- [1]
+						"/who beware", -- [2]
+						"/2 WTB Truesteel Breastplate/Helm PST", -- [3]
+						"/2 WTB Truesteel Breastplate/Helm PST", -- [4]
+						"/2 WTB Truesteel Breastplate/Helm PST", -- [5]
+						"/2 WTB Truesteel Breastplate/Helm PST", -- [6]
+						"/2 WTB Truesteel Crafted Helm and BP PST", -- [7]
+						"/inv Primalfears ", -- [8]
+						"/inv Vamprixlz ", -- [9]
+						"/g morgan", -- [10]
+						"/g where are you?", -- [11]
+						"/p gonna start CM when the healer trial gets back from AFK", -- [12]
+						"/invite Dotsfired ", -- [13]
+						"/invite Dotsfired ", -- [14]
+						"/inv Endernx ", -- [15]
+						"/p Hello", -- [16]
+						"/inv Primalfears ", -- [17]
+						"/p Officer channel", -- [18]
+						"/p jk", -- [19]
+						" done", -- [20]
+						"/o feel good so far", -- [21]
+						"/o i feel really confidet with him", -- [22]
+						"/o healer says i'm a dream to heal", -- [23]
+						"/o no dmg", -- [24]
+						"/g  |cffa335ee|Hitem:114230:0:0:0:0:0:0:0:100:0:13:3:525:534:55|h[Truesteel Helm of the Peerless]|h|r |cffa335ee|Hitem:118949:0:0:0:0:0:0:0:100:0:11:1:48|h[Bouldercrush Helm of the Peerless]|h|r", -- [25]
+						"/g omg", -- [26]
+						"/g come on!", -- [27]
+						"/o lets talk", -- [28]
+						"/o let him know we need a min", -- [29]
+						"/quit", -- [30]
+						"/camp", -- [31]
 						"/quit", -- [32]
 					},
 				},
@@ -3326,11 +3331,11 @@ ChatterDB = {
 		["Giit - Cho'gall"] = "Giit",
 		["Gitt - Arthas"] = "Default",
 		["Git - Arthas"] = "Git - Mar 2014",
-		["Git - Cho'gall"] = "Default",
-		["Burk - Arthas"] = "Default",
-		["Giitt - Feathermoon"] = "Default",
-		["Greny - Azuremyst"] = "Default",
 		["Git - Azuremyst"] = "Default",
+		["Greny - Azuremyst"] = "Default",
+		["Giitt - Feathermoon"] = "Default",
+		["Burk - Arthas"] = "Default",
+		["Git - Cho'gall"] = "Default",
 		["Spih - Cho'gall"] = "Default",
 		["Lihte - Cho'gall"] = "Lihte",
 		["Gimm - Cho'gall"] = "Default",
@@ -3345,15 +3350,15 @@ ChatterDB = {
 		},
 		["Default"] = {
 			["modules"] = {
-				["Borders/Background"] = true,
 				["Chat Autolog"] = true,
+				["Borders/Background"] = true,
 			},
 			["welcomeMessaged"] = true,
 		},
 		["Git - Mar 2014"] = {
 			["modules"] = {
-				["Chat Autolog"] = true,
 				["Borders/Background"] = true,
+				["Chat Autolog"] = true,
 			},
 			["welcomeMessaged"] = true,
 		},

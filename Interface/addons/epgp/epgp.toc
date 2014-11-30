@@ -8,7 +8,7 @@
 ## X-Website: http://code.google.com/p/epgp/
 ## X-Compatible-With: 60000
 ## X-Since-Interface: 60000
-## X-Curse-Packaged-Version: v5.11.1
+## X-Curse-Packaged-Version: v5.11.2
 ## X-Curse-Project-Name: epgp (dkp reloaded)
 ## X-Curse-Project-ID: epgp-dkp-reloaded
 ## X-Curse-Repository-ID: wow/epgp-dkp-reloaded/mainline

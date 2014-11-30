@@ -15,9 +15,8 @@ along with the addon. If not, see <http://www.gnu.org/licenses/gpl-3.0.txt>.
 This file is part of Scrap.
 --]]
 
-local Options = CreateFrame('Frame', 'ScrapOptions')
+local Options = CreateFrame('Frame', 'ScrapOptions', InterfaceOptionsFrame)
 Options.name = 'Scrap'
-
 Options:SetScript('OnShow', function()
 	local loaded, reason = LoadAddOn('Scrap_Options')
 	if not loaded then
@@ -27,6 +26,7 @@ Options:SetScript('OnShow', function()
 		string:SetPoint('LEFT', 40, 0)
 		string:SetHeight(30)
 	end 
-end)
 
-InterfaceOptions_AddCategory(Options)
+	InterfaceOptions_AddCategory(Options)
+	Options:SetScript('OnShow', nil)
+end)

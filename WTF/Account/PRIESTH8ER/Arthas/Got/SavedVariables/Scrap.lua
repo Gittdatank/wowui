@@ -6,3 +6,4 @@ Scrap_AI = {
 }
 Scrap_LowEquip = nil
 Scrap_LowConsume = nil
+Scrap_Unusable = nil

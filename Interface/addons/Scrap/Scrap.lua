@@ -109,7 +109,7 @@ end
 
 function Scrap:IsJunk(id, ...)
 	if id and Scrap_Junk[id] ~= false then
-		return Scrap_Junk[id] or (Scrap_AI[id] and Scrap_AI[id] > 3) or self:CheckFilters(id, ...)
+		return Scrap_Junk[id] or (Scrap_AI[id] and Scrap_AI[id] > 2) or self:CheckFilters(id, ...)
 	end
 end
 
@@ -202,7 +202,7 @@ function Scrap:EvaluateTooltip(class, equipSlot, slotID, level, quality, link, i
 	self:LoadTooltip(link, bag, slot)
 			
 	if not self:BelongsToSet() and self:IsSoulbound(bag, slot) then
-		local unusable = not self:IsEnchanter() and (Unfit:IsClassUnusable(class, equipSlot) or self:IsOtherClass())
+		local unusable = Scrap_Unusable and (Unfit:IsClassUnusable(class, equipSlot) or self:IsOtherClass())
 		return unusable or self:IsLowEquip(id, class, slotID, level, quality)
 	end
 end
@@ -225,11 +225,6 @@ function Scrap:IsSoulbound(bag, slot)
 	end
 end
 
-function Scrap:IsEnchanter()
-    local prof1, prof2 = GetProfessions()
-    return not prof1 or not prof2 or select(7, GetProfessionInfo(prof1)) == 333 or select(7, GetProfessionInfo(prof2)) == 333
-end
-
 function Scrap:IsOtherClass()
 	for i = self.numLines, self.limit, -1 do
 		local text = GetLine(i)
@@ -248,7 +243,7 @@ end
 function Scrap:HasBetterEquip(id, slot, level, quality)
 	if Scrap_LowEquip then
 		local slot1, slot2 = ACTUAL_SLOTS[slot] or slot
-		local value = GetValue(level, quality)
+		local value = GetValue(level or 0, quality)
 		local double
 		
 		if slot1 == 'WEAPON' or slot1 == '2HWEAPON' then
@@ -269,7 +264,7 @@ function Scrap:IsBetterEquip(slot, value, empty)
 	local item = GetInventoryItemID('player', _G['INVSLOT_'..slot])
 	if item then
 		local _,_, quality, level = GetItemInfo(item)
-		return GetValue(level, quality) / value > 1.1
+		return GetValue(level or 0, quality) / value > 1.1
 	elseif empty then
 		return true
 	end

@@ -3,7 +3,7 @@
 ## Notes: Database of Diminishing return categories and general data
 ## Author: Mayen
 ## X-Category: Library
-## X-Curse-Packaged-Version: v2.8.6-46-g61864fb
+## X-Curse-Packaged-Version: v2.8.6-48-g8cd467f
 ## X-Curse-Project-Name: DRData-1.0
 ## X-Curse-Project-ID: drdata-1-0
 ## X-Curse-Repository-ID: wow/drdata-1-0/mainline

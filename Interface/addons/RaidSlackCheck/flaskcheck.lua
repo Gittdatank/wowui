@@ -446,6 +446,9 @@ local rscgropcheck=2
 if select(3,GetInstanceInfo())==17 or select(3,GetInstanceInfo())==14 or select(3,GetInstanceInfo())==15 or select(3,GetInstanceInfo())==16 or GetRaidDifficultyID()==4 or GetRaidDifficultyID()==6 then
 rscgropcheck=5
 end
+if (select(3,GetInstanceInfo())==18) then
+rscgropcheck=8
+end
 
 rscwillnotbechecked={} --не проверять ники!
 rscwillcheckthem={} --проверять эти ники!
@@ -1209,7 +1212,7 @@ if canreport==1 then
 
 if slak==0 and rscwasyellpull and GetTime()<rscwasyellpull+4 then
 else
-if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or select(3,GetInstanceInfo())==18 then
 SendAddonMessage("RSCaddon", "a50", "Instance_CHAT")
 else
 SendAddonMessage("RSCaddon", "a50", "RAID")
@@ -1230,7 +1233,7 @@ if rscflaskcheckb[4]==1 and GetTime()-rscflaskimportchat2[1]>100 and #whisper1>0
 rscflaskdelayrep[1]=GetTime()+50
 rscchatfiltimefunc()
 
-if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or select(3,GetInstanceInfo())==18 then
 SendAddonMessage("RSCaddon", "b50", "Instance_CHAT")
 else
 SendAddonMessage("RSCaddon", "b50", "RAID")
@@ -1295,7 +1298,7 @@ end
 function rscflaskcheckgo(rscjustfortest)
 --works ONLY IN THE RAID-INSTANCE! in white list and NOT IN LFR
 local a1,a2=IsInInstance()
-if select(3,GetInstanceInfo())==17 and rscjustfortest==nil then
+if (select(3,GetInstanceInfo())==17 or select(3,GetInstanceInfo())==18) and rscjustfortest==nil then
 --nothing
 elseif a1 and a2 and a2=="raid" then
 
@@ -1305,7 +1308,7 @@ SetMapToCurrentZone()
 if #rscignorezone6[1]>0 then
 	for ug=1,#rscignorezone6[1] do
 		if rscignorezone6[1][ug]==GetCurrentMapAreaID() then
-			rscignorezone6[2][ug]=GetRealZoneText()
+			rscignorezone6[2][ug]=GetMapNameByID(GetCurrentMapAreaID())
 			mojn=0
 		end
 	end
@@ -1411,15 +1414,15 @@ if nn==1 then
 	if #rscignorezone6[1]>0 then
 		for i=1,#rscignorezone6[1] do
 			if rscignorezone6[1][i]==GetCurrentMapAreaID() then
-				rscignorezone6[2][i]=GetRealZoneText()
+				rscignorezone6[2][i]=GetMapNameByID(GetCurrentMapAreaID())
 				rrr=1
 			end
 		end
 	end
 	if rrr==0 then
-		table.insert(rscignorezone6[2],GetRealZoneText())
+		table.insert(rscignorezone6[2],GetMapNameByID(GetCurrentMapAreaID()))
 		table.insert(rscignorezone6[1],GetCurrentMapAreaID())
-		out ("|cff99ffffRaidSlackCheck|r - "..rsczonereport2.."|cff00ff00"..GetRealZoneText().."|r")
+		out ("|cff99ffffRaidSlackCheck|r - "..rsczonereport2.."|cff00ff00"..GetMapNameByID(GetCurrentMapAreaID()).."|r")
 	else
 		out ("|cff99ffffRaidSlackCheck|r - "..rsczonereport7)
 	end
@@ -1432,7 +1435,7 @@ if nn==2 then
 		for i=1,#rscignorezone6[1] do
 			if rscignorezone6[1][i]==GetCurrentMapAreaID() then
 				rrr=1
-				out ("|cff99ffffRaidSlackCheck|r - "..rsczonereport3.."|cffff0000"..GetRealZoneText().."|r")
+				out ("|cff99ffffRaidSlackCheck|r - "..rsczonereport3.."|cffff0000"..GetMapNameByID(GetCurrentMapAreaID()).."|r")
 				table.remove(rscignorezone6[1],i)
 				table.remove(rscignorezone6[2],i)
 				i=1000

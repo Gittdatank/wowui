@@ -1,5 +1,0 @@
-subversion:
-	- nbluewiz via svn r11878: # small fix. seems many update needed.
-	- nbluewiz via svn r11877: # Fix rare version check lua error.
-	- Omega via svn r11876: Poke
-	- tandanu via svn r11875: increment version number

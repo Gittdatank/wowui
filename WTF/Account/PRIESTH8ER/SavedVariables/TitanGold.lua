@@ -93,7 +93,7 @@ GoldSave = {
 	["Git_Arthas::Horde"] = {
 		["show"] = true,
 		["name"] = "Git",
-		["gold"] = 1607985056,
+		["gold"] = 1121911680,
 	},
 	["Giit_Cho'gall::Horde"] = {
 		["show"] = true,

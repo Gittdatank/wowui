@@ -9,11 +9,11 @@ BigWigs3DB = {
 				["Default"] = {
 					["Vengeful Strikes"] = 0,
 					["Calamity"] = 515,
+					["Gouge"] = 1539,
 					[-7958] = 0,
-					["Clash"] = 0,
 					["Noxious Poison"] = 0,
 					["Corrupted Brew"] = 0,
-					["Gouge"] = 1539,
+					["Clash"] = 0,
 				},
 			},
 		},
@@ -24,12 +24,11 @@ BigWigs3DB = {
 				},
 			},
 		},
-		["BigWigs_Bosses_General Nazgrim"] = {
+		["BigWigs_Bosses_Siegecrafter Blackfuse"] = {
 			["profiles"] = {
 				["Default"] = {
-					["custom_off_bonecracker_marks"] = true,
-					[-7915] = 515,
-					["War Song"] = 515,
+					[-8199] = 515,
+					["saw_blade_near_you"] = 0,
 				},
 			},
 		},
@@ -46,10 +45,10 @@ BigWigs3DB = {
 				["Git - Mar 2014"] = {
 					["posx"] = 319.999973316193,
 					["fontSize"] = 10,
-					["posy"] = 234.560268194669,
-					["lock"] = true,
 					["fontOutline"] = "",
 					["font"] = "DorisPP",
+					["lock"] = true,
+					["posy"] = 234.560268194669,
 				},
 				["Default"] = {
 					["posx"] = 319.999973316193,
@@ -62,139 +61,6 @@ BigWigs3DB = {
 			},
 		},
 		["LibDualSpec-1.0"] = {
-		},
-		["BigWigs_Bosses_Fleshrender Nok'gar"] = {
-		},
-		["BigWigs_Bosses_Council of Elders"] = {
-			["profiles"] = {
-				["Default"] = {
-					["Shadowed Loa Spirit"] = 643,
-					["Body Heat"] = 0,
-					["Reckless Charge"] = 0,
-					["Chilled to the Bone"] = 0,
-				},
-			},
-		},
-		["BigWigs_Plugins_Statistics"] = {
-		},
-		["BigWigs_Bosses_Lei Shen"] = {
-			["profiles"] = {
-				["Default"] = {
-					["Helm of Command"] = 130,
-					["Diffusion Chain"] = 579,
-					["stuns"] = 515,
-					["Summon Ball Lightning"] = 579,
-					["custom_off_diffused_marker"] = true,
-				},
-			},
-		},
-		["BigWigs_Bosses_Jin'rokh the Breaker"] = {
-			["profiles"] = {
-				["Default"] = {
-					["Ionization"] = 579,
-				},
-			},
-		},
-		["BigWigs_Bosses_Durumu the Forgotten"] = {
-			["profiles"] = {
-				["Default"] = {
-					["custom_off_ray_controllers"] = true,
-					[-6891] = 643,
-					[-6889] = 515,
-					["Lingering Gaze"] = 707,
-				},
-			},
-		},
-		["BigWigs_Bosses_Garrosh Hellscream"] = {
-			["profiles"] = {
-				["Default"] = {
-					["custom_off_shaman_marker"] = true,
-					[-8294] = 515,
-					["Whirling Corruption"] = 515,
-					[-8298] = 515,
-					["Touch of Y'Shaarj"] = 515,
-				},
-			},
-		},
-		["BigWigs_Plugins_Raid Icons"] = {
-			["profiles"] = {
-				["Gitt - Monk"] = {
-					["icon"] = 6,
-					["secondIcon"] = 5,
-				},
-				["Git - Mar 2014"] = {
-					["icon"] = 6,
-					["secondIcon"] = 5,
-				},
-				["Default"] = {
-					["icon"] = 6,
-					["secondIcon"] = 5,
-				},
-			},
-		},
-		["BigWigs_Bosses_Spoils of Pandaria"] = {
-			["profiles"] = {
-				["Default"] = {
-					["Supernova"] = 651,
-				},
-			},
-		},
-		["BigWigs_Plugins_Messages"] = {
-			["profiles"] = {
-				["Gitt - Monk"] = {
-					["outline"] = "OUTLINE",
-					["BWEmphasizeMessageAnchor_x"] = 536.686550504121,
-					["BWEmphasizeCountdownMessageAnchor_x"] = 589.806197754304,
-					["BWMessageAnchor_x"] = 536.480144258734,
-					["chat"] = true,
-					["BWEmphasizeCountdownMessageAnchor_y"] = 534.956394292793,
-					["font"] = "DorisPP",
-					["BWEmphasizeMessageAnchor_y"] = 561.836198379482,
-					["BWMessageAnchor_y"] = 579.040065182446,
-					["fontSize"] = 20,
-				},
-				["Git - Mar 2014"] = {
-					["outline"] = "OUTLINE",
-					["fontSize"] = 20,
-					["BWEmphasizeCountdownMessageAnchor_x"] = 589.806197754304,
-					["chat"] = true,
-					["BWEmphasizeMessageAnchor_y"] = 561.836198379482,
-					["BWMessageAnchor_y"] = 579.040065182446,
-					["BWMessageAnchor_x"] = 536.480144258734,
-					["BWEmphasizeCountdownMessageAnchor_y"] = 534.956394292793,
-					["font"] = "DorisPP",
-					["BWEmphasizeMessageAnchor_x"] = 536.686550504121,
-				},
-				["Default"] = {
-					["outline"] = "OUTLINE",
-					["fontSize"] = 20,
-					["BWEmphasizeCountdownMessageAnchor_x"] = 589.806197754304,
-					["BWMessageAnchor_x"] = 536.480144258734,
-					["chat"] = true,
-					["BWEmphasizeCountdownMessageAnchor_y"] = 534.956394292793,
-					["font"] = "DorisPP",
-					["BWEmphasizeMessageAnchor_y"] = 561.836198379482,
-					["BWMessageAnchor_y"] = 579.040065182446,
-					["BWEmphasizeMessageAnchor_x"] = 536.686550504121,
-				},
-			},
-		},
-		["BigWigs_Bosses_Norushen"] = {
-			["profiles"] = {
-				["Default"] = {
-					["big_adds"] = 515,
-					["Blind Hatred"] = 515,
-				},
-			},
-		},
-		["BigWigs_Bosses_Kor'kron Dark Shaman"] = {
-			["profiles"] = {
-				["Default"] = {
-					["Froststorm Strike"] = 0,
-					[-8132] = 0,
-					["Ashen Wall"] = 0,
-				},
-			},
 		},
 		["BigWigs_Bosses_Araknath"] = {
 			["profiles"] = {
@@ -212,12 +78,13 @@ BigWigs3DB = {
 				},
 			},
 		},
-		["BigWigs_Bosses_Malkorok"] = {
+		["BigWigs_Bosses_Council of Elders"] = {
 			["profiles"] = {
 				["Default"] = {
-					["Blood Rage"] = 515,
-					["custom_off_energy_marks"] = true,
-					["Displaced Energy"] = 747,
+					["Shadowed Loa Spirit"] = 643,
+					["Body Heat"] = 0,
+					["Reckless Charge"] = 0,
+					["Chilled to the Bone"] = 0,
 				},
 			},
 		},
@@ -280,132 +147,16 @@ BigWigs3DB = {
 				},
 			},
 		},
-		["BigWigs_Bosses_Tortos"] = {
+		["BigWigs_Bosses_Kor'kron Dark Shaman"] = {
 			["profiles"] = {
 				["Default"] = {
-					["Snapping Bite"] = 0,
-					["custom_off_turtlemarker"] = true,
-					["bats"] = 515,
-				},
-				["Gitt - Monk"] = {
-					["custom_off_turtlemarker"] = true,
+					["Froststorm Strike"] = 0,
+					[-8132] = 0,
+					["Ashen Wall"] = 0,
 				},
 			},
 		},
-		["BigWigs_Bosses_Dark Animus"] = {
-			["profiles"] = {
-				["Default"] = {
-					["Interrupting Jolt"] = 643,
-				},
-			},
-		},
-		["BigWigs_Bosses_Skulloc"] = {
-		},
-		["BigWigs_Bosses_Horridon"] = {
-			["profiles"] = {
-				["Default"] = {
-					[-7080] = 675,
-					["Double Swipe"] = 515,
-				},
-			},
-		},
-		["BigWigs_Plugins_Colors"] = {
-		},
-		["BigWigs_Bosses_Grimrail Enforcers"] = {
-		},
-		["BigWigs_Plugins_Bars"] = {
-			["profiles"] = {
-				["Gitt - Monk"] = {
-					["BigWigsEmphasizeAnchor_y"] = 264.876517517048,
-					["BigWigsAnchor_width"] = 254.74983215332,
-					["BigWigsAnchor_y"] = 248.799760063892,
-					["BigWigsEmphasizeAnchor_x"] = 304.526711943297,
-					["emphasizeGrowup"] = true,
-					["BigWigsAnchor_x"] = 97.2800368881217,
-					["fill"] = true,
-					["font"] = "DorisPP",
-					["BigWigsEmphasizeAnchor_width"] = 259.499755859375,
-					["texture"] = "Minimalist",
-				},
-				["Git - Mar 2014"] = {
-					["BigWigsAnchor_width"] = 254.749862670898,
-					["BigWigsAnchor_y"] = 212.319428848041,
-					["emphasizeGrowup"] = true,
-					["BigWigsAnchor_x"] = 2.2400571703898,
-					["texture"] = "Minimalist",
-					["fill"] = true,
-					["BigWigsEmphasizeAnchor_width"] = 259.499786376953,
-					["BigWigsEmphasizeAnchor_x"] = 254.126752132324,
-					["font"] = "DorisPP",
-					["BigWigsEmphasizeAnchor_y"] = 256.716341918193,
-				},
-				["Default"] = {
-					["BigWigsEmphasizeAnchor_y"] = 256.716341918193,
-					["BigWigsAnchor_width"] = 254.749862670898,
-					["BigWigsAnchor_y"] = 212.319428848041,
-					["BigWigsEmphasizeAnchor_x"] = 254.126752132324,
-					["emphasizeGrowup"] = true,
-					["BigWigsAnchor_x"] = 2.2400571703898,
-					["texture"] = "Minimalist",
-					["font"] = "DorisPP",
-					["BigWigsEmphasizeAnchor_width"] = 259.499786376953,
-					["fill"] = true,
-				},
-			},
-		},
-		["BigWigs_Plugins_Super Emphasize"] = {
-			["profiles"] = {
-				["Gitt - Monk"] = {
-					["outline"] = "OUTLINE",
-					["fontSize"] = 30,
-					["font"] = "DorisPP",
-				},
-				["Git - Mar 2014"] = {
-					["font"] = "DorisPP",
-					["outline"] = "OUTLINE",
-					["fontSize"] = 30,
-				},
-				["Default"] = {
-					["outline"] = "OUTLINE",
-					["font"] = "DorisPP",
-					["fontSize"] = 30,
-				},
-			},
-		},
-		["BigWigs_Bosses_Oshir"] = {
-		},
-		["BigWigs_Bosses_Siegecrafter Blackfuse"] = {
-			["profiles"] = {
-				["Default"] = {
-					[-8199] = 515,
-					["saw_blade_near_you"] = 0,
-				},
-			},
-		},
-		["BigWigs_Plugins_Proximity"] = {
-			["profiles"] = {
-				["Gitt - Monk"] = {
-					["posx"] = 763.200139191147,
-					["fontSize"] = 20,
-					["lock"] = true,
-					["font"] = "DorisPP",
-					["posy"] = 254.88034586548,
-				},
-				["Git - Mar 2014"] = {
-					["fontSize"] = 20,
-					["posy"] = 254.88034586548,
-					["posx"] = 763.200139191147,
-					["lock"] = true,
-					["font"] = "DorisPP",
-				},
-				["Default"] = {
-					["posx"] = 763.200139191147,
-					["fontSize"] = 20,
-					["lock"] = true,
-					["font"] = "DorisPP",
-					["posy"] = 254.88034586548,
-				},
-			},
+		["BigWigs_Plugins_Statistics"] = {
 		},
 		["BigWigs_Bosses_Ra-den Assist"] = {
 			["profiles"] = {
@@ -459,6 +210,246 @@ BigWigs3DB = {
 				},
 			},
 		},
+		["BigWigs_Bosses_Jin'rokh the Breaker"] = {
+			["profiles"] = {
+				["Default"] = {
+					["Ionization"] = 579,
+				},
+			},
+		},
+		["BigWigs_Bosses_Dark Animus"] = {
+			["profiles"] = {
+				["Default"] = {
+					["Interrupting Jolt"] = 643,
+				},
+			},
+		},
+		["BigWigs_Bosses_Durumu the Forgotten"] = {
+			["profiles"] = {
+				["Default"] = {
+					["Lingering Gaze"] = 707,
+					["custom_off_ray_controllers"] = true,
+					[-6889] = 515,
+					[-6891] = 643,
+				},
+			},
+		},
+		["BigWigs_Bosses_General Nazgrim"] = {
+			["profiles"] = {
+				["Default"] = {
+					["custom_off_bonecracker_marks"] = true,
+					[-7915] = 515,
+					["War Song"] = 515,
+				},
+			},
+		},
+		["BigWigs_Bosses_Sha of Pride"] = {
+			["profiles"] = {
+				["Default"] = {
+					["Swelling Pride"] = 515,
+				},
+			},
+		},
+		["BigWigs_Plugins_Colors"] = {
+		},
+		["BigWigs_Plugins_Raid Icons"] = {
+			["profiles"] = {
+				["Gitt - Monk"] = {
+					["icon"] = 6,
+					["secondIcon"] = 5,
+				},
+				["Git - Mar 2014"] = {
+					["icon"] = 6,
+					["secondIcon"] = 5,
+				},
+				["Default"] = {
+					["icon"] = 6,
+					["secondIcon"] = 5,
+				},
+			},
+		},
+		["BigWigs_Plugins_Proximity"] = {
+			["profiles"] = {
+				["Gitt - Monk"] = {
+					["posx"] = 763.200139191147,
+					["fontSize"] = 20,
+					["lock"] = true,
+					["font"] = "DorisPP",
+					["posy"] = 254.88034586548,
+				},
+				["Git - Mar 2014"] = {
+					["posx"] = 763.200139191147,
+					["fontSize"] = 20,
+					["lock"] = true,
+					["posy"] = 254.88034586548,
+					["font"] = "DorisPP",
+				},
+				["Default"] = {
+					["posx"] = 763.200139191147,
+					["fontSize"] = 20,
+					["lock"] = true,
+					["font"] = "DorisPP",
+					["posy"] = 254.88034586548,
+				},
+			},
+		},
+		["BigWigs_Plugins_Bars"] = {
+			["profiles"] = {
+				["Gitt - Monk"] = {
+					["BigWigsEmphasizeAnchor_y"] = 264.876517517048,
+					["BigWigsAnchor_width"] = 254.74983215332,
+					["BigWigsAnchor_y"] = 248.799760063892,
+					["BigWigsEmphasizeAnchor_x"] = 304.526711943297,
+					["emphasizeGrowup"] = true,
+					["BigWigsAnchor_x"] = 97.2800368881217,
+					["fill"] = true,
+					["font"] = "DorisPP",
+					["BigWigsEmphasizeAnchor_width"] = 259.499755859375,
+					["texture"] = "Minimalist",
+				},
+				["Git - Mar 2014"] = {
+					["BigWigsEmphasizeAnchor_y"] = 256.716341918193,
+					["BigWigsAnchor_width"] = 254.749862670898,
+					["BigWigsAnchor_y"] = 212.319428848041,
+					["BigWigsEmphasizeAnchor_x"] = 254.126752132324,
+					["emphasizeGrowup"] = true,
+					["BigWigsAnchor_x"] = 2.2400571703898,
+					["texture"] = "Minimalist",
+					["font"] = "DorisPP",
+					["BigWigsEmphasizeAnchor_width"] = 259.499786376953,
+					["fill"] = true,
+				},
+				["Default"] = {
+					["BigWigsEmphasizeAnchor_y"] = 256.716341918193,
+					["BigWigsAnchor_width"] = 254.749862670898,
+					["BigWigsAnchor_y"] = 212.319428848041,
+					["BigWigsEmphasizeAnchor_x"] = 254.126752132324,
+					["emphasizeGrowup"] = true,
+					["BigWigsAnchor_x"] = 2.2400571703898,
+					["texture"] = "Minimalist",
+					["font"] = "DorisPP",
+					["BigWigsEmphasizeAnchor_width"] = 259.499786376953,
+					["fill"] = true,
+				},
+			},
+		},
+		["BigWigs_Bosses_Lei Shen"] = {
+			["profiles"] = {
+				["Default"] = {
+					["Helm of Command"] = 130,
+					["Diffusion Chain"] = 579,
+					["stuns"] = 515,
+					["Summon Ball Lightning"] = 579,
+					["custom_off_diffused_marker"] = true,
+				},
+			},
+		},
+		["BigWigs_Plugins_Super Emphasize"] = {
+			["profiles"] = {
+				["Gitt - Monk"] = {
+					["outline"] = "OUTLINE",
+					["fontSize"] = 30,
+					["font"] = "DorisPP",
+				},
+				["Git - Mar 2014"] = {
+					["outline"] = "OUTLINE",
+					["fontSize"] = 30,
+					["font"] = "DorisPP",
+				},
+				["Default"] = {
+					["outline"] = "OUTLINE",
+					["font"] = "DorisPP",
+					["fontSize"] = 30,
+				},
+			},
+		},
+		["BigWigs_Bosses_Garrosh Hellscream"] = {
+			["profiles"] = {
+				["Default"] = {
+					["custom_off_shaman_marker"] = true,
+					[-8294] = 515,
+					["Whirling Corruption"] = 515,
+					[-8298] = 515,
+					["Touch of Y'Shaarj"] = 515,
+				},
+			},
+		},
+		["BigWigs_Bosses_Spoils of Pandaria"] = {
+			["profiles"] = {
+				["Default"] = {
+					["Supernova"] = 651,
+				},
+			},
+		},
+		["BigWigs_Bosses_Horridon"] = {
+			["profiles"] = {
+				["Default"] = {
+					[-7080] = 675,
+					["Double Swipe"] = 515,
+				},
+			},
+		},
+		["BigWigs_Bosses_Tortos"] = {
+			["profiles"] = {
+				["Default"] = {
+					["Snapping Bite"] = 0,
+					["custom_off_turtlemarker"] = true,
+					["bats"] = 515,
+				},
+				["Gitt - Monk"] = {
+					["custom_off_turtlemarker"] = true,
+				},
+			},
+		},
+		["BigWigs_Plugins_Messages"] = {
+			["profiles"] = {
+				["Gitt - Monk"] = {
+					["outline"] = "OUTLINE",
+					["BWEmphasizeMessageAnchor_x"] = 536.686550504121,
+					["BWEmphasizeCountdownMessageAnchor_x"] = 589.806197754304,
+					["BWMessageAnchor_x"] = 536.480144258734,
+					["chat"] = true,
+					["BWEmphasizeCountdownMessageAnchor_y"] = 534.956394292793,
+					["font"] = "DorisPP",
+					["BWEmphasizeMessageAnchor_y"] = 561.836198379482,
+					["BWMessageAnchor_y"] = 579.040065182446,
+					["fontSize"] = 20,
+				},
+				["Git - Mar 2014"] = {
+					["outline"] = "OUTLINE",
+					["BWEmphasizeMessageAnchor_x"] = 536.686550504121,
+					["BWEmphasizeCountdownMessageAnchor_x"] = 589.806197754304,
+					["BWMessageAnchor_x"] = 536.480144258734,
+					["chat"] = true,
+					["BWEmphasizeCountdownMessageAnchor_y"] = 534.956394292793,
+					["font"] = "DorisPP",
+					["BWEmphasizeMessageAnchor_y"] = 561.836198379482,
+					["BWMessageAnchor_y"] = 579.040065182446,
+					["fontSize"] = 20,
+				},
+				["Default"] = {
+					["outline"] = "OUTLINE",
+					["fontSize"] = 20,
+					["BWEmphasizeCountdownMessageAnchor_x"] = 589.806197754304,
+					["BWMessageAnchor_x"] = 536.480144258734,
+					["chat"] = true,
+					["BWEmphasizeCountdownMessageAnchor_y"] = 534.956394292793,
+					["font"] = "DorisPP",
+					["BWEmphasizeMessageAnchor_y"] = 561.836198379482,
+					["BWMessageAnchor_y"] = 579.040065182446,
+					["BWEmphasizeMessageAnchor_x"] = 536.686550504121,
+				},
+			},
+		},
+		["BigWigs_Bosses_Malkorok"] = {
+			["profiles"] = {
+				["Default"] = {
+					["Blood Rage"] = 515,
+					["custom_off_energy_marks"] = true,
+					["Displaced Energy"] = 747,
+				},
+			},
+		},
 		["BigWigs_Plugins_Common Auras"] = {
 			["profiles"] = {
 				["Default"] = {
@@ -468,10 +459,10 @@ BigWigs3DB = {
 					["Pain Suppression"] = 0,
 					["Skull Banner"] = 0,
 					["Fortifying Brew"] = 0,
-					["Hand of Sacrifice"] = 0,
+					["Vampiric Blood"] = 0,
 					["Power Word: Barrier"] = 0,
 					["Stormlash Totem"] = 0,
-					["Vampiric Blood"] = 0,
+					["Innervate"] = 0,
 					["Ironbark"] = 0,
 					["Icebound Fortitude"] = 0,
 					["Guardian Spirit"] = 0,
@@ -490,16 +481,17 @@ BigWigs3DB = {
 					["Divine Protection"] = 0,
 					["Vigilance"] = 0,
 					["Survival Instincts"] = 0,
-					["Innervate"] = 0,
+					["Hand of Sacrifice"] = 0,
 					["Ardent Defender"] = 0,
 					["Guardian of Ancient Kings"] = 0,
 				},
 			},
 		},
-		["BigWigs_Bosses_Sha of Pride"] = {
+		["BigWigs_Bosses_Norushen"] = {
 			["profiles"] = {
 				["Default"] = {
-					["Swelling Pride"] = 515,
+					["big_adds"] = 515,
+					["Blind Hatred"] = 515,
 				},
 			},
 		},

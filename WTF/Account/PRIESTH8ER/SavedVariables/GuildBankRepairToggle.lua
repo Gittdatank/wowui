@@ -9,10 +9,10 @@ GuildBankRepairToggleDB = {
 		["Giit - Azuremyst"] = "Default",
 		["Evyyn - Azuremyst"] = "Default",
 		["Got - Arthas"] = "Default",
-		["Git - Cho'gall"] = "Default",
-		["Burk - Arthas"] = "Default",
-		["Spih - Cho'gall"] = "Default",
 		["Greny - Azuremyst"] = "Default",
+		["Git - Cho'gall"] = "Default",
+		["Spih - Cho'gall"] = "Default",
+		["Burk - Arthas"] = "Default",
 		["Gimm - Cho'gall"] = "Default",
 		["Git - Arthas"] = "Default",
 	},
@@ -45,7 +45,6 @@ GuildBankRepairToggleDB = {
 			},
 		},
 		["Git - Arthas"] = {
-			["logout"] = true,
 			["ranks"] = {
 				true, -- [1]
 				true, -- [2]
@@ -54,6 +53,7 @@ GuildBankRepairToggleDB = {
 				true, -- [5]
 				true, -- [6]
 			},
+			["logout"] = true,
 		},
 	},
 }

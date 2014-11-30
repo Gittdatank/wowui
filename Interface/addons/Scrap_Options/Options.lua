@@ -30,6 +30,7 @@ Options:SetChildren(function(self)
 	self:Create('CheckButton', 'Learn')
 	
 	self:CreateHeader('Filters', 'GameFontHighlight', true)
+	self:Create('CheckButton', 'Unusable')
 	self:Create('CheckButton', 'LowEquip', nil, HasPawn)
 	self:Create('CheckButton', 'LowConsume')
 	

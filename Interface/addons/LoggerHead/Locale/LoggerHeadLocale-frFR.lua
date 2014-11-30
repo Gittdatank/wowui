@@ -13,6 +13,6 @@ L["Prompt when entering a new zone?"] = "Rappeler en entrant dans une nouvelle z
 L["Right-click to open the options menu"] = "Clic droit pour ouvrir le menu des options"
 L["Show minimap icon"] = "Montrer l'icône sur la mini-carte"
 L["Toggle showing or hiding the minimap icon."] = "Activer/désactiver l'affichage de l'icône sur la mini-carte"
-L["You have entered |cffd9d919%s %s|r. Enable logging for this area?"] = "Vous êtes entré dans |cffd9d919%s %s.|r Voulez-vous activer les logs pour cette zone/instance ?" -- Needs review
+L["You have entered |cffd9d919%s %s|r. Enable logging for this area?"] = "Vous êtes entré dans |cffd9d919%s %s.|r Voulez-vous activer les logs pour cette zone/instance ?"
 
 

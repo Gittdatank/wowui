@@ -1,7 +1,7 @@
 ﻿function psdeathrepevent(type,marksource,mark,name,guid,spellid,spellname,dmg,overkill,crit,whokill,resist,block,absorbed,spellschool)
 
 -- в ЛФР не трекерить !! psdeathrepsavemain[5]
-if select(3,GetInstanceInfo())==17 and psdeathrepsavemain[5]==1 then
+if (select(3,GetInstanceInfo())==17 or select(3,GetInstanceInfo())==18) and psdeathrepsavemain[5]==1 then
   return
 end
 
@@ -513,7 +513,7 @@ end
 function psreportdeathchat(frase)
     local _, instanceType, difficulty, _, maxPlayers, playerDifficulty, isDynamicInstance = GetInstanceInfo()
     local pplfr=0
-    if select(3,GetInstanceInfo())==17 then
+    if select(3,GetInstanceInfo())==17 or select(3,GetInstanceInfo())==18 then
       pplfr=1
     end
 if pstoomuchrepstopforfight==nil and (UnitInRaid("player") or UnitInParty("player")) and (psmylogin==nil or (psmylogin and GetTime()>psmylogin+10)) and ((psdeathrepsavemain[5]==0 and pplfr==1) or (pplfr==0)) and thisaddononoff then
@@ -591,7 +591,7 @@ if pstoomuchrepstopforfight==nil and (UnitInRaid("player") or UnitInParty("playe
           if partyonly==1 then
             cha=psdeathrepsavemain[15]
           end
-          if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+          if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or select(3,GetInstanceInfo())==18 then
             SendAddonMessage("PSaddon", "666"..myname.."++"..cha, "instance_chat")
           else
             SendAddonMessage("PSaddon", "666"..myname.."++"..cha, "raid")
@@ -605,7 +605,7 @@ if pstoomuchrepstopforfight==nil and (UnitInRaid("player") or UnitInParty("playe
           if partyonly==1 then
             cha=psdeathrepsavemain[15]
           end
-          if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+          if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or select(3,GetInstanceInfo())==18 then
             SendAddonMessage("PSaddon", "666"..myname.."^^++"..cha, "instance_chat")
           else
             SendAddonMessage("PSaddon", "666"..myname.."^^++"..cha, "raid")

@@ -5,6 +5,7 @@
 ## Author: Jaliborc (João Cardoso)
 ## X-License: GNU General Public License Version 3
 ## X-Category: Inventory
+## Version: 12.21
 
 ## OptionalDeps: Poncho-1.0, Sushi-3.0, CustomTutorials-2.1
 ## Dependencies: Scrap

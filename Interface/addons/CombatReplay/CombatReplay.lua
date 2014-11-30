@@ -7,7 +7,7 @@ crlocale()
 end
 
 
-	crversion=6.003
+	crversion=6.004
 
   if crPlayersSizeOnMap==nil then crPlayersSizeOnMap=12 end
   if crOptTrackLfr==nil then crOptTrackLfr=false end
@@ -122,7 +122,7 @@ function cr_OnEvent(self,event,...)
   else
     --проверка, мы в рейд инсте?
     local _, instanceType, pppl, _, maxPlayers, dif = GetInstanceInfo()
-    if ((pppl and (pppl==3 or pppl==5 or pppl==4 or pppl==6 or pppl==14 or pppl==15 or pppl==16 or (pppl==17 and crOptTrackLfr)))) then
+    if ((pppl and (pppl==3 or pppl==5 or pppl==4 or pppl==6 or pppl==14 or pppl==15 or pppl==16 or ((pppl==17 or pppl==18) and crOptTrackLfr)))) then
       --начался бой, через 2 сек проверяю босса и тогда трекерю
       crcheckbossincombat=GetTime()+2
     end

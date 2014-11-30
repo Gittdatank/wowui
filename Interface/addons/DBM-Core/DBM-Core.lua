@@ -51,7 +51,7 @@
 --  Globals/Default Options  --
 -------------------------------
 DBM = {
-	Revision = tonumber(("$Revision: 11878 $"):sub(12, -3)),
+	Revision = tonumber(("$Revision: 11895 $"):sub(12, -3)),
 	DisplayVersion = "6.0.6 alpha", -- the string that is shown as version
 	ReleaseRevision = 11873 -- the revision of the latest stable version that is available
 }
@@ -2637,6 +2637,7 @@ do
 	end
 
 	function DBM:LoadModsOnDemand(checkTable, checkValue)
+		DBM:Debug("LoadModsOnDemand fired")
 		for i, v in ipairs(DBM.AddOns) do
 			local modTable = v[checkTable]
 			local enabled = GetAddOnEnableState(playerName, v.modId)
@@ -2689,8 +2690,9 @@ function DBM:LoadMod(mod, force)
 		end
 		return
 	end
+	DBM:Debug("LoadAddOn should have fired for "..mod.name)
 	local loaded, reason = LoadAddOn(mod.modId)
-	DBM:Debug("LoadMod should have fired LoadAddOn for "..mod.name)
+	DBM:Debug("LoadAddOn should have succeeded for "..mod.name, 2)
 	if not loaded then
 		if reason then
 			self:AddMsg(DBM_CORE_LOAD_MOD_ERROR:format(tostring(mod.name), tostring(_G["ADDON_"..reason or ""])))
@@ -3781,7 +3783,7 @@ do
 		if timerRequestInProgress then return end--do not start ieeu combat if timer request is progressing. (not to break Timer Recovery stuff)
 		if combatInfo[LastInstanceMapID] then
 			for i, v in ipairs(combatInfo[LastInstanceMapID]) do
-				if v.type == "combat" and isBossEngaged(v.multiMobPullDetection or v.mob) then
+				if (v.type == "combat" or v.type == "combat_yell" or v.type == "combat_emote" or v.type == "combat_say") and isBossEngaged(v.multiMobPullDetection or v.mob) then
 					self:StartCombat(v.mod, 0, "IEEU")
 				end
 			end
@@ -3877,7 +3879,7 @@ do
 			for i, v in ipairs(combatInfo[LastInstanceMapID]) do
 				if v.type == type and checkEntry(v.msgs, msg) or v.type == type .. "_regex" and checkExpressionList(v.msgs, msg) then
 					DBM:StartCombat(v.mod, 0, "MONSTER_MESSAGE")
-				elseif v.type == "combat_" .. type and checkEntry(v.msgs, msg) then
+				elseif v.type == "combat_"..type and checkEntry(v.msgs, msg) then
 					if IsInInstance() then--Indoor boss that uses both combat and yell for combat, so in other words (such as hodir), don't require "target" of boss for yell like scanForCombat does for World Bosses
 						DBM:StartCombat(v.mod, 0, "MONSTER_MESSAGE")
 					else--World Boss
@@ -4115,7 +4117,7 @@ function DBM:StartCombat(mod, delay, event, synced, syncedStartHp)
 		--process global options
 		self:ToggleRaidBossEmoteFrame(1)
 		self:StartLogging(0, nil)
-		if DBM.Options.HideObjectivesFrame and not (mod.type == "SCENARIO") then
+		if DBM.Options.HideObjectivesFrame and not (mod.type == "SCENARIO") and GetNumTrackedAchievements() == 0 then
 			if ObjectiveTrackerFrame:IsVisible() then
 				ObjectiveTrackerFrame:Hide()
 				watchFrameRestore = true

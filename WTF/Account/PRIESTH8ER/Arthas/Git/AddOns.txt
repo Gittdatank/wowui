@@ -458,7 +458,7 @@ Yorsahj Automatic Raidwarnings: disabled
 VuhDo: disabled
 VuhDoOptions: disabled
 GridStatusRD_Cata: enabled
-GridUnitMenu: disabled
+GridUnitMenu: enabled
 RaidAchievement_CataRaids: disabled
 RaidAchievement: enabled
 DBM-DragonSoul: disabled
@@ -575,7 +575,7 @@ WeakAurasModelPaths: enabled
 WeakAurasOptions: enabled
 GuildBankRepairToggle: enabled
 WhoPulled: enabled
-AutoRez: disabled
+AutoRez: enabled
 AskMrRobot: enabled
 TauntAware: enabled
 CoolLine: disabled
@@ -608,7 +608,7 @@ ElvUI_Config: disabled
 ElvUI: disabled
 Bagnon_Scrap: disabled
 Bagnon_Facade: disabled
-FriendGroups: enabled
+FriendGroups: disabled
 oqueue: disabled
 LibCandyBar-3.0: enabled
 LibDDI-1.0: enabled
@@ -632,3 +632,12 @@ Auctionator: enabled
 autoturnin: enabled
 TradeForwarder: enabled
 MoveAnything: enabled
+BigWigs_Classic: enabled
+BigWigs_Cataclysm: enabled
+BigWigs_BurningCrusade: enabled
+BigWigs_BlackrockFoundry: enabled
+BigWigs_Draenor: enabled
+BigWigs_Highmaul: enabled
+BigWigs_WrathOfTheLichKing: enabled
+BigWigs_Ra-denAssist: disabled
+CombatTime: enabled

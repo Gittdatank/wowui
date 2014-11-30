@@ -1,9 +1,92 @@
 ------------------------------------------------------------------------
-r1169 | funkydude | 2014-11-25 00:07:15 +0000 (Tue, 25 Nov 2014) | 1 line
+r1182 | funkydude | 2014-11-28 01:46:18 +0000 (Fri, 28 Nov 2014) | 1 line
 Changed paths:
-   A /tags/r1169-release (from /trunk:1168)
+   A /tags/r1182-release (from /trunk:1181)
 
-Tagging as r1169-release
+Tagging as r1182-release
+------------------------------------------------------------------------
+r1181 | funkydude | 2014-11-28 00:46:46 +0000 (Fri, 28 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/WoD/BloodmaulSlagMines/Crushto.lua
+   M /trunk/WoD/BloodmaulSlagMines/Gugrokk.lua
+
+Crushto & Gugrokk: Add counter to interrupts.
+------------------------------------------------------------------------
+r1180 | funkydude | 2014-11-28 00:24:28 +0000 (Fri, 28 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/WoD/GrimrailDepot/Rocketspark.lua
+   M /trunk/WoD/GrimrailDepot/SkylordTovra.lua
+
+SkylordTovra: Add proximity and bar for hunter's mark.
+------------------------------------------------------------------------
+r1179 | funkydude | 2014-11-27 23:17:52 +0000 (Thu, 27 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/WoD/Auchindoun/Terongor.lua
+
+Terongor: Add enable check.
+------------------------------------------------------------------------
+r1178 | zhTW | 2014-11-27 20:01:23 +0000 (Thu, 27 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/LittleWigs.toc
+
+- Add Notes for zhTW & zhCN in LittleWigs.toc
+------------------------------------------------------------------------
+r1177 | funkydude | 2014-11-27 18:31:13 +0000 (Thu, 27 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/MoP/ScarletMonastery/HighInquisitorWhitemane.lua
+   M /trunk/WoD/GrimrailDepot/Rocketspark.lua
+   M /trunk/WoD/UpperBlackrockSpire/Ragewing.lua
+
+Tweaks
+------------------------------------------------------------------------
+r1176 | funkydude | 2014-11-27 00:03:40 +0000 (Thu, 27 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/MoP/MogushanPalace/Gekkan.lua
+   M /trunk/MoP/MogushanPalace/XinTheWeaponmaster.lua
+   M /trunk/MoP/ScarletHalls/ArmsmasterHarlan.lua
+   M /trunk/MoP/ScarletMonastery/BrotherKorloff.lua
+   M /trunk/MoP/ScarletMonastery/HighInquisitorWhitemane.lua
+   M /trunk/WoD/IronDocks/Enforcers.lua
+   M /trunk/WoD/UpperBlackrockSpire/Tharbek.lua
+
+locale cleanups
+------------------------------------------------------------------------
+r1175 | funkydude | 2014-11-26 00:28:48 +0000 (Wed, 26 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/WoD/UpperBlackrockSpire/Tharbek.lua
+   M /trunk/WoD/UpperBlackrockSpire/Zaela.lua
+
+Tharbek: error fix
+------------------------------------------------------------------------
+r1174 | funkydude | 2014-11-25 15:17:03 +0000 (Tue, 25 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/WoD/UpperBlackrockSpire/Gorashan.lua
+
+Gorashan: Add Shrapnel Nova.
+------------------------------------------------------------------------
+r1173 | funkydude | 2014-11-25 14:53:54 +0000 (Tue, 25 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/WoD/UpperBlackrockSpire/Ragewing.lua
+
+Ragewing: Intermission phase tweaks.
+------------------------------------------------------------------------
+r1172 | funkydude | 2014-11-25 14:10:57 +0000 (Tue, 25 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/WoD/UpperBlackrockSpire/Kyrak.lua
+
+Kyrak: Add Eruption tank warning & fixation cd.
+------------------------------------------------------------------------
+r1171 | funkydude | 2014-11-25 14:09:30 +0000 (Tue, 25 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/WoD/UpperBlackrockSpire/Tharbek.lua
+
+Tharbek: Add Iron Reaver & Incinerating Breath
+------------------------------------------------------------------------
+r1170 | funkydude | 2014-11-25 12:07:28 +0000 (Tue, 25 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/WoD/IronDocks/Nokgar.lua
+
+IronDocks/Nokgar: add Burning Arrows on you alert.
 ------------------------------------------------------------------------
 r1168 | funkydude | 2014-11-25 00:06:35 +0000 (Tue, 25 Nov 2014) | 1 line
 Changed paths:

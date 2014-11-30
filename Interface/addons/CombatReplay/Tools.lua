@@ -256,7 +256,7 @@ if (guid.find(guid,"Creature") or guid.find(guid,"Pet-") or guid.find(guid,"Game
 	--Creature-0-3061-1136-29274-71979-00003EDC2C
 	local t1,_,_,_,_,id,g = guid:match("([^,]+)-([^,]+)-([^,]+)-([^,]+)-([^,]+)-([^,]+)-([^,]+)")
 	if id and tonumber(id) ~= nil then
-		return id
+		return tonumber(id)
 	else
 		return 0
 	end

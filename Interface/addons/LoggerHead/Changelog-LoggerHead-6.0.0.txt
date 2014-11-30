@@ -1,0 +1,36 @@
+------------------------------------------------------------------------
+r179 | dratr | 2014-11-29 03:38:35 +0000 (Sat, 29 Nov 2014) | 2 lines
+Changed paths:
+   A /tags/6.0.0 (from /trunk:178)
+
+Tagging as 6.0.0
+Should be 6.0/WoD stable
+------------------------------------------------------------------------
+r178 | dratr | 2014-11-29 01:17:17 +0000 (Sat, 29 Nov 2014) | 2 lines
+Changed paths:
+   M /trunk/LoggerHead.lua
+
+Ignore Garrisons for horder and alliance
+
+------------------------------------------------------------------------
+r177 | dratr | 2014-11-18 14:25:44 +0000 (Tue, 18 Nov 2014) | 2 lines
+Changed paths:
+   M /trunk/LoggerHead.lua
+
+Use true/false rather than 1 and nil/0 for WoD/6.0
+
+------------------------------------------------------------------------
+r176 | dratr | 2014-11-04 03:31:48 +0000 (Tue, 04 Nov 2014) | 2 lines
+Changed paths:
+   M /trunk/LoggerHead.lua
+
+LoggingChat and LoggingCombat use nil to disable not 0
+
+------------------------------------------------------------------------
+r175 | stanzilla | 2014-08-05 20:01:22 +0000 (Tue, 05 Aug 2014) | 1 line
+Changed paths:
+   M /trunk/LoggerHead.lua
+   M /trunk/LoggerHead.toc
+
+6.0 update, might just work
+------------------------------------------------------------------------

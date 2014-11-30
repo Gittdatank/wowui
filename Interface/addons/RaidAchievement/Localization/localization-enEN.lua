@@ -132,6 +132,9 @@ phratitle				= "    Pandaria Heroics"
 prratitle       = "    Pandaria Raids"
 pzratitle       = "    Pandaria Scenarios"
 
+psealeftmenuwod = "WoD Heroics"
+psealeftmenuwod2  = "WoD Raids"
+
 
 
 

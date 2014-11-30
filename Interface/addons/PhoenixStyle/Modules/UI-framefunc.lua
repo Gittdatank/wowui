@@ -1217,7 +1217,7 @@ if UnitInRaid("player") and sa_delayforwaiting==nil then
 	sa_delayforwaiting=GetTime()+5
 	out ("|cff99ffffPhoenixStyle|r - "..psmain_sawait.."...")
 
-  if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+  if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or select(3,GetInstanceInfo())==18 then
     SendAddonMessage("SAver", "1", "instance_chat")
 	else
 	  SendAddonMessage("SAver", "1", "RAID")
@@ -1532,7 +1532,7 @@ end
 
 function ps_sa_sendinfo (name, txt, blocksec, important, chat)
 local _, instanceType, difficulty, _, maxPlayers, playerDifficulty, isDynamicInstance = GetInstanceInfo()
-if select(3,GetInstanceInfo())==17 then
+if select(3,GetInstanceInfo())==17 or select(3,GetInstanceInfo())==18 then
 else
 --только не для ЛФР
 
@@ -1576,7 +1576,7 @@ end
 function ps_sa_checktargets(time,guid,rechecktime,texttosend,blocksec,important)
 
 local _, instanceType, difficulty, _, maxPlayers, playerDifficulty, isDynamicInstance = GetInstanceInfo()
-if select(3,GetInstanceInfo())==17 then
+if select(3,GetInstanceInfo())==17 or select(3,GetInstanceInfo())==18 then
 else
 --только не для ЛФР
 
@@ -1854,7 +1854,7 @@ if (psdxespamfilter==nil or (psdxespamfilter and GetTime()>psdxespamfilter+30)) 
 --SendAddonMessage("DXE", "^1^SRequestAddOnVersion^^", "RAID")
 local inInstance, instanceType = IsInInstance()
 if instanceType~="pvp" then
-if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or select(3,GetInstanceInfo())==18 then
 SendAddonMessage("DXE","DXEVersionRequest","instance_chat")
 else
 SendAddonMessage("DXE","DXEVersionRequest","RAID")
@@ -3515,7 +3515,7 @@ end
 
 function psdisbantandinvitef()
 --ыытест
-if select(3,GetInstanceInfo())~=17 and (psnotoftenthansec10==nil or (psnotoftenthansec10 and GetTime()>psnotoftenthansec10+10)) then
+if (select(3,GetInstanceInfo())~=17 or select(3,GetInstanceInfo())~=18) and (psnotoftenthansec10==nil or (psnotoftenthansec10 and GetTime()>psnotoftenthansec10+10)) then
 
 
 if (UnitInRaid("player") and (UnitIsGroupAssistant("player") or UnitIsGroupLeader("player"))) or (GetNumGroupMembers()>0 and UnitIsGroupLeader("player") and (UnitInRaid("player")==nil or UnitInRaid("player")==false)) then

@@ -52,7 +52,7 @@ crHideFrames()
 
   --запись зоны
   local mapwidth,mapheight=crGetMapSize()
-  crsaveddata[1].map={GetCurrentMapAreaID(),GetRealZoneText(),mapwidth,mapheight}
+  crsaveddata[1].map={GetCurrentMapAreaID(),GetMapNameByID(GetCurrentMapAreaID()),mapwidth,mapheight}
   
   
   --касты
@@ -74,7 +74,7 @@ crHideFrames()
   
   for i=1,GetNumGroupMembers() do
     local name,_,_,_,_,_,zone = GetRaidRosterInfo(i)
-    if GetRealZoneText()==zone or zone==myzone then
+    if GetMapNameByID(GetCurrentMapAreaID())==zone or zone==myzone then
       --игрок в моей зоне
       local _, class=UnitClass("raid"..i)
       table.insert(crsaveddata[1].players,{name=name, guid=UnitGUID("raid"..i), class=crGetClassCOlorID(class)})

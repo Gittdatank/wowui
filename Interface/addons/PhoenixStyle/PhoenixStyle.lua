@@ -11,7 +11,7 @@ pslocale()
 end
 
 
-	psversion=6.008
+	psversion=6.009
 
 
 	psverstiptext="alpha"
@@ -524,7 +524,7 @@ psrecheckbossmin40=nil
 	else
 		local inInstance, instanceType = IsInInstance()
 		if instanceType=="raid" then
-      if select(3,GetInstanceInfo())==17 then
+      if select(3,GetInstanceInfo())==17 or select(3,GetInstanceInfo())==18 then
         SendAddonMessage("D4", "H\t", "instance_chat")
         SendAddonMessage("BigWigs", "VQ:0", "instance_chat")
         SendAddonMessage("RW2", "^1^SReqVersionInfo^^", "instance_chat")
@@ -716,7 +716,7 @@ if psdelaybossmodchecktemp and curtime>psdelaybossmodchecktemp then
 local inInstance, instanceType = IsInInstance()
 if instanceType=="raid" then
   local chatsen="RAID"
-      if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+      if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or select(3,GetInstanceInfo())==18 then
         chatsen="instance_chat"
       end
 
@@ -834,7 +834,7 @@ psdelayofcheck=nil
 if UnitInRaid("player") then
 local inInstance, instanceType = IsInInstance()
 if instanceType~="pvp" then
-if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) then
+if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) or select(3,GetInstanceInfo())==18 then
   SendAddonMessage("PSaddon", "17"..psversion, "instance_chat")
 else
   SendAddonMessage("PSaddon", "17"..psversion, "raid")
@@ -949,7 +949,7 @@ end
 for i=1,#pslocations do
   for j=1,#pslocations[i] do
     if pslocations[i][j]==GetCurrentMapAreaID() then
-      pslocationnames[i][j]=GetRealZoneText()
+      pslocationnames[i][j]=GetMapNameByID(GetCurrentMapAreaID())
       pscurrentzoneid=j
       pscurrentzoneex=i
     end
@@ -1048,7 +1048,7 @@ psmsgtimestart42=0
 if psmsgmychat42=="instance_chat" then
   SendAddonMessage("PhoenixStyle", "myname:"..psnamemsgsend.."++mychat:"..psmsgmychat42.."++", "instance_chat")
 else
-  if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+  if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or select(3,GetInstanceInfo())==18 then
     SendAddonMessage("PhoenixStyle", "myname:"..psnamemsgsend.."++mychat:"..psmsgmychat42.."++", "instance_chat")
   else
     SendAddonMessage("PhoenixStyle", "myname:"..psnamemsgsend.."++mychat:"..psmsgmychat42.."++", "RAID")
@@ -1061,7 +1061,7 @@ psmsgtimestart43=0
 if psmsgmychat43=="instance_chat" then
   SendAddonMessage("PhoenixStyle", "myname:"..psnamemsgsend.."++mychat:"..psmsgmychat43.."++", "instance_chat")
 else
-  if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+  if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or select(3,GetInstanceInfo())==18 then
     SendAddonMessage("PhoenixStyle", "myname:"..psnamemsgsend.."++mychat:"..psmsgmychat43.."++", "instance_chat")
   else
     SendAddonMessage("PhoenixStyle", "myname:"..psnamemsgsend.."++mychat:"..psmsgmychat43.."++", "RAID")
@@ -1149,7 +1149,7 @@ pssendchatmsg(psmsgmychat,psannouncewait)
 local _, instanceType, pppl, _, maxPlayers, dif = GetInstanceInfo()
 --репорт для РСК аддона инфы после боя НЕ В ЛФР
 if IsAddOnLoaded("RaidSlackCheck") then
-  if select(3,GetInstanceInfo())==17 then
+  if select(3,GetInstanceInfo())==17 or select(3,GetInstanceInfo())==18 then
   else
     if psrscafterfightrep[1]==1 then
       rscrepnortafretcom1(psmsgmychat)
@@ -1583,6 +1583,35 @@ end
 
 	bil2=0
 
+	
+	
+	
+	if IsAddOnLoaded("PhoenixStyleMod_WoD_tier1") then
+
+		--if (id==60585 or id==60586 or id==60583) then
+		--	if psstrazhfdf==nil then
+		--		psstrazhfdf=0
+		--	end
+		--	psstrazhfdf=psstrazhfdf+1
+		--end
+    if psstrazhfdf==nil or (psstrazhfdf and psstrazhfdf==3) then
+      for i=1,#psbossid[3] do
+        for j=1,#psbossid[3][i] do
+          for t=1,#psbossid[3][i][j] do
+            if psbossid[3][i][j][t]==id then
+              bil2=1
+            end
+          end
+        end
+      end
+      if bil2==1 then
+          psiccwipereport_wod1()
+      end
+    end
+	end
+
+	bil2=0
+	
 
 end
 
@@ -2191,13 +2220,13 @@ if arg2=="SPELL_CREATE" and (arg10==49844 or arg10==61031) and pstrackbadsummons
   local a1,a2=IsInInstance()
   if psunitplayertrue and (UnitInRaid("player") or UnitInParty("player")) then
     if a2=="raid" then
-      if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+      if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or select(3,GetInstanceInfo())==18 then
         pszapuskanonsa("instance_chat", "{rt8} PhoenixStyle: "..arg5.." > "..arg11)
       else
         pszapuskanonsa("raid", "{rt8} PhoenixStyle: "..arg5.." > "..arg11)
       end
     else
-      if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+      if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or select(3,GetInstanceInfo())==18 then
         pszapuskanonsa("instance_chat", "{rt8} PhoenixStyle: "..arg5.." > "..arg11)
       end
     end
@@ -3421,6 +3450,10 @@ end
 if select(3,GetInstanceInfo())==17 then
   psiccinst="25, LFR"
 end
+if select(3,GetInstanceInfo())==18 then
+	psiccinst="40"
+	psdifflastfight=40
+end
 if select(3,GetInstanceInfo())==14 then
   psiccinst="FLEX"
 end
@@ -3457,6 +3490,7 @@ if IsAddOnLoaded("PhoenixStyle_Loader_Cata") then psoldcheck1() end
 if IsAddOnLoaded("PhoenixStyleMod_Panda_tier1") then psiccwipereport_p1("wipe", "try", nil, "checkforwipe") end
 if IsAddOnLoaded("PhoenixStyleMod_Panda_tier2") then psiccwipereport_p2("wipe", "try", nil, "checkforwipe") end
 if IsAddOnLoaded("PhoenixStyleMod_Panda_tier3") then psiccwipereport_p3("wipe", "try", nil, "checkforwipe") end
+if IsAddOnLoaded("PhoenixStyleMod_WoD_tier1") then psiccwipereport_wod1("wipe", "try", nil, "checkforwipe") end
 end
 
 
@@ -4008,6 +4042,7 @@ if IsAddOnLoaded("PhoenixStyle_Loader_Cata") then psoldcheck1() end
 if IsAddOnLoaded("PhoenixStyleMod_Panda_tier1") then psiccwipereport_p1("wipe", "try", nil, "checkforwipe") end
 if IsAddOnLoaded("PhoenixStyleMod_Panda_tier2") then psiccwipereport_p2("wipe", "try", nil, "checkforwipe") end
 if IsAddOnLoaded("PhoenixStyleMod_Panda_tier3") then psiccwipereport_p3("wipe", "try", nil, "checkforwipe") end
+if IsAddOnLoaded("PhoenixStyleMod_WoD_tier1") then psiccwipereport_wod1("wipe", "try", nil, "checkforwipe") end
 
 
 
@@ -4444,6 +4479,7 @@ function PSFvkladdon()
 			if IsAddOnLoaded("PhoenixStyleMod_Panda_tier1") then psiccwipereport_p1() end
 			if IsAddOnLoaded("PhoenixStyleMod_Panda_tier2") then psiccwipereport_p2() end
 			if IsAddOnLoaded("PhoenixStyleMod_Panda_tier3") then psiccwipereport_p3() end
+			if IsAddOnLoaded("PhoenixStyleMod_WoD_tier1") then psiccwipereport_wod1() end
 
 		end
 end
@@ -4702,7 +4738,7 @@ local vzxnn= # tabln
 local pstochki=""
 if(vzxnn>0)then
 if maxpers==nil then
-if psdifflastfight==0 or psdifflastfight==25 then
+if psdifflastfight==0 or psdifflastfight==25 or psdifflastfight==40 or psdifflastfight==20 then
 	if norep then
 		maxpers=psraidoptionsnumers[8]
 	else
@@ -5104,7 +5140,7 @@ local psinfoshieldtempdamage=""
 local vzxnn= # psdamagename
 local pstochki=""
 if maxpers==nil then
-if psdifflastfight==0 or psdifflastfight==25 then
+if psdifflastfight==0 or psdifflastfight==25 or psdifflastfight==40 or psdifflastfight==20 then
 	if norep then
 		maxpers=psraidoptionsnumers[8]
 	else
@@ -5177,7 +5213,7 @@ local vzxnn= # psdamagename2
 local psinfoshieldtempdamage=""
 local pstochki=""
 if numrrep==nil then
-if psdifflastfight==0 or psdifflastfight==25 then
+if psdifflastfight==0 or psdifflastfight==25 or psdifflastfight==40 or psdifflastfight==20 then
 	if norep then
 		numrrep=psraidoptionsnumers[8]
 	else
@@ -5243,7 +5279,7 @@ local vzxnn= # psdamagename3
 local psinfoshieldtempdamage=""
 local pstochki=""
 if numrrep==nil then
-if psdifflastfight==0 or psdifflastfight==25 then
+if psdifflastfight==0 or psdifflastfight==25 or psdifflastfight==40 or psdifflastfight==20 then
 	if norep then
 		numrrep=psraidoptionsnumers[8]
 	else
@@ -5301,7 +5337,7 @@ if kudarep and (kudarep=="raid" or kudarep=="raid_warning" or kudarep=="party") 
   kudarep="instance_chat"
 end
 
-if select(3,GetInstanceInfo())==17 and (kudarep~="raid" and kudarep~="sebe" and kudarep~="instance_chat") then
+if (select(3,GetInstanceInfo())==17 or select(3,GetInstanceInfo())==18) and (kudarep~="raid" and kudarep~="sebe" and kudarep~="instance_chat") then
   psstopreportiflfrotherchan=1
 end
 
@@ -5564,7 +5600,7 @@ if nr then
 local inInstance, instanceType = IsInInstance()
 if instanceType~="pvp" then
   if cchat==nil then
-    if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) then
+    if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) or select(3,GetInstanceInfo())==18 then
       SendAddonMessage("PSaddon", "12info", "instance_chat")
     else
       SendAddonMessage("PSaddon", "12info", "raid")
@@ -5727,7 +5763,7 @@ function psmarksoff(where)
 local inInstance, instanceType = IsInInstance()
 if instanceType~="pvp" then
 if where==nil then
-  if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
+  if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or select(3,GetInstanceInfo())==18 then
     SendAddonMessage("PSaddon", "16off", "instance_chat")
   else
     SendAddonMessage("PSaddon", "16off", "raid")
@@ -5780,7 +5816,7 @@ psverschech1=1
 if (UnitInRaid("player")) then
 local inInstance, instanceType = IsInInstance()
 if instanceType~="pvp" then
-  if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) then
+  if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) or IsLFGModeActive(LE_LFG_CATEGORY_SCENARIO) or select(3,GetInstanceInfo())==18 then
     SendAddonMessage("PSaddon", "17"..psversion, "instance_chat")
   else
     SendAddonMessage("PSaddon", "17"..psversion, "raid")
@@ -6979,7 +7015,7 @@ end
 
 function pssendchatmsg(chat,tbl,nick)
 
-if chat and (chat=="raid" or chat=="raid_warning" or chat=="party") and (select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD)) then
+if chat and (chat=="raid" or chat=="raid_warning" or chat=="party") and (select(3,GetInstanceInfo())==17 or select(3,GetInstanceInfo())==18 or IsLFGModeActive(LE_LFG_CATEGORY_LFD)) then
   chat="instance_chat"
 end
 
@@ -7401,6 +7437,59 @@ end
 
 end
 
+
+
+
+
+
+if pssetexpans==3 then
+
+if psmenuchoose1>0 and psmenuchoose1<5 then
+
+  table.wipe(psraidoptionson_wod1[psmenuchoose1])
+  table.wipe(psraidoptionschat_wod1[psmenuchoose1])
+
+  pscmrpassvariables_wod1()
+
+
+  table.wipe(psraidoptionson[pssetexpans][psmenuchoose1])
+  table.wipe(psraidoptionschat[pssetexpans][psmenuchoose1])
+
+  local i=psmenuchoose1
+	if psraidoptionson[pssetexpans][i]==nil then psraidoptionson[pssetexpans][i]={}
+	end
+	for j=1,#psraidoptionson_wod1[i] do
+		if psraidoptionson[pssetexpans][i][j]==nil then
+			psraidoptionson[pssetexpans][i][j]={}
+		end
+		for t=1,#psraidoptionson_wod1[i][j] do
+			if psraidoptionson[pssetexpans][i][j][t]==nil then
+				psraidoptionson[pssetexpans][i][j][t]=psraidoptionsonp1[i][j][t]
+			end
+		end
+	end
+
+
+
+	if psraidoptionschat[pssetexpans][i]==nil then psraidoptionschat[pssetexpans][i]={}
+	end
+	for j=1,#psraidoptionschat_wod1[i] do
+		if psraidoptionschat[pssetexpans][i][j]==nil then
+			psraidoptionschat[pssetexpans][i][j]={}
+		end
+		for t=1,#psraidoptionschat_wod1[i][j] do
+			if psraidoptionschat[pssetexpans][i][j][t]==nil then
+				psraidoptionschat[pssetexpans][i][j][t]=psraidoptionschatp1[i][j][t]
+			end
+		end
+	end
+
+
+
+end
+-- Другие инсты ВоД тут
+
+end
 
 --ыытест другие инсты тут
 
@@ -8468,7 +8557,7 @@ if (guid.find(guid,"Creature") or guid.find(guid,"Pet-") or guid.find(guid,"Game
 	--Creature-0-3061-1136-29274-71979-00003EDC2C
 	local t1,_,_,_,_,id,g = guid:match("([^,]+)-([^,]+)-([^,]+)-([^,]+)-([^,]+)-([^,]+)-([^,]+)")
 	if id and tonumber(id) ~= nil then
-		return id
+		return tonumber(id)
 	else
 		return 0
 	end

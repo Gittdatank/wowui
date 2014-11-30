@@ -2,33 +2,35 @@
 AUCTIONATOR_SAVEDVARS = {
 	["_50000"] = 500,
 	["_2000"] = 100,
+	["_10000"] = 200,
+	["_500"] = 5,
+	["_1000000"] = 2500,
 	["_200000"] = 1000,
 	["STARTING_DISCOUNT"] = 5,
-	["_1000000"] = 2500,
-	["_5000000"] = 10000,
 	["LOG_DE_DATA_X"] = true,
-	["_500"] = 5,
-	["_10000"] = 200,
+	["_5000000"] = 10000,
 }
 AUCTIONATOR_PRICING_HISTORY = {
 }
 AUCTIONATOR_SHOPPING_LISTS = {
 	{
 		["items"] = {
-			"Signet of the Traitor General", -- [1]
-			"Gorenscale Mesh cloak", -- [2]
-			"Helmet of Vile Indignation", -- [3]
-			"Draenic Dust", -- [4]
-			"Gorget of Primal Might", -- [5]
-			"Blackrock Bulwark", -- [6]
-			"Gorenscale Meshcloak", -- [7]
-			"Battle Hardened Gorget", -- [8]
-			"Botani-Barbed Pauldrons", -- [9]
-			"Ashelia's Adorned Waistguard", -- [10]
-			"Doomslag Greatboots", -- [11]
-			"Bracers of Visceral Force", -- [12]
-			"Gauntlets of the Heavy Hand", -- [13]
-			"Blackrock", -- [14]
+			"Truesteel Helm", -- [1]
+			"Truesteel Breastplate", -- [2]
+			"Signet of the Traitor General", -- [3]
+			"Gorenscale Mesh cloak", -- [4]
+			"Helmet of Vile Indignation", -- [5]
+			"Draenic Dust", -- [6]
+			"Gorget of Primal Might", -- [7]
+			"Blackrock Bulwark", -- [8]
+			"Gorenscale Meshcloak", -- [9]
+			"Battle Hardened Gorget", -- [10]
+			"Botani-Barbed Pauldrons", -- [11]
+			"Ashelia's Adorned Waistguard", -- [12]
+			"Doomslag Greatboots", -- [13]
+			"Bracers of Visceral Force", -- [14]
+			"Gauntlets of the Heavy Hand", -- [15]
+			"Blackrock", -- [16]
 		},
 		["isRecents"] = 1,
 		["name"] = "Recent Searches",
@@ -76,12 +78,26 @@ AUCTIONATOR_PRICE_DATABASE = {
 			["H1466"] = 1450000000,
 			["cc"] = 2,
 		},
-		["Helmet of Vile Indignation"] = {
-			["mr"] = 990000000,
-			["sc"] = 5,
-			["id"] = "118896",
-			["H1466"] = 990000000,
+		["Truesteel Breastplate of the Deft"] = {
+			["mr"] = 210000000,
 			["cc"] = 2,
+			["id"] = "114232",
+			["H1475"] = 210000000,
+			["sc"] = 5,
+		},
+		["Ashelia's Adorned Waistguard"] = {
+			["mr"] = 1200000000,
+			["cc"] = 2,
+			["id"] = "118888",
+			["sc"] = 5,
+			["H1465"] = 1200000000,
+		},
+		["Blackrock Bulwark"] = {
+			["mr"] = 1199999999,
+			["cc"] = 2,
+			["id"] = "118874",
+			["sc"] = 7,
+			["H1465"] = 1199999999,
 		},
 		["Botani-Barbed Pauldrons"] = {
 			["mr"] = 2250000000,
@@ -118,19 +134,19 @@ AUCTIONATOR_PRICE_DATABASE = {
 			["id"] = "109992",
 			["cc"] = 6,
 		},
-		["Ashelia's Adorned Waistguard"] = {
-			["mr"] = 1200000000,
-			["cc"] = 2,
-			["id"] = "118888",
+		["Helmet of Vile Indignation"] = {
+			["mr"] = 990000000,
 			["sc"] = 5,
-			["H1465"] = 1200000000,
-		},
-		["Blackrock Bulwark"] = {
-			["mr"] = 1199999999,
+			["id"] = "118896",
+			["H1466"] = 990000000,
 			["cc"] = 2,
-			["id"] = "118874",
-			["sc"] = 7,
-			["H1465"] = 1199999999,
+		},
+		["Truesteel Helm of the Aurora"] = {
+			["mr"] = 219779999,
+			["cc"] = 2,
+			["id"] = "114230",
+			["H1475"] = 219779999,
+			["sc"] = 5,
 		},
 	},
 }
