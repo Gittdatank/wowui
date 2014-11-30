@@ -18,18 +18,18 @@ SkadaDB = {
 		["Ezyn - Azuremyst"] = "Default",
 		["Git - Arthas"] = "Git - Mar 2014",
 		["Worgit - Moon Guard"] = "Default",
-		["Got - Arthas"] = "Default",
+		["Got - Arthas"] = "Got - Dec 2014",
 		["Gitt - Cho'gall"] = "Default",
 		["Giit - Cho'gall"] = "Default",
 		["Raweo - Azuremyst"] = "Default",
-		["Git - Azuremyst"] = "Default",
+		["Git - Cho'gall"] = "Default",
 		["Gitt - Arthas"] = "Gitt - Tank",
 		["Spih - Cho'gall"] = "Default",
-		["Burk - Arthas"] = "Default",
+		["Git - Azuremyst"] = "Default",
 		["Evn - Azuremyst"] = "Default",
 		["Burk - Azuremyst"] = "Default",
 		["Greny - Azuremyst"] = "Default",
-		["Git - Cho'gall"] = "Default",
+		["Burk - Arthas"] = "Default",
 		["Giitt - Feathermoon"] = "Default",
 		["Lihte - Cho'gall"] = "Lihte-DPS",
 		["Gimm - Cho'gall"] = "Default",
@@ -60,6 +60,44 @@ SkadaDB = {
 			},
 			["reset"] = {
 				["instance"] = 3,
+			},
+		},
+		["Got - Dec 2014"] = {
+			["windows"] = {
+				{
+					["barheight"] = 11,
+					["barslocked"] = true,
+					["y"] = 0,
+					["barfont"] = "DorisPP",
+					["title"] = {
+						["font"] = "DorisPP",
+						["fontsize"] = 9,
+						["height"] = 14,
+						["texture"] = "Flat",
+					},
+					["mode"] = "Healing",
+					["barwidth"] = 267.657745361328,
+					["point"] = "BOTTOM",
+					["barfontsize"] = 7,
+					["background"] = {
+						["height"] = 258.045837402344,
+					},
+					["bartexture"] = "Minimalist",
+					["x"] = 402.417297363281,
+				}, -- [1]
+			},
+			["icon"] = {
+				["hide"] = true,
+			},
+			["report"] = {
+				["number"] = 7,
+				["channel"] = "party",
+				["target"] = "Aprilseventh",
+				["mode"] = "Damage taken by spell",
+			},
+			["tooltiprows"] = 10,
+			["reset"] = {
+				["join"] = 2,
 			},
 		},
 		["Gitt - Tank"] = {
@@ -118,11 +156,11 @@ SkadaDB = {
 					["barfont"] = "DorisPP",
 					["barslocked"] = true,
 					["x"] = 402.417297363281,
-					["point"] = "BOTTOM",
 					["background"] = {
 						["height"] = 258.045837402344,
 					},
 					["mode"] = "Healing",
+					["point"] = "BOTTOM",
 					["title"] = {
 						["height"] = 14,
 						["font"] = "DorisPP",
@@ -139,25 +177,31 @@ SkadaDB = {
 			},
 		},
 		["Default"] = {
+			["report"] = {
+				["number"] = 3,
+				["target"] = "Aprilseventh",
+				["channel"] = "guild",
+			},
+			["tooltiprows"] = 10,
 			["windows"] = {
 				{
 					["barheight"] = 11,
+					["bartexture"] = "Minimalist",
+					["barwidth"] = 197.90754699707,
+					["barfontsize"] = 7,
 					["y"] = 36.0227661132813,
 					["barfont"] = "DorisPP",
 					["title"] = {
+						["height"] = 14,
 						["font"] = "DorisPP",
 						["fontsize"] = 9,
-						["height"] = 14,
 						["texture"] = "Flat",
 					},
-					["mode"] = "Damage",
-					["barwidth"] = 197.90754699707,
 					["point"] = "LEFT",
-					["barfontsize"] = 7,
+					["mode"] = "Damage",
 					["background"] = {
 						["height"] = 111.045631408691,
 					},
-					["bartexture"] = "Minimalist",
 					["x"] = 4.58843469619751,
 				}, -- [1]
 				{
@@ -243,12 +287,6 @@ SkadaDB = {
 			["icon"] = {
 				["hide"] = true,
 			},
-			["report"] = {
-				["number"] = 3,
-				["channel"] = "guild",
-				["target"] = "Aprilseventh",
-			},
-			["tooltiprows"] = 10,
 			["reset"] = {
 				["join"] = 2,
 			},

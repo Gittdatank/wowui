@@ -6,8 +6,8 @@ SRTISaved = {
 	["double"] = true,
 	["ctrl"] = true,
 	["hovertime"] = 0.2,
-	["shift"] = false,
 	["doublehover"] = false,
+	["shift"] = false,
 	["speed"] = 0.25,
 	["singlehover"] = false,
 }
@@ -17,5 +17,11 @@ SRTIExternalUF = {
 		"SUFUnittargettarget", -- [2]
 		"SUFUnitfocus", -- [3]
 		"SUFUnitfocustarget", -- [4]
+	},
+	["pitbull4"] = {
+		"PitBull4_Frames_target", -- [1]
+		"PitBull4_Frames_targettarget", -- [2]
+		"PitBull4_Frames_focus", -- [3]
+		"PitBull4_Frames_focustarget", -- [4]
 	},
 }

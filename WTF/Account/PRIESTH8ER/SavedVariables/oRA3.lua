@@ -37,6 +37,9 @@ oRA3DB = {
 				["Default"] = {
 					["relayReady"] = true,
 				},
+				["Got - Dec 2014"] = {
+					["relayReady"] = true,
+				},
 				["Gitt - Monk"] = {
 					["relayReady"] = true,
 				},
@@ -67,6 +70,16 @@ oRA3DB = {
 					["raid"] = {
 						["threshold"] = 3,
 						["master"] = "Shv",
+					},
+				},
+				["Got - Dec 2014"] = {
+					["enable"] = true,
+					["party"] = {
+						["method"] = "personalloot",
+					},
+					["raid"] = {
+						["threshold"] = 3,
+						["master"] = "Tydeson",
 					},
 				},
 				["Gilt"] = {
@@ -181,6 +194,21 @@ oRA3DB = {
 				},
 				["Default"] = {
 					["showDisplay"] = false,
+					["spells"] = {
+						[740] = true,
+						[73325] = true,
+						[47788] = true,
+						[33206] = true,
+						[77761] = false,
+						[97462] = true,
+						[2825] = true,
+						[98008] = true,
+					},
+					["neverShowMine"] = true,
+					["lockDisplay"] = true,
+				},
+				["Got - Dec 2014"] = {
+					["showDisplay"] = false,
 					["lockDisplay"] = true,
 					["spells"] = {
 						[98008] = true,
@@ -193,6 +221,7 @@ oRA3DB = {
 						[73325] = true,
 					},
 					["neverShowMine"] = true,
+					["onlyShowMine"] = true,
 				},
 				["Gilt"] = {
 					["lockDisplay"] = true,
@@ -258,7 +287,7 @@ oRA3DB = {
 		["Gilt - Azuremyst"] = "Gilt",
 		["Ezyn - Azuremyst"] = "Default",
 		["Worgit - Moon Guard"] = "Default",
-		["Got - Arthas"] = "Default",
+		["Got - Arthas"] = "Got - Dec 2014",
 		["Gitt - Cho'gall"] = "WARRIOR",
 		["Gimm - Cho'gall"] = "Default",
 		["Gitt - Arthas"] = "Gitt - Monk",
@@ -310,13 +339,37 @@ oRA3DB = {
 			["lastSelectedList"] = 1,
 		},
 		["Default"] = {
-			["lastSelectedList"] = 1,
+			["lastSelectedPanel"] = "Checks",
 			["positions"] = {
 				["oRA3ReadyCheck"] = {
 					["Height"] = 211,
 					["Width"] = 319.999938964844,
 					["PosY"] = 309.045344654798,
 					["PosX"] = 155.680475035895,
+				},
+				["oRA3CooldownFrame"] = {
+					["Height"] = 354.030700683594,
+					["Width"] = 210.338500976563,
+					["PosY"] = 390.340147525218,
+					["PosX"] = 1066.35942929001,
+				},
+			},
+			["lastSelectedList"] = 1,
+		},
+		["Got - Dec 2014"] = {
+			["lastSelectedList"] = 1,
+			["positions"] = {
+				["oRA3ReadyCheck"] = {
+					["Height"] = 297,
+					["Width"] = 319.999938964844,
+					["PosY"] = 420.405337362827,
+					["PosX"] = 222.880484988855,
+				},
+				["oRA3BattleResMonitor"] = {
+					["Height"] = 29.9999122619629,
+					["PosX"] = 579.201276116342,
+					["PosY"] = 735.840061677693,
+					["Width"] = 139.999984741211,
 				},
 				["oRA3CooldownFrame"] = {
 					["Height"] = 354.030700683594,

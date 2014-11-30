@@ -3,46 +3,28 @@ GUPPET_SAVEDDATA = {
 	["MultiGround"] = {
 		["Total"] = 0,
 	},
-	["Multi"] = {
-		["TotalWeight"] = {
-			["BattleGrounds"] = 0,
-			["Global World"] = 0,
-			["Arenas"] = 0,
-			["Cities"] = 0,
-			["Instances"] = 0,
-		},
+	["Unknown"] = {
 		["Total"] = 0,
 	},
 	["Aquatic"] = {
 		["TotalWeight"] = {
 			["BattleGrounds"] = 0,
-			["Global World"] = 0,
+			["Instances"] = 0,
+			["Shrine of Two Moons"] = 0,
 			["Arenas"] = 0,
 			["Cities"] = 0,
-			["Instances"] = 0,
+			["Global World"] = 0,
 		},
 		["Total"] = 0,
 	},
 	["Fly"] = {
 		["TotalWeight"] = {
 			["BattleGrounds"] = 0,
-			["Global World"] = 0,
+			["Instances"] = 0,
+			["Shrine of Two Moons"] = 0,
 			["Arenas"] = 0,
 			["Cities"] = 0,
-			["Instances"] = 0,
-		},
-		["Total"] = 0,
-	},
-	["Unknown"] = {
-		["Total"] = 0,
-	},
-	["Ground"] = {
-		["TotalWeight"] = {
-			["BattleGrounds"] = 0,
 			["Global World"] = 0,
-			["Arenas"] = 0,
-			["Cities"] = 0,
-			["Instances"] = 0,
 		},
 		["Total"] = 0,
 	},
@@ -53,10 +35,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Iron Starlette",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [1]
 		{
@@ -65,10 +48,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Molten Corgi",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [2]
 		{
@@ -77,10 +61,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Baby Blizzard Bear",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [3]
 		{
@@ -89,10 +74,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Blue Mini Jouster",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [4]
 		{
@@ -101,10 +87,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Brilliant Spore",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [5]
 		{
@@ -113,10 +100,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Cobra Hatchling",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [6]
 		{
@@ -125,10 +113,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Cockatiel",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [7]
 		{
@@ -137,10 +126,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Cockatiel",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [8]
 		{
@@ -149,10 +139,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Core Hound Pup",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [9]
 		{
@@ -161,10 +152,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Dandelion Frolicker",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [10]
 		{
@@ -173,10 +165,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Durotar Scorpion",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [11]
 		{
@@ -185,10 +178,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Elwynn Lamb",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [12]
 		{
@@ -197,10 +191,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Filthling",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [13]
 		{
@@ -209,10 +204,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Fishy",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [14]
 		{
@@ -221,10 +217,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Fossilized Hatchling",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [15]
 		{
@@ -233,10 +230,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Giant Bone Spider",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [16]
 		{
@@ -245,10 +243,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Giant Sewer Rat",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [17]
 		{
@@ -257,10 +256,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Green Wing Macaw",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [18]
 		{
@@ -269,10 +269,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Grommloc",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [19]
 		{
@@ -281,10 +282,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Gulp Froglet",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [20]
 		{
@@ -293,10 +295,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Ikky",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [21]
 		{
@@ -305,10 +308,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Imperial Silkworm",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [22]
 		{
@@ -317,10 +321,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Imperial Silkworm",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [23]
 		{
@@ -329,10 +334,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Kovok",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [24]
 		{
@@ -341,10 +347,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Lil' K.T.",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [25]
 		{
@@ -353,10 +360,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Lil' Tarecgosa",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [26]
 		{
@@ -365,10 +373,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Meadowstomper Calf",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [27]
 		{
@@ -377,10 +386,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Miniwing",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [28]
 		{
@@ -389,10 +399,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Miniwing",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [29]
 		{
@@ -401,10 +412,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Mr. Chilly",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [30]
 		{
@@ -413,10 +425,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Mr. Grubbs",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [31]
 		{
@@ -425,10 +438,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Mr. Wiggles",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [32]
 		{
@@ -437,10 +451,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Netherspawn, Spawn of Netherspawn",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [33]
 		{
@@ -449,10 +464,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Onyxian Whelpling",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [34]
 		{
@@ -461,10 +477,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Pandaren Monk",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [35]
 		{
@@ -473,10 +490,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Pengu",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [36]
 		{
@@ -485,10 +503,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Perky Pug",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [37]
 		{
@@ -497,10 +516,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Proto-Drake Whelp",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [38]
 		{
@@ -509,10 +529,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Senegal",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [39]
 		{
@@ -521,10 +542,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Sinister Squashling",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [40]
 		{
@@ -533,10 +555,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Smolderweb Hatchling",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [41]
 		{
@@ -545,10 +568,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Smolderweb Hatchling",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [42]
 		{
@@ -557,10 +581,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Strand Crawler",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [43]
 		{
@@ -569,10 +594,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Teroclaw Hatchling",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [44]
 		{
@@ -581,10 +607,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Tickbird Hatchling",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [45]
 		{
@@ -593,10 +620,11 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "White Tickbird Hatchling",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [46]
 		{
@@ -605,28 +633,53 @@ GUPPET_SAVEDDATA = {
 			["Name"] = "Worg Pup",
 			["Weight"] = {
 				["BattleGrounds"] = 0,
-				["Global World"] = 1,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
 				["Arenas"] = 0,
 				["Cities"] = 0,
-				["Instances"] = 0,
+				["Global World"] = 1,
 			},
 		}, -- [47]
 		["TotalWeight"] = {
 			["BattleGrounds"] = 0,
-			["Global World"] = 47,
+			["Instances"] = 0,
+			["Shrine of Two Moons"] = 0,
 			["Arenas"] = 0,
 			["Cities"] = 0,
-			["Instances"] = 0,
+			["Global World"] = 47,
 		},
 		["Total"] = 47,
+	},
+	["Ground"] = {
+		["TotalWeight"] = {
+			["BattleGrounds"] = 0,
+			["Instances"] = 0,
+			["Shrine of Two Moons"] = 0,
+			["Arenas"] = 0,
+			["Cities"] = 0,
+			["Global World"] = 0,
+		},
+		["Total"] = 0,
+	},
+	["Multi"] = {
+		["TotalWeight"] = {
+			["BattleGrounds"] = 0,
+			["Instances"] = 0,
+			["Shrine of Two Moons"] = 0,
+			["Arenas"] = 0,
+			["Cities"] = 0,
+			["Global World"] = 0,
+		},
+		["Total"] = 0,
 	},
 }
 GUPPET_SAVEDLOCATIONS = {
 	["BattleGrounds"] = 40,
-	["Instances"] = 20,
+	["Global World"] = 0,
+	["Shrine of Two Moons"] = 1,
 	["Arenas"] = 30,
 	["Cities"] = 10,
-	["Global World"] = 0,
+	["Instances"] = 20,
 }
 GUPPET_OPTIONS = {
 	["Debug"] = false,
@@ -637,25 +690,43 @@ GUPPET_OPTIONS = {
 	},
 	["IngameButton"] = {
 		["MountButton"] = "Auto",
-		["xOffset"] = 47.4999809265137,
+		["xOffset"] = 0,
 		["Icons"] = {
 			["Fly"] = "Interface\\Icons\\Ability_Mount_Drake_Bronze.blp",
 			["Companion"] = "Interface\\Icons\\INV_Box_PetCarrier_01.blp",
 			["Ground"] = "Interface\\Icons\\Ability_Mount_Mammoth_Black.blp",
 			["Auto"] = "Interface\\Icons\\Ability_Mount_Drake_Azure.blp",
 		},
-		["yOffset"] = -82.2500534057617,
+		["yOffset"] = 0,
 		["Show"] = true,
 		["Alignment"] = "H",
-		["RelativePoint"] = "TOPLEFT",
-		["CompanionButton"] = true,
-		["Lock"] = false,
+		["RelativePoint"] = "CENTER",
+		["CompanionButton"] = false,
+		["Lock"] = true,
 		["Scale"] = 1,
 	},
 	["NewVersion"] = 0,
 	["PreviewFrameSpeed"] = 1,
-	["AutoDismount"] = false,
-	["Mode"] = "Expert_",
+	["AutoDismount"] = true,
+	["AutoCompanion"] = {
+		["Enabled"] = false,
+		["PetOfTheDay"] = {
+			["Enabled"] = false,
+			["Day"] = 0,
+			["Month"] = 0,
+			["PetId"] = "BattlePet-0-000003332FEA",
+			["Year"] = 0,
+		},
+		["Outside"] = true,
+		["BattleGround"] = true,
+		["Party"] = true,
+		["City"] = true,
+		["DismissMounted"] = false,
+		["Resummon"] = 0,
+		["Arena"] = true,
+		["Delay"] = 2,
+		["Raid"] = true,
+	},
 	["MinimapButton"] = {
 		["Show"] = false,
 		["Radius"] = 78,
@@ -665,23 +736,5 @@ GUPPET_OPTIONS = {
 		["Lock"] = true,
 		["yOffset"] = 0,
 	},
-	["AutoCompanion"] = {
-		["Enabled"] = false,
-		["PetOfTheDay"] = {
-			["Enabled"] = false,
-			["Day"] = 0,
-			["Month"] = 0,
-			["PetId"] = 0,
-			["Year"] = 0,
-		},
-		["Outside"] = true,
-		["BattleGround"] = true,
-		["Party"] = true,
-		["City"] = true,
-		["DismissMounted"] = false,
-		["Resummon"] = 0,
-		["Raid"] = true,
-		["Delay"] = 2,
-		["Arena"] = true,
-	},
+	["Mode"] = "Expert_",
 }

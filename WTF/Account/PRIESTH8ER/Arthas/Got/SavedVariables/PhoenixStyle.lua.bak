@@ -20,9 +20,13 @@ pssetmarknew = {
 	{
 	}, -- [8]
 }
-psversionday = 0
-psautoinvraiddiffsave = {
-	1, -- [1]
-	1, -- [2]
+psfnopromrep = false
+PS_Settings = {
+	["PSMinimapPos"] = -16,
 }
-pstimerafterrelog = nil
+psminibutenabl = true
+psfchatadd = {
+}
+psoldvern = 0
+psversionday = 0
+psaddoninstalledsins = "14/11/2010"

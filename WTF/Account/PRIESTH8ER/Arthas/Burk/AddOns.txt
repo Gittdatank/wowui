@@ -55,3 +55,4 @@ BigWigs_WrathOfTheLichKing: enabled
 BigWigs_Ra-denAssist: disabled
 CombatTime: enabled
 GridUnitMenu: enabled
+TidyPlates_ThreatPlates: disabled

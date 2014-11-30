@@ -1,4 +1,4 @@
 
 MSBTProfiles_SavedVarsPerChar = {
-	["currentProfileName"] = "Default",
+	["currentProfileName"] = "Got - Dec 2014",
 }

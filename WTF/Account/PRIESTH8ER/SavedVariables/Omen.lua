@@ -11,7 +11,7 @@ Omen3DB = {
 		["Gilt - Azuremyst"] = "Gilt - Azuremyst",
 		["Ezyn - Azuremyst"] = "Ezyn - Azuremyst",
 		["Worgit - Moon Guard"] = "Worgit - Moon Guard",
-		["Got - Arthas"] = "Got - Arthas",
+		["Got - Arthas"] = "Got - Dec 2014",
 		["Gitt - Cho'gall"] = "Gitt - Cho'gall",
 		["Giit - Cho'gall"] = "Giit - tank",
 		["Gitt - Arthas"] = "Gitt - Tank",
@@ -34,6 +34,49 @@ Omen3DB = {
 			["PositionX"] = 392.249908447266,
 			["PositionH"] = 81.9999847412109,
 		},
+		["Got - Dec 2014"] = {
+			["PositionW"] = 242.045654296875,
+			["Shown"] = false,
+			["PositionH"] = 161.350051879883,
+			["VGrip2"] = 139.176333652014,
+			["PositionY"] = 162.100158691406,
+			["ClickThrough"] = true,
+			["Locked"] = true,
+			["Background"] = {
+				["EdgeSize"] = 10,
+				["BorderTexture"] = "RothSquare",
+				["Color"] = {
+					["a"] = 0.540000021457672,
+					["b"] = 0,
+					["g"] = 0,
+					["r"] = 0,
+				},
+				["Texture"] = "Solid",
+			},
+			["MinimapIcon"] = {
+				["hide"] = true,
+			},
+			["ShowWith"] = {
+				["HideWhenOOC"] = true,
+			},
+			["FrameStrata"] = "4-HIGH",
+			["VGrip1"] = 102.869464003663,
+			["PositionX"] = 459.849731445313,
+			["Warnings"] = {
+				["Flash"] = false,
+			},
+			["TitleBar"] = {
+				["ShowTitleBar"] = false,
+			},
+			["Bar"] = {
+				["FontSize"] = 8,
+				["ShowHeadings"] = false,
+				["Texture"] = "Minimalist",
+				["Font"] = "DorisPP",
+				["TPSWindow"] = 15,
+				["Height"] = 22,
+			},
+		},
 		["Gyit - Area 52"] = {
 			["PositionX"] = 832.73084436121,
 			["PositionY"] = 665.769275726923,
@@ -46,9 +89,7 @@ Omen3DB = {
 				["hide"] = true,
 			},
 			["PositionW"] = 242.045654296875,
-			["TitleBar"] = {
-				["ShowTitleBar"] = false,
-			},
+			["PositionX"] = 459.849731445313,
 			["Shown"] = false,
 			["Warnings"] = {
 				["Flash"] = false,
@@ -57,7 +98,9 @@ Omen3DB = {
 			["PositionH"] = 161.350051879883,
 			["VGrip2"] = 139.176333652014,
 			["PositionY"] = 162.100158691406,
-			["PositionX"] = 459.849731445313,
+			["TitleBar"] = {
+				["ShowTitleBar"] = false,
+			},
 			["ClickThrough"] = true,
 			["Locked"] = true,
 			["Background"] = {
@@ -194,13 +237,8 @@ Omen3DB = {
 				["UseMyBarColor"] = false,
 				["ShowValue"] = true,
 				["UseClassColors"] = true,
-				["FadeBarColor"] = {
-					["a"] = 1,
-					["r"] = 0.5,
-					["g"] = 0.5,
-					["b"] = 0.5,
-				},
 				["Spacing"] = 0,
+				["FontOutline"] = "",
 				["MyBarColor"] = {
 					["a"] = 1,
 					["r"] = 1,
@@ -208,12 +246,7 @@ Omen3DB = {
 					["b"] = 0,
 				},
 				["ShowAggroBar"] = true,
-				["PetBarColor"] = {
-					["a"] = 1,
-					["r"] = 0.77,
-					["g"] = 0,
-					["b"] = 1,
-				},
+				["AlwaysShowSelf"] = true,
 				["Texture"] = "Blizzard",
 				["HeadingBGColor"] = {
 					["a"] = 0,
@@ -261,9 +294,19 @@ Omen3DB = {
 				["TPSWindow"] = 10,
 				["UseTankBarColor"] = false,
 				["Height"] = 12,
+				["PetBarColor"] = {
+					["a"] = 1,
+					["r"] = 0.77,
+					["g"] = 0,
+					["b"] = 1,
+				},
+				["FadeBarColor"] = {
+					["a"] = 1,
+					["r"] = 0.5,
+					["g"] = 0.5,
+					["b"] = 0.5,
+				},
 				["UseCustomClassColors"] = true,
-				["FontOutline"] = "",
-				["AlwaysShowSelf"] = true,
 			},
 		},
 		["Giit - Azuremyst"] = {
@@ -418,8 +461,13 @@ Omen3DB = {
 				["UseMyBarColor"] = false,
 				["ShowValue"] = true,
 				["UseClassColors"] = true,
-				["Spacing"] = 0,
 				["FontOutline"] = "",
+				["FadeBarColor"] = {
+					["a"] = 1,
+					["r"] = 0.5,
+					["g"] = 0.5,
+					["b"] = 0.5,
+				},
 				["MyBarColor"] = {
 					["a"] = 1,
 					["r"] = 1,
@@ -427,7 +475,7 @@ Omen3DB = {
 					["b"] = 0,
 				},
 				["ShowAggroBar"] = true,
-				["AlwaysShowSelf"] = true,
+				["UseCustomClassColors"] = true,
 				["Texture"] = "Blizzard",
 				["HeadingBGColor"] = {
 					["a"] = 0,
@@ -475,19 +523,14 @@ Omen3DB = {
 				["TPSWindow"] = 10,
 				["InvertColors"] = false,
 				["Height"] = 12,
+				["AlwaysShowSelf"] = true,
+				["Spacing"] = 0,
 				["PetBarColor"] = {
 					["a"] = 1,
 					["r"] = 0.77,
 					["g"] = 0,
 					["b"] = 1,
 				},
-				["FadeBarColor"] = {
-					["a"] = 1,
-					["r"] = 0.5,
-					["g"] = 0.5,
-					["b"] = 0.5,
-				},
-				["UseCustomClassColors"] = true,
 			},
 		},
 		["Cowbeary - Azuremyst"] = {

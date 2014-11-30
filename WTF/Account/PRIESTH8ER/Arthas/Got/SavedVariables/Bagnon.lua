@@ -1,9 +1,16 @@
 
 BagnonFrameSettings = {
+	["version"] = "6.0.14",
 	["frames"] = {
 		["inventory"] = {
-			["y"] = 149.999984741211,
+			["reverseSlotOrder"] = true,
+			["y"] = 148.499938964844,
+			["x"] = -459.000122070313,
+		},
+		["bank"] = {
+			["y"] = 189.500030517578,
+			["x"] = 451.000122070313,
+			["point"] = "BOTTOMLEFT",
 		},
 	},
-	["version"] = "6.0.16",
 }

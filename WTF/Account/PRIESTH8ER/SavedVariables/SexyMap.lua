@@ -476,16 +476,22 @@ SexyMap2DB = {
 			["TEMP2"] = true,
 			["allowDragging"] = true,
 			["visibilitySettings"] = {
-				["MinimapZoomIn"] = "never",
+				["MinimapZoomOut"] = "never",
 				["MinimapZoneTextButton"] = "always",
 				["TimeManagerClockButton"] = "always",
 				["QueueStatusMinimapButton"] = "always",
 				["GarrisonLandingPageMinimapButton"] = "always",
 				["MiniMapMailFrame"] = "always",
-				["MinimapZoomOut"] = "never",
+				["MinimapZoomIn"] = "never",
 				["MiniMapWorldMapButton"] = "never",
 			},
 			["dragPositions"] = {
+				["RA_MinimapButton"] = -34.2629666957166,
+				["LibDBIcon10_LoggerHead"] = -7.56349070823751,
+				["LibDBIcon10_AskMrRobot"] = -19.337597034767,
+				["LibDBIcon10_hagakure_cooldowns"] = 225.444597263165,
+				["LibDBIcon10_Paste"] = -30.4576747713552,
+				["QueueStatusMinimapButton"] = 186.098374418264,
 			},
 			["TEMP"] = true,
 			["controlVisibility"] = true,
@@ -509,6 +515,7 @@ SexyMap2DB = {
 				["g"] = 0,
 				["r"] = 0,
 			},
+			["font"] = "DorisPP",
 			["fontColor"] = {
 			},
 			["borderColor"] = {
@@ -527,6 +534,7 @@ SexyMap2DB = {
 				["g"] = 0,
 				["r"] = 0,
 			},
+			["font"] = "DorisPP",
 			["fontColor"] = {
 			},
 			["borderColor"] = {
@@ -541,67 +549,62 @@ SexyMap2DB = {
 		["borders"] = {
 			["applyPreset"] = false,
 			["borders"] = {
-				{
-					["name"] = "Rune 1",
-					["r"] = 0.309803921568628,
-					["scale"] = 1.4,
-					["rotSpeed"] = -30,
-					["g"] = 0.47843137254902,
-					["texture"] = "SPELLS\\AURARUNE256.BLP",
-				}, -- [1]
-				{
-					["a"] = 0.379999995231628,
-					["rotSpeed"] = 60,
-					["r"] = 0.196078431372549,
-					["scale"] = 2.1,
-					["name"] = "Rune 2",
-					["g"] = 0.290196078431373,
-					["texture"] = "SPELLS\\AuraRune_A.blp",
-				}, -- [2]
-				{
-					["a"] = 0.3,
-					["name"] = "Fade",
-					["r"] = 0,
-					["scale"] = 1.6,
-					["g"] = 0.223529411764706,
-					["texture"] = "SPELLS\\T_VFX_HERO_CIRCLE.BLP",
-				}, -- [3]
 			},
 			["backdrop"] = {
-				["show"] = false,
+				["show"] = true,
 				["textureColor"] = {
+					["a"] = 1,
+					["b"] = 0,
+					["g"] = 0,
+					["r"] = 0,
 				},
 				["settings"] = {
 					["bgFile"] = "Interface\\Tooltips\\UI-Tooltip-Background",
 					["edgeFile"] = "Interface\\Tooltips\\UI-Tooltip-Border",
 					["tile"] = false,
-					["edgeSize"] = 16,
+					["edgeSize"] = 18,
 					["insets"] = {
-						["top"] = 4,
-						["right"] = 4,
-						["left"] = 4,
-						["bottom"] = 4,
+						["top"] = 1,
+						["right"] = 1,
+						["left"] = 1,
+						["bottom"] = 1,
 					},
 				},
 				["borderColor"] = {
+					["a"] = 1,
+					["b"] = 0,
+					["g"] = 0,
+					["r"] = 0,
 				},
-				["scale"] = 1,
+				["scale"] = 1.1,
 			},
 			["hideBlizzard"] = true,
 		},
 		["core"] = {
 			["clamp"] = true,
-			["lock"] = false,
-			["northTag"] = true,
-			["shape"] = "Interface\\AddOns\\SexyMap\\shapes\\circle.tga",
+			["point"] = "TOPRIGHT",
+			["relpoint"] = "TOPRIGHT",
 			["autoZoom"] = 5,
+			["northTag"] = true,
+			["y"] = -37.4999885559082,
+			["x"] = -14.999888420105,
+			["lock"] = false,
+			["shape"] = "Interface\\BUTTONS\\WHITE8X8",
 			["rightClickToConfig"] = true,
 		},
 		["movers"] = {
 			["enabled"] = false,
 			["framePositions"] = {
+				["DurabilityFrame"] = {
+					["y"] = 847.200012207031,
+					["x"] = 926.74951171875,
+				},
+				["VehicleSeatIndicator"] = {
+					["y"] = 1145.2001953125,
+					["x"] = 1584.74963378906,
+				},
 			},
-			["lock"] = false,
+			["lock"] = true,
 		},
 	},
 	["Burk-Arthas"] = {

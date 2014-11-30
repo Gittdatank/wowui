@@ -1,7 +1,7 @@
 
-thisaddononoff = true
+thisaddononoff = false
 thisaddonwork = true
-secrefmark = 1
+secrefmark = 2
 pssetmarknew = {
 	{
 	}, -- [1]
@@ -14,15 +14,16 @@ pssetmarknew = {
 	{
 	}, -- [5]
 	{
+		"Git", -- [1]
 	}, -- [6]
 	{
 	}, -- [7]
 	{
 	}, -- [8]
 }
-psversionday = 0
+psversionday = 13
 psautoinvraiddiffsave = {
-	1, -- [1]
-	1, -- [2]
+	4, -- [1]
+	4, -- [2]
 }
 pstimerafterrelog = nil

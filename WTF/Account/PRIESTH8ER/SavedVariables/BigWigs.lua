@@ -9,11 +9,11 @@ BigWigs3DB = {
 				["Default"] = {
 					["Vengeful Strikes"] = 0,
 					["Calamity"] = 515,
-					["Gouge"] = 1539,
 					[-7958] = 0,
+					["Clash"] = 0,
 					["Noxious Poison"] = 0,
 					["Corrupted Brew"] = 0,
-					["Clash"] = 0,
+					["Gouge"] = 1539,
 				},
 			},
 		},
@@ -53,10 +53,18 @@ BigWigs3DB = {
 				["Default"] = {
 					["posx"] = 319.999973316193,
 					["fontSize"] = 10,
-					["lock"] = true,
-					["posy"] = 234.560268194669,
 					["fontOutline"] = "",
 					["font"] = "DorisPP",
+					["lock"] = true,
+					["posy"] = 234.560268194669,
+				},
+				["Got - Dec 2014"] = {
+					["posx"] = 319.999973316193,
+					["fontSize"] = 10,
+					["fontOutline"] = "",
+					["lock"] = true,
+					["font"] = "DorisPP",
+					["posy"] = 234.560268194669,
 				},
 			},
 		},
@@ -121,6 +129,21 @@ BigWigs3DB = {
 					},
 				},
 				["Default"] = {
+					["Long"] = {
+					},
+					["Warning"] = {
+					},
+					["Info"] = {
+					},
+					["media"] = {
+						["Victory"] = "Cheer",
+					},
+					["Alarm"] = {
+					},
+					["Alert"] = {
+					},
+				},
+				["Got - Dec 2014"] = {
 					["Long"] = {
 					},
 					["Warning"] = {
@@ -227,10 +250,10 @@ BigWigs3DB = {
 		["BigWigs_Bosses_Durumu the Forgotten"] = {
 			["profiles"] = {
 				["Default"] = {
-					["Lingering Gaze"] = 707,
 					["custom_off_ray_controllers"] = true,
-					[-6889] = 515,
 					[-6891] = 643,
+					[-6889] = 515,
+					["Lingering Gaze"] = 707,
 				},
 			},
 		},
@@ -266,30 +289,20 @@ BigWigs3DB = {
 					["icon"] = 6,
 					["secondIcon"] = 5,
 				},
+				["Got - Dec 2014"] = {
+					["icon"] = 6,
+					["secondIcon"] = 5,
+				},
 			},
 		},
-		["BigWigs_Plugins_Proximity"] = {
+		["BigWigs_Bosses_Lei Shen"] = {
 			["profiles"] = {
-				["Gitt - Monk"] = {
-					["posx"] = 763.200139191147,
-					["fontSize"] = 20,
-					["lock"] = true,
-					["font"] = "DorisPP",
-					["posy"] = 254.88034586548,
-				},
-				["Git - Mar 2014"] = {
-					["posx"] = 763.200139191147,
-					["fontSize"] = 20,
-					["lock"] = true,
-					["posy"] = 254.88034586548,
-					["font"] = "DorisPP",
-				},
 				["Default"] = {
-					["posx"] = 763.200139191147,
-					["fontSize"] = 20,
-					["lock"] = true,
-					["font"] = "DorisPP",
-					["posy"] = 254.88034586548,
+					["Helm of Command"] = 130,
+					["Diffusion Chain"] = 579,
+					["stuns"] = 515,
+					["Summon Ball Lightning"] = 579,
+					["custom_off_diffused_marker"] = true,
 				},
 			},
 		},
@@ -327,20 +340,53 @@ BigWigs3DB = {
 					["emphasizeGrowup"] = true,
 					["BigWigsAnchor_x"] = 2.2400571703898,
 					["texture"] = "Minimalist",
-					["font"] = "DorisPP",
 					["BigWigsEmphasizeAnchor_width"] = 259.499786376953,
+					["font"] = "DorisPP",
+					["fill"] = true,
+				},
+				["Got - Dec 2014"] = {
+					["BigWigsEmphasizeAnchor_y"] = 256.716341918193,
+					["BigWigsAnchor_width"] = 254.749862670898,
+					["BigWigsAnchor_y"] = 212.319428848041,
+					["BigWigsEmphasizeAnchor_x"] = 254.126752132324,
+					["emphasizeGrowup"] = true,
+					["BigWigsAnchor_x"] = 2.2400571703898,
+					["texture"] = "Minimalist",
+					["BigWigsEmphasizeAnchor_width"] = 259.499786376953,
+					["font"] = "DorisPP",
 					["fill"] = true,
 				},
 			},
 		},
-		["BigWigs_Bosses_Lei Shen"] = {
+		["BigWigs_Plugins_Proximity"] = {
 			["profiles"] = {
+				["Gitt - Monk"] = {
+					["posx"] = 763.200139191147,
+					["fontSize"] = 20,
+					["lock"] = true,
+					["font"] = "DorisPP",
+					["posy"] = 254.88034586548,
+				},
+				["Git - Mar 2014"] = {
+					["posx"] = 763.200139191147,
+					["fontSize"] = 20,
+					["lock"] = true,
+					["posy"] = 254.88034586548,
+					["font"] = "DorisPP",
+				},
 				["Default"] = {
-					["Helm of Command"] = 130,
-					["Diffusion Chain"] = 579,
-					["stuns"] = 515,
-					["Summon Ball Lightning"] = 579,
-					["custom_off_diffused_marker"] = true,
+					["posx"] = 763.200139191147,
+					["fontSize"] = 20,
+					["lock"] = true,
+					["font"] = "DorisPP",
+					["posy"] = 254.88034586548,
+				},
+				["Got - Dec 2014"] = {
+					["posx"] = 763.200139191147,
+					["fontSize"] = 20,
+					["lock"] = true,
+					["font"] = "DorisPP",
+					["posy"] = 254.88034586548,
 				},
 			},
 		},
@@ -358,8 +404,13 @@ BigWigs3DB = {
 				},
 				["Default"] = {
 					["outline"] = "OUTLINE",
-					["font"] = "DorisPP",
 					["fontSize"] = 30,
+					["font"] = "DorisPP",
+				},
+				["Got - Dec 2014"] = {
+					["outline"] = "OUTLINE",
+					["fontSize"] = 30,
+					["font"] = "DorisPP",
 				},
 			},
 		},
@@ -429,7 +480,7 @@ BigWigs3DB = {
 				},
 				["Default"] = {
 					["outline"] = "OUTLINE",
-					["fontSize"] = 20,
+					["BWEmphasizeMessageAnchor_x"] = 536.686550504121,
 					["BWEmphasizeCountdownMessageAnchor_x"] = 589.806197754304,
 					["BWMessageAnchor_x"] = 536.480144258734,
 					["chat"] = true,
@@ -437,7 +488,19 @@ BigWigs3DB = {
 					["font"] = "DorisPP",
 					["BWEmphasizeMessageAnchor_y"] = 561.836198379482,
 					["BWMessageAnchor_y"] = 579.040065182446,
+					["fontSize"] = 20,
+				},
+				["Got - Dec 2014"] = {
+					["outline"] = "OUTLINE",
 					["BWEmphasizeMessageAnchor_x"] = 536.686550504121,
+					["BWEmphasizeCountdownMessageAnchor_x"] = 589.806197754304,
+					["BWMessageAnchor_x"] = 536.480144258734,
+					["chat"] = true,
+					["BWEmphasizeCountdownMessageAnchor_y"] = 534.956394292793,
+					["font"] = "DorisPP",
+					["BWEmphasizeMessageAnchor_y"] = 561.836198379482,
+					["BWMessageAnchor_y"] = 579.040065182446,
+					["fontSize"] = 20,
 				},
 			},
 		},
@@ -459,10 +522,10 @@ BigWigs3DB = {
 					["Pain Suppression"] = 0,
 					["Skull Banner"] = 0,
 					["Fortifying Brew"] = 0,
-					["Vampiric Blood"] = 0,
+					["Hand of Sacrifice"] = 0,
 					["Power Word: Barrier"] = 0,
 					["Stormlash Totem"] = 0,
-					["Innervate"] = 0,
+					["Vampiric Blood"] = 0,
 					["Ironbark"] = 0,
 					["Icebound Fortitude"] = 0,
 					["Guardian Spirit"] = 0,
@@ -481,7 +544,7 @@ BigWigs3DB = {
 					["Divine Protection"] = 0,
 					["Vigilance"] = 0,
 					["Survival Instincts"] = 0,
-					["Hand of Sacrifice"] = 0,
+					["Innervate"] = 0,
 					["Ardent Defender"] = 0,
 					["Guardian of Ancient Kings"] = 0,
 				},
@@ -506,6 +569,7 @@ BigWigs3DB = {
 		},
 	},
 	["profileKeys"] = {
+		["Got - Arthas"] = "Got - Dec 2014",
 		["Gitt - Cho'gall"] = "Default",
 		["Git - Cho'gall"] = "Default",
 		["Spih - Cho'gall"] = "Default",
@@ -521,6 +585,9 @@ BigWigs3DB = {
 			["flash"] = false,
 		},
 		["Default"] = {
+			["flash"] = false,
+		},
+		["Got - Dec 2014"] = {
 			["flash"] = false,
 		},
 	},

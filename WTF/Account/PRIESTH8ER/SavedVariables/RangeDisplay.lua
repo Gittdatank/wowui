@@ -28,7 +28,7 @@ RangeDisplayDB3 = {
 		["Gilt - Azuremyst"] = "Default",
 		["Ezyn - Azuremyst"] = "Default",
 		["Worgit - Moon Guard"] = "Default",
-		["Got - Arthas"] = "Default",
+		["Got - Arthas"] = "Got - Dec 2014",
 		["Gitt - Cho'gall"] = "Gitt Tank",
 		["Giit - Cho'gall"] = "Giit tank",
 		["Spih - Arthas"] = "Spih - Disc",
@@ -81,6 +81,38 @@ RangeDisplayDB3 = {
 				["arena5"] = {
 				},
 				["pet"] = {
+				},
+				["arena4"] = {
+				},
+			},
+		},
+		["Got - Dec 2014"] = {
+			["locked"] = true,
+			["mute"] = true,
+			["units"] = {
+				["pet"] = {
+				},
+				["playertarget"] = {
+					["fontSize"] = 10,
+					["x"] = -6.747709267074240e-005,
+					["y"] = -123.895774841309,
+					["font"] = "DorisPP",
+				},
+				["focus"] = {
+					["enabled"] = false,
+				},
+				["arena2"] = {
+				},
+				["mouseover"] = {
+					["mouseAnchor"] = false,
+					["y"] = -277.784861528928,
+					["font"] = "SCT Emblem",
+					["point"] = "RIGHT",
+					["relPoint"] = "RIGHT",
+					["enabled"] = false,
+					["x"] = -65.9838804260981,
+				},
+				["arena5"] = {
 				},
 				["arena4"] = {
 				},
@@ -258,32 +290,32 @@ RangeDisplayDB3 = {
 			["mute"] = true,
 			["locked"] = true,
 			["units"] = {
-				["pet"] = {
+				["arena2"] = {
 				},
 				["playertarget"] = {
+					["y"] = 259.354043223715,
 					["fontSize"] = 30,
 					["point"] = "BOTTOM",
-					["x"] = -0.000132877970980906,
 					["fontOutline"] = "OUTLINE",
-					["y"] = 259.354043223715,
 					["font"] = "DorisPP",
 					["relPoint"] = "BOTTOM",
+					["x"] = -0.000132877970980906,
 				},
 				["focus"] = {
 					["enabled"] = false,
 				},
-				["arena2"] = {
+				["arena5"] = {
 				},
 				["mouseover"] = {
-					["mouseAnchor"] = false,
 					["y"] = -277.784861528928,
-					["x"] = -65.9838804260981,
-					["point"] = "RIGHT",
 					["font"] = "SCT Emblem",
+					["point"] = "RIGHT",
+					["mouseAnchor"] = false,
+					["x"] = -65.9838804260981,
 					["enabled"] = false,
 					["relPoint"] = "RIGHT",
 				},
-				["arena5"] = {
+				["pet"] = {
 				},
 				["arena4"] = {
 				},
@@ -376,12 +408,12 @@ RangeDisplayDB3 = {
 				},
 				["mouseover"] = {
 					["y"] = -277.784861528928,
-					["font"] = "SCT Emblem",
+					["relPoint"] = "RIGHT",
 					["point"] = "RIGHT",
 					["mouseAnchor"] = false,
-					["relPoint"] = "RIGHT",
-					["enabled"] = false,
 					["x"] = -65.9838804260981,
+					["enabled"] = false,
+					["font"] = "SCT Emblem",
 				},
 				["arena4"] = {
 				},

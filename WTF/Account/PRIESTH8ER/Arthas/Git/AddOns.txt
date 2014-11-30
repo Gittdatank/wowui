@@ -260,7 +260,7 @@ TidyPlates: enabled
 TidyPlates_Grey: enabled
 TidyPlates_Neon: enabled
 TidyPlates_CleanPlates: disabled
-TidyPlates_ThreatPlates: enabled
+TidyPlates_ThreatPlates: disabled
 TimeToDie: enabled
 TipTac: enabled
 TipTacItemRef: enabled

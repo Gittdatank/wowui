@@ -1,10 +1,12 @@
 
 TidyPlatesOptions = {
-	["EnemyAutomation"] = "No Automation",
-	["CompatibilityMode"] = false,
 	["FriendlyAutomation"] = "No Automation",
+	["EnemyAutomation"] = "No Automation",
+	["primary"] = "Quatre/|cFF3782D1Tank",
+	["EnableCastWatcher"] = 1,
+	["_EnableMiniButton"] = false,
 	["DisableSoftTransitions"] = false,
-	["primary"] = "Neon/|cFFFF4400Damage",
+	["CompatibilityMode"] = false,
 	["WelcomeShown"] = true,
 	["secondary"] = "Blizzard",
 }

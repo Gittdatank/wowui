@@ -40,7 +40,7 @@ EPGP_DB = {
 				["Lusting on Trash"] = {
 					["snapshot"] = {
 						["guild_info"] = "@DECAY_P:10\n@EXTRAS_P:100\n@MIN_EP:100\n@BASE_GP:2000",
-						["time"] = 1417360080,
+						["time"] = 1417363320,
 						["roster_info"] = {
 							{
 								"Totemebanana", -- [1]

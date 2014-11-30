@@ -17,10 +17,9 @@ RKDatabase = {
 	},
 	["profiles"] = {
 		["Default"] = {
-			["diffShown"] = 6,
 			["firstLoad"] = false,
-			["prevDiffShown"] = 6,
 			["warlordsUpdate"] = true,
+			["diffShown"] = 6,
 			["recordTimes"] = {
 				["Mogu'shan Vaults"] = {
 					["Gara'jal the Spiritbinder"] = {
@@ -91,6 +90,14 @@ RKDatabase = {
 						[5] = 528,
 						[14] = 440,
 					},
+					["Garrosh Hellscream"] = {
+						[6] = 699,
+						[7] = 558,
+						[15] = 295,
+						[3] = 558,
+						[4] = 295,
+						[14] = 314,
+					},
 					["Iron Juggernaut"] = {
 						[6] = 211,
 						[7] = 250,
@@ -99,14 +106,6 @@ RKDatabase = {
 						[4] = 257,
 						[5] = 345,
 						[14] = 199,
-					},
-					["Siegecrafter Blackfuse"] = {
-						[6] = 335,
-						[7] = 277,
-						[15] = 196,
-						[3] = 200,
-						[4] = 196,
-						[14] = 151,
 					},
 					["Sha of Pride"] = {
 						[6] = 240,
@@ -126,14 +125,6 @@ RKDatabase = {
 						[5] = 286,
 						[14] = 164,
 					},
-					["Paragons of the Klaxxi"] = {
-						[6] = 608,
-						[7] = 426,
-						[15] = 324,
-						[3] = 427,
-						[4] = 324,
-						[14] = 309,
-					},
 					["Thok the Bloodthirsty"] = {
 						[6] = 339,
 						[7] = 401,
@@ -141,6 +132,15 @@ RKDatabase = {
 						[3] = 410,
 						[4] = 271,
 						[14] = 178,
+					},
+					["Kor'kron Dark Shaman"] = {
+						[6] = 295,
+						[7] = 152,
+						[15] = 233,
+						[3] = 233,
+						[4] = 252,
+						[5] = 427,
+						[14] = 152,
 					},
 					["Malkorok"] = {
 						[6] = 218,
@@ -177,22 +177,21 @@ RKDatabase = {
 						[4] = 333,
 						[14] = 330,
 					},
-					["Kor'kron Dark Shaman"] = {
-						[6] = 295,
-						[7] = 152,
-						[15] = 233,
-						[3] = 233,
-						[4] = 252,
-						[5] = 427,
-						[14] = 152,
+					["Paragons of the Klaxxi"] = {
+						[6] = 608,
+						[7] = 426,
+						[15] = 324,
+						[3] = 427,
+						[4] = 324,
+						[14] = 309,
 					},
-					["Garrosh Hellscream"] = {
-						[6] = 699,
-						[7] = 558,
-						[15] = 295,
-						[3] = 558,
-						[4] = 295,
-						[14] = 314,
+					["Siegecrafter Blackfuse"] = {
+						[6] = 335,
+						[7] = 277,
+						[15] = 196,
+						[3] = 200,
+						[4] = 196,
+						[14] = 151,
 					},
 					["The Fallen Protectors"] = {
 						[6] = 268,
@@ -266,6 +265,7 @@ RKDatabase = {
 					},
 				},
 			},
+			["prevDiffShown"] = 6,
 		},
 	},
 }

@@ -60,3 +60,4 @@ BigWigs_Highmaul: enabled
 BigWigs_WrathOfTheLichKing: enabled
 CombatTime: enabled
 GridUnitMenu: enabled
+TidyPlates_ThreatPlates: disabled
