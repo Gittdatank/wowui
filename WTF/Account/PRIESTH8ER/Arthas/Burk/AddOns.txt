@@ -26,7 +26,7 @@ BigWigs: enabled
 VEM-Core: disabled
 RaidAchievement: enabled
 MarketWatcher: disabled
-HandyNotes: disabled
+HandyNotes: enabled
 TheUndermineJournalGE: disabled
 DerpEP: enabled
 Bartender4: enabled
@@ -56,3 +56,4 @@ BigWigs_Ra-denAssist: disabled
 CombatTime: enabled
 GridUnitMenu: enabled
 TidyPlates_ThreatPlates: disabled
+HandyNotes_DraenorTreasures: enabled

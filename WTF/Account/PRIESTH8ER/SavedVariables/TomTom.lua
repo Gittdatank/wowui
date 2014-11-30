@@ -5,13 +5,13 @@ TomTomDB = {
 		["Gitt - Cho'gall"] = "Default",
 		["Gitt - Arthas"] = "Default",
 		["Evyyn - Azuremyst"] = "Default",
-		["Spih - Arthas"] = "Default",
-		["Burk - Arthas"] = "Default",
+		["Git - Arthas"] = "Default",
 		["Git - Cho'gall"] = "Default",
+		["Greny - Azuremyst"] = "Default",
 		["Spih - Cho'gall"] = "Default",
 		["Got - Arthas"] = "Default",
-		["Greny - Azuremyst"] = "Default",
-		["Git - Arthas"] = "Default",
+		["Burk - Arthas"] = "Default",
+		["Spih - Arthas"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -25,13 +25,13 @@ TomTomWaypointsMF = {
 		["Gitt - Cho'gall"] = "Gitt - Cho'gall",
 		["Gitt - Arthas"] = "Gitt - Arthas",
 		["Evyyn - Azuremyst"] = "Evyyn - Azuremyst",
-		["Spih - Arthas"] = "Spih - Arthas",
-		["Burk - Arthas"] = "Burk - Arthas",
+		["Git - Arthas"] = "Git - Arthas",
 		["Git - Cho'gall"] = "Git - Cho'gall",
+		["Greny - Azuremyst"] = "Greny - Azuremyst",
 		["Spih - Cho'gall"] = "Spih - Cho'gall",
 		["Got - Arthas"] = "Got - Arthas",
-		["Greny - Azuremyst"] = "Greny - Azuremyst",
-		["Git - Arthas"] = "Git - Arthas",
+		["Burk - Arthas"] = "Burk - Arthas",
+		["Spih - Arthas"] = "Spih - Arthas",
 	},
 	["profiles"] = {
 		["Dbyx - Arthas"] = {
@@ -40,25 +40,25 @@ TomTomWaypointsMF = {
 		},
 		["Gitt - Arthas"] = {
 			[951] = {
-				["951:0:497000000:222000000:Archiereus of Flame (Sanctuary)"] = {
+				["951:0:476000000:873000000:Zesqua"] = {
 					951, -- [1]
 					0, -- [2]
-					0.497, -- [3]
-					0.222, -- [4]
+					0.476, -- [3]
+					0.873, -- [4]
 					["arrivaldistance"] = 15,
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["minimap"] = {
-						},
 						["world"] = {
+						},
+						["minimap"] = {
 						},
 					},
 					["persistent"] = true,
-					["desc"] = "Archiereus of Flame (Sanctuary)",
+					["desc"] = "Zesqua",
 					["silent"] = true,
 					["cleardistance"] = 10,
-					["title"] = "Archiereus of Flame (Sanctuary)",
+					["title"] = "Zesqua",
 					["crazy"] = true,
 					["minimap"] = true,
 					["world"] = true,
@@ -72,9 +72,9 @@ TomTomWaypointsMF = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["minimap"] = {
-						},
 						["world"] = {
+						},
+						["minimap"] = {
 						},
 					},
 					["persistent"] = true,
@@ -86,25 +86,25 @@ TomTomWaypointsMF = {
 					["minimap"] = true,
 					["world"] = true,
 				},
-				["951:0:476000000:873000000:Zesqua"] = {
+				["951:0:497000000:222000000:Archiereus of Flame (Sanctuary)"] = {
 					951, -- [1]
 					0, -- [2]
-					0.476, -- [3]
-					0.873, -- [4]
+					0.497, -- [3]
+					0.222, -- [4]
 					["arrivaldistance"] = 15,
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["minimap"] = {
-						},
 						["world"] = {
+						},
+						["minimap"] = {
 						},
 					},
 					["persistent"] = true,
-					["desc"] = "Zesqua",
+					["desc"] = "Archiereus of Flame (Sanctuary)",
 					["silent"] = true,
 					["cleardistance"] = 10,
-					["title"] = "Zesqua",
+					["title"] = "Archiereus of Flame (Sanctuary)",
 					["crazy"] = true,
 					["minimap"] = true,
 					["world"] = true,
@@ -118,9 +118,9 @@ TomTomWaypointsMF = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["minimap"] = {
-						},
 						["world"] = {
+						},
+						["minimap"] = {
 						},
 					},
 					["persistent"] = true,
@@ -136,9 +136,7 @@ TomTomWaypointsMF = {
 		},
 		["Evyyn - Azuremyst"] = {
 		},
-		["Spih - Arthas"] = {
-		},
-		["Burk - Arthas"] = {
+		["Git - Arthas"] = {
 		},
 		["Git - Cho'gall"] = {
 			[951] = {
@@ -151,9 +149,9 @@ TomTomWaypointsMF = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["world"] = {
-						},
 						["minimap"] = {
+						},
+						["world"] = {
 						},
 					},
 					["persistent"] = true,
@@ -174,9 +172,9 @@ TomTomWaypointsMF = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["world"] = {
-						},
 						["minimap"] = {
+						},
+						["world"] = {
 						},
 					},
 					["persistent"] = true,
@@ -197,9 +195,9 @@ TomTomWaypointsMF = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["world"] = {
-						},
 						["minimap"] = {
+						},
+						["world"] = {
 						},
 					},
 					["persistent"] = true,
@@ -220,9 +218,9 @@ TomTomWaypointsMF = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["world"] = {
-						},
 						["minimap"] = {
+						},
+						["world"] = {
 						},
 					},
 					["persistent"] = true,
@@ -243,9 +241,9 @@ TomTomWaypointsMF = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["world"] = {
-						},
 						["minimap"] = {
+						},
+						["world"] = {
 						},
 					},
 					["persistent"] = true,
@@ -266,9 +264,9 @@ TomTomWaypointsMF = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["world"] = {
-						},
 						["minimap"] = {
+						},
+						["world"] = {
 						},
 					},
 					["persistent"] = true,
@@ -289,9 +287,9 @@ TomTomWaypointsMF = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["world"] = {
-						},
 						["minimap"] = {
+						},
+						["world"] = {
 						},
 					},
 					["persistent"] = true,
@@ -312,9 +310,9 @@ TomTomWaypointsMF = {
 					["callbacks"] = {
 						["distance"] = {
 						},
-						["world"] = {
-						},
 						["minimap"] = {
+						},
+						["world"] = {
 						},
 					},
 					["persistent"] = true,
@@ -328,13 +326,15 @@ TomTomWaypointsMF = {
 				},
 			},
 		},
+		["Greny - Azuremyst"] = {
+		},
 		["Spih - Cho'gall"] = {
 		},
 		["Got - Arthas"] = {
 		},
-		["Greny - Azuremyst"] = {
+		["Burk - Arthas"] = {
 		},
-		["Git - Arthas"] = {
+		["Spih - Arthas"] = {
 		},
 	},
 }

@@ -4,10 +4,10 @@
 
 LootMaster          = LibStub("AceAddon-3.0"):NewAddon("EPGPLootMaster", "AceConsole-3.0", "AceComm-3.0", "AceEvent-3.0", "AceTimer-3.0", "AceHook-3.0")
 
-local version 	    = "0.6.53"
-local dVersion 	    = "2014-10-17T09:48:08Z"
-local iVersion	    = 3
-local iVersionML	  = 11
+local version 	    = "0.6.55"
+local dVersion 	    = "2014-11-30T11:36:03Z"
+local iVersion	    = 4
+local iVersionML	  = 12
 local _G            = _G
 
 local debug         = false
@@ -531,72 +531,9 @@ function LootMaster:SlashHandler( input )
         local ml = LootMasterML;
         if not ml then return self:Print(L["Master Looter Module not enabled"]) end;
 
-        --local itemName, item, _, _, _, _, _, _, _, _ = GetItemInfo("item:868:0:0:0:0:0:0:0")
-		local itemName, item, _, _, _, _, _, _, _, _ = GetItemInfo("item:105868:0:0:0:0:0:0:0") -- druid token
-
-        if item then
-            local itemID = ml.AddLoot( ml, item, true, 1 )
-            ml.lootTable[itemID].announced = false;
-            ml.AddCandidate( ml, itemID, LootMaster.UnitName('player') )
-			if LootMaster.UnitName('party1') then ml.AddCandidate( ml, itemID, LootMaster.UnitName('party1') ) end
-            if LootMaster.UnitName('party2') then ml.AddCandidate( ml, itemID, LootMaster.UnitName('party2') ) end
-            if LootMaster.UnitName('party3') then ml.AddCandidate( ml, itemID, LootMaster.UnitName('party3') ) end
-            if LootMaster.UnitName('party4') then ml.AddCandidate( ml, itemID, LootMaster.UnitName('party4') ) end
-			--ml.SetCandidateResponse(ml, itemID, LootMaster.UnitName('player'), self.RESPONSE.NEED)
-			--for i = 1, 25 do
-			--	ml.AddCandidate( ml, itemID, 'Unit' .. i )
-			--end
-
-			--[[
-			local num = GetNumGuildMembers(false)
-            local count = 0
-            for i=1, num do
-                if count>14 then break end
-                local name, _, _, _, _, _, _, _, online = GetGuildRosterInfo(i)
-				local ep, gp, alt, minEP = LootMasterML:GetEPGP(name)
-                if gp~=nil and online and gp>0 then
-					count = count + 1
-                    ml.AddCandidate( ml, itemID, name )
-					ml.SetCandidateResponse(ml, itemID, name, self.RESPONSE.NEED)
-					--ml.SetCandidateData(ml, itemID, name, 'bid', ceil(math.random()*15)*10)
-					--ml.SetCandidateData(ml, itemID, name, 'votes', floor(math.random()*2))
-				elseif ep == nil then
-					self:Print(name .. " is EPGP nil")
-                end
-            end
-			]]
-
-            ml.SendCandidateListToMonitors(ml, itemID)
-            ml.ReloadMLTableForLoot(ml, item )
-			--ml.AnnounceLoot(ml, itemID)
-        end
-
-        --[[for i = 1, 6 do
-           item = GetInventoryItemLink("player",i);
-           if item then
-            local itemID = ml.AddLoot( ml, item, true )
-            ml.lootTable[itemID].announced = false;
-            ml.AddCandidate( ml, itemID, LootMaster.UnitName('player') )
-            if LootMaster.UnitName('party1') then ml.AddCandidate( ml, itemID, LootMaster.UnitName('party1') ) end
-            if LootMaster.UnitName('party2') then ml.AddCandidate( ml, itemID, LootMaster.UnitName('party2') ) end
-            if LootMaster.UnitName('party3') then ml.AddCandidate( ml, itemID, LootMaster.UnitName('party3') ) end
-            if LootMaster.UnitName('party4') then ml.AddCandidate( ml, itemID, LootMaster.UnitName('party4') ) end
-            local num = GetNumGuildMembers(false);
-            local count = 0;
-            for i=1, num do
-                if count>100 then break end;
-                count = count + 1
-                local name, _, _, _, _, _, _, _, online = GetGuildRosterInfo(i);
-                if online then
-                    ml.AddCandidate( ml, itemID, name )
-                end
-            end
-            ml.SendCandidateListToMonitors(ml, itemID)
-            ml.ReloadMLTableForLoot(ml, item )
-           end
-        end
-        ]]--
-
+        self:AddDebugLoot("item:868:0:0:0:0:0:0:0") -- Default debugging item
+        self:AddDebugLoot("\124cffa335ee\124Hitem:113984:0:0:0:0:0:0:0:null:0:0:1:567\124h[Blackiron Micro Crucible]\124h\124r") -- Heroic item
+        self:AddDebugLoot("\124cffa335ee\124Hitem:113984:0:0:0:0:0:0:0:null:0:0:1:0\124h[Blackiron Micro Crucible]\124h\124r") -- Normal item
         --self:Print('disabled')
 
 	else
@@ -604,6 +541,47 @@ function LootMaster:SlashHandler( input )
 		self:Print( format('%s loaded.', version) .. L.usage )
 
 	end
+end
+
+function LootMaster:AddDebugLoot(link)
+    local itemName, item, _, _, _, _, _, _, _, _ = GetItemInfo(link) -- Heroic item
+
+    if item then
+        local itemID = LootMasterML:AddLoot(item, true, 1 )
+        LootMasterML.lootTable[itemID].announced = false;
+        LootMasterML:AddCandidate(itemID, LootMaster.UnitName('player') )
+        if LootMaster.UnitName('party1') then LootMasterML:AddCandidate( itemID, LootMaster.UnitName('party1') ) end
+        if LootMaster.UnitName('party2') then LootMasterML:AddCandidate( itemID, LootMaster.UnitName('party2') ) end
+        if LootMaster.UnitName('party3') then LootMasterML:AddCandidate( itemID, LootMaster.UnitName('party3') ) end
+        if LootMaster.UnitName('party4') then LootMasterML:AddCandidate( itemID, LootMaster.UnitName('party4') ) end
+        --ml.SetCandidateResponse(ml, itemID, LootMaster.UnitName('player'), self.RESPONSE.NEED)
+        --for i = 1, 25 do
+        --  ml.AddCandidate( ml, itemID, 'Unit' .. i )
+        --end
+
+        --[[
+        local num = GetNumGuildMembers(false)
+        local count = 0
+        for i=1, num do
+            if count>14 then break end
+            local name, _, _, _, _, _, _, _, online = GetGuildRosterInfo(i)
+            local ep, gp, alt, minEP = LootMasterML:GetEPGP(name)
+            if gp~=nil and online and gp>0 then
+                count = count + 1
+                ml.AddCandidate( ml, itemID, name )
+                ml.SetCandidateResponse(ml, itemID, name, self.RESPONSE.NEED)
+                --ml.SetCandidateData(ml, itemID, name, 'bid', ceil(math.random()*15)*10)
+                --ml.SetCandidateData(ml, itemID, name, 'votes', floor(math.random()*2))
+            elseif ep == nil then
+                self:Print(name .. " is EPGP nil")
+            end
+        end
+        ]]
+
+        LootMasterML:SendCandidateListToMonitors(itemID)
+        LootMasterML:ReloadMLTableForLoot(itemID)
+        --ml.AnnounceLoot(ml, itemID)
+    end
 end
 
 function LootMaster:ColorHexToRGB(color)

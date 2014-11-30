@@ -1,0 +1,26 @@
+------------------------------------------------------------------------
+r98 | nevcairiel | 2014-10-19 09:49:23 +0000 (Sun, 19 Oct 2014) | 1 line
+Changed paths:
+   A /tags/v1.8 (from /trunk:97)
+
+Tagging as v1.8
+------------------------------------------------------------------------
+r97 | nevcairiel | 2014-10-19 09:48:12 +0000 (Sun, 19 Oct 2014) | 1 line
+Changed paths:
+   M /trunk/GatherMate_Sharing.lua
+
+Fix with latest GatherMate2
+------------------------------------------------------------------------
+r96 | nevcairiel | 2014-10-14 20:09:09 +0000 (Tue, 14 Oct 2014) | 1 line
+Changed paths:
+   M /trunk/GatherMate_Sharing.toc
+
+Update TOC
+------------------------------------------------------------------------
+r95 | kagaro | 2012-10-03 20:56:03 +0000 (Wed, 03 Oct 2012) | 1 line
+Changed paths:
+   M /trunk/GatherMate_Sharing.lua
+   M /trunk/GatherMate_Sharing.toc
+
+adjusted some toc values
+------------------------------------------------------------------------

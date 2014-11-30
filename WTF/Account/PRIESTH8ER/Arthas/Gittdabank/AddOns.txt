@@ -338,7 +338,7 @@ MarketWatcher: disabled
 BigWigs_BlackrockFoundry: enabled
 BigWigs_Draenor: enabled
 BigWigs_Highmaul: enabled
-HandyNotes_DraenorTreasures: disabled
+HandyNotes_DraenorTreasures: enabled
 HandyNotes_Guild: disabled
 RaidRoll: disabled
 RaidRoll_LootTracker: disabled
@@ -358,7 +358,7 @@ VEM-Sound-Default: disabled
 VEM-WorldEvents: disabled
 VEM-SiegeOfOrgrimmar: disabled
 autoturnin: disabled
-HandyNotes: disabled
+HandyNotes: enabled
 TheUndermineJournalGE: disabled
 ArkInventory: enabled
 ArkInventoryConfig: disabled

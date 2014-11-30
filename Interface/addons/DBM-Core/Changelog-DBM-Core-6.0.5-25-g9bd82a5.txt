@@ -1,4 +1,6 @@
 subversion:
+	- nbluewiz via svn r11897: # disable Dark Communion countdown temporarily.
+	- nbluewiz via svn r11896: # fix little bug.
 	- Omega via svn r11895: Fix some spam
 	- Omega via svn r11894: Add a GTFO for bramble too
 	- Omega via svn r11893: Fix slash warning (wrong spellid) Add Noxious warning/timer Fix missing event on Xeritac Remove a bad interrupt warning that is never right thing to do.

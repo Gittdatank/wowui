@@ -14,15 +14,15 @@ LoggerHeadDB = {
 		["Gitt - Cho'gall"] = "Default",
 		["Gimm - Cho'gall"] = "Default",
 		["Gitt - Arthas"] = "Default",
-		["Spih - Arthas"] = "Default",
-		["Giit - Cho'gall"] = "Default",
+		["Git - Arthas"] = "Default",
 		["Burk - Arthas"] = "Default",
-		["Giitt - Feathermoon"] = "Default",
 		["Greny - Azuremyst"] = "Default",
 		["Spih - Cho'gall"] = "Default",
-		["Git - Azuremyst"] = "Default",
 		["Git - Cho'gall"] = "Default",
-		["Git - Arthas"] = "Default",
+		["Giitt - Feathermoon"] = "Default",
+		["Git - Azuremyst"] = "Default",
+		["Giit - Cho'gall"] = "Default",
+		["Spih - Arthas"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -59,6 +59,7 @@ LoggerHeadDB = {
 					},
 					["Grimrail Depot"] = {
 						[2] = true,
+						[8] = true,
 					},
 					["End Time"] = {
 						[2] = false,
@@ -95,29 +96,31 @@ LoggerHeadDB = {
 						false, -- [2]
 						[8] = false,
 					},
-					["FW Horde Garrison Level 3"] = {
-						false, -- [1]
+					["Skyreach"] = {
+						[2] = true,
+						[8] = true,
 					},
 					["Upper Blackrock Spire"] = {
 						false, -- [1]
 						true, -- [2]
 						[8] = true,
 					},
-					["Iron Docks"] = {
-						[2] = true,
-						[8] = true,
-					},
-					["Halls of Origination"] = {
-						false, -- [1]
+					["Shadowmoon Burial Grounds"] = {
+						true, -- [1]
 						false, -- [2]
+						[8] = false,
+					},
+					["Scholomance"] = {
+						[2] = false,
+						[8] = false,
 					},
 					["Throne of the Tides"] = {
 						false, -- [1]
 						false, -- [2]
 					},
-					["Scholomance"] = {
-						[2] = false,
-						[8] = false,
+					["Halls of Origination"] = {
+						false, -- [1]
+						false, -- [2]
 					},
 					["Ragefire Chasm"] = {
 						false, -- [1]
@@ -131,17 +134,18 @@ LoggerHeadDB = {
 					["FW Horde Garrison Level 1"] = {
 						false, -- [1]
 					},
-					["The Everbloom"] = {
-						[2] = true,
-						[8] = true,
+					["Stormstout Brewery"] = {
+						false, -- [1]
+						false, -- [2]
+						[8] = false,
+					},
+					["Sunken Temple"] = {
+						false, -- [1]
 					},
 					["Shado-Pan Monastery"] = {
 						false, -- [1]
 						true, -- [2]
 						[8] = false,
-					},
-					["Shadowfang Keep"] = {
-						[2] = false,
 					},
 					["Hellfire Citadel: Ramparts"] = {
 						false, -- [1]
@@ -153,7 +157,13 @@ LoggerHeadDB = {
 						[2] = false,
 						[8] = false,
 					},
-					["Lost City of the Tol'vir"] = {
+					["Zul'Gurub"] = {
+						[2] = false,
+					},
+					["Halls of Stone"] = {
+						[2] = false,
+					},
+					["The Stonecore"] = {
 						false, -- [1]
 						false, -- [2]
 					},
@@ -161,35 +171,26 @@ LoggerHeadDB = {
 						false, -- [1]
 						false, -- [2]
 					},
-					["The Stonecore"] = {
+					["Lost City of the Tol'vir"] = {
 						false, -- [1]
 						false, -- [2]
 					},
-					["Halls of Stone"] = {
+					["Shadowfang Keep"] = {
 						[2] = false,
 					},
-					["Zul'Gurub"] = {
-						[2] = false,
-					},
-					["Sunken Temple"] = {
-						false, -- [1]
-					},
-					["Stormstout Brewery"] = {
-						false, -- [1]
-						false, -- [2]
-						[8] = false,
+					["The Everbloom"] = {
+						[2] = true,
+						[8] = true,
 					},
 					["Blackrock Depths"] = {
 						false, -- [1]
 					},
-					["Shadowmoon Burial Grounds"] = {
-						true, -- [1]
-						false, -- [2]
-						[8] = false,
-					},
-					["Skyreach"] = {
+					["Iron Docks"] = {
 						[2] = true,
 						[8] = true,
+					},
+					["FW Horde Garrison Level 3"] = {
+						false, -- [1]
 					},
 				},
 				["scenario"] = {
@@ -202,44 +203,22 @@ LoggerHeadDB = {
 					["Arena of Annihilation"] = {
 						false, -- [1]
 					},
-					["Vol'jin Ambush Scenario"] = {
-						false, -- [1]
-					},
 					["Proving Grounds"] = {
 						false, -- [1]
 					},
+					["Vol'jin Ambush Scenario"] = {
+						false, -- [1]
+					},
 				},
-				["pvp"] = {
-					["Strand of the Ancients"] = {
-						[8] = false,
+				["none"] = {
+					["Pandaria"] = {
+						[0] = false,
 					},
-					["Warsong Gulch"] = {
-						[8] = false,
-						[3] = false,
+					["Kalimdor"] = {
+						[0] = false,
 					},
-					["Twin Peaks"] = {
-						[8] = false,
-						[3] = false,
-					},
-					["The Battle for Gilneas"] = {
-						[3] = false,
-						[8] = false,
-					},
-					["Alterac Valley"] = {
-						[8] = false,
-					},
-					["Arathi Basin"] = {
-						[8] = false,
-						[3] = false,
-					},
-					["Rated Eye of the Storm"] = {
-						[3] = false,
-					},
-					["Isle of Conquest"] = {
-						[8] = false,
-					},
-					["Eye of the Storm"] = {
-						[8] = false,
+					["Tol Barad"] = {
+						true, -- [1]
 					},
 				},
 				["arena"] = {
@@ -324,14 +303,6 @@ LoggerHeadDB = {
 						[3] = true,
 						[4] = true,
 					},
-					["Molten Core"] = {
-						[8] = false,
-					},
-					["Blackwing Descent"] = {
-						[3] = true,
-						[4] = true,
-						[5] = true,
-					},
 					["Throne of Thunder"] = {
 						nil, -- [1]
 						nil, -- [2]
@@ -341,20 +312,50 @@ LoggerHeadDB = {
 						true, -- [6]
 						true, -- [7]
 					},
+					["Blackwing Descent"] = {
+						[3] = true,
+						[4] = true,
+						[5] = true,
+					},
+					["Molten Core"] = {
+						[8] = false,
+					},
 					["Firelands"] = {
 						[3] = true,
 						[4] = true,
 					},
 				},
-				["none"] = {
-					["Tol Barad"] = {
-						true, -- [1]
+				["pvp"] = {
+					["Strand of the Ancients"] = {
+						[8] = false,
 					},
-					["Pandaria"] = {
-						[0] = false,
+					["Warsong Gulch"] = {
+						[8] = false,
+						[3] = false,
 					},
-					["Kalimdor"] = {
-						[0] = false,
+					["Twin Peaks"] = {
+						[8] = false,
+						[3] = false,
+					},
+					["The Battle for Gilneas"] = {
+						[3] = false,
+						[8] = false,
+					},
+					["Alterac Valley"] = {
+						[8] = false,
+					},
+					["Arathi Basin"] = {
+						[8] = false,
+						[3] = false,
+					},
+					["Rated Eye of the Storm"] = {
+						[3] = false,
+					},
+					["Isle of Conquest"] = {
+						[8] = false,
+					},
+					["Eye of the Storm"] = {
+						[8] = false,
 					},
 				},
 			},

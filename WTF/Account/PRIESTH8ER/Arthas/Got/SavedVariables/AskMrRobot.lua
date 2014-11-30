@@ -28,7 +28,7 @@ AmrDb = {
 	["CharacterName"] = "Got",
 	["Race"] = "Tauren",
 	["ActiveSpec"] = 1,
-	["Level"] = 90,
+	["Level"] = 91,
 	["Equipped"] = {
 		{
 			"|cffa335ee|Hitem:94270:0:4667:4610:0:0:0:1739738752:90:465:0:0|h[Quilen Hide Helm]|h|r", -- [1]
@@ -49,29 +49,29 @@ AmrDb = {
 			"|cff1eff00|Hitem:101032:4441:0:0:0:0:0:0:90:0:0:0|h[Springrain Spear]|h|r", -- [16]
 		}, -- [1]
 		{
-			"|cffa335ee|Hitem:94270:0:4667:4610:0:0:0:1739738752:90:465:0:0|h[Quilen Hide Helm]|h|r", -- [1]
-			"|cff1eff00|Hitem:101008:0:0:0:0:0:0:0:90:0:0:0|h[Springrain Choker]|h|r", -- [2]
-			"|cff1eff00|Hitem:101033:4804:0:0:0:0:0:0:90:0:0:0|h[Springrain Pauldrons]|h|r", -- [3]
+			"|cffa335ee|Hitem:94270:0:4667:4610:0:0:0:1739738752:91:465:0:0|h[Quilen Hide Helm]|h|r", -- [1]
+			"|cff1eff00|Hitem:101008:0:0:0:0:0:0:0:91:0:0:0|h[Springrain Choker]|h|r", -- [2]
+			"|cff0070dd|Hitem:112668:0:0:0:0:0:0:0:91:0:11:0|h[Quarrier's Spaulders]|h|r", -- [3]
 			nil, -- [4]
-			"|cffa335ee|Hitem:101867:4420:4632:0:0:0:-464:1517420635:90:491:0:0|h[Cranefeather Jerkin of the Savant]|h|r", -- [5]
-			"|cffa335ee|Hitem:98613:0:4653:4653:4647:0:0:1719231872:90:491:0:0|h[Snow Lily Belt]|h|r", -- [6]
-			"|cffa335ee|Hitem:98604:4822:4653:4653:0:0:0:513555840:90:491:0:0|h[Snow Lily Britches]|h|r", -- [7]
-			"|cffa335ee|Hitem:94269:4428:4610:4610:0:0:0:721931392:90:465:0:0|h[Quilen Hide Boots]|h|r", -- [8]
-			"|cffa335ee|Hitem:101862:4416:0:0:0:0:-344:1160052787:90:491:0:0|h[Cranefeather Bindings of the Decimator]|h|r", -- [9]
-			"|cffa335ee|Hitem:104987:4431:4610:4647:0:0:0:2120857472:90:491:0:0|h[Korgra's Venom-Soaked Gauntlets]|h|r", -- [10]
-			"|cff1eff00|Hitem:101010:0:0:0:0:0:0:0:90:0:0:0|h[Springrain Ring of Onslaught]|h|r", -- [11]
-			"|cff1eff00|Hitem:101011:0:0:0:0:0:0:0:90:0:0:0|h[Springrain Band of Onslaught]|h|r", -- [12]
-			"|cff1eff00|Hitem:101009:0:0:0:0:0:0:0:90:0:0:0|h[Springrain Idol of Rage]|h|r", -- [13]
-			"|cff1eff00|Hitem:101012:0:0:0:0:0:0:0:90:0:0:0|h[Springrain Stone of Rage]|h|r", -- [14]
-			"|cff1eff00|Hitem:101007:4422:0:0:0:0:0:0:90:0:0:0|h[Springrain Cloak of Rage]|h|r", -- [15]
-			"|cff1eff00|Hitem:101032:4441:0:0:0:0:0:0:90:0:0:0|h[Springrain Spear]|h|r", -- [16]
+			"|cff0070dd|Hitem:112441:0:0:0:0:0:0:0:91:0:11:0|h[Slavebreaker Tunic]|h|r", -- [5]
+			"|cffa335ee|Hitem:98613:0:4653:4653:4647:0:0:1719231872:91:491:0:0|h[Snow Lily Belt]|h|r", -- [6]
+			"|cffa335ee|Hitem:98604:4822:4653:4653:0:0:0:513555840:91:491:0:0|h[Snow Lily Britches]|h|r", -- [7]
+			"|cffa335ee|Hitem:94269:4428:4610:4610:0:0:0:721931392:91:465:0:0|h[Quilen Hide Boots]|h|r", -- [8]
+			"|cffa335ee|Hitem:101862:4416:0:0:0:0:-344:1160052787:91:491:0:0|h[Cranefeather Bindings of the Decimator]|h|r", -- [9]
+			"|cffa335ee|Hitem:104987:4431:4610:4647:0:0:0:2120857472:91:491:0:0|h[Korgra's Venom-Soaked Gauntlets]|h|r", -- [10]
+			"|cff1eff00|Hitem:101010:0:0:0:0:0:0:0:91:0:0:0|h[Springrain Ring of Onslaught]|h|r", -- [11]
+			"|cff1eff00|Hitem:101011:0:0:0:0:0:0:0:91:0:0:0|h[Springrain Band of Onslaught]|h|r", -- [12]
+			"|cff1eff00|Hitem:101009:0:0:0:0:0:0:0:91:0:0:0|h[Springrain Idol of Rage]|h|r", -- [13]
+			"|cff1eff00|Hitem:101012:0:0:0:0:0:0:0:91:0:0:0|h[Springrain Stone of Rage]|h|r", -- [14]
+			"|cff1eff00|Hitem:101007:4422:0:0:0:0:0:0:91:0:0:0|h[Springrain Cloak of Rage]|h|r", -- [15]
+			"|cffe6cc80|Hitem:104400:0:0:0:0:0:0:942026880:91:0:0:0|h[Hellscream's Razor]|h|r", -- [16]
 		}, -- [2]
 	},
 	["BankItems"] = {
 		"|cffffffff|Hitem:22574:0:0:0:0:0:0:2147150336:100:0:0:0|h[Mote of Fire]|h|r", -- [1]
 		"|cff0070dd|Hitem:76131:0:0:0:0:0:0:1673828608:100:0:0:0|h[Primordial Ruby]|h|r", -- [2]
 	},
-	["LastCharacterImport"] = "",
+	["Class"] = "DRUID",
 	["Specs"] = {
 		34, -- [1]
 		34, -- [2]
@@ -85,16 +85,16 @@ AmrDb = {
 		[384] = 12,
 		[416] = 45,
 		[402] = 27,
-		[241] = 40,
-		[-1] = 1121287789,
-		[823] = 13882,
 		[361] = 6,
+		[391] = 46,
+		[823] = 13882,
+		[-1] = 1121287789,
 		[392] = 823,
 		[393] = 4,
 		[394] = 13,
-		[391] = 46,
+		[241] = 40,
 	},
-	["Professions"] = {
+	["IconInfo"] = {
 	},
 	["LogData"] = {
 		["_wipes"] = {
@@ -104,8 +104,8 @@ AmrDb = {
 			[1136] = "disabled",
 			[1205] = "disabled",
 		},
-		["_lastZone"] = "Tanaan Jungle Intro",
-		["_lastDiff"] = 0,
+		["_lastDiff"] = 1,
+		["_lastZone"] = "FW Horde Garrison Level 1",
 	},
 	["BagItems"] = {
 		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [1]
@@ -170,7 +170,7 @@ AmrDb = {
 		"|cffffffff|Hitem:5512:0:0:0:0:0:0:0:100:0:0:0|h[Healthstone]|h|r", -- [60]
 		"|cff9d9d9d|Hitem:106867:0:0:0:0:0:0:0:100:0:0:0|h[Dulled Claw]|h|r", -- [61]
 	},
-	["LastCharacterImportDate"] = "",
+	["LastCharacterImport"] = "",
 	["VoidItems"] = {
 		"|cffa335ee|Hitem:34011:0:0:0:0:0:0:1582692992:100:0:0:0|h[Illidari Runeshield]|h|r", -- [1]
 		"|cffa335ee|Hitem:50729:0:0:0:0:0:0:1185718912:100:0:0:0|h[Icecrown Glacial Wall]|h|r", -- [2]
@@ -259,14 +259,14 @@ AmrDb = {
 		[1375] = 4,
 		[1387] = 0,
 		[1376] = 0,
-		[1270] = 7,
-		[1388] = 7,
 		[1435] = 7,
+		[1388] = 7,
+		[1270] = 7,
 	},
 	["Faction"] = "Horde",
-	["IconInfo"] = {
+	["Professions"] = {
 	},
-	["Class"] = "DRUID",
+	["LastCharacterImportDate"] = "",
 	["RealmName"] = "Arthas",
 	["BankItemsAndCounts"] = {
 		[74248] = 2,
@@ -278,17 +278,17 @@ AmrDb = {
 		[90146] = 11,
 		[74247] = 5,
 		[74249] = 32,
-		[77467] = 4,
-		[98717] = 15,
-		[72988] = 7,
-		[72095] = 5,
-		[76061] = 18,
-		[22574] = 1,
-		[94111] = 16,
-		[72104] = 3,
-		[76131] = 1,
-		[89112] = 522,
-		[54849] = 19,
 		[76140] = 2,
+		[89112] = 522,
+		[72988] = 7,
+		[76061] = 18,
+		[54849] = 19,
+		[22574] = 1,
+		[76131] = 1,
+		[72104] = 3,
+		[94111] = 16,
+		[72095] = 5,
+		[98717] = 15,
+		[77467] = 4,
 	},
 }

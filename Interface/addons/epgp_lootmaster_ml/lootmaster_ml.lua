@@ -79,21 +79,6 @@ function LootMasterML:OnInitialize()
     -- Create table for the guildinfo cache.
     self.guildInfo = {}
 
-    -- Disable 'automatic loot tracking' popup in EPGP - Let EPGPLootmaster handle all the GP stuff.
-    if EPGP and CheckForGuildInfo and IsInGuild() then
-        CheckForGuildInfo(EPGP);
-        if EPGP.db then
-            EPGP.db.profile.auto_loot = false
-        end
-    end
-
-    -- Disable the GP Popup on the new EPGP versions
-    if EPGP and EPGP.GetModule then
-      local loot = EPGP:GetModule("loot")
-      if loot and loot.Disable then
-        loot:Disable()
-      end
-    end
 
 	-- Disable popup for headcount
 	local HeadCount = LibStub("AceAddon-3.0"):GetAddon("HeadCount2", true)
@@ -141,7 +126,7 @@ end
 
 function LootMasterML:OnEnable()
     -- Postpone the chathooks to make sure we're the last hooking these.
-    self:ScheduleTimer("PostEnable", 1)
+    self:ScheduleTimer("PostEnable", 5)
 
     if EPGP and EPGP.RegisterCallback then
         EPGP.RegisterCallback(self, "StandingsChanged", "OnStandingsChanged")
@@ -166,6 +151,22 @@ function LootMasterML:PostEnable()
 	ChatFrame_AddMessageEventFilter("CHAT_MSG_RAID",    		LootMasterML.ChatFrameFilter)
 	ChatFrame_AddMessageEventFilter("CHAT_MSG_RAID_LEADER",		LootMasterML.ChatFrameFilter)
 	ChatFrame_AddMessageEventFilter("CHAT_MSG_CHANNEL",			LootMasterML.ChatFrameFilter)
+
+    -- Disable 'automatic loot tracking' popup in EPGP - Let EPGPLootmaster handle all the GP stuff.
+    if EPGP and CheckForGuildInfo and IsInGuild() then
+        CheckForGuildInfo(EPGP);
+        if EPGP.db then
+            EPGP.db.profile.auto_loot = false
+        end
+    end
+
+    -- Disable the GP Popup on the new EPGP versions
+    if EPGP and EPGP.GetModule then
+        local loot = EPGP:GetModule("loot")
+        if loot and loot.Disable then
+            loot:Disable()
+        end
+    end
 end
 
 function LootMasterML:HandleEPGPCommand(command, message, sender, event)
@@ -611,7 +612,7 @@ function LootMasterML:CommandReceived(prefix, message, distribution, sender)
 
         if monCmd == 'ADDLOOT' then
 
-            local itemLink, itemName, itemID, gpvalue, ilevel, itemBind, itemRarity, itemTexture, itemEquipLoc, gpvalue2, quantity, classAutoPassList, hideResponses, numButtons, buttons = unpack(monArgs)
+            local itemLink, itemName, itemIdentifier, gpvalue, ilevel, itemBind, itemRarity, itemTexture, itemEquipLoc, gpvalue2, quantity, classAutoPassList, hideResponses, numButtons, buttons = unpack(monArgs)
 
             if not self.lootTable then self.lootTable={} end;
 
@@ -619,6 +620,8 @@ function LootMasterML:CommandReceived(prefix, message, distribution, sender)
                 -- Is someone tinkering? the loot already exists. Return
                 return;
             end
+
+            local itemID = LootMasterML:GetItemIDFromIdent(itemIdentifier)
 
             itemRarity = tonumber(itemRarity) or 0
 
@@ -671,6 +674,7 @@ function LootMasterML:CommandReceived(prefix, message, distribution, sender)
             self.lootTable[itemID] = {
                 ['link']	                    = itemLink,
                 ['name']	                    = itemName,
+                ['identifier']                  = itemIdentifier,
 
                 ['lootmaster']                  = sender,
 
@@ -678,7 +682,7 @@ function LootMasterML:CommandReceived(prefix, message, distribution, sender)
                 ['mayDistribute']               = false,
                 ['hideResponses']               = hideResponses,
 
-                ['id']                          = itemID,
+                ['id']                          = itemIdentifier,
                 ['itemID']                      = itemID,
                 ['itemid']                      = itemID,
 
@@ -958,10 +962,25 @@ function LootMasterML:AskCandidateIfNeeded( link, candidate, allowBids )
 	self:ReloadMLTableForLoot( loot.id )
 end
 
+function LootMasterML:LootLinkToIdent(itemLink)
+  local _,_,itemID = strfind(itemLink, 'Hitem:(%d+)')
+  local _,_,bonusID= strfind(itemLink, 'Hitem:[^\124h]+:(%d+)\124h')
+  local itemIdentifier = itemID
+  if (bonusID ~= nil and bonusID ~= '0') then
+    itemIdentifier = itemID .. '.' .. bonusID
+  end
+  return itemIdentifier
+end
+
+function LootMaster:GetItemIDFromIdent(itemIdentifier)
+  local itemID, _ = strsplit('.', itemIdentifier)
+  return itemID
+end
+
 --[[
 	Add loot to masterloot cache. This is where candidate responses are stored, plus the rows for the scrollingtable
 ]]
-function LootMasterML:AddLoot( link, mayDistribute, quantity )
+function LootMasterML:AddLoot(link, mayDistribute, quantity)
 	if not link then return end
 	if not self.lootTable then self.lootTable={} end
 
@@ -973,14 +992,21 @@ function LootMasterML:AddLoot( link, mayDistribute, quantity )
 
   local itemName, itemLink, itemRarity, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture = GetItemInfo(link)
 
+  -- Find the itemID and bonusID using regexp
   local _,_,itemID = strfind(itemLink, 'Hitem:(%d+)');
+  local _,_,bonusID= strfind(itemLink, 'Hitem:[^\124h]+:(%d+)\124h');
   if not itemID or not itemName then return end
 
   -- Fix patterns bug by removing the ':' from the itemname
   --itemLink = itemLink:gsub('%[.*%]', itemLink:match('%[.*%]'):gsub(':', ','))
   --itemName = itemName:gsub(':', ',')
 
-  if self.lootTable[itemID] then return itemID end
+  -- Warlords of Dreanor introduced multiple items sharing the same itemID but different itemLevels and added BonusID,
+  -- EPGPLootmaster will just check if an item with the same itemID and itemLevel exists, if not add the new loot
+  local itemIdentifier = self:LootLinkToIdent(itemLink)
+
+
+  if self.lootTable[itemIdentifier] then return itemIdentifier end
 
   local db = LootMaster.db.profile
 
@@ -1009,16 +1035,18 @@ function LootMasterML:AddLoot( link, mayDistribute, quantity )
       hideResponses = true
   end
 
-  self.lootTable[itemID] = {
+  self.lootTable[itemIdentifier] = {
     ['link']	          = itemLink,
     ['name']	          = itemName,
+    ['identifier']        = itemIdentifier,
 
     ['announced']       = true,
     ['mayDistribute']   = mayDistribute,
 
-    ['id']              = itemID,
+    ['id']              = itemIdentifier,
     ['itemID']          = itemID,
     ['itemid']          = itemID,
+    ['bonusID']         = bonusID,
     ['hideResponses']   = hideResponses,
 
     ['gpvalue']	        = gpvalue or 0,
@@ -1050,7 +1078,7 @@ function LootMasterML:AddLoot( link, mayDistribute, quantity )
 
     ['numResponses']        = 0
   }
-  local loot = self.lootTable[itemID]
+  local loot = self.lootTable[itemIdentifier]
 
   -- Add some backward compatibility for the new button system
   -- by using the fallback values used in the configuration panel
@@ -1102,12 +1130,12 @@ function LootMasterML:AddLoot( link, mayDistribute, quantity )
   end
 
   -- Are we lootmaster for this loot? Lets send out a monitor message about the added loot
-  if loot.mayDistribute and self:MonitorMessageRequired(itemID) then
+  if loot.mayDistribute and self:MonitorMessageRequired(itemIdentifier) then
       local hideResponsesInt = hideResponses and 1 or 0
-      self:SendMonitorMessage('ADDLOOT', itemLink, itemName, itemID, gpvalue or 0, ilevel or 0, itemBind or '', itemRarity or 0, itemTexture or '', itemEquipLoc or '', gpvalue2 or '', quantity or 1, itemClassesEncoded, hideResponsesInt, loot.numButtons or 0, buttonString or '', "PRIORITY_HIGH" )
+      self:SendMonitorMessage('ADDLOOT', itemLink, itemName, itemIdentifier, gpvalue or 0, ilevel or 0, itemBind or '', itemRarity or 0, itemTexture or '', itemEquipLoc or '', gpvalue2 or '', quantity or 1, itemClassesEncoded, hideResponsesInt, loot.numButtons or 0, buttonString or '', "PRIORITY_HIGH" )
   end
 
-	return itemID
+  return itemIdentifier
 end
 
 function LootMasterML:RequestVotes( loot )
@@ -1230,8 +1258,8 @@ function LootMasterML:RemoveLoot( link )
 	if not link then return end;
 	if not self.lootTable then return end;
 
-    local loot = self:GetLoot(link);
-    local itemID = loot.id;
+    local loot = self:GetLoot(link)
+    local itemID = loot.id
 
     if not itemID or not self.lootTable[itemID] then
         return self:Debug(format('RemoveLoot: not found %s %s(%s)', link or 'nil', itemID or 'nil', type(itemID)))

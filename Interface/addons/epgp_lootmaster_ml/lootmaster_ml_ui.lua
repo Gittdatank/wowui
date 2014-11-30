@@ -255,7 +255,7 @@ function LootMasterML:GetFrame()
 
     local tbGPValueFrame = CreateFrame("Frame", nil, frame)
 	tbGPValueFrame:SetHeight(20)
-    tbGPValueFrame:SetWidth(50);
+    tbGPValueFrame:SetWidth(100);
     tbGPValueFrame:SetBackdrop({
 		bgFile = "Interface\\ChatFrame\\ChatFrameBackground",
 		edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
@@ -343,6 +343,7 @@ function LootMasterML:GetFrame()
 	btnDiscard:SetScript("OnClick", function()
             if frame.currentLoot then
                 self:RemoveLoot( frame.currentLoot.id );
+                self.frame.currentLoot = nil
             end
             self:UpdateUI();
     end)
@@ -532,11 +533,11 @@ function LootMasterML:CreateLootButton()
 	    GameTooltip:Hide()
     end);
     icon:SetScript("OnClick", function()
-        if not icon.data then return end
+        if not icon.itemIdentifier then return end
 	    if ( IsModifiedClick() ) then
-		    HandleModifiedItemClick(icon.data.link);
+		    HandleModifiedItemClick(LootMasterML:GetLoot(icon.itemIdentifier).link);
         else
-            self:DisplayLoot(icon.data.link);
+            self:DisplayLoot(icon.itemIdentifier);
             self:UpdateUI();
         end
     end);
@@ -548,7 +549,6 @@ function LootMasterML:CreateLootButton()
 end
 
 function LootMasterML:DisplayLoot( item )
-
     local data = self:GetLoot(item);
 
     if not data then
@@ -688,13 +688,11 @@ function LootMasterML:UpdateUI( updateItemLink )
             if self.frame.currentLoot and data.link==self.frame.currentLoot.link then
                 -- If already displaying, do nothing.
                 self:DisplayLoot(item)
-                breakMe = true
-                break
+                --breakMe = true
             elseif not self.frame.currentLoot then
                 -- Nothing is onscreen, display the first item
                 self:DisplayLoot(item)
-                breakMe = true
-                break
+                --breakMe = true
             end
 
             if visibleLootButtons>=LOOTBUTTON_MAXNUM then breakMe = true; break end
@@ -708,7 +706,8 @@ function LootMasterML:UpdateUI( updateItemLink )
                 self.lootButtons[visibleLootButtons] = lootButton
             end
 
-            lootButton.data = data
+            lootButton.data = self.lootTable[item]
+            lootButton.itemIdentifier = item
             lootButton:SetNormalTexture(data.texture);
             --lootButton:GetNormalTexture():SetVertexColor(1,0,0,0.5)
 

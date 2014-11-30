@@ -2,13 +2,13 @@
 AUCTIONATOR_SAVEDVARS = {
 	["_50000"] = 500,
 	["_2000"] = 100,
-	["_200000"] = 1000,
-	["STARTING_DISCOUNT"] = 5,
-	["_1000000"] = 2500,
 	["_5000000"] = 10000,
 	["LOG_DE_DATA_X"] = true,
-	["_500"] = 5,
+	["_1000000"] = 2500,
 	["_10000"] = 200,
+	["_500"] = 5,
+	["STARTING_DISCOUNT"] = 5,
+	["_200000"] = 1000,
 }
 AUCTIONATOR_PRICING_HISTORY = {
 }
@@ -66,10 +66,10 @@ AUCTIONATOR_PRICE_DATABASE = {
 		},
 		["Blackrock Ore"] = {
 			["mr"] = 22599,
+			["cc"] = 6,
+			["id"] = "109118",
 			["sc"] = 4,
 			["H1464"] = 22599,
-			["id"] = "109118",
-			["cc"] = 6,
 		},
 		["Gorenscale Mesh Cloak"] = {
 			["mr"] = 1450000000,
@@ -78,32 +78,32 @@ AUCTIONATOR_PRICE_DATABASE = {
 			["H1466"] = 1450000000,
 			["cc"] = 2,
 		},
-		["Truesteel Breastplate of the Deft"] = {
-			["mr"] = 210000000,
+		["Truesteel Helm of the Aurora"] = {
+			["mr"] = 219779999,
 			["cc"] = 2,
-			["id"] = "114232",
-			["H1475"] = 210000000,
+			["id"] = "114230",
+			["H1475"] = 219779999,
 			["sc"] = 5,
 		},
-		["Ashelia's Adorned Waistguard"] = {
-			["mr"] = 1200000000,
-			["cc"] = 2,
-			["id"] = "118888",
+		["Helmet of Vile Indignation"] = {
+			["mr"] = 990000000,
 			["sc"] = 5,
-			["H1465"] = 1200000000,
-		},
-		["Blackrock Bulwark"] = {
-			["mr"] = 1199999999,
+			["id"] = "118896",
+			["H1466"] = 990000000,
 			["cc"] = 2,
-			["id"] = "118874",
-			["sc"] = 7,
-			["H1465"] = 1199999999,
+		},
+		["Gorget of Primal Might"] = {
+			["mr"] = 1150000000,
+			["cc"] = 2,
+			["id"] = "118846",
+			["sc"] = 1,
+			["H1465"] = 1150000000,
 		},
 		["Botani-Barbed Pauldrons"] = {
 			["mr"] = 2250000000,
-			["cc"] = 2,
-			["id"] = "118892",
 			["sc"] = 5,
+			["id"] = "118892",
+			["cc"] = 2,
 			["H1465"] = 2250000000,
 		},
 		["Signet of the Traitor General"] = {
@@ -115,37 +115,37 @@ AUCTIONATOR_PRICE_DATABASE = {
 		},
 		["Battle Hardened Gorget"] = {
 			["mr"] = 990000000,
-			["sc"] = 1,
-			["id"] = "118848",
 			["H1465"] = 990000000,
+			["id"] = "118848",
+			["sc"] = 1,
 			["cc"] = 2,
 		},
-		["Gorget of Primal Might"] = {
-			["mr"] = 1150000000,
-			["sc"] = 1,
-			["id"] = "118846",
+		["Blackrock Bulwark"] = {
+			["mr"] = 1199999999,
+			["sc"] = 7,
+			["id"] = "118874",
 			["cc"] = 2,
-			["H1465"] = 1150000000,
+			["H1465"] = 1199999999,
 		},
 		["Blackrock Fragment"] = {
 			["mr"] = 4099,
+			["cc"] = 6,
+			["id"] = "109992",
 			["sc"] = 4,
 			["H1464"] = 4099,
-			["id"] = "109992",
-			["cc"] = 6,
 		},
-		["Helmet of Vile Indignation"] = {
-			["mr"] = 990000000,
+		["Ashelia's Adorned Waistguard"] = {
+			["mr"] = 1200000000,
 			["sc"] = 5,
-			["id"] = "118896",
-			["H1466"] = 990000000,
+			["id"] = "118888",
 			["cc"] = 2,
+			["H1465"] = 1200000000,
 		},
-		["Truesteel Helm of the Aurora"] = {
-			["mr"] = 219779999,
+		["Truesteel Breastplate of the Deft"] = {
+			["mr"] = 210000000,
 			["cc"] = 2,
-			["id"] = "114230",
-			["H1475"] = 219779999,
+			["id"] = "114232",
+			["H1475"] = 210000000,
 			["sc"] = 5,
 		},
 	},
@@ -158,16 +158,16 @@ AUCTIONATOR_TOONS = {
 	},
 	["Gittdabank"] = {
 		["firstSeen"] = 1416518718,
+		["firstVersion"] = "3.1.8",
 		["guid"] = "Player-69-08668C57",
-		["firstVersion"] = "3.1.8",
-	},
-	["Spih"] = {
-		["firstSeen"] = 1416512585,
-		["firstVersion"] = "3.1.8",
 	},
 	["Git"] = {
 		["firstSeen"] = 1416356731,
 		["firstVersion"] = "3.1.6",
+	},
+	["Spih"] = {
+		["firstSeen"] = 1416512585,
+		["firstVersion"] = "3.1.8",
 	},
 }
 AUCTIONATOR_STACKING_PREFS = {
