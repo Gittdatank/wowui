@@ -570,19 +570,25 @@ sbf.PutName = function(self, name)
 end
 
 SBF.NameHide = function(self)
+  self.text:Hide()
   if not self.secure then
     self:Hide()
   else
-    self.text:Hide()
+    if not sbf.inCombat then
+      -- self:Hide()
+    end
   end
   self:SetBackdropColor(0,0,0,0)
 end
 
 SBF.NameShow = function(self)
+  self.text:Show()
   if not self.secure then
     self:Show()
   else
-    self.text:Show()
+    if not sbf.inCombat then
+       self:Show()
+    end
   end
   if sbf.showingOptions then
     self:SetBackdropColor(0.5, 0.5, 0.5, 0.75)
@@ -868,7 +874,7 @@ sbf.ShowTooltip = function(self)
         GameTooltip:SetTotem(self._buff.totemSlot)
       elseif self._buff.isTracking then
         GameTooltip:SetText(self._buff.name)
-      elseif self._buff.name then
+      elseif self._buff.name and self._buff.index then
         GameTooltip:SetUnitAura(unit, self._buff.index, self._buff.filter)
         if self._buff.casterName and not SBF.db.profile.settings.noCasterName then
           GameTooltip:AddLine(self._buff.casterName)

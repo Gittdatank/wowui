@@ -57,10 +57,6 @@ EPGPLootMaster = {
 		},
 		["Gimm - Cho'gall"] = {
 		},
-		["Gilt - Azuremyst"] = {
-		},
-		["Ezyn - Azuremyst"] = {
-		},
 		["Git - Azuremyst"] = {
 			["button2"] = "Offspec",
 			["mainUIScale"] = 1.06666677792867,
@@ -77,6 +73,8 @@ EPGPLootMaster = {
 			["blizzard_show_offline"] = 1,
 			["buttonNum"] = 2,
 			["votingSendAssistantOnly"] = false,
+		},
+		["Ezyn - Azuremyst"] = {
 		},
 		["Git - Cho'gall"] = {
 			["biddingWhen"] = "always",
@@ -97,21 +95,30 @@ EPGPLootMaster = {
 			["button3_gpIsPercentage"] = true,
 			["monitorSendAssistantOnly"] = false,
 		},
+		["Gilt - Azuremyst"] = {
+		},
 		["Git - Arthas"] = {
-			["mainUIScale"] = 1.00000000397364,
-			["hideMLOnCombat"] = false,
-			["button3_gp"] = "0%",
+			["mainUIScale"] = 0.86666667064031,
+			["button3_fallback"] = "",
+			["votingSendGuildRankList"] = {
+				[3] = true,
+			},
+			["popupUIScale"] = 0.666666690508525,
 			["button2_gp"] = "0%",
+			["button2"] = "Offspec",
 			["buttonNum"] = 2,
-			["button2_gpValue"] = 0,
-			["button2_color"] = "686def",
+			["button3_gpIsPercentage"] = true,
 			["button2_fallback"] = "OFFSPEC",
 			["button3_gpValue"] = 0,
-			["button3_fallback"] = "",
-			["popupUIScale"] = 0.666666690508525,
-			["button2"] = "Offspec",
+			["votingDisallowSelf"] = false,
 			["button2_gpIsPercentage"] = true,
-			["button3_gpIsPercentage"] = true,
+			["bidding"] = false,
+			["votingSendGuildRank"] = true,
+			["button2_gpValue"] = 0,
+			["button2_color"] = "686def",
+			["button3_gp"] = "0%",
+			["hideMLOnCombat"] = false,
+			["votingSendAssistantOnly"] = false,
 		},
 	},
 }

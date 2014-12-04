@@ -1,0 +1,10 @@
+
+GatherMate_SharingDB = {
+	["profileKeys"] = {
+		["Git - Arthas"] = "Git - Arthas",
+	},
+	["profiles"] = {
+		["Git - Arthas"] = {
+		},
+	},
+}

@@ -7,7 +7,7 @@
      </Onload>
    </Scripts>
   </GameTooltip>
-  
+
   <!-- Drag tab for frames -->
   <Frame name="BuffFrameDragTabTemplate" hidden="true" frameStrata="DIALOG" virtual="true">
      <Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" tile="true"><TileSize val="4"/></Backdrop>
@@ -15,8 +15,8 @@
 		<Layers>
 			<Layer level="OVERLAY">
 				<FontString name="$parentLabel" inherits="GameFontNormalSmall" justifyh="CENTER" setallpoints="true"/>
-			</Layer>			
-		</Layers>	
+			</Layer>
+		</Layers>
 		<Scripts>
 			<OnLoad>
 				self:SetFrameLevel(20)
@@ -67,7 +67,7 @@
       </OnLoad>
     </Scripts>
   </Frame>
-  
+
   <!-- Non-Secure elements -->
   <!-- Buff bar -->
 	<Button name="SBFBuffBarTemplate" frameStrata="LOW" hidden="true" virtual="true" enableMouse="true">
@@ -90,7 +90,7 @@
           </Texture>
           <Texture name="$parentBorder" file="Interface\Buttons\UI-Debuff-Overlays" setallpoints="true">
             <TexCoords left="0.296875" right="0.5703125" top="0" bottom="0.515625"/>
-          </Texture>	
+          </Texture>
         </Layer>
       </Layers>
 		<Scripts>
@@ -119,7 +119,7 @@
       <Layer level="OVERLAY">
         <Texture name="$parentBorder" file="Interface\Buttons\UI-Debuff-Overlays" setallpoints="true">
           <TexCoords left="0.296875" right="0.5703125" top="0" bottom="0.515625"/>
-        </Texture>	
+        </Texture>
       </Layer>
     </Layers>
     <Frames>
@@ -202,7 +202,7 @@
 		<Size x="250" y="20"/>
     <Attributes>
       <Attribute name="type2" value="cancelaura"/>
-    </Attributes>		
+    </Attributes>
     <Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" tile="true"><TileSize val="4"/></Backdrop>
     <Layers>
       <Layer level="ARTWORK">
@@ -221,7 +221,7 @@
         </Texture>
         <Texture name="$parentBorder" file="Interface\Buttons\UI-Debuff-Overlays" setallpoints="true">
           <TexCoords left="0.296875" right="0.5703125" top="0" bottom="0.515625"/>
-        </Texture>	
+        </Texture>
       </Layer>
     </Layers>
     <Scripts>
@@ -245,7 +245,7 @@
 		<Size x="20" y="20"/>
     <Attributes>
       <Attribute name="type2" value="cancelaura"/>
-    </Attributes>		
+    </Attributes>
     <Layers>
       <Layer level="ARTWORK">
         <Texture name="$parentIcon" setallpoints="true"/>
@@ -253,7 +253,7 @@
       <Layer level="OVERLAY">
         <Texture name="$parentBorder" file="Interface\Buttons\UI-Debuff-Overlays" setallpoints="true">
           <TexCoords left="0.296875" right="0.5703125" top="0" bottom="0.515625"/>
-        </Texture>	
+        </Texture>
       </Layer>
     </Layers>
     <Frames>
@@ -281,7 +281,7 @@
     <Size x="215" y="24"/>
     <Attributes>
       <Attribute name="type2" value="cancelaura"/>
-    </Attributes>		
+    </Attributes>
     <Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" tile="true"><TileSize val="4"/></Backdrop>
     <Layers>
       <Layer level="ARTWORK">

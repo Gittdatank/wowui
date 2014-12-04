@@ -49,6 +49,11 @@ oRA3DB = {
 			},
 		},
 		["Difficulty"] = {
+			["profiles"] = {
+				["Git - Mar 2014"] = {
+					["prevRaidDifficulty"] = 14,
+				},
+			},
 		},
 		["Loot"] = {
 			["profiles"] = {
@@ -145,7 +150,10 @@ oRA3DB = {
 					},
 					["promoteRank"] = {
 						["Lusting on Trash"] = {
-							[4] = true,
+							true, -- [1]
+							true, -- [2]
+							true, -- [3]
+							true, -- [4]
 						},
 					},
 				},
@@ -213,15 +221,15 @@ oRA3DB = {
 					["spells"] = {
 						[740] = true,
 						[73325] = true,
-						[47788] = true,
 						[98008] = true,
+						[33206] = true,
 						[77761] = false,
 						[97462] = true,
 						[2825] = true,
-						[33206] = true,
+						[47788] = true,
 					},
-					["onlyShowMine"] = true,
 					["lockDisplay"] = true,
+					["onlyShowMine"] = true,
 				},
 				["Gilt"] = {
 					["spells"] = {
@@ -357,7 +365,7 @@ oRA3DB = {
 			["lastSelectedPanel"] = "Checks",
 		},
 		["Got - Dec 2014"] = {
-			["lastSelectedPanel"] = "Checks",
+			["lastSelectedList"] = 1,
 			["positions"] = {
 				["oRA3ReadyCheck"] = {
 					["Height"] = 297,
@@ -378,7 +386,7 @@ oRA3DB = {
 					["Width"] = 210.338500976563,
 				},
 			},
-			["lastSelectedList"] = 1,
+			["lastSelectedPanel"] = "Checks",
 		},
 		["Gilt"] = {
 			["lastSelectedList"] = 2,
@@ -420,7 +428,7 @@ oRA3DB = {
 					["PosX"] = 1066.35942929001,
 				},
 			},
-			["lastSelectedPanel"] = "Checks",
+			["lastSelectedPanel"] = "Promote",
 		},
 		["Gitt - Monk"] = {
 			["lastSelectedPanel"] = "Invite",

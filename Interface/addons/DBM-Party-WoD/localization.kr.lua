@@ -24,6 +24,15 @@ L= DBM:GetModLocalization(1216)
 -----------------------
 L= DBM:GetModLocalization(1225)
 
+-------------
+--  Auch Trash  --
+-------------
+L = DBM:GetModLocalization("AuchTrash")
+
+L:SetGeneralLocalization({
+	name =	"아킨둔: 일반구간"
+})
+
 -----------------------
 -- <<<Bloodmaul Slag Mines>>> --
 -----------------------
@@ -47,6 +56,15 @@ L= DBM:GetModLocalization(887)
 -----------------------
 L= DBM:GetModLocalization(889)
 
+-------------
+--  BSM Trash  --
+-------------
+L = DBM:GetModLocalization("BSMTrash")
+
+L:SetGeneralLocalization({
+	name =	"피망치 잿가루 광산: 일반구간"
+})
+
 -----------------------
 -- <<<Grimrail Depot>>> --
 -----------------------
@@ -69,6 +87,15 @@ L:SetWarningLocalization({
 -- Thunderlord General --
 -----------------------
 L= DBM:GetModLocalization(1133)
+
+-------------
+--  GRD Trash  --
+-------------
+L = DBM:GetModLocalization("GRDTrash")
+
+L:SetGeneralLocalization({
+	name =	"파멸철로 정비소: 일반구간"
+})
 
 -----------------------
 -- <<<Iron Docks>>> --
@@ -117,7 +144,7 @@ L= DBM:GetModLocalization(1208)
 L= DBM:GetModLocalization(1209)
 
 L:SetMiscLocalization({
-	Pull	= "제리타크가 당신의 머리 위로 산성 새끼 거미를 쏟아붓습니다!"
+	Pull	= "당신의 머리 위로 산성 새끼 거미를 쏟아붓습니다!"
 })
 
 -----------------------

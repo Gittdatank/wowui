@@ -11,7 +11,7 @@ local candy = LibStub("LibCandyBar-3.0")
 local media = LibStub("LibSharedMedia-3.0")
 local LGIST = LibStub("LibGroupInSpecT-1.1")
 
-module.VERSION = tonumber(("$Revision: 824 $"):sub(12, -3))
+module.VERSION = tonumber(("$Revision: 833 $"):sub(12, -3))
 
 --------------------------------------------------------------------------------
 -- Locals
@@ -85,6 +85,7 @@ local glyphCooldowns = {
 
 local spells = {
 	DRUID = {
+		[20484] = 600,  -- Rebirth
 		[99] = 30,      -- Incapacitating Roar
 		[5211] = 50,    -- Mighty Bash
 		[132158] = 60,  -- Nature's Swiftness
@@ -152,9 +153,12 @@ local spells = {
 		[117050] = 15,  -- Glaive Toss
 		[109259] = 45,  -- Powershot
 		[120360] = 20,  -- Barrage
-		-- XXX Pets missing
+		-- Pet
 		[90355] = 360,  -- Ancient Hysteria
 		[160452] = 360, -- Netherwinds
+		[126393] = 600, -- Eternal Guardian
+		[159956] = 600, -- Dust of Life
+		[159931] = 600, -- Gift of Chi-Ji
 	},
 	MAGE = {
 		[45438] = 300,  -- Ice Block
@@ -288,6 +292,7 @@ local spells = {
 		[108285] = 180, -- Call of the Elements
 	},
 	WARLOCK = {
+		[20707] = 600,  -- Soulstone Resurrection
 		[698]   = 120,  -- Ritual of Summoning
 		[1122]  = 600,  -- Summon Infernal
 		[18540] = 600,  -- Summon Doomguard
@@ -307,6 +312,9 @@ local spells = {
 		[113858] = 120, -- Dark Soul: Instability
 		[108508] = 60,  -- Mannoroth's Fury
 		[137587] = 60,  -- Kil'jaden's Cunning
+		-- Pet
+		[19647]  = 24,  -- Felhunter Spell Lock
+		[171138] = 24,  -- Doomguard Shadow Lock
 	},
 	WARRIOR = {
 		[100]   = 20,   -- Charge
@@ -315,7 +323,7 @@ local spells = {
 		[1719]  = 180,  -- Recklessness
 		[6552]  = 15,   -- Pummel
 		[5246]  = 90,   -- Intimidating Shout
-		[871]   = 180,  -- Shield Wall
+		[871]   = 120,  -- Shield Wall
 		[64382] = 300,  -- Shattering Throw
 		[55694] = 60,   -- Enraged Regeneration
 		[12975] = 180,  -- Last Stand
@@ -339,6 +347,7 @@ local spells = {
 		[47476] = 60,   -- Strangulate
 		[48792] = 180,  -- Icebound Fortitude
 		[48707] = 45,   -- Anti-Magic Shell
+		[61999] = 600,  -- Raise Ally
 		[42650] = 600,  -- Army of the Dead
 		[49222] = 60,   -- Bone Shield
 		[55233] = 60,   -- Vampiric Blood
@@ -382,6 +391,22 @@ local spells = {
 	},
 }
 
+local combatResSpells = {
+	[20484] = true,  -- Rebirth
+	[95750] = true,  -- Soulstone Resurrection
+	[61999] = true,  -- Raise Ally
+	[126393] = true, -- Eternal Guardian
+	[159956] = true, -- Dust of Life
+	[159931] = true, -- Gift of Chi-Ji
+}
+
+local petSpells = {
+	[90355] = true,  -- Ancient Hysteria
+	[160452] = true, -- Netherwinds
+	[19647] = true,  -- Spell Lock
+	[171138] = true, -- Shadow Lock
+}
+
 local chargeSpells = {
 	-- these will always return the charge info with GetSpellCharges
 	[78674] = true,  -- Starsurge (3 charges)
@@ -405,6 +430,8 @@ for class, spells in next, spells do
 		classLookup[id] = class
 	end
 end
+allSpells[95750] = 600 -- Combat Soulstone
+classLookup[95750] = "WARLOCK"
 --allSpells[66235] = 110 -- Ardent Defender heal
 
 local db = nil
@@ -1329,10 +1356,37 @@ end
 
 function module:InspectRemove(_, guid)
 	if not guid then return end
-  cdModifiers[guid] = nil
+	cdModifiers[guid] = nil
 end
 
 do
+	local function getPetOwner(pet, guid)
+		if UnitGUID("pet") == guid then
+			return playerName, playerGUID
+		end
+
+		local owner
+		if IsInRaid() then
+			for i=1, GetNumGroupMembers() do
+				if UnitGUID(("raid%dpet"):format(i)) == guid then
+					owner = ("raid%d"):format(i)
+					break
+				end
+			end
+		else
+			for i=1, GetNumSubgroupMembers() do
+				if UnitGUID(("party%dpet"):format(i)) == guid then
+					owner = ("party%d"):format(i)
+					break
+				end
+			end
+		end
+		if owner then
+			return module:UnitName(owner), UnitGUID(owner)
+		end
+		return pet, guid
+	end
+
 	local IsEncounterInProgress, band, inEncounter = IsEncounterInProgress, bit.band, nil
 	local group = bit.bor(COMBATLOG_OBJECT_AFFILIATION_MINE, COMBATLOG_OBJECT_AFFILIATION_PARTY, COMBATLOG_OBJECT_AFFILIATION_RAID)
 
@@ -1346,7 +1400,13 @@ do
 
 	function combatLog(_, _, _, event, _, srcGUID, source, srcFlags, _, _, _, _, _, spellId)
 		if source and (event == "SPELL_CAST_SUCCESS" or event == "SPELL_RESURRECT") and allSpells[spellId] and band(srcFlags, group) ~= 0 then
-			if chargeSpells[spellId] then
+			if combatResSpells[spellId] and inEncounter then
+				return
+			elseif petSpells[spellId] then
+				source, srcGUID = getPetOwner(source, srcGUID)
+			elseif spellId == 95750 then -- Combat Soulstone, funnel it via normal Soulstone
+				spellId = 20707
+			elseif chargeSpells[spellId] then
 				local charges, maxCharges, start, duration = GetSpellCharges(spellId)
 				if charges then -- your spell
 					if charges == 0 then
@@ -1355,19 +1415,29 @@ do
 				elseif not module:IsOnCD(source, spellId) then -- guess cd, nothing displayed so assume it's the first charge
 					module:Cooldown(source, spellId, getCooldown(srcGUID, spellId))
 				end
-			else
-				module:Cooldown(source, spellId, getCooldown(srcGUID, spellId))
+				return
 			end
+			module:Cooldown(source, spellId, getCooldown(srcGUID, spellId))
 		end
 
-		if not inEncounter and IsEncounterInProgress() then
-			inEncounter = true
-		elseif inEncounter and not IsEncounterInProgress() then
-			inEncounter = nil
-			for bar in next, module:GetBars() do
-				local spell = bar:Get("ora3cd:spellid")
-				if allSpells[spell] > 180 and spell ~= 20608 then -- reset +3min cds (except Reincarnation)
-					bar:Stop()
+		if IsInRaid() then
+			if not inEncounter and IsEncounterInProgress() then
+				inEncounter = true
+				-- reset combat reses
+				for bar in next, module:GetBars() do
+					local spell = bar:Get("ora3cd:spellid")
+					if combatResSpells[spell] then
+						bar:Stop()
+					end
+				end
+			elseif inEncounter and not IsEncounterInProgress() then
+				inEncounter = nil
+				-- reset +3min cds, except Reincarnation
+				for bar in next, module:GetBars() do
+					local spell = bar:Get("ora3cd:spellid")
+					if allSpells[spell] > 180 and spell ~= 20608 then
+						bar:Stop()
+					end
 				end
 			end
 		end

@@ -2,13 +2,13 @@
 AUCTIONATOR_SAVEDVARS = {
 	["_50000"] = 500,
 	["_2000"] = 100,
+	["_200000"] = 1000,
+	["STARTING_DISCOUNT"] = 5,
+	["_1000000"] = 2500,
 	["_5000000"] = 10000,
 	["LOG_DE_DATA_X"] = true,
-	["_1000000"] = 2500,
-	["_10000"] = 200,
 	["_500"] = 5,
-	["STARTING_DISCOUNT"] = 5,
-	["_200000"] = 1000,
+	["_10000"] = 200,
 }
 AUCTIONATOR_PRICING_HISTORY = {
 }
@@ -66,10 +66,10 @@ AUCTIONATOR_PRICE_DATABASE = {
 		},
 		["Blackrock Ore"] = {
 			["mr"] = 22599,
-			["cc"] = 6,
-			["id"] = "109118",
 			["sc"] = 4,
 			["H1464"] = 22599,
+			["cc"] = 6,
+			["id"] = "109118",
 		},
 		["Gorenscale Mesh Cloak"] = {
 			["mr"] = 1450000000,
@@ -129,10 +129,10 @@ AUCTIONATOR_PRICE_DATABASE = {
 		},
 		["Blackrock Fragment"] = {
 			["mr"] = 4099,
-			["cc"] = 6,
-			["id"] = "109992",
 			["sc"] = 4,
 			["H1464"] = 4099,
+			["cc"] = 6,
+			["id"] = "109992",
 		},
 		["Ashelia's Adorned Waistguard"] = {
 			["mr"] = 1200000000,

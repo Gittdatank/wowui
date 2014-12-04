@@ -1,0 +1,19 @@
+------------------------------------------------------------------------
+r36 | funkydude | 2014-12-02 09:55:19 +0000 (Tue, 02 Dec 2014) | 1 line
+Changed paths:
+   A /tags/r36-release (from /trunk:35)
+
+Tagging as r36-release
+------------------------------------------------------------------------
+r35 | funkydude | 2014-12-01 17:35:26 +0000 (Mon, 01 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Core.lua
+
+.bossCore was removed, properly use :GetBossModule.
+------------------------------------------------------------------------
+r34 | funkydude | 2014-10-14 19:49:48 +0000 (Tue, 14 Oct 2014) | 1 line
+Changed paths:
+   M /trunk/BigWigs_Ra-denAssist.toc
+
+bump toc
+------------------------------------------------------------------------

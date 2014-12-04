@@ -424,7 +424,7 @@ function LootMasterML:SendMonitorMessageEx(prio, sendPromoted, sendSpecificRanks
 						local _, _, guildRank = GetGuildInfo(rName)
 						sendMessage = rankList[guildRank+1]
 					end
-					if sendMessage and rName~=LootMaster.UnitName('player') then
+					if sendMessage and not LootMaster.UnitIsUnit(rName,LootMaster.UnitName('player')) then
 						-- Player is online and not self and rank is assistant (1) or leader (2) or masterlooter
 						self:Debug('SendMonitorMessage('..rName..'): ' .. out, true)
 						self:SendCommMessage("EPGPLootMasterML", format("MONITOR:%s", out), "WHISPER", rName, prio)
@@ -448,7 +448,7 @@ function LootMasterML:SendMonitorMessageEx(prio, sendPromoted, sendSpecificRanks
 						local unitOnline = UnitIsConnected(unit)
 						local unitInGuild = UnitIsInMyGuild(unit)
 						local _, _, guildRank = GetGuildInfo(unitName)
-						print(unit, unitName, unitOnline, unitInGuild, guildRank)
+						--print(unit, unitName, unitOnline, unitInGuild, guildRank)
 						if unitName and guildRank and not LootMaster.UnitIsUnit(unitName,'player') and unitOnline and unitInGuild and type(rankList)=='table' and rankList[guildRank+1] then
 								-- Player is online and not self and guildrank is allowed guildrank
 								self:Debug('SendMonitorMessage('..unitName..'): ' .. out, true)
@@ -478,6 +478,8 @@ function LootMasterML:CommandReceived(prefix, message, distribution, sender)
 	command = strupper(command or '');
 	message = message or '';
 	sender = LootMaster.UnAmbiguate(sender)
+
+    self:Debug( format("LootMasterML:CommandReceived %s %s %s", sender or 'nil', command or 'nil', message or 'nil'))
 
 	local sendMonitorUpdate = (distribution == 'WHISPER')
 	local preventMonitorUpdate = not sendMonitorUpdate;
@@ -610,18 +612,20 @@ function LootMasterML:CommandReceived(prefix, message, distribution, sender)
         local monArgs = self:ParseMonitorMessage(message)
         local monCmd = tremove(monArgs, 1)
 
+        self:Debug( format("MONITOR RECEIVED cmd:%s message: %s", monCmd or 'nil', message or 'nil'))
+
         if monCmd == 'ADDLOOT' then
 
             local itemLink, itemName, itemIdentifier, gpvalue, ilevel, itemBind, itemRarity, itemTexture, itemEquipLoc, gpvalue2, quantity, classAutoPassList, hideResponses, numButtons, buttons = unpack(monArgs)
 
             if not self.lootTable then self.lootTable={} end;
 
+            local itemID = itemIdentifier
+
             if self.lootTable[itemID] then
                 -- Is someone tinkering? the loot already exists. Return
                 return;
             end
-
-            local itemID = LootMasterML:GetItemIDFromIdent(itemIdentifier)
 
             itemRarity = tonumber(itemRarity) or 0
 
@@ -963,6 +967,7 @@ function LootMasterML:AskCandidateIfNeeded( link, candidate, allowBids )
 end
 
 function LootMasterML:LootLinkToIdent(itemLink)
+  if (itemLink == nil) then return nil end
   local _,_,itemID = strfind(itemLink, 'Hitem:(%d+)')
   local _,_,bonusID= strfind(itemLink, 'Hitem:[^\124h]+:(%d+)\124h')
   local itemIdentifier = itemID
@@ -1221,11 +1226,11 @@ function LootMasterML:GetLoot( link )
 
     if self.lootTable[link] then return self.lootTable[link] end;
 
-    local _,_,itemID = strfind(link, 'Hitem:(%d+)');
-    if not itemID then self:Debug('getloot: !itemID: ' .. tostring(itemID)); return end;
-    if not self.lootTable[itemID] then self:Debug('getloot: !lootTable[itemID]: ' .. tostring(itemID)); return end;
+    local itemIdentifier = self:LootLinkToIdent(link)
+    if not itemIdentifier then self:Debug('getloot: !itemIdentifier: ' .. tostring(itemIdentifier)); return end;
+    if not self.lootTable[itemIdentifier] then self:Debug('getloot: !lootTable[itemIdentifier]: ' .. tostring(itemIdentifier)); return end;
 
-	return self.lootTable[itemID];
+	return self.lootTable[itemIdentifier];
 end
 
 --[[
@@ -1237,11 +1242,11 @@ function LootMasterML:GetLootID( link )
 
     if self.lootTable[link] then return link end;
 
-    local _,_,itemID = strfind(link, 'Hitem:(%d+)');
-    if not itemID then self:Debug('getlootid: !itemID: ' .. tostring(itemID)); return end;
-    if not self.lootTable[itemID] then self:Debug('getloot: !lootTable[itemID]: ' .. tostring(itemID)); return end;
+    local itemIdentifier = self:LootLinkToIdent(link)
+    if not itemIdentifier then self:Debug('getlootid: !itemIdentifier: ' .. tostring(itemIdentifier)); return end;
+    if not self.lootTable[itemIdentifier] then self:Debug('getloot: !lootTable[itemIdentifier]: ' .. tostring(itemIdentifier)); return end;
 
-	return itemID;
+	return itemIdentifier;
 end
 
 function LootMasterML:GetItemIDFromLink( link )
@@ -1417,7 +1422,7 @@ function LootMasterML:AddCandidate( loot, candidate )
 
     -- No class found, try looking it up another way.
     if not candidateClass then
-        candidateClassLocalized, candidateClass = UnitClass(LootMaster.Ambiguate(candidate, "none"));
+        candidateClassLocalized, candidateClass = UnitClass(LootMaster.Ambiguate(candidate,"none"));
         -- Update the reverse class lookup table
         if candidateClassLocalized and candidateClass then
             LootMaster:UpdateClassLocalizer(candidateClassLocalized, candidateClass)
@@ -1642,6 +1647,7 @@ function LootMasterML:SendCandidateListToMonitors( itemID )
     local candidata = {}
 
     for candidate, cIndex in pairs(loot.candidates) do
+        self:Debug('SendCandidateListToMonitors' .. candidate)
         local roll = self:GetCandidateData( itemID, candidate, 'roll' ) or 0
         --local response = tonumber(self:GetCandidateData( itemID, candidate, 'response' )) or LootMaster.RESPONSE.NOTANNOUNCED
         tinsert( candidata, candidate );
@@ -1896,7 +1902,7 @@ function LootMasterML:GiveLootToCandidate( link, candidate, lootType, gp )
 	for sID = 1, GetNumLootItems() do
 		local sLink = GetLootSlotLink(sID);
 		if sLink ~= nil then
-			local sItemID = tostring(self:GetItemIDFromLink(sLink))
+			local sItemID = tostring(self:LootLinkToIdent(sLink))
 			local itemID = loot.id
 			if sItemID and sItemID==itemID then
 				slotID = sID
@@ -2158,14 +2164,14 @@ function LootMasterML:OPEN_MASTER_LOOT_LIST()
 	-- local lootIcon, lootName, lootQuantity, rarity = GetLootSlotInfo(LootFrame.selectedSlot);
 	local _, lootName, lootQuantity, rarity = GetLootSlotInfo(LootFrame.selectedSlot);
 	local link = GetLootSlotLink(LootFrame.selectedSlot)
-    local itemID = self:GetItemIDFromLink(link)
+    local itemID = self:LootLinkToIdent(link)
 
     -- Traverse all lootslots and see how many of this item we have in total.
     local totalQuantity = 0
     local numLootSlots = GetNumLootItems();
     for slot=1, numLootSlots do
         local slotLink = GetLootSlotLink(slot);
-        local slotItemID = self:GetItemIDFromLink(slotLink)
+        local slotItemID = self:LootLinkToIdent(slotLink)
         if slotItemID and slotItemID==itemID then
 
             local _, _, slotQ, _ = GetLootSlotInfo(slot);

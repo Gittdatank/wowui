@@ -65,7 +65,7 @@ function TitanPanelGuildButton_ComputeOnlineGuildMembers()
 		NumGuild = GetNumGuildMembers();
 		for guildIndex=1, NumGuild do
 			guild_name, guild_rank, guild_rankIndex, guild_level, guild_class, guild_zone, guild_note, guild_officernote, guild_online, guild_status = GetGuildRosterInfo(guildIndex);
-			if ( guild_online == 1 ) then
+			if ( guild_online ) then
 				numGuildOnline = numGuildOnline + 1;
 				if (TitanGetVar(TITAN_GUILD_ID, "FilterMyLevel") or TitanGetVar(TITAN_GUILD_ID, "FilterMyZone") or TitanGetVar(TITAN_GUILD_ID, "FilterClasses")) then
 					if (TitanPanelGuildButton_IsPassFilter(guild_zone, guild_level, guild_class)) then

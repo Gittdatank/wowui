@@ -491,6 +491,8 @@ SexyMap2DB = {
 				["LibDBIcon10_AskMrRobot"] = -19.337597034767,
 				["LibDBIcon10_hagakure_cooldowns"] = 225.444597263165,
 				["LibDBIcon10_Paste"] = -30.4576747713552,
+				["GarrisonLandingPageMinimapButton"] = 216.84346353552,
+				["LibDBIcon10_FollowerLocationInfo"] = 185.227024920614,
 				["QueueStatusMinimapButton"] = 186.098374418264,
 			},
 			["TEMP"] = true,

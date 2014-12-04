@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
--- Tidy Plates: ClassicPlates 2.1 (6.0.3) - Nov/12/2014.
+-- Tidy Plates: ClassicPlates 2.2 (6.0.3) - Dic/01/2014.
 -- Author - delabarra
 -- Special thanks to Asethien.
 -------------------------------------------------------------------------------
@@ -56,7 +56,7 @@ StyleDefault.castbar = {
 	texture =					path.."StatusBar",
 	width = 86,
 	height = 7,
-	x = 18,
+	x = 20,
 	y = -10,
 	orientation = "HORIZONTAL",
 }
@@ -108,7 +108,7 @@ StyleDefault.target = {
 StyleDefault.name = {
 	typeface =					font,
 	size = 12,
-	y = 17,
+	y = 19,
 	x = 40,
 	align = "LEFT",
 	anchor = "LEFT",
@@ -142,7 +142,7 @@ StyleDefault.spelltext = {
 	typeface =					font,
 	size = 9,
 	x = 20,
-	y = -9,
+	y = -10,
 	width = 70,
 	align = "CENTER",
 	vertical = "BOTTOM",
@@ -155,15 +155,15 @@ StyleDefault.spellicon = {
 	width =8,
 	height = 9,
 	x = 7,
-	y = -11,
+	y = -10,
 	anchor = "RIGHT",
 }
 
 StyleDefault.raidicon = {
 	width = 14,
 	height = 14,
-	x = 5,
-	y = 30,
+	x = -58,
+	y = 28,
 	anchor = "CENTER",
 }
 
@@ -192,8 +192,6 @@ StyleTextOnly.eliteicon.texture = EmptyTexture
 StyleTextOnly.name.show = true
 StyleTextOnly.name.align = "CENTER"
 StyleTextOnly.name.anchor = "CENTER"
---StyleTextOnly.name.flags = "OUTLINE"
---StyleTextOnly.name.vertical = "BOTTOM"
 StyleTextOnly.name.size = 16
 StyleTextOnly.name.width = 400
 StyleTextOnly.name.height = 40
@@ -205,10 +203,8 @@ StyleTextOnly.customtext.anchor = "CENTER"
 StyleTextOnly.customtext.vertical = "BOTTOM"
 StyleTextOnly.customtext.size = 13
 StyleTextOnly.customtext.width = 500
---StyleTextOnly.customtext.height = 
 StyleTextOnly.customtext.x = 1
 StyleTextOnly.customtext.y = -20
---StyleTextOnly.customtext.flags = "OUTLINE"
 StyleTextOnly.level.show = false
 StyleTextOnly.castbar.y = -28
 StyleTextOnly.castbar.x = 0
@@ -224,6 +220,8 @@ StyleTextOnly.skullicon.show = false
 StyleTextOnly.eliteicon.show = false
 StyleTextOnly.raidicon.x = 0
 StyleTextOnly.raidicon.y = 10
+StyleTextOnly.raidicon.height = 14
+StyleTextOnly.raidicon.width = 14
 StyleTextOnly.raidicon.anchor = "TOP"
 StyleTextOnly.highlight.texture = EmptyTexture
 StyleTextOnly.target.texture = EmptyTexture
@@ -233,17 +231,13 @@ StyleTextOnly.target.height = 128
 StyleTextOnly.target.anchor = "CENTER"
 
 local WidgetConfig = {}
---WidgetConfig.ClassIcon = { anchor = "LEFT", x = -10, y = -1 } 		-- Left side.
---WidgetConfig.TotemIcon = { anchor = "LEFT", x = -10, y = -1 }			-- Left side.
---WidgetConfig.ThreatWheelWidget = { anchor = "RIGHT", x = 50, y = 0 }	-- Right side.
-WidgetConfig.ClassIcon = { anchor = "RIGHT", x = 37, y = -1 } 			-- Right side.
-WidgetConfig.TotemIcon = { anchor = "RIGHT", x = 37, y = -1 } 			-- Right side.
-WidgetConfig.ThreatWheelWidget = { anchor = "LEFT", x = -50, y = 0 }	-- Left side.
-WidgetConfig.ThreatLineWidget = {  x = 0 ,y = -11 }
-WidgetConfig.ComboWidget = { x = 8 ,y = -38 }							-- Below castbar.
---WidgetConfig.ComboWidget = { anchor = "CENTER", x = 8 ,y = -2 }		-- Displayed over health bar´s bottom.
+WidgetConfig.ClassIcon = { anchor = "RIGHT", x = 25, y = -1 }
+WidgetConfig.TotemIcon = { anchor = "RIGHT", x = 25, y = -1 }
+WidgetConfig.ThreatWheelWidget = { anchor = "LEFT", x = -50, y = 0 }
+WidgetConfig.ThreatLineWidget = {  x = 0 ,y = -10 }
+WidgetConfig.ComboWidget = { x = 8 ,y = -38 }
 WidgetConfig.RangeWidget = { anchor = "BOTTOM", x = 0 ,y = 0 }
-WidgetConfig.DebuffWidget = { anchor = "TOP" , x = 21 ,y = 32 }
+WidgetConfig.DebuffWidget = { anchor = "TOP" , x = 21 ,y = 20 }
 
 local DamageThemeName = "Classic/|cFFFF4400Damage"
 local TankThemeName = "Classic/|cFF3782D1Tank"

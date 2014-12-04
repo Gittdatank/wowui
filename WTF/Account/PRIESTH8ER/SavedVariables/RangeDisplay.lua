@@ -101,18 +101,18 @@ RangeDisplayDB3 = {
 				["focus"] = {
 					["enabled"] = false,
 				},
-				["arena5"] = {
-				},
 				["pet"] = {
 				},
 				["mouseover"] = {
 					["y"] = -277.784861528928,
-					["relPoint"] = "RIGHT",
+					["font"] = "SCT Emblem",
 					["point"] = "RIGHT",
 					["mouseAnchor"] = false,
-					["x"] = -65.9838804260981,
+					["relPoint"] = "RIGHT",
 					["enabled"] = false,
-					["font"] = "SCT Emblem",
+					["x"] = -65.9838804260981,
+				},
+				["arena5"] = {
 				},
 				["arena4"] = {
 				},
@@ -274,11 +274,11 @@ RangeDisplayDB3 = {
 				["mouseover"] = {
 					["mouseAnchor"] = false,
 					["y"] = -277.784861528928,
-					["relPoint"] = "RIGHT",
-					["point"] = "RIGHT",
 					["font"] = "SCT Emblem",
-					["enabled"] = false,
+					["point"] = "RIGHT",
 					["x"] = -65.9838804260981,
+					["enabled"] = false,
+					["relPoint"] = "RIGHT",
 				},
 				["arena2"] = {
 				},

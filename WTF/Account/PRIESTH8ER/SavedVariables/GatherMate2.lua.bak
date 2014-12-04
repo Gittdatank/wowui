@@ -1,0 +1,35 @@
+
+GatherMate2DB = {
+	["global"] = {
+		["data_version"] = 2,
+	},
+	["profileKeys"] = {
+		["Git - Arthas"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}
+GatherMate2HerbDB = {
+}
+GatherMate2MineDB = {
+}
+GatherMate2FishDB = {
+}
+GatherMate2GasDB = {
+}
+GatherMate2TreasureDB = {
+}
+GatherMate2ArchaeologyDB = {
+}
+GatherMate2LoggingDB = {
+	[950] = {
+		[4214568400] = 702,
+		[4125615100] = 702,
+		[4781555600] = 702,
+		[5114502900] = 702,
+		[4462611600] = 702,
+		[5211541800] = 702,
+	},
+}

@@ -69,7 +69,7 @@ BigWigs: enabled
 VEM-Core: disabled
 RaidAchievement: enabled
 MarketWatcher: disabled
-HandyNotes: enabled
+HandyNotes: disabled
 TheUndermineJournalGE: disabled
 LibStub: disabled
 ArkInventory: enabled
@@ -83,7 +83,7 @@ epgp: enabled
 epgp_lootmaster: enabled
 epgp_lootmaster_ml: enabled
 MoveAnything: enabled
-FriendGroups: disabled
+FriendGroups: enabled
 AutoRez: enabled
 Bagnon_Facade: disabled
 BigWigs_Classic: enabled
@@ -96,4 +96,7 @@ BigWigs_WrathOfTheLichKing: enabled
 BigWigs_Ra-denAssist: disabled
 CombatTime: enabled
 GridUnitMenu: enabled
-HandyNotes_DraenorTreasures: enabled
+HandyNotes_DraenorTreasures: disabled
+GatherMate2: enabled
+GatherMate2_Data: enabled
+TradeForwarder: disabled

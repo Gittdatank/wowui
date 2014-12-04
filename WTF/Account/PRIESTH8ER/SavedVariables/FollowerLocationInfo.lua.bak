@@ -1,0 +1,23 @@
+
+FollowerLocationInfoDB = {
+	["BrokerTitle_Coords"] = false,
+	["ShowHiddenFollowers"] = false,
+	["ListOpen"] = true,
+	["ExternalURL"] = "WoWHead",
+	["Minimap"] = {
+		["enabled"] = true,
+	},
+	["ShowFollowerID"] = true,
+	["ShowCoordsFrame"] = true,
+	["BrokerTitle_NumFollowers"] = true,
+	["language"] = false,
+	["ShowCollectedFollower"] = false,
+}
+FLI_tmpDB = {
+	["ability_locales"] = {
+		["116"] = {
+			["enUS"] = {
+			},
+		},
+	},
+}

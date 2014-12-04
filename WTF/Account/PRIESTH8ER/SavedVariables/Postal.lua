@@ -13,13 +13,13 @@ Postal3DB = {
 		["Cowbeary - Azuremyst"] = "Cowbeary - Azuremyst",
 		["Raweo - Azuremyst"] = "Raweo - Azuremyst",
 		["Ezyn - Azuremyst"] = "Ezyn - Azuremyst",
-		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
+		["Olebe - Azuremyst"] = "Olebe - Azuremyst",
 		["Gittdabank - Arthas"] = "Gittdabank - Arthas",
 		["Worgit - Moon Guard"] = "Worgit - Moon Guard",
 		["Got - Arthas"] = "Got - Arthas",
 		["Gitt - Cho'gall"] = "Gitt - Cho'gall",
 		["Giit - Cho'gall"] = "Giit - Cho'gall",
-		["Olebe - Azuremyst"] = "Olebe - Azuremyst",
+		["Spih - Cho'gall"] = "Spih - Cho'gall",
 		["Burk - Arthas"] = "Burk - Arthas",
 		["Gitt - Arthas"] = "Gitt - Arthas",
 		["Git - Azuremyst"] = "Git - Azuremyst",
@@ -28,7 +28,7 @@ Postal3DB = {
 		["Evn - Azuremyst"] = "Evn - Azuremyst",
 		["Git - Cho'gall"] = "Git - Cho'gall",
 		["Greny - Azuremyst"] = "Greny - Azuremyst",
-		["Spih - Cho'gall"] = "Spih - Cho'gall",
+		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
 		["Lihte - Cho'gall"] = "Lihte - Cho'gall",
 		["Gimm - Cho'gall"] = "Gimm - Cho'gall",
 		["Spih - Arthas"] = "Spih - Arthas",
@@ -188,7 +188,12 @@ Postal3DB = {
 				},
 			},
 		},
-		["Giitt - Feathermoon"] = {
+		["Olebe - Azuremyst"] = {
+			["BlackBook"] = {
+				["recent"] = {
+					"Git", -- [1]
+				},
+			},
 		},
 		["Gittdabank - Arthas"] = {
 			["BlackBook"] = {
@@ -229,10 +234,10 @@ Postal3DB = {
 				},
 			},
 		},
-		["Olebe - Azuremyst"] = {
+		["Spih - Cho'gall"] = {
 			["BlackBook"] = {
 				["recent"] = {
-					"Git", -- [1]
+					"Lihte|Cho'gall|Horde", -- [1]
 				},
 			},
 		},
@@ -325,12 +330,7 @@ Postal3DB = {
 				},
 			},
 		},
-		["Spih - Cho'gall"] = {
-			["BlackBook"] = {
-				["recent"] = {
-					"Lihte|Cho'gall|Horde", -- [1]
-				},
-			},
+		["Giitt - Feathermoon"] = {
 		},
 		["Lihte - Cho'gall"] = {
 			["BlackBook"] = {

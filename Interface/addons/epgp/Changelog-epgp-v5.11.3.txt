@@ -1,0 +1,12 @@
+tag v5.11.3
+7e2666726aaaae0f76c1a9628cf194811781946e
+Chip Turner <cturner@pattern.net>
+2014-12-01 09:51:24 -0800
+
+tweak tertiary stat price adjustments
+
+
+--------------------
+
+Chip Turner:
+	- reduce GP cost fluff tertiary stats; they have no material raid impact so they should have no GP cost

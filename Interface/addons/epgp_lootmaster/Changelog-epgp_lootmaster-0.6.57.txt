@@ -1,0 +1,32 @@
+------------------------------------------------------------------------
+r275 | mackatack | 2014-12-03 10:12:57 +0000 (Wed, 03 Dec 2014) | 1 line
+Changed paths:
+   A /tags/0.6.57 (from /trunk:274)
+
+Fixed major bug while looting a boss. Thanks to Disokus for reporting
+------------------------------------------------------------------------
+r274 | mackatack | 2014-12-03 10:07:30 +0000 (Wed, 03 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/ml/lootmaster_ml.lua
+
+Some lootslots are already empty while looting because it's autolooted. Empty slots return nil itemlinks, LootLinkToIdent() should correctly handle nil itemlinks and just return nil.
+------------------------------------------------------------------------
+r272 | mackatack | 2014-12-02 17:36:18 +0000 (Tue, 02 Dec 2014) | 2 lines
+Changed paths:
+   M /trunk/lootmaster_core.lua
+   M /trunk/ml/lootmaster_ml.lua
+
+Fixed voting and monitoring system
+Fixed probable bug distributing heroic items
+------------------------------------------------------------------------
+r270 | mackatack | 2014-11-30 11:36:03 +0000 (Sun, 30 Nov 2014) | 4 lines
+Changed paths:
+   M /trunk/lootmaster_core.lua
+   M /trunk/ml/lootmaster_ml.lua
+   M /trunk/ml/lootmaster_ml_ui.lua
+
+- Always show all the buttons for every item in queue, dont have selected button
+- Support WoD drops of same itemID but different bonus ID
+- Disable EPGP GP popup automatically
+- TOC update
+------------------------------------------------------------------------

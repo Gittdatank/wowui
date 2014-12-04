@@ -130,6 +130,7 @@ LoggerHeadDB = {
 					},
 					["Auchindoun"] = {
 						[2] = true,
+						[8] = true,
 					},
 					["FW Horde Garrison Level 1"] = {
 						false, -- [1]
@@ -211,14 +212,14 @@ LoggerHeadDB = {
 					},
 				},
 				["none"] = {
+					["Tol Barad"] = {
+						true, -- [1]
+					},
 					["Pandaria"] = {
 						[0] = false,
 					},
 					["Kalimdor"] = {
 						[0] = false,
-					},
-					["Tol Barad"] = {
-						true, -- [1]
 					},
 				},
 				["arena"] = {
@@ -283,8 +284,18 @@ LoggerHeadDB = {
 						[4] = true,
 						[7] = true,
 					},
-					["Icecrown Citadel"] = {
-						[3] = true,
+					["Highmaul"] = {
+						[14] = true,
+						[15] = true,
+					},
+					["Throne of Thunder"] = {
+						nil, -- [1]
+						nil, -- [2]
+						true, -- [3]
+						true, -- [4]
+						true, -- [5]
+						true, -- [6]
+						true, -- [7]
 					},
 					["Throne of the Four Winds"] = {
 						[3] = true,
@@ -303,14 +314,8 @@ LoggerHeadDB = {
 						[3] = true,
 						[4] = true,
 					},
-					["Throne of Thunder"] = {
-						nil, -- [1]
-						nil, -- [2]
-						true, -- [3]
-						true, -- [4]
-						true, -- [5]
-						true, -- [6]
-						true, -- [7]
+					["Icecrown Citadel"] = {
+						[3] = true,
 					},
 					["Blackwing Descent"] = {
 						[3] = true,

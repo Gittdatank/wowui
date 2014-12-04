@@ -7,17 +7,16 @@ BLCDDB = {
 		["Gitt - Arthas"] = "Default",
 		["Evyyn - Azuremyst"] = "Default",
 		["Git - Arthas"] = "Git - Mar 2014",
+		["Greny - Azuremyst"] = "Default",
 		["Burk - Arthas"] = "Default",
-		["Git - Cho'gall"] = "Default",
 		["Got - Arthas"] = "Got - Dec 2014",
 		["Giit - Cho'gall"] = "Default",
-		["Greny - Azuremyst"] = "Default",
+		["Git - Cho'gall"] = "Default",
 		["Spih - Arthas"] = "Default",
 	},
 	["profiles"] = {
 		["Git - Mar 2014"] = {
-			["scale"] = 1.32,
-			["yOffset"] = -70.0499267578125,
+			["classcolorbars"] = true,
 			["cooldown"] = {
 				["WARL_SORE"] = false,
 				["DRU_RE"] = false,
@@ -27,6 +26,7 @@ BLCDDB = {
 				["PRI_HYOFHO"] = false,
 				["PAL_HAOFPR"] = true,
 			},
+			["yOffset"] = -70.0499267578125,
 		},
 		["Default"] = {
 			["scale"] = 1.32,

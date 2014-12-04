@@ -360,8 +360,8 @@ LightHeaded_Data_D: disabled
 LightHeaded_Data_E: disabled
 LightHeaded_Data_NPC: disabled
 LightHeaded_Data_QIDNames: disabled
-GatherMate2: disabled
-GatherMate2_Data: disabled
+GatherMate2: enabled
+GatherMate2_Data: enabled
 PhoenixStyleMod_CataMiniRaids: enabled
 TankWarnings: disabled
 TidyPlates_Graphite: enabled
@@ -608,7 +608,7 @@ ElvUI_Config: disabled
 ElvUI: disabled
 Bagnon_Scrap: disabled
 Bagnon_Facade: disabled
-FriendGroups: disabled
+FriendGroups: enabled
 oqueue: disabled
 LibCandyBar-3.0: enabled
 LibDDI-1.0: enabled
@@ -623,14 +623,14 @@ ArkInventoryRules_Example: enabled
 BlockChinese: enabled
 VEM-Core: disabled
 MarketWatcher: disabled
-HandyNotes: enabled
+HandyNotes: disabled
 TheUndermineJournalGE: disabled
 ArkInventory: enabled
 ArkInventoryConfig: enabled
 ArkInventoryRules: enabled
 Auctionator: enabled
 autoturnin: enabled
-TradeForwarder: enabled
+TradeForwarder: disabled
 MoveAnything: enabled
 BigWigs_Classic: enabled
 BigWigs_Cataclysm: enabled
@@ -641,4 +641,4 @@ BigWigs_Highmaul: enabled
 BigWigs_WrathOfTheLichKing: enabled
 BigWigs_Ra-denAssist: disabled
 CombatTime: enabled
-HandyNotes_DraenorTreasures: enabled
+HandyNotes_DraenorTreasures: disabled

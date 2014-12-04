@@ -3,15 +3,7 @@ GUPPET_SAVEDDATA = {
 	["MultiGround"] = {
 		["Total"] = 0,
 	},
-	["Multi"] = {
-		["TotalWeight"] = {
-			["BattleGrounds"] = 0,
-			["Instances"] = 0,
-			["Shrine of Two Moons"] = 0,
-			["Arenas"] = 0,
-			["Cities"] = 0,
-			["Global World"] = 0,
-		},
+	["Unknown"] = {
 		["Total"] = 0,
 	},
 	["Aquatic"] = {
@@ -26,20 +18,6 @@ GUPPET_SAVEDDATA = {
 		["Total"] = 0,
 	},
 	["Fly"] = {
-		["TotalWeight"] = {
-			["BattleGrounds"] = 0,
-			["Instances"] = 0,
-			["Shrine of Two Moons"] = 0,
-			["Arenas"] = 0,
-			["Cities"] = 0,
-			["Global World"] = 0,
-		},
-		["Total"] = 0,
-	},
-	["Unknown"] = {
-		["Total"] = 0,
-	},
-	["Ground"] = {
 		["TotalWeight"] = {
 			["BattleGrounds"] = 0,
 			["Instances"] = 0,
@@ -672,6 +650,28 @@ GUPPET_SAVEDDATA = {
 		},
 		["Total"] = 47,
 	},
+	["Ground"] = {
+		["TotalWeight"] = {
+			["BattleGrounds"] = 0,
+			["Instances"] = 0,
+			["Shrine of Two Moons"] = 0,
+			["Arenas"] = 0,
+			["Cities"] = 0,
+			["Global World"] = 0,
+		},
+		["Total"] = 0,
+	},
+	["Multi"] = {
+		["TotalWeight"] = {
+			["BattleGrounds"] = 0,
+			["Instances"] = 0,
+			["Shrine of Two Moons"] = 0,
+			["Arenas"] = 0,
+			["Cities"] = 0,
+			["Global World"] = 0,
+		},
+		["Total"] = 0,
+	},
 }
 GUPPET_SAVEDLOCATIONS = {
 	["BattleGrounds"] = 40,
@@ -708,6 +708,16 @@ GUPPET_OPTIONS = {
 	["NewVersion"] = 0,
 	["PreviewFrameSpeed"] = 1,
 	["AutoDismount"] = true,
+	["Mode"] = "Expert_",
+	["MinimapButton"] = {
+		["Show"] = false,
+		["Radius"] = 78,
+		["Position"] = 355,
+		["xOffset"] = 0,
+		["RelativePoint"] = "",
+		["Lock"] = true,
+		["yOffset"] = 0,
+	},
 	["AutoCompanion"] = {
 		["Enabled"] = false,
 		["PetOfTheDay"] = {
@@ -723,18 +733,8 @@ GUPPET_OPTIONS = {
 		["City"] = true,
 		["DismissMounted"] = false,
 		["Resummon"] = 0,
-		["Arena"] = true,
-		["Delay"] = 2,
 		["Raid"] = true,
+		["Delay"] = 2,
+		["Arena"] = true,
 	},
-	["MinimapButton"] = {
-		["Show"] = false,
-		["Radius"] = 78,
-		["Position"] = 355,
-		["xOffset"] = 0,
-		["RelativePoint"] = "",
-		["Lock"] = true,
-		["yOffset"] = 0,
-	},
-	["Mode"] = "Expert_",
 }

@@ -1,5 +1,5 @@
 ﻿-- version
-TITAN_GUILD_VERSION = "5.3.0.0";
+TITAN_GUILD_VERSION = "6.0.3.1";
 --[[
 
 	Titan Panel [Guild]: A simple guild list for the Titan Panel AddOn.
@@ -52,7 +52,7 @@ masterTableSimple = {};
 -- level range for filtering on level +/- TITAN_GUILD_LEVEL_RANGE
 TITAN_GUILD_LEVEL_RANGE = 5;
 -- for MoP
-TITAN_GUILD_LEVEL_MAX_CAP = 90
+TITAN_GUILD_LEVEL_MAX_CAP = 100
 
 -- paging vars
 currIndex = 1;
@@ -303,7 +303,7 @@ function TitanPanelGuildButton_GetTooltipText()
 			if (not guild_zone) then
 				guild_zone = " . ";
 			end
-			if ( guild_online == 1 ) then
+			if ( guild_online ) then
 				-- check for player zone and level filters
 				if TitanPanelGuildButton_IsPassFilter(guild_zone, guild_level, guild_class) then
 					if (TitanGetVar(TITAN_GUILD_ID, "ShowTooltipLevel")) then
@@ -721,7 +721,7 @@ function TitanPanelGuildButton_ConstructGuildTable()
 			-- guild rank index might be zero based, so add 1
 			g_rankIndex = g_rankIndex + 1;
 			-- check if online before adding to table
-			if (g_online == 1) then
+			if ( g_online ) then
 				-- check filters before adding to table
 				if TitanPanelGuildButton_IsPassFilter(g_zone, g_level, g_class) then
 					if (g_rankIndex == rIndex) then
@@ -752,7 +752,7 @@ function TitanPanelGuildButton_ConstructSimpleGuildTable()
 	for gIndex=1, guildNum do
 		g_name, g_rank, g_rankIndex, g_level, g_class, g_zone, g_note, g_officernote, g_online, g_status = GetGuildRosterInfo(gIndex);
 		-- check if online before adding to table
-		if (g_online == 1) then
+		if ( g_online ) then
 			-- check filters before adding to table
 			if TitanPanelGuildButton_IsPassFilter(g_zone, g_level, g_class) then
 				-- insert into a flat table for rendering the simple menus

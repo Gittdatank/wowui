@@ -17,8 +17,8 @@ AutoTurnInCharacterDB = {
 	["completeonly"] = false,
 	["stat"] = {
 	},
-	["version"] = "4.5.N",
 	["tournament"] = 2,
+	["version"] = "4.5.N",
 	["debug"] = false,
 	["lootreward"] = 1,
 	["all"] = 1,

@@ -15,7 +15,7 @@ SBF.UnitGUID = function(self, unit)
   if UnitExists(unit) then
     guids[unit] = UnitGUID(unit)
     guids[UnitGUID(unit)] = unit
-  else 
+  else
     if guids[unit] then
       guids[guids[unit]] = nil
     end
@@ -25,16 +25,8 @@ end
 
 local t
 
-SBF.CombatLog = function(self, wat, _, timestamp, event, hideCaster, sourceGUID, sourceName, sourceFlags, destGUID, destName, destFlags, arg1, arg2, arg3, arg4, arg5, arg6)
-  if (event == "SPELL_DISPEL") and guids[sourceGUID] and (band(ssub(sourceGUID, 1, 5), "0x00F") == 0) then
-    -- arg1 = my spell id, arg2 = my spell name, arg3 = my spell school, arg4 = dispelled spell id, arg5 = dispelled spell name. arg6 = dispelled aura type
-    --if SBF.db.global.spells[arg5] then
-    --  if not SBF.db.global.spells[arg5][6] then
-    --    SBF.db.global.spells[arg5][6] = {}
-    --  end
-    --  self:InsertUnique(SBF.db.global.spells[arg5][6], select(2, UnitClass(guids[sourceGUID])))
-    --end
-  elseif sfind(event, "SPELL_AURA") and self.ttunit and UnitExists("targettarget") and not self.inCombat then
+SBF.CombatLog = function(self, event, _, sourceGUID, sourceName, sourceFlags, destGUID, destName, destFlags, destFlags2)
+  if sfind(event, "SPELL_AURA") and self.ttunit and UnitExists("targettarget") and not self.inCombat then
     self:ForceGet(nil, "targettarget")
   elseif (destGUID == guids["player"]) then
     if sfind(event, "ENCHANT") then

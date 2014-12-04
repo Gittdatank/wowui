@@ -224,8 +224,7 @@ sbf.FinishSetup = function(self)
   self:RegisterEvent("RAID_ROSTER_UPDATE", "RaidChanged")
   self:RegisterEvent("PLAYER_REGEN_DISABLED", "CombatStatus", true)
   self:RegisterEvent("PLAYER_REGEN_ENABLED", "CombatStatus", false)
-  self:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED", "CombatLog", false)
-
+  self:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED", "CombatLog")
   self.db.RegisterCallback(self, "OnProfileChanged", "ProfileChanged", self)
 
   self.checkVisibility = false
