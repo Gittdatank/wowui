@@ -1,11 +1,12 @@
 local mod	= DBM:NewMod(1128, "DBM-Highmaul", nil, 477)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 11928 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 11975 $"):sub(12, -3))
 mod:SetCreatureID(78714)
 mod:SetEncounterID(1721)
 mod:SetZone()
 --mod:SetUsedIcons(7)
+mod:SetHotfixNoticeRev(11928)
 
 mod:RegisterCombat("combat")
 
@@ -52,7 +53,7 @@ local countdownSweeper				= mod:NewCountdown(39, 177776)
 local countdownTiger				= mod:NewCountdown("Alt110", "ej9396", not mod:IsTank())--Tigers never bother tanks so not tanks probelm
 local countdownImpale				= mod:NewCountdown("Alt35", 159113, mod:IsTank())--Dead on unless delayed by a fixate
 
-local voiceBerserkerRush			= mod:NewVoice(158986)
+--local voiceBerserkerRush			= mod:NewVoice(158986)
 
 mod:AddRangeFrameOption(4, 159386)
 
@@ -110,7 +111,7 @@ function mod:SPELL_AURA_APPLIED(args)
 		if args:IsPlayer() then
 			specWarnBerserkerRush:Show(firePillar)
 			yellBerserkerRush:Yell()
-			voiceBerserkerRush:Play("now")
+			--voiceBerserkerRush:Play("159202f")--They may rename the file name now that I've scrapped organizing sounds in favor of easier development.
 		else
 			specWarnBerserkerRushOther:Show(args.destName)
 		end

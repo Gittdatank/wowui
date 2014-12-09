@@ -11,7 +11,7 @@ local candy = LibStub("LibCandyBar-3.0")
 local media = LibStub("LibSharedMedia-3.0")
 local LGIST = LibStub("LibGroupInSpecT-1.1")
 
-module.VERSION = tonumber(("$Revision: 833 $"):sub(12, -3))
+module.VERSION = tonumber(("$Revision: 846 $"):sub(12, -3))
 
 --------------------------------------------------------------------------------
 -- Locals
@@ -313,8 +313,7 @@ local spells = {
 		[108508] = 60,  -- Mannoroth's Fury
 		[137587] = 60,  -- Kil'jaden's Cunning
 		-- Pet
-		[19647]  = 24,  -- Felhunter Spell Lock
-		[171138] = 24,  -- Doomguard Shadow Lock
+		[19647]  = 24,  -- Felhunter Spell Lock (Normal, originates from pet)
 	},
 	WARRIOR = {
 		[100]   = 20,   -- Charge
@@ -388,6 +387,7 @@ local spells = {
 		[101545] = 25,  -- Flying Serpent Kick
 		[137562] = 120, -- Nimble Brew
 		[123904] = 180, -- Invoke Xuen, the White Tiger
+		[115295] = 30,  -- Guard
 	},
 }
 
@@ -403,8 +403,9 @@ local combatResSpells = {
 local petSpells = {
 	[90355] = true,  -- Ancient Hysteria
 	[160452] = true, -- Netherwinds
-	[19647] = true,  -- Spell Lock
-	[171138] = true, -- Shadow Lock
+	[171138] = true, -- Doomguard Shadow Lock
+	[115781] = true, -- Observer Optical Blast
+	[19647] = true,  -- Felhunter Spell Lock
 }
 
 local chargeSpells = {
@@ -422,6 +423,16 @@ local chargeSpells = {
 	[100] = true,    -- Charge (2 charges with talent)
 }
 
+local mergeSpells = { -- Used for merging multiple ids into one option
+	[119910] = 19647, -- Felhunter Spell Lock (via Command Demon, originates from player)
+	[132409] = 19647, -- Felhunter Sacrifice, Spell Lock
+	[119911] = 19647, -- Observer Optical Blast (via Command Demon, originates from player)
+	[115781] = 19647, -- Observer Optical Blast (Normal, originates from pet)
+	[171140] = 19647, -- Doomguard Shadow Lock (via Command Demon, originates from player)
+	[171139] = 19647, -- Doomguard Sacrifice, Shadow Lock
+	[95750]  = 20707, -- Combat Soulstone
+}
+
 local allSpells = {}
 local classLookup = {}
 for class, spells in next, spells do
@@ -431,7 +442,19 @@ for class, spells in next, spells do
 	end
 end
 allSpells[95750] = 600 -- Combat Soulstone
+allSpells[119910] = 24 -- Felhunter Spell Lock (via Command Demon, originates from player)
+allSpells[132409] = 24 -- Felhunter Sacrifice, Spell Lock
+allSpells[119911] = 24 -- Observer Optical Blast (via Command Demon, originates from player)
+allSpells[115781] = 24 -- Observer Optical Blast (Normal, originates from pet)
+allSpells[171140] = 24 -- Doomguard Shadow Lock (via Command Demon, originates from player)
+allSpells[171139] = 24 -- Doomguard Sacrifice, Shadow Lock
 classLookup[95750] = "WARLOCK"
+classLookup[119910] = "WARLOCK"
+classLookup[132409] = "WARLOCK"
+classLookup[119911] = "WARLOCK"
+classLookup[115781] = "WARLOCK"
+classLookup[171140] = "WARLOCK"
+classLookup[171139] = "WARLOCK"
 --allSpells[66235] = 110 -- Ardent Defender heal
 
 local db = nil
@@ -1039,7 +1062,6 @@ do
 	end
 
 	function lockDisplay()
-		if locked then return end
 		if not display then setupCooldownDisplay() end
 		display:EnableMouse(false)
 		display:SetMovable(false)
@@ -1055,7 +1077,6 @@ do
 		locked = true
 	end
 	function unlockDisplay()
-		if not locked then return end
 		if not display then setupCooldownDisplay() end
 		display:EnableMouse(true)
 		display:SetMovable(true)
@@ -1404,8 +1425,6 @@ do
 				return
 			elseif petSpells[spellId] then
 				source, srcGUID = getPetOwner(source, srcGUID)
-			elseif spellId == 95750 then -- Combat Soulstone, funnel it via normal Soulstone
-				spellId = 20707
 			elseif chargeSpells[spellId] then
 				local charges, maxCharges, start, duration = GetSpellCharges(spellId)
 				if charges then -- your spell
@@ -1416,6 +1435,9 @@ do
 					module:Cooldown(source, spellId, getCooldown(srcGUID, spellId))
 				end
 				return
+			end
+			if mergeSpells[spellId] then
+				spellId = mergeSpells[spellId]
 			end
 			module:Cooldown(source, spellId, getCooldown(srcGUID, spellId))
 		end

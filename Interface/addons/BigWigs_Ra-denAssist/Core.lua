@@ -489,7 +489,7 @@ function mod:OnBossEnable()
 	InterfaceOptions_AddCategory(ra)
 	local raTitle = ra:CreateFontString(nil, "ARTWORK", "GameFontNormalHuge")
 	raTitle:SetPoint("CENTER", ra, "TOP", 0, -20)
-	raTitle:SetText(ra.name.." r36-release") --wowace magic, replaced with tag version
+	raTitle:SetText(ra.name.." r38-release") --wowace magic, replaced with tag version
 
 	local raOptions = CreateFrame("Frame", "RadenAssistOptions", InterfaceOptionsFramePanelContainer)
 	raOptions.parent = "Big Wigs ".. L.modname

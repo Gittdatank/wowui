@@ -219,13 +219,13 @@ end
 	
 	rscflasktfoodadd = rscframetoshowall4:CreateFontString()
 	rscflasktfoodadd:SetFont(GameFontNormal:GetFont(), rscfontsset[1])
-	rscflasktfoodadd:SetText(format(rscpartanonsfoodadd,"+275"))
+	rscflasktfoodadd:SetText(format(rscpartanonsfoodadd,"+75"))
 	rscflasktfoodadd:SetJustifyH("LEFT")
 	rscflasktfoodadd:SetPoint("TOPLEFT",394,-200)
 	
 	rscflasktfoodadd2 = rscframetoshowall4:CreateFontString()
 	rscflasktfoodadd2:SetFont(GameFontNormal:GetFont(), rscfontsset[1])
-	rscflasktfoodadd2:SetText(format(rscpartanonsfoodadd,"+250"))
+	rscflasktfoodadd2:SetText(format(rscpartanonsfoodadd,"+?"))
 	rscflasktfoodadd2:SetJustifyH("LEFT")
 	rscflasktfoodadd2:SetPoint("TOPLEFT",584,-200)
 
@@ -1305,10 +1305,10 @@ elseif a1 and a2 and a2=="raid" then
 local mojn=1
 
 SetMapToCurrentZone()
-if #rscignorezone6[1]>0 then
-	for ug=1,#rscignorezone6[1] do
-		if rscignorezone6[1][ug]==GetCurrentMapAreaID() then
-			rscignorezone6[2][ug]=GetMapNameByID(GetCurrentMapAreaID())
+if #rscignorezone7[1]>0 then
+	for ug=1,#rscignorezone7[1] do
+		if rscignorezone7[1][ug]==GetCurrentMapAreaID() then
+			rscignorezone7[2][ug]=GetMapNameByID(GetCurrentMapAreaID())
 			mojn=0
 		end
 	end
@@ -1411,17 +1411,17 @@ function rsczoneflaskch(nn)
 SetMapToCurrentZone()
 if nn==1 then
 	local rrr=0
-	if #rscignorezone6[1]>0 then
-		for i=1,#rscignorezone6[1] do
-			if rscignorezone6[1][i]==GetCurrentMapAreaID() then
-				rscignorezone6[2][i]=GetMapNameByID(GetCurrentMapAreaID())
+	if #rscignorezone7[1]>0 then
+		for i=1,#rscignorezone7[1] do
+			if rscignorezone7[1][i]==GetCurrentMapAreaID() then
+				rscignorezone7[2][i]=GetMapNameByID(GetCurrentMapAreaID())
 				rrr=1
 			end
 		end
 	end
 	if rrr==0 then
-		table.insert(rscignorezone6[2],GetMapNameByID(GetCurrentMapAreaID()))
-		table.insert(rscignorezone6[1],GetCurrentMapAreaID())
+		table.insert(rscignorezone7[2],GetMapNameByID(GetCurrentMapAreaID()))
+		table.insert(rscignorezone7[1],GetCurrentMapAreaID())
 		out ("|cff99ffffRaidSlackCheck|r - "..rsczonereport2.."|cff00ff00"..GetMapNameByID(GetCurrentMapAreaID()).."|r")
 	else
 		out ("|cff99ffffRaidSlackCheck|r - "..rsczonereport7)
@@ -1431,13 +1431,13 @@ end
 --remove
 if nn==2 then
 	local rrr=0
-	if #rscignorezone6[1]>0 then
-		for i=1,#rscignorezone6[1] do
-			if rscignorezone6[1][i]==GetCurrentMapAreaID() then
+	if #rscignorezone7[1]>0 then
+		for i=1,#rscignorezone7[1] do
+			if rscignorezone7[1][i]==GetCurrentMapAreaID() then
 				rrr=1
 				out ("|cff99ffffRaidSlackCheck|r - "..rsczonereport3.."|cffff0000"..GetMapNameByID(GetCurrentMapAreaID()).."|r")
-				table.remove(rscignorezone6[1],i)
-				table.remove(rscignorezone6[2],i)
+				table.remove(rscignorezone7[1],i)
+				table.remove(rscignorezone7[2],i)
 				i=1000
 			end
 		end
@@ -1450,15 +1450,15 @@ end
 --show
 if nn==3 then
 	local txt=""
-	if #rscignorezone6[2]>0 then
-		for i=1,#rscignorezone6[2] do
-			txt=txt.."|cff00ff00"..rscignorezone6[2][i].."|r"
-			if #rscignorezone6[2]>i then
+	if #rscignorezone7[2]>0 then
+		for i=1,#rscignorezone7[2] do
+			txt=txt.."|cff00ff00"..rscignorezone7[2][i].."|r"
+			if #rscignorezone7[2]>i then
 				txt=txt..", "
 			end
 		end
 	end
-	if #rscignorezone6[2]==0 then
+	if #rscignorezone7[2]==0 then
 		out ("|cff99ffffRaidSlackCheck|r - "..rsczonereport1.."|cffff0000"..rsczonereport6.."|r")
 	else
 		out ("|cff99ffffRaidSlackCheck|r - "..rsczonereport1..txt)
@@ -1470,8 +1470,8 @@ if nn==4 then
 if rscquickclicktimer and GetTime()<rscquickclicktimer+10 then
 --удаляю
 out ("|cff99ffffRaidSlackCheck|r - |cff00ff00 "..rsczonereport5.."|r")
-table.wipe(rscignorezone6[1])
-table.wipe(rscignorezone6[2])
+table.wipe(rscignorezone7[1])
+table.wipe(rscignorezone7[2])
 else
 --тыкни еще раз!
 rscquickclicktimer=GetTime()

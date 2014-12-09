@@ -5,12 +5,12 @@ if GetLocale()=="deDE" or GetLocale()=="ruRU" or GetLocale()=="zhTW" or GetLocal
 rsclocalel()
 end
 
-rscversion=6.002
+rscversion=6.006
 
 
 --zone ID where addon check flasks
 
-rscignorezonedef={{953},{"Siege of Orgrimmar"}}
+rscignorezonedef={{994},{"Highmaul"}}
 
 
 
@@ -124,6 +124,15 @@ rscfoodtable={
  
   
   --104281, -- 375 Sta
+  
+  -- WoD +100
+  160883,
+  160897,
+  160902,
+  160893,
+  160900,
+  160889,
+  
 
 }
 
@@ -138,6 +147,15 @@ rscfoodtable_additional={
   --104279,
   --101617, -- new highest stat feast 275
   --104282, -- +415 Stamina
+  
+  
+  --WoD +75
+  160832,
+  160839,
+  160600,
+  160726,
+  160724,
+  160793,
   
 
 }
@@ -181,10 +199,10 @@ rscflasktable={
   
   
   --wod
-  156073,
-  156070,
-  156071,
-  156077,
+  --156073,
+  --156070,
+  --156071,
+  --156077,
   156064,
   156079,
   156080,
@@ -211,7 +229,7 @@ rscflasktableold={
 	
 	--105617,
 	
-	
+	176151,
 }
 
 --=============ELIXIRS guard=========
@@ -273,28 +291,9 @@ rscelixirtable2={
 
 --==========FOOD TABLE============
 rscfoodmanytable={
---87643,
---87644,
---87915,
-126503, --Banquet of the Brew
-126497, --Banquet of the Pot
-126492,
-126501,
-126499,
-126495,
-126504,
-126494,
-126502,
-126498,
-126500,
-126496,
-105193,
-104958,
 
---Noodle Cart
-145166,
-145169,
-145196,
+160740,
+160914,
   
 }
 
@@ -878,11 +877,11 @@ if arg1=="RaidSlackCheck" then
 --	end
 --rscignorezone=nil
 --elseif rscignorezone3==nil then
-if rscignorezone6==nil then
-	rscignorezone6={{},{}}
+if rscignorezone7==nil then
+	rscignorezone7={{},{}}
 	for i=1,#rscignorezonedef[1] do
-		table.insert(rscignorezone6[1],rscignorezonedef[1][i])
-		table.insert(rscignorezone6[2],rscignorezonedef[2][i])
+		table.insert(rscignorezone7[1],rscignorezonedef[1][i])
+		table.insert(rscignorezone7[2],rscignorezonedef[2][i])
 	end
 rscignorezonedef=nil
 end
@@ -1188,7 +1187,7 @@ if arg2=="SPELL_CAST_START" and arg5 and UnitInRaid(arg5) then
 				stxt="0"..UnitName("player")
 			end
 			if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
-			SendAddonMessage("RSCaddon", "d"..stxt, "Instance_CHAT")
+			--SendAddonMessage("RSCaddon", "d"..stxt, "Instance_CHAT")
 			else
 			SendAddonMessage("RSCaddon", "d"..stxt, "RAID")
 			end
@@ -1218,7 +1217,7 @@ if arg2=="SPELL_SUMMON" and arg5 and UnitInRaid(arg5) then
 				stxt="0"..UnitName("player")
 			end
 			if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
-			SendAddonMessage("RSCaddon", "e"..stxt, "Instance_CHAT")
+			--SendAddonMessage("RSCaddon", "e"..stxt, "Instance_CHAT")
 			else
 			SendAddonMessage("RSCaddon", "e"..stxt, "RAID")
 			end
@@ -1248,7 +1247,7 @@ if arg2=="SPELL_CREATE" and arg5 and UnitInRaid(arg5) then
 				stxt="0"..UnitName("player")
 			end
 			if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
-			SendAddonMessage("RSCaddon", "f"..stxt, "Instance_CHAT")
+			--SendAddonMessage("RSCaddon", "f"..stxt, "Instance_CHAT")
 			else
 			SendAddonMessage("RSCaddon", "f"..stxt, "RAID")
 			end
@@ -1293,7 +1292,7 @@ for i,usedpotion in ipairs(rscpotiontable) do
 	end
 end
 
-if arg10==6262 and arg5 and UnitInRaid(arg5) and (rscboy==1 or (rscboy==0 and (UnitIsDead("player") or UnitIsDeadOrGhost("player")))) and rsctrackison==1 then
+if (arg10==6262 or arg10==156438) and arg5 and UnitInRaid(arg5) and (rscboy==1 or (rscboy==0 and (UnitIsDead("player") or UnitIsDeadOrGhost("player")))) and rsctrackison==1 then
 if rschealstoneused and rschealstoneused[1] then
 	local bnm=0
 	if #rschealstoneused[1]>0 then
@@ -1390,10 +1389,10 @@ elseif a1 and a2 and a2=="raid" then
 
 local mojn=1
 
-if #rscignorezone6[1]>0 then
-	for ug=1,#rscignorezone6[1] do
-		if rscignorezone6[1][ug]==GetCurrentMapAreaID() then
-			rscignorezone6[2][ug]=GetMapNameByID(GetCurrentMapAreaID())
+if #rscignorezone7[1]>0 then
+	for ug=1,#rscignorezone7[1] do
+		if rscignorezone7[1][ug]==GetCurrentMapAreaID() then
+			rscignorezone7[2][ug]=GetMapNameByID(GetCurrentMapAreaID())
 			mojn=0
 		end
 	end
@@ -1423,7 +1422,7 @@ if (UnitIsGroupAssistant("player") or UnitIsGroupLeader("player")) then
 	stxt="0"..stxt
 end
 if select(3,GetInstanceInfo())==17 or IsLFGModeActive(LE_LFG_CATEGORY_LFD) then
-SendAddonMessage("RSCaddon", "2"..stxt, "Instance_CHAT")
+--SendAddonMessage("RSCaddon", "2"..stxt, "Instance_CHAT")
 else
 SendAddonMessage("RSCaddon", "2"..stxt, "RAID")
 end

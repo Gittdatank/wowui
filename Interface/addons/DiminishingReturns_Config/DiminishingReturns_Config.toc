@@ -1,5 +1,5 @@
 ## Interface: 60000
-## X-Curse-Packaged-Version: v1.4.3
+## X-Curse-Packaged-Version: v1.4.4
 ## X-Curse-Project-Name: DiminishingReturns
 ## X-Curse-Project-ID: diminishingreturns
 ## X-Curse-Repository-ID: wow/diminishingreturns/mainline
@@ -7,7 +7,7 @@
 ## Title: Diminishing Returns - configuration UI
 ## Notes: Diminishing returns configuration interface.
 ## Author: Adirelle
-## Version: v1.4.3
+## Version: v1.4.4
 ## X-Date: 2014-11-25T06:34:32Z
 
 ## RequiredDeps: DiminishingReturns

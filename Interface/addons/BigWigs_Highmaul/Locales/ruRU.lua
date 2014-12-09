@@ -30,7 +30,8 @@ end
 
 L = BigWigs:NewBossLocale("Brackenspore", "ruRU")
 if L then
-	L.creeping_moss_heal = "Ползучий мох под БОССОМ (исцеление)"
+	L.creeping_moss_boss_heal = "Мох под БОССОМ (исцеление)"
+	--L.creeping_moss_add_heal = "Moss under BIG ADD (healing)"
 end
 
 L = BigWigs:NewBossLocale("Twin Ogron", "ruRU")
@@ -54,6 +55,8 @@ end
 
 L = BigWigs:NewBossLocale("Imperator Mar'gok", "ruRU")
 if L then
+	--L.branded_say = "%s (%d) %dy"
+
 	L.custom_off_fixate_marker = "Маркировка Сосредоточение внимания"
 	L.custom_off_fixate_marker_desc = "Отмечать цели Горианских боевых магов метками {rt1}{rt2}, требуется быть помощником или лидером.\n|cFFFF0000Только 1 человек в рейде должен включить эту опцию, чтобы предотвратить конфликты.|r"
 end

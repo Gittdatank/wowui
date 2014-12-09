@@ -94,7 +94,7 @@ if crRangeCheckRaidActive then
   
   if plDistFail>0 then
     crRangeDistanceBottom2:SetText("Players with range <"..crRaidRangeEditBox:GetNumber()..": "..plDistFail)
-    if crRangeDistanceBottom2:IsShown()==nil then
+    if crRangeDistanceBottom2:IsShown()==false then
       crRangeDistanceBottom2:Show()
     end
   else

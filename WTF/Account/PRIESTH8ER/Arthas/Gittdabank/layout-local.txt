@@ -6,3 +6,17 @@ X: 0
 Y: 0
 W: 365
 H: 200
+Frame: FollowerLocationInfoFrame
+FrameLevel: 10
+Anchor: LEFT
+X: 300
+Y: 0
+W: 538
+H: 538
+Frame: VEMMinimapButton
+FrameLevel: 3
+Anchor: TOPRIGHT
+X: -136
+Y: -115
+W: 32
+H: 32

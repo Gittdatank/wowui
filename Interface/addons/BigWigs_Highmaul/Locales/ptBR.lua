@@ -30,7 +30,8 @@ end
 
 L = BigWigs:NewBossLocale("Brackenspore", "ptBR")
 if L then
-	--L.creeping_moss_heal = "Creeping Moss under BOSS (healing)"
+	--L.creeping_moss_boss_heal = "Moss under BOSS (healing)"
+	--L.creeping_moss_add_heal = "Moss under BIG ADD (healing)"
 end
 
 L = BigWigs:NewBossLocale("Twin Ogron", "ptBR")
@@ -54,6 +55,8 @@ end
 
 L = BigWigs:NewBossLocale("Imperator Mar'gok", "ptBR")
 if L then
+	--L.branded_say = "%s (%d) %dy"
+
 	--L.custom_off_fixate_marker = "Fixate Marker"
 	--L.custom_off_fixate_marker_desc = "Mark Gorian Warmage's Fixate targets with {rt1}{rt2}, requires promoted or leader.\n|cFFFF0000Only 1 person in the raid should have this enabled to prevent marking conflicts.|r"
 end

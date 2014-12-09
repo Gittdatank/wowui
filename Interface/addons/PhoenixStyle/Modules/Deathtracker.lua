@@ -522,8 +522,12 @@ if pstoomuchrepstopforfight==nil and (UnitInRaid("player") or UnitInParty("playe
   local psnumgrup=2
   local partyonly=0
 	if GetRaidDifficultyID()==5 or GetRaidDifficultyID()==7 then
-    psnumgrup=5
-    psnumdeadmax=psdeathrepsavemain[13]
+		psnumgrup=5
+		psnumdeadmax=psdeathrepsavemain[13]
+	end
+	if GetRaidDifficultyID()==18 then
+		psnumgrup=8
+		psnumdeadmax=psdeathrepsavemain[13]
 	end
 	if UnitInRaid("player")==nil and UnitInParty("player") then
     psnumdeadmax=psdeathrepsavemain[16]

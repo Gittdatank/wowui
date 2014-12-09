@@ -966,15 +966,17 @@ function LootMasterML:AskCandidateIfNeeded( link, candidate, allowBids )
 	self:ReloadMLTableForLoot( loot.id )
 end
 
+-- 20141208 changed idents to also include socket information and such.
+-- ItemIdent used to be [itemID].[bonusID], now it's the full item hyperlink
+-- with the uniqueID (position 8) reset to 0
 function LootMasterML:LootLinkToIdent(itemLink)
-  if (itemLink == nil) then return nil end
-  local _,_,itemID = strfind(itemLink, 'Hitem:(%d+)')
-  local _,_,bonusID= strfind(itemLink, 'Hitem:[^\124h]+:(%d+)\124h')
-  local itemIdentifier = itemID
-  if (bonusID ~= nil and bonusID ~= '0') then
-    itemIdentifier = itemID .. '.' .. bonusID
-  end
-  return itemIdentifier
+  if not itemLink or itemLink == nil or itemLink == '' then return nil end
+  local _, _, hlink= strfind(itemLink, 'Hitem:([^\124]+)')
+  if not hlink or hlink == nil or hlink == '' then return nil end
+  local itemIdent = {strsplit(':', hlink)} -- split on ':'
+  itemIdent[8] = '0' -- set UniqueID to zero, because it might change during looting
+  itemIdent = strjoin('.', unpack(itemIdent)) -- join back on '.'
+  return itemIdent
 end
 
 function LootMaster:GetItemIDFromIdent(itemIdentifier)
@@ -1902,9 +1904,9 @@ function LootMasterML:GiveLootToCandidate( link, candidate, lootType, gp )
 	for sID = 1, GetNumLootItems() do
 		local sLink = GetLootSlotLink(sID);
 		if sLink ~= nil then
-			local sItemID = tostring(self:LootLinkToIdent(sLink))
+			local sItemID = self:LootLinkToIdent(sLink)
 			local itemID = loot.id
-			if sItemID and sItemID==itemID then
+			if sItemID and sItemID ~= nil and sItemID==itemID then
 				slotID = sID
 			break
 			end
@@ -2172,7 +2174,7 @@ function LootMasterML:OPEN_MASTER_LOOT_LIST()
     for slot=1, numLootSlots do
         local slotLink = GetLootSlotLink(slot);
         local slotItemID = self:LootLinkToIdent(slotLink)
-        if slotItemID and slotItemID==itemID then
+        if slotItemID ~= nil and slotItemID and slotItemID==itemID then
 
             local _, _, slotQ, _ = GetLootSlotInfo(slot);
 

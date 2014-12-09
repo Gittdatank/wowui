@@ -29,8 +29,8 @@ TidyPlates_Neon: enabled
 TidyPlates_Quatre: enabled
 TidyPlates_Simple: enabled
 BlockChinese: enabled
-BigWigs: enabled
-VEM-Core: disabled
+BigWigs: disabled
+VEM-Core: enabled
 RaidAchievement: enabled
 MarketWatcher: disabled
 HandyNotes: disabled
@@ -65,3 +65,14 @@ HandyNotes_DraenorTreasures: disabled
 GatherMate2: enabled
 GatherMate2_Data: enabled
 TradeForwarder: disabled
+VEM-DefaultSkin: enabled
+VEM-GUI: enabled
+VEM-BlackrockFoundry: enabled
+VEM-Brawlers: enabled
+VEM-DMF: enabled
+VEM-Draenor: enabled
+VEM-Highmaul: enabled
+VEM-Party-WoD: enabled
+VEM-WorldEvents: enabled
+VEM-Sound-Default: enabled
+VEM-StatusBarTimers: enabled

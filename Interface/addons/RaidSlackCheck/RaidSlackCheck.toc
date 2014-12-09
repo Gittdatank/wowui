@@ -8,7 +8,7 @@
 ## URL: http://blacklotus.ru/
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
-## SavedVariables: rscignorezone6,rsctableannounce,rscchatrep,rscraidlrep,rsccolornick,rscwhomustbufflist,rscbuffschat,rscbuffcheckb2,rscbuffwhichtrack2,rscbufftimers,rscflaskcheckb,rscflaskchat, rscpotionscombatsaves,rscminflaskgood,rsconlyfrombosssave,rscraidrostertable,rscpotioninfotable,rscchoosepotion,rscbossnamestable,rscpotionnotincombat,rschealstoneused,rschealstoneused2,rscflaskcheckfoodadd,rscflaskcheckfoodadd2
+## SavedVariables: rscignorezone7,rsctableannounce,rscchatrep,rscraidlrep,rsccolornick,rscwhomustbufflist,rscbuffschat,rscbuffcheckb2,rscbuffwhichtrack2,rscbufftimers,rscflaskcheckb,rscflaskchat, rscpotionscombatsaves,rscminflaskgood,rsconlyfrombosssave,rscraidrostertable,rscpotioninfotable,rscchoosepotion,rscbossnamestable,rscpotionnotincombat,rschealstoneused,rschealstoneused2,rscflaskcheckfoodadd,rscflaskcheckfoodadd2
 Localization\localization-enEN.lua
 Localization\localization-ruRU.lua
 Localization\localization-deDE.lua

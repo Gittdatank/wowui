@@ -86,9 +86,9 @@ function mod:OnEngage()
 	--self:CDBar(162346, 6) -- Crystalline Barrage
 	self:CDBar("adds", 11, -10061, L.earthwarper_icon) -- Earthwarper
 	self:CDBar("adds", 21, -10062, L.berserker_icon) -- Berserker
-	
+
 	if not self:LFR() then
-		self:Berserk(480)
+		self:Berserk(self:Mythic() and 480 or 600)
 	end
 end
 
@@ -96,18 +96,15 @@ end
 -- Event Handlers
 --
 
-do
-	local prev = 0
-	function mod:Accretion(args)
-		local t = GetTime()
-		if self:MobId(args.sourceGUID) ~= 80557 and args.amount > 3 and t-prev > 5 then
-			self:Message(args.spellId, "Attention", nil, CL.count:format(args.spellName, args.amount))
-		end
+function mod:Accretion(args)
+	if self:MobId(args.sourceGUID) ~= 80557 and UnitGUID("target") == args.sourceGUID and args.amount > 3 then
+		local raidIcon = CombatLog_String_GetIcon(args.sourceRaidFlags)
+		self:Message(args.spellId, "Attention", nil, raidIcon..CL.count:format(args.spellName, args.amount))
 	end
 end
 
 function mod:CrystallineBarrage(args)
-	--self:CDBar(args.spellId, 20.5)
+	--self:CDBar(args.spellId, 30.5)
 	if self:Me(args.destGUID) then
 		self:Message(args.spellId, "Personal", "Alarm", CL.you:format(args.spellName))
 		self:Flash(args.spellId)

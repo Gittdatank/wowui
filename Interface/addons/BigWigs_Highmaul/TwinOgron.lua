@@ -53,13 +53,27 @@ L = mod:GetLocale()
 
 function mod:GetOptions()
 	return {
-		{143834, "TANK"}, {158134, "ICON", "SAY", "FLASH"}, 158093, 158385,
-		{158521, "TANK"}, {167200, "TANK"}, 157943, 158057, 158200, {158241, "FLASH"}, {163372, "FLASH", "PROXIMITY"}, "custom_off_volatility_marker",
-		"berserk", "bosskill"
+		--[[ Pol ]]--
+		{143834, "TANK"}, -- Shield Bash
+		{158134, "ICON", "SAY", "FLASH"}, -- Shield Charge
+		158093, -- Interrupting Shout
+		158385, -- Pulverize
+		--[[ Phemos ]]--
+		{158521, "TANK"}, -- Double Slash
+		{167200, "TANK"}, -- Arcane Wound
+		157943, -- Whirlwind
+		158057, -- Enfeebling Roar
+		158200, -- Quake
+		{158241, "FLASH"}, -- Blaze
+		{163372, "FLASH", "PROXIMITY"}, -- Arcane Volatility
+		"custom_off_volatility_marker",
+		--[[ General ]]--
+		"berserk",
+		"bosskill"
 	}, {
 		[143834] = -9595, -- Pol
 		[158521] = -9590, -- Phemos
-		["berserk"] = "general"
+		berserk = "general"
 	}
 end
 
@@ -89,14 +103,16 @@ end
 function mod:OnEngage()
 	quakeCount = 0
 	volatilityCount = 1
-	self:CDBar(158200, 11) -- Quake
+	self:CDBar(158200, 12) -- Quake
 	self:CDBar(143834, 22) -- Shield Bash
 	--self:CDBar(158521, 26) -- Double Slash
 	self:CDBar(158134, 34) -- Shield Charge
-	self:CDBar(157943, 40) -- Whirlwind
+	self:CDBar(157943, 42) -- Whirlwind
 	if self:Mythic() then
 		self:Bar(163372, 65) -- Arcane Volatility
 		self:Berserk(420) -- Mythic time, normal unconfirmed
+	else
+		self:Berserk(480)
 	end
 end
 
@@ -159,11 +175,6 @@ end
 
 -- Phemos
 
-function mod:ArcaneWound(args)
-	-- XXX this isn't applied terribly often, buggy or just ment to be a minor annoyance?
-	self:StackMessage(args.spellId, args.destName, args.amount, "Attention")
-end
-
 function mod:DoubleSlash(args)
 	if UnitDetailedThreatSituation("player", GetBossUnit(args.sourceGUID)) or not self:Tank() then
 		self:Message(args.spellId, "Attention")
@@ -171,20 +182,25 @@ function mod:DoubleSlash(args)
 	end
 end
 
+function mod:ArcaneWound(args)
+	-- XXX this isn't applied terribly often, buggy or just ment to be a minor annoyance?
+	self:StackMessage(args.spellId, args.destName, args.amount, "Attention")
+end
+
 function mod:Whirlwind(args)
 	self:Message(args.spellId, "Attention")
-	self:CDBar(args.spellId, 60)
+	self:CDBar(158057, self:Normal() and 33 or 31) -- Enfeebling Roar
 end
 
 function mod:EnfeeblingRoar(args)
 	self:Message(args.spellId, "Attention", "Alert")
-	self:CDBar(158200, 33, CL.count:format(self:SpellName(158200), quakeCount+1)) -- Quake
+	self:CDBar(158200, self:Normal() and 33 or 31, CL.count:format(self:SpellName(158200), quakeCount+1)) -- Quake
 end
 
 function mod:Quake(args)
 	quakeCount = quakeCount + 1
 	self:Message(args.spellId, "Attention", "Alert", CL.incoming:format(CL.count:format(args.spellName, quakeCount)))
-	self:CDBar(158057, 66) -- Enfeebling Roar
+	self:CDBar(157943, self:Normal() and 33 or 31) -- Whirlwind
 end
 
 function mod:QuakeChannel(args)

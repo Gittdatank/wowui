@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1225, "DBM-Party-WoD", 1, 547)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 11901 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 11968 $"):sub(12, -3))
 mod:SetCreatureID(77734)
 mod:SetEncounterID(1714)
 mod:SetZone()
@@ -235,5 +235,7 @@ function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, _, _, spellId)
 			--timerChaosBoltCD:Start(15)
 			--timerImmolateCD:Start(22)
 		end
+	elseif spellId == 114268 then
+		DBM:EndCombat(self)
 	end
 end

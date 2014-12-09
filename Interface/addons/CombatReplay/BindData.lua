@@ -713,7 +713,7 @@ if crsaveddata and crsaveddata[crPlayingCombatID] then
               if crsaveddata[crPlayingCombatID].casts[crPlayersActive[#crPlayersActive]][s][3]==0 and crInstanceCastsFrames[#crInstanceSpellsShow] then
                 local _, _, icon = GetSpellInfo(crsaveddata[crPlayingCombatID].casts[crPlayersActive[#crPlayersActive]][s][1])
                 crInstanceCastsFrames[#crInstanceSpellsShow]:SetTexture(icon)
-                if crInstanceCastsFrames2[#crInstanceSpellsShow]:IsShown()==nil then
+                if crInstanceCastsFrames2[#crInstanceSpellsShow]:IsShown()==false then
                   crInstanceCastsFrames2[#crInstanceSpellsShow]:Show()
                 end
                 spellsVisible=spellsVisible+1
@@ -788,7 +788,7 @@ if crsaveddata and crsaveddata[crPlayingCombatID] then
       end
     end
     if #casthistory>0 then
-      if crRightSpellHistory:IsShown()==nil then
+      if crRightSpellHistory:IsShown()==false then
         crRightSpellHistory:Show()
       end
     else
@@ -816,7 +816,7 @@ if crsaveddata and crsaveddata[crPlayingCombatID] then
         else
           if crInstanceSpellsShow[i][2]<GetTime()+2 and crInstanceCastsFrames2[i] then
             local position=(crInstanceSpellsShow[i][2]-GetTime())/2
-            if crInstanceCastsFrames2[i] and crInstanceCastsFrames2[i]:IsShown()==nil then
+            if crInstanceCastsFrames2[i] and crInstanceCastsFrames2[i]:IsShown()==false then
               crInstanceCastsFrames2[i]:Show()
             end
             spellsVisible=spellsVisible+1

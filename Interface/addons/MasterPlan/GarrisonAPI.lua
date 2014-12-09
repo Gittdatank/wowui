@@ -60,6 +60,49 @@ local parseTime = {} do
 	end})
 end
 
+local dropFollowers = {} do -- Start/Available capture
+	local complete, it = {}, 1
+	hooksecurefunc(C_Garrison, "GetAvailableMissions", function(t)
+		if not (t and next(complete)) then return end
+		local i, n, nit = 1, #t, it % 2 + 1
+		while i <= n do
+			local mid = t[i].missionID
+			if complete[mid] then
+				t[i], complete[mid], n, t[n] = i < n and t[n] or nil, nit, n - 1
+			else
+				i = i + 1
+			end
+		end
+		it = nit
+		for k,v in pairs(complete) do
+			if v ~= nit then
+				complete[k] = nil
+			end
+		end
+		for k,v in pairs(dropFollowers) do
+			if not complete[v] then
+				dropFollowers[k] = nil
+			end
+		end
+	end)
+	hooksecurefunc(C_Garrison, "StartMission", function(id)
+		local t = C_Garrison.GetAvailableMissions()
+		for i=1,#t do
+			if t[i].missionID == id then
+				for j=1,t[i].followers and #t[i].followers or 0 do
+					dropFollowers[t[i].followers[j]] = id
+				end
+				break
+			end
+		end
+		complete[id] = it
+	end)
+	EV.RegisterEvent("GARRISON_MISSION_NPC_CLOSED", function()
+		wipe(complete)
+		wipe(dropFollowers)
+	end)
+end
+
 local function populateMechanics()
 	local q = C_Garrison.GetFollowerAbilityCounterMechanicInfo
 	for _, aid in pairs({11, 100, 168, 148, 160, 101, 105, 157, 122}) do
@@ -99,6 +142,12 @@ function api.GetFollowerInfo(refresh)
 			for i=1,#v.followers do
 				local f = ft[v.followers[i]]
 				f.mission, f.missionTimeLeft, f.missionTimeSeconds = v.missionID, v.timeLeft, parseTime[v.timeLeft]
+			end
+		end
+		for k,v in pairs(dropFollowers) do
+			local f = ft[k]
+			if not f.missionTimeLeft then
+				f.mission, f.missionTimeLeft, f.missionTimeSeconds = v, "?", 1
 			end
 		end
 		data.followers = ft
@@ -165,6 +214,9 @@ do -- sortByFollowerLevels
 			return not not af
 		elseif af and bf then
 			ac, bc = unfreeStatusOrder[af.status] or 3, unfreeStatusOrder[bf.status] or 3
+			if ac == bc and not T.config.ignore[af.followerID] ~= not T.config.ignore[bf.followerID] then
+				return not T.config.ignore[af.followerID]
+			end
 			if ac == bc then
 				ac, bc = af.level or 0, bf.level or 0
 			end
@@ -200,8 +252,12 @@ function api.GetFollowerLevelDescription(fid, mlvl, finfo)
 		away = RED_FONT_COLOR_CODE .. " (" .. GARRISON_FOLLOWER_INACTIVE .. ")"
 	elseif finfo.status == GARRISON_FOLLOWER_WORKING then
 		away = YELLOW_FONT_COLOR_CODE .. " (" .. GARRISON_FOLLOWER_WORKING .. ")"
+	elseif away then
+		away = "|cffa0a0a0 (" .. away .. ")"
+	elseif T.config.ignore[fid] then
+		away = RED_FONT_COLOR_CODE .. " (" .. T.L"Ignored" .. ")"
 	else
-		away = away and ("|cffa0a0a0 (" .. away .. ")") or ""
+		away = ""
 	end
 	return ("%s[%d]|r %s%s|r%s"):format(lc, finfo.level < 100 and finfo.level or finfo.iLevel, HIGHLIGHT_FONT_COLOR_CODE, finfo.name, away)
 end
@@ -376,13 +432,19 @@ do -- GetMissionSeen
 	local function ObserveMissions()
 		isPendingObserve = nil
 		if not dt then return end
-		local avail, seen, now = C_Garrison.GetAvailableMissions(), {}, time()
+		local ip, avail, seen, now = nil, C_Garrison.GetAvailableMissions(), {}, time()
 		if #avail > 0 then
 			for i=1,#avail do
 				local mid = avail[i].missionID
+				if lt and dt[mid] and expire[mid] and (now - dt[mid]) > expire[mid]*3600 then
+					if T.config.announceLoss then
+						dt.__loss = dt.__loss or {}
+						dt.__loss[#dt.__loss + 1] = {now, mid, dt[-mid], dt[mid], expire[mid], "!"}
+					end
+					dt[-mid], dt[mid] = max(dt[-mid]+expire[mid]*3600, now-expire[mid]*3600, lt or -math.huge)
+				end
 				dt[mid], dt[-mid], seen[mid] = dt[mid] or now, dt[-mid] or lt or now, 1
 			end
-			local ip
 			for k in pairs(dt) do
 				if type(k) == "number" and not seen[k] and not seen[-k] then
 					if T.config.announceLoss then
@@ -708,7 +770,7 @@ api.GroupRank, api.GroupFilter = {}, {} do
 			ac, bc = computeDingScore(a, finfo), computeDingScore(b, finfo)
 		end
 		if ac == bc  then
-			ac, bc = a[4], b[4]
+			ac, bc = -a[4], -b[4]
 		end
 		if ac == bc then
 			ac, bc = a[3], b[3]
@@ -736,11 +798,15 @@ api.GroupRank, api.GroupFilter = {}, {} do
 	end
 	api.GroupRank.threats, api.GroupRank.resources, api.GroupRank.xp = success, res, xp
 end
+function api.GetMissionDefaultGroupRank(mi)
+	local rew = api.HasSignificantRewards(mi)
+	return api.GroupRank[rew == false and "xp" or rew == "resource" and "resources" or "threats"]
+end
 function api.GroupFilter.IDLE(res, finfo, minfo)
 	local mid = minfo.missionID
 	for i=5,4+minfo.numFollowers do
 		local fi = finfo[res[i]]
-		if not (fi and (fi.status == nil or fi.status == GARRISON_FOLLOWER_IN_PARTY) and not T.config.ignore[fi.followerID] and (MasterPlan:GetFollowerTentativeMission(fi.followerID) or mid) == mid) then
+		if not (fi and (fi.status == nil or fi.status == GARRISON_FOLLOWER_IN_PARTY) and not T.config.ignore[fi.followerID] and not dropFollowers[fi.followerID] and (MasterPlan:GetFollowerTentativeMission(fi.followerID) or mid) == mid) then
 			return false
 		end
 	end
@@ -791,8 +857,8 @@ end
 
 do -- GetUpgradeItems(ilevel, isArmor)
 	local upgrades = {
-		WEAPON={114128, 650, 114129, 650, 114131, 650, 114616, 615, 114081, 630, 114622, 645},
-		ARMOR={114745, 650, 114808, 650, 114822, 650, 114807, 615, 114806, 630, 114746, 645}
+		WEAPON={114128, 655, 114129, 655, 114131, 655, 114616, 615, 114081, 630, 114622, 645},
+		ARMOR={114745, 655, 114808, 655, 114822, 655, 114807, 615, 114806, 630, 114746, 645}
 	}
 	local function walk(ilvl, t, pos)
 		for i=pos,#t,2 do

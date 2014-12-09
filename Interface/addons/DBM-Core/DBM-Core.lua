@@ -47,13 +47,14 @@
 --    * Share Alike. If you alter, transform, or build upon this work, you may distribute the resulting work only under the same or similar license to this one.
 --
 
+
 -------------------------------
 --  Globals/Default Options  --
 -------------------------------
 DBM = {
-	Revision = tonumber(("$Revision: 11932 $"):sub(12, -3)),
-	DisplayVersion = "6.0.6 alpha", -- the string that is shown as version
-	ReleaseRevision = 11873 -- the revision of the latest stable version that is available
+	Revision = tonumber(("$Revision: 11978 $"):sub(12, -3)),
+	DisplayVersion = "6.0.7 alpha", -- the string that is shown as version
+	ReleaseRevision = 11976 -- the revision of the latest stable version that is available
 }
 
 -- Legacy crap; that stupid "Version" field was never a good idea.
@@ -223,7 +224,7 @@ DBM_OPTION_SPACER = newproxy(false)
 --------------
 --  Locals  --
 --------------
-local enabled = true
+local dbmIsEnabled = true
 local blockEnable = false
 local cachedGetTime = GetTime()
 local lastCombatStarted = cachedGetTime
@@ -496,7 +497,7 @@ do
 			event = event .. "_UNFILTERED"
 			isUnitEvent = false -- not actually a real unit id for this function...
 		end
-		if not registeredEvents[event] or not enabled then return end
+		if not registeredEvents[event] or not dbmIsEnabled then return end
 		for i, v in ipairs(registeredEvents[event]) do
 			local zones = v.zones
 			local handler = v[event]
@@ -985,6 +986,8 @@ do
 					tinsert(self.Voices, { text = GetAddOnMetadata(i, "X-DBM-Voice-Name"), value = GetAddOnMetadata(i, "X-DBM-Voice-ShortName") })
 				end
 			end
+			--Todo, make this more robust and actually check if the ACTIVE voice is removed, because checking for none being instaled still won't account for removing selected voice pack but still having other packs
+			if #self.Voices < 2 and DBM.Options.ChosenVoicePack ~= "None" then DBM.Options.ChosenVoicePack = "None" end
 			table.sort(self.AddOns, function(v1, v2) return v1.sort < v2.sort end)
 			self:RegisterEvents(
 				"COMBAT_LOG_EVENT_UNFILTERED",
@@ -2297,7 +2300,7 @@ do
 
 	function loadOptions()
 		DBM.Options = DBM_SavedOptions
-		enabled = DBM.Options.Enabled
+		dbmIsEnabled = DBM.Options.Enabled or true
 		addDefaultOptions(DBM.Options, DBM.DefaultOptions)
 		-- load special warning options
 		migrateSavedOptions()
@@ -2617,7 +2620,7 @@ do
 		LastInstanceMapID = mapID
 		LastGroupSize = instanceGroupSize
 		difficultyIndex = difficulty
-		if instanceType == "none" then
+		if instanceType == "none" or C_Garrison:IsOnGarrisonMap() then
 			if not targetEventsRegistered then
 				DBM:RegisterShortTermEvents("UPDATE_MOUSEOVER_UNIT", "UNIT_TARGET_UNFILTERED")
 				targetEventsRegistered = true
@@ -2647,6 +2650,7 @@ do
 	function DBM:LOADING_SCREEN_DISABLED()
 		DBM:Debug("LOADING_SCREEN_DISABLED fired")
 		FixForShittyComputers()
+		DBM:Unschedule(FixForShittyComputers)
 		DBM:Schedule(5, FixForShittyComputers, DBM)
 	end
 
@@ -3098,11 +3102,11 @@ do
 			raid[sender].displayVersion = displayVersion
 			raid[sender].locale = locale
 			raid[sender].enabledIcons = iconEnabled or "false"
-			DBM:Debug("Received version info from "..sender.." : Rev - "..revision..", Ver - "..version..", Rev Diff - "..(revision - DBM.Revision), 2)
+			DBM:Debug("Received version info from "..sender.." : Rev - "..revision..", Ver - "..version..", Rev Diff - "..(revision - DBM.Revision), 3)
 			if version > tonumber(DBM.Version) then -- Update reminder
 				if not checkEntry(newerVersionPerson, sender) then
 					newerVersionPerson[#newerVersionPerson + 1] = sender
-					DBM:Debug("Newer version detected from "..sender.." : Rev - "..revision..", Ver - "..version..", Rev Diff - "..(revision - DBM.Revision), 2)
+					DBM:Debug("Newer version detected from "..sender.." : Rev - "..revision..", Ver - "..version..", Rev Diff - "..(revision - DBM.Revision), 3)
 				end
 				if #newerVersionPerson < 4 then
 					if #newerVersionPerson == 2 and updateNotificationDisplayed < 2 then--Only requires 2 for update notification.
@@ -4649,8 +4653,8 @@ do
 end
 
 function DBM:GetCurrentInstanceDifficulty()
-	local _, _, difficulty, difficultyName, _, _, _, _, instanceGroupSize = GetInstanceInfo()
-	if difficulty == 0 then
+	local _, instanceType, difficulty, difficultyName, _, _, _, _, instanceGroupSize = GetInstanceInfo()
+	if difficulty == 0 or (difficulty == 1 and instanceType == "none") then--draenor field returns 1, causing world boss mod bug.
 		return "worldboss", RAID_INFO_WORLD_BOSS.." - ", difficulty
 	elseif difficulty == 1 then
 		return "normal5", difficultyName.." - ", difficulty, instanceGroupSize
@@ -5043,17 +5047,16 @@ end
 --------------------------
 function DBM:Disable(forced)
 	unschedule()
-	enabled = false
-	if not forced then
-		self.Options.Enabled = false
-	else
+	dbmIsEnabled = false
+	self.Options.Enabled = false
+	if forced then
 		blockEnable = true
 	end
 end
 
 function DBM:Enable()
 	if not blockEnable then
-		enabled = true
+		dbmIsEnabled = true
 		self.Options.Enabled = true
 	end
 end
@@ -5427,6 +5430,14 @@ end
 function bossModPrototype:IsLFR()
 	local diff = DBM:GetCurrentInstanceDifficulty()
 	if diff == "lfr" or diff == "lfr25" then
+		return true
+	end
+	return false
+end
+
+function bossModPrototype:IsNormal()
+	local diff = DBM:GetCurrentInstanceDifficulty()
+	if diff == "normal" or diff == "normal5" or diff == "normal10" or diff == "normal25" then
 		return true
 	end
 	return false
@@ -5964,12 +5975,7 @@ end
 
 function bossModPrototype:IsTanking(unit, boss)
 	if not unit then return false end
-	if GetPartyAssignment("MAINTANK", unit, 1) then
-		return true
-	end
-	if UnitGroupRolesAssigned(unit) == "TANK" then
-		return true
-	end
+	--Prefer threat target first
 	if boss and UnitExists(boss) then--Only checking one bossID as requested
 		local tanking, status = UnitDetailedThreatSituation(unit, boss)
 		if tanking or (status == 3) then
@@ -5984,6 +5990,13 @@ function bossModPrototype:IsTanking(unit, boss)
 				end
 			end
 		end
+	end
+	--Use these as fallback if threat target not found
+	if GetPartyAssignment("MAINTANK", unit, 1) then
+		return true
+	end
+	if UnitGroupRolesAssigned(unit) == "TANK" then
+		return true
 	end
 	return false
 end
@@ -6027,19 +6040,22 @@ end
 function DBM:GetBossHP(cId)
 	local uId = bossHealthuIdCache[cId] or "target"
 	if self:GetCIDFromGUID(UnitGUID(uId)) == cId and UnitHealthMax(uId) ~= 0 then
+		if bossHealth[cId] and UnitHealth(uId) == 0 then return bossHealth[cId], uId end--Return last non 0 value if value is 0, since it's last valid value we had.
 		local hp = UnitHealth(uId) / UnitHealthMax(uId) * 100
-		bossHealth[cId] = hp > 0 and hp or 100
+		bossHealth[cId] = hp
 		return hp, uId
 	elseif self:GetCIDFromGUID(UnitGUID("focus")) == cId and UnitHealthMax("focus") ~= 0 then
+		if bossHealth[cId] and UnitHealth("focus") == 0 then return bossHealth[cId], "focus" end--Return last non 0 value if value is 0, since it's last valid value we had.
 		local hp = UnitHealth("focus") / UnitHealthMax("focus") * 100
-		bossHealth[cId] = hp > 0 and hp or 100
+		bossHealth[cId] = hp
 		return hp, "focus"
 	else
 		for i = 1, 5 do
 			local guid = UnitGUID("boss"..i)
 			if self:GetCIDFromGUID(guid) == cId and UnitHealthMax("boss"..i) ~= 0 then
+				if bossHealth[cId] and UnitHealth("boss"..i) == 0 then return bossHealth[cId], "boss"..i end--Return last non 0 value if value is 0, since it's last valid value we had.
 				local hp = UnitHealth("boss"..i) / UnitHealthMax("boss"..i) * 100
-				bossHealth[cId] = hp > 0 and hp or 100
+				bossHealth[cId] = hp
 				bossHealthuIdCache[cId] = "boss"..i
 				return hp, "boss"..i
 			end
@@ -6049,8 +6065,9 @@ function DBM:GetBossHP(cId)
 			local unitId = ((i == 0) and "target") or idType..i.."target"
 			local guid = UnitGUID(unitId)
 			if self:GetCIDFromGUID(guid) == cId and UnitHealthMax(unitId) ~= 0 then
+				if bossHealth[cId] and UnitHealth(unitId) == 0 then return bossHealth[cId], unitId end--Return last non 0 value if value is 0, since it's last valid value we had.
 				local hp = UnitHealth(unitId) / UnitHealthMax(unitId) * 100
-				bossHealth[cId] = hp > 0 and hp or 100
+				bossHealth[cId] = hp
 				bossHealthuIdCache[cId] = unitId
 				return hp, unitId
 			end
@@ -6062,19 +6079,22 @@ end
 function DBM:GetBossHPByGUID(guid)
 	local uId = bossHealthuIdCache[guid] or "target"
 	if UnitGUID(uId) == guid and UnitHealthMax(uId) ~= 0 then
+		if bossHealth[guid] and UnitHealth(uId) == 0 then return bossHealth[guid], uId end--Return last non 0 value if value is 0, since it's last valid value we had.
 		local hp = UnitHealth(uId) / UnitHealthMax(uId) * 100
-		bossHealth[guid] = hp > 0 and hp or 100
+		bossHealth[guid] = hp
 		return hp, uId
 	elseif UnitGUID("focus") == guid and UnitHealthMax("focus") ~= 0 then
+		if bossHealth[guid] and UnitHealth("focus") == 0 then return bossHealth[guid], "focus" end--Return last non 0 value if value is 0, since it's last valid value we had.
 		local hp = UnitHealth("focus") / UnitHealthMax("focus") * 100
-		bossHealth[guid] = hp > 0 and hp or 100
+		bossHealth[guid] = hp
 		return hp, "focus"
 	else
 		for i = 1, 5 do
 			local guid2 = UnitGUID("boss"..i)
 			if guid == guid2 and UnitHealthMax("boss"..i) ~= 0 then
+				if bossHealth[guid] and UnitHealth("boss"..i) == 0 then return bossHealth[guid], "boss"..i end--Return last non 0 value if value is 0, since it's last valid value we had.
 				local hp = UnitHealth("boss"..i) / UnitHealthMax("boss"..i) * 100
-				bossHealth[guid] = hp > 0 and hp or 100
+				bossHealth[guid] = hp
 				bossHealthuIdCache[guid] = "boss"..i
 				return hp, "boss"..i
 			end
@@ -6084,8 +6104,9 @@ function DBM:GetBossHPByGUID(guid)
 			local unitId = ((i == 0) and "target") or idType..i.."target"
 			local guid2 = UnitGUID(unitId)
 			if guid == guid2 and UnitHealthMax(unitId) ~= 0 then
+				if bossHealth[guid] and UnitHealth(unitId) == 0 then return bossHealth[guid], unitId end--Return last non 0 value if value is 0, since it's last valid value we had.
 				local hp = UnitHealth(unitId) / UnitHealthMax(unitId) * 100
-				bossHealth[guid] = hp > 0 and hp or 100
+				bossHealth[guid] = hp
 				bossHealthuIdCache[guid] = unitId
 				return hp, unitId
 			end
@@ -6496,20 +6517,12 @@ do
 
 	--types: "now", "soon", "in5", "movein", "moveout" --Other types as needed, mainly so we can use multiple voies for same spellid if needed (to say, have both a soon and now warning)
 	--If no file at path, it should silenty fail. However, I want to try to only add NewVoice to mods for files that already exist.
-	function soundPrototype2:Play(type, globalSound)
+	function soundPrototype2:Play(name)
 		if DBM.Options.ChosenVoicePack == "None" then return end
 		if not self.option or self.mod.Options[self.option] then
-			local type = type or "now"--This way omiting "type" is valid for most common "now" warning.
-			local path
-			if globalSound then--Common (global) sounds.
-				--Example "Interface\\AddOns\\DBM-VPHenry\\Global\\dispelnow.ogg"
-				--Usage: voiceBerserkerRush:Play("name", true)
-				path = "Interface\\AddOns\\DBM-VP"..DBM.Options.ChosenVoicePack.."\\Global\\"..type..".ogg"
-			else--Instance Specific sounds
-				--Example "Interface\\AddOns\\DBM-VPHenry\\1228\\1128\\158986now.ogg" --This would be Kargath playvoice for berserker rush from highmaul
-				--Example "Interface\\AddOns\\DBM-VPHenry\\1228\\1128\\ej9394now.ogg" --This would be Kargath playvoice for pillar from highmaul
-				path = "Interface\\AddOns\\DBM-VP"..DBM.Options.ChosenVoicePack.."\\"..self.mod.instanceId.."\\"..self.mod.id.."\\"..self.spellId..type..".ogg"
-			end
+			local path = "Interface\\AddOns\\DBM-VP"..DBM.Options.ChosenVoicePack.."\\"..name..".ogg"
+				--Example "Interface\\AddOns\\DBM-VPHenry\\dispelnow.ogg"
+				--Usage: voiceBerserkerRush:Play("dispelnow")
 			if DBM.Options.UseMasterVolume then
 				PlaySoundFile(path, "Master")
 			else
@@ -6524,6 +6537,7 @@ do
 	end
 
 	function soundPrototype2:Cancel(...)
+		if DBM.Options.ChosenVoicePack == "None" then return end
 		return unschedule(self.Play, self.mod, self, ...)
 	end
 end
