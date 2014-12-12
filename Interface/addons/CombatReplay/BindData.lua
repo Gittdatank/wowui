@@ -694,6 +694,9 @@ if crsaveddata and crsaveddata[crPlayingCombatID] then
     local timeToLook=crsaveddata[crPlayingCombatID].events[crPlayingCombatEvent].t-2
     if #crsaveddata[crPlayingCombatID].casts[crPlayersActive[#crPlayersActive]]>1 then
       local s=2
+	  -- use this to not overlap images.
+	  local lastPosition=-100
+	  
       while s<=#crsaveddata[crPlayingCombatID].casts[crPlayersActive[#crPlayersActive]] do
         if crsaveddata[crPlayingCombatID].casts[crPlayersActive[#crPlayersActive]][s][2]>timeToLook then
           if starthistoryhere==nil then
@@ -712,12 +715,18 @@ if crsaveddata and crsaveddata[crPlayingCombatID] then
               starthistoryhere=s
               if crsaveddata[crPlayingCombatID].casts[crPlayersActive[#crPlayersActive]][s][3]==0 and crInstanceCastsFrames[#crInstanceSpellsShow] then
                 local _, _, icon = GetSpellInfo(crsaveddata[crPlayingCombatID].casts[crPlayersActive[#crPlayersActive]][s][1])
+				--print (icon)
                 crInstanceCastsFrames[#crInstanceSpellsShow]:SetTexture(icon)
                 if crInstanceCastsFrames2[#crInstanceSpellsShow]:IsShown()==false then
                   crInstanceCastsFrames2[#crInstanceSpellsShow]:Show()
                 end
                 spellsVisible=spellsVisible+1
                 local position=(crsaveddata[crPlayingCombatID].casts[crPlayersActive[#crPlayersActive]][s][2]-timeToLook)/2
+				--print (position)
+				if (position-lastPosition<0.1) then
+					position=position + (0.1-(position-lastPosition))
+				end
+				lastPosition=position
                 crInstanceCastsFrames2[#crInstanceSpellsShow]:SetPoint("TOPLEFT",180*position,-180)
               end
             end
@@ -805,6 +814,7 @@ if crsaveddata and crsaveddata[crPlayingCombatID] then
     --отображение инстанс спеллов
     local i=1
     local spellsVisible=1
+	local lastPosition=-100
     while i<=#crInstanceSpellsShow do
       if crInstanceSpellsShow[i] then
 
@@ -816,6 +826,10 @@ if crsaveddata and crsaveddata[crPlayingCombatID] then
         else
           if crInstanceSpellsShow[i][2]<GetTime()+2 and crInstanceCastsFrames2[i] then
             local position=(crInstanceSpellsShow[i][2]-GetTime())/2
+			if (position-lastPosition<0.1) then
+				position=position + (0.1-(position-lastPosition))
+			end
+			lastPosition=position
             if crInstanceCastsFrames2[i] and crInstanceCastsFrames2[i]:IsShown()==false then
               crInstanceCastsFrames2[i]:Show()
             end
@@ -1354,7 +1368,7 @@ end
 
 
 function crShowCurrentTime(nr,ev,currentposition)
-if crsaveddata and crsaveddata[nr] then
+if crsaveddata and crsaveddata[nr] and ev then
   local time=0
   if currentposition and crsaveddata[nr].events[ev+1] then
     time=(crsaveddata[nr].events[ev].t-crsaveddata[nr].events[1].t)+((crsaveddata[nr].events[ev+1].t-crsaveddata[nr].events[ev].t))*currentposition
@@ -1464,7 +1478,7 @@ if id~=0 then
       for k=1,#crBossID[i][j] do
         for m=1,#crBossID[i][j][k] do
           if crBossID[i][j][k][m]==id then
-            if crBossModelID[i][j][k][m] then
+            if crBossModelID[i] and crBossModelID[i][j] and crBossModelID[i][j][k] and crBossModelID[i][j][k][m] then
               return crBossModelID[i][j][k][m]
             else
               --return crBossModelID[i][j][k][1]

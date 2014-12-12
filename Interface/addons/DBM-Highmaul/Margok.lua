@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1197, "DBM-Highmaul", nil, 477)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 11971 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 11992 $"):sub(12, -3))
 mod:SetCreatureID(77428)
 mod:SetEncounterID(1705)
 mod:SetZone()
@@ -94,6 +94,7 @@ local timerTransition							= mod:NewCastTimer(76.5, 157278)
 local countdownArcaneWrath						= mod:NewCountdown(50, 156238, not mod:IsTank())--Probably will add for whatever proves most dangerous on mythic
 local countdownMarkofChaos						= mod:NewCountdown("Alt50", 158605, mod:IsTank())
 local countdownForceNova						= mod:NewCountdown("AltTwo45", 157349)
+local countdownTransition						= mod:NewCountdown(76.5, 157278)
 
 mod:AddRangeFrameOption("35/13/5")
 mod:AddSetIconOption("SetIconOnBrandedDebuff", 156225, false)
@@ -140,7 +141,7 @@ end
 local function updateRangeFrame(markPreCast)
 	if not mod.Options.RangeFrame then return end
 	if not mod:IsTank() and mod.vb.brandedActive > 0 then--Active branded out there, not a tank. Branded is always prioritized over mark for non tanks since 90% of time tanks handle this on their own, while rest of raid must ALWAYS handle branded
-		local distance = mod.vb.jumpDistance or 5
+		local distance = mod.vb.jumpDistance
 		if mod.vb.playerHasBranded then--Player has Branded debuff
 			DBM.RangeCheck:Show(distance, nil)--Show everyone
 		else--No branded debuff on player, so show a filtered range finder
@@ -253,14 +254,14 @@ function mod:SPELL_CAST_START(args)
 			if tanking or (status == 3) then
 				specWarnMarkOfChaos:Show()
 			else
-				specWarnMarkOfChaosOther:Show(targetName)
+				specWarnMarkOfChaosOther:Schedule(1, targetName)
 			end
 		elseif spellId == 164176 then
 			warnMarkOfChaosDisplacement:Show(targetName)
 			if tanking or (status == 3) then
 				specWarnMarkOfChaosDisplacement:Show()
 			else
-				specWarnMarkOfChaosDisplacementOther:Show(targetName)
+				specWarnMarkOfChaosDisplacementOther:Schedule(1, targetName)
 			end
 		elseif spellId == 164178 then
 			warnMarkOfChaosFortification:Show(targetName)
@@ -268,7 +269,7 @@ function mod:SPELL_CAST_START(args)
 				specWarnMarkOfChaosFortification:Show()
 				yellMarkOfChaosFortification:Yell()
 			else
-				specWarnMarkOfChaosFortificationOther:Show()
+				specWarnMarkOfChaosFortificationOther:Schedule(1, targetName)
 				if self:CheckNearby(35, targetName) then
 					specWarnMarkOfChaosFortificationNear:Show(targetName)
 				end
@@ -279,7 +280,7 @@ function mod:SPELL_CAST_START(args)
 				specWarnMarkOfChaosReplication:Show()
 				yellMarkOfChaosReplication:Yell()
 			else
-				specWarnMarkOfChaosReplicationOther:Show(targetName)
+				specWarnMarkOfChaosReplicationOther:Schedule(1, targetName)
 			end
 		end
 		if tanking or (status == 3) then
@@ -327,9 +328,9 @@ function mod:SPELL_AURA_APPLIED(args)
 		end
 		if (spellId == 164005 and currentStack > 5) or currentStack > 2 then--yells and general announces for target 2 stack before move.
 			if spellId == 164005 then
-				self.vb.jumpDistance = jumpDistance2[currentStack]
+				self.vb.jumpDistance = jumpDistance2[currentStack] or 5
 			else
-				self.vb.jumpDistance = jumpDistance1[currentStack]
+				self.vb.jumpDistance = jumpDistance1[currentStack] or 5
 			end
 			if args:IsPlayer() then
 				self.vb.playerHasBranded = true
@@ -420,6 +421,7 @@ function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, _, _, spellId)
 		timerForceNovaCD:Cancel()
 		countdownForceNova:Cancel()
 		timerTransition:Start()
+		countdownTransition:Start()
 	elseif spellId == 158012 or spellId == 157964 then--Power of Foritification/Replication
 		self.vb.forceCount = 0
 		specWarnTransitionEnd:Show()

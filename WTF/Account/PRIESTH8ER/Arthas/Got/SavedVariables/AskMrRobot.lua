@@ -28,7 +28,7 @@ AmrDb = {
 	["CharacterName"] = "Got",
 	["Race"] = "Tauren",
 	["ActiveSpec"] = 1,
-	["Level"] = 94,
+	["Level"] = 95,
 	["Equipped"] = {
 		{
 			"|cffa335ee|Hitem:94270:0:4667:4610:0:0:0:1739738752:90:465:0:0|h[Quilen Hide Helm]|h|r", -- [1]
@@ -49,22 +49,22 @@ AmrDb = {
 			"|cff1eff00|Hitem:101032:4441:0:0:0:0:0:0:90:0:0:0|h[Springrain Spear]|h|r", -- [16]
 		}, -- [1]
 		{
-			"|cff0070dd|Hitem:106137:0:0:0:0:0:0:0:94:0:11:0|h[Frostwolf Scout's Cap]|h|r", -- [1]
-			"|cff1eff00|Hitem:118009:0:0:0:0:0:0:0:94:0:11:0|h[Botani Tangle Chain]|h|r", -- [2]
-			"|cff0070dd|Hitem:106141:0:0:0:0:0:0:0:94:0:11:0|h[Frostwolf Scout's Spaulders]|h|r", -- [3]
+			"|cff0070dd|Hitem:114327:0:0:0:0:0:0:0:95:0:1:1:222|h[Shadow-Gorged Hood of the Strategist]|h|r", -- [1]
+			"|cff1eff00|Hitem:118009:0:0:0:0:0:0:0:95:0:11:0|h[Botani Tangle Chain]|h|r", -- [2]
+			"|cff0070dd|Hitem:106141:0:0:0:0:0:0:0:95:0:11:0|h[Frostwolf Scout's Spaulders]|h|r", -- [3]
 			nil, -- [4]
-			"|cff0070dd|Hitem:117503:0:0:0:0:0:0:0:94:0:11:1:171|h[Grimfrost Leather Tunic]|h|r", -- [5]
-			"|cffa335ee|Hitem:98613:0:4653:4653:4647:0:0:1719231872:94:491:0:0|h[Snow Lily Belt]|h|r", -- [6]
-			"|cffa335ee|Hitem:98604:4822:4653:4653:0:0:0:513555840:94:491:0:0|h[Snow Lily Britches]|h|r", -- [7]
-			"|cff0070dd|Hitem:112594:0:0:0:0:0:0:0:94:0:11:1:171|h[Overgrowth Cutter Boots]|h|r", -- [8]
-			"|cff0070dd|Hitem:117512:0:0:0:0:0:0:0:94:0:11:0|h[Agurak Leather Bracers]|h|r", -- [9]
-			"|cff0070dd|Hitem:118030:0:0:0:0:0:0:0:94:0:11:1:171|h[Overgrowth Cutter Gauntlets]|h|r", -- [10]
-			"|cff0070dd|Hitem:117984:0:0:0:0:0:0:0:94:0:11:1:171|h[Pit Skukler's Ring]|h|r", -- [11]
-			"|cff1eff00|Hitem:112858:0:0:0:0:0:0:0:94:0:11:0|h[Botani Grower's Ring]|h|r", -- [12]
-			"|cff1eff00|Hitem:113255:0:0:0:0:0:0:0:94:0:11:0|h[Asha's Fang]|h|r", -- [13]
-			"|cff0070dd|Hitem:111546:0:0:0:0:0:0:0:94:0:11:0|h[Grondo's Eyepatch]|h|r", -- [14]
-			"|cffa335ee|Hitem:108955:0:0:0:0:0:0:0:94:0:11:1:15|h[Wolfsfur Cloak]|h|r", -- [15]
-			"|cffe6cc80|Hitem:104400:0:0:0:0:0:0:942026880:94:0:0:0|h[Hellscream's Razor]|h|r", -- [16]
+			"|cff0070dd|Hitem:117503:0:0:0:0:0:0:0:95:0:11:1:171|h[Grimfrost Leather Tunic]|h|r", -- [5]
+			"|cffa335ee|Hitem:98613:0:4653:4653:4647:0:0:1719231872:95:491:0:0|h[Snow Lily Belt]|h|r", -- [6]
+			"|cffa335ee|Hitem:98604:4822:4653:4653:0:0:0:513555840:95:491:0:0|h[Snow Lily Britches]|h|r", -- [7]
+			"|cff0070dd|Hitem:112594:0:0:0:0:0:0:0:95:0:11:1:171|h[Overgrowth Cutter Boots]|h|r", -- [8]
+			"|cff1eff00|Hitem:112619:0:0:0:0:0:0:0:95:0:11:0|h[Overgrowth Cutter Wristwraps]|h|r", -- [9]
+			"|cff0070dd|Hitem:112595:0:0:0:0:0:0:0:95:0:11:1:171|h[Overgrowth Cutter Gloves]|h|r", -- [10]
+			"|cff0070dd|Hitem:117984:0:0:0:0:0:0:0:95:0:11:1:171|h[Pit Skukler's Ring]|h|r", -- [11]
+			"|cff1eff00|Hitem:112858:0:0:0:0:0:0:0:95:0:11:0|h[Botani Grower's Ring]|h|r", -- [12]
+			"|cff1eff00|Hitem:113255:0:0:0:0:0:0:0:95:0:11:0|h[Asha's Fang]|h|r", -- [13]
+			"|cff0070dd|Hitem:118229:0:0:0:0:0:0:0:95:0:0:0|h[Resonant Hidecrystal of the Gorger]|h|r", -- [14]
+			"|cff0070dd|Hitem:112959:0:0:0:0:0:0:0:95:0:11:0|h[Grace of Dionar]|h|r", -- [15]
+			"|cffe6cc80|Hitem:104400:0:0:0:0:0:0:942026880:95:0:0:0|h[Hellscream's Razor]|h|r", -- [16]
 		}, -- [2]
 	},
 	["Class"] = "DRUID",
@@ -279,10 +279,10 @@ AmrDb = {
 		[74247] = 5,
 		[74249] = 32,
 		[76140] = 2,
-		[76061] = 18,
-		[72988] = 7,
-		[54849] = 19,
 		[89112] = 522,
+		[72988] = 7,
+		[76061] = 18,
+		[54849] = 19,
 		[72095] = 5,
 		[76131] = 1,
 		[72104] = 3,

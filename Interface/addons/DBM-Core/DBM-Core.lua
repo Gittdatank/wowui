@@ -52,9 +52,9 @@
 --  Globals/Default Options  --
 -------------------------------
 DBM = {
-	Revision = tonumber(("$Revision: 11978 $"):sub(12, -3)),
-	DisplayVersion = "6.0.7 alpha", -- the string that is shown as version
-	ReleaseRevision = 11976 -- the revision of the latest stable version that is available
+	Revision = tonumber(("$Revision: 11992 $"):sub(12, -3)),
+	DisplayVersion = "6.0.9 alpha", -- the string that is shown as version
+	ReleaseRevision = 11978 -- the revision of the latest stable version that is available
 }
 
 -- Legacy crap; that stupid "Version" field was never a good idea.
@@ -131,6 +131,7 @@ DBM.DefaultOptions = {
 	WorldBossNearAlert = false,
 	AFKHealthWarning = true,
 	HideObjectivesFrame = true,
+	HideGarrisonUpdates = false,
 	HideTooltips = false,
 	EnableModels = true,
 	RangeFrameFrames = "radar",
@@ -3300,6 +3301,7 @@ do
 				if IsInInstance() then return end--Simple filter, if you are inside an instance, just filter it, if not in instance, good to go.
 				local bossName = EJ_GetEncounterInfo(modId) or UNKNOWN
 				local difficultyName = UNKNOWN
+				difficulty = tonumber(difficulty)
 				if difficulty == 16 then
 					difficultyName = PLAYER_DIFFICULTY6
 				elseif difficulty == 15 then
@@ -3318,6 +3320,7 @@ do
 				if IsInInstance() then return end--Simple filter, if you are inside an instance, just filter it, if not in instance, good to go.
 				local bossName = EJ_GetEncounterInfo(modId) or UNKNOWN
 				local difficultyName = UNKNOWN
+				difficulty = tonumber(difficulty)
 				if difficulty == 16 then
 					difficultyName = PLAYER_DIFFICULTY6
 				elseif difficulty == 15 then
@@ -4134,6 +4137,7 @@ function DBM:StartCombat(mod, delay, event, synced, syncedStartHp)
 		end
 		--process global options
 		self:ToggleRaidBossEmoteFrame(1)
+		self:ToggleGarrisonAlertsFrame(1)
 		self:StartLogging(0, nil)
 		if DBM.Options.HideObjectivesFrame and not (mod.type == "SCENARIO") and GetNumTrackedAchievements() == 0 then
 			if ObjectiveTrackerFrame:IsVisible() then
@@ -4523,6 +4527,7 @@ function DBM:EndCombat(mod, wipe)
 		if #inCombat == 0 then--prevent error if you pulled multiple boss. (Earth, Wind and Fire)
 			self:Schedule(10, DBM.StopLogging, DBM)--small delay to catch kill/died combatlog events
 			self:ToggleRaidBossEmoteFrame(0)
+			self:ToggleGarrisonAlertsFrame(0)
 			self:Unschedule(checkBossHealth)
 			self:Unschedule(loopCRTimer)
 			DBM.BossHealth:Hide()
@@ -5039,6 +5044,20 @@ function DBM:ToggleRaidBossEmoteFrame(toggle, custom)
 		RaidBossEmoteFrame:RegisterEvent("RAID_BOSS_EMOTE")
 		RaidBossEmoteFrame:RegisterEvent("RAID_BOSS_WHISPER")
 		RaidBossEmoteFrame:RegisterEvent("CLEAR_BOSS_EMOTES")
+	end
+end
+
+local GarrisonUnregistered = false
+function DBM:ToggleGarrisonAlertsFrame(toggle, custom)
+	if not DBM.Options.HideGarrisonUpdates and not custom then return end
+	if toggle == 1 and not GarrisonUnregistered then
+		GarrisonUnregistered = true
+		AlertFrame:UnregisterEvent("GARRISON_MISSION_FINISHED")
+		AlertFrame:UnregisterEvent("GARRISON_BUILDING_ACTIVATABLE")
+	elseif toggle == 0 and GarrisonUnregistered then
+		GarrisonUnregistered = false
+		AlertFrame:RegisterEvent("GARRISON_MISSION_FINISHED")
+		AlertFrame:RegisterEvent("GARRISON_BUILDING_ACTIVATABLE")
 	end
 end
 

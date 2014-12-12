@@ -218,7 +218,7 @@ psisicombattypeduring5:Show()
 
 
 
-if PSFmainfrainsavedinfo_Button1:IsShown()==nil and PSFmainfrainsavedinfo_Button2:IsShown()==nil and PSFmainfrainsavedinfo_Button3:IsShown()==nil and PSFmainfrainsavedinfo_Button4:IsShown()==nil then
+if PSFmainfrainsavedinfo_Button1:IsShown()==false and PSFmainfrainsavedinfo_Button2:IsShown()==false and PSFmainfrainsavedinfo_Button3:IsShown()==false and PSFmainfrainsavedinfo_Button4:IsShown()==false then
 PSFmainfrainsavedinfo_edbox2:SetText("")
 PSFmainfrainsavedinfo_Button1:Show()
 PSFmainfrainsavedinfo_Button2:Show()

@@ -449,6 +449,9 @@ end
 if (select(3,GetInstanceInfo())==18) then
 rscgropcheck=8
 end
+if (select(3,GetInstanceInfo())==16) then
+rscgropcheck=4
+end
 
 rscwillnotbechecked={} --не проверять ники!
 rscwillcheckthem={} --проверять эти ники!

@@ -1,9 +1,41 @@
 ------------------------------------------------------------------------
-r279 | mackatack | 2014-12-08 09:19:20 +0000 (Mon, 08 Dec 2014) | 1 line
+r285 | mackatack | 2014-12-11 15:19:08 +0000 (Thu, 11 Dec 2014) | 1 line
 Changed paths:
-   A /tags/0.6.59 (from /trunk:278)
+   A /tags/0.6.61 (from /trunk:284)
 
-Changed idents of items in the lootmaster table to include the entire itemhyperlink without the localized name of the item to support multilingual raids. This enables items sharing the same itemID but different sockets or bonusID to be registered separately so raiders will receive individual popups for them
+Only auto register with autolooting enabled
+------------------------------------------------------------------------
+r284 | mackatack | 2014-12-11 15:18:49 +0000 (Thu, 11 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/ml/lootmaster_ml.lua
+
+Only auto register with autolooting enabled
+------------------------------------------------------------------------
+r282 | mackatack | 2014-12-11 15:15:29 +0000 (Thu, 11 Dec 2014) | 3 lines
+Changed paths:
+   M /trunk/locale/enUS.lua
+   M /trunk/lootmaster_core.lua
+   M /trunk/lootmaster_player.lua
+   M /trunk/ml/lootmaster_ml.lua
+   M /trunk/ml/lootmaster_ml_ui.lua
+
+Introduction of average itemlevel display of candidates full gearset in monitors.
+Auto registration of loot in EPGPLootmaster when auto looting is enabled
+Small bugfix
+------------------------------------------------------------------------
+r281 | mackatack | 2014-12-11 12:13:37 +0000 (Thu, 11 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/ml/lootmaster_ml.lua
+
+Fixed iLevel diffs on monitors
+------------------------------------------------------------------------
+r280 | mackatack | 2014-12-11 12:10:22 +0000 (Thu, 11 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/locale/enUS.lua
+   M /trunk/ml/lootmaster_ml.lua
+   M /trunk/ml/lootmaster_options.lua
+
+Implemented auto voting
 ------------------------------------------------------------------------
 r278 | mackatack | 2014-12-08 09:18:15 +0000 (Mon, 08 Dec 2014) | 1 line
 Changed paths:

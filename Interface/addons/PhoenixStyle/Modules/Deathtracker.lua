@@ -427,6 +427,23 @@ function psdeathrepfindactiveboss()
       psdeathrepbossnametemp=psbossnames[2][6][14]
     end
   end
+  if IsAddOnLoaded("PhoenixStyleMod_WoD_tier1") then
+    if pswasonbossd11 then
+      psdeathrepbossnametemp=psbossnames[3][1][1]
+    elseif pswasonbossd12 then
+      psdeathrepbossnametemp=psbossnames[3][1][2]
+    elseif pswasonbossd13 then
+      psdeathrepbossnametemp=psbossnames[3][1][3]
+    elseif pswasonbossd14 then
+      psdeathrepbossnametemp=psbossnames[3][1][4]
+    elseif pswasonbossd15 then
+      psdeathrepbossnametemp=psbossnames[3][1][5]
+    elseif pswasonbossd16 then
+      psdeathrepbossnametemp=psbossnames[3][1][6]
+    elseif pswasonbossd17 then
+	  psdeathrepbossnametemp=psbossnames[3][1][6]
+	end
+  end
 end
 
 function psdeathreplastattacksave(name,frase,frase2)
@@ -527,6 +544,10 @@ if pstoomuchrepstopforfight==nil and (UnitInRaid("player") or UnitInParty("playe
 	end
 	if GetRaidDifficultyID()==18 then
 		psnumgrup=8
+		psnumdeadmax=psdeathrepsavemain[13]
+	end
+	if GetRaidDifficultyID()==16 then
+		psnumgrup=4
 		psnumdeadmax=psdeathrepsavemain[13]
 	end
 	if UnitInRaid("player")==nil and UnitInParty("player") then

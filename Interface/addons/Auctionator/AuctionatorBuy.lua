@@ -121,14 +121,11 @@ function Atr_Buy1_Onclick ()
 	Atr_Buy_Confirm_CancelBut:SetText (ZT("Cancel"))
 	Atr_Buy_Confirm_Frame:Show();
 
---zc.md (scan.searchText, " ", scan.itemName, "  data.minpage ", data.minpage);
+	SortAuctionClearSort("list") 
+	SortAuctionSetSort("list", "buyout")
+	SortAuctionApplySort("list")
 
-	if (zc.StringSame (scan.searchText, scan.itemName) and data.minpage ~= nil) then
-		Atr_Buy_QueueQuery(data.minpage);
-	else
-		Atr_Buy_QueueQuery(0);
-	end
-
+	Atr_Buy_QueueQuery(0);
 
 end
 
@@ -138,12 +135,9 @@ function Atr_Buy_QueueQuery (page)
 
 	gAtr_Buy_CurPage = page;
 
---zc.md ("Queuing query for page ", page);
-
 	gBuyState = ATR_BUY_WAITING_FOR_AH_CAN_SEND;
 	gAtr_Buy_Waiting_Start = time();
 	
---	Atr_Buy_SendQuery();		-- give it a shot
 end
 
 -----------------------------------------
@@ -160,7 +154,9 @@ function Atr_Buy_SendQuery ()
 		
 		local queryString = zc.UTF8_Truncate (gAtr_Buy_ItemName,63);	-- attempting to reduce number of disconnects
 
-		QueryAuctionItems (queryString, "", "", nil, 0, 0, gAtr_Buy_CurPage, nil, nil);
+		exactMatch = true
+
+		QueryAuctionItems (queryString, "", "", nil, 0, 0, gAtr_Buy_CurPage, nil, nil, false, exactMatch);
 	end
 		
 end
@@ -218,6 +214,8 @@ end
 function Atr_Buy_OnAuctionUpdate()
 
 	if (gBuyState == ATR_BUY_QUERY_SENT) then
+
+zz ("curpage", gAtr_Buy_CurPage);
 
 		gAtr_Buy_Query:CapturePageInfo(gAtr_Buy_CurPage)
 		

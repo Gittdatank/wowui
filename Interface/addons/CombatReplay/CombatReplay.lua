@@ -7,7 +7,7 @@ crlocale()
 end
 
 
-	crversion=6.006
+	crversion=6.007
 
   if crPlayersSizeOnMap==nil then crPlayersSizeOnMap=12 end
   if crOptTrackLfr==nil then crOptTrackLfr=false end

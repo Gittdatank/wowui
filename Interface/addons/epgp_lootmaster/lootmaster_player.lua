@@ -71,7 +71,7 @@ function LootMaster:CommandReceived(prefix, message, distribution, sender)
 
 		-- local _, itemLink, itemRarity, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture = GetItemInfo(link)
 		-- Send the master loot our current gear and version number
-		self:SendCommand( 'GEAR', format('%s^%s^%s', itemID, self.iVersion or 0, self:GetGearByINVTYPE(slot, 'player')), sender)
+		self:SendCommand( 'GEAR', format('%s^%s^%s^%s', itemID, self.iVersion or 0, self:GetGearByINVTYPE(slot, 'player'), LootMaster:GetAverageItemLevel()), sender)
 
 		autoPassClassList = LootMaster:DecodeUnlocalizedClasses(autoPassClassList or 0)
 		if autoPassClassList and binding=='pickup' then

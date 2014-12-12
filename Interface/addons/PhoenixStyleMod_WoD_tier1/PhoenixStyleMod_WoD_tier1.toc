@@ -6,7 +6,7 @@
 ## Notes-ruRU: Модуль для аддона Феникс Стайл
 ## Dependencies: PhoenixStyle
 ## LoadOnDemand: 1
-## SavedVariablesPerCharacter: psraidoptionsonp3,psraidoptionschatp3
+## SavedVariablesPerCharacter: psraidoptionsond1,psraidoptionschatd1
 Localization\localization-enEN.lua
 Localization\localization-ruRU.lua
 Localization\localization-deDE.lua
@@ -19,5 +19,10 @@ Localization\localization-zhCN.lua
 PhoenixStyleMod_WoD_tier1.lua
 PhoenixStyleMod_WoD_tier1.xml
 Damage_show.lua
-Galakras.lua
-ParagonsOfTheKlaxxi.lua
+Kargath Bladefist.lua
+Brackenspore.lua
+Imperator Mar'gok.lua
+Ko'ragh.lua
+Tectus.lua
+The Butcher.lua
+Twin Ogron.lua

@@ -57,6 +57,9 @@ function LootMasterML:OnInitialize()
     -- Event Register
       -- Trap event when ML rightclicks master loot
     self:RegisterEvent("OPEN_MASTER_LOOT_LIST")
+    self:RegisterEvent("UPDATE_MASTER_LOOT_LIST")
+    self:RegisterEvent("LOOT_OPENED")
+    self:RegisterEvent("LOOT_CLOSED")
 
     -- Trap even when an items get looted
     self:RegisterEvent("CHAT_MSG_LOOT");
@@ -532,6 +535,11 @@ function LootMasterML:CommandReceived(prefix, message, distribution, sender)
 
 		-- A candidate just sent us his current gear. update the cache
         local _,_,itemID, iVersion, gear = string.find(message, "^([^\^]-)\^([^\^]-)\^(.*)$");
+        local _,_,gear2,averageitemlevel = string.find(gear, "(.*)\^(.*)$");
+        if gear2 then
+            gear = gear2
+
+        end
         local item1, item2, item3, item4, item5 = strsplit('$', gear)
 
         local loot = self:GetLoot( itemID )
@@ -551,6 +559,8 @@ function LootMasterML:CommandReceived(prefix, message, distribution, sender)
 			self:SetCandidateData( loot.id, sender, 'currentitem5', item5, true );
             self:SetCandidateData( loot.id, sender, 'foundGear', true, true );
             self:SetCandidateData( loot.id, sender, 'version', iVersion, true );
+            self:SetCandidateData( loot.id, sender, 'averageitemlevel', tonumber(averageitemlevel) or '', true );
+
             self:SetCandidateResponse( loot.id, sender, LootMaster.RESPONSE.WAIT, preventMonitorUpdate );
             self:ReloadMLTableForLoot( loot.id )
 
@@ -1139,7 +1149,7 @@ function LootMasterML:AddLoot(link, mayDistribute, quantity)
   -- Are we lootmaster for this loot? Lets send out a monitor message about the added loot
   if loot.mayDistribute and self:MonitorMessageRequired(itemIdentifier) then
       local hideResponsesInt = hideResponses and 1 or 0
-      self:SendMonitorMessage('ADDLOOT', itemLink, itemName, itemIdentifier, gpvalue or 0, ilevel or 0, itemBind or '', itemRarity or 0, itemTexture or '', itemEquipLoc or '', gpvalue2 or '', quantity or 1, itemClassesEncoded, hideResponsesInt, loot.numButtons or 0, buttonString or '', "PRIORITY_HIGH" )
+      self:SendMonitorMessage('ADDLOOT', itemLink, itemName, itemIdentifier, gpvalue or 0, itemLevel or 0, itemBind or '', itemRarity or 0, itemTexture or '', itemEquipLoc or '', gpvalue2 or '', quantity or 1, itemClassesEncoded, hideResponsesInt, loot.numButtons or 0, buttonString or '', "PRIORITY_HIGH" )
   end
 
   return itemIdentifier
@@ -1216,6 +1226,11 @@ function LootMasterML:AnnounceLootAndRequestBids(loot, allowBids)
             self:AskCandidateIfNeeded( loot.id, candidate, allowBids )
         end
     end
+
+    if LootMaster.db.profile.votingEnableAuto then
+        -- Auto voting is enabled. So also request the votes
+        LootMasterML:RequestVotes(loot.id)
+    end
 end
 
 
@@ -1266,6 +1281,7 @@ function LootMasterML:RemoveLoot( link )
 	if not self.lootTable then return end;
 
     local loot = self:GetLoot(link)
+    if not loot then return end
     local itemID = loot.id
 
     if not itemID or not self.lootTable[itemID] then
@@ -1625,6 +1641,15 @@ function LootMasterML:AddCandidate( loot, candidate )
           ["onclickargs"]= { self,candidate,itemID,'currentitem5' },
 		   ["args"]       = {self,candidate,itemID,'currentitem5', lootTbl.ilevel}
           },
+
+           {["name"]       = 'averageitemlevel',
+            ["value"]      = '',
+            ["onenter"]    = addon.ShowAverageItemlevelCellPopup,
+            ["onleave"]    = addon.HideInfoPopup,
+            ["onenterargs"]= { self,candidate,itemID,'averageitemlevel' },
+            ["onleaveargs"]= { self,candidate,itemID,'averageitemlevel' }
+          },
+
 
           {["value"]      = ' '},     -- spacer
       }
@@ -2137,7 +2162,31 @@ function LootMasterML:CHAT_MSG_LOOT( event, message )
     self:UpdateUI();
 
     self:Debug("CHAT_MSG_LOOT end");
+end
 
+-- If the loot popup is opened with autolooting enabled, just loot everything
+-- and have EPGPLootmaster register everything automagically
+function LootMasterML:LOOT_OPENED(event, autoloot)
+    self:Debug("LOOT_OPENED", event, autoloot)
+
+    if tostring(autoloot) ~= '1' then return end
+
+    local numLootSlots = GetNumLootItems()
+    for slot=1, numLootSlots do
+        local slotLink = GetLootSlotLink(slot)
+        if slotLink ~= nil then
+            LootFrame.selectedSlot = slot
+            LootSlot(slot)
+        end
+    end
+end
+
+function LootMasterML:LOOT_CLOSED()
+    self:Debug("LOOT_CLOSED")
+end
+
+function LootMasterML:UPDATE_MASTER_LOOT_LIST()
+    self:Debug("UPDATE_MASTER_LOOT_LIST")
 end
 
 --[[
@@ -2148,6 +2197,7 @@ end
 	gets opened more than one time)
 ]]
 function LootMasterML:OPEN_MASTER_LOOT_LIST()
+    self:Debug("OPEN_MASTER_LOOT_LIST")
 
     -- Check if EPGPLM needs to track the loot.
     if not self:TrackingEnabled() then return end;

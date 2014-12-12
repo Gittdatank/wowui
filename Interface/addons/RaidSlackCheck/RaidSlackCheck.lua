@@ -5,7 +5,7 @@ if GetLocale()=="deDE" or GetLocale()=="ruRU" or GetLocale()=="zhTW" or GetLocal
 rsclocalel()
 end
 
-rscversion=6.006
+rscversion=6.008
 
 
 --zone ID where addon check flasks
@@ -132,6 +132,12 @@ rscfoodtable={
   160893,
   160900,
   160889,
+  
+  175218,
+  175219,
+  175220,
+  175222,
+  175223,
   
 
 }
@@ -3275,6 +3281,9 @@ if rsclastfightdelay==nil or (rsclastfightdelay and GetTime()-rsclastfightdelay>
 		end
 		if GetRaidDifficultyID()==18 then
 			rscskokagrup=2
+		end
+		if GetRaidDifficultyID()==16 then
+			rscskokagrup=4
 		end
 		for i = 1,GetNumGroupMembers() do local name,rank,subgroup = GetRaidRosterInfo(i)
 		if (subgroup <= rscskokagrup) then do

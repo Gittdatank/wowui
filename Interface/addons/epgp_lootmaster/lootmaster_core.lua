@@ -4,8 +4,8 @@
 
 LootMaster          = LibStub("AceAddon-3.0"):NewAddon("EPGPLootMaster", "AceConsole-3.0", "AceComm-3.0", "AceEvent-3.0", "AceTimer-3.0", "AceHook-3.0")
 
-local version 	    = "0.6.59"
-local dVersion 	    = "2014-12-08T09:18:15Z"
+local version 	    = "0.6.61"
+local dVersion 	    = "2014-12-11T15:18:49Z"
 local iVersion	    = 4
 local iVersionML	  = 12
 local _G            = _G
@@ -719,6 +719,22 @@ function LootMaster:GetItemBinding(item)
   end
 	tip:Hide()
 	return nil
+end
+
+function LootMaster:GetAverageItemLevel()
+    local unit = "player"
+    local total = 0
+    local count = 0
+    for i=1, 17, 1 do
+        local link = GetInventoryItemLink(unit, i)
+        local name, _, quality, itemLevel = GetItemInfo(link or 0)
+        if itemLevel and itemLevel > 0 and i ~= 4 then
+            total = total + itemLevel
+            count = count + 1
+        end
+    end
+    if total==0 or count==0 then return 0 end
+    return ceil(total/count)
 end
 
 -- Default english locale, this will automatically get updated by the

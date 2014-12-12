@@ -11,7 +11,7 @@ pslocale()
 end
 
 
-	psversion=6.010
+	psversion=6.011
 
 
 	psverstiptext="alpha"
@@ -24,7 +24,7 @@ end
 	if psbossmodnoalphavar==nil then psbossmodnoalphavar=1 end
 	
 	--новый сейвд
-	if psicccombatsavedreport==nil then psicccombatsavedreport=25 end
+  if psicccombatsavedreport==nil then psicccombatsavedreport=25 end
   if pssavedinfomorebutton==nil then pssavedinfomorebutton=0 end
   if pssavedinfocheckexport==nil then pssavedinfocheckexport={1,1,1,0} end
   if psicccombatexport==nil then psicccombatexport=0 end
@@ -160,9 +160,9 @@ psdeathgriplocal=GetSpellInfo(49560)
 
 
 --cataclysm & Panda data
-pslocations={{752,754,758,773,800,824},{77777,897,896,886,930,953},{99999}}
+pslocations={{752,754,758,773,800,824},{77777,897,896,886,930,953},{994}}
 pslocationnamesdef={{"Baradin Hold","Blackwing Descent","The Bastion of Twilight","Throne of the Four Winds","Firelands", "Dragon Soul"},{"New Baradin Hold","Heart of Fear","Mogu'shan Vaults","Terrace of Endless Spring","Throne of Thunder","Siege of Orgrimmar"},{"Highmaul"}}
-psaddontoload={{"PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_Firelands","PhoenixStyleMod_DragonSoul"},{"PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier2","PhoenixStyleMod_Panda_tier3"},{"PhoenixStyleMod_WoD_Highmaul"}}
+psaddontoload={{"PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_Firelands","PhoenixStyleMod_DragonSoul"},{"PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier2","PhoenixStyleMod_Panda_tier3"},{"PhoenixStyleMod_WoD_tier1"}}
 
 psbossnamesdef={
 {{"Argaloth","Occu'thar", "Alizabal, Mistress of Hate"},{"Magmaw","Omnitron Defense System","Maloriak","Atramedes","Chimaeron","Nefarian"},{"Halfus Wyrmbreaker","Valiona & Theralion","Twilight Ascendant Council","Cho'gall","Sinestra"},{"Conclave of Wind", "Al'Akir"},{"Beth'tilac", "Lord Rhyolith","Alysrazor","Shannox","Baleroc","Majordomo Staghelm","Ragnaros"},{"Morchok","Warlord Zon'ozz","Yor'sahj the Unsleeping","Hagara the Stormbinder","Ultraxion","Warmaster Blackhorn","Spine of Deathwing","Madness of Deathwing"}},
@@ -170,7 +170,7 @@ psbossnamesdef={
 {"Jin'rokh the Breaker","Horridon","The Council of Elders","Tortos","Megaera","Ji-Kun","Durumu the Forgotten","Primordius","Dark Animus","Iron Qon","Twin Consorts","Lei Shen","Ra-den"},
 {"Immerseus","The Fallen Protectors","Norushen","Sha of Pride","Galakras","Iron Juggernaut","Kor'kron Dark Shaman","General Nazgrim","Malkorok","Spoils of Pandaria","Thok the Bloodthirsty","Siegecrafter Blackfuse","Paragons of the Klaxxi","Garrosh Hellscream"},
 },
-{{"The Butcher","Kargath Bladefist","Twin Ogron"}}
+{{"Kargath Bladefist","The Butcher","Brackenspore","Tectus","Twin Ogron","Ko'ragh","Imperator Mar'gok"}}
 }
 psbossid={
 {{{47120},{52363},{55869}},{{41570},{0,42180,42166,42178,42179},{41378},{41442},{43296},{41376}},{{44600},{0,45992,45993},{0,43735,43686,43687,43688,43689},{43324},{45213}},{{0,45871,45870,45872},{46753}},{{52498},{52558},{52530},{53691},{53494},{52571},{52409}},{{55265},{55308},{55312},{55689},{55294},{56427},{0,53879, 56598, 55870},{0,53879}}},
@@ -178,7 +178,7 @@ psbossid={
 {{69465},{68476},{0,69078,69132,69134,69131},{67977},{0,68065,70212,70235,70247},{69712},{68036},{69017},{69427},{0,68079,68080,68081,68078},{0,68905,68904},{68397},{62983}},
 {{0,71543, 72436},{0,71479, 71475, 71480},{72276},{71734},{72249},{71466},{0,71859, 71858},{71515},{71454},{71889},{71529},{71504},{0,71152, 71153, 71154, 71155, 71156, 71157, 71158, 71160, 71161},{71865}},
 },
-{{{87447},{87444},{87449}}}
+{{{78714},{77404},{78491},{78948},{78237},{79015},{77428}}}
 }
 
 --obj.modelId = select(4, EJ_GetCreatureInfo(1, tonumber(name)))
@@ -190,19 +190,19 @@ ps_modelid={
 {{47552},{47325},{47229},{46559},{47414},{46675},{47189},{47009},{47527},{46627},{46975},{46770},{47739}},
 {{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0}},
 },
-{{{0},{0},{0}}}
+{{{0},{0},{0},{0},{0},{0},{0}}}
 }
 
 --options for SayAnnouncer
 ps_saoptions_def={
 {{{},{},{}},{{},{1,1,1,1},{},{1,1},{},{1}},{{},{1,1,0},{1,0},{1}},{{},{1}},{{},{},{},{1,1},{1},{1},{1}}, {{},{1},{},{1,1},{},{1},{},{}}},
 {{{}},{{},{1},{},{1,1},{},{}},{{0},{1,1},{},{0},{},{}},{{1},{},{},{}},{{1},{1},{},{},{1},{},{},{},{},{},{},{},{}}},
-{{{},{},{}}}
+{{{},{},{},{},{},{},{}}}
 }
 ps_sa_id={
 {{{},{},{}},{{},{79501,79888,92053,80157},{},{78092,92677},{},{79339}},{{},{86622,86788,86369},{92075,92067},{81685}},{{},{89668}},{{},{},{},{99836,99839},{99516},{98535},{98164}},{{},{"103434|AddComm"..psiccheroic},{},{109541,109325},{},{108046},{},{}}}, --не забыть дефалт добавить вкл/выкл
 {{{}},{{},{122949},{},{121881,122064},{},{}},{{130395},{116784,116417},{},{118303},{},{}},{{111850},{},{},{}},{{137399},{136769},{},{},{139822},{},{},{},{},{},{},{},{}},{{},{},{},{},{},{},{},{},{},{},{},{},{},{}}},
-{{{},{},{}}}
+{{{},{},{},{},{},{},{}}}
 }
 --"106794|AddComm"..psmainbutdragonsoul1
 
@@ -407,13 +407,16 @@ if psdethrepwaittab1 and curtime>psdethrepwaittab1 then
         psnumdeadmax=6
       end
       local psnumgrup=2
-      if GetRaidDifficultyID()==2 or GetRaidDifficultyID()==4 then
+      if GetRaidDifficultyID()==2 or GetRaidDifficultyID()==4 or GetRaidDifficultyID()==16 then
         psnumgrup=5
         psnumdeadmax=psdeathrepsavemain[13]
         if psnumdeadmax<10 then
           psnumdeadmax=11
         end
       end
+	  if GetRaidDifficultyID()==16 then
+		psnumgrup=4
+	  end
       if UnitInRaid("player")==nil and UnitInParty("player") then
         psnumdead=psdiedinparty
       else
@@ -3690,7 +3693,8 @@ if arg1=="PhoenixStyle" then
 pscheckifsec15=GetTime()+20
 
 --для пандарии перенос зон
-if pslocationnames and #pslocationnames>2 then
+-- ытест Я НЕ ЗНАЮ ЧТО ЭТО И ЗАЧЕМ!
+if pslocationnames and #pslocationnames>2 and 1==2 then
   local pslocationnames2={}
   for i=1,#pslocationnames do
     table.insert(pslocationnames2,pslocationnames[i])
@@ -3703,7 +3707,8 @@ if pslocationnames and #pslocationnames>2 then
 end
 
 --для пандарии перенос боссов
-if psbossnames and #psbossnames>2 then
+-- ытест Я НЕ ЗНАЮ ЧТО ЭТО И ЗАЧЕМ!
+if psbossnames and #psbossnames>2 and 1==2 then
   local psbossnames2={}
   for i=1,#psbossnames do
     table.insert(psbossnames2,{})
@@ -4804,6 +4809,9 @@ pswipecheckdelay=GetTime()+5
 local psnumgrup=2
 	if GetRaidDifficultyID()==2 or GetRaidDifficultyID()==4 then
 	psnumgrup=5
+	end
+	if GetRaidDifficultyID()==16 then
+	psnumgrup=4
 	end
 for i = 1,GetNumGroupMembers() do
   local nameee,_,subgroup,_,_,_,_,_,isDead = GetRaidRosterInfo(i)
@@ -6527,6 +6535,37 @@ end
 
 
 
+
+if pssetexpans==3 then
+
+if psmenuchoose1==1 or psmenuchoose1==2 then
+	if psraidoptionsond1[psmenuchoose1][psmenuchoose2] and psraidoptionsond1[psmenuchoose1][psmenuchoose2][nrmenu] then
+		if psraidoptionsond1[psmenuchoose1][psmenuchoose2][nrmenu]==1 then
+			psraidoptionsond1[psmenuchoose1][psmenuchoose2][nrmenu]=0 else psraidoptionsond1[psmenuchoose1][psmenuchoose2][nrmenu]=1
+		end
+	else
+		--SA плай изменений
+		local whichsais=0
+		for i=1,nrmenu do
+			if psraidoptionsond1[psmenuchoose1][psmenuchoose2][i]==nil then
+				whichsais=whichsais+1
+			end
+		end
+		if ps_saoptions[pssetexpans][psmenuchoose1][psmenuchoose2][whichsais] then
+			if ps_saoptions[pssetexpans][psmenuchoose1][psmenuchoose2][whichsais]==1 then
+				ps_saoptions[pssetexpans][psmenuchoose1][psmenuchoose2][whichsais]=0
+			else
+				ps_saoptions[pssetexpans][psmenuchoose1][psmenuchoose2][whichsais]=1
+			end
+		end
+	end
+end
+
+end
+-- 3 expans end
+
+
+
 --общее
 if psraidoptionson[pssetexpans][psmenuchoose1][psmenuchoose2][nrmenu] then
 if psraidoptionson[pssetexpans][psmenuchoose1][psmenuchoose2][nrmenu]==1 then
@@ -6598,6 +6637,28 @@ end
 end
 
 end
+
+
+if pssetexpans==3 then
+
+--ыытест для т1 драенора
+if psmenuchoose1==1 or psmenuchoose1==2 then
+psicctableradiobut[1][bb]:SetChecked(false)
+psicctableradiobut[2][bb]:SetChecked(false)
+psicctableradiobut[3][bb]:SetChecked(false)
+psraidoptionschatd1[psmenuchoose1][psmenuchoose2][bb]=aa
+psicctableradiobut[aa][bb]:SetChecked(true)
+if aa==1 then
+psicctablecifr[bb]:SetText("|cff00ff001|r")
+elseif aa==2 then
+psicctablecifr[bb]:SetText("|cffff00002|r")
+elseif aa==3 then
+psicctablecifr[bb]:SetText("|CFFFFFF003|r")
+end
+end
+
+end
+
 
 
 psraidoptionschat[pssetexpans][psmenuchoose1][psmenuchoose2][bb]=aa
@@ -6720,13 +6781,17 @@ function psloadmodulemanual()
 if IsAddOnLoaded(psaddontoload[pssetexpans][psmenuchoose1])==false then
 local loaded = LoadAddOn(psaddontoload[pssetexpans][psmenuchoose1])
 if loaded then
-print("|cff99ffffPhoenixStyle|r - "..psmoduleload.." "..pslastmoduleloadtxt.."!")
+	if (pslastmoduleloadtxt) then
+		print("|cff99ffffPhoenixStyle|r - "..psmoduleload.." "..pslastmoduleloadtxt.."!")
+	else
+		print("|cff99ffffPhoenixStyle|r - "..psmoduleload.." "..psaddontoload[pssetexpans][psmenuchoose1].."!")
+	end
 psupdatemenugo()
 else
-print("|cff99ffffPhoenixStyle|r - |cffff0000"..pserror.."|r "..psmodulenotload.." "..psaddontoload[pssetexpans][psmenuchoose1].."! "..pscheckmodenabl)
-  if pssetexpans<#psaddontoload or psmenuchoose1<#psaddontoload[pssetexpans] then
-    print ("|cff99ffffPhoenixStyle|r - "..psmaindownloadmodold)
-  end
+	print("|cff99ffffPhoenixStyle|r - |cffff0000"..pserror.."|r "..psmodulenotload.." "..psaddontoload[pssetexpans][psmenuchoose1].."! "..pscheckmodenabl)
+	if pssetexpans<#psaddontoload or psmenuchoose1<#psaddontoload[pssetexpans] then
+		print ("|cff99ffffPhoenixStyle|r - "..psmaindownloadmodold)
+	end
 end
 end
 

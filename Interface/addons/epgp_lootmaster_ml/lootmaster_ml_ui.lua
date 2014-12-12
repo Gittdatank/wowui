@@ -37,7 +37,8 @@ local sstScrollCols = {
        { ["name"] = "s3",		          	["width"] = 34,  ["align"] = "CENTER", 		["bgcolor"] = gearBgColor },
        { ["name"] = "s4",		          	["width"] = 34,  ["align"] = "CENTER",  	["bgcolor"] = gearBgColor },
 	   { ["name"] = "s5",		          	["width"] = 34,  ["align"] = "CENTER", 		["bgcolor"] = gearBgColor },
-       { ["name"] = " ",		          	["width"] = 5,   ["align"] = "LEFT",    	["bgcolor"] = gearBgColor }
+       { ["name"] = "avg lvl",              ["width"] = 50,  ["align"] = "RIGHT",       ["bgcolor"] = gearBgColor },
+       { ["name"] = " ",                    ["width"] = 5,   ["align"] = "LEFT",        ["bgcolor"] = gearBgColor },
 }
 
 function LootMasterML:ShowInfoPopup( ... )
@@ -140,7 +141,7 @@ function LootMasterML:GetFrame()
     titleFrame:SetScript("OnMouseWheel", function(s, delta)
 		self:SetUIScale(max(min(mainframe:GetScale(0.8) + delta/15,5.0),0.5))
 	end)
-    titleFrame:SetScript("OnEnter", function() self:ShowInfoPopup("EPGPLootmaster", L["Click and drag to move this window."], L["Doubleclick to fold/unfold this window."]) end)
+    titleFrame:SetScript("OnEnter", function() self:ShowInfoPopup("EPGPLootmaster", L["Click and drag to move this window."], L["Doubleclick to fold/unfold this window."], L["Use your mousewheel on this bar to zoom window"]) end)
     titleFrame:SetScript("OnLeave", self.HideInfoPopup)
 	titleFrame:SetScript("OnMouseUp", function()
         mainframe:StopMovingOrSizing()
@@ -218,7 +219,7 @@ function LootMasterML:GetFrame()
 		insets = { left = 2, right = 1, top = 2, bottom = 2 }
 	})
     equipHeaderFrame:SetBackdropColor(0.2,0.2,0.2,0.6)
-    equipHeaderFrame:SetWidth(180)
+    equipHeaderFrame:SetWidth(230)
     equipHeaderFrame:SetHeight(38)
 
     local titletext = equipHeaderFrame:CreateFontString(nil,"OVERLAY","GameFontNormalSmall")
@@ -1127,6 +1128,13 @@ function LootMasterML:ShowNoteCellPopup( candidate, item )
 
     self:ShowInfoPopup(L['Note added by '] .. candidate .. ':', itemData or '');
 end
+
+function LootMasterML:ShowAverageItemlevelCellPopup( candidate, item )
+    local itemlevel = self:GetCandidateData(item, candidate, 'averageitemlevel');
+    self:ShowInfoPopup(candidate, 'Average total itemlevel of entire gearset: ' .. tostring(itemlevel));
+end
+
+
 
 function LootMasterML:ShowGearCellPopup( candidate, item, dataName )
 

@@ -1,13 +1,13 @@
 
 AmrDb = {
 	["Talents"] = {
-		"2113323", -- [1]
+		"2133323", -- [1]
 		"2113333", -- [2]
 	},
 	["Glyphs"] = {
 		{
 			58099, -- [1]
-			159701, -- [2]
+			58357, -- [2]
 			123779, -- [3]
 			58098, -- [4]
 			68164, -- [5]
@@ -28,26 +28,25 @@ AmrDb = {
 	["CharacterName"] = "Git",
 	["Race"] = "Orc",
 	["ActiveSpec"] = 1,
-	["Guild"] = "Lusting on Trash",
 	["Level"] = 100,
 	["Equipped"] = {
 		{
-			"|cffa335ee|Hitem:114230:0:0:0:0:0:0:0:100:0:13:3:55:533:526|h[Truesteel Helm of the Peerless]|h|r", -- [1]
+			"|cffa335ee|Hitem:114230:0:0:0:0:0:0:0:100:0:13:3:55:534:527|h[Truesteel Helm of the Peerless]|h|r", -- [1]
 			"|cffa335ee|Hitem:118846:5319:0:0:0:0:0:0:100:0:0:0|h[Gorget of Primal Might]|h|r", -- [2]
 			"|cffa335ee|Hitem:113855:0:0:0:0:0:0:0:100:0:5:1:566|h[Uncrushable Shoulderplates]|h|r", -- [3]
 			nil, -- [4]
 			"|cffa335ee|Hitem:114232:0:0:0:0:0:0:0:100:0:13:3:57:533:527|h[Truesteel Breastplate of the Peerless]|h|r", -- [5]
 			"|cffa335ee|Hitem:118888:0:0:0:0:0:0:0:100:0:0:0|h[Ashelia's Adorned Waistguard]|h|r", -- [6]
-			"|cffa335ee|Hitem:116930:0:0:0:0:0:0:0:100:0:14:0|h[Exceptional Crystal-Plated Legplates]|h|r", -- [7]
-			"|cff0070dd|Hitem:109803:0:0:0:0:0:0:0:100:0:2:1:524|h[Rivet-Sealed Treads]|h|r", -- [8]
-			"|cff0070dd|Hitem:114435:0:5342:0:0:0:0:0:100:0:1:2:207:563|h[Bracers of Vaulted Skies of the Harmonious]|h|r", -- [9]
+			"|cffa335ee|Hitem:113648:0:5342:0:0:0:0:0:100:0:5:2:564:566|h[Legplates of Fractured Crystal]|h|r", -- [7]
+			"|cffa335ee|Hitem:113660:0:0:0:0:0:0:0:100:0:3:0|h[Mosscrusher Sabatons]|h|r", -- [8]
+			"|cffa335ee|Hitem:111180:0:0:0:0:0:0:0:100:0:14:0|h[Primal Gladiator's Armplates of Cruelty]|h|r", -- [9]
 			"|cffa335ee|Hitem:113632:0:0:0:0:0:0:0:100:0:5:1:566|h[Gauntlets of the Heavy Hand]|h|r", -- [10]
 			"|cffa335ee|Hitem:113846:5326:0:0:0:0:0:0:100:0:3:0|h[Seal of Unbound Frost]|h|r", -- [11]
 			"|cffa335ee|Hitem:118298:5326:0:0:0:0:0:0:100:0:11:0|h[Timeless Solium Band of the Bulwark]|h|r", -- [12]
 			"|cffa335ee|Hitem:113861:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Evergaze Arcane Eidolon]|h|r", -- [13]
 			"|cffa335ee|Hitem:112319:0:0:0:0:0:0:0:100:0:13:2:525:530|h[Knight's Badge]|h|r", -- [14]
 			"|cffa335ee|Hitem:118816:5312:0:0:0:0:0:0:100:0:0:0|h[Gorenscale Mesh Cloak]|h|r", -- [15]
-			"|cff0070dd|Hitem:110052:5384:0:0:0:0:0:0:100:0:2:2:499:524|h[Scepter of Brutality]|h|r", -- [16]
+			"|cffa335ee|Hitem:113606:5384:5342:0:0:0:0:0:100:0:5:2:564:566|h[Butcher's Bloody Cleaver]|h|r", -- [16]
 			"|cffa335ee|Hitem:118874:0:0:0:0:0:0:0:100:0:0:0|h[Blackrock Bulwark]|h|r", -- [17]
 		}, -- [1]
 		{
@@ -70,7 +69,7 @@ AmrDb = {
 			"|cffa335ee|Hitem:118874:0:0:0:0:0:0:0:100:0:0:0|h[Blackrock Bulwark]|h|r", -- [17]
 		}, -- [2]
 	},
-	["LastCharacterImportDate"] = "12/02/14 18:07:29",
+	["Class"] = "WARRIOR",
 	["RealmName"] = "Arthas",
 	["Specs"] = {
 		34, -- [1]
@@ -237,31 +236,37 @@ AmrDb = {
 		"|cffa335ee|Hitem:71617:0:0:0:0:0:0:860384896:100:0:0:0|h[Crystallized Firestone]|h|r", -- [156]
 		"|cffa335ee|Hitem:71682:0:0:0:0:0:0:-1250275328:100:0:0:0|h[Helm of the Fiery Protector]|h|r", -- [157]
 		"|cffa335ee|Hitem:104253:0:0:0:0:0:0:222852480:100:0:0:0|h[Kor'kron Juggernaut]|h|r", -- [158]
-		"|cffa335ee|Hitem:52201:0:0:0:0:0:0:1078459648:100:0:0:0|h[Muradin's Favor]|h|r", -- [159]
-		"|cffa335ee|Hitem:31103:0:0:0:0:0:0:2057955200:100:0:0:0|h[Pauldrons of the Forgotten Protector]|h|r", -- [160]
-		"|cffa335ee|Hitem:37254:0:0:0:0:0:0:-2080011776:100:0:0:0|h[Super Simian Sphere]|h|r", -- [161]
-		"|cff0070dd|Hitem:104304:0:0:0:0:0:0:1824453120:100:0:0:0|h[Blizzard Stone]|h|r", -- [162]
-		"|cff0070dd|Hitem:93029:0:0:0:0:0:0:1340462336:100:0:0:0|h[Gluth's Bone]|h|r", -- [163]
-		"|cff0070dd|Hitem:86565:0:0:0:0:0:0:151080064:100:0:0:0|h[Battle Horn]|h|r", -- [164]
-		"|cffffffff|Hitem:87806:0:0:0:0:0:0:982733296:100:0:0:0|h[Ancient Mogu Key]|h|r", -- [165]
+		"|cffa335ee|Hitem:31103:0:0:0:0:0:0:2057955200:100:0:0:0|h[Pauldrons of the Forgotten Protector]|h|r", -- [159]
+		"|cffa335ee|Hitem:37254:0:0:0:0:0:0:-2080011776:100:0:0:0|h[Super Simian Sphere]|h|r", -- [160]
+		"|cff0070dd|Hitem:104304:0:0:0:0:0:0:1824453120:100:0:0:0|h[Blizzard Stone]|h|r", -- [161]
+		"|cff0070dd|Hitem:93029:0:0:0:0:0:0:1340462336:100:0:0:0|h[Gluth's Bone]|h|r", -- [162]
+		"|cff0070dd|Hitem:86565:0:0:0:0:0:0:151080064:100:0:0:0|h[Battle Horn]|h|r", -- [163]
+		"|cffffffff|Hitem:87806:0:0:0:0:0:0:982733296:100:0:0:0|h[Ancient Mogu Key]|h|r", -- [164]
+		"|cffe6cc80|Hitem:105691:5384:4650:4650:0:0:0:631955328:100:0:0:0|h[Hellscream's Doomblade]|h|r", -- [165]
+		"|cffa335ee|Hitem:115415:0:0:0:0:0:0:0:100:0:1:1:560|h[Spaulders of Primal Ferocity]|h|r", -- [166]
+		"|cff0070dd|Hitem:109879:0:0:0:0:0:0:0:100:0:2:2:499:524|h[Gutcrusher Bracers]|h|r", -- [167]
+		"|cff0070dd|Hitem:109803:0:0:0:0:0:0:0:100:0:2:1:524|h[Rivet-Sealed Treads]|h|r", -- [168]
+		"|cffa335ee|Hitem:116930:0:0:0:0:0:0:0:100:0:14:0|h[Exceptional Crystal-Plated Legplates]|h|r", -- [169]
+		"|cff0070dd|Hitem:110015:0:0:0:0:0:0:0:100:0:2:2:499:524|h[Toria's Unseeing Eye]|h|r", -- [170]
+		"|cff0070dd|Hitem:110010:0:0:0:0:0:0:0:100:0:2:1:524|h[Mote of Corruption]|h|r", -- [171]
 	},
 	["Currencies"] = {
 		[81] = 48,
 		[614] = 7,
 		[384] = 12,
+		[391] = 46,
 		[416] = 45,
 		[402] = 27,
-		[391] = 46,
+		[823] = 431,
 		[361] = 6,
-		[823] = 236,
-		[241] = 40,
+		[390] = 10,
+		[-1] = 6566016139,
 		[392] = 330,
 		[393] = 4,
 		[394] = 13,
-		[-1] = 7081213640,
+		[241] = 40,
 	},
-	["IconInfo"] = {
-	},
+	["Region"] = "US",
 	["LogData"] = {
 		["_wipes"] = {
 		},
@@ -270,62 +275,56 @@ AmrDb = {
 			[1136] = "disabled",
 			[1205] = "disabled",
 		},
-		["_lastDiff"] = 1,
 		["_lastZone"] = "FW Horde Garrison Level 3",
+		["_lastDiff"] = 1,
 	},
 	["BagItems"] = {
 		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [1]
-		"|cffa335ee|Hitem:118884:0:0:0:0:0:0:0:100:0:2:0|h[Kyb's Foolish Perseverance]|h|r", -- [2]
-		"|cffffffff|Hitem:6532:0:0:0:0:0:0:0:100:0:0:0|h[Bright Baubles]|h|r", -- [3]
-		"|cff1eff00|Hitem:118236:0:0:0:0:0:0:0:100:0:0:0|h[Counterfeit Coin]|h|r", -- [4]
-		"|cff0070dd|Hitem:117013:0:0:0:0:0:0:0:100:0:0:0|h[Wand of Lightning Shield]|h|r", -- [5]
-		"|cff1eff00|Hitem:116413:0:0:0:0:0:0:0:100:0:0:0|h[Scroll of Town Portal]|h|r", -- [6]
-		"|cff1eff00|Hitem:116411:0:0:0:0:0:0:0:100:0:0:0|h[Scroll of Protection]|h|r", -- [7]
-		"|cffffffff|Hitem:109148:0:0:0:0:0:0:0:100:0:0:0|h[Draenic Strength Flask]|h|r", -- [8]
-		"|cffffffff|Hitem:116268:0:0:0:0:0:0:0:100:0:0:0|h[Draenic Invisibility Potion]|h|r", -- [9]
-		"|cff0070dd|Hitem:117398:0:0:0:0:0:0:0:100:0:11:0|h[Everbloom Seed Pouch]|h|r", -- [10]
-		"|cffffffff|Hitem:118414:0:0:0:0:0:0:0:100:0:0:0|h[Awesomefish]|h|r", -- [11]
-		"|cffe6cc80|Hitem:105691:5384:4650:4650:0:0:0:631955328:100:0:0:0|h[Hellscream's Doomblade]|h|r", -- [12]
-		"|cff1eff00|Hitem:106745:0:0:0:0:0:0:0:100:0:5:1:159|h[Packrunner Belt of the Aurora]|h|r", -- [13]
-		"|cff0070dd|Hitem:109879:0:0:0:0:0:0:0:100:0:2:2:499:524|h[Gutcrusher Bracers]|h|r", -- [14]
-		"|cff0070dd|Hitem:110015:0:0:0:0:0:0:0:100:0:2:2:499:524|h[Toria's Unseeing Eye]|h|r", -- [15]
-		"|cff0070dd|Hitem:110010:0:0:0:0:0:0:0:100:0:2:1:524|h[Mote of Corruption]|h|r", -- [16]
-		"|cffa335ee|Hitem:114622:0:0:0:0:0:0:0:100:0:0:0|h[Goredrenched Weaponry]|h|r", -- [17]
-		"|cff1eff00|Hitem:114807:0:0:0:0:0:0:0:100:0:0:0|h[War Ravaged Armor Set]|h|r", -- [18]
-		"|cff1eff00|Hitem:114616:0:0:0:0:0:0:0:100:0:0:0|h[War Ravaged Weaponry]|h|r", -- [19]
-		"|cff1eff00|Hitem:114120:0:0:0:0:0:0:0:100:0:0:0|h[Big Crate of Salvage]|h|r", -- [20]
-		"|cff1eff00|Hitem:109585:0:0:0:0:0:0:0:100:0:0:0|h[Arakkoa Cipher]|h|r", -- [21]
-		"|cff0070dd|Hitem:60854:0:0:0:0:0:0:0:100:0:0:0|h[Loot-A-Rang]|h|r", -- [22]
-		"|cff0070dd|Hitem:40768:0:0:0:0:0:0:413039488:100:0:0:0|h[MOLL-E]|h|r", -- [23]
-		"|cffffffff|Hitem:40772:0:0:0:0:0:0:2086946028:100:0:0:0|h[Gnomish Army Knife]|h|r", -- [24]
-		"|cffffffff|Hitem:109134:0:0:0:0:0:0:0:100:0:0:0|h[Raw Elekk Meat]|h|r", -- [25]
-		"|cff1eff00|Hitem:114120:0:0:0:0:0:0:0:100:0:0:0|h[Big Crate of Salvage]|h|r", -- [26]
-		"|cff1eff00|Hitem:113261:0:0:0:0:0:0:0:100:0:0:0|h[Sorcerous Fire]|h|r", -- [27]
-		"|cff0070dd|Hitem:17010:0:0:0:0:0:0:0:100:0:0:0|h[Fiery Core]|h|r", -- [28]
-		"|cffffffff|Hitem:97979:0:0:0:0:0:0:0:100:0:0:0|h[The Bear and the Lady Fair]|h|r", -- [29]
-		"|cff0070dd|Hitem:114965:0:0:0:0:0:0:0:100:0:0:0|h[Fractured Forge Hammer]|h|r", -- [30]
-		"|cffffffff|Hitem:113272:0:0:0:0:0:0:0:100:0:0:0|h[Mysterious Artifact]|h|r", -- [31]
-		"|cffffffff|Hitem:112199:0:0:0:0:0:0:0:100:0:0:0|h[Ravenspeaker Scroll Fragment]|h|r", -- [32]
-		"|cffffffff|Hitem:110470:0:0:0:0:0:0:0:100:0:0:0|h[Mysterious Hat]|h|r", -- [33]
-		"|cff0070dd|Hitem:118110:0:0:0:0:0:0:0:100:0:11:0|h[Disposable Pocket Flying Machine]|h|r", -- [34]
-		"|cffffffff|Hitem:110560:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Hearthstone]|h|r", -- [35]
-		"|cffffffff|Hitem:113823:0:0:0:0:0:0:0:100:0:0:0|h[Crusted Iron Horde Pauldrons]|h|r", -- [36]
-		"|cffffffff|Hitem:113822:0:0:0:0:0:0:0:100:0:0:0|h[Ravaged Iron Horde Belt]|h|r", -- [37]
-		"|cffffffff|Hitem:113821:0:0:0:0:0:0:0:100:0:0:0|h[Battered Iron Horde Helmet]|h|r", -- [38]
-		"|cff0070dd|Hitem:119001:0:0:0:0:0:0:0:100:0:11:0|h[Mystery Keg]|h|r", -- [39]
-		"|cff0070dd|Hitem:115506:0:0:0:0:0:0:0:100:0:11:0|h[Treessassin's Guise]|h|r", -- [40]
-		"|cffffffff|Hitem:118331:0:0:0:0:0:0:0:100:0:2:0|h[Auction Connecting Valve]|h|r", -- [41]
-		"|cffffffff|Hitem:118331:0:0:0:0:0:0:0:100:0:2:0|h[Auction Connecting Valve]|h|r", -- [42]
-		"|cffffffff|Hitem:118197:0:0:0:0:0:0:0:100:0:2:0|h[Auction Memory Socket]|h|r", -- [43]
-		"|cffffffff|Hitem:113991:0:0:0:0:0:0:0:100:0:11:0|h[Iron Trap]|h|r", -- [44]
-		"|cffffffff|Hitem:118347:0:0:0:0:0:0:0:100:0:1:0|h[Arcane Crystal Focusing Lens]|h|r", -- [45]
-		"|cffa335ee|Hitem:113855:0:0:0:0:0:0:0:100:0:5:1:566|h[Uncrushable Shoulderplates]|h|r", -- [46]
-		"|cff1eff00|Hitem:114745:0:0:0:0:0:0:0:100:0:0:0|h[Braced Armor Enhancement]|h|r", -- [47]
-		"|cffffffff|Hitem:118576:0:0:0:0:0:0:0:100:0:0:0|h[Savage Feast]|h|r", -- [48]
-		"|cff1eff00|Hitem:114120:0:0:0:0:0:0:0:100:0:0:0|h[Big Crate of Salvage]|h|r", -- [49]
-		"|cff0070dd|Hitem:115319:0:0:0:0:0:0:0:100:0:1:2:186:560|h[Turbulent Axe of the Merciless]|h|r", -- [50]
+		"|cffffffff|Hitem:6532:0:0:0:0:0:0:0:100:0:0:0|h[Bright Baubles]|h|r", -- [2]
+		"|cff1eff00|Hitem:114128:0:0:0:0:0:0:0:100:0:0:0|h[Balanced Weapon Enhancement]|h|r", -- [3]
+		"|cffffffff|Hitem:118576:0:0:0:0:0:0:0:100:0:0:0|h[Savage Feast]|h|r", -- [4]
+		"|cffa335ee|Hitem:114822:0:0:0:0:0:0:0:100:0:0:0|h[Heavily Reinforced Armor Enhancement]|h|r", -- [5]
+		"|cff0070dd|Hitem:114808:0:0:0:0:0:0:0:100:0:0:0|h[Fortified Armor Enhancement]|h|r", -- [6]
+		"|cff0070dd|Hitem:117398:0:0:0:0:0:0:0:100:0:11:0|h[Everbloom Seed Pouch]|h|r", -- [7]
+		"|cffa335ee|Hitem:118884:0:0:0:0:0:0:0:100:0:2:0|h[Kyb's Foolish Perseverance]|h|r", -- [8]
+		"|cff1eff00|Hitem:114616:0:0:0:0:0:0:0:100:0:0:0|h[War Ravaged Weaponry]|h|r", -- [9]
+		"|cff0070dd|Hitem:60854:0:0:0:0:0:0:0:100:0:0:0|h[Loot-A-Rang]|h|r", -- [10]
+		"|cff0070dd|Hitem:40768:0:0:0:0:0:0:413039488:100:0:0:0|h[MOLL-E]|h|r", -- [11]
+		"|cffffffff|Hitem:40772:0:0:0:0:0:0:2086946028:100:0:0:0|h[Gnomish Army Knife]|h|r", -- [12]
+		"|cff0070dd|Hitem:17010:0:0:0:0:0:0:0:100:0:0:0|h[Fiery Core]|h|r", -- [13]
+		"|cff0070dd|Hitem:114965:0:0:0:0:0:0:0:100:0:0:0|h[Fractured Forge Hammer]|h|r", -- [14]
+		"|cff0070dd|Hitem:118110:0:0:0:0:0:0:0:100:0:11:0|h[Disposable Pocket Flying Machine]|h|r", -- [15]
+		"|cffffffff|Hitem:110560:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Hearthstone]|h|r", -- [16]
+		"|cffffffff|Hitem:113822:0:0:0:0:0:0:0:100:0:0:0|h[Ravaged Iron Horde Belt]|h|r", -- [17]
+		"|cff0070dd|Hitem:119001:0:0:0:0:0:0:0:100:0:11:0|h[Mystery Keg]|h|r", -- [18]
+		"|cff0070dd|Hitem:118354:0:0:0:0:0:0:0:100:0:1:0|h[Follower Re-training Certificate]|h|r", -- [19]
+		"|cff0070dd|Hitem:118100:0:0:0:0:0:0:0:100:0:0:0|h[Highmaul Relic]|h|r", -- [20]
+		"|cff0070dd|Hitem:115506:0:0:0:0:0:0:0:100:0:11:0|h[Treessassin's Guise]|h|r", -- [21]
+		"|cffffffff|Hitem:119813:0:0:0:0:0:0:0:100:0:0:0|h[Furry Caged Beast]|h|r", -- [22]
+		"|cffffffff|Hitem:119813:0:0:0:0:0:0:0:100:0:0:0|h[Furry Caged Beast]|h|r", -- [23]
+		"|cffffffff|Hitem:119813:0:0:0:0:0:0:0:100:0:0:0|h[Furry Caged Beast]|h|r", -- [24]
+		"|cffffffff|Hitem:119813:0:0:0:0:0:0:0:100:0:0:0|h[Furry Caged Beast]|h|r", -- [25]
+		"|cffffffff|Hitem:119813:0:0:0:0:0:0:0:100:0:0:0|h[Furry Caged Beast]|h|r", -- [26]
+		"|cffffffff|Hitem:119813:0:0:0:0:0:0:0:100:0:0:0|h[Furry Caged Beast]|h|r", -- [27]
+		"|cffffffff|Hitem:119813:0:0:0:0:0:0:0:100:0:0:0|h[Furry Caged Beast]|h|r", -- [28]
+		"|cffffffff|Hitem:118347:0:0:0:0:0:0:0:100:0:1:0|h[Arcane Crystal Focusing Lens]|h|r", -- [29]
+		"|cffffffff|Hitem:118331:0:0:0:0:0:0:0:100:0:2:0|h[Auction Connecting Valve]|h|r", -- [30]
+		"|cffffffff|Hitem:118331:0:0:0:0:0:0:0:100:0:2:0|h[Auction Connecting Valve]|h|r", -- [31]
+		"|cffffffff|Hitem:118197:0:0:0:0:0:0:0:100:0:2:0|h[Auction Memory Socket]|h|r", -- [32]
+		"|cffffffff|Hitem:113991:0:0:0:0:0:0:0:100:0:11:0|h[Iron Trap]|h|r", -- [33]
+		"|cffa335ee|Hitem:52252:0:0:0:0:0:0:1526216704:100:0:0:0|h[Tabard of the Lightbringer]|h|r", -- [34]
+		"|cff1eff00|Hitem:114807:0:0:0:0:0:0:0:100:0:0:0|h[War Ravaged Armor Set]|h|r", -- [35]
+		"|cff0070dd|Hitem:114129:0:0:0:0:0:0:0:100:0:0:0|h[Striking Weapon Enhancement]|h|r", -- [36]
+		"|cff0070dd|Hitem:114435:0:5342:0:0:0:0:0:100:0:1:2:207:563|h[Bracers of Vaulted Skies of the Harmonious]|h|r", -- [37]
+		"|cff0070dd|Hitem:113809:0:0:0:0:0:0:0:100:0:14:0|h[Blackrock Greathelm]|h|r", -- [38]
+		"|cff0070dd|Hitem:113811:0:0:0:0:0:0:0:100:0:14:0|h[Blackrock Pauldrons]|h|r", -- [39]
+		"|cff1eff00|Hitem:114120:0:0:0:0:0:0:0:100:0:0:0|h[Big Crate of Salvage]|h|r", -- [40]
+		"|cff1eff00|Hitem:114120:0:0:0:0:0:0:0:100:0:0:0|h[Big Crate of Salvage]|h|r", -- [41]
+		"|cffa335ee|Hitem:119338:0:0:0:0:0:0:0:100:0:6:1:567|h[Belt of Inebriated Sorrows]|h|r", -- [42]
+		"|cffffffff|Hitem:118316:0:0:0:0:0:0:0:100:0:0:0|h[Recipe Idea: Steamed Scorpion]|h|r", -- [43]
 	},
-	["LastCharacterImport"] = "$17;US;Arthas;Git;Lusting on Trash;7;2;100;7:629,6:600;1;.s1;34;2112322;58098,1,276,9789,26208,29407;.q1;109803s8b524;53s10b0;23s9b-25b25;173s16b-25b25e5384;2267s14b1b5;1913s5b-473b468b8;1183s3b27;2883s12e-85;548s2e-6;28s17;10s13;4s6;61s1b-512;1s7b54;55s11b-12e6;9s15b11e1$e\\5384\\118015\\173323\\Mark of Bleeding Hollow\\113588=15,113264=10@e\\5299\\110619\\158909\\30 _Mastery_\\111245=1@e\\5293\\110626\\158894\\40 _Mastery_\\111245=1@e\\5300\\110633\\158879\\100 _Mastery_\\111245=1",
+	["Professions"] = {
+	},
 	["VoidItems"] = {
 		"|cffa335ee|Hitem:34011:0:0:0:0:0:0:1582692992:100:0:0:0|h[Illidari Runeshield]|h|r", -- [1]
 		"|cffa335ee|Hitem:50729:0:0:0:0:0:0:1185718912:100:0:0:0|h[Icecrown Glacial Wall]|h|r", -- [2]
@@ -419,16 +418,10 @@ AmrDb = {
 		[1270] = 7,
 	},
 	["Faction"] = "Horde",
-	["Professions"] = {
-		["Cooking"] = 576,
-		["Blacksmithing"] = 655,
-		["Archaeology"] = 166,
-		["Fishing"] = 555,
-		["First Aid"] = 450,
-		["Engineering"] = 604,
+	["IconInfo"] = {
 	},
-	["Region"] = "US",
-	["Class"] = "WARRIOR",
+	["LastCharacterImport"] = "$17;US;Arthas;Git;Lusting on Trash;7;2;100;7:629,6:600;1;.s1;34;2112322;58098,1,276,9789,26208,29407;.q1;109803s8b524;53s10b0;23s9b-25b25;173s16b-25b25e5384;2267s14b1b5;1913s5b-473b468b8;1183s3b27;2883s12e-85;548s2e-6;28s17;10s13;4s6;61s1b-512;1s7b54;55s11b-12e6;9s15b11e1$e\\5384\\118015\\173323\\Mark of Bleeding Hollow\\113588=15,113264=10@e\\5299\\110619\\158909\\30 _Mastery_\\111245=1@e\\5293\\110626\\158894\\40 _Mastery_\\111245=1@e\\5300\\110633\\158879\\100 _Mastery_\\111245=1",
+	["LastCharacterImportDate"] = "12/02/14 18:07:29",
 	["BankItemsAndCounts"] = {
 		[3466] = 4,
 		[105568] = 1,
@@ -469,168 +462,176 @@ AmrDb = {
 		[110290] = 1,
 		[13442] = 20,
 		[78479] = 1,
-		[104537] = 1,
+		[109127] = 200,
 		[81412] = 1,
+		[109223] = 100,
 		[88584] = 1,
 		[52843] = 1,
-		[90146] = 8,
+		[90146] = 7,
 		[94768] = 1,
 		[35280] = 1,
 		[87405] = 1,
 		[17202] = 13,
+		[110015] = 1,
 		[104538] = 1,
 		[101749] = 16,
 		[104570] = 1,
+		[37254] = 1,
 		[105622] = 2,
 		[81413] = 1,
+		[2459] = 61,
 		[105415] = 1,
 		[101861] = 1,
 		[90147] = 1,
+		[118764] = 1,
+		[96818] = 1,
 		[105511] = 2,
-		[110016] = 1,
 		[74656] = 10,
-		[105478] = 1,
-		[34010] = 1,
-		[6657] = 18,
+		[76131] = 1,
+		[94985] = 1,
 		[105587] = 1,
+		[24270] = 1,
+		[104265] = 1,
+		[63378] = 1,
+		[5507] = 1,
 		[81414] = 1,
-		[105456] = 1,
+		[103982] = 1,
 		[105416] = 1,
 		[89112] = 522,
 		[90148] = 1,
-		[5634] = 3,
+		[109879] = 1,
 		[6529] = 1,
-		[104253] = 1,
-		[105512] = 1,
-		[6532] = 14,
-		[6533] = 9,
-		[82973] = 1,
 		[71406] = 1,
+		[105512] = 1,
+		[104253] = 1,
+		[6533] = 9,
+		[87806] = 1,
+		[87216] = 1,
 		[104572] = 1,
 		[91838] = 1267,
-		[86547] = 2,
-		[105640] = 1,
-		[87806] = 1,
 		[105417] = 1,
-		[86386] = 1,
+		[105640] = 1,
+		[103871] = 1,
+		[82467] = 1,
+		[104437] = 1,
 		[90149] = 1,
 		[76140] = 2,
 		[105481] = 1,
-		[78448] = 1,
+		[104613] = 1,
 		[104493] = 1,
 		[99409] = 1,
-		[96841] = 1,
-		[104437] = 1,
-		[89257] = 1,
 		[104636] = 1,
+		[104537] = 1,
+		[89257] = 1,
+		[118769] = 1,
 		[105609] = 1,
-		[105414] = 1,
+		[113585] = 2,
 		[76061] = 18,
 		[76077] = 1,
-		[31103] = 1,
-		[110292] = 1,
+		[78367] = 1,
+		[110016] = 1,
 		[90150] = 1,
 		[88381] = 1,
-		[104613] = 1,
-		[96182] = 1,
+		[94222] = 8,
+		[64400] = 1,
 		[104494] = 1,
 		[99410] = 1,
-		[78367] = 1,
+		[101789] = 1,
 		[104287] = 1,
-		[82467] = 1,
+		[63127] = 1,
 		[22574] = 1,
-		[36913] = 3,
-		[118774] = 1,
+		[105478] = 1,
 		[105339] = 1,
 		[86565] = 1,
+		[68049] = 6,
 		[88589] = 1,
 		[105435] = 1,
 		[90151] = 1,
-		[104594] = 1,
+		[110010] = 1,
 		[104463] = 1,
-		[74249] = 32,
+		[105866] = 4,
 		[104495] = 1,
 		[99411] = 1,
-		[64402] = 1,
-		[72104] = 3,
+		[87060] = 1,
+		[72095] = 5,
 		[104304] = 1,
 		[86980] = 1,
-		[105866] = 4,
-		[101856] = 1,
-		[87060] = 1,
-		[68049] = 6,
-		[76095] = 35,
-		[86566] = 1,
-		[90152] = 1,
-		[72095] = 5,
-		[99412] = 1,
-		[95810] = 1,
-		[8827] = 38,
+		[105611] = 1,
 		[71617] = 1,
-		[109118] = 400,
+		[105438] = 1,
+		[101852] = 1,
+		[76095] = 35,
+		[105691] = 1,
+		[90152] = 1,
+		[109803] = 1,
+		[109118] = 600,
+		[95810] = 1,
+		[60218] = 1,
+		[99412] = 1,
+		[8827] = 38,
 		[102249] = 1,
-		[102218] = 2,
+		[104535] = 1,
 		[64401] = 2,
 		[74247] = 5,
 		[72988] = 16,
 		[105644] = 2,
+		[104593] = 1,
+		[102218] = 2,
 		[99716] = 1,
-		[52201] = 1,
-		[105693] = 1,
 		[90153] = 1,
 		[96799] = 1,
-		[76097] = 62,
-		[3823] = 2,
+		[43348] = 1,
+		[72096] = 2,
 		[77467] = 4,
 		[99413] = 1,
-		[74248] = 2,
+		[105414] = 1,
 		[102250] = 1,
 		[86966] = 1,
 		[71682] = 1,
-		[104593] = 1,
+		[74248] = 2,
+		[3823] = 2,
 		[105645] = 1,
-		[60218] = 1,
 		[96736] = 1,
-		[101852] = 1,
-		[105438] = 1,
+		[76097] = 62,
+		[105693] = 1,
 		[90154] = 1,
-		[43348] = 1,
-		[72096] = 2,
+		[115415] = 1,
+		[86566] = 1,
 		[104482] = 1,
-		[2459] = 61,
+		[101856] = 1,
 		[99414] = 1,
 		[96625] = 1,
-		[103871] = 1,
-		[105611] = 1,
-		[63127] = 1,
-		[101789] = 1,
-		[104535] = 1,
-		[63353] = 1,
-		[118769] = 1,
+		[118774] = 1,
+		[72104] = 3,
+		[64402] = 1,
+		[104594] = 1,
+		[74249] = 32,
+		[96182] = 1,
+		[36913] = 3,
 		[101853] = 1,
 		[44050] = 1,
-		[64400] = 1,
-		[113585] = 2,
+		[116930] = 1,
+		[110292] = 1,
 		[101662] = 9,
 		[9172] = 7,
 		[118779] = 1,
+		[86547] = 2,
 		[87575] = 1,
+		[6532] = 14,
 		[86572] = 1,
 		[118372] = 1,
-		[63378] = 1,
-		[103982] = 1,
-		[87216] = 1,
-		[5507] = 1,
-		[24270] = 1,
-		[104265] = 1,
+		[96841] = 1,
+		[78448] = 1,
+		[86386] = 1,
+		[82973] = 1,
 		[101854] = 1,
-		[94985] = 1,
-		[76131] = 1,
+		[5634] = 3,
+		[105456] = 1,
 		[104962] = 1,
-		[96818] = 1,
-		[118764] = 1,
-		[37254] = 1,
+		[6657] = 18,
+		[34010] = 1,
+		[31103] = 1,
 		[105536] = 1,
-		[94222] = 8,
+		[63353] = 1,
 	},
 }
