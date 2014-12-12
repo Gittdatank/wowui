@@ -555,7 +555,7 @@ _NPCScan: disabled
 _NPCScan.AutoAdd: disabled
 _NPCScan.Overlay: disabled
 _NPCScan.Overlay.Broker: disabled
-BigWigs: disabled
+BigWigs: enabled
 CombatReplay: enabled
 CombatReplay_Logger: enabled
 CombatReplay_SavedData: enabled
@@ -621,7 +621,7 @@ DBM-Draenor: disabled
 DBM-BlackrockFoundry: disabled
 ArkInventoryRules_Example: enabled
 BlockChinese: enabled
-VEM-Core: enabled
+VEM-Core: disabled
 MarketWatcher: disabled
 HandyNotes: disabled
 TheUndermineJournalGE: disabled
@@ -652,4 +652,4 @@ VEM-Highmaul: enabled
 VEM-Party-WoD: enabled
 VEM-WorldEvents: enabled
 VEM-Sound-Default: enabled
-VEM-StatusBarTimers: enabled
+VEM-StatusBarTimers: disabled

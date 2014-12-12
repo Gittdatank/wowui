@@ -26,7 +26,7 @@ Bazooka_Options: disabled
 Bazooka_ShowUpdates: disabled
 BeanCounter: disabled
 BetterPowerBarAlt: disabled
-BigWigs: disabled
+BigWigs: enabled
 BigWigs_Core: disabled
 BigWigs_HeartOfFear: disabled
 BigWigs_Mogushan: disabled
@@ -333,7 +333,7 @@ BigWigs_BurningCrusade: enabled
 BigWigs_Cataclysm: enabled
 BigWigs_Classic: enabled
 oqueue: disabled
-VEM-Core: enabled
+VEM-Core: disabled
 MarketWatcher: disabled
 BigWigs_BlackrockFoundry: enabled
 BigWigs_Draenor: enabled
@@ -380,7 +380,7 @@ DBM-Party-WoD: disabled
 GridStatusItemLevel: disabled
 protwarbar: disabled
 TheUndermineJournal: disabled
-VEM-StatusBarTimers: enabled
+VEM-StatusBarTimers: disabled
 VEM-BlackrockFoundry: enabled
 VEM-DMF: enabled
 VEM-Draenor: enabled

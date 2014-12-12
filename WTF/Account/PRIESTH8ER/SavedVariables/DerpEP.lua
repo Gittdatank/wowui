@@ -1,7 +1,5 @@
 
 DerpDB = {
-	["pull"] = {
-	},
 	["sessions"] = {
 		{
 			["time"] = 1418262999,
@@ -64,187 +62,35 @@ DerpDB = {
 			},
 		}, -- [1]
 	},
-	["data"] = {
+	["pull"] = {
 		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
+			["players"] = {
+				{
+					["key"] = "Git",
+					["count"] = 1,
+				}, -- [1]
+				{
+					["key"] = "Gramz",
+					["count"] = 1,
+				}, -- [2]
+				{
+					["key"] = "Vamprixlz",
+					["count"] = 1,
+				}, -- [3]
+			},
+			["key"] = "Call of the Tides",
+			["count"] = 3,
 		}, -- [1]
 		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
+			["players"] = {
+				{
+					["key"] = "Awàke",
+					["count"] = 2,
+				}, -- [1]
+			},
+			["key"] = "Exploding Fungus",
+			["count"] = 2,
 		}, -- [2]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [3]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [4]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [5]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [6]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [7]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [8]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [9]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [10]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [11]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [12]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [13]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [14]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [15]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [16]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [17]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [18]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [19]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [20]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [21]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [22]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [23]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [24]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [25]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [26]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [27]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [28]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [29]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [30]
 	},
 	["session"] = {
 		["time"] = 1418262999,
@@ -2115,7 +1961,970 @@ DerpDB = {
 				["amount"] = -2,
 				["status"] = "farm",
 			}, -- [157]
+			{
+				["spell"] = "Exploding Fungus",
+				["source"] = "Brackenspore",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Git",
+				["time"] = 1418353130,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [158]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Nathreizm",
+				["time"] = 1418353387,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [159]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Chugnoris",
+				["time"] = 1418353387,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [160]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Realistic",
+				["time"] = 1418353387,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [161]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Clancey",
+				["time"] = 1418353387,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [162]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Tydeson",
+				["time"] = 1418353388,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [163]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Git",
+				["time"] = 1418353388,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [164]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Layonhooves",
+				["time"] = 1418353389,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [165]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Git",
+				["time"] = 1418353422,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [166]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Nathreizm",
+				["time"] = 1418353422,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [167]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Kalarae",
+				["time"] = 1418353422,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [168]
+			{
+				["spell"] = "Exploding Fungus",
+				["source"] = "Brackenspore",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Clancey",
+				["time"] = 1418353648,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [169]
+			{
+				["spell"] = "Exploding Fungus",
+				["source"] = "Brackenspore",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Realistic",
+				["time"] = 1418353648,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [170]
+			{
+				["spell"] = "Exploding Fungus",
+				["source"] = "Brackenspore",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Nytbolt",
+				["time"] = 1418353648,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [171]
+			{
+				["spell"] = "Exploding Fungus",
+				["source"] = "Brackenspore",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Oné",
+				["time"] = 1418353648,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [172]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Tydeson",
+				["time"] = 1418353673,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [173]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Bloodbolts",
+				["time"] = 1418353673,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [174]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Kalarae",
+				["time"] = 1418353674,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [175]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Gramz",
+				["time"] = 1418353982,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [176]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Nathreizm",
+				["time"] = 1418354044,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [177]
+			{
+				["spell"] = "Exploding Fungus",
+				["source"] = "Brackenspore",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Tydeson",
+				["time"] = 1418354276,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [178]
+			{
+				["spell"] = "Exploding Fungus",
+				["source"] = "Brackenspore",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Bloodbolts",
+				["time"] = 1418354309,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [179]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Oné",
+				["time"] = 1418354919,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [180]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Dotsfired",
+				["time"] = 1418354920,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [181]
+			{
+				["spell"] = "Exploding Fungus",
+				["source"] = "Brackenspore",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Nytbolt",
+				["time"] = 1418354942,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [182]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Git",
+				["time"] = 1418354993,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [183]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Bloodbolts",
+				["time"] = 1418354994,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [184]
+			{
+				["spell"] = "Exploding Fungus",
+				["source"] = "Brackenspore",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Gramz",
+				["time"] = 1418355236,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [185]
+			{
+				["spell"] = "Exploding Fungus",
+				["source"] = "Brackenspore",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Shinerr",
+				["time"] = 1418355236,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [186]
+			{
+				["spell"] = "Exploding Fungus",
+				["source"] = "Brackenspore",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Gramz",
+				["time"] = 1418355297,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [187]
+			{
+				["spell"] = "Exploding Fungus",
+				["source"] = "Brackenspore",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Nytbolt",
+				["time"] = 1418355480,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [188]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Primalfears",
+				["time"] = 1418355517,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [189]
+			{
+				["spell"] = "Exploding Fungus",
+				["source"] = "Brackenspore",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Chugnoris",
+				["time"] = 1418356276,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [190]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Realistic",
+				["time"] = 1418356338,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [191]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Tydeson",
+				["time"] = 1418356338,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [192]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Awàke",
+				["time"] = 1418356340,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [193]
+			{
+				["spell"] = "Exploding Fungus",
+				["source"] = "Brackenspore",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Git",
+				["time"] = 1418356503,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [194]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Tydeson",
+				["time"] = 1418356547,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [195]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Ookiniz",
+				["time"] = 1418356550,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [196]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Clancey",
+				["time"] = 1418356551,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [197]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Primalfears",
+				["time"] = 1418356758,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [198]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Ookiniz",
+				["time"] = 1418357159,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [199]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Gramz",
+				["time"] = 1418358471,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [200]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Bloodbolts",
+				["time"] = 1418358715,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [201]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Tydeson",
+				["time"] = 1418358715,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [202]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Kalarae",
+				["time"] = 1418358715,
+				["amount"] = 0,
+				["status"] = "farm",
+			}, -- [203]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Oné",
+				["time"] = 1418359072,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [204]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Nytbolt",
+				["time"] = 1418359073,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [205]
+			{
+				["spell"] = "Exploding Fungus",
+				["source"] = "Brackenspore",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Ookiniz",
+				["time"] = 1418359656,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [206]
+			{
+				["spell"] = "Exploding Fungus",
+				["source"] = "Brackenspore",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Nytbolt",
+				["time"] = 1418360843,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [207]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Bloodbolts",
+				["time"] = 1418361464,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [208]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Chronux",
+				["time"] = 1418361464,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [209]
+			{
+				["spell"] = "Exploding Fungus",
+				["source"] = "Brackenspore",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Chugnoris",
+				["time"] = 1418361787,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [210]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Tydeson",
+				["time"] = 1418362623,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [211]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Bloodbolts",
+				["time"] = 1418362898,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [212]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Realistic",
+				["time"] = 1418362899,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [213]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Vamprixlz",
+				["time"] = 1418363168,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [214]
+			{
+				["spell"] = "Exploding Fungus",
+				["source"] = "Brackenspore",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Clancey",
+				["time"] = 1418363223,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [215]
+			{
+				["spell"] = "Exploding Fungus",
+				["source"] = "Brackenspore",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Ookiniz",
+				["time"] = 1418363278,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [216]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Chugnoris",
+				["time"] = 1418363302,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [217]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Vamprixlz",
+				["time"] = 1418363527,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [218]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Git",
+				["time"] = 1418363561,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [219]
+			{
+				["spell"] = "Exploding Fungus",
+				["source"] = "Brackenspore",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Layonhooves",
+				["time"] = 1418363749,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [220]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Bloodbolts",
+				["time"] = 1418364037,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [221]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Git",
+				["time"] = 1418364256,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [222]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Gramz",
+				["time"] = 1418364358,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [223]
+			{
+				["spell"] = "Call of the Tides",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Vamprixlz",
+				["time"] = 1418364358,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [224]
+			{
+				["spell"] = "Exploding Fungus",
+				["source"] = "Brackenspore",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Awàke",
+				["time"] = 1418364377,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [225]
+			{
+				["spell"] = "Exploding Fungus",
+				["source"] = "Brackenspore",
+				["zone"] = "Highmaul",
+				["encounter"] = "Brackenspore",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Awàke",
+				["time"] = 1418364377,
+				["amount"] = -5,
+				["status"] = "farm",
+			}, -- [226]
 		},
+	},
+	["data"] = {
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [1]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [2]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [3]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [4]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [5]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [6]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [7]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [8]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [9]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [10]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [11]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [12]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [13]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [14]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [15]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [16]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [17]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [18]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [19]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [20]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [21]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [22]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [23]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [24]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [25]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [26]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [27]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [28]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [29]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [30]
 	},
 	["counter"] = 215,
 }

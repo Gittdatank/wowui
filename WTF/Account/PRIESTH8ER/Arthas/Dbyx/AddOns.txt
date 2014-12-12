@@ -65,8 +65,8 @@ TidyPlates_Neon: enabled
 TidyPlates_Quatre: enabled
 TidyPlates_Simple: enabled
 BlockChinese: enabled
-BigWigs: disabled
-VEM-Core: enabled
+BigWigs: enabled
+VEM-Core: disabled
 RaidAchievement: enabled
 MarketWatcher: disabled
 HandyNotes: disabled
@@ -110,4 +110,4 @@ VEM-Highmaul: enabled
 VEM-Party-WoD: enabled
 VEM-WorldEvents: enabled
 VEM-Sound-Default: enabled
-VEM-StatusBarTimers: enabled
+VEM-StatusBarTimers: disabled
