@@ -53,22 +53,22 @@ AmrDb = {
 			"|cff1eff00|Hitem:118009:0:0:0:0:0:0:0:95:0:11:0|h[Botani Tangle Chain]|h|r", -- [2]
 			"|cff0070dd|Hitem:106141:0:0:0:0:0:0:0:95:0:11:0|h[Frostwolf Scout's Spaulders]|h|r", -- [3]
 			nil, -- [4]
-			"|cff0070dd|Hitem:117503:0:0:0:0:0:0:0:95:0:11:1:171|h[Grimfrost Leather Tunic]|h|r", -- [5]
+			"|cff0070dd|Hitem:112590:0:0:0:0:0:0:0:95:0:11:0|h[Overgrowth Cutter Vest]|h|r", -- [5]
 			"|cffa335ee|Hitem:98613:0:4653:4653:4647:0:0:1719231872:95:491:0:0|h[Snow Lily Belt]|h|r", -- [6]
-			"|cffa335ee|Hitem:98604:4822:4653:4653:0:0:0:513555840:95:491:0:0|h[Snow Lily Britches]|h|r", -- [7]
+			"|cffa335ee|Hitem:112527:0:0:0:0:0:0:0:95:0:11:1:15|h[Talador Sentinel Breeches]|h|r", -- [7]
 			"|cff0070dd|Hitem:112594:0:0:0:0:0:0:0:95:0:11:1:171|h[Overgrowth Cutter Boots]|h|r", -- [8]
 			"|cff1eff00|Hitem:112619:0:0:0:0:0:0:0:95:0:11:0|h[Overgrowth Cutter Wristwraps]|h|r", -- [9]
 			"|cff0070dd|Hitem:112595:0:0:0:0:0:0:0:95:0:11:1:171|h[Overgrowth Cutter Gloves]|h|r", -- [10]
-			"|cff0070dd|Hitem:117984:0:0:0:0:0:0:0:95:0:11:1:171|h[Pit Skukler's Ring]|h|r", -- [11]
+			"|cff0070dd|Hitem:117572:0:0:0:0:0:0:0:95:0:0:0|h[Iridium Inlaid Band]|h|r", -- [11]
 			"|cff1eff00|Hitem:112858:0:0:0:0:0:0:0:95:0:11:0|h[Botani Grower's Ring]|h|r", -- [12]
-			"|cff1eff00|Hitem:113255:0:0:0:0:0:0:0:95:0:11:0|h[Asha's Fang]|h|r", -- [13]
+			"|cff1eff00|Hitem:113024:0:0:0:0:0:0:0:95:0:11:0|h[\"Reliable\" Threat Assessor]|h|r", -- [13]
 			"|cff0070dd|Hitem:118229:0:0:0:0:0:0:0:95:0:0:0|h[Resonant Hidecrystal of the Gorger]|h|r", -- [14]
 			"|cff0070dd|Hitem:112959:0:0:0:0:0:0:0:95:0:11:0|h[Grace of Dionar]|h|r", -- [15]
 			"|cffe6cc80|Hitem:104400:0:0:0:0:0:0:942026880:95:0:0:0|h[Hellscream's Razor]|h|r", -- [16]
 		}, -- [2]
 	},
 	["Class"] = "DRUID",
-	["LastCharacterImportDate"] = "",
+	["Region"] = "US",
 	["Specs"] = {
 		34, -- [1]
 		34, -- [2]
@@ -85,16 +85,16 @@ AmrDb = {
 		[384] = 12,
 		[416] = 45,
 		[402] = 27,
-		[361] = 6,
-		[391] = 46,
-		[823] = 13882,
+		[241] = 40,
 		[-1] = 1121287789,
+		[823] = 13882,
+		[361] = 6,
 		[392] = 823,
 		[393] = 4,
 		[394] = 13,
-		[241] = 40,
+		[391] = 46,
 	},
-	["LastCharacterImport"] = "",
+	["RealmName"] = "Arthas",
 	["LogData"] = {
 		["_wipes"] = {
 		},
@@ -103,8 +103,8 @@ AmrDb = {
 			[1136] = "disabled",
 			[1205] = "disabled",
 		},
-		["_lastDiff"] = 1,
-		["_lastZone"] = "FW Horde Garrison Level 2",
+		["_lastZone"] = "Draenor",
+		["_lastDiff"] = 0,
 	},
 	["BagItems"] = {
 		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [1]
@@ -169,6 +169,21 @@ AmrDb = {
 		"|cffffffff|Hitem:5512:0:0:0:0:0:0:0:100:0:0:0|h[Healthstone]|h|r", -- [60]
 		"|cff9d9d9d|Hitem:106867:0:0:0:0:0:0:0:100:0:0:0|h[Dulled Claw]|h|r", -- [61]
 	},
+	["Professions"] = {
+	},
+	["LastCharacterImport"] = "",
+	["Reps"] = {
+		[1269] = 7,
+		[1337] = 6,
+		[1341] = 7,
+		[1375] = 4,
+		[1387] = 0,
+		[1376] = 0,
+		[1270] = 7,
+		[1388] = 7,
+		[1435] = 7,
+	},
+	["Faction"] = "Horde",
 	["IconInfo"] = {
 	},
 	["VoidItems"] = {
@@ -252,22 +267,7 @@ AmrDb = {
 		"|cffa335ee|Hitem:103649:0:0:0:0:0:0:683148160:100:491:0:0|h[Xal'atoh, Desecrated Image of Gorehowl]|h|r", -- [78]
 		"|cffa335ee|Hitem:30874:0:0:0:0:0:0:34031104:100:0:0:0|h[The Unbreakable Will]|h|r", -- [79]
 	},
-	["Reps"] = {
-		[1269] = 7,
-		[1337] = 6,
-		[1341] = 7,
-		[1375] = 4,
-		[1387] = 0,
-		[1376] = 0,
-		[1435] = 7,
-		[1388] = 7,
-		[1270] = 7,
-	},
-	["Faction"] = "Horde",
-	["Professions"] = {
-	},
-	["RealmName"] = "Arthas",
-	["Region"] = "US",
+	["LastCharacterImportDate"] = "",
 	["BankItemsAndCounts"] = {
 		[74248] = 2,
 		[40195] = 20,
@@ -278,17 +278,17 @@ AmrDb = {
 		[90146] = 11,
 		[74247] = 5,
 		[74249] = 32,
-		[76140] = 2,
-		[76061] = 18,
+		[77467] = 4,
+		[98717] = 15,
 		[72988] = 7,
-		[54849] = 19,
+		[72095] = 5,
 		[89112] = 522,
 		[22574] = 1,
-		[76131] = 1,
-		[72104] = 3,
 		[94111] = 16,
-		[72095] = 5,
-		[98717] = 15,
-		[77467] = 4,
+		[72104] = 3,
+		[76131] = 1,
+		[54849] = 19,
+		[76061] = 18,
+		[76140] = 2,
 	},
 }

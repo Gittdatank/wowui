@@ -1,9 +1,26 @@
 ------------------------------------------------------------------------
-r285 | mackatack | 2014-12-11 15:19:08 +0000 (Thu, 11 Dec 2014) | 1 line
+r289 | mackatack | 2014-12-12 23:08:51 +0000 (Fri, 12 Dec 2014) | 1 line
 Changed paths:
-   A /tags/0.6.61 (from /trunk:284)
+   A /tags/0.6.63 (from /trunk:288)
 
-Only auto register with autolooting enabled
+see prev commit
+------------------------------------------------------------------------
+r288 | mackatack | 2014-12-12 23:08:22 +0000 (Fri, 12 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/epgp_lootmaster.toc
+   M /trunk/ml/lootmaster_ml.lua
+
+added more debugging output for the monitor system troubles
+------------------------------------------------------------------------
+r286 | mackatack | 2014-12-12 13:58:31 +0000 (Fri, 12 Dec 2014) | 3 lines
+Changed paths:
+   M /trunk/lootmaster_core.lua
+   M /trunk/ml/lootmaster_ml.lua
+   M /trunk/ml/lootmaster_options.lua
+
+Extra attempt of disabling EPGP GP popup, preventing double GP registration
+Cleaned up Debug messages
+Convert nils to false when saving guildranks in voting and monitor options, perhaps this will fix the problems people are having
 ------------------------------------------------------------------------
 r284 | mackatack | 2014-12-11 15:18:49 +0000 (Thu, 11 Dec 2014) | 1 line
 Changed paths:

@@ -2,13 +2,13 @@
 AUCTIONATOR_SAVEDVARS = {
 	["_50000"] = 500,
 	["_2000"] = 100,
+	["_5000000"] = 10000,
+	["LOG_DE_DATA_X"] = true,
+	["_1000000"] = 2500,
 	["_10000"] = 200,
 	["_500"] = 5,
-	["_1000000"] = 2500,
-	["_200000"] = 1000,
 	["STARTING_DISCOUNT"] = 5,
-	["LOG_DE_DATA_X"] = true,
-	["_5000000"] = 10000,
+	["_200000"] = 1000,
 }
 AUCTIONATOR_PRICING_HISTORY = {
 }
@@ -87,24 +87,24 @@ AUCTIONATOR_PRICE_DATABASE = {
 		},
 		["Ashelia's Adorned Waistguard"] = {
 			["mr"] = 1200000000,
-			["cc"] = 2,
-			["id"] = "118888",
 			["sc"] = 5,
+			["id"] = "118888",
 			["H1465"] = 1200000000,
+			["cc"] = 2,
 		},
 		["Blackrock Bulwark"] = {
 			["mr"] = 1199999999,
-			["cc"] = 2,
-			["id"] = "118874",
 			["sc"] = 7,
+			["id"] = "118874",
 			["H1465"] = 1199999999,
+			["cc"] = 2,
 		},
 		["Botani-Barbed Pauldrons"] = {
 			["mr"] = 2250000000,
-			["cc"] = 2,
-			["id"] = "118892",
 			["sc"] = 5,
+			["id"] = "118892",
 			["H1465"] = 2250000000,
+			["cc"] = 2,
 		},
 		["Signet of the Traitor General"] = {
 			["mr"] = 955450000,
@@ -115,17 +115,17 @@ AUCTIONATOR_PRICE_DATABASE = {
 		},
 		["Battle Hardened Gorget"] = {
 			["mr"] = 990000000,
-			["sc"] = 1,
-			["id"] = "118848",
 			["H1465"] = 990000000,
+			["id"] = "118848",
 			["cc"] = 2,
+			["sc"] = 1,
 		},
 		["Gorget of Primal Might"] = {
 			["mr"] = 1150000000,
-			["sc"] = 1,
-			["id"] = "118846",
 			["cc"] = 2,
+			["id"] = "118846",
 			["H1465"] = 1150000000,
+			["sc"] = 1,
 		},
 		["Blackrock Fragment"] = {
 			["mr"] = 4099,
@@ -168,7 +168,6 @@ AUCTIONATOR_TOONS = {
 	["Git"] = {
 		["firstSeen"] = 1416356731,
 		["firstVersion"] = "3.1.6",
-		["guid"] = "Player-69-08560956",
 	},
 }
 AUCTIONATOR_STACKING_PREFS = {

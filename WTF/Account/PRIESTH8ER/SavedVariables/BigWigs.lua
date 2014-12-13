@@ -9,11 +9,11 @@ BigWigs3DB = {
 				["Default"] = {
 					["Vengeful Strikes"] = 0,
 					["Calamity"] = 515,
+					["Clash"] = 0,
 					["Gouge"] = 1539,
-					[-7958] = 0,
 					["Noxious Poison"] = 0,
 					["Corrupted Brew"] = 0,
-					["Clash"] = 0,
+					[-7958] = 0,
 				},
 			},
 		},
@@ -46,8 +46,8 @@ BigWigs3DB = {
 				["Git - Mar 2014"] = {
 					["posx"] = 319.999973316193,
 					["fontSize"] = 10,
-					["font"] = "DorisPP",
 					["lock"] = true,
+					["font"] = "DorisPP",
 					["fontOutline"] = "",
 					["posy"] = 234.560268194669,
 				},
@@ -111,10 +111,10 @@ BigWigs3DB = {
 		["BigWigs_Bosses_Durumu the Forgotten"] = {
 			["profiles"] = {
 				["Default"] = {
-					["Lingering Gaze"] = 707,
-					["custom_off_ray_controllers"] = true,
-					[-6889] = 515,
 					[-6891] = 643,
+					["Lingering Gaze"] = 707,
+					[-6889] = 515,
+					["custom_off_ray_controllers"] = true,
 				},
 			},
 		},
@@ -170,12 +170,12 @@ BigWigs3DB = {
 					["outline"] = "OUTLINE",
 					["fontSize"] = 20,
 					["BWEmphasizeCountdownMessageAnchor_x"] = 589.806197754304,
-					["chat"] = true,
-					["BWEmphasizeMessageAnchor_y"] = 561.836198379482,
-					["BWMessageAnchor_y"] = 579.040065182446,
 					["BWMessageAnchor_x"] = 536.480144258734,
+					["chat"] = true,
 					["BWEmphasizeCountdownMessageAnchor_y"] = 534.956394292793,
 					["font"] = "DorisPP",
+					["BWEmphasizeMessageAnchor_y"] = 561.836198379482,
+					["BWMessageAnchor_y"] = 579.040065182446,
 					["BWEmphasizeMessageAnchor_x"] = 536.686550504121,
 				},
 				["Default"] = {
@@ -364,16 +364,16 @@ BigWigs3DB = {
 					["fill"] = true,
 				},
 				["Git - Mar 2014"] = {
+					["BigWigsEmphasizeAnchor_y"] = 288.396419335088,
 					["BigWigsAnchor_width"] = 254.749893188477,
 					["BigWigsAnchor_y"] = 229.119565191279,
+					["BigWigsEmphasizeAnchor_x"] = 267.566790894416,
 					["emphasizeGrowup"] = true,
 					["BigWigsAnchor_x"] = 75.2000569128977,
 					["fill"] = true,
-					["texture"] = "Minimalist",
-					["BigWigsEmphasizeAnchor_width"] = 296.999725341797,
-					["BigWigsEmphasizeAnchor_x"] = 267.566790894416,
 					["font"] = "DorisPP",
-					["BigWigsEmphasizeAnchor_y"] = 288.396419335088,
+					["BigWigsEmphasizeAnchor_width"] = 296.999725341797,
+					["texture"] = "Minimalist",
 				},
 				["Default"] = {
 					["BigWigsEmphasizeAnchor_y"] = 256.716341918193,
@@ -409,8 +409,8 @@ BigWigs3DB = {
 					["font"] = "DorisPP",
 				},
 				["Git - Mar 2014"] = {
-					["font"] = "DorisPP",
 					["outline"] = "OUTLINE",
+					["font"] = "DorisPP",
 					["fontSize"] = 30,
 				},
 				["Default"] = {
@@ -498,10 +498,10 @@ BigWigs3DB = {
 					["font"] = "DorisPP",
 				},
 				["Git - Mar 2014"] = {
-					["fontSize"] = 20,
-					["font"] = "DorisPP",
 					["posx"] = 763.200139191147,
+					["fontSize"] = 20,
 					["lock"] = true,
+					["font"] = "DorisPP",
 					["posy"] = 254.88034586548,
 				},
 				["Default"] = {
@@ -537,10 +537,10 @@ BigWigs3DB = {
 					["Pain Suppression"] = 0,
 					["Skull Banner"] = 0,
 					["Guardian of Ancient Kings"] = 0,
-					["Vampiric Blood"] = 0,
+					["Innervate"] = 0,
 					["Power Word: Barrier"] = 0,
 					["Stormlash Totem"] = 0,
-					["Innervate"] = 0,
+					["Hand of Sacrifice"] = 0,
 					["Survival Instincts"] = 0,
 					["Icebound Fortitude"] = 0,
 					["Vigilance"] = 0,
@@ -559,7 +559,7 @@ BigWigs3DB = {
 					["Smoke Bomb"] = 0,
 					["Guardian Spirit"] = 0,
 					["Ironbark"] = 0,
-					["Hand of Sacrifice"] = 0,
+					["Vampiric Blood"] = 0,
 					["Ardent Defender"] = 0,
 					["Fortifying Brew"] = 0,
 				},
@@ -1415,7 +1415,7 @@ BigWigsStatisticsDB = {
 			},
 			["normal"] = {
 				["best"] = 232.58899999992,
-				["kills"] = 1,
+				["kills"] = 2,
 			},
 		},
 		[1195] = {
@@ -1437,7 +1437,7 @@ BigWigsStatisticsDB = {
 			},
 			["normal"] = {
 				["best"] = 373.85699999996,
-				["kills"] = 1,
+				["kills"] = 2,
 			},
 			["mythic"] = {
 				["wipes"] = 5,

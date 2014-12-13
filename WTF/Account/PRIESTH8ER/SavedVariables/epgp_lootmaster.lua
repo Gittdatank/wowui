@@ -52,28 +52,45 @@ EPGPLootMaster = {
 		["Giit - Azuremyst"] = {
 		},
 		["Git - Arthas"] = {
-			["button3_fallback"] = "",
-			["button2_gp"] = "0%",
-			["buttonNum"] = 2,
-			["button2_fallback"] = "OFFSPEC",
-			["AutoLooter"] = "Tydeson",
-			["button2_gpValue"] = 0,
-			["button2_color"] = "686def",
 			["mainUIScale"] = 0.86666667064031,
-			["hideMLOnCombat"] = false,
+			["button3_fallback"] = "",
 			["votingSendGuildRankList"] = {
 				[3] = true,
 			},
-			["popupUIScale"] = 0.666666690508525,
+			["button3_gpValue"] = 0,
+			["button2_gp"] = "0%",
 			["button2"] = "Offspec",
+			["buttonNum"] = 2,
+			["button2_fallback"] = "OFFSPEC",
+			["button3_gpIsPercentage"] = true,
+			["hideMLOnCombat"] = false,
 			["button2_gpIsPercentage"] = true,
 			["votingDisallowSelf"] = false,
-			["button3_gp"] = "0%",
+			["button2_color"] = "686def",
 			["bidding"] = false,
 			["votingSendGuildRank"] = true,
-			["button3_gpIsPercentage"] = true,
-			["button3_gpValue"] = 0,
+			["button2_gpValue"] = 0,
+			["AutoLooter"] = "Tydeson",
+			["button3_gp"] = "0%",
+			["popupUIScale"] = 0.666666690508525,
 			["votingSendAssistantOnly"] = false,
+		},
+		["Git - Azuremyst"] = {
+			["button2"] = "Offspec",
+			["mainUIScale"] = 1.06666677792867,
+			["button2_fallback"] = "",
+			["hideMLOnCombat"] = false,
+			["votingSendGuildRankList"] = {
+				nil, -- [1]
+				nil, -- [2]
+				true, -- [3]
+			},
+			["monitorSendAssistantOnly"] = false,
+			["votingSendGuildRank"] = true,
+			["button2_color"] = "836f27",
+			["votingSendAssistantOnly"] = false,
+			["buttonNum"] = 2,
+			["blizzard_show_offline"] = 1,
 		},
 		["Gilt - Azuremyst"] = {
 		},
@@ -95,23 +112,6 @@ EPGPLootMaster = {
 			["mainUIScale"] = 1.06666666666667,
 			["button3_gpValue"] = 0,
 			["button2_fallback"] = "OFFSPEC",
-		},
-		["Git - Azuremyst"] = {
-			["button2"] = "Offspec",
-			["mainUIScale"] = 1.06666677792867,
-			["button2_fallback"] = "",
-			["hideMLOnCombat"] = false,
-			["votingSendGuildRankList"] = {
-				nil, -- [1]
-				nil, -- [2]
-				true, -- [3]
-			},
-			["monitorSendAssistantOnly"] = false,
-			["votingSendGuildRank"] = true,
-			["button2_color"] = "836f27",
-			["votingSendAssistantOnly"] = false,
-			["buttonNum"] = 2,
-			["blizzard_show_offline"] = 1,
 		},
 		["Ezyn - Azuremyst"] = {
 		},

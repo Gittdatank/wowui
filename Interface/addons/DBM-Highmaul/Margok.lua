@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1197, "DBM-Highmaul", nil, 477)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 11993 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 11999 $"):sub(12, -3))
 mod:SetCreatureID(77428)
 mod:SetEncounterID(1705)
 mod:SetZone()
@@ -15,10 +15,12 @@ mod:RegisterEventsInCombat(
 	"SPELL_AURA_APPLIED 157763 158553 156225 164004 164005 164006 158605 164176 164178 164191",
 	"SPELL_AURA_APPLIED_DOSE 158553",
 	"SPELL_AURA_REMOVED 158605 164176 164178 164191 157763 156225 164004 164005 164006",
+	"UNIT_DIED",
 	"UNIT_SPELLCAST_SUCCEEDED boss1"
 )
 
 --TODO, combine options to reduce GUI mod options in same manor that was done with paragons.
+--TODO, get timers for first kick and crush, since my logs are from before the hotfix
 --Phase 1: Might of the Crown
 local warnBranded								= mod:NewStackAnnounce(156225, 4)
 local warnDestructiveResonance					= mod:NewSpellAnnounce(156467, 3)--Find out if target scanning works
@@ -90,6 +92,9 @@ local timerMarkOfChaosCD						= mod:NewCDTimer(50, 158605, nil, mod:IsTank())
 local timerForceNovaCD							= mod:NewCDCountTimer(45, 157349)--45-52
 local timerSummonArcaneAberrationCD				= mod:NewCDTimer(45, 156471, nil, not mod:IsHealer())--45-52 Variation Noted
 local timerTransition							= mod:NewCastTimer(76.5, 157278)
+--Intermission: Lineage of Power
+local timerCrushArmorCD							= mod:NewNextTimer(6, 158553, nil, mod:IsTank())
+local timerKickToFaceCD							= mod:NewNextTimer(20, 158563, nil, mod:IsTank())
 
 local countdownArcaneWrath						= mod:NewCountdown(50, 156238, not mod:IsTank())--Probably will add for whatever proves most dangerous on mythic
 local countdownMarkofChaos						= mod:NewCountdown("Alt50", 158605, mod:IsTank())
@@ -102,6 +107,7 @@ mod:AddSetIconOption("SetIconOnBrandedDebuff", 156225, false)
 mod.vb.markActive = false
 mod.vb.playerHasMark = false
 mod.vb.jumpDistance = 13
+mod.vb.lastMarkedTank = nil
 local jumpDistance1 = {
 	[1] = 200, [2] = 100, [3] = 50, [4] = 25, [5] = 12.5, [6] = 7,--Or 5
 }
@@ -145,9 +151,9 @@ local function updateRangeFrame(markPreCast)
 		if mod.vb.playerHasBranded then--Player has Branded debuff
 			DBM.RangeCheck:Show(distance, nil)--Show everyone
 		else--No branded debuff on player, so show a filtered range finder
-			if mod.vb.markActive then--Even though we set range to 13 instead of 35, show marked tank dots on radar too, not just branded dots.
-				DBM.RangeCheck:Show(35, debuffFilterCombined)--Enough complained about it, so we'll now prioritize 35 yards for mark of chaos if mark is active. This is also what Bigwigs does so gives consistency across mods.
-			else--no branded tank, So show ONLY branded dots
+			if mod.vb.markActive and mod.vb.lastMarkedTank and mod:CheckNearby(35, mod.vb.lastMarkedTank) then--There is an active tank with debuff and they are too close
+				DBM.RangeCheck:Show(35, debuffFilterCombined)--Show marked instead of branded if the marked tank is NOT far enough out
+			else--no branded tank in range, So show ONLY branded dots
 				DBM.RangeCheck:Show(distance, debuffFilterBranded)
 			end
 		end
@@ -168,6 +174,7 @@ function mod:OnCombatStart(delay)
 	self.vb.markActive = false
 	self.vb.playerHasMark = false
 	self.vb.playerHasBranded = false
+	self.vb.lastMarkedTank = nil
 	self.vb.brandedActive = 0
 	self.vb.forceCount = 0
 	self.vb.jumpDistance = 13
@@ -297,6 +304,7 @@ function mod:SPELL_CAST_SUCCESS(args)
 	local spellId = args.spellId
 	if spellId == 158563 then
 		warnKickToTheFace:Show(args.destName)
+		timerKickToFaceCD:Start()
 		if args:IsPlayer() then
 			specWarnKickToTheFace:Show()
 		else
@@ -375,9 +383,11 @@ function mod:SPELL_AURA_APPLIED(args)
 	elseif spellId == 158553 then
 		local amount = args.amount or 1
 		warnCrushArmor:Show(args.destName, amount)
+		timerCrushArmorCD:Start()
 	elseif args:IsSpellID(158605, 164176, 164178, 164191) then
 		--Update frame again in case he swaped targets during cast (happens)
 		self.vb.markActive = true
+		self.vb.lastMarkedTank = args.destName
 		if args:IsPlayer() then
 			self.vb.playerHasMark = true
 		else
@@ -392,6 +402,7 @@ function mod:SPELL_AURA_REMOVED(args)
 	local spellId = args.spellId
 	if args:IsSpellID(158605, 164176, 164178, 164191) then
 		self.vb.markActive = false
+		self.vb.lastMarkedTank = nil
 		if args:IsPlayer() then
 			self.vb.playerHasMark = false
 		end
@@ -407,6 +418,14 @@ function mod:SPELL_AURA_REMOVED(args)
 			self:SetIcon(args.destName, 0)
 		end
 		updateRangeFrame()
+	end
+end
+
+function mod:UNIT_DIED(args)
+	local cid = self:GetCIDFromGUID(args.destGUID)
+	if cid == 78549 then--Reaver
+		timerCrushArmorCD:Cancel()
+		timerKickToFaceCD:Cancel()
 	end
 end
 

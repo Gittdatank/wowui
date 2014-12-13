@@ -4,8 +4,8 @@
 
 LootMaster          = LibStub("AceAddon-3.0"):NewAddon("EPGPLootMaster", "AceConsole-3.0", "AceComm-3.0", "AceEvent-3.0", "AceTimer-3.0", "AceHook-3.0")
 
-local version 	    = "0.6.61"
-local dVersion 	    = "2014-12-11T15:18:49Z"
+local version 	    = "0.6.63"
+local dVersion 	    = "2014-12-12T23:08:22Z"
 local iVersion	    = 4
 local iVersionML	  = 12
 local _G            = _G
@@ -531,9 +531,9 @@ function LootMaster:SlashHandler( input )
         local ml = LootMasterML;
         if not ml then return self:Print(L["Master Looter Module not enabled"]) end;
 
-        self:AddDebugLoot("item:868:0:0:0:0:0:0:0") -- Default debugging item
+        --self:AddDebugLoot("item:868:0:0:0:0:0:0:0") -- Default debugging item
         self:AddDebugLoot("\124cffa335ee\124Hitem:113984:0:0:0:0:0:0:0:null:0:0:1:567\124h[Blackiron Micro Crucible]\124h\124r") -- Heroic item
-        self:AddDebugLoot("\124cffa335ee\124Hitem:113984:0:0:0:0:0:0:0:null:0:0:1:0\124h[Blackiron Micro Crucible]\124h\124r") -- Normal item
+        --self:AddDebugLoot("\124cffa335ee\124Hitem:113984:0:0:0:0:0:0:0:null:0:0:1:0\124h[Blackiron Micro Crucible]\124h\124r") -- Normal item
         --self:Print('disabled')
 
 	else
@@ -580,7 +580,7 @@ function LootMaster:AddDebugLoot(link)
 
         LootMasterML:SendCandidateListToMonitors(itemID)
         LootMasterML:ReloadMLTableForLoot(itemID)
-        --ml.AnnounceLoot(ml, itemID)
+        LootMasterML:AnnounceLoot(itemID)
     end
 end
 

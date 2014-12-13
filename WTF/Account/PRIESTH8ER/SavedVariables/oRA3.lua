@@ -216,20 +216,20 @@ oRA3DB = {
 					["lockDisplay"] = true,
 				},
 				["Got - Dec 2014"] = {
-					["neverShowMine"] = true,
 					["showDisplay"] = false,
-					["spells"] = {
-						[740] = true,
-						[73325] = true,
-						[47788] = true,
-						[33206] = true,
-						[77761] = false,
-						[97462] = true,
-						[2825] = true,
-						[98008] = true,
-					},
-					["onlyShowMine"] = true,
 					["lockDisplay"] = true,
+					["spells"] = {
+						[98008] = true,
+						[77761] = false,
+						[740] = true,
+						[2825] = true,
+						[33206] = true,
+						[97462] = true,
+						[47788] = true,
+						[73325] = true,
+					},
+					["neverShowMine"] = true,
+					["onlyShowMine"] = true,
 				},
 				["Gilt"] = {
 					["lockDisplay"] = true,
@@ -249,19 +249,19 @@ oRA3DB = {
 					},
 				},
 				["Git - Mar 2014"] = {
+					["neverShowMine"] = true,
 					["showDisplay"] = false,
-					["lockDisplay"] = true,
 					["spells"] = {
+						[740] = true,
+						[73325] = true,
+						[33206] = true,
 						[98008] = true,
 						[77761] = false,
-						[740] = true,
-						[2825] = true,
-						[33206] = true,
 						[97462] = true,
+						[2825] = true,
 						[47788] = true,
-						[73325] = true,
 					},
-					["neverShowMine"] = true,
+					["lockDisplay"] = true,
 					["onlyShowMine"] = true,
 				},
 				["Gitt - Monk"] = {
@@ -365,7 +365,7 @@ oRA3DB = {
 			["lastSelectedList"] = 1,
 		},
 		["Got - Dec 2014"] = {
-			["lastSelectedPanel"] = "Checks",
+			["lastSelectedList"] = 1,
 			["positions"] = {
 				["oRA3ReadyCheck"] = {
 					["Height"] = 297,
@@ -386,7 +386,7 @@ oRA3DB = {
 					["PosX"] = 1066.35942929001,
 				},
 			},
-			["lastSelectedList"] = 1,
+			["lastSelectedPanel"] = "Checks",
 		},
 		["Gilt"] = {
 			["lastSelectedPanel"] = "Tanks",

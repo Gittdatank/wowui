@@ -5,7 +5,7 @@ if GetLocale()=="deDE" or GetLocale()=="ruRU" or GetLocale()=="zhTW" or GetLocal
 rsclocalel()
 end
 
-rscversion=6.008
+rscversion=6.009
 
 
 --zone ID where addon check flasks
@@ -236,6 +236,12 @@ rscflasktableold={
 	--105617,
 	
 	176151,
+	
+	-- + 200 stats here!
+  156073,
+  156070,
+  156071,
+  156077,
 }
 
 --=============ELIXIRS guard=========

@@ -1,4 +1,21 @@
 subversion:
+	- Omega via svn r11999: Also add the updated hotfix timers in. Since i killed fight before hotfix this week, I cannot verify them other than just match blizzards notes. Nor can I add first timers (for when phase starts) since my logs clearly do not match the hotfix notes. I'll get the first timers and such next week reset probably
+	- Omega via svn r11998: Margok. Even smarter range finder. Only force the 35 yard range on non tanks if the tank failed to get far enough away, else, show branded even if mark is active.
+	Translation
+	If a tank has mark of chaos and is LESS than 35 yards away from the raid, priority is
+	mark of chaos > branded
+	If tank has mark of chaos and is greater than 35 yards away (ie the tank isn't terrible)
+	branded > mark of chaos
+	If no mark of chaos is out at all, then obviously
+	branded
+	
+	Also, range frame improvements ton twin ogron too for pulverize
+	Disable useless tank warning
+	Add arcane buff the bosses pass back and forth to twin ogron too.
+	Disable arcane volatility CD timer. Too variable, too useless
+	
+	Lastly, added balls timer (when possible) to karogh
+	- Omega via svn r11997: Rangef rame improvements for mythic
 	- Omega via svn r11996: Push two quick fixes
 	- Omega via svn r11995: Increase scan time a LOT more. they spawn REALLY slow. i think combat event happens like 10 seconds before they are actually targetable, which is likely the problem. Support marking up to 8 of them at once, instead of just 4, in case you shatter both at once into 8 motes.
 	- Omega via svn r11994: Add crystal barrage yell for non LFR difficulties

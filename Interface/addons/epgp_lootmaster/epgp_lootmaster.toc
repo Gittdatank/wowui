@@ -2,14 +2,14 @@
 ## X-Min-Interface: 50000
 ## Title: EPGP LootMaster - |cFFFF8080Core|r
 ## Author: Bushmaster-Darksorrow-EU
-## Version: 0.6.61
+## Version: 0.6.63
 ## Notes: Full loot distributing system for EPGP.
 ## X-Category: Guild
 ## OptionalDeps: EPGP, HeadCount, HeadCount2, CT_RaidTracker, MizusRaidTracker
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
 ## SavedVariables: EPGPLootMaster
-## X-Curse-Packaged-Version: 0.6.61
+## X-Curse-Packaged-Version: 0.6.63
 ## X-Curse-Project-Name: EPGPLootmaster
 ## X-Curse-Project-ID: epgp_lootmaster
 ## X-Curse-Repository-ID: wow/epgp_lootmaster/mainline
@@ -26,6 +26,7 @@ Libs\AceConsole-3.0\AceConsole-3.0.xml
 Libs\AceGUI-3.0\AceGUI-3.0.xml
 Libs\AceConfig-3.0\AceConfig-3.0.xml
 Libs\AceComm-3.0\AceComm-3.0.xml
+Libs\AceSerializer-3.0\AceSerializer-3.0.xml
 Libs\LibCompress\LibCompress.lua
 Libs\LibTalentQuery-1.0\LibTalentQuery-1.0.lua
 Libs\LibDialog-1.0\lib.xml

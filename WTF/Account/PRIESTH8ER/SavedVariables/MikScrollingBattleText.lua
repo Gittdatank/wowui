@@ -5,59 +5,6 @@ MSBTProfiles_SavedVars = {
 			["critFontName"] = "DorisPP",
 			["animationSpeed"] = 30,
 			["normalFontSize"] = 8,
-			["groupNumbers"] = true,
-			["creationVersion"] = "5.7.123",
-			["critFontSize"] = 10,
-			["normalFontName"] = "DorisPP",
-			["hideFullOverheals"] = true,
-			["soundsDisabled"] = true,
-			["scrollAreas"] = {
-				["Notification"] = {
-					["offsetX"] = -960,
-					["offsetY"] = 380,
-				},
-				["Incoming"] = {
-					["behavior"] = "MSBT_NORMAL",
-					["direction"] = "Up",
-					["offsetX"] = 141,
-					["animationStyle"] = "Straight",
-					["stickyBehavior"] = "Normal",
-					["offsetY"] = -178,
-					["textAlignIndex"] = 1,
-					["stickyTextAlignIndex"] = 1,
-				},
-				["Static"] = {
-					["offsetX"] = -561,
-					["offsetY"] = 424,
-				},
-				["Custom1"] = {
-					["stickyTextAlignIndex"] = 1,
-					["stickyDirection"] = "Down",
-					["scrollHeight"] = 202.058792114258,
-					["offsetX"] = 130,
-					["direction"] = "Down",
-					["name"] = "Incoming Heals",
-					["offsetY"] = 398,
-					["textAlignIndex"] = 1,
-					["stickyAnimationStyle"] = "Static",
-				},
-				["Outgoing"] = {
-					["stickyTextAlignIndex"] = 2,
-					["behavior"] = "MSBT_NORMAL",
-					["stickyBehavior"] = "Normal",
-					["textAlignIndex"] = 2,
-					["direction"] = "Up",
-					["critFontSize"] = 16.6650466918945,
-					["scrollHeight"] = 430.147430419922,
-					["offsetX"] = 577,
-					["stickyDirection"] = "Up",
-					["iconAlign"] = "Left",
-					["offsetY"] = 128,
-					["animationStyle"] = "Straight",
-					["normalFontSize"] = 14.2850370407105,
-				},
-			},
-			["shortenNumbers"] = true,
 			["events"] = {
 				["NOTIFICATION_BUFF_FADE"] = {
 					["disabled"] = true,
@@ -173,6 +120,59 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 			},
+			["creationVersion"] = "5.7.123",
+			["critFontSize"] = 10,
+			["normalFontName"] = "DorisPP",
+			["groupNumbers"] = true,
+			["soundsDisabled"] = true,
+			["scrollAreas"] = {
+				["Notification"] = {
+					["offsetX"] = -960,
+					["offsetY"] = 380,
+				},
+				["Incoming"] = {
+					["behavior"] = "MSBT_NORMAL",
+					["direction"] = "Up",
+					["offsetX"] = 141,
+					["animationStyle"] = "Straight",
+					["stickyBehavior"] = "Normal",
+					["offsetY"] = -178,
+					["textAlignIndex"] = 1,
+					["stickyTextAlignIndex"] = 1,
+				},
+				["Static"] = {
+					["offsetX"] = -561,
+					["offsetY"] = 424,
+				},
+				["Custom1"] = {
+					["stickyTextAlignIndex"] = 1,
+					["stickyDirection"] = "Down",
+					["scrollHeight"] = 202.058792114258,
+					["offsetX"] = 130,
+					["direction"] = "Down",
+					["name"] = "Incoming Heals",
+					["offsetY"] = 398,
+					["textAlignIndex"] = 1,
+					["stickyAnimationStyle"] = "Static",
+				},
+				["Outgoing"] = {
+					["stickyTextAlignIndex"] = 2,
+					["behavior"] = "MSBT_NORMAL",
+					["stickyBehavior"] = "Normal",
+					["textAlignIndex"] = 2,
+					["direction"] = "Up",
+					["critFontSize"] = 16.6650466918945,
+					["scrollHeight"] = 430.147430419922,
+					["offsetX"] = 577,
+					["stickyDirection"] = "Up",
+					["iconAlign"] = "Left",
+					["offsetY"] = 128,
+					["animationStyle"] = "Straight",
+					["normalFontSize"] = 14.2850370407105,
+				},
+			},
+			["shortenNumbers"] = true,
+			["hideFullOverheals"] = true,
 			["triggers"] = {
 				["MSBT_TRIGGER_KILL_SHOT"] = {
 					["disabled"] = true,
@@ -423,7 +423,44 @@ MSBTProfiles_SavedVars = {
 			},
 			["creationVersion"] = "5.7.123",
 			["critFontSize"] = 15,
+			["groupNumbers"] = true,
 			["soundsDisabled"] = true,
+			["normalFontName"] = "DorisPP",
+			["scrollAreas"] = {
+				["Notification"] = {
+					["offsetX"] = 560,
+					["offsetY"] = 103,
+				},
+				["Incoming"] = {
+					["stickyTextAlignIndex"] = 1,
+					["offsetX"] = 115,
+					["behavior"] = "CurvedRight",
+					["offsetY"] = -173,
+					["textAlignIndex"] = 1,
+				},
+				["Static"] = {
+					["disabled"] = true,
+				},
+				["Custom1"] = {
+					["scrollHeight"] = 350,
+					["offsetX"] = 904,
+					["stickyTextAlignIndex"] = 3,
+					["offsetY"] = -295,
+					["textAlignIndex"] = 3,
+					["name"] = "Incoming Heals",
+				},
+				["Outgoing"] = {
+					["behavior"] = "MSBT_NORMAL",
+					["scrollHeight"] = 350,
+					["offsetX"] = 540,
+					["stickyBehavior"] = "Normal",
+					["iconAlign"] = "Left",
+					["offsetY"] = -294,
+					["animationStyle"] = "Straight",
+					["direction"] = "Up",
+				},
+			},
+			["shortenNumbers"] = true,
 			["events"] = {
 				["NOTIFICATION_BUFF_FADE"] = {
 					["disabled"] = true,
@@ -535,43 +572,6 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 			},
-			["normalFontName"] = "DorisPP",
-			["scrollAreas"] = {
-				["Notification"] = {
-					["offsetX"] = 560,
-					["offsetY"] = 103,
-				},
-				["Incoming"] = {
-					["stickyTextAlignIndex"] = 1,
-					["offsetX"] = 115,
-					["behavior"] = "CurvedRight",
-					["offsetY"] = -173,
-					["textAlignIndex"] = 1,
-				},
-				["Static"] = {
-					["disabled"] = true,
-				},
-				["Custom1"] = {
-					["scrollHeight"] = 350,
-					["offsetX"] = 904,
-					["stickyTextAlignIndex"] = 3,
-					["offsetY"] = -295,
-					["textAlignIndex"] = 3,
-					["name"] = "Incoming Heals",
-				},
-				["Outgoing"] = {
-					["behavior"] = "MSBT_NORMAL",
-					["scrollHeight"] = 350,
-					["offsetX"] = 540,
-					["stickyBehavior"] = "Normal",
-					["iconAlign"] = "Left",
-					["offsetY"] = -294,
-					["animationStyle"] = "Straight",
-					["direction"] = "Up",
-				},
-			},
-			["shortenNumbers"] = true,
-			["groupNumbers"] = true,
 			["normalFontSize"] = 10,
 		},
 		["Git - Mar 2014"] = {
@@ -995,6 +995,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 			},
+			["hideFullOverheals"] = true,
+			["creationVersion"] = "5.7.123",
+			["critFontSize"] = 10,
+			["shortenNumbers"] = true,
 			["events"] = {
 				["NOTIFICATION_BUFF_FADE"] = {
 					["disabled"] = true,
@@ -1110,10 +1114,6 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 			},
-			["creationVersion"] = "5.7.123",
-			["critFontSize"] = 10,
-			["shortenNumbers"] = true,
-			["groupNumbers"] = true,
 			["soundsDisabled"] = true,
 			["scrollAreas"] = {
 				["Outgoing"] = {
@@ -1162,7 +1162,7 @@ MSBTProfiles_SavedVars = {
 				},
 			},
 			["normalFontName"] = "DorisPP",
-			["hideFullOverheals"] = true,
+			["groupNumbers"] = true,
 			["normalFontSize"] = 8,
 		},
 		["Default"] = {
@@ -1175,20 +1175,20 @@ MSBTProfiles_SavedVars = {
 			["soundsDisabled"] = true,
 			["hotThrottleDuration"] = 0,
 			["scrollAreas"] = {
+				["Incoming"] = {
+					["offsetX"] = -185,
+					["offsetY"] = -112,
+				},
 				["Outgoing"] = {
 					["offsetX"] = 131,
 					["offsetY"] = -115,
-				},
-				["Notification"] = {
-					["disabled"] = true,
 				},
 				["Static"] = {
 					["disabled"] = true,
 					["offsetY"] = 374,
 				},
-				["Incoming"] = {
-					["offsetX"] = -185,
-					["offsetY"] = -112,
+				["Notification"] = {
+					["disabled"] = true,
 				},
 			},
 			["shortenNumbers"] = true,
@@ -1322,6 +1322,7 @@ MSBTProfiles_SavedVars = {
 			},
 			["creationVersion"] = "5.7.123",
 			["critFontSize"] = 15,
+			["soundsDisabled"] = true,
 			["events"] = {
 				["NOTIFICATION_BUFF_FADE"] = {
 					["disabled"] = true,
@@ -1433,7 +1434,6 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 			},
-			["groupNumbers"] = true,
 			["normalFontName"] = "DorisPP",
 			["scrollAreas"] = {
 				["Outgoing"] = {
@@ -1476,7 +1476,7 @@ MSBTProfiles_SavedVars = {
 				},
 			},
 			["shortenNumbers"] = true,
-			["soundsDisabled"] = true,
+			["groupNumbers"] = true,
 			["normalFontSize"] = 10,
 		},
 		["Gitt - Monk"] = {
@@ -2366,44 +2366,6 @@ MSBTProfiles_SavedVars = {
 			["normalFontSize"] = 10,
 			["creationVersion"] = "5.7.123",
 			["critFontSize"] = 15,
-			["groupNumbers"] = true,
-			["soundsDisabled"] = true,
-			["shortenNumbers"] = true,
-			["scrollAreas"] = {
-				["Incoming"] = {
-					["stickyTextAlignIndex"] = 1,
-					["offsetX"] = 115,
-					["behavior"] = "CurvedRight",
-					["offsetY"] = -173,
-					["textAlignIndex"] = 1,
-				},
-				["Outgoing"] = {
-					["direction"] = "Up",
-					["scrollHeight"] = 350,
-					["offsetX"] = 540,
-					["iconAlign"] = "Left",
-					["stickyBehavior"] = "Normal",
-					["offsetY"] = -294,
-					["animationStyle"] = "Straight",
-					["behavior"] = "MSBT_NORMAL",
-				},
-				["Static"] = {
-					["disabled"] = true,
-				},
-				["Custom1"] = {
-					["stickyTextAlignIndex"] = 3,
-					["offsetX"] = 904,
-					["name"] = "Incoming Heals",
-					["offsetY"] = -295,
-					["textAlignIndex"] = 3,
-					["scrollHeight"] = 350,
-				},
-				["Notification"] = {
-					["offsetX"] = 560,
-					["offsetY"] = 103,
-				},
-			},
-			["normalFontName"] = "DorisPP",
 			["events"] = {
 				["NOTIFICATION_BUFF_FADE"] = {
 					["disabled"] = true,
@@ -2515,6 +2477,44 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 			},
+			["groupNumbers"] = true,
+			["shortenNumbers"] = true,
+			["scrollAreas"] = {
+				["Incoming"] = {
+					["stickyTextAlignIndex"] = 1,
+					["offsetX"] = 115,
+					["behavior"] = "CurvedRight",
+					["offsetY"] = -173,
+					["textAlignIndex"] = 1,
+				},
+				["Outgoing"] = {
+					["direction"] = "Up",
+					["scrollHeight"] = 350,
+					["offsetX"] = 540,
+					["iconAlign"] = "Left",
+					["stickyBehavior"] = "Normal",
+					["offsetY"] = -294,
+					["animationStyle"] = "Straight",
+					["behavior"] = "MSBT_NORMAL",
+				},
+				["Static"] = {
+					["disabled"] = true,
+				},
+				["Custom1"] = {
+					["stickyTextAlignIndex"] = 3,
+					["offsetX"] = 904,
+					["name"] = "Incoming Heals",
+					["offsetY"] = -295,
+					["textAlignIndex"] = 3,
+					["scrollHeight"] = 350,
+				},
+				["Notification"] = {
+					["offsetX"] = 560,
+					["offsetY"] = 103,
+				},
+			},
+			["normalFontName"] = "DorisPP",
+			["soundsDisabled"] = true,
 			["triggers"] = {
 				["MSBT_TRIGGER_KILL_SHOT"] = {
 					["disabled"] = true,

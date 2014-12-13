@@ -4,7 +4,7 @@
 
 local debug	= false
 
-LootMasterML		= LibStub("AceAddon-3.0"):NewAddon("LootMasterML", "AceConsole-3.0", "AceComm-3.0", "AceEvent-3.0", "AceTimer-3.0", "AceHook-3.0")
+LootMasterML		= LibStub("AceAddon-3.0"):NewAddon("LootMasterML", "AceConsole-3.0", "AceComm-3.0", "AceEvent-3.0", "AceTimer-3.0", "AceHook-3.0", "AceSerializer-3.0")
 local LootMaster	= LibStub("AceAddon-3.0"):GetAddon("EPGPLootMaster")
 
 local L = LibStub("AceLocale-3.0"):GetLocale("EPGPLootmaster")
@@ -155,6 +155,10 @@ function LootMasterML:PostEnable()
 	ChatFrame_AddMessageEventFilter("CHAT_MSG_RAID_LEADER",		LootMasterML.ChatFrameFilter)
 	ChatFrame_AddMessageEventFilter("CHAT_MSG_CHANNEL",			LootMasterML.ChatFrameFilter)
 
+    LootMasterML:DisableEPGPPopup()
+end
+
+function LootMasterML:DisableEPGPPopup()
     -- Disable 'automatic loot tracking' popup in EPGP - Let EPGPLootmaster handle all the GP stuff.
     if EPGP and CheckForGuildInfo and IsInGuild() then
         CheckForGuildInfo(EPGP);
@@ -413,6 +417,16 @@ function LootMasterML:SendMonitorMessageEx(prio, sendPromoted, sendSpecificRanks
 
     local msgType = tostring(select(1, ...))
 
+    if (sendSpecificRanks) then
+        self:Debug('send '..msgType..' to rankList: '.. self:Serialize(rankList))
+        local _, guildRankName, guildRank = GetGuildInfo('player')
+        if (rankList[guildRank+1]) then
+            self:Debug("Player matches rankList with rank " .. guildRank .. '+1 ' ..guildRankName)
+        else
+            self:Debug("Player doesnt match rankList with rank " .. guildRank .. '+1 ' ..guildRankName)
+        end
+    end
+
     local num = GetNumGroupMembers()
     if num>0 then
         -- we're in raid
@@ -422,13 +436,19 @@ function LootMasterML:SendMonitorMessageEx(prio, sendPromoted, sendSpecificRanks
 				local rName, rRank, _, _, _, _, _, rOnline, _, _, rIsML = GetRaidRosterInfo(raidIndex)
 				if rName and rOnline then
 					local sendMessage = sendPromoted and (rRank>0 or rIsML)
+                    if (sendMessage) then
+                        self:Debug('SendMonitorMessage('..rName..'): player is promoted in raid, sending monitor message ' .. msgType)
+                    end
 					-- Send to specific guildrank
 					if not sendMessage and UnitIsInMyGuild(rName) and sendSpecificRanks and type(rankList)=='table' then
-						local _, _, guildRank = GetGuildInfo(rName)
+						local _, guildRankName, guildRank = GetGuildInfo(rName)
 						sendMessage = rankList[guildRank+1]
+                        if (sendMessage) then
+                            self:Debug('SendMonitorMessage('..msgType..', '..rName..'): player in raid matched guildrank (rank '..guildRank..'+1 '..guildRankName..'), sending monitor message')
+                        end
 					end
 					if sendMessage and not LootMaster.UnitIsUnit(rName,LootMaster.UnitName('player')) then
-						-- Player is online and not self and rank is assistant (1) or leader (2) or masterlooter
+						-- Player is online and not self and rank is assistant (1 or leader (2) or masterlooter
 						self:Debug('SendMonitorMessage('..rName..'): ' .. out, true)
 						self:SendCommMessage("EPGPLootMasterML", format("MONITOR:%s", out), "WHISPER", rName, prio)
 					end
@@ -454,6 +474,7 @@ function LootMasterML:SendMonitorMessageEx(prio, sendPromoted, sendSpecificRanks
 						--print(unit, unitName, unitOnline, unitInGuild, guildRank)
 						if unitName and guildRank and not LootMaster.UnitIsUnit(unitName,'player') and unitOnline and unitInGuild and type(rankList)=='table' and rankList[guildRank+1] then
 								-- Player is online and not self and guildrank is allowed guildrank
+                                self:Debug('SendMonitorMessage('..unitName..'): player in party matched guildrank, sending monitor message ' .. msgType)
 								self:Debug('SendMonitorMessage('..unitName..'): ' .. out, true)
 								self:SendCommMessage("EPGPLootMasterML", format("MONITOR:%s", out), "WHISPER", unitName, prio)
 							end
@@ -1097,6 +1118,8 @@ function LootMasterML:AddLoot(link, mayDistribute, quantity)
   }
   local loot = self.lootTable[itemIdentifier]
 
+  self:Debug("Registered new item " .. itemLink)
+
   -- Add some backward compatibility for the new button system
   -- by using the fallback values used in the configuration panel
 
@@ -1674,7 +1697,7 @@ function LootMasterML:SendCandidateListToMonitors( itemID )
     local candidata = {}
 
     for candidate, cIndex in pairs(loot.candidates) do
-        self:Debug('SendCandidateListToMonitors' .. candidate)
+        self:Debug('SendCandidateListToMonitors building candidatelist ' .. candidate, true)
         local roll = self:GetCandidateData( itemID, candidate, 'roll' ) or 0
         --local response = tonumber(self:GetCandidateData( itemID, candidate, 'response' )) or LootMaster.RESPONSE.NOTANNOUNCED
         tinsert( candidata, candidate );
@@ -2204,6 +2227,8 @@ function LootMasterML:OPEN_MASTER_LOOT_LIST()
 
 	-- Close the default confirm window
 	StaticPopup_Hide("CONFIRM_LOOT_DISTRIBUTION");
+
+    LootMasterML:DisableEPGPPopup()
 
 	--[[
 	-- Some values we probably need

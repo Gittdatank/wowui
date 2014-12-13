@@ -479,6 +479,7 @@ function mod:OnEnable()
 										if type(LootMaster.db.profile[ i[#i] ])~='table' then
 											LootMaster.db.profile[ i[#i] ]={}
 										end
+                                        if value == nil then value=false end
 										LootMaster.db.profile[ i[#i] ][rankNum] = value
 									end
 								}
@@ -604,6 +605,7 @@ function mod:OnEnable()
 										if type(LootMaster.db.profile[i[#i]])~='table' then
 											LootMaster.db.profile[i[#i]]={}
 										end
+                                        if value == nil then value=false end
 										LootMaster.db.profile[i[#i]][rankNum] = value
 									end
 								},
