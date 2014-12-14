@@ -12511,11 +12511,30 @@ TitanSettings = {
 					["VolumeOutboundChat"] = 1,
 					["VolumeAmbience"] = 0.5,
 				},
-				["Broker_GarrisonBuilding"] = {
+				["Gold"] = {
+					["Initialized"] = true,
+					["ShowColoredText"] = true,
+					["DisplayGoldPerHour"] = true,
+					["UseSeperatorComma"] = true,
+					["ShowCoinLabels"] = true,
+					["ShowLabelText"] = false,
+					["ShowCoinIcons"] = false,
+					["ShowIcon"] = true,
+					["ViewAll"] = true,
+					["gold"] = {
+						["neg"] = false,
+						["total"] = "112233",
+					},
+					["ShowGoldOnly"] = false,
+					["ShowCoinNone"] = false,
+					["SortByName"] = true,
+					["UseSeperatorPeriod"] = false,
+				},
+				["Swatter"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
-					["ShowRegularText"] = true,
-					["DisplayOnRightSide"] = false,
+					["ShowRegularText"] = false,
+					["DisplayOnRightSide"] = true,
 					["ShowLabelText"] = true,
 				},
 				["BeanCounter"] = {
@@ -12532,11 +12551,11 @@ TitanSettings = {
 					["DisplayOnRightSide"] = true,
 					["ShowLabelText"] = true,
 				},
-				["Swatter"] = {
+				["SN - Dodge"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
-					["ShowRegularText"] = false,
-					["DisplayOnRightSide"] = true,
+					["ShowRegularText"] = true,
+					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
 				["SN - Ranged Mastery"] = {
@@ -12567,7 +12586,7 @@ TitanSettings = {
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["SN - Dodge"] = {
+				["ArkInventory_Bags"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
@@ -12581,7 +12600,7 @@ TitanSettings = {
 					["DisplayOnRightSide"] = true,
 					["ShowLabelText"] = true,
 				},
-				["ArkInventory_Bags"] = {
+				["SN - Versatility"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
@@ -12602,13 +12621,6 @@ TitanSettings = {
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["LoggerHead"] = {
-					["ShowColoredText"] = false,
-					["ShowIcon"] = true,
-					["ShowRegularText"] = true,
-					["DisplayOnRightSide"] = false,
-					["ShowLabelText"] = true,
-				},
 				["SN - PvP Resilience"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
@@ -12616,11 +12628,18 @@ TitanSettings = {
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["GarajalAnnounce"] = {
+				["Informant"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = false,
 					["DisplayOnRightSide"] = true,
+					["ShowLabelText"] = true,
+				},
+				["Skada"] = {
+					["ShowColoredText"] = false,
+					["ShowIcon"] = true,
+					["ShowRegularText"] = true,
+					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
 				["SN - Melee Armor Penetration"] = {
@@ -12637,14 +12656,14 @@ TitanSettings = {
 					["DisplayOnRightSide"] = true,
 					["ShowLabelText"] = true,
 				},
-				["Skada"] = {
+				["FollowerLocationInfo"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["FollowerLocationInfo"] = {
+				["SN - Melee Hit"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
@@ -12682,25 +12701,6 @@ TitanSettings = {
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["Gold"] = {
-					["Initialized"] = true,
-					["ShowColoredText"] = true,
-					["DisplayGoldPerHour"] = true,
-					["UseSeperatorComma"] = true,
-					["ShowCoinLabels"] = true,
-					["ShowLabelText"] = false,
-					["ShowCoinIcons"] = false,
-					["ShowIcon"] = true,
-					["ViewAll"] = true,
-					["gold"] = {
-						["neg"] = false,
-						["total"] = "112233",
-					},
-					["ShowGoldOnly"] = false,
-					["ShowCoinNone"] = false,
-					["SortByName"] = true,
-					["UseSeperatorPeriod"] = false,
-				},
 				["SN - PvP Power"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
@@ -12715,14 +12715,14 @@ TitanSettings = {
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["ArkInventory_Mounts"] = {
+				["SN - Melee Crit"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["SN - Melee Crit"] = {
+				["ArkInventory_Mounts"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
@@ -12735,6 +12735,16 @@ TitanSettings = {
 					["ShowRegularText"] = false,
 					["DisplayOnRightSide"] = true,
 					["ShowLabelText"] = true,
+				},
+				["Clock"] = {
+					["HideMapTime"] = false,
+					["ShowColoredText"] = false,
+					["DisplayOnRightSide"] = 1,
+					["OffsetHour"] = 0,
+					["TimeMode"] = "Server",
+					["Format"] = "12H",
+					["HideGameTimeMinimap"] = false,
+					["ShowLabelText"] = false,
 				},
 				["SN - MP5"] = {
 					["ShowColoredText"] = false,
@@ -12782,15 +12792,12 @@ TitanSettings = {
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["Clock"] = {
-					["HideMapTime"] = false,
+				["SN - Spell Hit"] = {
 					["ShowColoredText"] = false,
-					["DisplayOnRightSide"] = 1,
-					["OffsetHour"] = 0,
-					["TimeMode"] = "Server",
-					["Format"] = "12H",
-					["HideGameTimeMinimap"] = false,
-					["ShowLabelText"] = false,
+					["ShowIcon"] = true,
+					["ShowRegularText"] = true,
+					["DisplayOnRightSide"] = false,
+					["ShowLabelText"] = true,
 				},
 				["SN - Melee Attack Power"] = {
 					["ShowColoredText"] = false,
@@ -12799,7 +12806,7 @@ TitanSettings = {
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["SN - Spell Hit"] = {
+				["SN - Armor"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
@@ -12813,11 +12820,11 @@ TitanSettings = {
 					["DisplayOnRightSide"] = true,
 					["ShowLabelText"] = true,
 				},
-				["SN - Armor"] = {
+				["UpgradeList"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
-					["ShowRegularText"] = true,
-					["DisplayOnRightSide"] = false,
+					["ShowRegularText"] = false,
+					["DisplayOnRightSide"] = true,
 					["ShowLabelText"] = true,
 				},
 				["SN - Leech"] = {
@@ -12827,11 +12834,11 @@ TitanSettings = {
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["SN - Melee Hit"] = {
+				["GarajalAnnounce"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
-					["ShowRegularText"] = true,
-					["DisplayOnRightSide"] = false,
+					["ShowRegularText"] = false,
+					["DisplayOnRightSide"] = true,
 					["ShowLabelText"] = true,
 				},
 				["Bartender4"] = {
@@ -12841,11 +12848,11 @@ TitanSettings = {
 					["DisplayOnRightSide"] = true,
 					["ShowLabelText"] = true,
 				},
-				["Informant"] = {
+				["LoggerHead"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
-					["ShowRegularText"] = false,
-					["DisplayOnRightSide"] = true,
+					["ShowRegularText"] = true,
+					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
 				["SN - Parry"] = {
@@ -12862,13 +12869,6 @@ TitanSettings = {
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["SN - Versatility"] = {
-					["ShowColoredText"] = false,
-					["ShowIcon"] = true,
-					["ShowRegularText"] = true,
-					["DisplayOnRightSide"] = false,
-					["ShowLabelText"] = true,
-				},
 				["SN - Spell Power"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
@@ -12877,6 +12877,13 @@ TitanSettings = {
 					["ShowLabelText"] = true,
 				},
 				["ArkInventory_Tracking_Item"] = {
+					["ShowColoredText"] = false,
+					["ShowIcon"] = true,
+					["ShowRegularText"] = true,
+					["DisplayOnRightSide"] = false,
+					["ShowLabelText"] = true,
+				},
+				["Broker_GarrisonBuilding"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
@@ -12906,7 +12913,7 @@ TitanSettings = {
 				},
 			},
 			["Register"] = {
-				["ToBeNum"] = 53,
+				["ToBeNum"] = 54,
 				["TitanPlugins"] = {
 					["Durability"] = {
 						["tooltipTextFunction"] = "TitanPanelDurabilityButton_GetTooltipText",
@@ -12926,9 +12933,9 @@ TitanSettings = {
 							["showallrepaircosts"] = false,
 							["showlowestitemintp"] = 1,
 							["showrepaircost15"] = false,
-							["ShowLabelText"] = 1,
-							["hideguy"] = 1,
 							["showrepaircost05"] = false,
+							["hideguy"] = 1,
+							["ShowLabelText"] = 1,
 							["inventory"] = false,
 							["showrepaircost20"] = false,
 							["showlowestduraintp"] = false,
@@ -13039,7 +13046,7 @@ TitanSettings = {
 							["name"] = "Broker_GarrisonBuilding",
 							["suffix"] = "",
 							["value"] = "",
-							["text"] = "Shipments Ready: 28",
+							["text"] = "Shipments Ready: 20",
 							["label"] = "Garrison: Buildings",
 						},
 					},
@@ -13105,20 +13112,17 @@ TitanSettings = {
 							["VolumeOutboundChat"] = 1,
 							["VolumeMusic"] = 0.5,
 						},
-						["version"] = "5.4.1.60000",
+						["version"] = "5.4.2.60000",
 						["category"] = "Built-ins",
 						["iconButtonWidth"] = 18,
 						["iconWidth"] = 32,
 						["tooltipTitle"] = "Volume Info",
 					},
-					["WeakAuras"] = {
-						["iconR"] = 0.6,
+					["Record Kills"] = {
 						["notes"] = "",
-						["iconG"] = 0,
 						["iconWidth"] = 16,
-						["id"] = "WeakAuras",
-						["menuText"] = "WeakAuras",
-						["category"] = "Interface",
+						["id"] = "Record Kills",
+						["menuText"] = "Record Kills",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -13133,17 +13137,15 @@ TitanSettings = {
 							["DisplayOnRightSide"] = true,
 							["ShowLabelText"] = true,
 						},
-						["version"] = "2.0.9.7",
 						["buttonTextFunction"] = "TitanLDBShowText",
 						["ldb"] = "data source",
-						["iconB"] = 1,
-						["icon"] = "Interface\\AddOns\\WeakAuras\\icon.tga",
+						["icon"] = "Interface\\PVPFrame\\PVP-ArenaPoints-Icon",
 						["LDBVariables"] = {
 							["type"] = "data source",
-							["name"] = "WeakAuras",
+							["name"] = "Record Kills",
 							["suffix"] = "",
 							["value"] = "",
-							["text"] = "WeakAuras",
+							["text"] = "Record Kills",
 							["label"] = "",
 						},
 					},
@@ -13183,6 +13185,7 @@ TitanSettings = {
 						["iconWidth"] = 16,
 						["id"] = "LoggerHead",
 						["menuText"] = "Combat Log",
+						["category"] = "General",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -13198,9 +13201,8 @@ TitanSettings = {
 							["ShowLabelText"] = true,
 						},
 						["version"] = "178",
-						["category"] = "General",
-						["ldb"] = "data source",
 						["buttonTextFunction"] = "TitanLDBShowText",
+						["ldb"] = "data source",
 						["icon"] = "Interface\\AddOns\\LoggerHead\\disabled",
 						["LDBVariables"] = {
 							["type"] = "data source",
@@ -13247,6 +13249,7 @@ TitanSettings = {
 						["iconWidth"] = 16,
 						["id"] = "BigWigs",
 						["menuText"] = "Big Wigs",
+						["category"] = "Information",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -13261,10 +13264,9 @@ TitanSettings = {
 							["DisplayOnRightSide"] = true,
 							["ShowLabelText"] = true,
 						},
-						["version"] = "4.610",
-						["category"] = "Information",
-						["ldb"] = "launcher",
+						["version"] = "4.615",
 						["buttonTextFunction"] = "TitanLDBShowText",
+						["ldb"] = "launcher",
 						["icon"] = "Interface\\AddOns\\BigWigs\\Textures\\icons\\core-disabled",
 						["LDBVariables"] = {
 							["type"] = "launcher",
@@ -13280,7 +13282,7 @@ TitanSettings = {
 							["DisplayOnRightSide"] = 1,
 							["ForceBar"] = "Bar2",
 						},
-						["version"] = "5.4.1.60000",
+						["version"] = "5.4.2.60000",
 						["category"] = "Built-ins",
 						["id"] = "AutoHide_Bar2",
 						["menuText"] = "AutoHide_Bar2",
@@ -13344,7 +13346,7 @@ TitanSettings = {
 							["name"] = "ArkInventory_Money",
 							["suffix"] = "",
 							["value"] = "",
-							["text"] = "654328|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 31|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 27|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+							["text"] = "654811|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 49|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 25|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
 							["label"] = "",
 						},
 					},
@@ -13353,6 +13355,7 @@ TitanSettings = {
 						["iconWidth"] = 16,
 						["id"] = "GatherMate2",
 						["menuText"] = "GatherMate2",
+						["category"] = "Interface",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -13368,9 +13371,8 @@ TitanSettings = {
 							["ShowLabelText"] = true,
 						},
 						["version"] = "1.33.3",
-						["category"] = "Interface",
-						["ldb"] = "launcher",
 						["buttonTextFunction"] = "TitanLDBShowText",
+						["ldb"] = "launcher",
 						["icon"] = "Interface\\AddOns\\GatherMate2\\Artwork\\Icon.tga",
 						["LDBVariables"] = {
 							["type"] = "launcher",
@@ -13422,9 +13424,9 @@ TitanSettings = {
 							["ShowZoneText"] = 1,
 							["ShowCursorOnMap"] = true,
 							["ShowLabelText"] = 1,
-							["CoordsFormat3"] = false,
 							["UpdateWorldmap"] = false,
 							["ShowIcon"] = 1,
+							["CoordsFormat3"] = false,
 							["CoordsFormat1"] = 1,
 							["CoordsFormat2"] = false,
 							["ShowCoordsOnMap"] = true,
@@ -13437,7 +13439,7 @@ TitanSettings = {
 							["DisplayOnRightSide"] = false,
 							["ShowLabelText"] = true,
 						},
-						["version"] = "5.4.1.60000",
+						["version"] = "5.4.2.60000",
 						["category"] = "Built-ins",
 						["iconWidth"] = 16,
 						["buttonTextFunction"] = "TitanPanelLocationButton_GetButtonText",
@@ -13510,7 +13512,7 @@ TitanSettings = {
 							["DisplayOnRightSide"] = false,
 							["ShowLabelText"] = true,
 						},
-						["version"] = "5.4.1.60000",
+						["version"] = "5.4.2.60000",
 						["category"] = "Built-ins",
 						["iconWidth"] = 16,
 						["buttonTextFunction"] = "TitanPanelRepairButton_GetButtonText",
@@ -13522,6 +13524,7 @@ TitanSettings = {
 						["iconWidth"] = 16,
 						["id"] = "Skada",
 						["menuText"] = "Skada",
+						["category"] = "Combat",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -13537,9 +13540,8 @@ TitanSettings = {
 							["ShowLabelText"] = true,
 						},
 						["version"] = "1.4-24",
-						["category"] = "Combat",
-						["ldb"] = "data source",
 						["buttonTextFunction"] = "TitanLDBShowText",
+						["ldb"] = "data source",
 						["icon"] = "Interface\\Icons\\Spell_Lightning_LightningBolt01",
 						["LDBVariables"] = {
 							["type"] = "data source",
@@ -13577,15 +13579,15 @@ TitanSettings = {
 							["name"] = "ArkInventory_Bags",
 							["suffix"] = "",
 							["value"] = "",
-							["text"] = "|cfff9f9f9|cffffffff106/128 Bag|r",
+							["text"] = "|cfff9f9f9|cffffffff101/128 Bag|r",
 							["label"] = "",
 						},
 					},
-					["RaidAchievement"] = {
-						["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
+					["Auc-Util-AutoMagic"] = {
+						["notes"] = "",
 						["iconWidth"] = 16,
-						["id"] = "RaidAchievement",
-						["menuText"] = "RaidAchievement",
+						["id"] = "Auc-Util-AutoMagic",
+						["menuText"] = "Auc-Util-AutoMagic",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -13600,17 +13602,49 @@ TitanSettings = {
 							["DisplayOnRightSide"] = true,
 							["ShowLabelText"] = true,
 						},
-						["version"] = "1.129",
 						["buttonTextFunction"] = "TitanLDBShowText",
 						["ldb"] = "launcher",
-						["icon"] = "interface\\AddOns\\RaidAchievement\\ra_button_e",
+						["icon"] = "Interface\\AddOns\\Auc-Advanced\\Modules\\Auc-Util-AutoMagic\\Images\\amagicIcon",
 						["LDBVariables"] = {
 							["type"] = "launcher",
-							["name"] = "RaidAchievement",
+							["name"] = "Auc-Util-AutoMagic",
 							["suffix"] = "",
 							["value"] = "",
 							["text"] = "",
-							["label"] = "RA",
+							["label"] = "",
+						},
+					},
+					["RangeDisplay"] = {
+						["notes"] = "",
+						["iconWidth"] = 16,
+						["id"] = "RangeDisplay",
+						["menuText"] = "RangeDisplay",
+						["category"] = "Combat",
+						["savedVariables"] = {
+							["ShowColoredText"] = false,
+							["ShowIcon"] = true,
+							["ShowRegularText"] = false,
+							["DisplayOnRightSide"] = true,
+							["ShowLabelText"] = true,
+						},
+						["controlVariables"] = {
+							["ShowColoredText"] = false,
+							["ShowIcon"] = false,
+							["ShowRegularText"] = false,
+							["DisplayOnRightSide"] = true,
+							["ShowLabelText"] = true,
+						},
+						["version"] = "v4.3.1",
+						["buttonTextFunction"] = "TitanLDBShowText",
+						["ldb"] = "launcher",
+						["icon"] = "Interface\\Icons\\INV_Misc_Spyglass_02",
+						["LDBVariables"] = {
+							["type"] = "launcher",
+							["name"] = "RangeDisplay",
+							["suffix"] = "",
+							["value"] = "",
+							["text"] = "",
+							["label"] = "",
 						},
 					},
 					["ArkInventory_Mounts"] = {
@@ -13634,7 +13668,7 @@ TitanSettings = {
 						},
 						["buttonTextFunction"] = "TitanLDBShowText",
 						["ldb"] = "data source",
-						["icon"] = "Interface\\Icons\\MountJournalPortrait",
+						["icon"] = "Interface\\Icons\\INV_Misc_Dice_01",
 						["LDBVariables"] = {
 							["type"] = "data source",
 							["name"] = "ArkInventory_Mounts",
@@ -13680,17 +13714,17 @@ TitanSettings = {
 							["DisplayOnRightSide"] = 1,
 							["ForceBar"] = "Bar",
 						},
-						["version"] = "5.4.1.60000",
+						["version"] = "5.4.2.60000",
 						["category"] = "Built-ins",
 						["id"] = "AutoHide_Bar",
 						["menuText"] = "AutoHide_Bar",
 						["tooltipTitle"] = "Toggles Titan Panel auto-hide on/off feature",
 					},
-					["RangeDisplay"] = {
-						["notes"] = "",
+					["RaidAchievement"] = {
+						["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
 						["iconWidth"] = 16,
-						["id"] = "RangeDisplay",
-						["menuText"] = "RangeDisplay",
+						["id"] = "RaidAchievement",
+						["menuText"] = "RaidAchievement",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -13705,115 +13739,18 @@ TitanSettings = {
 							["DisplayOnRightSide"] = true,
 							["ShowLabelText"] = true,
 						},
-						["version"] = "v4.3.1",
-						["category"] = "Combat",
-						["ldb"] = "launcher",
+						["version"] = "1.129",
 						["buttonTextFunction"] = "TitanLDBShowText",
-						["icon"] = "Interface\\Icons\\INV_Misc_Spyglass_02",
+						["ldb"] = "launcher",
+						["icon"] = "interface\\AddOns\\RaidAchievement\\ra_button_e",
 						["LDBVariables"] = {
 							["type"] = "launcher",
-							["name"] = "RangeDisplay",
+							["name"] = "RaidAchievement",
 							["suffix"] = "",
 							["value"] = "",
 							["text"] = "",
-							["label"] = "",
+							["label"] = "RA",
 						},
-					},
-					["Auc-Util-AutoMagic"] = {
-						["notes"] = "",
-						["iconWidth"] = 16,
-						["id"] = "Auc-Util-AutoMagic",
-						["menuText"] = "Auc-Util-AutoMagic",
-						["savedVariables"] = {
-							["ShowColoredText"] = false,
-							["ShowIcon"] = true,
-							["ShowRegularText"] = false,
-							["DisplayOnRightSide"] = true,
-							["ShowLabelText"] = true,
-						},
-						["controlVariables"] = {
-							["ShowColoredText"] = false,
-							["ShowIcon"] = false,
-							["ShowRegularText"] = false,
-							["DisplayOnRightSide"] = true,
-							["ShowLabelText"] = true,
-						},
-						["buttonTextFunction"] = "TitanLDBShowText",
-						["ldb"] = "launcher",
-						["icon"] = "Interface\\AddOns\\Auc-Advanced\\Modules\\Auc-Util-AutoMagic\\Images\\amagicIcon",
-						["LDBVariables"] = {
-							["type"] = "launcher",
-							["name"] = "Auc-Util-AutoMagic",
-							["suffix"] = "",
-							["value"] = "",
-							["text"] = "",
-							["label"] = "",
-						},
-					},
-					["AutoHide_AuxBar"] = {
-						["savedVariables"] = {
-							["DisplayOnRightSide"] = 1,
-							["ForceBar"] = "AuxBar",
-						},
-						["version"] = "5.4.1.60000",
-						["category"] = "Built-ins",
-						["id"] = "AutoHide_AuxBar",
-						["menuText"] = "AutoHide_AuxBar",
-						["tooltipTitle"] = "Toggles Titan Panel auto-hide on/off feature",
-					},
-					["LootType"] = {
-						["tooltipTextFunction"] = "TitanPanelLootTypeButton_GetTooltipText",
-						["id"] = "LootType",
-						["menuText"] = "Loot Type",
-						["savedVariables"] = {
-							["RandomRoll"] = 100,
-							["ShowIcon"] = 1,
-							["ShowDungeonDiff"] = false,
-							["DungeonDiffType"] = "AUTO",
-							["ShowLabelText"] = 1,
-						},
-						["controlVariables"] = {
-							["ShowColoredText"] = false,
-							["ShowIcon"] = true,
-							["ShowRegularText"] = false,
-							["DisplayOnRightSide"] = false,
-							["ShowLabelText"] = true,
-						},
-						["version"] = "5.4.1.60000",
-						["category"] = "Built-ins",
-						["iconWidth"] = 16,
-						["buttonTextFunction"] = "TitanPanelLootTypeButton_GetButtonText",
-						["icon"] = "Interface\\AddOns\\TitanLootType\\TitanLootType",
-						["tooltipTitle"] = "Loot Type Info",
-					},
-					["Performance"] = {
-						["iconWidth"] = 16,
-						["id"] = "Performance",
-						["menuText"] = "Performance",
-						["savedVariables"] = {
-							["ShowAddonMemory"] = false,
-							["ShowMemory"] = 1,
-							["AddonMemoryType"] = 1,
-							["ShowLatency"] = 1,
-							["ShowWorldLatency"] = 1,
-							["ShowLabelText"] = false,
-							["ShowIcon"] = 1,
-							["ShowAddonIncRate"] = false,
-							["ShowColoredText"] = 1,
-							["NumOfAddons"] = 5,
-							["ShowFPS"] = 1,
-						},
-						["controlVariables"] = {
-							["ShowColoredText"] = true,
-							["ShowIcon"] = true,
-							["ShowRegularText"] = false,
-							["DisplayOnRightSide"] = false,
-							["ShowLabelText"] = true,
-						},
-						["version"] = "5.4.1.60000",
-						["category"] = "Built-ins",
-						["icon"] = "Interface\\AddOns\\TitanPerformance\\TitanPerformance",
-						["buttonTextFunction"] = "TitanPanelPerformanceButton_GetButtonText",
 					},
 					["ArkInventory_Tracking_Item"] = {
 						["notes"] = "",
@@ -13846,6 +13783,109 @@ TitanSettings = {
 							["label"] = "",
 						},
 					},
+					["AutoHide_AuxBar"] = {
+						["savedVariables"] = {
+							["DisplayOnRightSide"] = 1,
+							["ForceBar"] = "AuxBar",
+						},
+						["version"] = "5.4.2.60000",
+						["category"] = "Built-ins",
+						["id"] = "AutoHide_AuxBar",
+						["menuText"] = "AutoHide_AuxBar",
+						["tooltipTitle"] = "Toggles Titan Panel auto-hide on/off feature",
+					},
+					["LootType"] = {
+						["tooltipTextFunction"] = "TitanPanelLootTypeButton_GetTooltipText",
+						["id"] = "LootType",
+						["menuText"] = "Loot Type",
+						["savedVariables"] = {
+							["RandomRoll"] = 100,
+							["ShowIcon"] = 1,
+							["DungeonDiffType"] = "AUTO",
+							["ShowDungeonDiff"] = false,
+							["ShowLabelText"] = 1,
+						},
+						["controlVariables"] = {
+							["ShowColoredText"] = false,
+							["ShowIcon"] = true,
+							["ShowRegularText"] = false,
+							["DisplayOnRightSide"] = false,
+							["ShowLabelText"] = true,
+						},
+						["version"] = "5.4.2.60000",
+						["category"] = "Built-ins",
+						["iconWidth"] = 16,
+						["buttonTextFunction"] = "TitanPanelLootTypeButton_GetButtonText",
+						["icon"] = "Interface\\AddOns\\TitanLootType\\TitanLootType",
+						["tooltipTitle"] = "Loot Type Info",
+					},
+					["Performance"] = {
+						["iconWidth"] = 16,
+						["id"] = "Performance",
+						["menuText"] = "Performance",
+						["savedVariables"] = {
+							["ShowAddonMemory"] = false,
+							["ShowMemory"] = 1,
+							["AddonMemoryType"] = 1,
+							["ShowLatency"] = 1,
+							["ShowWorldLatency"] = 1,
+							["ShowLabelText"] = false,
+							["ShowIcon"] = 1,
+							["ShowAddonIncRate"] = false,
+							["ShowColoredText"] = 1,
+							["NumOfAddons"] = 5,
+							["ShowFPS"] = 1,
+						},
+						["controlVariables"] = {
+							["ShowColoredText"] = true,
+							["ShowIcon"] = true,
+							["ShowRegularText"] = false,
+							["DisplayOnRightSide"] = false,
+							["ShowLabelText"] = true,
+						},
+						["version"] = "5.4.2.60000",
+						["category"] = "Built-ins",
+						["tooltipCustomFunction"] = nil --[[ skipped inline function ]],
+						["icon"] = "Interface\\AddOns\\TitanPerformance\\TitanPerformance",
+						["buttonTextFunction"] = "TitanPanelPerformanceButton_GetButtonText",
+					},
+					["Gold"] = {
+						["tooltipTextFunction"] = "TitanPanelGoldButton_GetTooltipText",
+						["id"] = "Gold",
+						["menuText"] = "Gold",
+						["savedVariables"] = {
+							["Initialized"] = true,
+							["ShowColoredText"] = true,
+							["DisplayGoldPerHour"] = true,
+							["gold"] = {
+								["neg"] = false,
+								["total"] = "112233",
+							},
+							["ShowCoinLabels"] = true,
+							["ShowLabelText"] = false,
+							["ShowCoinIcons"] = false,
+							["UseSeperatorPeriod"] = false,
+							["ViewAll"] = true,
+							["SortByName"] = true,
+							["ShowGoldOnly"] = false,
+							["ShowCoinNone"] = false,
+							["UseSeperatorComma"] = true,
+							["ShowIcon"] = true,
+						},
+						["controlVariables"] = {
+							["ShowColoredText"] = false,
+							["ShowIcon"] = true,
+							["ShowRegularText"] = false,
+							["DisplayOnRightSide"] = false,
+							["ShowLabelText"] = true,
+						},
+						["version"] = "5.4.2.60000",
+						["category"] = "Built-ins",
+						["iconWidth"] = 16,
+						["buttonTextFunction"] = "TitanPanelGoldButton_FindGold",
+						["icon"] = "Interface\\AddOns\\TitanGold\\Artwork\\TitanGold",
+						["tooltipTitle"] = "Gold Info",
+					},
 					["XP"] = {
 						["tooltipTextFunction"] = "TitanPanelXPButton_GetTooltipText",
 						["id"] = "XP",
@@ -13868,7 +13908,7 @@ TitanSettings = {
 							["DisplayOnRightSide"] = false,
 							["ShowLabelText"] = true,
 						},
-						["version"] = "5.4.1.60000",
+						["version"] = "5.4.2.60000",
 						["category"] = "Built-ins",
 						["iconWidth"] = 16,
 						["buttonTextFunction"] = "TitanPanelXPButton_GetButtonText",
@@ -13906,36 +13946,37 @@ TitanSettings = {
 							["label"] = "Ask Mr. Robot",
 						},
 					},
-					["CombatTime"] = {
-						["notes"] = "",
+					["RaidBuffStatus"] = {
+						["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
 						["iconWidth"] = 16,
-						["id"] = "CombatTime",
-						["menuText"] = "CombatTime",
+						["id"] = "RaidBuffStatus",
+						["menuText"] = "RaidBuffStatus",
+						["category"] = "Information",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
-							["ShowRegularText"] = true,
-							["DisplayOnRightSide"] = false,
+							["ShowRegularText"] = false,
+							["DisplayOnRightSide"] = true,
 							["ShowLabelText"] = true,
 						},
 						["controlVariables"] = {
 							["ShowColoredText"] = false,
-							["ShowIcon"] = true,
-							["ShowRegularText"] = true,
+							["ShowIcon"] = false,
+							["ShowRegularText"] = false,
 							["DisplayOnRightSide"] = true,
 							["ShowLabelText"] = true,
 						},
-						["version"] = "2.5.0",
+						["version"] = "6.0.2",
 						["buttonTextFunction"] = "TitanLDBShowText",
-						["ldb"] = "data source",
-						["icon"] = "Interface\\Icons\\Ability_DualWield",
+						["ldb"] = "launcher",
+						["icon"] = "Interface/Icons/Ability_Hunter_MasterMarksman",
 						["LDBVariables"] = {
-							["type"] = "data source",
-							["name"] = "CombatTime",
+							["type"] = "launcher",
+							["name"] = "RaidBuffStatus",
 							["suffix"] = "",
 							["value"] = "",
-							["text"] = "|cff7f7f0007:41|r",
-							["label"] = "CombatTime",
+							["text"] = "",
+							["label"] = "RaidBuffStatus",
 						},
 					},
 					["Raven"] = {
@@ -13970,11 +14011,43 @@ TitanSettings = {
 							["label"] = "Raven",
 						},
 					},
-					["RaidBuffStatus"] = {
-						["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
+					["CombatTime"] = {
+						["notes"] = "",
 						["iconWidth"] = 16,
-						["id"] = "RaidBuffStatus",
-						["menuText"] = "RaidBuffStatus",
+						["id"] = "CombatTime",
+						["menuText"] = "CombatTime",
+						["savedVariables"] = {
+							["ShowColoredText"] = false,
+							["ShowIcon"] = true,
+							["ShowRegularText"] = true,
+							["DisplayOnRightSide"] = false,
+							["ShowLabelText"] = true,
+						},
+						["controlVariables"] = {
+							["ShowColoredText"] = false,
+							["ShowIcon"] = true,
+							["ShowRegularText"] = true,
+							["DisplayOnRightSide"] = true,
+							["ShowLabelText"] = true,
+						},
+						["version"] = "2.5.0",
+						["buttonTextFunction"] = "TitanLDBShowText",
+						["ldb"] = "data source",
+						["icon"] = "Interface\\Icons\\Ability_DualWield",
+						["LDBVariables"] = {
+							["type"] = "data source",
+							["name"] = "CombatTime",
+							["suffix"] = "",
+							["value"] = "",
+							["text"] = "|cff7f7f0000:00|r",
+							["label"] = "CombatTime",
+						},
+					},
+					["UpgradeList"] = {
+						["notes"] = "",
+						["iconWidth"] = 16,
+						["id"] = "UpgradeList",
+						["menuText"] = "Upgrade List",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -13989,45 +14062,18 @@ TitanSettings = {
 							["DisplayOnRightSide"] = true,
 							["ShowLabelText"] = true,
 						},
-						["version"] = "6.0.2",
-						["category"] = "Information",
-						["ldb"] = "launcher",
+						["version"] = "4.1.1",
 						["buttonTextFunction"] = "TitanLDBShowText",
-						["icon"] = "Interface/Icons/Ability_Hunter_MasterMarksman",
+						["ldb"] = "launcher",
+						["icon"] = "Interface\\Icons\\Achievement_BG_returnXflags_def_WSG",
 						["LDBVariables"] = {
 							["type"] = "launcher",
-							["name"] = "RaidBuffStatus",
+							["name"] = "UpgradeList",
 							["suffix"] = "",
 							["value"] = "",
 							["text"] = "",
-							["label"] = "RaidBuffStatus",
+							["label"] = "Upgrade List",
 						},
-					},
-					["Clock"] = {
-						["tooltipTextFunction"] = "TitanPanelClockButton_GetTooltipText",
-						["id"] = "Clock",
-						["menuText"] = "Clock",
-						["savedVariables"] = {
-							["OffsetHour"] = 0,
-							["ShowColoredText"] = false,
-							["DisplayOnRightSide"] = 1,
-							["HideMapTime"] = false,
-							["HideGameTimeMinimap"] = false,
-							["Format"] = "12H",
-							["TimeMode"] = "Server",
-							["ShowLabelText"] = false,
-						},
-						["controlVariables"] = {
-							["ShowColoredText"] = true,
-							["ShowIcon"] = false,
-							["ShowRegularText"] = false,
-							["DisplayOnRightSide"] = true,
-							["ShowLabelText"] = true,
-						},
-						["version"] = "5.4.1.60000",
-						["category"] = "Built-ins",
-						["buttonTextFunction"] = "TitanPanelClockButton_GetButtonText",
-						["tooltipTitle"] = "Clock",
 					},
 					["FollowerLocationInfo"] = {
 						["notes"] = "",
@@ -14066,6 +14112,7 @@ TitanSettings = {
 						["iconWidth"] = 16,
 						["id"] = "epgp",
 						["menuText"] = "EPGP",
+						["category"] = "Information",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -14081,9 +14128,8 @@ TitanSettings = {
 							["ShowLabelText"] = true,
 						},
 						["version"] = "v5.11.4",
-						["category"] = "Information",
-						["ldb"] = "data source",
 						["buttonTextFunction"] = "TitanLDBShowText",
+						["ldb"] = "data source",
 						["icon"] = "Interface\\PVPFrame\\PVP-ArenaPoints-Icon",
 						["LDBVariables"] = {
 							["type"] = "data source",
@@ -14099,6 +14145,7 @@ TitanSettings = {
 						["iconWidth"] = 16,
 						["id"] = "Bartender4",
 						["menuText"] = "Bartender4",
+						["category"] = "Interface",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -14114,9 +14161,8 @@ TitanSettings = {
 							["ShowLabelText"] = true,
 						},
 						["version"] = "4.6.5",
-						["category"] = "Interface",
-						["ldb"] = "launcher",
 						["buttonTextFunction"] = "TitanLDBShowText",
+						["ldb"] = "launcher",
 						["icon"] = "Interface\\Icons\\INV_Drink_05",
 						["LDBVariables"] = {
 							["type"] = "launcher",
@@ -14127,12 +14173,48 @@ TitanSettings = {
 							["label"] = "Bartender4",
 						},
 					},
+					["WeakAuras"] = {
+						["iconR"] = 0.6,
+						["notes"] = "",
+						["iconG"] = 0,
+						["iconWidth"] = 16,
+						["id"] = "WeakAuras",
+						["menuText"] = "WeakAuras",
+						["category"] = "Interface",
+						["savedVariables"] = {
+							["ShowColoredText"] = false,
+							["ShowIcon"] = true,
+							["ShowRegularText"] = true,
+							["DisplayOnRightSide"] = false,
+							["ShowLabelText"] = true,
+						},
+						["controlVariables"] = {
+							["ShowColoredText"] = false,
+							["ShowIcon"] = true,
+							["ShowRegularText"] = true,
+							["DisplayOnRightSide"] = true,
+							["ShowLabelText"] = true,
+						},
+						["version"] = "2.0.9.7",
+						["buttonTextFunction"] = "TitanLDBShowText",
+						["ldb"] = "data source",
+						["iconB"] = 1,
+						["icon"] = "Interface\\AddOns\\WeakAuras\\icon.tga",
+						["LDBVariables"] = {
+							["type"] = "data source",
+							["name"] = "WeakAuras",
+							["suffix"] = "",
+							["value"] = "",
+							["text"] = "WeakAuras",
+							["label"] = "",
+						},
+					},
 					["AutoHide_AuxBar2"] = {
 						["savedVariables"] = {
 							["DisplayOnRightSide"] = 1,
 							["ForceBar"] = "AuxBar2",
 						},
-						["version"] = "5.4.1.60000",
+						["version"] = "5.4.2.60000",
 						["category"] = "Built-ins",
 						["id"] = "AutoHide_AuxBar2",
 						["menuText"] = "AutoHide_AuxBar2",
@@ -14159,49 +14241,12 @@ TitanSettings = {
 							["DisplayOnRightSide"] = false,
 							["ShowLabelText"] = true,
 						},
-						["version"] = "5.4.1.60000",
+						["version"] = "5.4.2.60000",
 						["category"] = "Built-ins",
 						["iconWidth"] = 16,
 						["buttonTextFunction"] = "TitanPanelBagButton_GetButtonText",
 						["icon"] = "Interface\\AddOns\\TitanBag\\TitanBag",
 						["tooltipTitle"] = "Bags Info",
-					},
-					["Gold"] = {
-						["tooltipTextFunction"] = "TitanPanelGoldButton_GetTooltipText",
-						["id"] = "Gold",
-						["menuText"] = "Gold",
-						["savedVariables"] = {
-							["Initialized"] = true,
-							["ShowColoredText"] = true,
-							["DisplayGoldPerHour"] = true,
-							["UseSeperatorPeriod"] = false,
-							["ShowCoinLabels"] = true,
-							["ShowLabelText"] = false,
-							["ShowCoinIcons"] = false,
-							["SortByName"] = true,
-							["ShowIcon"] = true,
-							["gold"] = {
-								["neg"] = false,
-								["total"] = "112233",
-							},
-							["ShowGoldOnly"] = false,
-							["ShowCoinNone"] = false,
-							["ViewAll"] = true,
-							["UseSeperatorComma"] = true,
-						},
-						["controlVariables"] = {
-							["ShowColoredText"] = false,
-							["ShowIcon"] = true,
-							["ShowRegularText"] = false,
-							["DisplayOnRightSide"] = false,
-							["ShowLabelText"] = true,
-						},
-						["version"] = "5.4.1.60000",
-						["category"] = "Built-ins",
-						["iconWidth"] = 16,
-						["buttonTextFunction"] = "TitanPanelGoldButton_FindGold",
-						["icon"] = "Interface\\AddOns\\TitanGold\\Artwork\\TitanGold",
-						["tooltipTitle"] = "Gold Info",
 					},
 					["Broker_GarrisonMission"] = {
 						["notes"] = "",
@@ -14230,46 +14275,42 @@ TitanSettings = {
 							["name"] = "Broker_GarrisonMission",
 							["suffix"] = "",
 							["value"] = "",
-							["text"] = "In Progress: 0 Complete: 0",
+							["text"] = "In Progress: 4 Complete: 4",
 							["label"] = "Garrison: Missions",
 						},
 					},
-					["Record Kills"] = {
-						["notes"] = "",
-						["iconWidth"] = 16,
-						["id"] = "Record Kills",
-						["menuText"] = "Record Kills",
+					["Clock"] = {
+						["tooltipTextFunction"] = "TitanPanelClockButton_GetTooltipText",
+						["id"] = "Clock",
+						["menuText"] = "Clock",
 						["savedVariables"] = {
+							["OffsetHour"] = 0,
 							["ShowColoredText"] = false,
-							["ShowIcon"] = true,
-							["ShowRegularText"] = true,
-							["DisplayOnRightSide"] = false,
-							["ShowLabelText"] = true,
+							["DisplayOnRightSide"] = 1,
+							["HideMapTime"] = false,
+							["HideGameTimeMinimap"] = false,
+							["Format"] = "12H",
+							["TimeMode"] = "Server",
+							["ShowLabelText"] = false,
 						},
 						["controlVariables"] = {
-							["ShowColoredText"] = false,
-							["ShowIcon"] = true,
-							["ShowRegularText"] = true,
+							["ShowColoredText"] = true,
+							["ShowIcon"] = false,
+							["ShowRegularText"] = false,
 							["DisplayOnRightSide"] = true,
 							["ShowLabelText"] = true,
 						},
-						["buttonTextFunction"] = "TitanLDBShowText",
-						["ldb"] = "data source",
-						["icon"] = "Interface\\PVPFrame\\PVP-ArenaPoints-Icon",
-						["LDBVariables"] = {
-							["type"] = "data source",
-							["name"] = "Record Kills",
-							["suffix"] = "",
-							["value"] = "",
-							["text"] = "Record Kills",
-							["label"] = "",
-						},
+						["version"] = "5.4.2.60000",
+						["category"] = "Built-ins",
+						["buttonTextFunction"] = "TitanPanelClockButton_GetButtonText",
+						["tooltipTitle"] = "Clock",
 					},
 					["TimeToDie"] = {
 						["notes"] = "",
 						["iconWidth"] = 16,
 						["id"] = "TimeToDie",
 						["menuText"] = "TTD",
+						["category"] = "Combat",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -14285,9 +14326,8 @@ TitanSettings = {
 							["ShowLabelText"] = true,
 						},
 						["version"] = "v1.5.1",
-						["category"] = "Combat",
-						["ldb"] = "data source",
 						["buttonTextFunction"] = "TitanLDBShowText",
+						["ldb"] = "data source",
 						["icon"] = "Interface\\Icons\\Spell_Holy_BorrowedTime",
 						["LDBVariables"] = {
 							["type"] = "data source",
@@ -14303,6 +14343,7 @@ TitanSettings = {
 						["iconWidth"] = 16,
 						["id"] = "AutoTurnIn",
 						["menuText"] = "autoturnin [on]",
+						["category"] = "Information",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -14318,9 +14359,8 @@ TitanSettings = {
 							["ShowLabelText"] = true,
 						},
 						["version"] = "4.5.N",
-						["category"] = "Information",
-						["ldb"] = "data source",
 						["buttonTextFunction"] = "TitanLDBShowText",
+						["ldb"] = "data source",
 						["icon"] = "Interface\\QUESTFRAME\\UI-QuestLog-BookIcon",
 						["LDBVariables"] = {
 							["type"] = "data source",
@@ -14336,6 +14376,7 @@ TitanSettings = {
 						["iconWidth"] = 16,
 						["id"] = "Omen",
 						["menuText"] = "Omen",
+						["category"] = "Combat",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -14351,9 +14392,8 @@ TitanSettings = {
 							["ShowLabelText"] = true,
 						},
 						["version"] = "3.1.9",
-						["category"] = "Combat",
-						["ldb"] = "launcher",
 						["buttonTextFunction"] = "TitanLDBShowText",
+						["ldb"] = "launcher",
 						["icon"] = "Interface\\AddOns\\Omen\\icon",
 						["LDBVariables"] = {
 							["type"] = "launcher",
@@ -14369,6 +14409,7 @@ TitanSettings = {
 						["iconWidth"] = 16,
 						["id"] = "Masque",
 						["menuText"] = "Masque",
+						["category"] = "Interface",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -14384,9 +14425,8 @@ TitanSettings = {
 							["ShowLabelText"] = true,
 						},
 						["version"] = "6.0.0",
-						["category"] = "Interface",
-						["ldb"] = "launcher",
 						["buttonTextFunction"] = "TitanLDBShowText",
+						["ldb"] = "launcher",
 						["icon"] = "Interface\\Addons\\Masque\\Textures\\Icon",
 						["LDBVariables"] = {
 							["type"] = "launcher",
@@ -14401,12 +14441,13 @@ TitanSettings = {
 				["ToBe"] = {
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["savedVariables"] = {
 									["DisplayOnRightSide"] = 1,
 									["ForceBar"] = "Bar",
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["id"] = "AutoHide_Bar",
 								["menuText"] = "AutoHide_Bar",
@@ -14424,12 +14465,13 @@ TitanSettings = {
 					}, -- [1]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["savedVariables"] = {
 									["DisplayOnRightSide"] = 1,
 									["ForceBar"] = "Bar2",
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["id"] = "AutoHide_Bar2",
 								["menuText"] = "AutoHide_Bar2",
@@ -14447,12 +14489,13 @@ TitanSettings = {
 					}, -- [2]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["savedVariables"] = {
 									["DisplayOnRightSide"] = 1,
 									["ForceBar"] = "AuxBar2",
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["id"] = "AutoHide_AuxBar2",
 								["menuText"] = "AutoHide_AuxBar2",
@@ -14470,12 +14513,13 @@ TitanSettings = {
 					}, -- [3]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["savedVariables"] = {
 									["DisplayOnRightSide"] = 1,
 									["ForceBar"] = "AuxBar",
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["id"] = "AutoHide_AuxBar",
 								["menuText"] = "AutoHide_AuxBar",
@@ -14493,6 +14537,7 @@ TitanSettings = {
 					}, -- [4]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["tooltipTextFunction"] = "TitanPanelBagButton_GetTooltipText",
 								["id"] = "Bag",
@@ -14514,7 +14559,7 @@ TitanSettings = {
 									["DisplayOnRightSide"] = false,
 									["ShowLabelText"] = true,
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["iconWidth"] = 16,
 								["buttonTextFunction"] = "TitanPanelBagButton_GetButtonText",
@@ -14533,6 +14578,7 @@ TitanSettings = {
 					}, -- [5]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["tooltipTextFunction"] = "TitanPanelClockButton_GetTooltipText",
 								["id"] = "Clock",
@@ -14554,7 +14600,7 @@ TitanSettings = {
 									["DisplayOnRightSide"] = true,
 									["ShowLabelText"] = true,
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["buttonTextFunction"] = "TitanPanelClockButton_GetButtonText",
 								["tooltipTitle"] = "Clock",
@@ -14571,6 +14617,7 @@ TitanSettings = {
 					}, -- [6]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 						},
 						["notes"] = "",
 						["plugin_type"] = "",
@@ -14583,6 +14630,7 @@ TitanSettings = {
 					}, -- [7]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 						},
 						["notes"] = "",
 						["plugin_type"] = "",
@@ -14595,6 +14643,7 @@ TitanSettings = {
 					}, -- [8]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 						},
 						["notes"] = "",
 						["plugin_type"] = "",
@@ -14607,7 +14656,7 @@ TitanSettings = {
 					}, -- [9]
 					{
 						["self"] = {
-							["small"] = 1,
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["tooltipTextFunction"] = "TitanPanelCurrencyButton_GetTooltipText",
 								["id"] = "Currency",
@@ -14624,12 +14673,16 @@ TitanSettings = {
 								["tooltipTitle"] = "Currency Info",
 							},
 							["info"] = {
-								["showSmallerCoins"] = "Backpack",
 								["collapse"] = 1,
 								["canPickup"] = 1,
+								["showSmallerCoins"] = "Backpack",
+								["PickupFunc"] = nil --[[ skipped inline function ]],
+								["UpdateFunc"] = nil --[[ skipped inline function ]],
+								["DropFunc"] = nil --[[ skipped inline function ]],
 							},
 							["vadjust"] = 0,
-							["staticMoney"] = 6543283127,
+							["staticMoney"] = 6548114925,
+							["small"] = 1,
 							["moneyType"] = "PLAYER",
 						},
 						["notes"] = "",
@@ -14643,6 +14696,7 @@ TitanSettings = {
 					}, -- [10]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["tooltipTextFunction"] = "TitanPanelDurabilityButton_GetTooltipText",
 								["id"] = "Durability",
@@ -14661,9 +14715,9 @@ TitanSettings = {
 									["showallrepaircosts"] = false,
 									["showlowestitemintp"] = 1,
 									["showrepaircost15"] = false,
-									["ShowLabelText"] = 1,
-									["hideguy"] = 1,
 									["showrepaircost05"] = false,
+									["hideguy"] = 1,
+									["ShowLabelText"] = 1,
 									["inventory"] = false,
 									["showrepaircost20"] = false,
 									["showlowestduraintp"] = false,
@@ -14699,6 +14753,7 @@ TitanSettings = {
 					}, -- [11]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["tooltipTextFunction"] = "TitanPanelGoldButton_GetTooltipText",
 								["id"] = "Gold",
@@ -14707,20 +14762,20 @@ TitanSettings = {
 									["Initialized"] = true,
 									["ShowColoredText"] = true,
 									["DisplayGoldPerHour"] = true,
-									["UseSeperatorPeriod"] = false,
-									["ShowCoinLabels"] = true,
-									["ShowLabelText"] = false,
-									["ShowCoinIcons"] = false,
-									["SortByName"] = true,
-									["ShowIcon"] = true,
 									["gold"] = {
 										["neg"] = false,
 										["total"] = "112233",
 									},
+									["ShowCoinLabels"] = true,
+									["ShowLabelText"] = false,
+									["ShowCoinIcons"] = false,
+									["UseSeperatorPeriod"] = false,
+									["ViewAll"] = true,
+									["SortByName"] = true,
 									["ShowGoldOnly"] = false,
 									["ShowCoinNone"] = false,
-									["ViewAll"] = true,
 									["UseSeperatorComma"] = true,
+									["ShowIcon"] = true,
 								},
 								["controlVariables"] = {
 									["ShowColoredText"] = false,
@@ -14729,7 +14784,7 @@ TitanSettings = {
 									["DisplayOnRightSide"] = false,
 									["ShowLabelText"] = true,
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["iconWidth"] = 16,
 								["buttonTextFunction"] = "TitanPanelGoldButton_FindGold",
@@ -14748,6 +14803,7 @@ TitanSettings = {
 					}, -- [12]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["tooltipTextFunction"] = "TitanPanelGuildButton_GetTooltipText",
 								["id"] = "Guild",
@@ -14789,6 +14845,7 @@ TitanSettings = {
 					}, -- [13]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["tooltipTextFunction"] = "TitanPanelLocationButton_GetTooltipText",
 								["id"] = "Location",
@@ -14798,9 +14855,9 @@ TitanSettings = {
 									["ShowZoneText"] = 1,
 									["ShowCursorOnMap"] = true,
 									["ShowLabelText"] = 1,
-									["CoordsFormat3"] = false,
 									["UpdateWorldmap"] = false,
 									["ShowIcon"] = 1,
+									["CoordsFormat3"] = false,
 									["CoordsFormat1"] = 1,
 									["CoordsFormat2"] = false,
 									["ShowCoordsOnMap"] = true,
@@ -14813,19 +14870,19 @@ TitanSettings = {
 									["DisplayOnRightSide"] = false,
 									["ShowLabelText"] = true,
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["iconWidth"] = 16,
 								["buttonTextFunction"] = "TitanPanelLocationButton_GetButtonText",
 								["icon"] = "Interface\\AddOns\\TitanLocation\\TitanLocation",
 								["tooltipTitle"] = "Location Info",
 							},
-							["subZoneText"] = "",
+							["subZoneText"] = "Git's Garrison",
 							["factionName"] = "",
-							["px"] = 0.406641483306885,
-							["py"] = 0.535216689109802,
+							["px"] = 0.452463567256928,
+							["py"] = 0.485545814037323,
 							["pvpType"] = "contested",
-							["zoneText"] = "Town Hall",
+							["zoneText"] = "Frostwall",
 						},
 						["notes"] = "",
 						["plugin_type"] = "Titan",
@@ -14838,6 +14895,7 @@ TitanSettings = {
 					}, -- [14]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["tooltipTextFunction"] = "TitanPanelLootTypeButton_GetTooltipText",
 								["id"] = "LootType",
@@ -14845,8 +14903,8 @@ TitanSettings = {
 								["savedVariables"] = {
 									["RandomRoll"] = 100,
 									["ShowIcon"] = 1,
-									["ShowDungeonDiff"] = false,
 									["DungeonDiffType"] = "AUTO",
+									["ShowDungeonDiff"] = false,
 									["ShowLabelText"] = 1,
 								},
 								["controlVariables"] = {
@@ -14856,7 +14914,7 @@ TitanSettings = {
 									["DisplayOnRightSide"] = false,
 									["ShowLabelText"] = true,
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["iconWidth"] = 16,
 								["buttonTextFunction"] = "TitanPanelLootTypeButton_GetButtonText",
@@ -14875,6 +14933,7 @@ TitanSettings = {
 					}, -- [15]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["iconWidth"] = 16,
 								["id"] = "Performance",
@@ -14899,23 +14958,24 @@ TitanSettings = {
 									["DisplayOnRightSide"] = false,
 									["ShowLabelText"] = true,
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
+								["tooltipCustomFunction"] = nil --[[ skipped inline function ]],
 								["icon"] = "Interface\\AddOns\\TitanPerformance\\TitanPerformance",
 								["buttonTextFunction"] = "TitanPanelPerformanceButton_GetButtonText",
 							},
-							["maxFPS"] = 60.9756088256836,
-							["minFPS"] = 3.64697241783142,
-							["avgFPS"] = 53.5637624480001,
-							["bandwidthOut"] = 0.304076611995697,
-							["fps"] = 59.7609558105469,
-							["memory"] = 318366,
-							["bandwidthIn"] = 4.51054906845093,
-							["fpsSampleCount"] = 2139,
-							["initialMemory"] = 285314,
-							["latencyHome"] = 114,
-							["startSessionTime"] = 1418439082,
-							["latencyWorld"] = 94,
+							["maxFPS"] = 60.0000038146973,
+							["minFPS"] = 29.5858039855957,
+							["avgFPS"] = 44.7857761928013,
+							["bandwidthOut"] = 0.0314195603132248,
+							["fps"] = 59.9999961853027,
+							["initialMemory"] = 164869,
+							["memory"] = 184009,
+							["bandwidthIn"] = 0.853691577911377,
+							["fpsSampleCount"] = 140,
+							["startSessionTime"] = 1418588558,
+							["latencyHome"] = 65,
+							["latencyWorld"] = 68,
 						},
 						["notes"] = "",
 						["plugin_type"] = "Titan",
@@ -14928,6 +14988,7 @@ TitanSettings = {
 					}, -- [16]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["tooltipTextFunction"] = "TitanPanelRepairButton_GetTooltipText",
 								["id"] = "Repair",
@@ -14963,7 +15024,7 @@ TitanSettings = {
 									["DisplayOnRightSide"] = false,
 									["ShowLabelText"] = true,
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["iconWidth"] = 16,
 								["buttonTextFunction"] = "TitanPanelRepairButton_GetButtonText",
@@ -14982,6 +15043,7 @@ TitanSettings = {
 					}, -- [17]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["tooltipTextFunction"] = "TitanPanelVolumeButton_GetTooltipText",
 								["id"] = "Volume",
@@ -14997,7 +15059,7 @@ TitanSettings = {
 									["VolumeOutboundChat"] = 1,
 									["VolumeMusic"] = 0.5,
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["iconButtonWidth"] = 18,
 								["iconWidth"] = 32,
@@ -15015,7 +15077,7 @@ TitanSettings = {
 					}, -- [18]
 					{
 						["self"] = {
-							["sessionTime"] = 1418436377,
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["tooltipTextFunction"] = "TitanPanelXPButton_GetTooltipText",
 								["id"] = "XP",
@@ -15038,18 +15100,19 @@ TitanSettings = {
 									["DisplayOnRightSide"] = false,
 									["ShowLabelText"] = true,
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["iconWidth"] = 16,
 								["buttonTextFunction"] = "TitanPanelXPButton_GetButtonText",
 								["tooltipTitle"] = "XP Info",
 							},
-							["totalTime"] = 21572000.9851403,
+							["totalTime"] = 21586101.6670067,
 							["initXP"] = 63496,
-							["sessionXP"] = 0,
-							["startSessionTime"] = 1418436377,
-							["levelTime"] = 728742.985151527,
+							["startSessionTime"] = 1418588558,
 							["accumXP"] = 0,
+							["levelTime"] = 742843.667007226,
+							["sessionTime"] = 1418588558,
+							["sessionXP"] = 0,
 						},
 						["notes"] = "",
 						["plugin_type"] = "Titan",
@@ -15062,6 +15125,7 @@ TitanSettings = {
 					}, -- [19]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -15105,11 +15169,13 @@ TitanSettings = {
 					}, -- [20]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
 								["id"] = "Skada",
 								["menuText"] = "Skada",
+								["category"] = "Combat",
 								["savedVariables"] = {
 									["ShowColoredText"] = false,
 									["ShowIcon"] = true,
@@ -15125,9 +15191,8 @@ TitanSettings = {
 									["ShowLabelText"] = true,
 								},
 								["version"] = "1.4-24",
-								["category"] = "Combat",
-								["ldb"] = "data source",
 								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "data source",
 								["icon"] = "Interface\\Icons\\Spell_Lightning_LightningBolt01",
 								["LDBVariables"] = {
 									["type"] = "data source",
@@ -15150,6 +15215,7 @@ TitanSettings = {
 					}, -- [21]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -15177,7 +15243,7 @@ TitanSettings = {
 									["name"] = "ArkInventory_Bags",
 									["suffix"] = "",
 									["value"] = "",
-									["text"] = "|cfff9f9f9|cffffffff106/128 Bag|r",
+									["text"] = "|cfff9f9f9|cffffffff101/128 Bag|r",
 									["label"] = "",
 								},
 							},
@@ -15193,6 +15259,52 @@ TitanSettings = {
 					}, -- [22]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
+							["registry"] = {
+								["notes"] = "",
+								["iconWidth"] = 16,
+								["id"] = "UpgradeList",
+								["menuText"] = "Upgrade List",
+								["savedVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["controlVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = false,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["version"] = "4.1.1",
+								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "launcher",
+								["icon"] = "Interface\\Icons\\Achievement_BG_returnXflags_def_WSG",
+								["LDBVariables"] = {
+									["type"] = "launcher",
+									["name"] = "UpgradeList",
+									["suffix"] = "",
+									["value"] = "",
+									["text"] = "",
+									["label"] = "Upgrade List",
+								},
+							},
+						},
+						["notes"] = "",
+						["plugin_type"] = "LDB: 'launcher'",
+						["name"] = "UpgradeList",
+						["category"] = "General",
+						["button"] = "TitanPanelUpgradeListButton",
+						["issue"] = "",
+						["isChild"] = false,
+						["status"] = "|cff20ff20Registered|r",
+					}, -- [23]
+					{
+						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -15233,9 +15345,10 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [23]
+					}, -- [24]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -15257,7 +15370,7 @@ TitanSettings = {
 								},
 								["buttonTextFunction"] = "TitanLDBShowText",
 								["ldb"] = "data source",
-								["icon"] = "Interface\\Icons\\MountJournalPortrait",
+								["icon"] = "Interface\\Icons\\INV_Misc_Dice_01",
 								["LDBVariables"] = {
 									["type"] = "data source",
 									["name"] = "ArkInventory_Mounts",
@@ -15276,9 +15389,10 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [24]
+					}, -- [25]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -15306,7 +15420,7 @@ TitanSettings = {
 									["name"] = "Broker_GarrisonBuilding",
 									["suffix"] = "",
 									["value"] = "",
-									["text"] = "Shipments Ready: 28",
+									["text"] = "Shipments Ready: 20",
 									["label"] = "Garrison: Buildings",
 								},
 							},
@@ -15319,9 +15433,10 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [25]
+					}, -- [26]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -15363,9 +15478,369 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [26]
+					}, -- [27]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
+							["registry"] = {
+								["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
+								["iconWidth"] = 16,
+								["id"] = "Raven",
+								["menuText"] = "Raven",
+								["savedVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["controlVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = false,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["version"] = "r333",
+								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "launcher",
+								["icon"] = "Interface\\Icons\\Spell_Nature_RavenForm",
+								["LDBVariables"] = {
+									["type"] = "launcher",
+									["name"] = "Raven",
+									["suffix"] = "",
+									["value"] = "",
+									["text"] = "",
+									["label"] = "Raven",
+								},
+							},
+						},
+						["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
+						["plugin_type"] = "LDB: 'launcher'",
+						["name"] = "Raven",
+						["category"] = "General",
+						["button"] = "TitanPanelRavenButton",
+						["issue"] = "",
+						["isChild"] = false,
+						["status"] = "|cff20ff20Registered|r",
+					}, -- [28]
+					{
+						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
+							["registry"] = {
+								["notes"] = "",
+								["iconWidth"] = 16,
+								["id"] = "Bartender4",
+								["menuText"] = "Bartender4",
+								["category"] = "Interface",
+								["savedVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["controlVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = false,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["version"] = "4.6.5",
+								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "launcher",
+								["icon"] = "Interface\\Icons\\INV_Drink_05",
+								["LDBVariables"] = {
+									["type"] = "launcher",
+									["name"] = "Bartender4",
+									["suffix"] = "",
+									["value"] = "",
+									["text"] = "",
+									["label"] = "Bartender4",
+								},
+							},
+						},
+						["notes"] = "",
+						["plugin_type"] = "LDB: 'launcher'",
+						["name"] = "Bartender4",
+						["category"] = "Interface",
+						["button"] = "TitanPanelBartender4Button",
+						["issue"] = "",
+						["isChild"] = false,
+						["status"] = "|cff20ff20Registered|r",
+					}, -- [29]
+					{
+						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
+							["registry"] = {
+								["notes"] = "",
+								["iconWidth"] = 16,
+								["id"] = "Masque",
+								["menuText"] = "Masque",
+								["category"] = "Interface",
+								["savedVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["controlVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = false,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["version"] = "6.0.0",
+								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "launcher",
+								["icon"] = "Interface\\Addons\\Masque\\Textures\\Icon",
+								["LDBVariables"] = {
+									["type"] = "launcher",
+									["name"] = "Masque",
+									["suffix"] = "",
+									["value"] = "",
+									["text"] = "",
+									["label"] = "Masque",
+								},
+							},
+						},
+						["notes"] = "",
+						["plugin_type"] = "LDB: 'launcher'",
+						["name"] = "Masque",
+						["category"] = "Interface",
+						["button"] = "TitanPanelMasqueButton",
+						["issue"] = "",
+						["isChild"] = false,
+						["status"] = "|cff20ff20Registered|r",
+					}, -- [30]
+					{
+						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
+							["registry"] = {
+								["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
+								["iconWidth"] = 16,
+								["id"] = "AskMrRobot",
+								["menuText"] = "AskMrRobot",
+								["savedVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["controlVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = false,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["version"] = "19",
+								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "launcher",
+								["icon"] = "Interface\\AddOns\\AskMrRobot\\Media\\icon",
+								["LDBVariables"] = {
+									["type"] = "launcher",
+									["name"] = "AskMrRobot",
+									["suffix"] = "",
+									["value"] = "",
+									["text"] = "",
+									["label"] = "Ask Mr. Robot",
+								},
+							},
+						},
+						["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
+						["plugin_type"] = "LDB: 'launcher'",
+						["name"] = "AskMrRobot",
+						["category"] = "General",
+						["button"] = "TitanPanelAskMrRobotButton",
+						["issue"] = "",
+						["isChild"] = false,
+						["status"] = "|cff20ff20Registered|r",
+					}, -- [31]
+					{
+						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
+							["registry"] = {
+								["notes"] = "",
+								["iconWidth"] = 16,
+								["id"] = "CombatTime",
+								["menuText"] = "CombatTime",
+								["savedVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = true,
+									["DisplayOnRightSide"] = false,
+									["ShowLabelText"] = true,
+								},
+								["controlVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = true,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["version"] = "2.5.0",
+								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "data source",
+								["icon"] = "Interface\\Icons\\Ability_DualWield",
+								["LDBVariables"] = {
+									["type"] = "data source",
+									["name"] = "CombatTime",
+									["suffix"] = "",
+									["value"] = "",
+									["text"] = "|cff7f7f0000:00|r",
+									["label"] = "CombatTime",
+								},
+							},
+						},
+						["notes"] = "",
+						["plugin_type"] = "LDB: 'data source'",
+						["name"] = "CombatTime",
+						["category"] = "General",
+						["button"] = "TitanPanelCombatTimeButton",
+						["issue"] = "",
+						["isChild"] = false,
+						["status"] = "|cff20ff20Registered|r",
+					}, -- [32]
+					{
+						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
+							["registry"] = {
+								["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
+								["iconWidth"] = 16,
+								["id"] = "PhoenixStyle",
+								["menuText"] = "PhoenixStyle",
+								["savedVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["controlVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = false,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "launcher",
+								["icon"] = "interface\\AddOns\\PhoenixStyle\\icon_phoenix_e",
+								["LDBVariables"] = {
+									["type"] = "launcher",
+									["name"] = "PhoenixStyle",
+									["suffix"] = "",
+									["value"] = "",
+									["text"] = "",
+									["label"] = "PS",
+								},
+							},
+						},
+						["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
+						["plugin_type"] = "LDB: 'launcher'",
+						["name"] = "PhoenixStyle",
+						["category"] = "General",
+						["button"] = "TitanPanelPhoenixStyleButton",
+						["issue"] = "",
+						["isChild"] = false,
+						["status"] = "|cff20ff20Registered|r",
+					}, -- [33]
+					{
+						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
+							["registry"] = {
+								["notes"] = "",
+								["iconWidth"] = 16,
+								["id"] = "Record Kills",
+								["menuText"] = "Record Kills",
+								["savedVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = true,
+									["DisplayOnRightSide"] = false,
+									["ShowLabelText"] = true,
+								},
+								["controlVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = true,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "data source",
+								["icon"] = "Interface\\PVPFrame\\PVP-ArenaPoints-Icon",
+								["LDBVariables"] = {
+									["type"] = "data source",
+									["name"] = "Record Kills",
+									["suffix"] = "",
+									["value"] = "",
+									["text"] = "Record Kills",
+									["label"] = "",
+								},
+							},
+						},
+						["notes"] = "",
+						["plugin_type"] = "LDB: 'data source'",
+						["name"] = "Record Kills",
+						["category"] = "General",
+						["button"] = "TitanPanelRecord KillsButton",
+						["issue"] = "",
+						["isChild"] = false,
+						["status"] = "|cff20ff20Registered|r",
+					}, -- [34]
+					{
+						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
+							["registry"] = {
+								["notes"] = "",
+								["iconWidth"] = 16,
+								["id"] = "ArkInventory_Pets",
+								["menuText"] = "ArkInventory_Pets",
+								["savedVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = true,
+									["DisplayOnRightSide"] = false,
+									["ShowLabelText"] = true,
+								},
+								["controlVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = true,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "data source",
+								["icon"] = "Interface\\Icons\\PetJournalPortrait",
+								["LDBVariables"] = {
+									["type"] = "data source",
+									["name"] = "ArkInventory_Pets",
+									["suffix"] = "",
+									["value"] = "",
+									["text"] = "",
+									["label"] = "",
+								},
+							},
+						},
+						["notes"] = "",
+						["plugin_type"] = "LDB: 'data source'",
+						["name"] = "ArkInventory_Pets",
+						["category"] = "General",
+						["button"] = "TitanPanelArkInventory_PetsButton",
+						["issue"] = "",
+						["isChild"] = false,
+						["status"] = "|cff20ff20Registered|r",
+					}, -- [35]
+					{
+						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["iconR"] = 0.6,
 								["notes"] = "",
@@ -15411,365 +15886,16 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [27]
+					}, -- [36]
 					{
 						["self"] = {
-							["registry"] = {
-								["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
-								["iconWidth"] = 16,
-								["id"] = "Raven",
-								["menuText"] = "Raven",
-								["savedVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = true,
-									["ShowRegularText"] = false,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["controlVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = false,
-									["ShowRegularText"] = false,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["version"] = "r333",
-								["buttonTextFunction"] = "TitanLDBShowText",
-								["ldb"] = "launcher",
-								["icon"] = "Interface\\Icons\\Spell_Nature_RavenForm",
-								["LDBVariables"] = {
-									["type"] = "launcher",
-									["name"] = "Raven",
-									["suffix"] = "",
-									["value"] = "",
-									["text"] = "",
-									["label"] = "Raven",
-								},
-							},
-						},
-						["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
-						["plugin_type"] = "LDB: 'launcher'",
-						["name"] = "Raven",
-						["category"] = "General",
-						["button"] = "TitanPanelRavenButton",
-						["issue"] = "",
-						["isChild"] = false,
-						["status"] = "|cff20ff20Registered|r",
-					}, -- [28]
-					{
-						["self"] = {
-							["registry"] = {
-								["notes"] = "",
-								["iconWidth"] = 16,
-								["id"] = "Bartender4",
-								["menuText"] = "Bartender4",
-								["savedVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = true,
-									["ShowRegularText"] = false,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["controlVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = false,
-									["ShowRegularText"] = false,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["version"] = "4.6.5",
-								["category"] = "Interface",
-								["ldb"] = "launcher",
-								["buttonTextFunction"] = "TitanLDBShowText",
-								["icon"] = "Interface\\Icons\\INV_Drink_05",
-								["LDBVariables"] = {
-									["type"] = "launcher",
-									["name"] = "Bartender4",
-									["suffix"] = "",
-									["value"] = "",
-									["text"] = "",
-									["label"] = "Bartender4",
-								},
-							},
-						},
-						["notes"] = "",
-						["plugin_type"] = "LDB: 'launcher'",
-						["name"] = "Bartender4",
-						["category"] = "Interface",
-						["button"] = "TitanPanelBartender4Button",
-						["issue"] = "",
-						["isChild"] = false,
-						["status"] = "|cff20ff20Registered|r",
-					}, -- [29]
-					{
-						["self"] = {
-							["registry"] = {
-								["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
-								["iconWidth"] = 16,
-								["id"] = "AskMrRobot",
-								["menuText"] = "AskMrRobot",
-								["savedVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = true,
-									["ShowRegularText"] = false,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["controlVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = false,
-									["ShowRegularText"] = false,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["version"] = "19",
-								["buttonTextFunction"] = "TitanLDBShowText",
-								["ldb"] = "launcher",
-								["icon"] = "Interface\\AddOns\\AskMrRobot\\Media\\icon",
-								["LDBVariables"] = {
-									["type"] = "launcher",
-									["name"] = "AskMrRobot",
-									["suffix"] = "",
-									["value"] = "",
-									["text"] = "",
-									["label"] = "Ask Mr. Robot",
-								},
-							},
-						},
-						["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
-						["plugin_type"] = "LDB: 'launcher'",
-						["name"] = "AskMrRobot",
-						["category"] = "General",
-						["button"] = "TitanPanelAskMrRobotButton",
-						["issue"] = "",
-						["isChild"] = false,
-						["status"] = "|cff20ff20Registered|r",
-					}, -- [30]
-					{
-						["self"] = {
-							["registry"] = {
-								["notes"] = "",
-								["iconWidth"] = 16,
-								["id"] = "CombatTime",
-								["menuText"] = "CombatTime",
-								["savedVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = true,
-									["ShowRegularText"] = true,
-									["DisplayOnRightSide"] = false,
-									["ShowLabelText"] = true,
-								},
-								["controlVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = true,
-									["ShowRegularText"] = true,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["version"] = "2.5.0",
-								["buttonTextFunction"] = "TitanLDBShowText",
-								["ldb"] = "data source",
-								["icon"] = "Interface\\Icons\\Ability_DualWield",
-								["LDBVariables"] = {
-									["type"] = "data source",
-									["name"] = "CombatTime",
-									["suffix"] = "",
-									["value"] = "",
-									["text"] = "|cff7f7f0007:41|r",
-									["label"] = "CombatTime",
-								},
-							},
-						},
-						["notes"] = "",
-						["plugin_type"] = "LDB: 'data source'",
-						["name"] = "CombatTime",
-						["category"] = "General",
-						["button"] = "TitanPanelCombatTimeButton",
-						["issue"] = "",
-						["isChild"] = false,
-						["status"] = "|cff20ff20Registered|r",
-					}, -- [31]
-					{
-						["self"] = {
-							["registry"] = {
-								["notes"] = "",
-								["iconWidth"] = 16,
-								["id"] = "Masque",
-								["menuText"] = "Masque",
-								["savedVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = true,
-									["ShowRegularText"] = false,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["controlVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = false,
-									["ShowRegularText"] = false,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["version"] = "6.0.0",
-								["category"] = "Interface",
-								["ldb"] = "launcher",
-								["buttonTextFunction"] = "TitanLDBShowText",
-								["icon"] = "Interface\\Addons\\Masque\\Textures\\Icon",
-								["LDBVariables"] = {
-									["type"] = "launcher",
-									["name"] = "Masque",
-									["suffix"] = "",
-									["value"] = "",
-									["text"] = "",
-									["label"] = "Masque",
-								},
-							},
-						},
-						["notes"] = "",
-						["plugin_type"] = "LDB: 'launcher'",
-						["name"] = "Masque",
-						["category"] = "Interface",
-						["button"] = "TitanPanelMasqueButton",
-						["issue"] = "",
-						["isChild"] = false,
-						["status"] = "|cff20ff20Registered|r",
-					}, -- [32]
-					{
-						["self"] = {
-							["registry"] = {
-								["notes"] = "",
-								["iconWidth"] = 16,
-								["id"] = "Record Kills",
-								["menuText"] = "Record Kills",
-								["savedVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = true,
-									["ShowRegularText"] = true,
-									["DisplayOnRightSide"] = false,
-									["ShowLabelText"] = true,
-								},
-								["controlVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = true,
-									["ShowRegularText"] = true,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["buttonTextFunction"] = "TitanLDBShowText",
-								["ldb"] = "data source",
-								["icon"] = "Interface\\PVPFrame\\PVP-ArenaPoints-Icon",
-								["LDBVariables"] = {
-									["type"] = "data source",
-									["name"] = "Record Kills",
-									["suffix"] = "",
-									["value"] = "",
-									["text"] = "Record Kills",
-									["label"] = "",
-								},
-							},
-						},
-						["notes"] = "",
-						["plugin_type"] = "LDB: 'data source'",
-						["name"] = "Record Kills",
-						["category"] = "General",
-						["button"] = "TitanPanelRecord KillsButton",
-						["issue"] = "",
-						["isChild"] = false,
-						["status"] = "|cff20ff20Registered|r",
-					}, -- [33]
-					{
-						["self"] = {
-							["registry"] = {
-								["notes"] = "",
-								["iconWidth"] = 16,
-								["id"] = "ArkInventory_Pets",
-								["menuText"] = "ArkInventory_Pets",
-								["savedVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = true,
-									["ShowRegularText"] = true,
-									["DisplayOnRightSide"] = false,
-									["ShowLabelText"] = true,
-								},
-								["controlVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = true,
-									["ShowRegularText"] = true,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["buttonTextFunction"] = "TitanLDBShowText",
-								["ldb"] = "data source",
-								["icon"] = "Interface\\Icons\\PetJournalPortrait",
-								["LDBVariables"] = {
-									["type"] = "data source",
-									["name"] = "ArkInventory_Pets",
-									["suffix"] = "",
-									["value"] = "",
-									["text"] = "",
-									["label"] = "",
-								},
-							},
-						},
-						["notes"] = "",
-						["plugin_type"] = "LDB: 'data source'",
-						["name"] = "ArkInventory_Pets",
-						["category"] = "General",
-						["button"] = "TitanPanelArkInventory_PetsButton",
-						["issue"] = "",
-						["isChild"] = false,
-						["status"] = "|cff20ff20Registered|r",
-					}, -- [34]
-					{
-						["self"] = {
-							["registry"] = {
-								["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
-								["iconWidth"] = 16,
-								["id"] = "PhoenixStyle",
-								["menuText"] = "PhoenixStyle",
-								["savedVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = true,
-									["ShowRegularText"] = false,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["controlVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = false,
-									["ShowRegularText"] = false,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["buttonTextFunction"] = "TitanLDBShowText",
-								["ldb"] = "launcher",
-								["icon"] = "interface\\AddOns\\PhoenixStyle\\icon_phoenix_e",
-								["LDBVariables"] = {
-									["type"] = "launcher",
-									["name"] = "PhoenixStyle",
-									["suffix"] = "",
-									["value"] = "",
-									["text"] = "",
-									["label"] = "PS",
-								},
-							},
-						},
-						["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
-						["plugin_type"] = "LDB: 'launcher'",
-						["name"] = "PhoenixStyle",
-						["category"] = "General",
-						["button"] = "TitanPanelPhoenixStyleButton",
-						["issue"] = "",
-						["isChild"] = false,
-						["status"] = "|cff20ff20Registered|r",
-					}, -- [35]
-					{
-						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
 								["id"] = "LoggerHead",
 								["menuText"] = "Combat Log",
+								["category"] = "General",
 								["savedVariables"] = {
 									["ShowColoredText"] = false,
 									["ShowIcon"] = true,
@@ -15785,9 +15911,8 @@ TitanSettings = {
 									["ShowLabelText"] = true,
 								},
 								["version"] = "178",
-								["category"] = "General",
-								["ldb"] = "data source",
 								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "data source",
 								["icon"] = "Interface\\AddOns\\LoggerHead\\disabled",
 								["LDBVariables"] = {
 									["type"] = "data source",
@@ -15807,9 +15932,10 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [36]
+					}, -- [37]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -15850,14 +15976,16 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [37]
+					}, -- [38]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
 								["id"] = "BigWigs",
 								["menuText"] = "Big Wigs",
+								["category"] = "Information",
 								["savedVariables"] = {
 									["ShowColoredText"] = false,
 									["ShowIcon"] = true,
@@ -15872,10 +16000,9 @@ TitanSettings = {
 									["DisplayOnRightSide"] = true,
 									["ShowLabelText"] = true,
 								},
-								["version"] = "4.610",
-								["category"] = "Information",
-								["ldb"] = "launcher",
+								["version"] = "4.615",
 								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "launcher",
 								["icon"] = "Interface\\AddOns\\BigWigs\\Textures\\icons\\core-disabled",
 								["LDBVariables"] = {
 									["type"] = "launcher",
@@ -15895,9 +16022,10 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [38]
+					}, -- [39]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -15938,9 +16066,10 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [39]
+					}, -- [40]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -15981,9 +16110,10 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [40]
+					}, -- [41]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -16011,7 +16141,7 @@ TitanSettings = {
 									["name"] = "ArkInventory_Money",
 									["suffix"] = "",
 									["value"] = "",
-									["text"] = "654328|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 31|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 27|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+									["text"] = "654811|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 49|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 25|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
 									["label"] = "",
 								},
 							},
@@ -16024,14 +16154,16 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [41]
+					}, -- [42]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
 								["id"] = "GatherMate2",
 								["menuText"] = "GatherMate2",
+								["category"] = "Interface",
 								["savedVariables"] = {
 									["ShowColoredText"] = false,
 									["ShowIcon"] = true,
@@ -16047,9 +16179,8 @@ TitanSettings = {
 									["ShowLabelText"] = true,
 								},
 								["version"] = "1.33.3",
-								["category"] = "Interface",
-								["ldb"] = "launcher",
 								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "launcher",
 								["icon"] = "Interface\\AddOns\\GatherMate2\\Artwork\\Icon.tga",
 								["LDBVariables"] = {
 									["type"] = "launcher",
@@ -16069,9 +16200,10 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [42]
+					}, -- [43]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -16113,14 +16245,16 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [43]
+					}, -- [44]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
 								["id"] = "RangeDisplay",
 								["menuText"] = "RangeDisplay",
+								["category"] = "Combat",
 								["savedVariables"] = {
 									["ShowColoredText"] = false,
 									["ShowIcon"] = true,
@@ -16136,9 +16270,8 @@ TitanSettings = {
 									["ShowLabelText"] = true,
 								},
 								["version"] = "v4.3.1",
-								["category"] = "Combat",
-								["ldb"] = "launcher",
 								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "launcher",
 								["icon"] = "Interface\\Icons\\INV_Misc_Spyglass_02",
 								["LDBVariables"] = {
 									["type"] = "launcher",
@@ -16158,9 +16291,10 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [44]
+					}, -- [45]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -16188,7 +16322,7 @@ TitanSettings = {
 									["name"] = "Broker_GarrisonMission",
 									["suffix"] = "",
 									["value"] = "",
-									["text"] = "In Progress: 0 Complete: 0",
+									["text"] = "In Progress: 4 Complete: 4",
 									["label"] = "Garrison: Missions",
 								},
 							},
@@ -16201,14 +16335,16 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [45]
+					}, -- [46]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
 								["iconWidth"] = 16,
 								["id"] = "RaidBuffStatus",
 								["menuText"] = "RaidBuffStatus",
+								["category"] = "Information",
 								["savedVariables"] = {
 									["ShowColoredText"] = false,
 									["ShowIcon"] = true,
@@ -16224,9 +16360,8 @@ TitanSettings = {
 									["ShowLabelText"] = true,
 								},
 								["version"] = "6.0.2",
-								["category"] = "Information",
-								["ldb"] = "launcher",
 								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "launcher",
 								["icon"] = "Interface/Icons/Ability_Hunter_MasterMarksman",
 								["LDBVariables"] = {
 									["type"] = "launcher",
@@ -16246,14 +16381,16 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [46]
+					}, -- [47]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
 								["id"] = "TimeToDie",
 								["menuText"] = "TTD",
+								["category"] = "Combat",
 								["savedVariables"] = {
 									["ShowColoredText"] = false,
 									["ShowIcon"] = true,
@@ -16269,9 +16406,8 @@ TitanSettings = {
 									["ShowLabelText"] = true,
 								},
 								["version"] = "v1.5.1",
-								["category"] = "Combat",
-								["ldb"] = "data source",
 								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "data source",
 								["icon"] = "Interface\\Icons\\Spell_Holy_BorrowedTime",
 								["LDBVariables"] = {
 									["type"] = "data source",
@@ -16291,14 +16427,16 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [47]
+					}, -- [48]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
 								["id"] = "AutoTurnIn",
 								["menuText"] = "autoturnin [on]",
+								["category"] = "Information",
 								["savedVariables"] = {
 									["ShowColoredText"] = false,
 									["ShowIcon"] = true,
@@ -16314,9 +16452,8 @@ TitanSettings = {
 									["ShowLabelText"] = true,
 								},
 								["version"] = "4.5.N",
-								["category"] = "Information",
-								["ldb"] = "data source",
 								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "data source",
 								["icon"] = "Interface\\QUESTFRAME\\UI-QuestLog-BookIcon",
 								["LDBVariables"] = {
 									["type"] = "data source",
@@ -16336,14 +16473,16 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [48]
+					}, -- [49]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
 								["id"] = "Omen",
 								["menuText"] = "Omen",
+								["category"] = "Combat",
 								["savedVariables"] = {
 									["ShowColoredText"] = false,
 									["ShowIcon"] = true,
@@ -16359,9 +16498,8 @@ TitanSettings = {
 									["ShowLabelText"] = true,
 								},
 								["version"] = "3.1.9",
-								["category"] = "Combat",
-								["ldb"] = "launcher",
 								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "launcher",
 								["icon"] = "Interface\\AddOns\\Omen\\icon",
 								["LDBVariables"] = {
 									["type"] = "launcher",
@@ -16381,9 +16519,10 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [49]
+					}, -- [50]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
 								["iconWidth"] = 16,
@@ -16425,9 +16564,10 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [50]
+					}, -- [51]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -16468,9 +16608,10 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [51]
+					}, -- [52]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -16512,14 +16653,16 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [52]
+					}, -- [53]
 					{
 						["self"] = {
+							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "\nWill be registered as single LDB plugin after the normal registration.",
 								["iconWidth"] = 16,
 								["id"] = "epgp",
 								["menuText"] = "EPGP",
+								["category"] = "Information",
 								["savedVariables"] = {
 									["ShowColoredText"] = false,
 									["ShowIcon"] = true,
@@ -16535,9 +16678,8 @@ TitanSettings = {
 									["ShowLabelText"] = true,
 								},
 								["version"] = "v5.11.4",
-								["category"] = "Information",
-								["ldb"] = "data source",
 								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "data source",
 								["icon"] = "Interface\\PVPFrame\\PVP-ArenaPoints-Icon",
 								["LDBVariables"] = {
 									["type"] = "data source",
@@ -16557,7 +16699,7 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [53]
+					}, -- [54]
 				},
 				["Extras"] = {
 					{
@@ -16629,7 +16771,7 @@ TitanSettings = {
 						["num"] = 17,
 					}, -- [17]
 					{
-						["id"] = "TradeForwarder",
+						["id"] = "SN - Dodge",
 						["num"] = 18,
 					}, -- [18]
 					{
@@ -16641,47 +16783,47 @@ TitanSettings = {
 						["num"] = 20,
 					}, -- [20]
 					{
-						["id"] = "SN - Spell Mastery",
+						["id"] = "TradeForwarder",
 						["num"] = 21,
 					}, -- [21]
 					{
-						["id"] = "SN - Dodge",
+						["id"] = "SN - Spell Mastery",
 						["num"] = 22,
 					}, -- [22]
 					{
-						["id"] = "VuhDo",
+						["id"] = "SN - Versatility",
 						["num"] = 23,
 					}, -- [23]
 					{
-						["id"] = "SN - PvP Resilience",
+						["id"] = "VuhDo",
 						["num"] = 24,
 					}, -- [24]
 					{
-						["id"] = "GarajalAnnounce",
+						["id"] = "SN - PvP Resilience",
 						["num"] = 25,
 					}, -- [25]
 					{
-						["id"] = "SN - Melee Armor Penetration",
+						["id"] = "Informant",
 						["num"] = 26,
 					}, -- [26]
 					{
-						["id"] = "SN - Multistrike",
+						["id"] = "SN - Melee Armor Penetration",
 						["num"] = 27,
 					}, -- [27]
 					{
-						["id"] = "SN - PvP Power",
+						["id"] = "SN - Melee Hit",
 						["num"] = 28,
 					}, -- [28]
 					{
-						["id"] = "SN - Melee Crit",
+						["id"] = "SN - Multistrike",
 						["num"] = 29,
 					}, -- [29]
 					{
-						["id"] = "SN - Defense Mastery",
+						["id"] = "SN - PvP Power",
 						["num"] = 30,
 					}, -- [30]
 					{
-						["id"] = "SN - MP5",
+						["id"] = "SN - Melee Crit",
 						["num"] = 31,
 					}, -- [31]
 					{
@@ -16689,55 +16831,55 @@ TitanSettings = {
 						["num"] = 32,
 					}, -- [32]
 					{
-						["id"] = "SN - Spell Crit",
+						["id"] = "SN - MP5",
 						["num"] = 33,
 					}, -- [33]
 					{
-						["id"] = "SN - Dmg Reduction",
+						["id"] = "SN - Defense Mastery",
 						["num"] = 34,
 					}, -- [34]
 					{
-						["id"] = "hagakure_cooldowns",
+						["id"] = "SN - Spell Crit",
 						["num"] = 35,
 					}, -- [35]
 					{
-						["id"] = "SN - Melee Attack Power",
+						["id"] = "SN - Dmg Reduction",
 						["num"] = 36,
 					}, -- [36]
 					{
-						["id"] = "SN - Spell Hit",
+						["id"] = "hagakure_cooldowns",
 						["num"] = 37,
 					}, -- [37]
 					{
-						["id"] = "_NPCScan.Overlay",
+						["id"] = "SN - Spell Hit",
 						["num"] = 38,
 					}, -- [38]
 					{
-						["id"] = "SN - Armor",
+						["id"] = "SN - Melee Attack Power",
 						["num"] = 39,
 					}, -- [39]
 					{
-						["id"] = "SN - Leech",
+						["id"] = "SN - Armor",
 						["num"] = 40,
 					}, -- [40]
 					{
-						["id"] = "SN - Melee Hit",
+						["id"] = "_NPCScan.Overlay",
 						["num"] = 41,
 					}, -- [41]
 					{
-						["id"] = "Informant",
+						["id"] = "SN - Leech",
 						["num"] = 42,
 					}, -- [42]
 					{
-						["id"] = "SN - Parry",
+						["id"] = "GarajalAnnounce",
 						["num"] = 43,
 					}, -- [43]
 					{
-						["id"] = "SN - Ranged Crit",
+						["id"] = "SN - Parry",
 						["num"] = 44,
 					}, -- [44]
 					{
-						["id"] = "SN - Versatility",
+						["id"] = "SN - Ranged Crit",
 						["num"] = 45,
 					}, -- [45]
 					{
@@ -22271,6 +22413,13 @@ TitanSettings = {
 					["DisplayOnRightSide"] = true,
 					["ShowLabelText"] = true,
 				},
+				["BagnonLauncher"] = {
+					["ShowColoredText"] = false,
+					["ShowIcon"] = true,
+					["ShowRegularText"] = false,
+					["DisplayOnRightSide"] = true,
+					["ShowLabelText"] = true,
+				},
 				["Record Kills"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
@@ -22285,7 +22434,7 @@ TitanSettings = {
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["BagnonLauncher"] = {
+				["AskMrRobot"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = false,
@@ -22359,7 +22508,7 @@ TitanSettings = {
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["AucAdvanced"] = {
+				["Paste"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = false,
@@ -22379,7 +22528,7 @@ TitanSettings = {
 					["ShowCoordsOnMap"] = true,
 					["ShowLocOnMiniMap"] = 1,
 				},
-				["Paste"] = {
+				["AucAdvanced"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = false,
@@ -22405,6 +22554,10 @@ TitanSettings = {
 					["ViewAll"] = true,
 					["UseSeperatorComma"] = true,
 				},
+				["AutoHide_AuxBar2"] = {
+					["DisplayOnRightSide"] = 1,
+					["ForceBar"] = "AuxBar2",
+				},
 				["Repair"] = {
 					["ShowColoredText"] = false,
 					["IgnoreThrown"] = false,
@@ -22429,19 +22582,12 @@ TitanSettings = {
 					["ShowPopup"] = false,
 					["ShowMostDamaged"] = false,
 				},
-				["AutoHide_AuxBar2"] = {
-					["DisplayOnRightSide"] = 1,
-					["ForceBar"] = "AuxBar2",
-				},
-				["Bag"] = {
-					["ShowColoredText"] = 1,
-					["CountProfBagSlots"] = false,
-					["CountShardBagSlots"] = false,
-					["ShowUsedSlots"] = 1,
-					["CountAmmoPouchSlots"] = false,
-					["ShowIcon"] = 1,
-					["ShowDetailedInfo"] = false,
-					["ShowLabelText"] = 1,
+				["Skada"] = {
+					["ShowColoredText"] = false,
+					["ShowIcon"] = true,
+					["ShowRegularText"] = true,
+					["DisplayOnRightSide"] = false,
+					["ShowLabelText"] = true,
 				},
 				["ArkInventory_Bags"] = {
 					["ShowColoredText"] = false,
@@ -22482,18 +22628,15 @@ TitanSettings = {
 					["DisplayOnRightSide"] = 1,
 					["ForceBar"] = "Bar",
 				},
-				["Performance"] = {
-					["ShowAddonMemory"] = false,
-					["ShowMemory"] = 1,
-					["AddonMemoryType"] = 1,
-					["ShowLatency"] = 1,
-					["ShowWorldLatency"] = 1,
+				["Clock"] = {
+					["HideMapTime"] = false,
+					["ShowColoredText"] = false,
+					["DisplayOnRightSide"] = 1,
+					["OffsetHour"] = 0,
+					["HideGameTimeMinimap"] = false,
+					["Format"] = "12H",
+					["TimeMode"] = "Server",
 					["ShowLabelText"] = false,
-					["ShowIcon"] = 1,
-					["ShowAddonIncRate"] = false,
-					["ShowColoredText"] = 1,
-					["NumOfAddons"] = 5,
-					["ShowFPS"] = 1,
 				},
 				["CombatTime"] = {
 					["ShowColoredText"] = false,
@@ -22513,17 +22656,20 @@ TitanSettings = {
 					["DungeonDiffType"] = "AUTO",
 					["ShowLabelText"] = 1,
 				},
-				["Clock"] = {
-					["HideMapTime"] = false,
-					["ShowColoredText"] = false,
-					["DisplayOnRightSide"] = 1,
-					["OffsetHour"] = 0,
-					["HideGameTimeMinimap"] = false,
-					["Format"] = "12H",
-					["TimeMode"] = "Server",
+				["Performance"] = {
+					["ShowAddonMemory"] = false,
+					["ShowMemory"] = 1,
+					["AddonMemoryType"] = 1,
+					["ShowLatency"] = 1,
+					["ShowWorldLatency"] = 1,
 					["ShowLabelText"] = false,
+					["ShowIcon"] = 1,
+					["ShowAddonIncRate"] = false,
+					["ShowColoredText"] = 1,
+					["NumOfAddons"] = 5,
+					["ShowFPS"] = 1,
 				},
-				["SN - Versatility"] = {
+				["SN - Leech"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
@@ -22548,7 +22694,7 @@ TitanSettings = {
 					["DisplayOnRightSide"] = true,
 					["ShowLabelText"] = true,
 				},
-				["SN - Leech"] = {
+				["SN - Versatility"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
@@ -22588,7 +22734,7 @@ TitanSettings = {
 					["showtotalduraintp"] = false,
 					["showrepaircost"] = 1,
 				},
-				["AskMrRobot"] = {
+				["UpgradeList"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = false,
@@ -22630,12 +22776,15 @@ TitanSettings = {
 					["DisplayOnRightSide"] = true,
 					["ShowLabelText"] = true,
 				},
-				["Skada"] = {
-					["ShowColoredText"] = false,
-					["ShowIcon"] = true,
-					["ShowRegularText"] = true,
-					["DisplayOnRightSide"] = false,
-					["ShowLabelText"] = true,
+				["Bag"] = {
+					["ShowColoredText"] = 1,
+					["CountProfBagSlots"] = false,
+					["CountShardBagSlots"] = false,
+					["ShowUsedSlots"] = 1,
+					["CountAmmoPouchSlots"] = false,
+					["ShowIcon"] = 1,
+					["ShowDetailedInfo"] = false,
+					["ShowLabelText"] = 1,
 				},
 				["Broker_GarrisonMission"] = {
 					["ShowColoredText"] = false,
@@ -22681,7 +22830,7 @@ TitanSettings = {
 				},
 			},
 			["Register"] = {
-				["ToBeNum"] = 53,
+				["ToBeNum"] = 54,
 				["TitanPlugins"] = {
 					["Durability"] = {
 						["tooltipTextFunction"] = "TitanPanelDurabilityButton_GetTooltipText",
@@ -22701,9 +22850,9 @@ TitanSettings = {
 							["showallrepaircosts"] = false,
 							["showlowestitemintp"] = 1,
 							["showrepaircost15"] = false,
-							["showrepaircost05"] = false,
-							["hideguy"] = 1,
 							["ShowLabelText"] = 1,
+							["hideguy"] = 1,
+							["showrepaircost05"] = false,
 							["inventory"] = false,
 							["showrepaircost20"] = false,
 							["showlowestduraintp"] = false,
@@ -22814,7 +22963,7 @@ TitanSettings = {
 							["name"] = "Broker_GarrisonBuilding",
 							["suffix"] = "",
 							["value"] = "",
-							["text"] = "Shipments Ready: 32",
+							["text"] = "Shipments Ready: 12",
 							["label"] = "Garrison: Buildings",
 						},
 					},
@@ -22880,20 +23029,17 @@ TitanSettings = {
 							["VolumeOutboundChat"] = 1,
 							["VolumeMusic"] = 0.5,
 						},
-						["version"] = "5.4.1.60000",
+						["version"] = "5.4.2.60000",
 						["category"] = "Built-ins",
 						["iconButtonWidth"] = 18,
 						["iconWidth"] = 32,
 						["tooltipTitle"] = "Volume Info",
 					},
-					["WeakAuras"] = {
-						["iconR"] = 0.6,
+					["Record Kills"] = {
 						["notes"] = "",
-						["iconG"] = 0,
 						["iconWidth"] = 16,
-						["id"] = "WeakAuras",
-						["menuText"] = "WeakAuras",
-						["category"] = "Interface",
+						["id"] = "Record Kills",
+						["menuText"] = "Record Kills",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -22908,17 +23054,15 @@ TitanSettings = {
 							["DisplayOnRightSide"] = true,
 							["ShowLabelText"] = true,
 						},
-						["version"] = "2.0.9.7",
 						["buttonTextFunction"] = "TitanLDBShowText",
 						["ldb"] = "data source",
-						["iconB"] = 1,
-						["icon"] = "Interface\\AddOns\\WeakAuras\\icon.tga",
+						["icon"] = "Interface\\PVPFrame\\PVP-ArenaPoints-Icon",
 						["LDBVariables"] = {
 							["type"] = "data source",
-							["name"] = "WeakAuras",
+							["name"] = "Record Kills",
 							["suffix"] = "",
 							["value"] = "",
-							["text"] = "WeakAuras",
+							["text"] = "Record Kills",
 							["label"] = "",
 						},
 					},
@@ -22958,7 +23102,6 @@ TitanSettings = {
 						["iconWidth"] = 16,
 						["id"] = "LoggerHead",
 						["menuText"] = "Combat Log",
-						["category"] = "General",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -22974,8 +23117,9 @@ TitanSettings = {
 							["ShowLabelText"] = true,
 						},
 						["version"] = "178",
-						["buttonTextFunction"] = "TitanLDBShowText",
+						["category"] = "General",
 						["ldb"] = "data source",
+						["buttonTextFunction"] = "TitanLDBShowText",
 						["icon"] = "Interface\\AddOns\\LoggerHead\\disabled",
 						["LDBVariables"] = {
 							["type"] = "data source",
@@ -23022,7 +23166,6 @@ TitanSettings = {
 						["iconWidth"] = 16,
 						["id"] = "BigWigs",
 						["menuText"] = "Big Wigs",
-						["category"] = "Information",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -23037,9 +23180,10 @@ TitanSettings = {
 							["DisplayOnRightSide"] = true,
 							["ShowLabelText"] = true,
 						},
-						["version"] = "4.610",
-						["buttonTextFunction"] = "TitanLDBShowText",
+						["version"] = "4.615",
+						["category"] = "Information",
 						["ldb"] = "launcher",
+						["buttonTextFunction"] = "TitanLDBShowText",
 						["icon"] = "Interface\\AddOns\\BigWigs\\Textures\\icons\\core-disabled",
 						["LDBVariables"] = {
 							["type"] = "launcher",
@@ -23055,7 +23199,7 @@ TitanSettings = {
 							["DisplayOnRightSide"] = 1,
 							["ForceBar"] = "Bar2",
 						},
-						["version"] = "5.4.1.60000",
+						["version"] = "5.4.2.60000",
 						["category"] = "Built-ins",
 						["id"] = "AutoHide_Bar2",
 						["menuText"] = "AutoHide_Bar2",
@@ -23119,7 +23263,7 @@ TitanSettings = {
 							["name"] = "ArkInventory_Money",
 							["suffix"] = "",
 							["value"] = "",
-							["text"] = "55018|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 57|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 66|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+							["text"] = "54470|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 84|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 05|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
 							["label"] = "",
 						},
 					},
@@ -23128,7 +23272,6 @@ TitanSettings = {
 						["iconWidth"] = 16,
 						["id"] = "GatherMate2",
 						["menuText"] = "GatherMate2",
-						["category"] = "Interface",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -23144,8 +23287,9 @@ TitanSettings = {
 							["ShowLabelText"] = true,
 						},
 						["version"] = "1.33.3",
-						["buttonTextFunction"] = "TitanLDBShowText",
+						["category"] = "Interface",
 						["ldb"] = "launcher",
+						["buttonTextFunction"] = "TitanLDBShowText",
 						["icon"] = "Interface\\AddOns\\GatherMate2\\Artwork\\Icon.tga",
 						["LDBVariables"] = {
 							["type"] = "launcher",
@@ -23197,9 +23341,9 @@ TitanSettings = {
 							["ShowZoneText"] = 1,
 							["ShowCursorOnMap"] = true,
 							["ShowLabelText"] = 1,
+							["CoordsFormat3"] = false,
 							["UpdateWorldmap"] = false,
 							["ShowIcon"] = 1,
-							["CoordsFormat3"] = false,
 							["CoordsFormat1"] = 1,
 							["CoordsFormat2"] = false,
 							["ShowCoordsOnMap"] = true,
@@ -23212,7 +23356,7 @@ TitanSettings = {
 							["DisplayOnRightSide"] = false,
 							["ShowLabelText"] = true,
 						},
-						["version"] = "5.4.1.60000",
+						["version"] = "5.4.2.60000",
 						["category"] = "Built-ins",
 						["iconWidth"] = 16,
 						["buttonTextFunction"] = "TitanPanelLocationButton_GetButtonText",
@@ -23285,7 +23429,7 @@ TitanSettings = {
 							["DisplayOnRightSide"] = false,
 							["ShowLabelText"] = true,
 						},
-						["version"] = "5.4.1.60000",
+						["version"] = "5.4.2.60000",
 						["category"] = "Built-ins",
 						["iconWidth"] = 16,
 						["buttonTextFunction"] = "TitanPanelRepairButton_GetButtonText",
@@ -23297,7 +23441,6 @@ TitanSettings = {
 						["iconWidth"] = 16,
 						["id"] = "Skada",
 						["menuText"] = "Skada",
-						["category"] = "Combat",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -23313,8 +23456,9 @@ TitanSettings = {
 							["ShowLabelText"] = true,
 						},
 						["version"] = "1.4-24",
-						["buttonTextFunction"] = "TitanLDBShowText",
+						["category"] = "Combat",
 						["ldb"] = "data source",
+						["buttonTextFunction"] = "TitanLDBShowText",
 						["icon"] = "Interface\\Icons\\Spell_Lightning_LightningBolt01",
 						["LDBVariables"] = {
 							["type"] = "data source",
@@ -23352,15 +23496,15 @@ TitanSettings = {
 							["name"] = "ArkInventory_Bags",
 							["suffix"] = "",
 							["value"] = "",
-							["text"] = "|cfff9f9f9|cffffffff57/104 Bag|r",
+							["text"] = "|cfff9f9f9|cffffffff81/110 Bag|r",
 							["label"] = "",
 						},
 					},
-					["Auc-Util-AutoMagic"] = {
-						["notes"] = "",
+					["RaidAchievement"] = {
+						["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
 						["iconWidth"] = 16,
-						["id"] = "Auc-Util-AutoMagic",
-						["menuText"] = "Auc-Util-AutoMagic",
+						["id"] = "RaidAchievement",
+						["menuText"] = "RaidAchievement",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -23375,12 +23519,46 @@ TitanSettings = {
 							["DisplayOnRightSide"] = true,
 							["ShowLabelText"] = true,
 						},
+						["version"] = "1.129",
 						["buttonTextFunction"] = "TitanLDBShowText",
 						["ldb"] = "launcher",
-						["icon"] = "Interface\\AddOns\\Auc-Advanced\\Modules\\Auc-Util-AutoMagic\\Images\\amagicIcon",
+						["icon"] = "interface\\AddOns\\RaidAchievement\\ra_button_e",
 						["LDBVariables"] = {
 							["type"] = "launcher",
-							["name"] = "Auc-Util-AutoMagic",
+							["name"] = "RaidAchievement",
+							["suffix"] = "",
+							["value"] = "",
+							["text"] = "",
+							["label"] = "RA",
+						},
+					},
+					["RangeDisplay"] = {
+						["notes"] = "",
+						["iconWidth"] = 16,
+						["id"] = "RangeDisplay",
+						["menuText"] = "RangeDisplay",
+						["savedVariables"] = {
+							["ShowColoredText"] = false,
+							["ShowIcon"] = true,
+							["ShowRegularText"] = false,
+							["DisplayOnRightSide"] = true,
+							["ShowLabelText"] = true,
+						},
+						["controlVariables"] = {
+							["ShowColoredText"] = false,
+							["ShowIcon"] = false,
+							["ShowRegularText"] = false,
+							["DisplayOnRightSide"] = true,
+							["ShowLabelText"] = true,
+						},
+						["version"] = "v4.3.1",
+						["category"] = "Combat",
+						["ldb"] = "launcher",
+						["buttonTextFunction"] = "TitanLDBShowText",
+						["icon"] = "Interface\\Icons\\INV_Misc_Spyglass_02",
+						["LDBVariables"] = {
+							["type"] = "launcher",
+							["name"] = "RangeDisplay",
 							["suffix"] = "",
 							["value"] = "",
 							["text"] = "",
@@ -23454,18 +23632,17 @@ TitanSettings = {
 							["DisplayOnRightSide"] = 1,
 							["ForceBar"] = "Bar",
 						},
-						["version"] = "5.4.1.60000",
+						["version"] = "5.4.2.60000",
 						["category"] = "Built-ins",
 						["id"] = "AutoHide_Bar",
 						["menuText"] = "AutoHide_Bar",
 						["tooltipTitle"] = "Toggles Titan Panel auto-hide on/off feature",
 					},
-					["RangeDisplay"] = {
+					["Auc-Util-AutoMagic"] = {
 						["notes"] = "",
 						["iconWidth"] = 16,
-						["id"] = "RangeDisplay",
-						["menuText"] = "RangeDisplay",
-						["category"] = "Combat",
+						["id"] = "Auc-Util-AutoMagic",
+						["menuText"] = "Auc-Util-AutoMagic",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -23480,116 +23657,17 @@ TitanSettings = {
 							["DisplayOnRightSide"] = true,
 							["ShowLabelText"] = true,
 						},
-						["version"] = "v4.3.1",
 						["buttonTextFunction"] = "TitanLDBShowText",
 						["ldb"] = "launcher",
-						["icon"] = "Interface\\Icons\\INV_Misc_Spyglass_02",
+						["icon"] = "Interface\\AddOns\\Auc-Advanced\\Modules\\Auc-Util-AutoMagic\\Images\\amagicIcon",
 						["LDBVariables"] = {
 							["type"] = "launcher",
-							["name"] = "RangeDisplay",
+							["name"] = "Auc-Util-AutoMagic",
 							["suffix"] = "",
 							["value"] = "",
 							["text"] = "",
 							["label"] = "",
 						},
-					},
-					["RaidAchievement"] = {
-						["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
-						["iconWidth"] = 16,
-						["id"] = "RaidAchievement",
-						["menuText"] = "RaidAchievement",
-						["savedVariables"] = {
-							["ShowColoredText"] = false,
-							["ShowIcon"] = true,
-							["ShowRegularText"] = false,
-							["DisplayOnRightSide"] = true,
-							["ShowLabelText"] = true,
-						},
-						["controlVariables"] = {
-							["ShowColoredText"] = false,
-							["ShowIcon"] = false,
-							["ShowRegularText"] = false,
-							["DisplayOnRightSide"] = true,
-							["ShowLabelText"] = true,
-						},
-						["version"] = "1.129",
-						["buttonTextFunction"] = "TitanLDBShowText",
-						["ldb"] = "launcher",
-						["icon"] = "interface\\AddOns\\RaidAchievement\\ra_button_e",
-						["LDBVariables"] = {
-							["type"] = "launcher",
-							["name"] = "RaidAchievement",
-							["suffix"] = "",
-							["value"] = "",
-							["text"] = "",
-							["label"] = "RA",
-						},
-					},
-					["AutoHide_AuxBar"] = {
-						["savedVariables"] = {
-							["DisplayOnRightSide"] = 1,
-							["ForceBar"] = "AuxBar",
-						},
-						["version"] = "5.4.1.60000",
-						["category"] = "Built-ins",
-						["id"] = "AutoHide_AuxBar",
-						["menuText"] = "AutoHide_AuxBar",
-						["tooltipTitle"] = "Toggles Titan Panel auto-hide on/off feature",
-					},
-					["LootType"] = {
-						["tooltipTextFunction"] = "TitanPanelLootTypeButton_GetTooltipText",
-						["id"] = "LootType",
-						["menuText"] = "Loot Type",
-						["savedVariables"] = {
-							["RandomRoll"] = 100,
-							["ShowIcon"] = 1,
-							["DungeonDiffType"] = "AUTO",
-							["ShowDungeonDiff"] = false,
-							["ShowLabelText"] = 1,
-						},
-						["controlVariables"] = {
-							["ShowColoredText"] = false,
-							["ShowIcon"] = true,
-							["ShowRegularText"] = false,
-							["DisplayOnRightSide"] = false,
-							["ShowLabelText"] = true,
-						},
-						["version"] = "5.4.1.60000",
-						["category"] = "Built-ins",
-						["iconWidth"] = 16,
-						["buttonTextFunction"] = "TitanPanelLootTypeButton_GetButtonText",
-						["icon"] = "Interface\\AddOns\\TitanLootType\\TitanLootType",
-						["tooltipTitle"] = "Loot Type Info",
-					},
-					["Performance"] = {
-						["iconWidth"] = 16,
-						["id"] = "Performance",
-						["menuText"] = "Performance",
-						["savedVariables"] = {
-							["ShowAddonMemory"] = false,
-							["ShowMemory"] = 1,
-							["AddonMemoryType"] = 1,
-							["ShowLatency"] = 1,
-							["ShowWorldLatency"] = 1,
-							["ShowLabelText"] = false,
-							["ShowIcon"] = 1,
-							["ShowAddonIncRate"] = false,
-							["ShowColoredText"] = 1,
-							["NumOfAddons"] = 5,
-							["ShowFPS"] = 1,
-						},
-						["controlVariables"] = {
-							["ShowColoredText"] = true,
-							["ShowIcon"] = true,
-							["ShowRegularText"] = false,
-							["DisplayOnRightSide"] = false,
-							["ShowLabelText"] = true,
-						},
-						["version"] = "5.4.1.60000",
-						["category"] = "Built-ins",
-						["tooltipCustomFunction"] = nil --[[ skipped inline function ]],
-						["icon"] = "Interface\\AddOns\\TitanPerformance\\TitanPerformance",
-						["buttonTextFunction"] = "TitanPanelPerformanceButton_GetButtonText",
 					},
 					["ArkInventory_Tracking_Item"] = {
 						["notes"] = "",
@@ -23622,6 +23700,108 @@ TitanSettings = {
 							["label"] = "",
 						},
 					},
+					["AutoHide_AuxBar"] = {
+						["savedVariables"] = {
+							["DisplayOnRightSide"] = 1,
+							["ForceBar"] = "AuxBar",
+						},
+						["version"] = "5.4.2.60000",
+						["category"] = "Built-ins",
+						["id"] = "AutoHide_AuxBar",
+						["menuText"] = "AutoHide_AuxBar",
+						["tooltipTitle"] = "Toggles Titan Panel auto-hide on/off feature",
+					},
+					["LootType"] = {
+						["tooltipTextFunction"] = "TitanPanelLootTypeButton_GetTooltipText",
+						["id"] = "LootType",
+						["menuText"] = "Loot Type",
+						["savedVariables"] = {
+							["RandomRoll"] = 100,
+							["ShowIcon"] = 1,
+							["ShowDungeonDiff"] = false,
+							["DungeonDiffType"] = "AUTO",
+							["ShowLabelText"] = 1,
+						},
+						["controlVariables"] = {
+							["ShowColoredText"] = false,
+							["ShowIcon"] = true,
+							["ShowRegularText"] = false,
+							["DisplayOnRightSide"] = false,
+							["ShowLabelText"] = true,
+						},
+						["version"] = "5.4.2.60000",
+						["category"] = "Built-ins",
+						["iconWidth"] = 16,
+						["buttonTextFunction"] = "TitanPanelLootTypeButton_GetButtonText",
+						["icon"] = "Interface\\AddOns\\TitanLootType\\TitanLootType",
+						["tooltipTitle"] = "Loot Type Info",
+					},
+					["Performance"] = {
+						["iconWidth"] = 16,
+						["id"] = "Performance",
+						["menuText"] = "Performance",
+						["savedVariables"] = {
+							["ShowAddonMemory"] = false,
+							["ShowMemory"] = 1,
+							["AddonMemoryType"] = 1,
+							["ShowLatency"] = 1,
+							["ShowWorldLatency"] = 1,
+							["ShowLabelText"] = false,
+							["ShowIcon"] = 1,
+							["ShowAddonIncRate"] = false,
+							["ShowColoredText"] = 1,
+							["NumOfAddons"] = 5,
+							["ShowFPS"] = 1,
+						},
+						["controlVariables"] = {
+							["ShowColoredText"] = true,
+							["ShowIcon"] = true,
+							["ShowRegularText"] = false,
+							["DisplayOnRightSide"] = false,
+							["ShowLabelText"] = true,
+						},
+						["version"] = "5.4.2.60000",
+						["category"] = "Built-ins",
+						["icon"] = "Interface\\AddOns\\TitanPerformance\\TitanPerformance",
+						["buttonTextFunction"] = "TitanPanelPerformanceButton_GetButtonText",
+					},
+					["Gold"] = {
+						["tooltipTextFunction"] = "TitanPanelGoldButton_GetTooltipText",
+						["id"] = "Gold",
+						["menuText"] = "Gold",
+						["savedVariables"] = {
+							["Initialized"] = true,
+							["ShowColoredText"] = true,
+							["DisplayGoldPerHour"] = true,
+							["UseSeperatorPeriod"] = false,
+							["ShowCoinLabels"] = true,
+							["ShowLabelText"] = false,
+							["ShowCoinIcons"] = false,
+							["SortByName"] = true,
+							["ShowIcon"] = true,
+							["gold"] = {
+								["neg"] = false,
+								["total"] = "112233",
+							},
+							["ShowGoldOnly"] = false,
+							["ShowCoinNone"] = false,
+							["ViewAll"] = true,
+							["UseSeperatorComma"] = true,
+						},
+						["controlVariables"] = {
+							["ShowColoredText"] = false,
+							["ShowIcon"] = true,
+							["ShowRegularText"] = false,
+							["DisplayOnRightSide"] = false,
+							["ShowLabelText"] = true,
+						},
+						["version"] = "5.4.2.60000",
+						["category"] = "Built-ins",
+						["iconWidth"] = 16,
+						["buttonTextFunction"] = "TitanPanelGoldButton_FindGold",
+						["icon"] = "Interface\\AddOns\\TitanGold\\Artwork\\TitanGold",
+						["tooltipTitle"] = "Gold Info",
+					},
 					["XP"] = {
 						["tooltipTextFunction"] = "TitanPanelXPButton_GetTooltipText",
 						["id"] = "XP",
@@ -23644,7 +23824,7 @@ TitanSettings = {
 							["DisplayOnRightSide"] = false,
 							["ShowLabelText"] = true,
 						},
-						["version"] = "5.4.1.60000",
+						["version"] = "5.4.2.60000",
 						["category"] = "Built-ins",
 						["iconWidth"] = 16,
 						["buttonTextFunction"] = "TitanPanelXPButton_GetButtonText",
@@ -23682,36 +23862,37 @@ TitanSettings = {
 							["label"] = "Ask Mr. Robot",
 						},
 					},
-					["CombatTime"] = {
-						["notes"] = "",
+					["RaidBuffStatus"] = {
+						["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
 						["iconWidth"] = 16,
-						["id"] = "CombatTime",
-						["menuText"] = "CombatTime",
+						["id"] = "RaidBuffStatus",
+						["menuText"] = "RaidBuffStatus",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
-							["ShowRegularText"] = true,
-							["DisplayOnRightSide"] = false,
+							["ShowRegularText"] = false,
+							["DisplayOnRightSide"] = true,
 							["ShowLabelText"] = true,
 						},
 						["controlVariables"] = {
 							["ShowColoredText"] = false,
-							["ShowIcon"] = true,
-							["ShowRegularText"] = true,
+							["ShowIcon"] = false,
+							["ShowRegularText"] = false,
 							["DisplayOnRightSide"] = true,
 							["ShowLabelText"] = true,
 						},
-						["version"] = "2.5.0",
+						["version"] = "6.0.2",
+						["category"] = "Information",
+						["ldb"] = "launcher",
 						["buttonTextFunction"] = "TitanLDBShowText",
-						["ldb"] = "data source",
-						["icon"] = "Interface\\Icons\\Ability_DualWield",
+						["icon"] = "Interface/Icons/Ability_Hunter_MasterMarksman",
 						["LDBVariables"] = {
-							["type"] = "data source",
-							["name"] = "CombatTime",
+							["type"] = "launcher",
+							["name"] = "RaidBuffStatus",
 							["suffix"] = "",
 							["value"] = "",
-							["text"] = "|cff7f7f0000:00|r",
-							["label"] = "CombatTime",
+							["text"] = "",
+							["label"] = "RaidBuffStatus",
 						},
 					},
 					["Raven"] = {
@@ -23746,12 +23927,43 @@ TitanSettings = {
 							["label"] = "Raven",
 						},
 					},
-					["RaidBuffStatus"] = {
-						["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
+					["CombatTime"] = {
+						["notes"] = "",
 						["iconWidth"] = 16,
-						["id"] = "RaidBuffStatus",
-						["menuText"] = "RaidBuffStatus",
-						["category"] = "Information",
+						["id"] = "CombatTime",
+						["menuText"] = "CombatTime",
+						["savedVariables"] = {
+							["ShowColoredText"] = false,
+							["ShowIcon"] = true,
+							["ShowRegularText"] = true,
+							["DisplayOnRightSide"] = false,
+							["ShowLabelText"] = true,
+						},
+						["controlVariables"] = {
+							["ShowColoredText"] = false,
+							["ShowIcon"] = true,
+							["ShowRegularText"] = true,
+							["DisplayOnRightSide"] = true,
+							["ShowLabelText"] = true,
+						},
+						["version"] = "2.5.0",
+						["buttonTextFunction"] = "TitanLDBShowText",
+						["ldb"] = "data source",
+						["icon"] = "Interface\\Icons\\Ability_DualWield",
+						["LDBVariables"] = {
+							["type"] = "data source",
+							["name"] = "CombatTime",
+							["suffix"] = "",
+							["value"] = "",
+							["text"] = "|cff7f7f0000:00|r",
+							["label"] = "CombatTime",
+						},
+					},
+					["UpgradeList"] = {
+						["notes"] = "",
+						["iconWidth"] = 16,
+						["id"] = "UpgradeList",
+						["menuText"] = "Upgrade List",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -23766,44 +23978,18 @@ TitanSettings = {
 							["DisplayOnRightSide"] = true,
 							["ShowLabelText"] = true,
 						},
-						["version"] = "6.0.2",
+						["version"] = "4.1.1",
 						["buttonTextFunction"] = "TitanLDBShowText",
 						["ldb"] = "launcher",
-						["icon"] = "Interface/Icons/Ability_Hunter_MasterMarksman",
+						["icon"] = "Interface\\Icons\\Achievement_BG_returnXflags_def_WSG",
 						["LDBVariables"] = {
 							["type"] = "launcher",
-							["name"] = "RaidBuffStatus",
+							["name"] = "UpgradeList",
 							["suffix"] = "",
 							["value"] = "",
 							["text"] = "",
-							["label"] = "RaidBuffStatus",
+							["label"] = "Upgrade List",
 						},
-					},
-					["Clock"] = {
-						["tooltipTextFunction"] = "TitanPanelClockButton_GetTooltipText",
-						["id"] = "Clock",
-						["menuText"] = "Clock",
-						["savedVariables"] = {
-							["OffsetHour"] = 0,
-							["ShowColoredText"] = false,
-							["DisplayOnRightSide"] = 1,
-							["HideMapTime"] = false,
-							["HideGameTimeMinimap"] = false,
-							["Format"] = "12H",
-							["TimeMode"] = "Server",
-							["ShowLabelText"] = false,
-						},
-						["controlVariables"] = {
-							["ShowColoredText"] = true,
-							["ShowIcon"] = false,
-							["ShowRegularText"] = false,
-							["DisplayOnRightSide"] = true,
-							["ShowLabelText"] = true,
-						},
-						["version"] = "5.4.1.60000",
-						["category"] = "Built-ins",
-						["buttonTextFunction"] = "TitanPanelClockButton_GetButtonText",
-						["tooltipTitle"] = "Clock",
 					},
 					["FollowerLocationInfo"] = {
 						["notes"] = "",
@@ -23842,7 +24028,6 @@ TitanSettings = {
 						["iconWidth"] = 16,
 						["id"] = "epgp",
 						["menuText"] = "EPGP",
-						["category"] = "Information",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -23858,8 +24043,9 @@ TitanSettings = {
 							["ShowLabelText"] = true,
 						},
 						["version"] = "v5.11.4",
-						["buttonTextFunction"] = "TitanLDBShowText",
+						["category"] = "Information",
 						["ldb"] = "data source",
+						["buttonTextFunction"] = "TitanLDBShowText",
 						["icon"] = "Interface\\PVPFrame\\PVP-ArenaPoints-Icon",
 						["LDBVariables"] = {
 							["type"] = "data source",
@@ -23875,7 +24061,6 @@ TitanSettings = {
 						["iconWidth"] = 16,
 						["id"] = "Bartender4",
 						["menuText"] = "Bartender4",
-						["category"] = "Interface",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -23891,8 +24076,9 @@ TitanSettings = {
 							["ShowLabelText"] = true,
 						},
 						["version"] = "4.6.5",
-						["buttonTextFunction"] = "TitanLDBShowText",
+						["category"] = "Interface",
 						["ldb"] = "launcher",
+						["buttonTextFunction"] = "TitanLDBShowText",
 						["icon"] = "Interface\\Icons\\INV_Drink_05",
 						["LDBVariables"] = {
 							["type"] = "launcher",
@@ -23903,12 +24089,48 @@ TitanSettings = {
 							["label"] = "Bartender4",
 						},
 					},
+					["WeakAuras"] = {
+						["iconR"] = 0.6,
+						["notes"] = "",
+						["iconG"] = 0,
+						["iconWidth"] = 16,
+						["id"] = "WeakAuras",
+						["menuText"] = "WeakAuras",
+						["category"] = "Interface",
+						["savedVariables"] = {
+							["ShowColoredText"] = false,
+							["ShowIcon"] = true,
+							["ShowRegularText"] = true,
+							["DisplayOnRightSide"] = false,
+							["ShowLabelText"] = true,
+						},
+						["controlVariables"] = {
+							["ShowColoredText"] = false,
+							["ShowIcon"] = true,
+							["ShowRegularText"] = true,
+							["DisplayOnRightSide"] = true,
+							["ShowLabelText"] = true,
+						},
+						["version"] = "2.0.9.7",
+						["buttonTextFunction"] = "TitanLDBShowText",
+						["ldb"] = "data source",
+						["iconB"] = 1,
+						["icon"] = "Interface\\AddOns\\WeakAuras\\icon.tga",
+						["LDBVariables"] = {
+							["type"] = "data source",
+							["name"] = "WeakAuras",
+							["suffix"] = "",
+							["value"] = "",
+							["text"] = "WeakAuras",
+							["label"] = "",
+						},
+					},
 					["AutoHide_AuxBar2"] = {
 						["savedVariables"] = {
 							["DisplayOnRightSide"] = 1,
 							["ForceBar"] = "AuxBar2",
 						},
-						["version"] = "5.4.1.60000",
+						["version"] = "5.4.2.60000",
 						["category"] = "Built-ins",
 						["id"] = "AutoHide_AuxBar2",
 						["menuText"] = "AutoHide_AuxBar2",
@@ -23935,49 +24157,12 @@ TitanSettings = {
 							["DisplayOnRightSide"] = false,
 							["ShowLabelText"] = true,
 						},
-						["version"] = "5.4.1.60000",
+						["version"] = "5.4.2.60000",
 						["category"] = "Built-ins",
 						["iconWidth"] = 16,
 						["buttonTextFunction"] = "TitanPanelBagButton_GetButtonText",
 						["icon"] = "Interface\\AddOns\\TitanBag\\TitanBag",
 						["tooltipTitle"] = "Bags Info",
-					},
-					["Gold"] = {
-						["tooltipTextFunction"] = "TitanPanelGoldButton_GetTooltipText",
-						["id"] = "Gold",
-						["menuText"] = "Gold",
-						["savedVariables"] = {
-							["Initialized"] = true,
-							["ShowColoredText"] = true,
-							["DisplayGoldPerHour"] = true,
-							["gold"] = {
-								["neg"] = false,
-								["total"] = "112233",
-							},
-							["ShowCoinLabels"] = true,
-							["ShowLabelText"] = false,
-							["ShowCoinIcons"] = false,
-							["UseSeperatorPeriod"] = false,
-							["ViewAll"] = true,
-							["SortByName"] = true,
-							["ShowGoldOnly"] = false,
-							["ShowCoinNone"] = false,
-							["UseSeperatorComma"] = true,
-							["ShowIcon"] = true,
-						},
-						["controlVariables"] = {
-							["ShowColoredText"] = false,
-							["ShowIcon"] = true,
-							["ShowRegularText"] = false,
-							["DisplayOnRightSide"] = false,
-							["ShowLabelText"] = true,
-						},
-						["version"] = "5.4.1.60000",
-						["category"] = "Built-ins",
-						["iconWidth"] = 16,
-						["buttonTextFunction"] = "TitanPanelGoldButton_FindGold",
-						["icon"] = "Interface\\AddOns\\TitanGold\\Artwork\\TitanGold",
-						["tooltipTitle"] = "Gold Info",
 					},
 					["Broker_GarrisonMission"] = {
 						["notes"] = "",
@@ -24006,47 +24191,41 @@ TitanSettings = {
 							["name"] = "Broker_GarrisonMission",
 							["suffix"] = "",
 							["value"] = "",
-							["text"] = "In Progress: 0 Complete: 0",
+							["text"] = "In Progress: 4 Complete: 5",
 							["label"] = "Garrison: Missions",
 						},
 					},
-					["Record Kills"] = {
-						["notes"] = "",
-						["iconWidth"] = 16,
-						["id"] = "Record Kills",
-						["menuText"] = "Record Kills",
+					["Clock"] = {
+						["tooltipTextFunction"] = "TitanPanelClockButton_GetTooltipText",
+						["id"] = "Clock",
+						["menuText"] = "Clock",
 						["savedVariables"] = {
+							["OffsetHour"] = 0,
 							["ShowColoredText"] = false,
-							["ShowIcon"] = true,
-							["ShowRegularText"] = true,
-							["DisplayOnRightSide"] = false,
-							["ShowLabelText"] = true,
+							["DisplayOnRightSide"] = 1,
+							["HideMapTime"] = false,
+							["HideGameTimeMinimap"] = false,
+							["Format"] = "12H",
+							["TimeMode"] = "Server",
+							["ShowLabelText"] = false,
 						},
 						["controlVariables"] = {
-							["ShowColoredText"] = false,
-							["ShowIcon"] = true,
-							["ShowRegularText"] = true,
+							["ShowColoredText"] = true,
+							["ShowIcon"] = false,
+							["ShowRegularText"] = false,
 							["DisplayOnRightSide"] = true,
 							["ShowLabelText"] = true,
 						},
-						["buttonTextFunction"] = "TitanLDBShowText",
-						["ldb"] = "data source",
-						["icon"] = "Interface\\PVPFrame\\PVP-ArenaPoints-Icon",
-						["LDBVariables"] = {
-							["type"] = "data source",
-							["name"] = "Record Kills",
-							["suffix"] = "",
-							["value"] = "",
-							["text"] = "Record Kills",
-							["label"] = "",
-						},
+						["version"] = "5.4.2.60000",
+						["category"] = "Built-ins",
+						["buttonTextFunction"] = "TitanPanelClockButton_GetButtonText",
+						["tooltipTitle"] = "Clock",
 					},
 					["TimeToDie"] = {
 						["notes"] = "",
 						["iconWidth"] = 16,
 						["id"] = "TimeToDie",
 						["menuText"] = "TTD",
-						["category"] = "Combat",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -24062,8 +24241,9 @@ TitanSettings = {
 							["ShowLabelText"] = true,
 						},
 						["version"] = "v1.5.1",
-						["buttonTextFunction"] = "TitanLDBShowText",
+						["category"] = "Combat",
 						["ldb"] = "data source",
+						["buttonTextFunction"] = "TitanLDBShowText",
 						["icon"] = "Interface\\Icons\\Spell_Holy_BorrowedTime",
 						["LDBVariables"] = {
 							["type"] = "data source",
@@ -24079,7 +24259,6 @@ TitanSettings = {
 						["iconWidth"] = 16,
 						["id"] = "AutoTurnIn",
 						["menuText"] = "autoturnin [on]",
-						["category"] = "Information",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -24095,8 +24274,9 @@ TitanSettings = {
 							["ShowLabelText"] = true,
 						},
 						["version"] = "4.5.N",
-						["buttonTextFunction"] = "TitanLDBShowText",
+						["category"] = "Information",
 						["ldb"] = "data source",
+						["buttonTextFunction"] = "TitanLDBShowText",
 						["icon"] = "Interface\\QUESTFRAME\\UI-QuestLog-BookIcon",
 						["LDBVariables"] = {
 							["type"] = "data source",
@@ -24112,7 +24292,6 @@ TitanSettings = {
 						["iconWidth"] = 16,
 						["id"] = "Omen",
 						["menuText"] = "Omen",
-						["category"] = "Combat",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -24128,8 +24307,9 @@ TitanSettings = {
 							["ShowLabelText"] = true,
 						},
 						["version"] = "3.1.9",
-						["buttonTextFunction"] = "TitanLDBShowText",
+						["category"] = "Combat",
 						["ldb"] = "launcher",
+						["buttonTextFunction"] = "TitanLDBShowText",
 						["icon"] = "Interface\\AddOns\\Omen\\icon",
 						["LDBVariables"] = {
 							["type"] = "launcher",
@@ -24145,7 +24325,6 @@ TitanSettings = {
 						["iconWidth"] = 16,
 						["id"] = "Masque",
 						["menuText"] = "Masque",
-						["category"] = "Interface",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -24161,8 +24340,9 @@ TitanSettings = {
 							["ShowLabelText"] = true,
 						},
 						["version"] = "6.0.0",
-						["buttonTextFunction"] = "TitanLDBShowText",
+						["category"] = "Interface",
 						["ldb"] = "launcher",
+						["buttonTextFunction"] = "TitanLDBShowText",
 						["icon"] = "Interface\\Addons\\Masque\\Textures\\Icon",
 						["LDBVariables"] = {
 							["type"] = "launcher",
@@ -24177,13 +24357,12 @@ TitanSettings = {
 				["ToBe"] = {
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["savedVariables"] = {
 									["DisplayOnRightSide"] = 1,
 									["ForceBar"] = "Bar",
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["id"] = "AutoHide_Bar",
 								["menuText"] = "AutoHide_Bar",
@@ -24201,13 +24380,12 @@ TitanSettings = {
 					}, -- [1]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["savedVariables"] = {
 									["DisplayOnRightSide"] = 1,
 									["ForceBar"] = "Bar2",
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["id"] = "AutoHide_Bar2",
 								["menuText"] = "AutoHide_Bar2",
@@ -24225,13 +24403,12 @@ TitanSettings = {
 					}, -- [2]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["savedVariables"] = {
 									["DisplayOnRightSide"] = 1,
 									["ForceBar"] = "AuxBar2",
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["id"] = "AutoHide_AuxBar2",
 								["menuText"] = "AutoHide_AuxBar2",
@@ -24249,13 +24426,12 @@ TitanSettings = {
 					}, -- [3]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["savedVariables"] = {
 									["DisplayOnRightSide"] = 1,
 									["ForceBar"] = "AuxBar",
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["id"] = "AutoHide_AuxBar",
 								["menuText"] = "AutoHide_AuxBar",
@@ -24273,7 +24449,6 @@ TitanSettings = {
 					}, -- [4]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["tooltipTextFunction"] = "TitanPanelBagButton_GetTooltipText",
 								["id"] = "Bag",
@@ -24295,7 +24470,7 @@ TitanSettings = {
 									["DisplayOnRightSide"] = false,
 									["ShowLabelText"] = true,
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["iconWidth"] = 16,
 								["buttonTextFunction"] = "TitanPanelBagButton_GetButtonText",
@@ -24314,7 +24489,6 @@ TitanSettings = {
 					}, -- [5]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["tooltipTextFunction"] = "TitanPanelClockButton_GetTooltipText",
 								["id"] = "Clock",
@@ -24336,7 +24510,7 @@ TitanSettings = {
 									["DisplayOnRightSide"] = true,
 									["ShowLabelText"] = true,
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["buttonTextFunction"] = "TitanPanelClockButton_GetButtonText",
 								["tooltipTitle"] = "Clock",
@@ -24353,7 +24527,6 @@ TitanSettings = {
 					}, -- [6]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 						},
 						["notes"] = "",
 						["plugin_type"] = "",
@@ -24366,7 +24539,6 @@ TitanSettings = {
 					}, -- [7]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 						},
 						["notes"] = "",
 						["plugin_type"] = "",
@@ -24379,7 +24551,6 @@ TitanSettings = {
 					}, -- [8]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 						},
 						["notes"] = "",
 						["plugin_type"] = "",
@@ -24392,7 +24563,7 @@ TitanSettings = {
 					}, -- [9]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
+							["small"] = 1,
 							["registry"] = {
 								["tooltipTextFunction"] = "TitanPanelCurrencyButton_GetTooltipText",
 								["id"] = "Currency",
@@ -24409,16 +24580,12 @@ TitanSettings = {
 								["tooltipTitle"] = "Currency Info",
 							},
 							["info"] = {
+								["showSmallerCoins"] = "Backpack",
 								["collapse"] = 1,
 								["canPickup"] = 1,
-								["showSmallerCoins"] = "Backpack",
-								["PickupFunc"] = nil --[[ skipped inline function ]],
-								["UpdateFunc"] = nil --[[ skipped inline function ]],
-								["DropFunc"] = nil --[[ skipped inline function ]],
 							},
 							["vadjust"] = 0,
-							["staticMoney"] = 550185766,
-							["small"] = 1,
+							["staticMoney"] = 544708405,
 							["moneyType"] = "PLAYER",
 						},
 						["notes"] = "",
@@ -24432,7 +24599,6 @@ TitanSettings = {
 					}, -- [10]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["tooltipTextFunction"] = "TitanPanelDurabilityButton_GetTooltipText",
 								["id"] = "Durability",
@@ -24451,9 +24617,9 @@ TitanSettings = {
 									["showallrepaircosts"] = false,
 									["showlowestitemintp"] = 1,
 									["showrepaircost15"] = false,
-									["showrepaircost05"] = false,
-									["hideguy"] = 1,
 									["ShowLabelText"] = 1,
+									["hideguy"] = 1,
+									["showrepaircost05"] = false,
 									["inventory"] = false,
 									["showrepaircost20"] = false,
 									["showlowestduraintp"] = false,
@@ -24489,7 +24655,6 @@ TitanSettings = {
 					}, -- [11]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["tooltipTextFunction"] = "TitanPanelGoldButton_GetTooltipText",
 								["id"] = "Gold",
@@ -24498,20 +24663,20 @@ TitanSettings = {
 									["Initialized"] = true,
 									["ShowColoredText"] = true,
 									["DisplayGoldPerHour"] = true,
+									["UseSeperatorPeriod"] = false,
+									["ShowCoinLabels"] = true,
+									["ShowLabelText"] = false,
+									["ShowCoinIcons"] = false,
+									["SortByName"] = true,
+									["ShowIcon"] = true,
 									["gold"] = {
 										["neg"] = false,
 										["total"] = "112233",
 									},
-									["ShowCoinLabels"] = true,
-									["ShowLabelText"] = false,
-									["ShowCoinIcons"] = false,
-									["UseSeperatorPeriod"] = false,
-									["ViewAll"] = true,
-									["SortByName"] = true,
 									["ShowGoldOnly"] = false,
 									["ShowCoinNone"] = false,
+									["ViewAll"] = true,
 									["UseSeperatorComma"] = true,
-									["ShowIcon"] = true,
 								},
 								["controlVariables"] = {
 									["ShowColoredText"] = false,
@@ -24520,7 +24685,7 @@ TitanSettings = {
 									["DisplayOnRightSide"] = false,
 									["ShowLabelText"] = true,
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["iconWidth"] = 16,
 								["buttonTextFunction"] = "TitanPanelGoldButton_FindGold",
@@ -24539,7 +24704,6 @@ TitanSettings = {
 					}, -- [12]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["tooltipTextFunction"] = "TitanPanelGuildButton_GetTooltipText",
 								["id"] = "Guild",
@@ -24581,7 +24745,6 @@ TitanSettings = {
 					}, -- [13]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["tooltipTextFunction"] = "TitanPanelLocationButton_GetTooltipText",
 								["id"] = "Location",
@@ -24591,9 +24754,9 @@ TitanSettings = {
 									["ShowZoneText"] = 1,
 									["ShowCursorOnMap"] = true,
 									["ShowLabelText"] = 1,
+									["CoordsFormat3"] = false,
 									["UpdateWorldmap"] = false,
 									["ShowIcon"] = 1,
-									["CoordsFormat3"] = false,
 									["CoordsFormat1"] = 1,
 									["CoordsFormat2"] = false,
 									["ShowCoordsOnMap"] = true,
@@ -24606,19 +24769,19 @@ TitanSettings = {
 									["DisplayOnRightSide"] = false,
 									["ShowLabelText"] = true,
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["iconWidth"] = 16,
 								["buttonTextFunction"] = "TitanPanelLocationButton_GetButtonText",
 								["icon"] = "Interface\\AddOns\\TitanLocation\\TitanLocation",
 								["tooltipTitle"] = "Location Info",
 							},
-							["subZoneText"] = "Vol'jin's Arsenal",
+							["subZoneText"] = "Axefall",
 							["factionName"] = "",
-							["px"] = 0.709426999092102,
-							["py"] = 0.303714215755463,
+							["px"] = 0.404290199279785,
+							["py"] = 0.430218398571014,
 							["pvpType"] = "contested",
-							["zoneText"] = "Talador",
+							["zoneText"] = "Spires of Arak",
 						},
 						["notes"] = "",
 						["plugin_type"] = "Titan",
@@ -24631,7 +24794,6 @@ TitanSettings = {
 					}, -- [14]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["tooltipTextFunction"] = "TitanPanelLootTypeButton_GetTooltipText",
 								["id"] = "LootType",
@@ -24639,8 +24801,8 @@ TitanSettings = {
 								["savedVariables"] = {
 									["RandomRoll"] = 100,
 									["ShowIcon"] = 1,
-									["DungeonDiffType"] = "AUTO",
 									["ShowDungeonDiff"] = false,
+									["DungeonDiffType"] = "AUTO",
 									["ShowLabelText"] = 1,
 								},
 								["controlVariables"] = {
@@ -24650,7 +24812,7 @@ TitanSettings = {
 									["DisplayOnRightSide"] = false,
 									["ShowLabelText"] = true,
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["iconWidth"] = 16,
 								["buttonTextFunction"] = "TitanPanelLootTypeButton_GetButtonText",
@@ -24669,7 +24831,7 @@ TitanSettings = {
 					}, -- [15]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
+							["fpsSampleCount"] = 0,
 							["registry"] = {
 								["iconWidth"] = 16,
 								["id"] = "Performance",
@@ -24694,13 +24856,11 @@ TitanSettings = {
 									["DisplayOnRightSide"] = false,
 									["ShowLabelText"] = true,
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
-								["tooltipCustomFunction"] = nil --[[ skipped inline function ]],
 								["icon"] = "Interface\\AddOns\\TitanPerformance\\TitanPerformance",
 								["buttonTextFunction"] = "TitanPanelPerformanceButton_GetButtonText",
 							},
-							["fpsSampleCount"] = 0,
 						},
 						["notes"] = "",
 						["plugin_type"] = "Titan",
@@ -24713,7 +24873,6 @@ TitanSettings = {
 					}, -- [16]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["tooltipTextFunction"] = "TitanPanelRepairButton_GetTooltipText",
 								["id"] = "Repair",
@@ -24749,7 +24908,7 @@ TitanSettings = {
 									["DisplayOnRightSide"] = false,
 									["ShowLabelText"] = true,
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["iconWidth"] = 16,
 								["buttonTextFunction"] = "TitanPanelRepairButton_GetButtonText",
@@ -24768,7 +24927,6 @@ TitanSettings = {
 					}, -- [17]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["tooltipTextFunction"] = "TitanPanelVolumeButton_GetTooltipText",
 								["id"] = "Volume",
@@ -24784,7 +24942,7 @@ TitanSettings = {
 									["VolumeOutboundChat"] = 1,
 									["VolumeMusic"] = 0.5,
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["iconButtonWidth"] = 18,
 								["iconWidth"] = 32,
@@ -24802,7 +24960,7 @@ TitanSettings = {
 					}, -- [18]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
+							["sessionTime"] = 1418575474,
 							["registry"] = {
 								["tooltipTextFunction"] = "TitanPanelXPButton_GetTooltipText",
 								["id"] = "XP",
@@ -24825,19 +24983,18 @@ TitanSettings = {
 									["DisplayOnRightSide"] = false,
 									["ShowLabelText"] = true,
 								},
-								["version"] = "5.4.1.60000",
+								["version"] = "5.4.2.60000",
 								["category"] = "Built-ins",
 								["iconWidth"] = 16,
 								["buttonTextFunction"] = "TitanPanelXPButton_GetButtonText",
 								["tooltipTitle"] = "XP Info",
 							},
-							["totalTime"] = 751701.307002415,
-							["initXP"] = 739536,
-							["startSessionTime"] = 1418442417,
-							["accumXP"] = 0,
-							["levelTime"] = 13969.307002415,
-							["sessionTime"] = 1418442417,
+							["totalTime"] = 768783.205001279,
+							["initXP"] = 574344,
 							["sessionXP"] = 0,
+							["startSessionTime"] = 1418575474,
+							["levelTime"] = 10370.2050012788,
+							["accumXP"] = 0,
 						},
 						["notes"] = "",
 						["plugin_type"] = "Titan",
@@ -24850,7 +25007,6 @@ TitanSettings = {
 					}, -- [19]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -24894,13 +25050,11 @@ TitanSettings = {
 					}, -- [20]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
 								["id"] = "Skada",
 								["menuText"] = "Skada",
-								["category"] = "Combat",
 								["savedVariables"] = {
 									["ShowColoredText"] = false,
 									["ShowIcon"] = true,
@@ -24916,8 +25070,9 @@ TitanSettings = {
 									["ShowLabelText"] = true,
 								},
 								["version"] = "1.4-24",
-								["buttonTextFunction"] = "TitanLDBShowText",
+								["category"] = "Combat",
 								["ldb"] = "data source",
+								["buttonTextFunction"] = "TitanLDBShowText",
 								["icon"] = "Interface\\Icons\\Spell_Lightning_LightningBolt01",
 								["LDBVariables"] = {
 									["type"] = "data source",
@@ -24940,7 +25095,6 @@ TitanSettings = {
 					}, -- [21]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -24968,7 +25122,7 @@ TitanSettings = {
 									["name"] = "ArkInventory_Bags",
 									["suffix"] = "",
 									["value"] = "",
-									["text"] = "|cfff9f9f9|cffffffff57/104 Bag|r",
+									["text"] = "|cfff9f9f9|cffffffff81/110 Bag|r",
 									["label"] = "",
 								},
 							},
@@ -24984,7 +25138,50 @@ TitanSettings = {
 					}, -- [22]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
+							["registry"] = {
+								["notes"] = "",
+								["iconWidth"] = 16,
+								["id"] = "UpgradeList",
+								["menuText"] = "Upgrade List",
+								["savedVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["controlVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = false,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["version"] = "4.1.1",
+								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "launcher",
+								["icon"] = "Interface\\Icons\\Achievement_BG_returnXflags_def_WSG",
+								["LDBVariables"] = {
+									["type"] = "launcher",
+									["name"] = "UpgradeList",
+									["suffix"] = "",
+									["value"] = "",
+									["text"] = "",
+									["label"] = "Upgrade List",
+								},
+							},
+						},
+						["notes"] = "",
+						["plugin_type"] = "LDB: 'launcher'",
+						["name"] = "UpgradeList",
+						["category"] = "General",
+						["button"] = "TitanPanelUpgradeListButton",
+						["issue"] = "",
+						["isChild"] = false,
+						["status"] = "|cff20ff20Registered|r",
+					}, -- [23]
+					{
+						["self"] = {
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -25025,10 +25222,9 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [23]
+					}, -- [24]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -25069,10 +25265,9 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [24]
+					}, -- [25]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -25100,7 +25295,7 @@ TitanSettings = {
 									["name"] = "Broker_GarrisonBuilding",
 									["suffix"] = "",
 									["value"] = "",
-									["text"] = "Shipments Ready: 32",
+									["text"] = "Shipments Ready: 12",
 									["label"] = "Garrison: Buildings",
 								},
 							},
@@ -25113,10 +25308,9 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [25]
+					}, -- [26]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -25158,10 +25352,360 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [26]
+					}, -- [27]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
+							["registry"] = {
+								["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
+								["iconWidth"] = 16,
+								["id"] = "Raven",
+								["menuText"] = "Raven",
+								["savedVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["controlVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = false,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["version"] = "r333",
+								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "launcher",
+								["icon"] = "Interface\\Icons\\Spell_Nature_RavenForm",
+								["LDBVariables"] = {
+									["type"] = "launcher",
+									["name"] = "Raven",
+									["suffix"] = "",
+									["value"] = "",
+									["text"] = "",
+									["label"] = "Raven",
+								},
+							},
+						},
+						["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
+						["plugin_type"] = "LDB: 'launcher'",
+						["name"] = "Raven",
+						["category"] = "General",
+						["button"] = "TitanPanelRavenButton",
+						["issue"] = "",
+						["isChild"] = false,
+						["status"] = "|cff20ff20Registered|r",
+					}, -- [28]
+					{
+						["self"] = {
+							["registry"] = {
+								["notes"] = "",
+								["iconWidth"] = 16,
+								["id"] = "Bartender4",
+								["menuText"] = "Bartender4",
+								["savedVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["controlVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = false,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["version"] = "4.6.5",
+								["category"] = "Interface",
+								["ldb"] = "launcher",
+								["buttonTextFunction"] = "TitanLDBShowText",
+								["icon"] = "Interface\\Icons\\INV_Drink_05",
+								["LDBVariables"] = {
+									["type"] = "launcher",
+									["name"] = "Bartender4",
+									["suffix"] = "",
+									["value"] = "",
+									["text"] = "",
+									["label"] = "Bartender4",
+								},
+							},
+						},
+						["notes"] = "",
+						["plugin_type"] = "LDB: 'launcher'",
+						["name"] = "Bartender4",
+						["category"] = "Interface",
+						["button"] = "TitanPanelBartender4Button",
+						["issue"] = "",
+						["isChild"] = false,
+						["status"] = "|cff20ff20Registered|r",
+					}, -- [29]
+					{
+						["self"] = {
+							["registry"] = {
+								["notes"] = "",
+								["iconWidth"] = 16,
+								["id"] = "Masque",
+								["menuText"] = "Masque",
+								["savedVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["controlVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = false,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["version"] = "6.0.0",
+								["category"] = "Interface",
+								["ldb"] = "launcher",
+								["buttonTextFunction"] = "TitanLDBShowText",
+								["icon"] = "Interface\\Addons\\Masque\\Textures\\Icon",
+								["LDBVariables"] = {
+									["type"] = "launcher",
+									["name"] = "Masque",
+									["suffix"] = "",
+									["value"] = "",
+									["text"] = "",
+									["label"] = "Masque",
+								},
+							},
+						},
+						["notes"] = "",
+						["plugin_type"] = "LDB: 'launcher'",
+						["name"] = "Masque",
+						["category"] = "Interface",
+						["button"] = "TitanPanelMasqueButton",
+						["issue"] = "",
+						["isChild"] = false,
+						["status"] = "|cff20ff20Registered|r",
+					}, -- [30]
+					{
+						["self"] = {
+							["registry"] = {
+								["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
+								["iconWidth"] = 16,
+								["id"] = "AskMrRobot",
+								["menuText"] = "AskMrRobot",
+								["savedVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["controlVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = false,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["version"] = "19",
+								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "launcher",
+								["icon"] = "Interface\\AddOns\\AskMrRobot\\Media\\icon",
+								["LDBVariables"] = {
+									["type"] = "launcher",
+									["name"] = "AskMrRobot",
+									["suffix"] = "",
+									["value"] = "",
+									["text"] = "",
+									["label"] = "Ask Mr. Robot",
+								},
+							},
+						},
+						["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
+						["plugin_type"] = "LDB: 'launcher'",
+						["name"] = "AskMrRobot",
+						["category"] = "General",
+						["button"] = "TitanPanelAskMrRobotButton",
+						["issue"] = "",
+						["isChild"] = false,
+						["status"] = "|cff20ff20Registered|r",
+					}, -- [31]
+					{
+						["self"] = {
+							["registry"] = {
+								["notes"] = "",
+								["iconWidth"] = 16,
+								["id"] = "CombatTime",
+								["menuText"] = "CombatTime",
+								["savedVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = true,
+									["DisplayOnRightSide"] = false,
+									["ShowLabelText"] = true,
+								},
+								["controlVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = true,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["version"] = "2.5.0",
+								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "data source",
+								["icon"] = "Interface\\Icons\\Ability_DualWield",
+								["LDBVariables"] = {
+									["type"] = "data source",
+									["name"] = "CombatTime",
+									["suffix"] = "",
+									["value"] = "",
+									["text"] = "|cff7f7f0000:00|r",
+									["label"] = "CombatTime",
+								},
+							},
+						},
+						["notes"] = "",
+						["plugin_type"] = "LDB: 'data source'",
+						["name"] = "CombatTime",
+						["category"] = "General",
+						["button"] = "TitanPanelCombatTimeButton",
+						["issue"] = "",
+						["isChild"] = false,
+						["status"] = "|cff20ff20Registered|r",
+					}, -- [32]
+					{
+						["self"] = {
+							["registry"] = {
+								["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
+								["iconWidth"] = 16,
+								["id"] = "PhoenixStyle",
+								["menuText"] = "PhoenixStyle",
+								["savedVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["controlVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = false,
+									["ShowRegularText"] = false,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "launcher",
+								["icon"] = "interface\\AddOns\\PhoenixStyle\\icon_phoenix_e",
+								["LDBVariables"] = {
+									["type"] = "launcher",
+									["name"] = "PhoenixStyle",
+									["suffix"] = "",
+									["value"] = "",
+									["text"] = "",
+									["label"] = "PS",
+								},
+							},
+						},
+						["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
+						["plugin_type"] = "LDB: 'launcher'",
+						["name"] = "PhoenixStyle",
+						["category"] = "General",
+						["button"] = "TitanPanelPhoenixStyleButton",
+						["issue"] = "",
+						["isChild"] = false,
+						["status"] = "|cff20ff20Registered|r",
+					}, -- [33]
+					{
+						["self"] = {
+							["registry"] = {
+								["notes"] = "",
+								["iconWidth"] = 16,
+								["id"] = "Record Kills",
+								["menuText"] = "Record Kills",
+								["savedVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = true,
+									["DisplayOnRightSide"] = false,
+									["ShowLabelText"] = true,
+								},
+								["controlVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = true,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "data source",
+								["icon"] = "Interface\\PVPFrame\\PVP-ArenaPoints-Icon",
+								["LDBVariables"] = {
+									["type"] = "data source",
+									["name"] = "Record Kills",
+									["suffix"] = "",
+									["value"] = "",
+									["text"] = "Record Kills",
+									["label"] = "",
+								},
+							},
+						},
+						["notes"] = "",
+						["plugin_type"] = "LDB: 'data source'",
+						["name"] = "Record Kills",
+						["category"] = "General",
+						["button"] = "TitanPanelRecord KillsButton",
+						["issue"] = "",
+						["isChild"] = false,
+						["status"] = "|cff20ff20Registered|r",
+					}, -- [34]
+					{
+						["self"] = {
+							["registry"] = {
+								["notes"] = "",
+								["iconWidth"] = 16,
+								["id"] = "ArkInventory_Pets",
+								["menuText"] = "ArkInventory_Pets",
+								["savedVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = true,
+									["DisplayOnRightSide"] = false,
+									["ShowLabelText"] = true,
+								},
+								["controlVariables"] = {
+									["ShowColoredText"] = false,
+									["ShowIcon"] = true,
+									["ShowRegularText"] = true,
+									["DisplayOnRightSide"] = true,
+									["ShowLabelText"] = true,
+								},
+								["buttonTextFunction"] = "TitanLDBShowText",
+								["ldb"] = "data source",
+								["icon"] = "Interface\\Icons\\PetJournalPortrait",
+								["LDBVariables"] = {
+									["type"] = "data source",
+									["name"] = "ArkInventory_Pets",
+									["suffix"] = "",
+									["value"] = "",
+									["text"] = "",
+									["label"] = "",
+								},
+							},
+						},
+						["notes"] = "",
+						["plugin_type"] = "LDB: 'data source'",
+						["name"] = "ArkInventory_Pets",
+						["category"] = "General",
+						["button"] = "TitanPanelArkInventory_PetsButton",
+						["issue"] = "",
+						["isChild"] = false,
+						["status"] = "|cff20ff20Registered|r",
+					}, -- [35]
+					{
+						["self"] = {
 							["registry"] = {
 								["iconR"] = 0.6,
 								["notes"] = "",
@@ -25207,375 +25751,14 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [27]
+					}, -- [36]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
-							["registry"] = {
-								["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
-								["iconWidth"] = 16,
-								["id"] = "Raven",
-								["menuText"] = "Raven",
-								["savedVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = true,
-									["ShowRegularText"] = false,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["controlVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = false,
-									["ShowRegularText"] = false,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["version"] = "r333",
-								["buttonTextFunction"] = "TitanLDBShowText",
-								["ldb"] = "launcher",
-								["icon"] = "Interface\\Icons\\Spell_Nature_RavenForm",
-								["LDBVariables"] = {
-									["type"] = "launcher",
-									["name"] = "Raven",
-									["suffix"] = "",
-									["value"] = "",
-									["text"] = "",
-									["label"] = "Raven",
-								},
-							},
-						},
-						["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
-						["plugin_type"] = "LDB: 'launcher'",
-						["name"] = "Raven",
-						["category"] = "General",
-						["button"] = "TitanPanelRavenButton",
-						["issue"] = "",
-						["isChild"] = false,
-						["status"] = "|cff20ff20Registered|r",
-					}, -- [28]
-					{
-						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
-							["registry"] = {
-								["notes"] = "",
-								["iconWidth"] = 16,
-								["id"] = "Bartender4",
-								["menuText"] = "Bartender4",
-								["category"] = "Interface",
-								["savedVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = true,
-									["ShowRegularText"] = false,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["controlVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = false,
-									["ShowRegularText"] = false,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["version"] = "4.6.5",
-								["buttonTextFunction"] = "TitanLDBShowText",
-								["ldb"] = "launcher",
-								["icon"] = "Interface\\Icons\\INV_Drink_05",
-								["LDBVariables"] = {
-									["type"] = "launcher",
-									["name"] = "Bartender4",
-									["suffix"] = "",
-									["value"] = "",
-									["text"] = "",
-									["label"] = "Bartender4",
-								},
-							},
-						},
-						["notes"] = "",
-						["plugin_type"] = "LDB: 'launcher'",
-						["name"] = "Bartender4",
-						["category"] = "Interface",
-						["button"] = "TitanPanelBartender4Button",
-						["issue"] = "",
-						["isChild"] = false,
-						["status"] = "|cff20ff20Registered|r",
-					}, -- [29]
-					{
-						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
-							["registry"] = {
-								["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
-								["iconWidth"] = 16,
-								["id"] = "AskMrRobot",
-								["menuText"] = "AskMrRobot",
-								["savedVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = true,
-									["ShowRegularText"] = false,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["controlVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = false,
-									["ShowRegularText"] = false,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["version"] = "19",
-								["buttonTextFunction"] = "TitanLDBShowText",
-								["ldb"] = "launcher",
-								["icon"] = "Interface\\AddOns\\AskMrRobot\\Media\\icon",
-								["LDBVariables"] = {
-									["type"] = "launcher",
-									["name"] = "AskMrRobot",
-									["suffix"] = "",
-									["value"] = "",
-									["text"] = "",
-									["label"] = "Ask Mr. Robot",
-								},
-							},
-						},
-						["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
-						["plugin_type"] = "LDB: 'launcher'",
-						["name"] = "AskMrRobot",
-						["category"] = "General",
-						["button"] = "TitanPanelAskMrRobotButton",
-						["issue"] = "",
-						["isChild"] = false,
-						["status"] = "|cff20ff20Registered|r",
-					}, -- [30]
-					{
-						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
-							["registry"] = {
-								["notes"] = "",
-								["iconWidth"] = 16,
-								["id"] = "CombatTime",
-								["menuText"] = "CombatTime",
-								["savedVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = true,
-									["ShowRegularText"] = true,
-									["DisplayOnRightSide"] = false,
-									["ShowLabelText"] = true,
-								},
-								["controlVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = true,
-									["ShowRegularText"] = true,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["version"] = "2.5.0",
-								["buttonTextFunction"] = "TitanLDBShowText",
-								["ldb"] = "data source",
-								["icon"] = "Interface\\Icons\\Ability_DualWield",
-								["LDBVariables"] = {
-									["type"] = "data source",
-									["name"] = "CombatTime",
-									["suffix"] = "",
-									["value"] = "",
-									["text"] = "|cff7f7f0000:00|r",
-									["label"] = "CombatTime",
-								},
-							},
-						},
-						["notes"] = "",
-						["plugin_type"] = "LDB: 'data source'",
-						["name"] = "CombatTime",
-						["category"] = "General",
-						["button"] = "TitanPanelCombatTimeButton",
-						["issue"] = "",
-						["isChild"] = false,
-						["status"] = "|cff20ff20Registered|r",
-					}, -- [31]
-					{
-						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
-							["registry"] = {
-								["notes"] = "",
-								["iconWidth"] = 16,
-								["id"] = "Masque",
-								["menuText"] = "Masque",
-								["category"] = "Interface",
-								["savedVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = true,
-									["ShowRegularText"] = false,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["controlVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = false,
-									["ShowRegularText"] = false,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["version"] = "6.0.0",
-								["buttonTextFunction"] = "TitanLDBShowText",
-								["ldb"] = "launcher",
-								["icon"] = "Interface\\Addons\\Masque\\Textures\\Icon",
-								["LDBVariables"] = {
-									["type"] = "launcher",
-									["name"] = "Masque",
-									["suffix"] = "",
-									["value"] = "",
-									["text"] = "",
-									["label"] = "Masque",
-								},
-							},
-						},
-						["notes"] = "",
-						["plugin_type"] = "LDB: 'launcher'",
-						["name"] = "Masque",
-						["category"] = "Interface",
-						["button"] = "TitanPanelMasqueButton",
-						["issue"] = "",
-						["isChild"] = false,
-						["status"] = "|cff20ff20Registered|r",
-					}, -- [32]
-					{
-						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
-							["registry"] = {
-								["notes"] = "",
-								["iconWidth"] = 16,
-								["id"] = "Record Kills",
-								["menuText"] = "Record Kills",
-								["savedVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = true,
-									["ShowRegularText"] = true,
-									["DisplayOnRightSide"] = false,
-									["ShowLabelText"] = true,
-								},
-								["controlVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = true,
-									["ShowRegularText"] = true,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["buttonTextFunction"] = "TitanLDBShowText",
-								["ldb"] = "data source",
-								["icon"] = "Interface\\PVPFrame\\PVP-ArenaPoints-Icon",
-								["LDBVariables"] = {
-									["type"] = "data source",
-									["name"] = "Record Kills",
-									["suffix"] = "",
-									["value"] = "",
-									["text"] = "Record Kills",
-									["label"] = "",
-								},
-							},
-						},
-						["notes"] = "",
-						["plugin_type"] = "LDB: 'data source'",
-						["name"] = "Record Kills",
-						["category"] = "General",
-						["button"] = "TitanPanelRecord KillsButton",
-						["issue"] = "",
-						["isChild"] = false,
-						["status"] = "|cff20ff20Registered|r",
-					}, -- [33]
-					{
-						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
-							["registry"] = {
-								["notes"] = "",
-								["iconWidth"] = 16,
-								["id"] = "ArkInventory_Pets",
-								["menuText"] = "ArkInventory_Pets",
-								["savedVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = true,
-									["ShowRegularText"] = true,
-									["DisplayOnRightSide"] = false,
-									["ShowLabelText"] = true,
-								},
-								["controlVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = true,
-									["ShowRegularText"] = true,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["buttonTextFunction"] = "TitanLDBShowText",
-								["ldb"] = "data source",
-								["icon"] = "Interface\\Icons\\PetJournalPortrait",
-								["LDBVariables"] = {
-									["type"] = "data source",
-									["name"] = "ArkInventory_Pets",
-									["suffix"] = "",
-									["value"] = "",
-									["text"] = "",
-									["label"] = "",
-								},
-							},
-						},
-						["notes"] = "",
-						["plugin_type"] = "LDB: 'data source'",
-						["name"] = "ArkInventory_Pets",
-						["category"] = "General",
-						["button"] = "TitanPanelArkInventory_PetsButton",
-						["issue"] = "",
-						["isChild"] = false,
-						["status"] = "|cff20ff20Registered|r",
-					}, -- [34]
-					{
-						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
-							["registry"] = {
-								["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
-								["iconWidth"] = 16,
-								["id"] = "PhoenixStyle",
-								["menuText"] = "PhoenixStyle",
-								["savedVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = true,
-									["ShowRegularText"] = false,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["controlVariables"] = {
-									["ShowColoredText"] = false,
-									["ShowIcon"] = false,
-									["ShowRegularText"] = false,
-									["DisplayOnRightSide"] = true,
-									["ShowLabelText"] = true,
-								},
-								["buttonTextFunction"] = "TitanLDBShowText",
-								["ldb"] = "launcher",
-								["icon"] = "interface\\AddOns\\PhoenixStyle\\icon_phoenix_e",
-								["LDBVariables"] = {
-									["type"] = "launcher",
-									["name"] = "PhoenixStyle",
-									["suffix"] = "",
-									["value"] = "",
-									["text"] = "",
-									["label"] = "PS",
-								},
-							},
-						},
-						["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
-						["plugin_type"] = "LDB: 'launcher'",
-						["name"] = "PhoenixStyle",
-						["category"] = "General",
-						["button"] = "TitanPanelPhoenixStyleButton",
-						["issue"] = "",
-						["isChild"] = false,
-						["status"] = "|cff20ff20Registered|r",
-					}, -- [35]
-					{
-						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
 								["id"] = "LoggerHead",
 								["menuText"] = "Combat Log",
-								["category"] = "General",
 								["savedVariables"] = {
 									["ShowColoredText"] = false,
 									["ShowIcon"] = true,
@@ -25591,8 +25774,9 @@ TitanSettings = {
 									["ShowLabelText"] = true,
 								},
 								["version"] = "178",
-								["buttonTextFunction"] = "TitanLDBShowText",
+								["category"] = "General",
 								["ldb"] = "data source",
+								["buttonTextFunction"] = "TitanLDBShowText",
 								["icon"] = "Interface\\AddOns\\LoggerHead\\disabled",
 								["LDBVariables"] = {
 									["type"] = "data source",
@@ -25612,10 +25796,9 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [36]
+					}, -- [37]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -25656,16 +25839,14 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [37]
+					}, -- [38]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
 								["id"] = "BigWigs",
 								["menuText"] = "Big Wigs",
-								["category"] = "Information",
 								["savedVariables"] = {
 									["ShowColoredText"] = false,
 									["ShowIcon"] = true,
@@ -25680,9 +25861,10 @@ TitanSettings = {
 									["DisplayOnRightSide"] = true,
 									["ShowLabelText"] = true,
 								},
-								["version"] = "4.610",
-								["buttonTextFunction"] = "TitanLDBShowText",
+								["version"] = "4.615",
+								["category"] = "Information",
 								["ldb"] = "launcher",
+								["buttonTextFunction"] = "TitanLDBShowText",
 								["icon"] = "Interface\\AddOns\\BigWigs\\Textures\\icons\\core-disabled",
 								["LDBVariables"] = {
 									["type"] = "launcher",
@@ -25702,10 +25884,9 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [38]
+					}, -- [39]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -25746,10 +25927,9 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [39]
+					}, -- [40]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -25790,10 +25970,9 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [40]
+					}, -- [41]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -25821,7 +26000,7 @@ TitanSettings = {
 									["name"] = "ArkInventory_Money",
 									["suffix"] = "",
 									["value"] = "",
-									["text"] = "55018|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 57|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 66|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
+									["text"] = "54470|TInterface\\MoneyFrame\\UI-GoldIcon:0:0:2:0|t 84|TInterface\\MoneyFrame\\UI-SilverIcon:0:0:2:0|t 05|TInterface\\MoneyFrame\\UI-CopperIcon:0:0:2:0|t",
 									["label"] = "",
 								},
 							},
@@ -25834,16 +26013,14 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [41]
+					}, -- [42]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
 								["id"] = "GatherMate2",
 								["menuText"] = "GatherMate2",
-								["category"] = "Interface",
 								["savedVariables"] = {
 									["ShowColoredText"] = false,
 									["ShowIcon"] = true,
@@ -25859,8 +26036,9 @@ TitanSettings = {
 									["ShowLabelText"] = true,
 								},
 								["version"] = "1.33.3",
-								["buttonTextFunction"] = "TitanLDBShowText",
+								["category"] = "Interface",
 								["ldb"] = "launcher",
+								["buttonTextFunction"] = "TitanLDBShowText",
 								["icon"] = "Interface\\AddOns\\GatherMate2\\Artwork\\Icon.tga",
 								["LDBVariables"] = {
 									["type"] = "launcher",
@@ -25880,10 +26058,9 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [42]
+					}, -- [43]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -25925,16 +26102,14 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [43]
+					}, -- [44]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
 								["id"] = "RangeDisplay",
 								["menuText"] = "RangeDisplay",
-								["category"] = "Combat",
 								["savedVariables"] = {
 									["ShowColoredText"] = false,
 									["ShowIcon"] = true,
@@ -25950,8 +26125,9 @@ TitanSettings = {
 									["ShowLabelText"] = true,
 								},
 								["version"] = "v4.3.1",
-								["buttonTextFunction"] = "TitanLDBShowText",
+								["category"] = "Combat",
 								["ldb"] = "launcher",
+								["buttonTextFunction"] = "TitanLDBShowText",
 								["icon"] = "Interface\\Icons\\INV_Misc_Spyglass_02",
 								["LDBVariables"] = {
 									["type"] = "launcher",
@@ -25971,10 +26147,9 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [44]
+					}, -- [45]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -26002,7 +26177,7 @@ TitanSettings = {
 									["name"] = "Broker_GarrisonMission",
 									["suffix"] = "",
 									["value"] = "",
-									["text"] = "In Progress: 0 Complete: 0",
+									["text"] = "In Progress: 4 Complete: 5",
 									["label"] = "Garrison: Missions",
 								},
 							},
@@ -26015,16 +26190,14 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [45]
+					}, -- [46]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
 								["iconWidth"] = 16,
 								["id"] = "RaidBuffStatus",
 								["menuText"] = "RaidBuffStatus",
-								["category"] = "Information",
 								["savedVariables"] = {
 									["ShowColoredText"] = false,
 									["ShowIcon"] = true,
@@ -26040,8 +26213,9 @@ TitanSettings = {
 									["ShowLabelText"] = true,
 								},
 								["version"] = "6.0.2",
-								["buttonTextFunction"] = "TitanLDBShowText",
+								["category"] = "Information",
 								["ldb"] = "launcher",
+								["buttonTextFunction"] = "TitanLDBShowText",
 								["icon"] = "Interface/Icons/Ability_Hunter_MasterMarksman",
 								["LDBVariables"] = {
 									["type"] = "launcher",
@@ -26061,16 +26235,14 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [46]
+					}, -- [47]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
 								["id"] = "TimeToDie",
 								["menuText"] = "TTD",
-								["category"] = "Combat",
 								["savedVariables"] = {
 									["ShowColoredText"] = false,
 									["ShowIcon"] = true,
@@ -26086,8 +26258,9 @@ TitanSettings = {
 									["ShowLabelText"] = true,
 								},
 								["version"] = "v1.5.1",
-								["buttonTextFunction"] = "TitanLDBShowText",
+								["category"] = "Combat",
 								["ldb"] = "data source",
+								["buttonTextFunction"] = "TitanLDBShowText",
 								["icon"] = "Interface\\Icons\\Spell_Holy_BorrowedTime",
 								["LDBVariables"] = {
 									["type"] = "data source",
@@ -26107,16 +26280,14 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [47]
+					}, -- [48]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
 								["id"] = "AutoTurnIn",
 								["menuText"] = "autoturnin [on]",
-								["category"] = "Information",
 								["savedVariables"] = {
 									["ShowColoredText"] = false,
 									["ShowIcon"] = true,
@@ -26132,8 +26303,9 @@ TitanSettings = {
 									["ShowLabelText"] = true,
 								},
 								["version"] = "4.5.N",
-								["buttonTextFunction"] = "TitanLDBShowText",
+								["category"] = "Information",
 								["ldb"] = "data source",
+								["buttonTextFunction"] = "TitanLDBShowText",
 								["icon"] = "Interface\\QUESTFRAME\\UI-QuestLog-BookIcon",
 								["LDBVariables"] = {
 									["type"] = "data source",
@@ -26153,16 +26325,14 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [48]
+					}, -- [49]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
 								["id"] = "Omen",
 								["menuText"] = "Omen",
-								["category"] = "Combat",
 								["savedVariables"] = {
 									["ShowColoredText"] = false,
 									["ShowIcon"] = true,
@@ -26178,8 +26348,9 @@ TitanSettings = {
 									["ShowLabelText"] = true,
 								},
 								["version"] = "3.1.9",
-								["buttonTextFunction"] = "TitanLDBShowText",
+								["category"] = "Combat",
 								["ldb"] = "launcher",
+								["buttonTextFunction"] = "TitanLDBShowText",
 								["icon"] = "Interface\\AddOns\\Omen\\icon",
 								["LDBVariables"] = {
 									["type"] = "launcher",
@@ -26199,10 +26370,9 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [49]
+					}, -- [50]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "\nThis is a LDB 'launcher' without .label using .text instead!!!!",
 								["iconWidth"] = 16,
@@ -26244,10 +26414,9 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [50]
+					}, -- [51]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -26288,10 +26457,9 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [51]
+					}, -- [52]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "",
 								["iconWidth"] = 16,
@@ -26333,16 +26501,14 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [52]
+					}, -- [53]
 					{
 						["self"] = {
-							[0] = nil --[[ skipped userdata ]],
 							["registry"] = {
 								["notes"] = "\nWill be registered as single LDB plugin after the normal registration.",
 								["iconWidth"] = 16,
 								["id"] = "epgp",
 								["menuText"] = "EPGP",
-								["category"] = "Information",
 								["savedVariables"] = {
 									["ShowColoredText"] = false,
 									["ShowIcon"] = true,
@@ -26358,8 +26524,9 @@ TitanSettings = {
 									["ShowLabelText"] = true,
 								},
 								["version"] = "v5.11.4",
-								["buttonTextFunction"] = "TitanLDBShowText",
+								["category"] = "Information",
 								["ldb"] = "data source",
+								["buttonTextFunction"] = "TitanLDBShowText",
 								["icon"] = "Interface\\PVPFrame\\PVP-ArenaPoints-Icon",
 								["LDBVariables"] = {
 									["type"] = "data source",
@@ -26379,7 +26546,7 @@ TitanSettings = {
 						["issue"] = "",
 						["isChild"] = false,
 						["status"] = "|cff20ff20Registered|r",
-					}, -- [53]
+					}, -- [54]
 				},
 				["Extras"] = {
 					{
@@ -27790,11 +27957,11 @@ TitanSettings = {
 						["icon"] = "Interface\\AddOns\\TitanPerformance\\TitanPerformance",
 						["buttonTextFunction"] = "TitanPanelPerformanceButton_GetButtonText",
 					},
-					["SN - Dmg Reduction"] = {
+					["SN - Spell Hit"] = {
 						["notes"] = "",
 						["iconWidth"] = 16,
-						["id"] = "SN - Dmg Reduction",
-						["menuText"] = "Dmg Reduction",
+						["id"] = "SN - Spell Hit",
+						["menuText"] = "Spell Hit",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -27811,14 +27978,14 @@ TitanSettings = {
 						},
 						["buttonTextFunction"] = "TitanLDBShowText",
 						["ldb"] = "data source",
-						["icon"] = "Interface\\Icons\\Spell_holy_greaterblessingofsanctuary",
+						["icon"] = "Interface\\Icons\\Spell_ChargePositive",
 						["LDBVariables"] = {
 							["type"] = "data source",
-							["name"] = "SN - Dmg Reduction",
+							["name"] = "SN - Spell Hit",
 							["suffix"] = "",
 							["value"] = "",
-							["text"] = "-72.00%",
-							["label"] = "Dmg Reduction",
+							["text"] = "6.16%",
+							["label"] = "Spell Hit",
 						},
 					},
 					["SN - Melee Crit"] = {
@@ -28024,11 +28191,11 @@ TitanSettings = {
 						["buttonTextFunction"] = "TitanPanelClockButton_GetButtonText",
 						["tooltipTitle"] = "Clock",
 					},
-					["SN - Spell Hit"] = {
+					["SN - Expertise"] = {
 						["notes"] = "",
 						["iconWidth"] = 16,
-						["id"] = "SN - Spell Hit",
-						["menuText"] = "Spell Hit",
+						["id"] = "SN - Expertise",
+						["menuText"] = "Expertise",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -28045,14 +28212,14 @@ TitanSettings = {
 						},
 						["buttonTextFunction"] = "TitanLDBShowText",
 						["ldb"] = "data source",
-						["icon"] = "Interface\\Icons\\Spell_ChargePositive",
+						["icon"] = "Interface\\Icons\\Ability_Warrior_Challange",
 						["LDBVariables"] = {
 							["type"] = "data source",
-							["name"] = "SN - Spell Hit",
+							["name"] = "SN - Expertise",
 							["suffix"] = "",
 							["value"] = "",
-							["text"] = "6.16%",
-							["label"] = "Spell Hit",
+							["text"] = "4.87%",
+							["label"] = "Expertise",
 						},
 					},
 					["XP"] = {
@@ -28431,11 +28598,11 @@ TitanSettings = {
 							["label"] = "Crit",
 						},
 					},
-					["SN - Expertise"] = {
+					["SN - Dmg Reduction"] = {
 						["notes"] = "",
 						["iconWidth"] = 16,
-						["id"] = "SN - Expertise",
-						["menuText"] = "Expertise",
+						["id"] = "SN - Dmg Reduction",
+						["menuText"] = "Dmg Reduction",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -28452,14 +28619,14 @@ TitanSettings = {
 						},
 						["buttonTextFunction"] = "TitanLDBShowText",
 						["ldb"] = "data source",
-						["icon"] = "Interface\\Icons\\Ability_Warrior_Challange",
+						["icon"] = "Interface\\Icons\\Spell_holy_greaterblessingofsanctuary",
 						["LDBVariables"] = {
 							["type"] = "data source",
-							["name"] = "SN - Expertise",
+							["name"] = "SN - Dmg Reduction",
 							["suffix"] = "",
 							["value"] = "",
-							["text"] = "4.87%",
-							["label"] = "Expertise",
+							["text"] = "-72.00%",
+							["label"] = "Dmg Reduction",
 						},
 					},
 					["SN - Melee Hit"] = {
@@ -31173,14 +31340,14 @@ TitanSettings = {
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["SN - Dmg Reduction"] = {
+				["SN - Spell Hit"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["SN - Ranged Speed"] = {
+				["SN - Melee Attack Power"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
@@ -31219,7 +31386,7 @@ TitanSettings = {
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["SN - Expertise"] = {
+				["SN - Dmg Reduction"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
@@ -31282,7 +31449,7 @@ TitanSettings = {
 					["NumOfAddons"] = 5,
 					["ShowFPS"] = 1,
 				},
-				["SN - Spell Hit"] = {
+				["SN - Expertise"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
@@ -31303,7 +31470,7 @@ TitanSettings = {
 					["DisplayOnRightSide"] = true,
 					["ShowLabelText"] = true,
 				},
-				["SN - Melee Crit"] = {
+				["SN - Melee Hit"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
@@ -31331,7 +31498,7 @@ TitanSettings = {
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["SN - Melee Hit"] = {
+				["SN - Melee Crit"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
@@ -31352,7 +31519,7 @@ TitanSettings = {
 					["DisplayOnRightSide"] = true,
 					["ShowLabelText"] = true,
 				},
-				["SN - Melee Attack Power"] = {
+				["SN - Ranged Speed"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
@@ -46154,7 +46321,7 @@ TitanSettings = {
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["SN - Spell Hit"] = {
+				["SN - Dmg Reduction"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
@@ -46221,7 +46388,7 @@ TitanSettings = {
 					["HideGameTimeMinimap"] = false,
 					["ShowLabelText"] = false,
 				},
-				["SN - Dmg Reduction"] = {
+				["SN - Expertise"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
@@ -46316,7 +46483,7 @@ TitanSettings = {
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["SN - Expertise"] = {
+				["SN - Spell Hit"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
@@ -58120,19 +58287,6 @@ TitanSettings = {
 					["DisplayOnRightSide"] = 1,
 					["ForceBar"] = "Bar",
 				},
-				["Performance"] = {
-					["ShowAddonMemory"] = false,
-					["ShowMemory"] = 1,
-					["AddonMemoryType"] = 1,
-					["ShowLatency"] = 1,
-					["ShowWorldLatency"] = 1,
-					["ShowLabelText"] = false,
-					["ShowIcon"] = 1,
-					["ShowAddonIncRate"] = false,
-					["ShowColoredText"] = 1,
-					["NumOfAddons"] = 5,
-					["ShowFPS"] = 1,
-				},
 				["Clock"] = {
 					["HideMapTime"] = false,
 					["ShowColoredText"] = false,
@@ -58142,6 +58296,13 @@ TitanSettings = {
 					["Format"] = "12H",
 					["TimeMode"] = "Server",
 					["ShowLabelText"] = false,
+				},
+				["CombatTime"] = {
+					["ShowColoredText"] = false,
+					["ShowIcon"] = true,
+					["ShowRegularText"] = true,
+					["DisplayOnRightSide"] = false,
+					["ShowLabelText"] = true,
 				},
 				["AutoHide_AuxBar"] = {
 					["DisplayOnRightSide"] = 1,
@@ -58154,12 +58315,18 @@ TitanSettings = {
 					["DungeonDiffType"] = "AUTO",
 					["ShowLabelText"] = 1,
 				},
-				["CombatTime"] = {
-					["ShowColoredText"] = false,
-					["ShowIcon"] = true,
-					["ShowRegularText"] = true,
-					["DisplayOnRightSide"] = false,
-					["ShowLabelText"] = true,
+				["Performance"] = {
+					["ShowAddonMemory"] = false,
+					["ShowMemory"] = 1,
+					["AddonMemoryType"] = 1,
+					["ShowLatency"] = 1,
+					["ShowWorldLatency"] = 1,
+					["ShowLabelText"] = false,
+					["ShowIcon"] = 1,
+					["ShowAddonIncRate"] = false,
+					["ShowColoredText"] = 1,
+					["NumOfAddons"] = 5,
+					["ShowFPS"] = 1,
 				},
 				["SN - Multistrike"] = {
 					["ShowColoredText"] = false,
@@ -62080,7 +62247,7 @@ TitanSettings = {
 					["ShowCoordsOnMap"] = true,
 					["ShowLocOnMiniMap"] = 1,
 				},
-				["SN - Melee Crit"] = {
+				["SN - Ranged Speed"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
@@ -62094,18 +62261,15 @@ TitanSettings = {
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["Performance"] = {
-					["ShowAddonMemory"] = false,
-					["ShowMemory"] = 1,
-					["AddonMemoryType"] = 1,
-					["ShowLatency"] = 1,
-					["ShowWorldLatency"] = 1,
+				["Clock"] = {
+					["HideMapTime"] = false,
+					["ShowColoredText"] = false,
+					["DisplayOnRightSide"] = 1,
+					["OffsetHour"] = 0,
+					["HideGameTimeMinimap"] = false,
+					["Format"] = "12H",
+					["TimeMode"] = "Server",
 					["ShowLabelText"] = false,
-					["ShowIcon"] = 1,
-					["ShowAddonIncRate"] = false,
-					["ShowColoredText"] = 1,
-					["NumOfAddons"] = 5,
-					["ShowFPS"] = 1,
 				},
 				["Repair"] = {
 					["ShowColoredText"] = false,
@@ -62148,14 +62312,14 @@ TitanSettings = {
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["SN - Expertise"] = {
+				["SN - Spell Hit"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["SN - Ranged Speed"] = {
+				["SN - Melee Hit"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
@@ -62205,17 +62369,14 @@ TitanSettings = {
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["Clock"] = {
-					["HideMapTime"] = false,
+				["CombatTime"] = {
 					["ShowColoredText"] = false,
-					["DisplayOnRightSide"] = 1,
-					["OffsetHour"] = 0,
-					["HideGameTimeMinimap"] = false,
-					["Format"] = "12H",
-					["TimeMode"] = "Server",
-					["ShowLabelText"] = false,
+					["ShowIcon"] = true,
+					["ShowRegularText"] = true,
+					["DisplayOnRightSide"] = false,
+					["ShowLabelText"] = true,
 				},
-				["SN - Spell Hit"] = {
+				["SN - Dmg Reduction"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
@@ -62233,7 +62394,7 @@ TitanSettings = {
 					["ShowSimpleToLevel"] = false,
 					["DisplayType"] = "ShowXPPerHourSession",
 				},
-				["SN - Melee Hit"] = {
+				["SN - Melee Crit"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
@@ -62261,19 +62422,25 @@ TitanSettings = {
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["SN - Dmg Reduction"] = {
+				["SN - Expertise"] = {
 					["ShowColoredText"] = false,
 					["ShowIcon"] = true,
 					["ShowRegularText"] = true,
 					["DisplayOnRightSide"] = false,
 					["ShowLabelText"] = true,
 				},
-				["CombatTime"] = {
-					["ShowColoredText"] = false,
-					["ShowIcon"] = true,
-					["ShowRegularText"] = true,
-					["DisplayOnRightSide"] = false,
-					["ShowLabelText"] = true,
+				["Performance"] = {
+					["ShowAddonMemory"] = false,
+					["ShowMemory"] = 1,
+					["AddonMemoryType"] = 1,
+					["ShowLatency"] = 1,
+					["ShowWorldLatency"] = 1,
+					["ShowLabelText"] = false,
+					["ShowIcon"] = 1,
+					["ShowAddonIncRate"] = false,
+					["ShowColoredText"] = 1,
+					["NumOfAddons"] = 5,
+					["ShowFPS"] = 1,
 				},
 				["LootType"] = {
 					["RandomRoll"] = 100,
@@ -63163,37 +63330,31 @@ TitanSettings = {
 						["icon"] = "Interface\\AddOns\\TitanLootType\\TitanLootType",
 						["tooltipTitle"] = "Loot Type Info",
 					},
-					["CombatTime"] = {
-						["notes"] = "",
-						["iconWidth"] = 16,
-						["id"] = "CombatTime",
-						["menuText"] = "CombatTime",
+					["Clock"] = {
+						["tooltipTextFunction"] = "TitanPanelClockButton_GetTooltipText",
+						["id"] = "Clock",
+						["menuText"] = "Clock",
 						["savedVariables"] = {
+							["OffsetHour"] = 0,
 							["ShowColoredText"] = false,
-							["ShowIcon"] = true,
-							["ShowRegularText"] = true,
-							["DisplayOnRightSide"] = false,
-							["ShowLabelText"] = true,
+							["DisplayOnRightSide"] = 1,
+							["HideMapTime"] = false,
+							["TimeMode"] = "Server",
+							["Format"] = "12H",
+							["HideGameTimeMinimap"] = false,
+							["ShowLabelText"] = false,
 						},
 						["controlVariables"] = {
-							["ShowColoredText"] = false,
-							["ShowIcon"] = true,
-							["ShowRegularText"] = true,
+							["ShowColoredText"] = true,
+							["ShowIcon"] = false,
+							["ShowRegularText"] = false,
 							["DisplayOnRightSide"] = true,
 							["ShowLabelText"] = true,
 						},
-						["version"] = "2.4.4",
-						["buttonTextFunction"] = "TitanLDBShowText",
-						["ldb"] = "data source",
-						["icon"] = "Interface\\Icons\\Ability_DualWield",
-						["LDBVariables"] = {
-							["type"] = "data source",
-							["name"] = "CombatTime",
-							["suffix"] = "",
-							["value"] = "",
-							["text"] = "|cff7f7f0000:00|r",
-							["label"] = "CombatTime",
-						},
+						["version"] = "5.2.3.50400",
+						["category"] = "Built-ins",
+						["buttonTextFunction"] = "TitanPanelClockButton_GetButtonText",
+						["tooltipTitle"] = "Clock",
 					},
 					["Repair"] = {
 						["tooltipTextFunction"] = "TitanPanelRepairButton_GetTooltipText",
@@ -63296,11 +63457,11 @@ TitanSettings = {
 							["label"] = "Spell Haste",
 						},
 					},
-					["SN - Expertise"] = {
+					["SN - Dmg Reduction"] = {
 						["notes"] = "",
 						["iconWidth"] = 16,
-						["id"] = "SN - Expertise",
-						["menuText"] = "Expertise",
+						["id"] = "SN - Dmg Reduction",
+						["menuText"] = "Dmg Reduction",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -63317,14 +63478,14 @@ TitanSettings = {
 						},
 						["buttonTextFunction"] = "TitanLDBShowText",
 						["ldb"] = "data source",
-						["icon"] = "Interface\\Icons\\Ability_Warrior_Challange",
+						["icon"] = "Interface\\Icons\\Spell_holy_greaterblessingofsanctuary",
 						["LDBVariables"] = {
 							["type"] = "data source",
-							["name"] = "SN - Expertise",
+							["name"] = "SN - Dmg Reduction",
 							["suffix"] = "",
 							["value"] = "",
-							["text"] = "0.00%",
-							["label"] = "Expertise",
+							["text"] = "-72.00%",
+							["label"] = "Dmg Reduction",
 						},
 					},
 					["SN - Melee Attack Power"] = {
@@ -63535,37 +63696,40 @@ TitanSettings = {
 							["label"] = "Spell Crit",
 						},
 					},
-					["Clock"] = {
-						["tooltipTextFunction"] = "TitanPanelClockButton_GetTooltipText",
-						["id"] = "Clock",
-						["menuText"] = "Clock",
+					["Performance"] = {
+						["iconWidth"] = 16,
+						["id"] = "Performance",
+						["menuText"] = "Performance",
 						["savedVariables"] = {
-							["OffsetHour"] = 0,
-							["ShowColoredText"] = false,
-							["DisplayOnRightSide"] = 1,
-							["HideMapTime"] = false,
-							["TimeMode"] = "Server",
-							["Format"] = "12H",
-							["HideGameTimeMinimap"] = false,
+							["ShowAddonMemory"] = false,
+							["ShowMemory"] = 1,
+							["AddonMemoryType"] = 1,
+							["ShowLatency"] = 1,
+							["ShowWorldLatency"] = 1,
 							["ShowLabelText"] = false,
+							["ShowIcon"] = 1,
+							["ShowAddonIncRate"] = false,
+							["ShowColoredText"] = 1,
+							["NumOfAddons"] = 5,
+							["ShowFPS"] = 1,
 						},
 						["controlVariables"] = {
 							["ShowColoredText"] = true,
-							["ShowIcon"] = false,
+							["ShowIcon"] = true,
 							["ShowRegularText"] = false,
-							["DisplayOnRightSide"] = true,
+							["DisplayOnRightSide"] = false,
 							["ShowLabelText"] = true,
 						},
 						["version"] = "5.2.3.50400",
 						["category"] = "Built-ins",
-						["buttonTextFunction"] = "TitanPanelClockButton_GetButtonText",
-						["tooltipTitle"] = "Clock",
+						["icon"] = "Interface\\AddOns\\TitanPerformance\\TitanPerformance",
+						["buttonTextFunction"] = "TitanPanelPerformanceButton_GetButtonText",
 					},
-					["SN - Dmg Reduction"] = {
+					["SN - Spell Hit"] = {
 						["notes"] = "",
 						["iconWidth"] = 16,
-						["id"] = "SN - Dmg Reduction",
-						["menuText"] = "Dmg Reduction",
+						["id"] = "SN - Spell Hit",
+						["menuText"] = "Spell Hit",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -63582,14 +63746,14 @@ TitanSettings = {
 						},
 						["buttonTextFunction"] = "TitanLDBShowText",
 						["ldb"] = "data source",
-						["icon"] = "Interface\\Icons\\Spell_holy_greaterblessingofsanctuary",
+						["icon"] = "Interface\\Icons\\Spell_ChargePositive",
 						["LDBVariables"] = {
 							["type"] = "data source",
-							["name"] = "SN - Dmg Reduction",
+							["name"] = "SN - Spell Hit",
 							["suffix"] = "",
 							["value"] = "",
-							["text"] = "-72.00%",
-							["label"] = "Dmg Reduction",
+							["text"] = "8.45%",
+							["label"] = "Spell Hit",
 						},
 					},
 					["XP"] = {
@@ -63776,11 +63940,11 @@ TitanSettings = {
 							["label"] = "Ranged Speed",
 						},
 					},
-					["SN - Spell Hit"] = {
+					["SN - Expertise"] = {
 						["notes"] = "",
 						["iconWidth"] = 16,
-						["id"] = "SN - Spell Hit",
-						["menuText"] = "Spell Hit",
+						["id"] = "SN - Expertise",
+						["menuText"] = "Expertise",
 						["savedVariables"] = {
 							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
@@ -63797,44 +63961,47 @@ TitanSettings = {
 						},
 						["buttonTextFunction"] = "TitanLDBShowText",
 						["ldb"] = "data source",
-						["icon"] = "Interface\\Icons\\Spell_ChargePositive",
+						["icon"] = "Interface\\Icons\\Ability_Warrior_Challange",
 						["LDBVariables"] = {
 							["type"] = "data source",
-							["name"] = "SN - Spell Hit",
+							["name"] = "SN - Expertise",
 							["suffix"] = "",
 							["value"] = "",
-							["text"] = "8.45%",
-							["label"] = "Spell Hit",
+							["text"] = "0.00%",
+							["label"] = "Expertise",
 						},
 					},
-					["Performance"] = {
+					["CombatTime"] = {
+						["notes"] = "",
 						["iconWidth"] = 16,
-						["id"] = "Performance",
-						["menuText"] = "Performance",
+						["id"] = "CombatTime",
+						["menuText"] = "CombatTime",
 						["savedVariables"] = {
-							["ShowAddonMemory"] = false,
-							["ShowMemory"] = 1,
-							["AddonMemoryType"] = 1,
-							["ShowLatency"] = 1,
-							["ShowWorldLatency"] = 1,
-							["ShowLabelText"] = false,
-							["ShowIcon"] = 1,
-							["ShowAddonIncRate"] = false,
-							["ShowColoredText"] = 1,
-							["NumOfAddons"] = 5,
-							["ShowFPS"] = 1,
-						},
-						["controlVariables"] = {
-							["ShowColoredText"] = true,
+							["ShowColoredText"] = false,
 							["ShowIcon"] = true,
-							["ShowRegularText"] = false,
+							["ShowRegularText"] = true,
 							["DisplayOnRightSide"] = false,
 							["ShowLabelText"] = true,
 						},
-						["version"] = "5.2.3.50400",
-						["category"] = "Built-ins",
-						["icon"] = "Interface\\AddOns\\TitanPerformance\\TitanPerformance",
-						["buttonTextFunction"] = "TitanPanelPerformanceButton_GetButtonText",
+						["controlVariables"] = {
+							["ShowColoredText"] = false,
+							["ShowIcon"] = true,
+							["ShowRegularText"] = true,
+							["DisplayOnRightSide"] = true,
+							["ShowLabelText"] = true,
+						},
+						["version"] = "2.4.4",
+						["buttonTextFunction"] = "TitanLDBShowText",
+						["ldb"] = "data source",
+						["icon"] = "Interface\\Icons\\Ability_DualWield",
+						["LDBVariables"] = {
+							["type"] = "data source",
+							["name"] = "CombatTime",
+							["suffix"] = "",
+							["value"] = "",
+							["text"] = "|cff7f7f0000:00|r",
+							["label"] = "CombatTime",
+						},
 					},
 					["Bartender4"] = {
 						["notes"] = "",
@@ -69926,9 +70093,9 @@ TitanSettings = {
 			},
 		},
 	},
-	["Player"] = "Got@Arthas",
-	["Version"] = "5.4.1.60000",
-	["Profile"] = "Got@Arthas",
+	["Player"] = "Git@Arthas",
+	["Version"] = "5.4.2.60000",
+	["Profile"] = "Git@Arthas",
 }
 TitanSkins = {
 	{

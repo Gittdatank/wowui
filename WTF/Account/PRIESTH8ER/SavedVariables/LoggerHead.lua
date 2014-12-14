@@ -16,12 +16,12 @@ LoggerHeadDB = {
 		["Gitt - Arthas"] = "Default",
 		["Spih - Arthas"] = "Default",
 		["Giit - Cho'gall"] = "Default",
-		["Burk - Arthas"] = "Default",
-		["Giitt - Feathermoon"] = "Default",
-		["Greny - Azuremyst"] = "Default",
-		["Spih - Cho'gall"] = "Default",
-		["Git - Azuremyst"] = "Default",
 		["Git - Cho'gall"] = "Default",
+		["Giitt - Feathermoon"] = "Default",
+		["Git - Azuremyst"] = "Default",
+		["Spih - Cho'gall"] = "Default",
+		["Greny - Azuremyst"] = "Default",
+		["Burk - Arthas"] = "Default",
 		["Git - Arthas"] = "Default",
 	},
 	["profiles"] = {
@@ -354,14 +354,14 @@ LoggerHeadDB = {
 					},
 				},
 				["none"] = {
-					["Pandaria"] = {
-						[0] = false,
-					},
 					["Kalimdor"] = {
 						[0] = false,
 					},
 					["Tol Barad"] = {
 						true, -- [1]
+					},
+					["Pandaria"] = {
+						[0] = false,
 					},
 				},
 			},

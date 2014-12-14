@@ -1,0 +1,21 @@
+## Title: UpgradeList
+## Author: Romious20
+## Interface: 60000
+## Notes: A gear upgrade list for your characters.
+## Version: 4.1.1
+## SavedVariables: UpgradeListDB
+## X-Curse-Packaged-Version: v4.0
+## X-Curse-Project-Name: Upgrade List
+## X-Curse-Project-ID: upgrade-list
+## X-Curse-Repository-ID: wow/upgrade-list/mainline
+## X-Curse-Packaged-Version: v4.1.1
+## X-Curse-Project-Name: Upgrade List
+## X-Curse-Project-ID: upgrade-list
+## X-Curse-Repository-ID: wow/upgrade-list/mainline
+
+
+embeds.xml
+Localizations\Localization.xml
+Core.lua
+UI.lua
+ItemLocations.lua

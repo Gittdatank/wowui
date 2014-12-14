@@ -1,0 +1,24 @@
+
+UpgradeListDB = {
+	["profileKeys"] = {
+		["Got - Arthas"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["messages"] = {
+				["scrollwindow"] = {
+					[0] = nil --[[ skipped userdata ]],
+					["tellTimer"] = 231516.43,
+					["channelList"] = {
+					},
+					["flashTimer"] = 0,
+					["zoneChannelList"] = {
+					},
+					["defaultLanguage"] = "Orcish",
+					["messageTypeList"] = {
+					},
+				},
+			},
+		},
+	},
+}

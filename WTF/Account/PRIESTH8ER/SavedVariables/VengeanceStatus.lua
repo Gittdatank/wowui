@@ -1,5 +1,0 @@
-
-VengeanceHistoryDB = {
-	["Greny - Azuremyst"] = {
-	},
-}

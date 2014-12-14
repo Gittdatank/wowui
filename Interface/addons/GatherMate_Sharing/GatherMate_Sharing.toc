@@ -9,11 +9,11 @@
 ## X-Email: sal.scotto@gmail.com
 ## SavedVariables: GatherMate_SharingDB
 ## X-Category: Map
-## Version: v1.8
+## Version: v1.9
 ## OptionalDeps: Ace3, GatherMate2
 ## Dependencies: GatherMate2
 ## X-Embeds: Ace3
-## X-Curse-Packaged-Version: v1.8
+## X-Curse-Packaged-Version: v1.9
 ## X-Curse-Project-Name: GatherMate_Sharing
 ## X-Curse-Project-ID: gathermate_sharing
 ## X-Curse-Repository-ID: wow/gathermate_sharing/mainline

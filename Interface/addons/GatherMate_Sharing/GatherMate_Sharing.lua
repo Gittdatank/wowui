@@ -26,12 +26,14 @@ local dbIndexes = {
 	["Extract Gas"] = 4,
 	["Treasure"] = 5,
 	["Archaeology"] = 6,
+	["Logging"] = 7,
 	[1] = "Herb Gathering",
 	[2] = "Mining",
 	[3] = "Fishing",
 	[4] = "Extract Gas",
 	[5] = "Treasure",
 	[6] = "Archaeology",
+	[7] = "Logging",
 }
 local db
 local options

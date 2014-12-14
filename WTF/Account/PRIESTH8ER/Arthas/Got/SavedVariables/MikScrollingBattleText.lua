@@ -1,4 +1,4 @@
 
 MSBTProfiles_SavedVarsPerChar = {
-	["currentProfileName"] = "Got - Dec 2014",
+	["currentProfileName"] = "Got DPS - Dec 2014",
 }

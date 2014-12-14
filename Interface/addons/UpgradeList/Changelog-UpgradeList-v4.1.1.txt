@@ -1,0 +1,42 @@
+------------------------------------------------------------------------
+r116 | romious20 | 2014-11-14 02:14:04 +0000 (Fri, 14 Nov 2014) | 1 line
+Changed paths:
+   A /tags/v4.1.1 (from /trunk:115)
+
+Error fix.
+------------------------------------------------------------------------
+r115 | romious20 | 2014-11-14 02:13:49 +0000 (Fri, 14 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/Core.lua
+   M /trunk/UpgradeList.toc
+
+Error fix.
+------------------------------------------------------------------------
+r113 | romious20 | 2014-11-13 23:33:13 +0000 (Thu, 13 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/Core.lua
+   M /trunk/UpgradeList.toc
+
+Removed some debugging info, fixed another error.
+------------------------------------------------------------------------
+r111 | romious20 | 2014-11-13 03:12:26 +0000 (Thu, 13 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/Core.lua
+   M /trunk/Localizations/Locale-enUS.lua
+   M /trunk/UI.lua
+
+Fixed error for WoD.
+------------------------------------------------------------------------
+r109 | romious20 | 2014-10-14 02:44:33 +0000 (Tue, 14 Oct 2014) | 1 line
+Changed paths:
+   M /trunk/Core.lua
+   M /trunk/ItemLocations.lua
+   M /trunk/Localizations/Locale-enUS.lua
+   D /trunk/Localizations/Locale-esES.lua
+   M /trunk/Localizations/Localization.xml
+   M /trunk/UI.lua
+   M /trunk/UpgradeList.toc
+   M /trunk/embeds.xml
+
+Updating for 6.0.
+------------------------------------------------------------------------

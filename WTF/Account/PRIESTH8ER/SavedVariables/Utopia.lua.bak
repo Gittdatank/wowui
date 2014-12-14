@@ -1,2 +1,0 @@
-
-UtopiaDB = nil

@@ -1,0 +1,13 @@
+------------------------------------------------------------------------
+r100 | nevcairiel | 2014-12-13 17:19:45 +0000 (Sat, 13 Dec 2014) | 1 line
+Changed paths:
+   A /tags/v1.9 (from /trunk:99)
+
+Tagging as v1.9
+------------------------------------------------------------------------
+r99 | nevcairiel | 2014-11-23 20:22:26 +0000 (Sun, 23 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/GatherMate_Sharing.lua
+
+GatherMate_Sharing: Add the new Logging database type
+------------------------------------------------------------------------

@@ -39,6 +39,7 @@ function Garrison:GARRISON_MISSION_STARTED(event, missionID)
 				typeAtlas = garrisonMission.typeAtlas,
 				level = garrisonMission.level,
 				followers = {},
+				rewards = garrisonMission.rewards,
 			}
 			
 			debugPrint("Added Mission: "..missionID)
@@ -278,7 +279,7 @@ end
 function Garrison:UpdateShipment(buildingID, shipmentData)	
 	Garrison.shipmentUpdate.success = false
 
-	local tmpShipment = nil
+	local tmpShipment = {}
 	if buildingID then
 		tmpShipment = Garrison:GetShipmentData(buildingID)
 
@@ -474,9 +475,12 @@ end
 
 function Garrison:DailyQuestHandling()
 	for _, realmData in pairs(globalDb.data) do
-		for _, playerData in pairs(realmData) do
+		for playerName, playerData in pairs(realmData) do
 
 			local lootedNextReset = playerData.lootedNextReset
+
+			--debugPrint(playerName)
+			--debugPrint(lootedNextReset)
 
 			if not lootedNextReset or _G.time() >= lootedNextReset then
 				playerData.lootedNextReset = Garrison.GetNextDailyResetTime()

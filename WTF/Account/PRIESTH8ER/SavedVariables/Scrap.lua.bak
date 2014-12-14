@@ -1,6 +1,7 @@
 
 Scrap_AutoSell = true
 Scrap_AutoRepair = 1
+Scrap_GuildRepair = nil
 Scrap_Safe = true
 Scrap_Learn = 1
 Scrap_Glow = 1

@@ -645,12 +645,12 @@ CliqueDB3 = {
 				["CompactRaidFrame21Buff3"] = true,
 				["CompactRaidFrame9Buff2"] = true,
 				["CompactRaidFrame27Buff2"] = true,
-				["CompactRaidFrame7DispelDebuff2"] = true,
+				["CompactRaidFrame28Buff3"] = true,
 				["CompactRaidFrame29Buff3"] = true,
 				["CompactRaidFrame18"] = true,
 				["CompactRaidFrame3"] = true,
 				["CompactRaidFrame7Debuff1"] = true,
-				["CompactRaidFrame27DispelDebuff2"] = true,
+				["CompactRaidFrame7DispelDebuff2"] = true,
 				["CompactRaidFrame6DispelDebuff3"] = true,
 				["CompactRaidFrame22Debuff1"] = true,
 				["CompactRaidFrame35Buff1"] = true,
@@ -725,7 +725,7 @@ CliqueDB3 = {
 				["CompactRaidFrame28Buff1"] = true,
 				["SUFUnitplayer"] = true,
 				["CompactRaidFrame9Debuff1"] = true,
-				["CompactRaidFrame28Buff3"] = true,
+				["CompactRaidFrame27DispelDebuff2"] = true,
 				["CompactRaidFrame29Debuff1"] = true,
 				["CompactRaidFrame35DispelDebuff2"] = true,
 				["CompactRaidFrame17Debuff1"] = true,
@@ -1012,16 +1012,16 @@ CliqueDB3 = {
 			["alerthidden"] = true,
 		},
 		["Git - Arthas"] = {
-			["specswap"] = false,
 			["sec_profileKey"] = "Git - Arthas",
-			["pri_profileKey"] = "Git - Arthas",
 			["fastooc"] = false,
-			["alerthidden"] = true,
-			["downclick"] = false,
 			["blacklist"] = {
 				["SUFUnittarget"] = true,
 				["SUFUnitplayer"] = true,
 			},
+			["specswap"] = false,
+			["downclick"] = false,
+			["pri_profileKey"] = "Git - Arthas",
+			["alerthidden"] = true,
 		},
 	},
 	["profileKeys"] = {
@@ -1041,12 +1041,12 @@ CliqueDB3 = {
 		["Gitt - Arthas"] = "Gitt - Arthas",
 		["Spih - Arthas"] = "Spih - Arthas",
 		["Gimm - Cho'gall"] = "Gimm - Cho'gall",
-		["Git - Cho'gall"] = "Gitt - Cho'gall",
-		["Spih - Cho'gall"] = "Spih - Cho'gall",
-		["Burk - Arthas"] = "Burk - Arthas",
-		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
-		["Greny - Azuremyst"] = "Greny - Azuremyst",
 		["Git - Azuremyst"] = "Git - Azuremyst",
+		["Spih - Cho'gall"] = "Spih - Cho'gall",
+		["Greny - Azuremyst"] = "Greny - Azuremyst",
+		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
+		["Burk - Arthas"] = "Burk - Arthas",
+		["Git - Cho'gall"] = "Gitt - Cho'gall",
 		["Git - Arthas"] = "Git - Cho'gall",
 	},
 	["profiles"] = {
@@ -1409,119 +1409,6 @@ CliqueDB3 = {
 				}, -- [2]
 			},
 		},
-		["Git - Cho'gall"] = {
-			["bindings"] = {
-				{
-					["type"] = "target",
-					["sets"] = {
-						["default"] = true,
-					},
-					["key"] = "BUTTON1",
-					["unit"] = "mouseover",
-				}, -- [1]
-				{
-					["type"] = "menu",
-					["key"] = "BUTTON2",
-					["sets"] = {
-						["default"] = true,
-					},
-				}, -- [2]
-				{
-					["spell"] = "Vigilance",
-					["key"] = "BUTTON3",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = "Interface\\Icons\\Ability_Warrior_Vigilance",
-					["type"] = "spell",
-				}, -- [3]
-				{
-					["spell"] = "Intervene",
-					["key"] = "BUTTON2",
-					["sets"] = {
-						["default"] = true,
-					},
-					["icon"] = "Interface\\Icons\\Ability_Warrior_VictoryRush",
-					["type"] = "spell",
-				}, -- [4]
-			},
-		},
-		["Spih - Cho'gall"] = {
-			["bindings"] = {
-				{
-					["sets"] = {
-						["default"] = true,
-					},
-					["type"] = "target",
-					["key"] = "BUTTON1",
-					["unit"] = "mouseover",
-				}, -- [1]
-				{
-					["type"] = "menu",
-					["key"] = "BUTTON2",
-					["sets"] = {
-						["default"] = true,
-					},
-				}, -- [2]
-			},
-		},
-		["Burk - Arthas"] = {
-			["bindings"] = {
-				{
-					["type"] = "target",
-					["sets"] = {
-						["default"] = true,
-					},
-					["key"] = "BUTTON1",
-					["unit"] = "mouseover",
-				}, -- [1]
-				{
-					["type"] = "menu",
-					["key"] = "BUTTON2",
-					["sets"] = {
-						["default"] = true,
-					},
-				}, -- [2]
-			},
-		},
-		["Giitt - Feathermoon"] = {
-			["bindings"] = {
-				{
-					["sets"] = {
-						["default"] = true,
-					},
-					["type"] = "target",
-					["key"] = "BUTTON1",
-					["unit"] = "mouseover",
-				}, -- [1]
-				{
-					["type"] = "menu",
-					["key"] = "BUTTON2",
-					["sets"] = {
-						["default"] = true,
-					},
-				}, -- [2]
-			},
-		},
-		["Greny - Azuremyst"] = {
-			["bindings"] = {
-				{
-					["type"] = "target",
-					["sets"] = {
-						["default"] = true,
-					},
-					["key"] = "BUTTON1",
-					["unit"] = "mouseover",
-				}, -- [1]
-				{
-					["type"] = "menu",
-					["key"] = "BUTTON2",
-					["sets"] = {
-						["default"] = true,
-					},
-				}, -- [2]
-			},
-		},
 		["Git - Azuremyst"] = {
 			["bindings"] = {
 				{
@@ -1575,6 +1462,119 @@ CliqueDB3 = {
 					["icon"] = "Interface\\Icons\\Ability_Warrior_VictoryRush",
 					["type"] = "spell",
 				}, -- [6]
+			},
+		},
+		["Spih - Cho'gall"] = {
+			["bindings"] = {
+				{
+					["sets"] = {
+						["default"] = true,
+					},
+					["type"] = "target",
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["type"] = "menu",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [2]
+			},
+		},
+		["Greny - Azuremyst"] = {
+			["bindings"] = {
+				{
+					["type"] = "target",
+					["sets"] = {
+						["default"] = true,
+					},
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["type"] = "menu",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [2]
+			},
+		},
+		["Giitt - Feathermoon"] = {
+			["bindings"] = {
+				{
+					["sets"] = {
+						["default"] = true,
+					},
+					["type"] = "target",
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["type"] = "menu",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [2]
+			},
+		},
+		["Burk - Arthas"] = {
+			["bindings"] = {
+				{
+					["type"] = "target",
+					["sets"] = {
+						["default"] = true,
+					},
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["type"] = "menu",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [2]
+			},
+		},
+		["Git - Cho'gall"] = {
+			["bindings"] = {
+				{
+					["type"] = "target",
+					["sets"] = {
+						["default"] = true,
+					},
+					["key"] = "BUTTON1",
+					["unit"] = "mouseover",
+				}, -- [1]
+				{
+					["type"] = "menu",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+				}, -- [2]
+				{
+					["spell"] = "Vigilance",
+					["key"] = "BUTTON3",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Ability_Warrior_Vigilance",
+					["type"] = "spell",
+				}, -- [3]
+				{
+					["spell"] = "Intervene",
+					["key"] = "BUTTON2",
+					["sets"] = {
+						["default"] = true,
+					},
+					["icon"] = "Interface\\Icons\\Ability_Warrior_VictoryRush",
+					["type"] = "spell",
+				}, -- [4]
 			},
 		},
 		["Git - Arthas"] = {

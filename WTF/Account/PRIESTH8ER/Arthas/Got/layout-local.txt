@@ -1,6 +1,6 @@
 Version: 1
 Frame: FollowerLocationInfoFrame
-FrameLevel: 80
+FrameLevel: 78
 Anchor: LEFT
 X: 300
 Y: 0

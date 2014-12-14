@@ -2,7 +2,7 @@
 WhoPulled_Settings = {
 	["silent"] = false,
 	["msg"] = "%p PULLED %e!!!",
-	["yonboss"] = false,
+	["yonboss"] = true,
 	["rwonboss"] = true,
 }
 WhoPulled_RageList = {

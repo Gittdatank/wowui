@@ -7,8 +7,8 @@ TauntAware_Settings = {
 	["MF"] = false,
 	["MFScale"] = 100,
 	["FadeDelay"] = 8,
-	["Scan"] = false,
 	["ScanDelay"] = 30,
+	["Scan"] = false,
 }
 TauntAware_PC = {
 	["Cho'gall"] = {
@@ -41,10 +41,10 @@ TauntAware_PC = {
 		["Spih"] = {
 			["MsgFrameSet"] = true,
 		},
-		["Got"] = {
+		["Burk"] = {
 			["MsgFrameSet"] = true,
 		},
-		["Burk"] = {
+		["Got"] = {
 			["MsgFrameSet"] = true,
 		},
 	},

@@ -13,7 +13,7 @@ local maxdiff = 16 -- max number of instance difficulties
 local maxcol = 4 -- max columns per player+instance
 
 addon.svnrev = {}
-addon.svnrev["SavedInstances.lua"] = tonumber(("$Revision: 406 $"):match("%d+"))
+addon.svnrev["SavedInstances.lua"] = tonumber(("$Revision: 410 $"):match("%d+"))
 
 -- local (optimal) references to provided functions
 local table, math, bit, string, pairs, ipairs, unpack, strsplit, time, type, wipe, tonumber, select, strsub = 
@@ -162,6 +162,10 @@ local _specialQuests = {
   [32968] = { zid=951, aid=8726, acid=2, aline="Right7" }, -- Rope-Bound Treasure Chest
   [32969] = { zid=951, aid=8726, acid=1, aline="Left7" },  -- Gleaming Treasure Chest
   [32971] = { zid=951, aid=8726, acid=3, aline="Left8" },  -- Mist-Covered Treasure Chest
+  -- Garrison
+  [37638] = { zone=GARRISON_LOCATION_TOOLTIP, aid=9162 }, -- Bronze Defender
+  [37639] = { zone=GARRISON_LOCATION_TOOLTIP, aid=9164 }, -- Silver Defender
+  [37640] = { zone=GARRISON_LOCATION_TOOLTIP, aid=9165 }, -- Golden Defender
 }
 function addon:specialQuests()
   for qid, qinfo in pairs(_specialQuests) do
@@ -2222,6 +2226,9 @@ function addon:histZoneKey()
   if IsInLFGDungeon() or IsInScenarioGroup() then -- LFG instances don't count
     return nil
   end
+  if C_Garrison.IsOnGarrisonMap() then -- Garrisons don't count
+    return nil
+  end
   -- check if we're locked (using FindInstance so we don't complain about unsaved unknown instances)
   local truename = addon:FindInstance(instname, insttype == "raid")
   local locked = false
@@ -3480,7 +3487,8 @@ local trade_spells = {
         [114780] = "xmute", 	-- Transmute: Living Steel
 	-- WoD
 	[175880] = true,	-- Secrets of Draenor
-	[156587] = true,	-- Alchemical Catalyst
+	[156587] = true,	-- Alchemical Catalyst (4)
+	[168042] = true,	-- Alchemical Catalyst (10), 3 charges w/ 24hr recharge
 
 
         -- Enchanting
@@ -3526,6 +3534,7 @@ local trade_spells = {
         [112996] = true, 	-- Scroll of Wisdom
 	[169081] = true,	-- War Paints
 	[177045] = true,	-- Secrets of Draenor
+	[176513] = true,	-- Draenor Merchant Order
 
 	-- Blacksmithing
 	[138646] = true, 	-- Lightning Steel Ingot

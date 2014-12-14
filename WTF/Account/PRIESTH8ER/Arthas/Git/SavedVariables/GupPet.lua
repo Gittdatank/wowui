@@ -3,31 +3,6 @@ GUPPET_SAVEDDATA = {
 	["MultiGround"] = {
 		["Total"] = 0,
 	},
-	["Unknown"] = {
-		["Total"] = 0,
-	},
-	["Aquatic"] = {
-		["TotalWeight"] = {
-			["BattleGrounds"] = 0,
-			["Instances"] = 0,
-			["Shrine of Two Moons"] = 0,
-			["Arenas"] = 0,
-			["Cities"] = 0,
-			["Global World"] = 0,
-		},
-		["Total"] = 0,
-	},
-	["Fly"] = {
-		["TotalWeight"] = {
-			["BattleGrounds"] = 0,
-			["Instances"] = 0,
-			["Shrine of Two Moons"] = 0,
-			["Arenas"] = 0,
-			["Cities"] = 0,
-			["Global World"] = 0,
-		},
-		["Total"] = 0,
-	},
 	["Companion"] = {
 		{
 			["Id"] = "BattlePet-0-000004773B22",
@@ -303,7 +278,7 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [21]
 		{
-			["Id"] = "BattlePet-0-000003905058",
+			["Id"] = "BattlePet-0-000003332FFC",
 			["CreatureID"] = 67233,
 			["Name"] = "Imperial Silkworm",
 			["Weight"] = {
@@ -316,7 +291,7 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [22]
 		{
-			["Id"] = "BattlePet-0-000003332FFC",
+			["Id"] = "BattlePet-0-000003905058",
 			["CreatureID"] = 67233,
 			["Name"] = "Imperial Silkworm",
 			["Weight"] = {
@@ -381,7 +356,7 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [27]
 		{
-			["Id"] = "BattlePet-0-000003332FF4",
+			["Id"] = "BattlePet-0-000003332FE2",
 			["CreatureID"] = 22445,
 			["Name"] = "Miniwing",
 			["Weight"] = {
@@ -394,7 +369,7 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [28]
 		{
-			["Id"] = "BattlePet-0-000003332FE2",
+			["Id"] = "BattlePet-0-000003332FF4",
 			["CreatureID"] = 22445,
 			["Name"] = "Miniwing",
 			["Weight"] = {
@@ -576,6 +551,19 @@ GUPPET_SAVEDDATA = {
 			},
 		}, -- [42]
 		{
+			["Id"] = "BattlePet-0-000004F4C7A8",
+			["CreatureID"] = 85231,
+			["Name"] = "Stonegrinder",
+			["Weight"] = {
+				["BattleGrounds"] = 0,
+				["Instances"] = 0,
+				["Shrine of Two Moons"] = 0,
+				["Arenas"] = 0,
+				["Cities"] = 0,
+				["Global World"] = 1,
+			},
+		}, -- [43]
+		{
 			["Id"] = "BattlePet-0-000003332FE7",
 			["CreatureID"] = 33226,
 			["Name"] = "Strand Crawler",
@@ -587,7 +575,7 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [43]
+		}, -- [44]
 		{
 			["Id"] = "BattlePet-0-0000049B2339",
 			["CreatureID"] = 81431,
@@ -600,7 +588,7 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [44]
+		}, -- [45]
 		{
 			["Id"] = "BattlePet-0-000003332FEB",
 			["CreatureID"] = 32589,
@@ -613,7 +601,7 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [45]
+		}, -- [46]
 		{
 			["Id"] = "BattlePet-0-000003332FEA",
 			["CreatureID"] = 32590,
@@ -626,7 +614,7 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [46]
+		}, -- [47]
 		{
 			["Id"] = "BattlePet-0-000003332FE3",
 			["CreatureID"] = 10259,
@@ -639,18 +627,29 @@ GUPPET_SAVEDDATA = {
 				["Cities"] = 0,
 				["Global World"] = 1,
 			},
-		}, -- [47]
+		}, -- [48]
 		["TotalWeight"] = {
 			["BattleGrounds"] = 0,
 			["Instances"] = 0,
 			["Shrine of Two Moons"] = 0,
 			["Arenas"] = 0,
 			["Cities"] = 0,
-			["Global World"] = 47,
+			["Global World"] = 48,
 		},
-		["Total"] = 47,
+		["Total"] = 48,
 	},
-	["Ground"] = {
+	["Aquatic"] = {
+		["TotalWeight"] = {
+			["BattleGrounds"] = 0,
+			["Instances"] = 0,
+			["Shrine of Two Moons"] = 0,
+			["Arenas"] = 0,
+			["Cities"] = 0,
+			["Global World"] = 0,
+		},
+		["Total"] = 0,
+	},
+	["Fly"] = {
 		["TotalWeight"] = {
 			["BattleGrounds"] = 0,
 			["Instances"] = 0,
@@ -670,6 +669,20 @@ GUPPET_SAVEDDATA = {
 			["Cities"] = 0,
 			["Global World"] = 0,
 		},
+		["Total"] = 0,
+	},
+	["Ground"] = {
+		["TotalWeight"] = {
+			["BattleGrounds"] = 0,
+			["Instances"] = 0,
+			["Shrine of Two Moons"] = 0,
+			["Arenas"] = 0,
+			["Cities"] = 0,
+			["Global World"] = 0,
+		},
+		["Total"] = 0,
+	},
+	["Unknown"] = {
 		["Total"] = 0,
 	},
 }

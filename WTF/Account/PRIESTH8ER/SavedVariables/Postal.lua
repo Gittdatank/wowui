@@ -25,7 +25,7 @@ Postal3DB = {
 				"Git|Arthas|Horde|100|WARRIOR", -- [20]
 				"Git|Azuremyst|Horde|85|WARRIOR", -- [21]
 				"Git|Cho'gall|Horde|90|WARRIOR", -- [22]
-				"Got|Arthas|Horde|95|DRUID", -- [23]
+				"Got|Arthas|Horde|97|DRUID", -- [23]
 				"Greny|Azuremyst|Horde|45|HUNTER", -- [24]
 				"Gyit|Area 52|Horde|1|MAGE", -- [25]
 				"Lihte|Cho'gall|Horde|42|WARLOCK", -- [26]
@@ -50,13 +50,13 @@ Postal3DB = {
 		["Cowbeary - Azuremyst"] = "Cowbeary - Azuremyst",
 		["Raweo - Azuremyst"] = "Raweo - Azuremyst",
 		["Ezyn - Azuremyst"] = "Ezyn - Azuremyst",
-		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
+		["Spih - Cho'gall"] = "Spih - Cho'gall",
 		["Gittdabank - Arthas"] = "Gittdabank - Arthas",
 		["Worgit - Moon Guard"] = "Worgit - Moon Guard",
 		["Got - Arthas"] = "Got - Arthas",
 		["Gitt - Cho'gall"] = "Gitt - Cho'gall",
 		["Gimm - Cho'gall"] = "Gimm - Cho'gall",
-		["Olebe - Azuremyst"] = "Olebe - Azuremyst",
+		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
 		["Greny - Azuremyst"] = "Greny - Azuremyst",
 		["Gitt - Arthas"] = "Gitt - Arthas",
 		["Git - Cho'gall"] = "Git - Cho'gall",
@@ -65,7 +65,7 @@ Postal3DB = {
 		["Burk - Azuremyst"] = "Burk - Azuremyst",
 		["Git - Azuremyst"] = "Git - Azuremyst",
 		["Burk - Arthas"] = "Burk - Arthas",
-		["Spih - Cho'gall"] = "Spih - Cho'gall",
+		["Olebe - Azuremyst"] = "Olebe - Azuremyst",
 		["Lihte - Cho'gall"] = "Lihte - Cho'gall",
 		["Gilt - Azuremyst"] = "Gilt - Azuremyst",
 		["Git - Arthas"] = "Git - Arthas",
@@ -185,7 +185,12 @@ Postal3DB = {
 				},
 			},
 		},
-		["Giitt - Feathermoon"] = {
+		["Spih - Cho'gall"] = {
+			["BlackBook"] = {
+				["recent"] = {
+					"Lihte|Cho'gall|Horde", -- [1]
+				},
+			},
 		},
 		["Gittdabank - Arthas"] = {
 			["BlackBook"] = {
@@ -226,12 +231,7 @@ Postal3DB = {
 				},
 			},
 		},
-		["Olebe - Azuremyst"] = {
-			["BlackBook"] = {
-				["recent"] = {
-					"Git", -- [1]
-				},
-			},
+		["Giitt - Feathermoon"] = {
 		},
 		["Greny - Azuremyst"] = {
 			["BlackBook"] = {
@@ -322,10 +322,10 @@ Postal3DB = {
 		},
 		["Burk - Arthas"] = {
 		},
-		["Spih - Cho'gall"] = {
+		["Olebe - Azuremyst"] = {
 			["BlackBook"] = {
 				["recent"] = {
-					"Lihte|Cho'gall|Horde", -- [1]
+					"Git", -- [1]
 				},
 			},
 		},
