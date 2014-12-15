@@ -6,17 +6,17 @@ BLCDDB = {
 		["Gimm - Cho'gall"] = "Default",
 		["Gitt - Arthas"] = "Default",
 		["Evyyn - Azuremyst"] = "Default",
-		["Spih - Arthas"] = "Default",
+		["Git - Arthas"] = "Git - Mar 2014",
 		["Git - Cho'gall"] = "Default",
 		["Greny - Azuremyst"] = "Default",
-		["Giit - Cho'gall"] = "Default",
 		["Got - Arthas"] = "Got - Dec 2014",
+		["Giit - Cho'gall"] = "Default",
 		["Burk - Arthas"] = "Default",
-		["Git - Arthas"] = "Git - Mar 2014",
+		["Spih - Arthas"] = "Default",
 	},
 	["profiles"] = {
 		["Git - Mar 2014"] = {
-			["yOffset"] = -70.0499267578125,
+			["minimap"] = false,
 			["show"] = "never",
 			["classcolorbars"] = true,
 			["cooldown"] = {
@@ -28,7 +28,7 @@ BLCDDB = {
 				["PRI_HYOFHO"] = false,
 				["PAL_HAOFPR"] = true,
 			},
-			["minimap"] = false,
+			["yOffset"] = -70.0499267578125,
 		},
 		["Default"] = {
 			["scale"] = 1.32,
@@ -45,17 +45,17 @@ BLCDDB = {
 		},
 		["Got - Dec 2014"] = {
 			["scale"] = 1.32,
-			["minimap"] = false,
+			["yOffset"] = -70.0499267578125,
 			["cooldown"] = {
 				["DEA_RAAL"] = false,
 				["DRU_IN"] = false,
 				["PAL_HAOFPR"] = true,
-				["PRI_HYOFHO"] = false,
 				["WARL_SORE"] = false,
+				["PRI_HYOFHO"] = false,
 				["SHA_MATITO"] = false,
 				["DRU_RE"] = false,
 			},
-			["yOffset"] = -70.0499267578125,
+			["minimap"] = false,
 		},
 	},
 }

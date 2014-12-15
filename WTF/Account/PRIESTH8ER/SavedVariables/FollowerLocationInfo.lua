@@ -7,14 +7,14 @@ FollowerLocationInfoDB = {
 	["Minimap"] = {
 		["enabled"] = true,
 	},
-	["language"] = false,
-	["ShowCollectedFollower"] = false,
-	["ShowFollowerID"] = true,
-	["questTitleLocale"] = "enUS",
-	["ShowCoordsFrame"] = true,
-	["BrokerTitle_NumFollowers"] = true,
 	["questTitles"] = {
 	},
+	["BrokerTitle_NumFollowers"] = true,
+	["ShowFollowerID"] = true,
+	["ShowCoordsFrame"] = true,
+	["questTitleLocale"] = "enUS",
+	["ShowCollectedFollower"] = false,
+	["language"] = false,
 }
 FLI_tmpDB = {
 	["ability_locales"] = {

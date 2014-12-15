@@ -221,27 +221,55 @@ UpgradeListDB = {
 						}, -- [1]
 					},
 				},
-				["Waist"] = {
+				["Hand"] = {
 					["Row"] = {
 						{
 							1, -- [1]
 							685, -- [2]
-							"|cffa335ee|Hitem:119337:0:0:0:0:0:0:0:100:0:0:1:567|h[Ripswallow Plate Belt]|h|r", -- [3]
+							"|cffa335ee|Hitem:113632:0:0:0:0:0:0:0:100:0:6:1:567|h[Gauntlets of the Heavy Hand]|h|r", -- [3]
 							"Mythic", -- [4]
 							"Highmaul", -- [5]
-							"(Trash Drop)", -- [6]
-							"+34", -- [7]
-							"119337", -- [8]
+							"The Butcher", -- [6]
+							"+68", -- [7]
+							"113632", -- [8]
+						}, -- [1]
+					},
+				},
+				["Shoulder"] = {
+					["Row"] = {
+						{
+							1, -- [1]
+							685, -- [2]
+							"|cffa335ee|Hitem:113855:0:0:0:0:0:0:0:100:0:6:1:567|h[Uncrushable Shoulderplates]|h|r", -- [3]
+							"Mythic", -- [4]
+							"Highmaul", -- [5]
+							"Imperator Mar'gok", -- [6]
+							"+68", -- [7]
+							"113855", -- [8]
+						}, -- [1]
+					},
+				},
+				["Wrist"] = {
+					["Row"] = {
+						{
+							1, -- [1]
+							685, -- [2]
+							"|cffa335ee|Hitem:113844:0:0:0:0:0:0:0:100:0:6:1:567|h[Bracers of Mirrored Flame]|h|r", -- [3]
+							"Mythic", -- [4]
+							"Highmaul", -- [5]
+							"Ko'ragh", -- [6]
+							"+65", -- [7]
+							"113844", -- [8]
 						}, -- [1]
 						{
 							2, -- [1]
-							685, -- [2]
-							"|cffa335ee|Hitem:113659:0:0:0:0:0:0:0:100:0:6:1:567|h[Fleshchewer Greatbelt]|h|r", -- [3]
-							"Mythic", -- [4]
+							670, -- [2]
+							"|cffa335ee|Hitem:113844:0:0:0:0:0:0:0:100:0:5:1:566|h[Bracers of Mirrored Flame]|h|r", -- [3]
+							"Heroic", -- [4]
 							"Highmaul", -- [5]
-							"Brackenspore", -- [6]
-							"+23", -- [7]
-							"113659", -- [8]
+							"Ko'ragh", -- [6]
+							"+16", -- [7]
+							"113844", -- [8]
 						}, -- [2]
 					},
 				},
@@ -299,56 +327,28 @@ UpgradeListDB = {
 						}, -- [5]
 					},
 				},
-				["Wrist"] = {
+				["Waist"] = {
 					["Row"] = {
 						{
 							1, -- [1]
 							685, -- [2]
-							"|cffa335ee|Hitem:113844:0:0:0:0:0:0:0:100:0:6:1:567|h[Bracers of Mirrored Flame]|h|r", -- [3]
+							"|cffa335ee|Hitem:119337:0:0:0:0:0:0:0:100:0:0:1:567|h[Ripswallow Plate Belt]|h|r", -- [3]
 							"Mythic", -- [4]
 							"Highmaul", -- [5]
-							"Ko'ragh", -- [6]
-							"+65", -- [7]
-							"113844", -- [8]
+							"(Trash Drop)", -- [6]
+							"+34", -- [7]
+							"119337", -- [8]
 						}, -- [1]
 						{
 							2, -- [1]
-							670, -- [2]
-							"|cffa335ee|Hitem:113844:0:0:0:0:0:0:0:100:0:5:1:566|h[Bracers of Mirrored Flame]|h|r", -- [3]
-							"Heroic", -- [4]
+							685, -- [2]
+							"|cffa335ee|Hitem:113659:0:0:0:0:0:0:0:100:0:6:1:567|h[Fleshchewer Greatbelt]|h|r", -- [3]
+							"Mythic", -- [4]
 							"Highmaul", -- [5]
-							"Ko'ragh", -- [6]
-							"+16", -- [7]
-							"113844", -- [8]
+							"Brackenspore", -- [6]
+							"+23", -- [7]
+							"113659", -- [8]
 						}, -- [2]
-					},
-				},
-				["Hand"] = {
-					["Row"] = {
-						{
-							1, -- [1]
-							685, -- [2]
-							"|cffa335ee|Hitem:113632:0:0:0:0:0:0:0:100:0:6:1:567|h[Gauntlets of the Heavy Hand]|h|r", -- [3]
-							"Mythic", -- [4]
-							"Highmaul", -- [5]
-							"The Butcher", -- [6]
-							"+68", -- [7]
-							"113632", -- [8]
-						}, -- [1]
-					},
-				},
-				["Shoulder"] = {
-					["Row"] = {
-						{
-							1, -- [1]
-							685, -- [2]
-							"|cffa335ee|Hitem:113855:0:0:0:0:0:0:0:100:0:6:1:567|h[Uncrushable Shoulderplates]|h|r", -- [3]
-							"Mythic", -- [4]
-							"Highmaul", -- [5]
-							"Imperator Mar'gok", -- [6]
-							"+68", -- [7]
-							"113855", -- [8]
-						}, -- [1]
 					},
 				},
 			},
@@ -358,875 +358,608 @@ UpgradeListDB = {
 					},
 					["filtered"] = {
 					},
-					["SortData"] = nil --[[ skipped inline function ]],
+					["isMinimalDataformat"] = true,
+					["data"] = {
+					},
 					["cols"] = {
 						{
 							["name"] = "Priority",
 							["align"] = "CENTER",
+							["width"] = 42,
 							["bgcolor"] = {
 								["a"] = 1,
-								["b"] = 0,
-								["g"] = 0,
 								["r"] = 0,
+								["g"] = 0,
+								["b"] = 0,
 							},
 							["defaultsort"] = "asc",
-							["width"] = 42,
 						}, -- [1]
 						{
 							["align"] = "CENTER",
+							["name"] = "iLvl",
 							["bgcolor"] = {
 								["a"] = 1,
-								["b"] = 0,
-								["g"] = 0,
 								["r"] = 0,
+								["g"] = 0,
+								["b"] = 0,
 							},
-							["name"] = "iLvl",
 							["width"] = 35,
 						}, -- [2]
 						{
 							["align"] = "CENTER",
+							["name"] = "Item",
 							["bgcolor"] = {
 								["a"] = 1,
-								["b"] = 0,
-								["g"] = 0,
 								["r"] = 0,
+								["g"] = 0,
+								["b"] = 0,
 							},
-							["name"] = "Item",
 							["width"] = 240,
 						}, -- [3]
 						{
 							["align"] = "CENTER",
+							["name"] = "Difficulty",
 							["bgcolor"] = {
 								["a"] = 1,
-								["b"] = 0,
-								["g"] = 0,
 								["r"] = 0,
+								["g"] = 0,
+								["b"] = 0,
 							},
-							["name"] = "Difficulty",
 							["width"] = 80,
 						}, -- [4]
 						{
 							["align"] = "CENTER",
+							["name"] = "Instance",
 							["bgcolor"] = {
 								["a"] = 1,
-								["b"] = 0,
-								["g"] = 0,
 								["r"] = 0,
+								["g"] = 0,
+								["b"] = 0,
 							},
-							["name"] = "Instance",
 							["width"] = 250,
 						}, -- [5]
 						{
 							["align"] = "CENTER",
+							["name"] = "Boss",
 							["bgcolor"] = {
 								["a"] = 1,
-								["b"] = 0,
-								["g"] = 0,
 								["r"] = 0,
+								["g"] = 0,
+								["b"] = 0,
 							},
-							["name"] = "Boss",
 							["width"] = 280,
 						}, -- [6]
 						{
 							["align"] = "CENTER",
+							["name"] = "Note",
 							["bgcolor"] = {
 								["a"] = 1,
-								["b"] = 0,
-								["g"] = 0,
 								["r"] = 0,
+								["g"] = 0,
+								["b"] = 0,
 							},
-							["name"] = "Note",
 							["width"] = 280,
 						}, -- [7]
 					},
-					["GetDefaultHighlightBlank"] = nil --[[ skipped inline function ]],
-					["EnableSelection"] = nil --[[ skipped inline function ]],
+					["defaulthighlight"] = {
+						["a"] = 0.5,
+						["r"] = 1,
+						["g"] = 0.9,
+						["b"] = 0,
+					},
+					["defaulthighlightblank"] = {
+						["a"] = 0,
+						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
+					},
 					["scrollframe"] = {
 						["ScrollBar"] = {
-							[0] = nil --[[ skipped userdata ]],
-							["ScrollUpButton"] = {
-								[0] = nil --[[ skipped userdata ]],
-							},
 							["ScrollDownButton"] = {
-								[0] = nil --[[ skipped userdata ]],
+							},
+							["ScrollUpButton"] = {
 							},
 						},
 						["offset"] = 0,
-						[0] = nil --[[ skipped userdata ]],
 					},
-					["Hide"] = nil --[[ skipped inline function ]],
 					["offset"] = 0,
-					["GetRow"] = nil --[[ skipped inline function ]],
+					["head"] = {
+						["cols"] = {
+							{
+							}, -- [1]
+							{
+							}, -- [2]
+							{
+							}, -- [3]
+							{
+							}, -- [4]
+							{
+							}, -- [5]
+							{
+							}, -- [6]
+							{
+							}, -- [7]
+						},
+					},
 					["showing"] = true,
-					["Show"] = nil --[[ skipped inline function ]],
+					["displayRows"] = 14,
 					["DefaultEvents"] = {
-						["OnEnter"] = nil --[[ skipped inline function ]],
-						["OnClick"] = nil --[[ skipped inline function ]],
-						["OnLeave"] = nil --[[ skipped inline function ]],
 					},
-					["SetWidth"] = nil --[[ skipped inline function ]],
-					["Filter"] = nil --[[ skipped inline function ]],
-					["SetFilter"] = nil --[[ skipped inline function ]],
-					["SetData"] = nil --[[ skipped inline function ]],
-					["SetSelection"] = nil --[[ skipped inline function ]],
-					["DoFilter"] = nil --[[ skipped inline function ]],
-					["ClearSelection"] = nil --[[ skipped inline function ]],
-					["data"] = {
+					["events"] = {
 					},
-					["isMinimalDataformat"] = true,
-					["GetCell"] = nil --[[ skipped inline function ]],
+					["frame"] = {
+						["col2bg"] = {
+						},
+						["col7bg"] = {
+						},
+						["col6bg"] = {
+						},
+						["col3bg"] = {
+						},
+						["col4bg"] = {
+						},
+						["col1bg"] = {
+						},
+						["col5bg"] = {
+						},
+					},
 					["rows"] = {
 						{
-							[0] = nil --[[ skipped userdata ]],
 							["highlight"] = {
-								[0] = nil --[[ skipped userdata ]],
 							},
 							["cols"] = {
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [1]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [2]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [3]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [4]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [5]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [6]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [7]
 							},
 						}, -- [1]
 						{
-							[0] = nil --[[ skipped userdata ]],
 							["highlight"] = {
-								[0] = nil --[[ skipped userdata ]],
 							},
 							["cols"] = {
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [1]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [2]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [3]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [4]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [5]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [6]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [7]
 							},
 						}, -- [2]
 						{
-							[0] = nil --[[ skipped userdata ]],
 							["highlight"] = {
-								[0] = nil --[[ skipped userdata ]],
 							},
 							["cols"] = {
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [1]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [2]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [3]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [4]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [5]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [6]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [7]
 							},
 						}, -- [3]
 						{
-							[0] = nil --[[ skipped userdata ]],
 							["cols"] = {
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [1]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [2]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [3]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [4]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [5]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [6]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [7]
 							},
 						}, -- [4]
 						{
-							[0] = nil --[[ skipped userdata ]],
 							["cols"] = {
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [1]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [2]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [3]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [4]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [5]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [6]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [7]
 							},
 						}, -- [5]
 						{
-							[0] = nil --[[ skipped userdata ]],
 							["cols"] = {
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [1]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [2]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [3]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [4]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [5]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [6]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [7]
 							},
 						}, -- [6]
 						{
-							[0] = nil --[[ skipped userdata ]],
 							["cols"] = {
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [1]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [2]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [3]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [4]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [5]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [6]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [7]
 							},
 						}, -- [7]
 						{
-							[0] = nil --[[ skipped userdata ]],
 							["cols"] = {
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [1]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [2]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [3]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [4]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [5]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [6]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [7]
 							},
 						}, -- [8]
 						{
-							[0] = nil --[[ skipped userdata ]],
 							["cols"] = {
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [1]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [2]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [3]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [4]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [5]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [6]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [7]
 							},
 						}, -- [9]
 						{
-							[0] = nil --[[ skipped userdata ]],
 							["cols"] = {
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [1]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [2]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [3]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [4]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [5]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [6]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [7]
 							},
 						}, -- [10]
 						{
-							[0] = nil --[[ skipped userdata ]],
 							["cols"] = {
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [1]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [2]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [3]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [4]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [5]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [6]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [7]
 							},
 						}, -- [11]
 						{
-							[0] = nil --[[ skipped userdata ]],
 							["cols"] = {
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [1]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [2]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [3]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [4]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [5]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [6]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [7]
 							},
 						}, -- [12]
 						{
-							[0] = nil --[[ skipped userdata ]],
 							["cols"] = {
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [1]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [2]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [3]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [4]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [5]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [6]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [7]
 							},
 						}, -- [13]
 						{
-							[0] = nil --[[ skipped userdata ]],
 							["cols"] = {
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [1]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [2]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [3]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [4]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [5]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [6]
 								{
-									[0] = nil --[[ skipped userdata ]],
 									["text"] = {
-										[0] = nil --[[ skipped userdata ]],
 									},
 								}, -- [7]
 							},
 						}, -- [14]
 					},
-					["SetHeight"] = nil --[[ skipped inline function ]],
-					["FireUserEvent"] = nil --[[ skipped inline function ]],
-					["GetDefaultHighlight"] = nil --[[ skipped inline function ]],
-					["defaulthighlight"] = {
-						["a"] = 0.5,
-						["b"] = 0,
-						["g"] = 0.9,
-						["r"] = 1,
-					},
 					["rowHeight"] = 15,
-					["displayRows"] = 14,
-					["defaulthighlightblank"] = {
-						["a"] = 0,
-						["b"] = 0,
-						["g"] = 0,
-						["r"] = 0,
-					},
-					["RegisterEvents"] = nil --[[ skipped inline function ]],
-					["head"] = {
-						[0] = nil --[[ skipped userdata ]],
-						["cols"] = {
-							{
-								[0] = nil --[[ skipped userdata ]],
-							}, -- [1]
-							{
-								[0] = nil --[[ skipped userdata ]],
-							}, -- [2]
-							{
-								[0] = nil --[[ skipped userdata ]],
-							}, -- [3]
-							{
-								[0] = nil --[[ skipped userdata ]],
-							}, -- [4]
-							{
-								[0] = nil --[[ skipped userdata ]],
-							}, -- [5]
-							{
-								[0] = nil --[[ skipped userdata ]],
-							}, -- [6]
-							{
-								[0] = nil --[[ skipped userdata ]],
-							}, -- [7]
-						},
-					},
-					["SetDefaultHighlightBlank"] = nil --[[ skipped inline function ]],
-					["Refresh"] = nil --[[ skipped inline function ]],
-					["SetDisplayRows"] = nil --[[ skipped inline function ]],
-					["SetDisplayCols"] = nil --[[ skipped inline function ]],
-					["RowIsVisible"] = nil --[[ skipped inline function ]],
-					["SetDefaultHighlight"] = nil --[[ skipped inline function ]],
-					["events"] = {
-						["OnEnter"] = nil --[[ skipped inline function ]],
-						["OnClick"] = nil --[[ skipped inline function ]],
-						["OnLeave"] = nil --[[ skipped inline function ]],
-					},
-					["DoCellUpdate"] = nil --[[ skipped inline function ]],
-					["GetSelection"] = nil --[[ skipped inline function ]],
-					["frame"] = {
-						["col2bg"] = {
-							[0] = nil --[[ skipped userdata ]],
-						},
-						["col7bg"] = {
-							[0] = nil --[[ skipped userdata ]],
-						},
-						["col6bg"] = {
-							[0] = nil --[[ skipped userdata ]],
-						},
-						["col3bg"] = {
-							[0] = nil --[[ skipped userdata ]],
-						},
-						["col4bg"] = {
-							[0] = nil --[[ skipped userdata ]],
-						},
-						["col1bg"] = {
-							[0] = nil --[[ skipped userdata ]],
-						},
-						[0] = nil --[[ skipped userdata ]],
-						["col5bg"] = {
-							[0] = nil --[[ skipped userdata ]],
-						},
-					},
-					["SetHighLightColor"] = nil --[[ skipped inline function ]],
-					["CompareSort"] = nil --[[ skipped inline function ]],
 				},
 			},
 		},
@@ -1237,10 +970,20 @@ UpgradeListDB = {
 	},
 	["profiles"] = {
 		["Default"] = {
+			["autodelete"] = {
+				["enable"] = false,
+			},
+			["mainframe"] = {
+				["scale"] = 0.8,
+				["showoptions"] = false,
+			},
+			["sound"] = {
+				["potentialchoice"] = "Zelda-Item",
+			},
 			["messages"] = {
 				["scrollwindow"] = {
 					[0] = nil --[[ skipped userdata ]],
-					["tellTimer"] = 244601.428,
+					["tellTimer"] = 832.459,
 					["channelList"] = {
 					},
 					["flashTimer"] = 0,
@@ -1250,16 +993,6 @@ UpgradeListDB = {
 					["messageTypeList"] = {
 					},
 				},
-			},
-			["autodelete"] = {
-				["enable"] = false,
-			},
-			["sound"] = {
-				["potentialchoice"] = "Zelda-Item",
-			},
-			["mainframe"] = {
-				["scale"] = 0.8,
-				["showoptions"] = false,
 			},
 		},
 	},
