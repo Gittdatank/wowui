@@ -1,9 +1,9 @@
 ## Interface: 60000
 ## Title: RaidBuffStatus
 ## Author: Danielbarron, oscarucb
-## Version: 6.0.2
-## X-Build: 694
-## X-ReleaseDate: 2014-11-03T10:41:36Z
+## Version: 6.1.0
+## X-Build: 699
+## X-ReleaseDate: 2014-12-15T13:27:09Z
 ## X-Revision: $Revision: 683 $
 ## Notes: Reports on a configurable dashboard or to group chat on consumables, buffs, AFK, mana and many many others but in an intelligent automagic way. RBS is the last nail in the coffin of all slacking level max-level raiders
 ## URL: http://www.wowace.com/projects/raidbuffstatus/
@@ -15,7 +15,7 @@
 ## LoadManagers: AddonLoader
 ## X-LoadOn-Group: true
 ## X-LoadOn-Slash: /raidbuffstatus, /rbs
-## X-Curse-Packaged-Version: 6.0.2
+## X-Curse-Packaged-Version: 6.1.0
 ## X-Curse-Project-Name: RaidBuffStatus
 ## X-Curse-Project-ID: raidbuffstatus
 ## X-Curse-Repository-ID: wow/raidbuffstatus/mainline

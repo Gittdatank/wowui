@@ -81,8 +81,8 @@ Postal3DB = {
 		["Git - Arthas"] = {
 			["BlackBook"] = {
 				["recent"] = {
-					"Got|Arthas|Horde", -- [1]
-					"Tydeson|Arthas|Horde", -- [2]
+					"Tydeson|Arthas|Horde", -- [1]
+					"Got|Arthas|Horde", -- [2]
 					"Primalfears|Arthas|Horde", -- [3]
 					"Simplecow|Arthas|Horde", -- [4]
 					"Gittdabank|Arthas|Horde", -- [5]

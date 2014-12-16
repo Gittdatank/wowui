@@ -401,7 +401,7 @@ GuildMacros: disabled
 TidyPlatesHub: enabled
 AtramedesShieldClicker: disabled
 EclipseBarPlus: disabled
-SellJunk: disabled
+SellJunk: enabled
 TidyPlates_Quatre: enabled
 AutomateMe: enabled
 MikScrollingBattleText: enabled
@@ -653,3 +653,4 @@ VEM-Party-WoD: enabled
 VEM-WorldEvents: enabled
 VEM-Sound-Default: enabled
 VEM-StatusBarTimers: disabled
+BigWigs_LustingOnTrash: disabled

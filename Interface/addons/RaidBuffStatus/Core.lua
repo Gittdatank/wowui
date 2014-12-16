@@ -5,7 +5,7 @@ local GI = LibStub("LibGroupInSpecT-1.1")
 
 RaidBuffStatus = LibStub("AceAddon-3.0"):NewAddon("RaidBuffStatus", "AceEvent-3.0", "AceTimer-3.0", "AceConsole-3.0", "AceSerializer-3.0")
 RBS_svnrev = {}
-RBS_svnrev["Core.lua"] = select(3,string.find("$Revision: 694 $", ".* (.*) .*"))
+RBS_svnrev["Core.lua"] = select(3,string.find("$Revision: 698 $", ".* (.*) .*"))
 
 local addon = RaidBuffStatus
 local profile
@@ -33,7 +33,7 @@ local nextitemcheck = 0
 local currentsheep = {}
 local currentsheepspell = {}
 local lasthealerdrinking = 0
-local maxdistance = 100000
+local maxdistance = 1e300
 addon.lasttobuf = ""
 addon.version = ""
 addon.revision = ""
@@ -187,6 +187,11 @@ local utilinit = {
 	[104958] = { category="Feast", itemid=74919, limit=10, },   -- Pandaren Banquet
 	[105193] = { category="Feast", itemid=75016, limit=25, },   -- Great Pandaren Banquet
 
+	-- wod food
+	[160740] = { category="Feast", itemid=111457, limit=10, },   -- Feast of Blood
+	[160914] = { category="Feast", itemid=111458, limit=10, },   -- Feast of the Waters
+	[175215] = { category="Feast", itemid=118576, limit=30, },   -- Savage Feast
+
 	[145166] = { category="Cart", itemid=101630, ungrouped=true },   -- Noodle Cart (duration 180 but can be cancelled)
 	[145169] = { category="Cart", itemid=101661, ungrouped=true },   -- Deluxe Noodle Cart
 	[145196] = { category="Cart", itemid=101662, ungrouped=true },   -- Pandaren Treasure Noodle Cart
@@ -199,6 +204,7 @@ local utilinit = {
 	[29893]  = { category="Soulwell", itemid=5512, cast=true, slow=true, duration=120 },  -- Create Soulwell 
 
 	[126459] = { category="Blingtron", itemid=87214, duration=600, ungrouped=true }, -- Blingtron 4000
+	[161414] = { category="Blingtron", itemid=111821, duration=600, ungrouped=true }, -- Blingtron 5000
 
 	[54710]  = { category="Mailbox", item=40768, label=L["Mailbox"], duration=600, ungrouped=true }, 
 
@@ -225,6 +231,7 @@ local utilinit = {
 	[132626] = { category="Portal", slow=true, cast=true }, -- Vale of Eternal Blossoms
 	[132620] = { category="Portal", slow=true, cast=true }, -- Vale of Eternal Blossoms
 	[120146] = { category="Portal", slow=true, cast=true }, -- Ancient Dalaran
+	[176246] = { category="Portal", slow=true, cast=true }, -- Stormshield
 }
 local utildata = {}
 function addon:UpdateUtilData()
@@ -325,7 +332,7 @@ local tfi = {
 	classwidth = 55,
 	specwidth = 55,
 	rolewidth = 55,
-	specialisationswidth = 210,
+	specialisationswidth = 226,
 	gap = 2,
 	edge = 5,
 	inset = 3,
@@ -422,7 +429,8 @@ function addon:OnInitialize()
 		WhisperMany = true,
 		HowMany = 4,
 		HowOften = 3,
-		foodlevel = 25,
+		foodlevel = 75,
+		flixirlevel = 200,
 		ignoreeating = false,
 		OldFlasksElixirs = false,
 		FeastTT = true,
@@ -772,14 +780,14 @@ function addon:GetTalentRowData()
 			tfi.rowdata[row].spec = unit.specname
 			tfi.rowdata[row].specicon = unit.specicon
 			if unit.talents and unit.tinfo and unit.tinfo.talents then
-			  -- positions 1-6 are talents in descending tier order
+			  -- positions 1-7 are talents in descending tier order
 			  for spellid, info in pairs(unit.tinfo.talents) do
-			    local pos = 7-info.tier
+			    local pos = 8-info.tier
 			    tfi.rowdata[row].specialisations[pos] = info
 			  end
 			end
-			-- position 7 is a spacer between talents and glyphs
-			-- position 8-10 are major glyphs, 11-13 are minor glyphs
+			-- position 8 is a spacer between talents and glyphs
+			-- position 9-11 are major glyphs, 12-14 are minor glyphs
 			wipe(majortmp)
 			wipe(minortmp)
 			if unit.talents and unit.tinfo and unit.tinfo.glyphs then
@@ -794,8 +802,8 @@ function addon:GetTalentRowData()
 			table.sort(majortmp, sortby_name_localized)
 			table.sort(minortmp, sortby_name_localized)
 			for j = 1,3 do
-			  tfi.rowdata[row].specialisations[7+j] = majortmp[j]
-			  tfi.rowdata[row].specialisations[10+j] = minortmp[j]
+			  tfi.rowdata[row].specialisations[8+j] = majortmp[j]
+			  tfi.rowdata[row].specialisations[11+j] = minortmp[j]
 			end
 			row = row + 1
 		end
@@ -1053,7 +1061,7 @@ function addon:CalculateReport()
 			local unit = raid.classes[class][name]
 			if unit.online then
 				local zonedin = true
-				local distance_thresh = 250 -- big enough to encompass nalak/galleon vicinity
+				local distance_thresh = 150000 -- big enough to encompass nalak/galleon vicinity
 				if not UnitIsVisible(unit.unitid) -- not in visible range
 				   and (thiszone ~= unit.zone -- different subzone
 				        or (unit.distance and unit.distance > distance_thresh))  -- or far in this world zone
@@ -1407,7 +1415,7 @@ function addon:ReadRaid()
 	elseif not IsInRaid() then -- party group
 		raid.isparty = true
 		raid.israid = false
-		addon:DistanceBegin()
+		--addon:DistanceBegin()
 		for i = 1, groupnum do
 			local unitid = "party" .. i
 			if i == groupnum then unitid = "player" end
@@ -1425,7 +1433,7 @@ function addon:ReadRaid()
 			   addon:Debug("MISSING RAIDID FOR: "..unitid.." "..(name or "unknown"))
 			end
 		end
-		addon:DistanceEnd()
+		--addon:DistanceEnd()
 	else -- raid group
 		if raid.isparty then -- Party has converted to Raid!
 			if profile.AutoShowDashRaid then
@@ -1437,11 +1445,11 @@ function addon:ReadRaid()
 		raid.isparty = false
 		raid.israid = true
 
-		addon:DistanceBegin()
+		--addon:DistanceBegin()
 		for i = 1, groupnum do
 			addon:ReadUnit("raid" .. i, i)
 		end
-		addon:DistanceEnd()
+		--addon:DistanceEnd()
 	end
 	raid.islfg = IsInGroup(LE_PARTY_CATEGORY_INSTANCE)
 	addon:DeleteOldUnits()
@@ -1528,6 +1536,10 @@ function addon:ReadUnit(unitid, unitindex)
 		end
 		raid.ClassNumbers[class] = raid.ClassNumbers[class] + 1
 		local rcn = raid.classes[class][name]
+		local hasbuff = rcn.hasbuff or {}
+		wipe(hasbuff)
+		wipe(rcn)
+		rcn.hasbuff = hasbuff
 		rcn.unitid = unitid
 		rcn.guid = UnitGUID(unitid) or 0
 		rcn.group = subgroup
@@ -1538,15 +1550,12 @@ function addon:ReadUnit(unitid, unitindex)
 		rcn.online = UnitIsConnected(unitid)
 		rcn.rank = rank
 		rcn.guild = guild
-		local hasbuff = rcn.hasbuff or {}
-		rcn.hasbuff = hasbuff
-		wipe(hasbuff)
 		addon:UpdateSpec(rcn)
 		spec = raid.classes[class][name] and raid.classes[class][name].spec
 		local mintimeleft = profile.abouttorunout * 60
 		local thetime = GetTime()
 		for b = 1, 32 do
-			local buffName, _, _, _, _, duration, expirationTime, unitCaster = UnitBuff(unitid, b)
+			local buffName, _, _, _, _, duration, expirationTime, unitCaster, _, _, spellId = UnitBuff(unitid, b)
 --			if duration and expirationTime then
 --				addon:Debug(buffName .. ":" .. duration .. ":" .. expirationTime .. ":")
 --			end
@@ -1559,12 +1568,16 @@ function addon:ReadUnit(unitid, unitindex)
 --				addon:Debug("running out")
 --				buffName = nil
 			elseif buffName then
-				if buffName == wellfed then
-					RBSToolScanner:Reset()
-					RBSToolScanner:SetUnitBuff(unitid, b)
-					hasbuff["foodz"] = getglobal('RBSToolScannerTextLeft2'):GetText()
-				elseif buffName == eating then
-					hasbuff["eating"] = true
+				if buffName == eating then
+					rcn.eating = true
+				elseif buffName == wellfed then
+					rcn.foodlevel, rcn.foodtext = addon:StatLevel(true, spellId, unitid, b)
+				elseif addon.allflixirs[buffName] then
+					local level, text = addon:StatLevel(false, spellId, unitid, b)
+					if level > (rcn.flixirlevel or 0) then
+						rcn.flixirlevel = level
+						rcn.flixirtext = text
+					end
 				end
 				local hb = hasbuff[buffName] or {}
 				hasbuff[buffName] = hb
@@ -1640,7 +1653,8 @@ function addon:ReadUnit(unitid, unitindex)
 		
 		rcn.readid = raid.readid
 		rcn.zone = zone
-		rcn.distance = addon:DistanceQuery(unitid)
+		--rcn.distance = addon:DistanceQuery(unitid)
+		rcn.distance = UnitDistanceSquared(unitid)
 		rcn.role = role
 		rcn.istank = istank
 		rcn.hasmana = hasmana
@@ -1663,6 +1677,113 @@ function addon:DeleteOldUnits()
 	end
 end
 
+
+addon.cons_cache_val = {}
+addon.cons_cache_str = {}
+
+function addon:StatLevel(isfood, spellId, unitid, b)
+	local statval, statstr = addon.cons_cache_val[spellId], addon.cons_cache_str[spellId]
+	if statval and statstr then return statval, statstr, true end
+
+	local valid
+	statval, statstr, valid = addon:StatLevelCalc(isfood, spellId, unitid, b)
+	if valid then 
+		addon.cons_cache_val[spellId], addon.cons_cache_str[spellId] = statval, statstr
+	end
+
+	return statval, statstr, valid
+end
+
+-- consumable exceptions, where the tooltip is wrong or not usable
+addon.cons_exceptions = {
+	[176151] = 100,			-- Oralius' Whispering Crystal (incorrect tooltip)
+	[79480]  = { 67, ARMOR },	-- Elixir of Deep Earth (incorrect tooltip)
+	[105681] = { 67, ARMOR },	-- Mantid Elixir (incorrect tooltip)
+  	[66623]  = { 98, SpellName(66476) },	-- bountiful feast: 98 ap (unconfirmed)
+}
+
+function addon:StatLevelCalc(isfood, spellId, unitid, b)
+	-- exceptions
+	local exc = addon.cons_exceptions[spellId]
+	if exc then
+		local statval, statstr
+		if type(exc) == "table" then
+			statval, statstr = unpack(exc)
+		else
+			statval = exc
+			statstr = SpellName(spellId)
+		end
+		return statval, statval.." "..statstr, true
+	end
+
+	RBSToolScanner:Reset() -- scan the tooltip
+	RBSToolScanner:SetUnitBuff(unitid, b)
+	local text = RBSToolScannerTextLeft2:GetText()
+
+   	statval = 0
+   	for v in string.gmatch(text or "", "%d+") do  -- assume largest number in tooltip is the statval
+      		statval = math.max(statval,tonumber(v))
+   	end
+	if statval <= 0 then -- detection failed
+		return 0, "???"
+	end
+
+	-- try to detect the stat name on the consumable tooltip
+        addon.cons_stats = addon.cons_stats or {
+        	ITEM_MOD_STRENGTH_SHORT,
+       	 	ITEM_MOD_AGILITY_SHORT,
+        	ITEM_MOD_INTELLECT_SHORT,
+        	ITEM_MOD_CRIT_RATING_SHORT,
+        	ITEM_MOD_HASTE_RATING_SHORT,
+        	ITEM_MOD_MASTERY_RATING_SHORT,
+		STAT_MULTISTRIKE,
+		STAT_VERSATILITY,
+		ARMOR,
+        	ITEM_MOD_ATTACK_POWER_SHORT,
+        	ITEM_MOD_SPELL_POWER_SHORT,
+        	ITEM_MOD_PARRY_RATING_SHORT,
+        	ITEM_MOD_DODGE_RATING_SHORT,
+        	ITEM_MOD_MANA_REGENERATION_SHORT,
+		SPELL_STATALL, -- crystal of insanity
+        	ITEM_MOD_SPIRIT_SHORT,  -- sometimes is secondary
+        	ITEM_MOD_STAMINA_SHORT, -- should come last, as often appears as secondary stat
+      	}
+      	text = " "..text:upper().." "
+	local mainstat
+      	for _,stat in ipairs(addon.cons_stats) do
+        	if text:find(" "..stat:upper().." ") then
+          		mainstat = stat
+          		break
+		end
+        end
+
+	-- normalize stats
+   	if isfood then -- normalize for Epicurean racial
+		local race = select(2,UnitRace(unitid))
+		if not race then 
+			return statval, "???" 
+		elseif race == "Pandaren" then 
+      			statval = statval / 2
+		end
+   	end
+
+	if not mainstat then
+		return statval, "???"
+	end
+
+        statstr = statval.." "..mainstat
+
+   	if statval >= 40 and mainstat == ITEM_MOD_STAMINA_SHORT then -- normalize for MoP/WoD stam bonus
+      		statval = statval / 1.5
+	elseif mainstat == ARMOR then 
+		-- might need to normalize this, although MoP armor elixirs just seem OP atm
+		-- statval = statval / 2
+   	end
+
+	return statval, statstr, true
+end
+
+--[[
 function addon:DistanceBegin()
   if incombat or not profile.checkzone then return end
   addon.dist_info = addon.dist_info or {}
@@ -1710,6 +1831,8 @@ function addon:DistanceEnd()
   if GetCurrentMapContinent() ~= d.oldcont then SetMapZoom(d.oldcont) end
   if GetCurrentMapAreaID() ~= d.oldmap then SetMapByID(d.oldmap) end
 end
+
+--]]
 
 local linelimit = 150
 function addon:Say(msg, player, prepend, channel)
@@ -2113,14 +2236,14 @@ function addon:SetupFrames()
 		button:Show()
 		-- talent buttons, numbered ascending left-to-right, right-anchored
 		tfi.rowframes[i].specialisations = {}
-		for j = 13, 1, -1 do
+		for j = 14, 1, -1 do
 			button = CreateFrame("Button", nil, rowframe)
 			tfi.rowframes[i].specialisations[j] = button
 			button:SetWidth(tfi.buttonsize)
 			button:SetHeight(tfi.buttonsize)
 			button:SetNormalTexture("Interface\\Icons\\Ability_ThunderBolt")
 			button:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight")
-			if j == 13 then
+			if j == 14 then
 			  button:SetPoint("TOPRIGHT", rowframe, "TOPRIGHT", 0 - tfi.inset, 0)
 			else
 			  button:SetPoint("TOPRIGHT", tfi.rowframes[i].specialisations[j + 1], "TOPLEFT", 0, 0)
@@ -2934,8 +3057,11 @@ function addon:Tooltip(self, title, list, tlist, blist, slist, messagelist, item
 					name = caster
 					caster = tmp
 				end
-				if caster and caster:match("^\?") then
+				-- beacon support
+				if caster and caster:match("^\?") then 
 					caster = "???"
+				else
+					caster = caster:gsub(" +$","")
 				end
 				if caster ~= "invert_table" then
 					GameTooltip:AddDoubleLine(addon:ClassColor(name), addon:ClassColor(caster), 

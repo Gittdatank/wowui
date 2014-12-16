@@ -19,7 +19,7 @@ RaidRoll_LootTracker: disabled
 RareCoordinator: disabled
 Raven: disabled
 Raven_Options: disabled
-SellJunk: disabled
+SellJunk: enabled
 SexyMap: disabled
 ShadowedUnitFrames: disabled
 ShadowedUF_Options: disabled
@@ -111,3 +111,4 @@ VEM-Party-WoD: enabled
 VEM-WorldEvents: enabled
 VEM-Sound-Default: enabled
 VEM-StatusBarTimers: disabled
+BigWigs_LustingOnTrash: disabled

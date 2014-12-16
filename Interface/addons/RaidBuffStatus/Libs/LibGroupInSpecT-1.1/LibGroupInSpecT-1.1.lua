@@ -72,7 +72,7 @@
 --     Returns an array with the set of unit ids for the current group.
 --]]
 
-local MAJOR, MINOR = "LibGroupInSpecT-1.1", tonumber (("$Revision: 71 $"):match ("(%d+)") or 0)
+local MAJOR, MINOR = "LibGroupInSpecT-1.1", tonumber (("$Revision: 73 $"):match ("(%d+)") or 0)
 
 if not LibStub then error(MAJOR.." requires LibStub") end
 local lib = LibStub:NewLibrary (MAJOR, MINOR)
@@ -523,11 +523,12 @@ function lib:BuildInfo (unit)
   -- If GetPlayerInfoByGUID didn't return the class, we can't do talents yet
   if info.class_id then
     info.spec_group = GetActiveSpecGroup (is_inspect)
+    wipe (info.talents) -- Due to spec-specific talents we might leave things in on a spec-change otherwise
     for tier = 1, MAX_TALENT_TIERS do
       for col = 1, NUM_TALENT_COLUMNS do
         local talent, sel = self:GetCachedTalentInfo (info.class_id, tier, col, info.spec_group, is_inspect, unit)
-        if talent and talent.talent_id then
-          info.talents[talent.talent_id] = sel and talent or nil -- Set/clear as needed
+        if talent and talent.talent_id and sel then
+          info.talents[talent.talent_id] = talent
         end
       end
     end
@@ -732,15 +733,24 @@ function lib:CHAT_MSG_ADDON (prefix, datastr, scope, sender)
   info.spec_role           = gspecs[gspec_id].role
   info.spec_role_detailed  = global_spec_id_roles_detailed[gspec_id]
 
+  local need_inspect = nil
   info.talents = wipe (info.talents or {})
   local talents = self.static_cache.talents[info.class_id]
   if talents then -- The group entry is created before we have inspect-data, so may not have cached talents yet
     for i = msg_idx.talents, msg_idx.glyphs - 1 do
       local talent_id = tonumber (data[i])
       if talent_id and talent_id > 0 then
-        info.talents[talent_id] = talents[talent_id]
+        if talents[talent_id] then
+          info.talents[talent_id] = talents[talent_id]
+        else
+          -- While we had some talents for this class, we apparently didn't have all for this particular spec, so mark for inspect
+          need_inspect = 1
+        end
       end
     end
+  else
+    -- Talents weren't pre-cached, so mark for inspect
+    need_inspect = 1
   end
 
   local glyph_info = self.static_cache.glyph_info
@@ -767,7 +777,8 @@ function lib:CHAT_MSG_ADDON (prefix, datastr, scope, sender)
     end
   end
 
-  self.state.mainq[guid], self.state.staleq[guid] = nil, nil
+  self.state.mainq[guid], self.state.staleq[guid] = need_inspect, nil
+  if need_inspect then self.frame:Show () end
 
   --[===[@debug@
   debug ("Firing LGIST update event for unit "..unit..", GUID "..guid) --@end-debug@]===]

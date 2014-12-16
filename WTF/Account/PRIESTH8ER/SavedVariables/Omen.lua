@@ -17,13 +17,13 @@ Omen3DB = {
 		["Gitt - Arthas"] = "Gitt - Tank",
 		["Spih - Arthas"] = "Spih - Arthas",
 		["Gimm - Cho'gall"] = "Gimm - Cho'gall",
-		["Burk - Arthas"] = "Burk - Arthas",
+		["Git - Azuremyst"] = "Git - Azuremyst",
 		["Spih - Cho'gall"] = "Spih - Cho'gall",
-		["Git - Cho'gall"] = "Git - Cho'gall",
 		["Greny - Azuremyst"] = "Greny - Azuremyst",
+		["Git - Cho'gall"] = "Git - Cho'gall",
 		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
 		["Lihte - Cho'gall"] = "Lihte - Cho'gall",
-		["Git - Azuremyst"] = "Git - Azuremyst",
+		["Burk - Arthas"] = "Burk - Arthas",
 		["Git - Arthas"] = "Git - Mar 2014",
 	},
 	["profiles"] = {
@@ -35,46 +35,46 @@ Omen3DB = {
 			["PositionH"] = 81.9999847412109,
 		},
 		["Got - Dec 2014"] = {
-			["ShowWith"] = {
-				["HideWhenOOC"] = true,
-			},
-			["MinimapIcon"] = {
-				["hide"] = true,
-			},
 			["PositionW"] = 242.045654296875,
-			["TitleBar"] = {
-				["ShowTitleBar"] = false,
-			},
 			["Shown"] = false,
-			["Warnings"] = {
-				["Flash"] = false,
-			},
-			["FrameStrata"] = "4-HIGH",
 			["PositionH"] = 161.350051879883,
 			["VGrip2"] = 139.176333652014,
 			["PositionY"] = 162.100158691406,
-			["PositionX"] = 459.849731445313,
 			["ClickThrough"] = true,
 			["Locked"] = true,
 			["Background"] = {
+				["EdgeSize"] = 10,
+				["BorderTexture"] = "RothSquare",
 				["Color"] = {
 					["a"] = 0.540000021457672,
 					["r"] = 0,
 					["g"] = 0,
 					["b"] = 0,
 				},
-				["EdgeSize"] = 10,
 				["Texture"] = "Solid",
-				["BorderTexture"] = "RothSquare",
 			},
+			["MinimapIcon"] = {
+				["hide"] = true,
+			},
+			["ShowWith"] = {
+				["HideWhenOOC"] = true,
+			},
+			["FrameStrata"] = "4-HIGH",
 			["VGrip1"] = 102.869464003663,
+			["PositionX"] = 459.849731445313,
+			["Warnings"] = {
+				["Flash"] = false,
+			},
+			["TitleBar"] = {
+				["ShowTitleBar"] = false,
+			},
 			["Bar"] = {
 				["FontSize"] = 8,
+				["ShowHeadings"] = false,
+				["Texture"] = "Minimalist",
+				["Font"] = "DorisPP",
 				["TPSWindow"] = 15,
 				["Height"] = 22,
-				["ShowHeadings"] = false,
-				["Font"] = "DorisPP",
-				["Texture"] = "Minimalist",
 			},
 		},
 		["Gyit - Area 52"] = {
@@ -82,46 +82,46 @@ Omen3DB = {
 			["PositionY"] = 665.769275726923,
 		},
 		["Git - Mar 2014"] = {
+			["ShowWith"] = {
+				["HideWhenOOC"] = true,
+			},
+			["MinimapIcon"] = {
+				["hide"] = true,
+			},
 			["PositionW"] = 242.045654296875,
+			["PositionX"] = 459.849731445313,
 			["Shown"] = false,
+			["Warnings"] = {
+				["Flash"] = false,
+			},
+			["FrameStrata"] = "4-HIGH",
 			["PositionH"] = 161.350051879883,
 			["VGrip2"] = 139.176333652014,
 			["PositionY"] = 162.100158691406,
+			["TitleBar"] = {
+				["ShowTitleBar"] = false,
+			},
 			["ClickThrough"] = true,
 			["Locked"] = true,
 			["Background"] = {
-				["EdgeSize"] = 10,
-				["BorderTexture"] = "RothSquare",
 				["Color"] = {
 					["a"] = 0.540000021457672,
 					["b"] = 0,
 					["g"] = 0,
 					["r"] = 0,
 				},
+				["EdgeSize"] = 10,
 				["Texture"] = "Solid",
+				["BorderTexture"] = "RothSquare",
 			},
-			["MinimapIcon"] = {
-				["hide"] = true,
-			},
-			["ShowWith"] = {
-				["HideWhenOOC"] = true,
-			},
-			["FrameStrata"] = "4-HIGH",
 			["VGrip1"] = 102.869464003663,
-			["PositionX"] = 459.849731445313,
-			["Warnings"] = {
-				["Flash"] = false,
-			},
-			["TitleBar"] = {
-				["ShowTitleBar"] = false,
-			},
 			["Bar"] = {
 				["FontSize"] = 8,
-				["ShowHeadings"] = false,
-				["Texture"] = "Minimalist",
-				["Font"] = "DorisPP",
 				["TPSWindow"] = 15,
 				["Height"] = 22,
+				["ShowHeadings"] = false,
+				["Font"] = "DorisPP",
+				["Texture"] = "Minimalist",
 			},
 		},
 		["Ghit - Azuremyst"] = {

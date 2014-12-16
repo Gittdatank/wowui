@@ -27,7 +27,7 @@ AucAdvancedStatPurchasedData = {
 				[2459] = "0:1;18;49844.2;49844.2;49844.2",
 			},
 			["daily"] = {
-				["created"] = 1418568511,
+				["created"] = 1418741904,
 			},
 		},
 		["Cho'gall-Horde"] = {
@@ -226,7 +226,7 @@ AucAdvancedStatPurchasedData = {
 				[76885] = "0:2;3;8644932.3;9412056.7;9699728.4",
 			},
 			["daily"] = {
-				["created"] = 1418568511,
+				["created"] = 1418741904,
 			},
 		},
 		["Azuremyst-Horde"] = {
@@ -268,7 +268,7 @@ AucAdvancedStatPurchasedData = {
 				[54849] = "0:1;2;65265.1;65265.1;65265.1",
 			},
 			["daily"] = {
-				["created"] = 1418568511,
+				["created"] = 1418741904,
 			},
 		},
 	},

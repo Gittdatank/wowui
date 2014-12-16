@@ -76,3 +76,5 @@ VEM-Party-WoD: enabled
 VEM-WorldEvents: enabled
 VEM-Sound-Default: enabled
 VEM-StatusBarTimers: disabled
+SellJunk: enabled
+BigWigs_LustingOnTrash: disabled

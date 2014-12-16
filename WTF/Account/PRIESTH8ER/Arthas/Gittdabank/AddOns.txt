@@ -210,7 +210,7 @@ Scrap_Merchant: disabled
 Scrap_Options: disabled
 Scrap_Spotlight: disabled
 Scrap_Visualizer: disabled
-SellJunk: disabled
+SellJunk: enabled
 SexyMap: disabled
 ShadowedUF_Options: disabled
 ShadowedUnitFrames: disabled
@@ -387,3 +387,4 @@ VEM-Draenor: enabled
 VEM-Highmaul: enabled
 GatherMate2: enabled
 GatherMate2_Data: enabled
+BigWigs_LustingOnTrash: disabled

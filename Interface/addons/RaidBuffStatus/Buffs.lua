@@ -3,7 +3,7 @@ local L = vars.L
 local addon = RaidBuffStatus
 local report = addon.report
 local raid = addon.raid
-RBS_svnrev["Buffs.lua"] = select(3,string.find("$Revision: 690 $", ".* (.*) .*"))
+RBS_svnrev["Buffs.lua"] = select(3,string.find("$Revision: 699 $", ".* (.*) .*"))
 
 local profile
 function addon:UpdateProfileBuffs()
@@ -110,8 +110,6 @@ local cataflasks = {
 	SpellName(79471), -- Flask of the Winds
 	SpellName(79472), -- Flask of Titanic Strength
 	SpellName(94160), -- Flask of Flowing Water
-	SpellName(105617), -- Alchemist's Flask - MoP but not as good as other flasks
-	SpellName(127230), -- Crystal of Insanity - MoP but not as good as other flasks
 }
 
 local mopflasks = {
@@ -120,7 +118,21 @@ local mopflasks = {
 	SpellName(105693), -- Flask of Falling Leaves
 	SpellName(105694), -- Flask of the Earth
 	SpellName(105696), -- Flask of Winter\'s Bite
+	SpellName(105617), -- Alchemist's Flask
+	SpellName(127230), -- Crystal of Insanity
 } 
+
+local wodflasks = {
+        SpellName(156064), -- Flask of Greater Draenic Agility
+        SpellName(156084), -- Flask of Greater Draenic Stamina
+        SpellName(156079), -- Flask of Greater Draenic Intellect
+        SpellName(156080), -- Flask of Greater Draenic Strength
+        SpellName(156073), -- Draenic Agility Flask
+        SpellName(156077), -- Draenic Stamina Flask
+        SpellName(156070), -- Draenic Intellect Flask
+        SpellName(156071), -- Draenic Strength Flask
+	SpellName(176151), -- Whispers of Insanity
+}
 
 local tbcbelixirs = {
 	SpellName(11390),-- Arcane Elixir
@@ -212,50 +224,36 @@ local mopgelixirs = {
 local oldflasks = {}
 local oldbelixirs = {}
 local oldgelixirs = {}
-for _,t in pairs({tbcflasks,wotlkflasks,cataflasks}) do
+for _,t in pairs({tbcflasks,wotlkflasks,cataflasks,mopflasks}) do
    for _,v in ipairs (t) do
 	table.insert(oldflasks,v)
    end
 end
-for _,t in pairs({tbcbelixirs,wotlkbelixirs,catabelixirs}) do
+for _,t in pairs({tbcbelixirs,wotlkbelixirs,catabelixirs,mopbelixirs}) do
    for _,v in ipairs (t) do
 	table.insert(oldbelixirs,v)
    end
 end
-for _,t in pairs({tbcgelixirs,wotlkgelixirs,catagelixirs}) do
+for _,t in pairs({tbcgelixirs,wotlkgelixirs,catagelixirs,mopgelixirs}) do
    for _,v in ipairs (t) do
 	table.insert(oldgelixirs,v)
    end
 end
 
 -- last expansion flixirs
-local lastflasks   = cataflasks
-local lastbelixirs = catabelixirs
-local lastgelixirs = catagelixirs
+local lastflasks   = mopflasks
+local lastbelixirs = mopbelixirs
+local lastgelixirs = mopgelixirs
 
 -- current expansion flixirs
-local currflasks   = mopflasks
-local currbelixirs = mopbelixirs
-local currgelixirs = mopgelixirs
+local currflasks   = wodflasks
+local currbelixirs = {}
+local currgelixirs = {}
 
--- current and last expansion
-local recentflasks   = {}
-local recentbelixirs = {}
-local recentgelixirs = {}
-
-for _,t in pairs({lastflasks, currflasks}) do
+addon.allflixirs = {}
+for _,t in pairs({oldflasks,oldbelixirs,oldgelixirs,currflasks,currbelixirs,currgelixirs}) do
   for _,v in ipairs (t) do
-	table.insert(recentflasks,v)
-  end
-end
-for _,t in pairs({lastbelixirs, currbelixirs}) do
-  for _,v in ipairs (t) do
-	table.insert(recentbelixirs,v)
-  end
-end
-for _,t in pairs({lastgelixirs, currgelixirs}) do
-  for _,v in ipairs (t) do
-	table.insert(recentgelixirs,v)
+  	addon.allflixirs[v] = true
   end
 end
 
@@ -372,8 +370,10 @@ local apbuff = {
 	SpellName(57330),	-- Horn of Winter
 }
 
+local cheetah_spellid = 5118 	-- Aspect of the Cheetah
+local cheetah_glyphid = 119462 	-- glyph of Aspect of the Cheetah
 local badaspects = {
-	SpellName(5118), -- Aspect of the Cheetah
+	SpellName(cheetah_spellid),
 	SpellName(13159), -- Aspect of the Pack
 }
 
@@ -388,6 +388,7 @@ local defensive_stance = SpellName(71)
 local warrstances = {
 	defensive_stance,
 	SpellName(2457), -- Battle Stance
+	SpellName(156291), -- Gladiator Stance (prot only)
 }
 
 local scrollofagility = {
@@ -918,7 +919,12 @@ local BF = {
 			if class == "HUNTER" then
 				report.checking.cheetahpack = true
 				for _, v in ipairs(badaspects) do
-					if unit.hasbuff[v] then
+					if unit.hasbuff[v] 
+					   and not (
+					     v == SpellName(cheetah_spellid)
+					     and (not unit.talents or 
+					          unit.tinfo.glyphs[cheetah_glyphid]) -- negates the daze
+					   ) then
 						local caster = unit.hasbuff[v].caster
 						if not caster or #caster == 0 then
 						   caster = name -- caster is nil when out of range
@@ -1452,68 +1458,31 @@ local BF = {
 		chat = BS[35272], -- Well Fed
 		main = function(self, name, class, unit, raid, report)
 			local missingbuff = true
-			local foodz = unit.hasbuff["foodz"]
-			local eating = unit.hasbuff["eating"]
-			if foodz then
-			   local statval = 0
-			   for v in string.gmatch(foodz, "%d+") do  -- assume largest number in tooltip is the statval
-			      statval = math.max(statval,tonumber(v)) 
-			   end
-			   if select(2,UnitRace(unit.unitid)) == "Pandaren" then -- normalize for Epicurean racial
-			      statval = statval / 2
-			   end
-			   if statval >= 40 and string.find(foodz, ITEM_MOD_STAMINA_SHORT) then -- normalize for MoP stam bonus
-			      statval = statval / 1.5
-			   end
-			   if statval >= profile.foodlevel or
-			      select(11,UnitBuff(unit.unitid, foods[1])) == 66623 then -- bountiful feast
+			local level = unit.foodlevel
+			local label = name
+			if level then
+			   if level >= profile.foodlevel then
 			      missingbuff = false
-			   elseif statval > 0 then -- try to detect the stat on the slacking food
-			      addon.foodstats = addon.foodstats or {
-			        ITEM_MOD_STRENGTH_SHORT,
-			        ITEM_MOD_AGILITY_SHORT,
-			        ITEM_MOD_INTELLECT_SHORT,
-			        ITEM_MOD_PARRY_RATING_SHORT,
-			        ITEM_MOD_DODGE_RATING_SHORT,
-			        ITEM_MOD_CRIT_RATING_SHORT,
-			        ITEM_MOD_HASTE_RATING_SHORT,
-			        ITEM_MOD_MASTERY_RATING_SHORT,
-			        ITEM_MOD_EXPERTISE_RATING_SHORT,
-			        ITEM_MOD_HIT_RATING_SHORT,
-			        ITEM_MOD_ATTACK_POWER_SHORT,
-			        ITEM_MOD_SPELL_POWER_SHORT,
-			        ITEM_MOD_MANA_REGENERATION_SHORT,
-			        ITEM_MOD_SPIRIT_SHORT,  -- sometimes is secondary
-			        ITEM_MOD_STAMINA_SHORT, -- should come last, as often appears as secondary stat
-			      }
-			      local statstr = "" 
-			      foodz = " "..foodz.." "
-			      for _,stat in ipairs(addon.foodstats) do
-			        if foodz:upper():find(" "..stat:upper().." ") then
-				  statstr = " "..stat
-				  break
-				end
-			      end
-			      name = name.."("..statval..statstr..")"
+			   elseif unit.foodtext then
+			      label = name.."("..unit.foodtext..")"
 			   end
 			end
                         
+			if missingbuff and unit.eating and profile.ignoreeating then
+				missingbuff = false -- assume they are eating acceptable food
+			end
+
 			if missingbuff then
 				for _, v in ipairs(foods) do
 					if unit.hasbuff[v] then
-						missingbuff = false
-			                        table.insert(report.slackingfoodlist, name)
+			                        table.insert(report.slackingfoodlist, label)
 						break
 					end
 				end
 			end
 
-			if missingbuff and eating and profile.ignoreeating then
-				missingbuff = false -- assume they are eating acceptable food
-			end
-
 			if missingbuff then
-				if eating then
+				if unit.eating then
 					name = name.."("..L["Eating"]..")"
 					report.foodlist.notes = true
 				end
@@ -1558,61 +1527,17 @@ local BF = {
 		end,
 		main = function(self, name, class, unit, raid, report)
 			report.checking.flaskir = true
-			local cflasks = currflasks
-			local cbelixirs = currbelixirs
-			local cgelixirs = currgelixirs
-			if profile.OldFlasksElixirs then
-				cflasks = recentflasks
-				cbelixirs = recentbelixirs
-				cgelixirs = recentgelixirs
-			end
-			if not unithasbuff(unit, cflasks) then
-			  	for _, v in ipairs(oldflasks) do
-					if unit.hasbuff[v] then -- slacking flask
-						table.insert(report.oldflixirlist, name .. "(" .. v .. ")")
-						break
-					end
-			  	end
-				local numbbelixir = 0
-				local numbgelixir = 0
-				for _, v in ipairs(cbelixirs) do
-					if unit.hasbuff[v] then
-						numbbelixir = 1
-						break
-					end
+
+			local level = unit.flixirlevel
+			if not level then -- no flask or elixir
+				table.insert(report.flasklist, name) 
+			elseif level < profile.flixirlevel then -- slacking flixir
+				local label = name
+				if unit.flixirtext then
+					label = label.."("..unit.flixirtext..")"
 				end
-				if numbbelixir == 0 then
-			  	  for _, v in ipairs(oldbelixirs) do
-					if unit.hasbuff[v] then -- slacking elixir
-						table.insert(report.oldflixirlist, name .. "(" .. v .. ")")
-						break
-					end
-				  end
-			  	end
-				for _, v in ipairs(cgelixirs) do
-					if unit.hasbuff[v] then
-						numbgelixir = 1
-						break
-					end
-				end
-				if numbgelixir == 0 then
-			  	  for _, v in ipairs(oldgelixirs) do
-					if unit.hasbuff[v] then -- slacking elixir
-						table.insert(report.oldflixirlist, name .. "(" .. v .. ")")
-						break
-					end
-				  end
-			  	end
-				local totalelixir = numbbelixir + numbgelixir
-				if totalelixir == 0 then
-					table.insert(report.flasklist, name) -- no flask or elixir
-				elseif totalelixir == 1 then
-					if numbbelixir == 0 then
-						table.insert(report.belixirlist, name)
-					else
-						table.insert(report.gelixirlist, name)
-					end
-				end
+				table.insert(report.oldflixirlist, label)
+				table.insert(report.flasklist, name)
 			end
 		end,
 		post = nil,
@@ -1629,6 +1554,7 @@ local BF = {
 		partybuff = nil,
 		consumable = true,
 	},
+--[[
 	belixir = {
 		order = 480,
 		list = "belixirlist",
@@ -1696,6 +1622,7 @@ local BF = {
 		partybuff = nil,
 		consumable = true,
 	},
+--]]
 
 	wepbuff = {
 		order = 410,
@@ -2400,50 +2327,82 @@ local BF = {
 		selfonlybuff = true,
 		timer = false,
 		class = { PALADIN = true, },
-		buffinfo = { { "PALADIN", 53563, 1, 1 } },
-		chat = BS[53563], -- Beacon of light
+		beaconspells = { 53563, 156910 },
+		chat = BS[53563].."/"..BS[156910], -- Beacon of light/beacon of faith
 		pre = function(self, raid, report)
 			initreporttable("gavebeacon")
 			report.gavebeacon.invert_table = true
-			report.hpallys = generic_buffers("beacon")
-			report.beaconunknown = 0
+			report.hpallys = wipe(report.hpallys or {})
+    			for name,unit in pairs(raid.classes.PALADIN) do
+			  if unit.spec == 1 then -- holy
+			    if unit.talents and unit.tinfo and unit.tinfo.talents 
+			       and unit.tinfo.talents[21668] -- beacon of faith talentid
+			      then
+			      report.hpallys[name] = 2 -- has both beacons
+			    else -- no talent or missing info, assume light only
+			      report.hpallys[name] = 1 
+			    end
+			  end
+			end
+			report.beaconunknown1 = 0
+			report.beaconunknown2 = 0
 			if next(report.hpallys) then
 				report.checking.beacon = true
 			end
 		end,
-		recordcaster = function(caster, name)
+		recordcaster = function(bidx, caster, name)
+			-- bidx is the beacon index: 1 = light, 2 = faith
 			if not caster or #caster == 0 then
-				report.beaconunknown = (report.beaconunknown or 0) + 1
-				caster = "?"..report.beaconunknown
+				local unknownctr = "beaconunknown"..bidx
+				report[unknownctr] = (report[unknownctr] or 0) + 1
+				caster = "?"..report[unknownctr]
 			end
+			caster = caster .. string.rep(" ",bidx-1) -- append whitespace for uniqueness
 			report.gavebeacon[caster] = name
 		end,
 		main = function(self, name, class, unit, raid, report)
 			-- beacon is particularly gross becuse one unit can have multiple beacons
 			-- also when targets are ranged/phased we can't tell who cast their beacon buff
-			local hasbuff = unit.hasbuff[BS[53563]]
+		    for bidx, spellid in ipairs(addon.BF.beacon.beaconspells) do
+			local hasbuff = unit.hasbuff[BS[spellid]]
 			if hasbuff then
 			   if hasbuff.casterlist then
 				for _,caster in pairs(hasbuff.casterlist) do
-					addon.BF.beacon.recordcaster(caster, name)
+					addon.BF.beacon.recordcaster(bidx, caster, name)
 				end
 			   else
-				addon.BF.beacon.recordcaster(hasbuff.caster, name)
+				addon.BF.beacon.recordcaster(bidx, hasbuff.caster, name)
 			   end
 			end
+		    end
 		end,
 		post = function(self, raid, report)
-			for _, caster in pairs(report.hpallys) do
-				if not report.gavebeacon[caster] then
-					table.insert(report.beaconlist, caster)
-				end
+			report.beaconmissing1 = 0
+			report.beaconmissing2 = 0
+			for caster, cnt in pairs(report.hpallys) do -- pass 1: see how many are missing
+			  for bidx=1,cnt do
+			    if not report.gavebeacon[caster..string.rep(" ",bidx-1)] then
+			      local missingctr = "beaconmissing"..bidx
+			      report[missingctr] = report[missingctr] + 1
+			      report["beaconmissingcaster"..bidx] = caster
+			    end
+			  end
 			end
-			if report.beaconunknown == #report.beaconlist then -- we see the right number of beacons
-				if report.beaconunknown == 1 then -- fixup report list if we can
-					report.gavebeacon[report.beaconlist[1]] = report.gavebeacon["?1"]
-					report.gavebeacon["?1"] = nil
-				end
-				wipe(report.beaconlist)
+			for bidx=1,2 do -- pass 2: build the slacker list
+			  if report["beaconmissing"..bidx] == report["beaconunknown"..bidx] then -- we see the right number of beacons
+			    if report["beaconmissing"..bidx] == 1 then -- fixup report list if we can
+				local bogusentry = "?1"..string.rep(" ",bidx-1)
+				report.gavebeacon[report["beaconmissingcaster"..bidx]] = report.gavebeacon[bogusentry]
+				report.gavebeacon[bogusentry] = nil
+			    end
+			  else
+			    for caster, cnt in pairs(report.hpallys) do 
+			      if cnt >= bidx and not report.gavebeacon[caster..string.rep(" ",bidx-1)] then
+				table.insert(report.beaconlist, caster)
+				report.hpallys[caster] = 0 -- prevent duplicates in list
+			      end
+			    end
+			  end
 			end
 		end,
 		icon = BSI[53563], -- Beacon of light
@@ -2698,7 +2657,7 @@ local BF = {
 			local needspet = false
 			local haspet = false
 			if class == "HUNTER" then
-			needspet = true
+				needspet = not unit.hasbuff[BS[155228]] -- Lone Wolf
 			elseif class == "WARLOCK" then
 				needspet = not unit.hasbuff[BS[108503]] -- Grimoire of Sacrifice
 			elseif class == "DEATHKNIGHT" then

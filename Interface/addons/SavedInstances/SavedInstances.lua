@@ -13,7 +13,7 @@ local maxdiff = 16 -- max number of instance difficulties
 local maxcol = 4 -- max columns per player+instance
 
 addon.svnrev = {}
-addon.svnrev["SavedInstances.lua"] = tonumber(("$Revision: 410 $"):match("%d+"))
+addon.svnrev["SavedInstances.lua"] = tonumber(("$Revision: 413 $"):match("%d+"))
 
 -- local (optimal) references to provided functions
 local table, math, bit, string, pairs, ipairs, unpack, strsplit, time, type, wipe, tonumber, select, strsub = 
@@ -142,8 +142,14 @@ addon.WorldBosses = {
   --[860] = { quest=nil, expansion=4, level=90 }, -- Xuen
   [861] = { quest=nil,   expansion=4, level=90 }, -- Ordos
 
+  --[[
   [1291] = { quest=37460,  expansion=5, level=100 }, -- Drov the Ruiner
-  [1211] = { quest=37462,  expansion=5, level=100 }, -- Tarina the Ageless
+  [1211] = { quest=37462,  expansion=5, level=100 }, -- Tarlna the Ageless
+  --]]
+  [1211] = { quest=37462,  expansion=5, level=100, -- Drov/Tarlna share a loot and quest atm
+             name=select(2,EJ_GetCreatureInfo(1,1211)).."/"..select(2,EJ_GetCreatureInfo(1,1291))}, 
+  [1291] = { remove=true }, -- Drov cleanup
+
   [1262] = { quest=37464,  expansion=5, level=100 }, -- Rukhmar
 }
 
@@ -693,6 +699,7 @@ addon.transInstance = {
   [600] = 215,  -- Drak'Tharon: ticket 105 deDE
   [560] = 183,  -- Escape from Durnholde Keep: ticket 124 deDE
   [531] = 161,  -- AQ temple: ticket 137 frFR
+  [1228] = 897, -- Highmaul: ticket 175 ruRU
 }
 
 -- some instances (like sethekk halls) are named differently by GetSavedInstanceInfo() and LFGGetDungeonInfoByID()
@@ -981,6 +988,9 @@ function addon:UpdateInstanceData()
     end
     info.name = info.name or "UNKNOWN"..eid
     local instance = vars.db.Instances[info.name]
+   if info.remove then -- cleanup hook
+    vars.db.Instances[info.name] = nil
+   else
     if not instance then
       added = added + 1
       instance = {}
@@ -992,6 +1002,7 @@ function addon:UpdateInstanceData()
     instance.RecLevel = info.level
     instance.Raid = true
     wbid_to_name[eid] = info.name
+   end
   end
 
   -- instance merging: this algorithm removes duplicate entries created by client locale changes using the same database

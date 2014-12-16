@@ -63,39 +63,39 @@ SkadaDB = {
 			},
 		},
 		["Got - Dec 2014"] = {
-			["report"] = {
-				["number"] = 7,
-				["mode"] = "Damage taken by spell",
-				["target"] = "Aprilseventh",
-				["channel"] = "party",
-			},
-			["tooltiprows"] = 10,
 			["windows"] = {
 				{
 					["barheight"] = 11,
-					["bartexture"] = "Minimalist",
-					["barwidth"] = 267.657745361328,
-					["barfontsize"] = 7,
-					["y"] = 0,
-					["barfont"] = "DorisPP",
 					["barslocked"] = true,
-					["x"] = 402.417297363281,
-					["point"] = "BOTTOM",
 					["background"] = {
 						["height"] = 258.045837402344,
 					},
-					["mode"] = "Damage",
+					["y"] = 0,
+					["barfont"] = "DorisPP",
 					["title"] = {
-						["height"] = 14,
 						["font"] = "DorisPP",
 						["fontsize"] = 9,
+						["height"] = 14,
 						["texture"] = "Flat",
 					},
+					["mode"] = "Damage",
+					["barwidth"] = 267.657745361328,
+					["point"] = "BOTTOM",
+					["barfontsize"] = 7,
+					["bartexture"] = "Minimalist",
+					["x"] = 402.417297363281,
 				}, -- [1]
 			},
 			["icon"] = {
 				["hide"] = true,
 			},
+			["report"] = {
+				["number"] = 7,
+				["channel"] = "party",
+				["target"] = "Aprilseventh",
+				["mode"] = "Damage taken by spell",
+			},
+			["tooltiprows"] = 10,
 			["reset"] = {
 				["join"] = 2,
 			},
@@ -139,38 +139,38 @@ SkadaDB = {
 			},
 		},
 		["Git - Mar 2014"] = {
+			["report"] = {
+				["target"] = "Aprilseventh",
+				["mode"] = "Enemy damage taken",
+				["channel"] = "raid",
+			},
+			["tooltiprows"] = 10,
 			["windows"] = {
 				{
 					["barheight"] = 11,
-					["barslocked"] = true,
+					["bartexture"] = "Minimalist",
+					["barwidth"] = 267.657745361328,
+					["barfontsize"] = 7,
 					["y"] = 0,
 					["barfont"] = "DorisPP",
-					["title"] = {
-						["font"] = "DorisPP",
-						["fontsize"] = 9,
-						["height"] = 14,
-						["texture"] = "Flat",
-					},
-					["mode"] = "Damage",
-					["barwidth"] = 267.657745361328,
+					["barslocked"] = true,
+					["x"] = 402.417297363281,
 					["point"] = "BOTTOM",
-					["barfontsize"] = 7,
 					["background"] = {
 						["height"] = 258.045837402344,
 					},
-					["bartexture"] = "Minimalist",
-					["x"] = 402.417297363281,
+					["mode"] = "Damage",
+					["title"] = {
+						["height"] = 14,
+						["font"] = "DorisPP",
+						["fontsize"] = 9,
+						["texture"] = "Flat",
+					},
 				}, -- [1]
 			},
 			["icon"] = {
 				["hide"] = true,
 			},
-			["report"] = {
-				["channel"] = "raid",
-				["target"] = "Aprilseventh",
-				["mode"] = "Enemy damage taken",
-			},
-			["tooltiprows"] = 10,
 			["reset"] = {
 				["join"] = 2,
 			},

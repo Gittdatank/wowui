@@ -33,12 +33,12 @@ RangeDisplayDB3 = {
 		["Giit - Cho'gall"] = "Giit tank",
 		["Git - Arthas"] = "Git - Mar 2014",
 		["Gitt - Arthas"] = "Gitt - Monk",
-		["Greny - Azuremyst"] = "Default",
-		["Git - Azuremyst"] = "Default",
+		["Git - Cho'gall"] = "Default",
+		["Burk - Arthas"] = "Default",
 		["Giitt - Feathermoon"] = "Default",
 		["Burk - Azuremyst"] = "Burk",
-		["Burk - Arthas"] = "Default",
-		["Git - Cho'gall"] = "Default",
+		["Git - Azuremyst"] = "Default",
+		["Greny - Azuremyst"] = "Default",
 		["Spih - Cho'gall"] = "Spih - DPS",
 		["Lihte - Cho'gall"] = "Default",
 		["Gimm - Cho'gall"] = "Default",
@@ -90,29 +90,29 @@ RangeDisplayDB3 = {
 			["locked"] = true,
 			["mute"] = true,
 			["units"] = {
-				["playertarget"] = {
-					["y"] = -123.895774841309,
-					["fontSize"] = 10,
-					["font"] = "DorisPP",
-					["x"] = -6.747709267074240e-005,
+				["mouseover"] = {
+					["mouseAnchor"] = false,
+					["y"] = -277.784861528928,
+					["font"] = "SCT Emblem",
+					["point"] = "RIGHT",
+					["x"] = -65.9838804260981,
+					["enabled"] = false,
+					["relPoint"] = "RIGHT",
 				},
 				["arena2"] = {
 				},
 				["focus"] = {
 					["enabled"] = false,
 				},
-				["arena5"] = {
+				["playertarget"] = {
+					["fontSize"] = 10,
+					["font"] = "DorisPP",
+					["y"] = -123.895774841309,
+					["x"] = -6.747709267074240e-005,
 				},
 				["pet"] = {
 				},
-				["mouseover"] = {
-					["y"] = -277.784861528928,
-					["x"] = -65.9838804260981,
-					["point"] = "RIGHT",
-					["mouseAnchor"] = false,
-					["font"] = "SCT Emblem",
-					["enabled"] = false,
-					["relPoint"] = "RIGHT",
+				["arena5"] = {
 				},
 				["arena4"] = {
 				},
@@ -271,29 +271,29 @@ RangeDisplayDB3 = {
 			["locked"] = true,
 			["mute"] = true,
 			["units"] = {
-				["mouseover"] = {
-					["mouseAnchor"] = false,
-					["y"] = -277.784861528928,
-					["relPoint"] = "RIGHT",
-					["point"] = "RIGHT",
-					["font"] = "SCT Emblem",
-					["enabled"] = false,
-					["x"] = -65.9838804260981,
+				["playertarget"] = {
+					["y"] = -123.895774841309,
+					["fontSize"] = 10,
+					["font"] = "DorisPP",
+					["x"] = -6.747709267074240e-005,
 				},
 				["arena2"] = {
 				},
 				["focus"] = {
 					["enabled"] = false,
 				},
-				["playertarget"] = {
-					["fontSize"] = 10,
-					["font"] = "DorisPP",
-					["y"] = -123.895774841309,
-					["x"] = -6.747709267074240e-005,
+				["arena5"] = {
 				},
 				["pet"] = {
 				},
-				["arena5"] = {
+				["mouseover"] = {
+					["y"] = -277.784861528928,
+					["relPoint"] = "RIGHT",
+					["point"] = "RIGHT",
+					["mouseAnchor"] = false,
+					["x"] = -65.9838804260981,
+					["enabled"] = false,
+					["font"] = "SCT Emblem",
 				},
 				["arena4"] = {
 				},

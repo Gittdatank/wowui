@@ -3637,17 +3637,21 @@ ChatterDB = {
 				},
 				["Got - Dec 2014"] = {
 					["frames"] = {
-						["FRAME_10"] = {
-							["enable"] = false,
-						},
 						["FRAME_1"] = {
 							["edgeSize"] = 11,
+							["border"] = "RothSquare",
 							["tileSize"] = 1,
 							["background"] = "Solid",
-							["border"] = "RothSquare",
 							["backgroundColor"] = {
 								["a"] = 0,
 							},
+						},
+						["FRAME_10"] = {
+							["enable"] = false,
+						},
+						["FRAME_2"] = {
+							["enable"] = false,
+							["border"] = "RothSquare",
 						},
 						["FRAME_4"] = {
 							["border"] = "RothSquare",
@@ -3657,13 +3661,9 @@ ChatterDB = {
 						},
 						["FRAME_3"] = {
 							["background"] = "Solid",
-							["border"] = "RothSquare",
 							["backgroundColor"] = {
 								["a"] = 0.460000038146973,
 							},
-						},
-						["FRAME_2"] = {
-							["enable"] = false,
 							["border"] = "RothSquare",
 						},
 					},
@@ -3722,24 +3722,17 @@ ChatterDB = {
 				},
 				["Git - Mar 2014"] = {
 					["frames"] = {
-						["FRAME_1"] = {
-							["edgeSize"] = 11,
-							["border"] = "RothSquare",
-							["tileSize"] = 1,
-							["background"] = "Solid",
-							["backgroundColor"] = {
-								["a"] = 0,
-							},
-						},
 						["FRAME_10"] = {
 							["enable"] = false,
 						},
-						["FRAME_3"] = {
+						["FRAME_1"] = {
+							["edgeSize"] = 11,
+							["tileSize"] = 1,
 							["background"] = "Solid",
-							["backgroundColor"] = {
-								["a"] = 0.460000038146973,
-							},
 							["border"] = "RothSquare",
+							["backgroundColor"] = {
+								["a"] = 0,
+							},
 						},
 						["FRAME_4"] = {
 							["border"] = "RothSquare",
@@ -3750,6 +3743,13 @@ ChatterDB = {
 						["FRAME_2"] = {
 							["enable"] = false,
 							["border"] = "RothSquare",
+						},
+						["FRAME_3"] = {
+							["background"] = "Solid",
+							["border"] = "RothSquare",
+							["backgroundColor"] = {
+								["a"] = 0.460000038146973,
+							},
 						},
 					},
 				},
@@ -3907,37 +3907,37 @@ ChatterDB = {
 				},
 				["Arthas"] = {
 					["history"] = {
-						"/camp", -- [1]
-						" glad", -- [2]
-						" why?", -- [3]
-						" yea", -- [4]
-						" worth a shot", -- [5]
-						" not sure what order is, but we've got a WA we are going to use", -- [6]
-						"/camp", -- [7]
-						"/wa", -- [8]
-						"/o was thinking", -- [9]
-						"/o instead of our WA overload, may be easier to write and manage our own BigWigs mod", -- [10]
-						"/o BW's design supports an API where we could load up our own module", -- [11]
-						"/wa", -- [12]
-						"/wa", -- [13]
-						"/wa", -- [14]
-						" what toon you on?", -- [15]
-						" can't link WA over battle net i think", -- [16]
-						"/cw realistic hey", -- [17]
-						"/wa", -- [18]
-						"/cw Realistic-Arthas [WeakAuras: Git-Arthas - Brackenspore: Interrupts]", -- [19]
-						"/cw Realistic-Arthas likely", -- [20]
-						"/cw Realistic-Arthas yes", -- [21]
-						"/o so are we ready to cut over to Loot Council tomorrow?", -- [22]
-						"/o you guys done ur HW and know who needs what loot?", -- [23]
-						"/cw Realistic-Arthas cya", -- [24]
-						"/o brush up before tomorrow", -- [25]
-						"/o make sure you know what you are talking about", -- [26]
-						"/o well, we'll start Tuesday with loot council if we do", -- [27]
-						"/o what you mean?", -- [28]
-						"/o we will always to EPGP mats", -- [29]
-						"/o that's not changing at ll", -- [30]
-						"/o still taking donations", -- [31]
+						" =/", -- [1]
+						" gear?", -- [2]
+						" i mean doable", -- [3]
+						"/o Babe Legion - Previous 14/14h 25m SoO", -- [4]
+						"/o relevant", -- [5]
+						" wish we could get on MR together for faster pulls", -- [6]
+						"/derp", -- [7]
+						" ok, cool", -- [8]
+						"/blcd", -- [9]
+						"/blcd opt", -- [10]
+						"/wa", -- [11]
+						"/blcd", -- [12]
+						"/blcd opt", -- [13]
+						"/BW", -- [14]
+						"/DERP", -- [15]
+						"/cw Oné take ur derps like a man", -- [16]
+						"/derp undo", -- [17]
+						"/derp export", -- [18]
+						" =/", -- [19]
+						" to whom?", -- [20]
+						" 2 next week feels impossible lol", -- [21]
+						" boss 1 was a gimmie", -- [22]
+						" 1 real boss this week imho", -- [23]
+						"/cw Tydeson-Arthas kk", -- [24]
+						"/derp undo", -- [25]
+						"/5 tracking tank CD's now with BLCD", -- [26]
+						"/5 so at least i can ask for CD's when i know i'm fucked", -- [27]
+						"/epgp", -- [28]
+						"/o dots?", -- [29]
+						"/quit", -- [30]
+						"/camp", -- [31]
 						"/quit", -- [32]
 					},
 				},
@@ -3954,8 +3954,8 @@ ChatterDB = {
 					["font"] = "Accidental Presidency",
 				},
 				["Got - Dec 2014"] = {
-					["fontsize"] = 12,
 					["font"] = "Accidental Presidency",
+					["fontsize"] = 12,
 				},
 				["Giit"] = {
 					["fontsize"] = 12,
@@ -3966,8 +3966,8 @@ ChatterDB = {
 					["font"] = "Accidental Presidency",
 				},
 				["Git - Mar 2014"] = {
-					["font"] = "Accidental Presidency",
 					["fontsize"] = 12,
+					["font"] = "Accidental Presidency",
 				},
 			},
 		},
@@ -3991,13 +3991,13 @@ ChatterDB = {
 		["Gitt - Arthas"] = "Default",
 		["Spih - Arthas"] = "Default",
 		["Gimm - Cho'gall"] = "Default",
-		["Git - Cho'gall"] = "Default",
+		["Git - Azuremyst"] = "Default",
 		["Spih - Cho'gall"] = "Default",
-		["Greny - Azuremyst"] = "Default",
 		["Burk - Arthas"] = "Default",
+		["Greny - Azuremyst"] = "Default",
 		["Giitt - Feathermoon"] = "Default",
 		["Lihte - Cho'gall"] = "Lihte",
-		["Git - Azuremyst"] = "Default",
+		["Git - Cho'gall"] = "Default",
 		["Git - Arthas"] = "Git - Mar 2014",
 	},
 	["profiles"] = {
@@ -4016,8 +4016,8 @@ ChatterDB = {
 		},
 		["Got - Dec 2014"] = {
 			["modules"] = {
-				["Borders/Background"] = true,
 				["Chat Autolog"] = true,
+				["Borders/Background"] = true,
 			},
 			["welcomeMessaged"] = true,
 		},
@@ -4037,8 +4037,8 @@ ChatterDB = {
 		},
 		["Git - Mar 2014"] = {
 			["modules"] = {
-				["Chat Autolog"] = true,
 				["Borders/Background"] = true,
+				["Chat Autolog"] = true,
 			},
 			["welcomeMessaged"] = true,
 		},

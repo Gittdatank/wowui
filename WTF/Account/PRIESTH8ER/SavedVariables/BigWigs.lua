@@ -371,8 +371,8 @@ BigWigs3DB = {
 					["emphasizeGrowup"] = true,
 					["BigWigsAnchor_x"] = 75.2000569128977,
 					["texture"] = "Minimalist",
-					["BigWigsEmphasizeAnchor_width"] = 296.999725341797,
 					["font"] = "DorisPP",
+					["BigWigsEmphasizeAnchor_width"] = 296.999725341797,
 					["fill"] = true,
 				},
 				["Default"] = {
@@ -428,7 +428,9 @@ BigWigs3DB = {
 		["BigWigs_Bosses_Brackenspore"] = {
 			["profiles"] = {
 				["Git - Mar 2014"] = {
-					["Call of the Tides"] = 515,
+					["Call of the Tides"] = 771,
+					["Decay"] = 0,
+					["Exploding Fungus"] = 643,
 				},
 			},
 		},
@@ -516,11 +518,14 @@ BigWigs3DB = {
 				},
 			},
 		},
-		["BigWigs_Bosses_Siegecrafter Blackfuse"] = {
+		["BigWigs_Bosses_Garrosh Hellscream"] = {
 			["profiles"] = {
 				["Default"] = {
-					[-8199] = 515,
-					["saw_blade_near_you"] = 0,
+					["custom_off_shaman_marker"] = true,
+					[-8294] = 515,
+					["Whirling Corruption"] = 515,
+					[-8298] = 515,
+					["Touch of Y'Shaarj"] = 515,
 				},
 			},
 		},
@@ -561,14 +566,11 @@ BigWigs3DB = {
 				},
 			},
 		},
-		["BigWigs_Bosses_Garrosh Hellscream"] = {
+		["BigWigs_Bosses_Siegecrafter Blackfuse"] = {
 			["profiles"] = {
 				["Default"] = {
-					["custom_off_shaman_marker"] = true,
-					[-8294] = 515,
-					["Whirling Corruption"] = 515,
-					[-8298] = 515,
-					["Touch of Y'Shaarj"] = 515,
+					[-8199] = 515,
+					["saw_blade_near_you"] = 0,
 				},
 			},
 		},
@@ -1397,7 +1399,7 @@ BigWigsStatisticsDB = {
 				["best"] = 408.839999999967,
 			},
 			["mythic"] = {
-				["wipes"] = 5,
+				["wipes"] = 39,
 			},
 			["normal"] = {
 				["best"] = 373.85699999996,

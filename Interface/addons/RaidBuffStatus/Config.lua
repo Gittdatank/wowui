@@ -1,12 +1,12 @@
 local addonName, vars = ...
 local addon = RaidBuffStatus
 local L = vars.L
-RBS_svnrev["Config.lua"] = select(3,string.find("$Revision: 684 $", ".* (.*) .*"))
+RBS_svnrev["Config.lua"] = select(3,string.find("$Revision: 697 $", ".* (.*) .*"))
 
 local profile
 function addon:UpdateProfileConfig()
         profile = addon.db.profile
-	if profile.foodlevel > 34 then profile.foodlevel = 25 end -- XXX: 6.0.2 stat squish
+	if profile.foodlevel > 100 then profile.foodlevel = 75 end -- XXX: 6.0.2 stat squish
 	addon.GI.debug = profile.Debug
 end
 
@@ -173,6 +173,7 @@ local options = {
 			desc = L["Options for setting the quality requirements of consumables"],
 			order = 2,
 			args = {
+				--[[
 				oldflaskselixirs = {
 					type = 'toggle',
 					name = L["Old flasks and elixirs"],
@@ -184,18 +185,33 @@ local options = {
 						profile.OldFlasksElixirs = v
 					end,
 				},
+				--]]
+				flixirlevel = {
+					type = 'range',
+					order = 1.5,
+					name = L["Required flask quality"],
+					desc = L["Select which level of flask quality you require"],
+					min = 0, -- for smooth scrolling
+					max = 250,
+					step = 1,
+					bigStep = 25,
+					get = function(info) return profile.flixirlevel end,
+					set = function(info, v)
+						profile.flixirlevel = math.max(v,1)
+					end,
+				},
 				foodlevel = {
 					type = 'range',
 					order = 2,
 					name = L["Required food quality"],
 					desc = L["Select which level of food quality you require for the raiders to be considered 'Well Fed'"],
-					min = 0,
-					max = 34,
+					min = 0, -- for smooth scrolling
+					max = 100,
 					step = 1,
-					bigStep = 5,
+					bigStep = 25,
 					get = function(info) return profile.foodlevel end,
 					set = function(info, v)
-						profile.foodlevel = v
+						profile.foodlevel = math.max(v,1)
 					end,
 				},
 				ignoreeating = {
