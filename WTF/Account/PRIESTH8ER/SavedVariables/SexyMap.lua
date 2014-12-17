@@ -597,13 +597,13 @@ SexyMap2DB = {
 		["movers"] = {
 			["enabled"] = false,
 			["framePositions"] = {
-				["VehicleSeatIndicator"] = {
-					["y"] = 1145.2001953125,
-					["x"] = 1584.74963378906,
-				},
 				["DurabilityFrame"] = {
 					["y"] = 847.200012207031,
 					["x"] = 926.74951171875,
+				},
+				["VehicleSeatIndicator"] = {
+					["y"] = 1145.2001953125,
+					["x"] = 1584.74963378906,
 				},
 			},
 			["lock"] = true,
@@ -2240,13 +2240,13 @@ SexyMap2DB = {
 		["movers"] = {
 			["enabled"] = false,
 			["framePositions"] = {
-				["DurabilityFrame"] = {
-					["y"] = 847.200012207031,
-					["x"] = 926.74951171875,
-				},
 				["VehicleSeatIndicator"] = {
 					["y"] = 1145.2001953125,
 					["x"] = 1584.74963378906,
+				},
+				["DurabilityFrame"] = {
+					["y"] = 847.200012207031,
+					["x"] = 926.74951171875,
 				},
 			},
 			["lock"] = true,

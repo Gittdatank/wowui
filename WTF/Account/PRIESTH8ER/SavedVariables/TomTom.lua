@@ -6,11 +6,11 @@ TomTomDB = {
 		["Gitt - Arthas"] = "Default",
 		["Evyyn - Azuremyst"] = "Default",
 		["Spih - Arthas"] = "Default",
-		["Burk - Arthas"] = "Default",
 		["Git - Cho'gall"] = "Default",
+		["Greny - Azuremyst"] = "Default",
 		["Spih - Cho'gall"] = "Default",
 		["Got - Arthas"] = "Default",
-		["Greny - Azuremyst"] = "Default",
+		["Burk - Arthas"] = "Default",
 		["Git - Arthas"] = "Default",
 	},
 	["profiles"] = {
@@ -26,11 +26,11 @@ TomTomWaypointsMF = {
 		["Gitt - Arthas"] = "Gitt - Arthas",
 		["Evyyn - Azuremyst"] = "Evyyn - Azuremyst",
 		["Spih - Arthas"] = "Spih - Arthas",
-		["Burk - Arthas"] = "Burk - Arthas",
 		["Git - Cho'gall"] = "Git - Cho'gall",
+		["Greny - Azuremyst"] = "Greny - Azuremyst",
 		["Spih - Cho'gall"] = "Spih - Cho'gall",
 		["Got - Arthas"] = "Got - Arthas",
-		["Greny - Azuremyst"] = "Greny - Azuremyst",
+		["Burk - Arthas"] = "Burk - Arthas",
 		["Git - Arthas"] = "Git - Arthas",
 	},
 	["profiles"] = {
@@ -137,8 +137,6 @@ TomTomWaypointsMF = {
 		["Evyyn - Azuremyst"] = {
 		},
 		["Spih - Arthas"] = {
-		},
-		["Burk - Arthas"] = {
 		},
 		["Git - Cho'gall"] = {
 			[951] = {
@@ -328,11 +326,13 @@ TomTomWaypointsMF = {
 				},
 			},
 		},
+		["Greny - Azuremyst"] = {
+		},
 		["Spih - Cho'gall"] = {
 		},
 		["Got - Arthas"] = {
 		},
-		["Greny - Azuremyst"] = {
+		["Burk - Arthas"] = {
 		},
 		["Git - Arthas"] = {
 		},

@@ -4,8 +4,8 @@
 
 LootMaster          = LibStub("AceAddon-3.0"):NewAddon("EPGPLootMaster", "AceConsole-3.0", "AceComm-3.0", "AceEvent-3.0", "AceTimer-3.0", "AceHook-3.0")
 
-local version 	    = "0.6.63"
-local dVersion 	    = "2014-12-12T23:08:22Z"
+local version 	    = "0.6.64"
+local dVersion 	    = "2014-12-17T09:53:18Z"
 local iVersion	    = 4
 local iVersionML	  = 12
 local _G            = _G

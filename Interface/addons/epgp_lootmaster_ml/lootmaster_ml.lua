@@ -421,9 +421,9 @@ function LootMasterML:SendMonitorMessageEx(prio, sendPromoted, sendSpecificRanks
         self:Debug('send '..msgType..' to rankList: '.. self:Serialize(rankList))
         local _, guildRankName, guildRank = GetGuildInfo('player')
         if (rankList[guildRank+1]) then
-            self:Debug("Player matches rankList with rank " .. guildRank .. '+1 ' ..guildRankName)
+            self:Debug("Player matches rankList with rank " .. guildRank .. '+1 ' ..(guildRankName or 'nil'))
         else
-            self:Debug("Player doesnt match rankList with rank " .. guildRank .. '+1 ' ..guildRankName)
+            self:Debug("Player doesnt match rankList with rank " .. guildRank .. '+1 ' ..(guildRankName or 'nil'))
         end
     end
 
@@ -444,7 +444,7 @@ function LootMasterML:SendMonitorMessageEx(prio, sendPromoted, sendSpecificRanks
 						local _, guildRankName, guildRank = GetGuildInfo(rName)
 						sendMessage = rankList[guildRank+1]
                         if (sendMessage) then
-                            self:Debug('SendMonitorMessage('..msgType..', '..rName..'): player in raid matched guildrank (rank '..guildRank..'+1 '..guildRankName..'), sending monitor message')
+                            self:Debug('SendMonitorMessage('..msgType..', '..rName..'): player in raid matched guildrank (rank '..guildRank..'+1 '..(guildRankName or 'nil')..'), sending monitor message')
                         end
 					end
 					if sendMessage and not LootMaster.UnitIsUnit(rName,LootMaster.UnitName('player')) then

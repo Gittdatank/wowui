@@ -212,13 +212,13 @@ LoggerHeadDB = {
 					},
 				},
 				["none"] = {
-					["Kalimdor"] = {
-						[0] = false,
-					},
 					["Tol Barad"] = {
 						true, -- [1]
 					},
 					["Pandaria"] = {
+						[0] = false,
+					},
+					["Kalimdor"] = {
 						[0] = false,
 					},
 				},

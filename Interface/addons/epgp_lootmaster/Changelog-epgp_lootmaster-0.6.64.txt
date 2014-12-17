@@ -1,9 +1,15 @@
 ------------------------------------------------------------------------
-r289 | mackatack | 2014-12-12 23:08:51 +0000 (Fri, 12 Dec 2014) | 1 line
+r291 | mackatack | 2014-12-17 09:54:24 +0000 (Wed, 17 Dec 2014) | 1 line
 Changed paths:
-   A /tags/0.6.63 (from /trunk:288)
+   A /tags/0.6.64 (from /trunk:290)
 
 see prev commit
+------------------------------------------------------------------------
+r290 | mackatack | 2014-12-17 09:53:18 +0000 (Wed, 17 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/ml/lootmaster_ml.lua
+
+Prevent errors caused by debug messages
 ------------------------------------------------------------------------
 r288 | mackatack | 2014-12-12 23:08:22 +0000 (Fri, 12 Dec 2014) | 1 line
 Changed paths:

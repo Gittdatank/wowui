@@ -68,31 +68,31 @@ AmrDb = {
 		}, -- [2]
 	},
 	["Class"] = "DRUID",
-	["BankItems"] = {
-		"|cffffffff|Hitem:22574:0:0:0:0:0:0:2147150336:100:0:0:0|h[Mote of Fire]|h|r", -- [1]
-		"|cff0070dd|Hitem:76131:0:0:0:0:0:0:1673828608:100:0:0:0|h[Primordial Ruby]|h|r", -- [2]
-	},
+	["Region"] = "US",
 	["Specs"] = {
 		34, -- [1]
 		34, -- [2]
 	},
 	["Options"] = {
 	},
-	["Region"] = "US",
+	["BankItems"] = {
+		"|cffffffff|Hitem:22574:0:0:0:0:0:0:2147150336:100:0:0:0|h[Mote of Fire]|h|r", -- [1]
+		"|cff0070dd|Hitem:76131:0:0:0:0:0:0:1673828608:100:0:0:0|h[Primordial Ruby]|h|r", -- [2]
+	},
 	["Currencies"] = {
 		[81] = 48,
 		[614] = 7,
 		[384] = 12,
 		[416] = 45,
 		[402] = 27,
-		[-1] = 1121287789,
 		[241] = 40,
+		[-1] = 1121287789,
 		[823] = 13882,
-		[391] = 46,
+		[361] = 6,
 		[392] = 823,
 		[393] = 4,
 		[394] = 13,
-		[361] = 6,
+		[391] = 46,
 	},
 	["RealmName"] = "Arthas",
 	["LogData"] = {
@@ -103,8 +103,8 @@ AmrDb = {
 			[1136] = "disabled",
 			[1205] = "disabled",
 		},
-		["_lastZone"] = "Draenor",
-		["_lastDiff"] = 0,
+		["_lastZone"] = "FW Horde Garrison Level 2",
+		["_lastDiff"] = 1,
 	},
 	["BagItems"] = {
 		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [1]
@@ -170,6 +170,21 @@ AmrDb = {
 		"|cff9d9d9d|Hitem:106867:0:0:0:0:0:0:0:100:0:0:0|h[Dulled Claw]|h|r", -- [61]
 	},
 	["Professions"] = {
+	},
+	["LastCharacterImport"] = "",
+	["Reps"] = {
+		[1269] = 7,
+		[1337] = 6,
+		[1341] = 7,
+		[1375] = 4,
+		[1387] = 0,
+		[1376] = 0,
+		[1270] = 7,
+		[1388] = 7,
+		[1435] = 7,
+	},
+	["Faction"] = "Horde",
+	["IconInfo"] = {
 	},
 	["VoidItems"] = {
 		"|cffa335ee|Hitem:34011:0:0:0:0:0:0:1582692992:100:0:0:0|h[Illidari Runeshield]|h|r", -- [1]
@@ -252,21 +267,6 @@ AmrDb = {
 		"|cffa335ee|Hitem:103649:0:0:0:0:0:0:683148160:100:491:0:0|h[Xal'atoh, Desecrated Image of Gorehowl]|h|r", -- [78]
 		"|cffa335ee|Hitem:30874:0:0:0:0:0:0:34031104:100:0:0:0|h[The Unbreakable Will]|h|r", -- [79]
 	},
-	["Reps"] = {
-		[1269] = 7,
-		[1337] = 6,
-		[1341] = 7,
-		[1375] = 4,
-		[1387] = 0,
-		[1376] = 0,
-		[1270] = 7,
-		[1388] = 7,
-		[1435] = 7,
-	},
-	["Faction"] = "Horde",
-	["IconInfo"] = {
-	},
-	["LastCharacterImport"] = "",
 	["LastCharacterImportDate"] = "",
 	["BankItemsAndCounts"] = {
 		[74248] = 2,
@@ -281,14 +281,14 @@ AmrDb = {
 		[77467] = 4,
 		[98717] = 15,
 		[72988] = 7,
-		[22574] = 1,
-		[76061] = 18,
 		[72095] = 5,
+		[54849] = 19,
+		[22574] = 1,
 		[94111] = 16,
 		[72104] = 3,
 		[76131] = 1,
+		[76061] = 18,
 		[89112] = 522,
-		[54849] = 19,
 		[76140] = 2,
 	},
 }

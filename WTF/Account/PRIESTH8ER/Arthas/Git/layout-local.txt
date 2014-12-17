@@ -1,6 +1,13 @@
 Version: 1
+Frame: AskMrRobot_Dialog
+FrameLevel: 94
+Anchor: CENTER
+X: 283
+Y: 130
+W: 615
+H: 550
 Frame: FollowerLocationInfoFrame
-FrameLevel: 87
+FrameLevel: 86
 Anchor: LEFT
 X: 300
 Y: 0

@@ -216,20 +216,20 @@ oRA3DB = {
 					["lockDisplay"] = true,
 				},
 				["Got - Dec 2014"] = {
+					["neverShowMine"] = true,
 					["showDisplay"] = false,
-					["lockDisplay"] = true,
 					["spells"] = {
+						[740] = true,
+						[73325] = true,
+						[47788] = true,
 						[98008] = true,
 						[77761] = false,
-						[740] = true,
+						[97462] = true,
 						[2825] = true,
 						[33206] = true,
-						[97462] = true,
-						[47788] = true,
-						[73325] = true,
 					},
-					["neverShowMine"] = true,
 					["onlyShowMine"] = true,
+					["lockDisplay"] = true,
 				},
 				["Gilt"] = {
 					["spells"] = {
@@ -249,20 +249,20 @@ oRA3DB = {
 					["lockDisplay"] = true,
 				},
 				["Git - Mar 2014"] = {
-					["neverShowMine"] = true,
 					["showDisplay"] = false,
+					["lockDisplay"] = true,
 					["spells"] = {
-						[740] = true,
-						[73325] = true,
-						[47788] = true,
 						[98008] = true,
 						[77761] = false,
-						[97462] = true,
+						[740] = true,
 						[2825] = true,
 						[33206] = true,
+						[97462] = true,
+						[47788] = true,
+						[73325] = true,
 					},
+					["neverShowMine"] = true,
 					["onlyShowMine"] = true,
-					["lockDisplay"] = true,
 				},
 				["Gitt - Monk"] = {
 					["neverShowMine"] = true,
@@ -365,7 +365,7 @@ oRA3DB = {
 			["lastSelectedPanel"] = "Checks",
 		},
 		["Got - Dec 2014"] = {
-			["lastSelectedList"] = 1,
+			["lastSelectedPanel"] = "Checks",
 			["positions"] = {
 				["oRA3ReadyCheck"] = {
 					["Height"] = 297,
@@ -386,7 +386,7 @@ oRA3DB = {
 					["Width"] = 210.338500976563,
 				},
 			},
-			["lastSelectedPanel"] = "Checks",
+			["lastSelectedList"] = 1,
 		},
 		["Gilt"] = {
 			["lastSelectedList"] = 2,
@@ -407,7 +407,7 @@ oRA3DB = {
 			["lastSelectedPanel"] = "Tanks",
 		},
 		["Git - Mar 2014"] = {
-			["lastSelectedPanel"] = "Promote",
+			["lastSelectedList"] = 1,
 			["positions"] = {
 				["oRA3ReadyCheck"] = {
 					["Height"] = 297,
@@ -416,9 +416,9 @@ oRA3DB = {
 					["PosX"] = 222.880484988855,
 				},
 				["oRA3BattleResMonitor"] = {
-					["Height"] = 29.9999122619629,
-					["PosX"] = 579.201276116342,
-					["PosY"] = 735.840061677693,
+					["Height"] = 29.999979019165,
+					["PosX"] = 565.761354541748,
+					["PosY"] = 734.880217949147,
 					["Width"] = 139.999984741211,
 				},
 				["oRA3CooldownFrame"] = {
@@ -428,7 +428,7 @@ oRA3DB = {
 					["PosX"] = 1066.35942929001,
 				},
 			},
-			["lastSelectedList"] = 1,
+			["lastSelectedPanel"] = "Promote",
 		},
 		["Gitt - Monk"] = {
 			["lastSelectedPanel"] = "Invite",
