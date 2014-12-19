@@ -1,0 +1,10 @@
+
+DeathNoteDB = {
+	["profileKeys"] = {
+		["Git - Arthas"] = "Git - Arthas",
+	},
+	["profiles"] = {
+		["Git - Arthas"] = {
+		},
+	},
+}

@@ -7,10 +7,13 @@ pssetmarknew = {
 		"Gramz", -- [1]
 	}, -- [1]
 	{
+		"Primalfears", -- [1]
 	}, -- [2]
 	{
+		"Shinerr", -- [1]
 	}, -- [3]
 	{
+		"Iamascrub", -- [1]
 	}, -- [4]
 	{
 	}, -- [5]

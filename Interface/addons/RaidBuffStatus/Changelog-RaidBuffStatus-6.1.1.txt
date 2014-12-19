@@ -1,9 +1,38 @@
 ------------------------------------------------------------------------
-r700 | oscarucb | 2014-12-15 17:56:36 +0000 (Mon, 15 Dec 2014) | 1 line
+r705 | oscarucb | 2014-12-18 23:32:17 +0000 (Thu, 18 Dec 2014) | 1 line
 Changed paths:
-   A /tags/6.1.0 (from /trunk:699)
+   A /tags/6.1.1 (from /trunk:704)
 
-Tagging as 6.1.0
+Tagging as 6.1.1
+------------------------------------------------------------------------
+r704 | oscarucb | 2014-12-18 16:48:44 +0000 (Thu, 18 Dec 2014) | 2 lines
+Changed paths:
+   M /trunk/Config.lua
+   M /trunk/Core.lua
+
+display tweak
+
+------------------------------------------------------------------------
+r703 | oscarucb | 2014-12-18 16:43:11 +0000 (Thu, 18 Dec 2014) | 2 lines
+Changed paths:
+   M /trunk/Buffs.lua
+
+fix rogue poison check, adding Instant Poison
+
+------------------------------------------------------------------------
+r702 | oscarucb | 2014-12-18 00:53:23 +0000 (Thu, 18 Dec 2014) | 2 lines
+Changed paths:
+   M /trunk/Core.lua
+
+fix ticket 403: eating notification
+
+------------------------------------------------------------------------
+r701 | oscarucb | 2014-12-16 19:29:28 +0000 (Tue, 16 Dec 2014) | 2 lines
+Changed paths:
+   M /trunk/Config.lua
+
+add a clarification to the flask/food stat threshold tooltip
+
 ------------------------------------------------------------------------
 r699 | oscarucb | 2014-12-15 13:27:09 +0000 (Mon, 15 Dec 2014) | 5 lines
 Changed paths:

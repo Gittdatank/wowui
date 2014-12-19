@@ -1,7 +1,7 @@
 local addonName, vars = ...
 local addon = RaidBuffStatus
 local L = vars.L
-RBS_svnrev["Config.lua"] = select(3,string.find("$Revision: 697 $", ".* (.*) .*"))
+RBS_svnrev["Config.lua"] = select(3,string.find("$Revision: 704 $", ".* (.*) .*"))
 
 local profile
 function addon:UpdateProfileConfig()
@@ -17,6 +17,11 @@ local buttonoptions = {
 	buff = L["Buff those missing buff"],
 	none = L["None"],
 }
+
+local function statlevelstr(val)
+  return "("..val.." "..RAID_BUFF_1.." / "..
+          math.floor(val*1.5).." "..RAID_BUFF_2..")"
+end
 
 local options = { 
 	type='group',
@@ -190,7 +195,10 @@ local options = {
 					type = 'range',
 					order = 1.5,
 					name = L["Required flask quality"],
-					desc = L["Select which level of flask quality you require"],
+					desc = function()
+						return L["Select which level of flask quality you require"].." "..
+							statlevelstr(profile.flixirlevel)
+						end,
 					min = 0, -- for smooth scrolling
 					max = 250,
 					step = 1,
@@ -204,7 +212,10 @@ local options = {
 					type = 'range',
 					order = 2,
 					name = L["Required food quality"],
-					desc = L["Select which level of food quality you require for the raiders to be considered 'Well Fed'"],
+					desc = function()
+						return L["Select which level of food quality you require for the raiders to be considered 'Well Fed'"].." "..
+							statlevelstr(profile.foodlevel)
+						end,
 					min = 0, -- for smooth scrolling
 					max = 100,
 					step = 1,

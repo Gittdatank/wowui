@@ -2,13 +2,13 @@
 AUCTIONATOR_SAVEDVARS = {
 	["_50000"] = 500,
 	["_2000"] = 100,
-	["_200000"] = 1000,
-	["STARTING_DISCOUNT"] = 5,
-	["_1000000"] = 2500,
 	["_5000000"] = 10000,
 	["LOG_DE_DATA_X"] = true,
-	["_500"] = 5,
+	["_1000000"] = 2500,
 	["_10000"] = 200,
+	["_500"] = 5,
+	["STARTING_DISCOUNT"] = 5,
+	["_200000"] = 1000,
 }
 AUCTIONATOR_PRICING_HISTORY = {
 }
@@ -78,12 +78,12 @@ AUCTIONATOR_PRICE_DATABASE = {
 			["H1466"] = 1450000000,
 			["cc"] = 2,
 		},
-		["Signet of the Traitor General"] = {
-			["mr"] = 955450000,
+		["Truesteel Helm of the Aurora"] = {
+			["mr"] = 219779999,
 			["cc"] = 2,
-			["id"] = "118870",
-			["H1467"] = 955450000,
-			["sc"] = 1,
+			["id"] = "114230",
+			["H1475"] = 219779999,
+			["sc"] = 5,
 		},
 		["Helmet of Vile Indignation"] = {
 			["mr"] = 990000000,
@@ -106,12 +106,12 @@ AUCTIONATOR_PRICE_DATABASE = {
 			["sc"] = 5,
 			["cc"] = 2,
 		},
-		["Truesteel Helm of the Aurora"] = {
-			["mr"] = 219779999,
+		["Signet of the Traitor General"] = {
+			["mr"] = 955450000,
 			["cc"] = 2,
-			["id"] = "114230",
-			["H1475"] = 219779999,
-			["sc"] = 5,
+			["id"] = "118870",
+			["H1467"] = 955450000,
+			["sc"] = 1,
 		},
 		["Battle Hardened Gorget"] = {
 			["mr"] = 990000000,

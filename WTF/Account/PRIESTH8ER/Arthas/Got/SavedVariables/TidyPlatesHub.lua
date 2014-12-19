@@ -72,12 +72,7 @@ TidyPlatesHubSettings = {
 		["WidgetsAuraMode"] = 1,
 		["WidgetsDebuffTrackList"] = "My Rake\nMy Rip\nMy Moonfire\nAll 339",
 		["ClassPartyIcon"] = false,
-		["ColorHostilePlayer"] = {
-			["a"] = 0.999997794628143,
-			["r"] = 0.999997794628143,
-			["g"] = 0,
-			["b"] = 0,
-		},
+		["UnitSpotlightScale"] = 1.4,
 		["ColorFriendlyNameMode"] = 1,
 		["ColorMediumHealth"] = {
 			["a"] = 0.999997794628143,
@@ -117,10 +112,10 @@ TidyPlatesHubSettings = {
 		},
 		["ColorEnemyNameMode"] = 1,
 		["WidgetsRangeMode"] = 1,
-		["ColorFriendlyNPC"] = {
+		["ColorHostilePlayer"] = {
 			["a"] = 0.999997794628143,
-			["r"] = 0,
-			["g"] = 0.999997794628143,
+			["r"] = 0.999997794628143,
+			["g"] = 0,
 			["b"] = 0,
 		},
 		["TextColorHostilePlayer"] = {
@@ -220,7 +215,12 @@ TidyPlatesHubSettings = {
 		["UnitSpotlightList"] = "",
 		["UnitSpotlightGlowEnable"] = true,
 		["WidgetAuraTrackDisease"] = true,
-		["UnitSpotlightScale"] = 1.4,
+		["ColorFriendlyNPC"] = {
+			["a"] = 0.999997794628143,
+			["r"] = 0,
+			["g"] = 0.999997794628143,
+			["b"] = 0,
+		},
 		["ScaleSpotlight"] = 1.20000004768372,
 		["OpacityFilterLookup"] = {
 			["Fanged Pit Viper"] = true,
@@ -322,12 +322,7 @@ TidyPlatesHubSettings = {
 		["HeadlineEnemyColor"] = 4,
 		["WidgetsDebuffTrackList"] = "My Rake\nMy Rip\nMy Moonfire\nAll 339",
 		["ColorEnemyNameMode"] = 1,
-		["ColorFriendlyNPC"] = {
-			["a"] = 0.999997794628143,
-			["r"] = 0,
-			["g"] = 0.999997794628143,
-			["b"] = 0,
-		},
+		["UnitSpotlightScale"] = 1.4,
 		["ColorFriendlyNameMode"] = 1,
 		["TextColorGuildMember"] = {
 			["a"] = 0.999997794628143,
@@ -364,10 +359,10 @@ TidyPlatesHubSettings = {
 		},
 		["WidgetsAuraMode"] = 1,
 		["ClassPartyIcon"] = false,
-		["ColorHostilePlayer"] = {
+		["ColorFriendlyNPC"] = {
 			["a"] = 0.999997794628143,
-			["r"] = 0.999997794628143,
-			["g"] = 0,
+			["r"] = 0,
+			["g"] = 0.999997794628143,
 			["b"] = 0,
 		},
 		["TextColorHostilePlayer"] = {
@@ -472,7 +467,12 @@ TidyPlatesHubSettings = {
 		["UnitSpotlightScaleEnable"] = true,
 		["UnitSpotlightGlowEnable"] = true,
 		["WidgetAuraTrackDisease"] = false,
-		["UnitSpotlightScale"] = 1.4,
+		["ColorHostilePlayer"] = {
+			["a"] = 0.999997794628143,
+			["r"] = 0.999997794628143,
+			["g"] = 0,
+			["b"] = 0,
+		},
 		["ScaleSpotlight"] = 1.26699936389923,
 		["OpacitySpotlight"] = 0.5,
 		["WidgetAuraTrackMagic"] = true,

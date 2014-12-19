@@ -17,12 +17,12 @@ EPGPLootMaster = {
 		["Gitt - Arthas"] = "Gitt - Arthas",
 		["Spih - Arthas"] = "Spih - Arthas",
 		["Giit - Cho'gall"] = "Giit - Cho'gall",
-		["Git - Azuremyst"] = "Git - Azuremyst",
-		["Spih - Cho'gall"] = "Spih - Cho'gall",
-		["Greny - Azuremyst"] = "Greny - Azuremyst",
-		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
 		["Git - Cho'gall"] = "Git - Cho'gall",
+		["Spih - Cho'gall"] = "Spih - Cho'gall",
+		["Git - Azuremyst"] = "Git - Azuremyst",
+		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
 		["Burk - Arthas"] = "Burk - Arthas",
+		["Greny - Azuremyst"] = "Greny - Azuremyst",
 		["Git - Arthas"] = "Git - Arthas",
 	},
 	["profiles"] = {
@@ -57,6 +57,10 @@ EPGPLootMaster = {
 		},
 		["Gimm - Cho'gall"] = {
 		},
+		["Gilt - Azuremyst"] = {
+		},
+		["Ezyn - Azuremyst"] = {
+		},
 		["Git - Azuremyst"] = {
 			["button2"] = "Offspec",
 			["mainUIScale"] = 1.06666677792867,
@@ -73,8 +77,6 @@ EPGPLootMaster = {
 			["blizzard_show_offline"] = 1,
 			["buttonNum"] = 2,
 			["votingSendAssistantOnly"] = false,
-		},
-		["Ezyn - Azuremyst"] = {
 		},
 		["Git - Cho'gall"] = {
 			["biddingWhen"] = "always",
@@ -94,8 +96,6 @@ EPGPLootMaster = {
 			["button3_fallback"] = "",
 			["button3_gpIsPercentage"] = true,
 			["monitorSendAssistantOnly"] = false,
-		},
-		["Gilt - Azuremyst"] = {
 		},
 		["Git - Arthas"] = {
 			["button3_color"] = "ff60fd",
@@ -122,16 +122,16 @@ EPGPLootMaster = {
 			["button2"] = "Major",
 			["button1"] = "BiS",
 			["button2_gpIsPercentage"] = false,
-			["button2_fallback"] = "",
-			["hideMLOnCombat"] = false,
-			["votingDisallowSelf"] = false,
+			["button6_gp"] = "0%",
 			["button2_color"] = "9f78ef",
+			["votingDisallowSelf"] = false,
+			["button2_fallback"] = "",
 			["bidding"] = false,
 			["votingSendGuildRank"] = true,
 			["votingEnableAuto"] = true,
 			["button3_gpIsPercentage"] = false,
 			["button3"] = "Minor",
-			["button6_gp"] = "0%",
+			["hideMLOnCombat"] = false,
 			["votingSendAssistantOnly"] = false,
 		},
 	},

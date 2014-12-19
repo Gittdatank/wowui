@@ -68,11 +68,11 @@ AucAdvancedConfig = {
 				["Azuremyst-Horde.72009"] = "69999999:79999999:48:1:1",
 				["Azuremyst-Horde.62670"] = "1399996:1799996:48:8:20",
 				["Azuremyst-Horde.78882"] = "89999999:99999999:48:1:1",
-				["Arthas-Horde.113588"] = "9350090:9455000:12:2:1",
+				["Azuremyst-Horde.72005"] = "24999999:34999999:48:1:1",
 				["Azuremyst-Horde.72014"] = "19999999:39999999:48:1:1",
 				["Azuremyst-Horde.72008"] = "49999999:59999999:48:1:1",
+				["Arthas-Horde.113588"] = "9350090:9455000:12:2:1",
 				["Azuremyst-Horde.72001"] = "39999999:49999999:48:1:1",
-				["Azuremyst-Horde.72005"] = "24999999:34999999:48:1:1",
 				["Azuremyst-Horde.72015"] = "79999999:89999999:48:1:1",
 			},
 			["mover"] = {
@@ -121,12 +121,12 @@ AucAdvancedConfig = {
 AucAdvancedData = {
 	["AserArbitrageRealms"] = {
 		["Moon Guard"] = "Worgit",
-		["Arthas"] = "Git",
 		["Silvermoon"] = "Giitt",
+		["Arthas"] = "Git",
 		["Cho'gall"] = "Giit",
 		["Area 52"] = "Gyit",
-		["Azuremyst"] = "Git",
 		["Feathermoon"] = "Giitt",
+		["Azuremyst"] = "Git",
 	},
 	["Stats"] = {
 	},

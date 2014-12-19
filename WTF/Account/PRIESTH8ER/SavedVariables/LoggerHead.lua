@@ -15,12 +15,12 @@ LoggerHeadDB = {
 		["Gimm - Cho'gall"] = "Default",
 		["Gitt - Arthas"] = "Default",
 		["Git - Arthas"] = "Default",
-		["Git - Azuremyst"] = "Default",
-		["Burk - Arthas"] = "Default",
-		["Spih - Cho'gall"] = "Default",
-		["Greny - Azuremyst"] = "Default",
-		["Giitt - Feathermoon"] = "Default",
 		["Git - Cho'gall"] = "Default",
+		["Git - Azuremyst"] = "Default",
+		["Spih - Cho'gall"] = "Default",
+		["Burk - Arthas"] = "Default",
+		["Giitt - Feathermoon"] = "Default",
+		["Greny - Azuremyst"] = "Default",
 		["Giit - Cho'gall"] = "Default",
 		["Spih - Arthas"] = "Default",
 	},
@@ -143,8 +143,10 @@ LoggerHeadDB = {
 					["Sunken Temple"] = {
 						false, -- [1]
 					},
-					["Shadowfang Keep"] = {
-						[2] = false,
+					["Shado-Pan Monastery"] = {
+						false, -- [1]
+						true, -- [2]
+						[8] = false,
 					},
 					["Hellfire Citadel: Ramparts"] = {
 						false, -- [1]
@@ -174,10 +176,8 @@ LoggerHeadDB = {
 						false, -- [1]
 						false, -- [2]
 					},
-					["Shado-Pan Monastery"] = {
-						false, -- [1]
-						true, -- [2]
-						[8] = false,
+					["Shadowfang Keep"] = {
+						[2] = false,
 					},
 					["The Everbloom"] = {
 						[2] = true,
@@ -212,14 +212,14 @@ LoggerHeadDB = {
 					},
 				},
 				["none"] = {
-					["Tol Barad"] = {
-						true, -- [1]
-					},
 					["Pandaria"] = {
 						[0] = false,
 					},
 					["Kalimdor"] = {
 						[0] = false,
+					},
+					["Tol Barad"] = {
+						true, -- [1]
 					},
 				},
 				["arena"] = {

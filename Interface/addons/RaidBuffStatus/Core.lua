@@ -5,7 +5,7 @@ local GI = LibStub("LibGroupInSpecT-1.1")
 
 RaidBuffStatus = LibStub("AceAddon-3.0"):NewAddon("RaidBuffStatus", "AceEvent-3.0", "AceTimer-3.0", "AceConsole-3.0", "AceSerializer-3.0")
 RBS_svnrev = {}
-RBS_svnrev["Core.lua"] = select(3,string.find("$Revision: 698 $", ".* (.*) .*"))
+RBS_svnrev["Core.lua"] = select(3,string.find("$Revision: 704 $", ".* (.*) .*"))
 
 local addon = RaidBuffStatus
 local profile
@@ -1559,7 +1559,9 @@ function addon:ReadUnit(unitid, unitindex)
 --			if duration and expirationTime then
 --				addon:Debug(buffName .. ":" .. duration .. ":" .. expirationTime .. ":")
 --			end
-			if (duration or 0) > 0 and (expirationTime or 0) > 0 -- has a visible duration and expiration
+			if buffName == eating then
+				rcn.eating = true
+			elseif (duration or 0) > 0 and (expirationTime or 0) > 0 -- has a visible duration and expiration
 			  and profile.checkabouttorunout and profile.abouttorunout > 0 -- checking expiring
 			  and (duration > 2*mintimeleft or (expirationTime - thetime) < 30) -- only warn about short buffs about to expire
 			  and (expirationTime - thetime) < mintimeleft then
@@ -1568,9 +1570,7 @@ function addon:ReadUnit(unitid, unitindex)
 --				addon:Debug("running out")
 --				buffName = nil
 			elseif buffName then
-				if buffName == eating then
-					rcn.eating = true
-				elseif buffName == wellfed then
+				if buffName == wellfed then
 					rcn.foodlevel, rcn.foodtext = addon:StatLevel(true, spellId, unitid, b)
 				elseif addon.allflixirs[buffName] then
 					local level, text = addon:StatLevel(false, spellId, unitid, b)
@@ -1774,7 +1774,7 @@ function addon:StatLevelCalc(isfood, spellId, unitid, b)
         statstr = statval.." "..mainstat
 
    	if statval >= 40 and mainstat == ITEM_MOD_STAMINA_SHORT then -- normalize for MoP/WoD stam bonus
-      		statval = statval / 1.5
+      		statval = math.ceil(statval / 1.5)
 	elseif mainstat == ARMOR then 
 		-- might need to normalize this, although MoP armor elixirs just seem OP atm
 		-- statval = statval / 2

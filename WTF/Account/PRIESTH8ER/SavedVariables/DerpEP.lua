@@ -1,30 +1,6 @@
 
 DerpDB = {
 	["pull"] = {
-		{
-			["players"] = {
-				{
-					["key"] = "Chronux",
-					["count"] = 1,
-				}, -- [1]
-			},
-			["key"] = "Call of the Tides",
-			["count"] = 1,
-		}, -- [1]
-		{
-			["players"] = {
-				{
-					["key"] = "Oné",
-					["count"] = 1,
-				}, -- [1]
-				{
-					["key"] = "Urtag",
-					["count"] = 1,
-				}, -- [2]
-			},
-			["key"] = "Exploding Fungus",
-			["count"] = 2,
-		}, -- [2]
 	},
 	["sessions"] = {
 		{

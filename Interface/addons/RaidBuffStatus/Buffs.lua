@@ -3,7 +3,7 @@ local L = vars.L
 local addon = RaidBuffStatus
 local report = addon.report
 local raid = addon.raid
-RBS_svnrev["Buffs.lua"] = select(3,string.find("$Revision: 699 $", ".* (.*) .*"))
+RBS_svnrev["Buffs.lua"] = select(3,string.find("$Revision: 703 $", ".* (.*) .*"))
 
 local profile
 function addon:UpdateProfileBuffs()
@@ -416,9 +416,13 @@ scrollofprotection.name = BS[42206] -- Protection
 scrollofprotection.shortname = L["Prot"]
 
 local roguewepbuffs = {
-	BS[2818],  -- Deadly
-	BS[3409],  -- Crippling
-	BS[8679],  -- Wound 
+	BS[2818],  	-- Deadly Poison
+	BS[157584], 	-- Instant Poison (Combat only, replaces Deadly)
+	BS[8679],  	-- Wound Poison
+	--[[ -- Non-lethal poisons: (don't check)
+	BS[3409],  	-- Crippling Poison
+	BS[108211],  	-- Leeching Poison
+	--]]
 }
 
 local function initreporttable(tablename)
