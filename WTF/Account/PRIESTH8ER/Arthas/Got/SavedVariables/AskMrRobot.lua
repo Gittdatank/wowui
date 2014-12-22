@@ -70,7 +70,7 @@ AmrDb = {
 			"|cff0070dd|Hitem:118803:0:0:0:0:0:0:0:100:0:0:0|h[Kihrawr's Scratching Post]|h|r", -- [16]
 		}, -- [2]
 	},
-	["LastCharacterImportDate"] = "",
+	["Region"] = "US",
 	["LastCharacterImport"] = "",
 	["Specs"] = {
 		6, -- [1]
@@ -78,7 +78,14 @@ AmrDb = {
 	},
 	["Options"] = {
 	},
-	["Region"] = "US",
+	["BankItems"] = {
+		"|cffe6cc80|Hitem:104400:0:0:0:0:0:0:942026880:100:0:0:0|h[Hellscream's Razor]|h|r", -- [1]
+		"|cffe6cc80|Hitem:105689:4434:0:0:0:0:0:1620636032:100:0:0:0|h[Hellscream's Tome of Destruction]|h|r", -- [2]
+		"|cffffffff|Hitem:54849:0:0:0:0:0:0:1416277504:100:0:0:0|h[Obsidium Bar]|h|r", -- [3]
+		"|cffffffff|Hitem:14256:0:0:0:0:0:0:1954722560:100:0:0:0|h[Felcloth]|h|r", -- [4]
+		"|cffffffff|Hitem:109135:0:0:0:0:0:0:0:100:0:0:0|h[Raw Riverbeast Meat]|h|r", -- [5]
+		"|cffffffff|Hitem:109132:0:0:0:0:0:0:0:100:0:0:0|h[Raw Talbuk Meat]|h|r", -- [6]
+	},
 	["Currencies"] = {
 		[392] = 8,
 		[823] = 990,
@@ -143,10 +150,7 @@ AmrDb = {
 		"|cffffffff|Hitem:113278:0:0:0:0:0:0:0:100:0:14:0|h[Scavenger's Eyepiece]|h|r", -- [42]
 		"|cffffffff|Hitem:113277:0:0:0:0:0:0:0:100:0:14:0|h[Ogreblood Potion]|h|r", -- [43]
 	},
-	["BankItems"] = {
-		"|cffffffff|Hitem:22574:0:0:0:0:0:0:2147150336:100:0:0:0|h[Mote of Fire]|h|r", -- [1]
-		"|cff0070dd|Hitem:76131:0:0:0:0:0:0:1673828608:100:0:0:0|h[Primordial Ruby]|h|r", -- [2]
-	},
+	["RealmName"] = "Arthas",
 	["VoidItems"] = {
 		"|cffa335ee|Hitem:34011:0:0:0:0:0:0:1582692992:100:0:0:0|h[Illidari Runeshield]|h|r", -- [1]
 		"|cffa335ee|Hitem:50729:0:0:0:0:0:0:1185718912:100:0:0:0|h[Icecrown Glacial Wall]|h|r", -- [2]
@@ -242,29 +246,29 @@ AmrDb = {
 	["Faction"] = "Horde",
 	["Professions"] = {
 	},
-	["RealmName"] = "Arthas",
 	["Class"] = "DRUID",
+	["LastCharacterImportDate"] = "",
 	["BankItemsAndCounts"] = {
-		[74248] = 2,
-		[40195] = 20,
-		[102218] = 2,
-		[36913] = 3,
-		[3466] = 4,
-		[72096] = 2,
-		[90146] = 11,
-		[74247] = 5,
-		[74249] = 32,
-		[76140] = 2,
-		[89112] = 522,
-		[72988] = 7,
-		[76061] = 18,
-		[54849] = 19,
-		[22574] = 1,
-		[76131] = 1,
-		[72104] = 3,
-		[94111] = 16,
-		[72095] = 5,
-		[98717] = 15,
-		[77467] = 4,
+		[23445] = 6,
+		[818] = 3,
+		[2592] = 55,
+		[109131] = 4,
+		[774] = 3,
+		[2319] = 3,
+		[1210] = 2,
+		[104400] = 1,
+		[2589] = 179,
+		[2841] = 3,
+		[109132] = 1,
+		[109135] = 1,
+		[4306] = 72,
+		[783] = 15,
+		[2934] = 2,
+		[4338] = 19,
+		[14256] = 1,
+		[105689] = 1,
+		[54849] = 1,
+		[65365] = 87,
+		[4234] = 75,
 	},
 }

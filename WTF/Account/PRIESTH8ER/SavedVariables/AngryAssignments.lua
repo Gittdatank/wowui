@@ -2,9 +2,6 @@
 AngryAssign_Pages = {
 }
 AngryAssign_State = {
-	["window"] = {
-	},
-	["locked"] = true,
 	["directionUp"] = false,
 	["display"] = {
 		["y"] = -3.00006103515625,
@@ -12,6 +9,9 @@ AngryAssign_State = {
 		["point"] = "CENTER",
 		["scale"] = 1,
 	},
+	["window"] = {
+	},
+	["locked"] = true,
 	["tree"] = {
 	},
 }
