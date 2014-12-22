@@ -11,6 +11,8 @@ AucAdvancedFilterBasic_IgnoreList = {
 	["Arthas"] = {
 		["Horde"] = {
 		},
+		["Alliance"] = {
+		},
 	},
 	["Cho'gall"] = {
 		["Horde"] = {

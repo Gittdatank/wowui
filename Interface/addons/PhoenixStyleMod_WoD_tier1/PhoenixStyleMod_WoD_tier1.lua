@@ -11,8 +11,8 @@ psraidoptionstxtd1={}
 psraidoptionstxtd1[1]={{"|tip2 "..psmainmdamagefrom.." |sid159412|id (initial)", "|tip2 "..psmainmdamagefrom.." |sid159412|id (debuff)", "|tip2 "..psmainmdamagefrom.." |sid159311|id"},
 {},
 {},
-{},
-{},
+{"|tip2 "..psmainmdamagefrom.." |sid162370|id","|tip2 "..psmainmdamagefrom.." |sid163209|id"},
+{"|tip2 "..psdidfriendlyf.." |sid163374|id","|tip2 "..psmainmdamagefrom.." |sid158241|id","|tip2 "..psmainmdamagefrom.." |sid177608|id","|tip2 "..psmainmdamagefrom.." |sid158159|id","|tip2 "..psmainmgot.." |sid158102|id","|tip2 "..psmainmdamagefrom.." |sid157944|id","|tip2 "..psmainmdamagefrom.." |sid158417|id (radius 8)","|tip1 "..psmainmdontsplitdamage.." |sid158026|id"},
 {},
 {"|tip2 "..psmainmgot.." |sid159200|id"},
 }
@@ -31,8 +31,8 @@ psraidoptionschatdefd1={}
 psraidoptionschatdefd1[1]={{1,1,1},
 {},
 {},
-{},
-{},
+{1,1},
+{1,1,2,2,1,1,1,1},
 {},
 {1},
 }
@@ -44,8 +44,8 @@ psraidoptionsondefd1={}
 psraidoptionsondefd1[1]={{1,1,1},
 {},
 {},
-{},
-{},
+{1,1},
+{1,1,1,1,1,1,1,1},
 {},
 {1},
 }
@@ -80,7 +80,78 @@ function psonupdatepatchwod3(curtime)
 
 --тут всякие онапдейт модули
 
+--кто не разделил урон
+if pstwinhwogetthedamage2 and curtime>pstwinhwogetthedamage2 then
+pstwinhwogetthedamage2=nil
+	local text=""
+	
+	--собираем инфо по тем кто НЕ разделил урон и жив!
+	local taball={}
+	local psgroup=8
 
+	--получаем ИД своей зоны
+	local myzone="nozone"
+	for ko=1,GetNumGroupMembers() do
+		local name,_,_,_,_,_,zone = GetRaidRosterInfo(ko)
+		if name==UnitName("player") then
+		  --моя зона
+		  myzone=zone
+		end
+	end
+
+	
+	
+	for i = 1,GetNumGroupMembers() do
+		name, _, subgroup, _, _, _, zone, online, isDead = GetRaidRosterInfo(i)
+		if GetMapNameByID(GetCurrentMapAreaID())==zone or zone==myzone then
+			if subgroup<=psgroup and online and (isDead==nil or isDead==false) and UnitIsDeadOrGhost(name)==false then
+				--народ с дебафом не заносим
+				local a=GetSpellInfo(163374)
+				if UnitDebuff(i, a)==nil or UnitDebuff(i, a)==false then
+					table.insert(taball,name)
+				end
+			end
+		end
+	end
+
+	--удаляем тех, кто получил урон
+	for k=1,#pstwinhwogetthedamage1 do
+        if pstwinhwogetthedamage1[k] then
+          if #taball>0 then
+            for j=1,#taball do
+              if taball[j] and taball[j]==pstwinhwogetthedamage1[k] then
+                table.remove(taball,j)
+              end
+            end
+          end
+        end
+	end
+      if #taball>0 then
+        text=text..". |cffff0000"..psmainmdontsplitdamage.." ("..#taball..")"
+        if #taball<9 then
+          text=text..": |r"
+          for v=1,#taball do
+            text=text..psaddcolortxt(1,taball[v])..taball[v]..psaddcolortxt(2,taball[v])
+            if v~=#taball then
+              text=text..", "
+            end
+          end
+        else
+          text=text..".|r"
+        end
+      end
+			
+
+	
+	if string.len(text)>2 then
+		pscaststartinfo(0,text, -1, "id1", 8, "|s4id158026|id - "..psinfo,psbossnames[3][1][5],2)
+		if psraidoptionson[3][1][5][8]==1 and pswasonbossd15==1 then
+		  pszapuskanonsa(psraidchats3[psraidoptionschat[3][1][5][8]], "{rt8} "..text)
+		end
+	end
+
+pstwinhwogetthedamage1=nil
+end
 
 
 

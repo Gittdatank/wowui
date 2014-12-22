@@ -1,9 +1,248 @@
 ------------------------------------------------------------------------
-r12404 | funkydude | 2014-12-17 06:23:31 +0000 (Wed, 17 Dec 2014) | 1 line
+r12442 | funkydude | 2014-12-22 00:38:10 +0000 (Mon, 22 Dec 2014) | 1 line
 Changed paths:
-   A /tags/r12404-release (from /trunk:12403)
+   A /tags/r12442-release (from /trunk:12441)
 
-Tagging as r12404-release
+Tagging as r12442-release
+------------------------------------------------------------------------
+r12441 | funkydude | 2014-12-22 00:31:44 +0000 (Mon, 22 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/BigWigs.toc
+   M /trunk/Highmaul/TwinOgron.lua
+
+TwinOgron: Fix arcane target bar
+------------------------------------------------------------------------
+r12439 | funkydude | 2014-12-21 22:43:48 +0000 (Sun, 21 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/KargathBladefist.lua
+
+KargathBladefist: Add say for on the hunt.
+------------------------------------------------------------------------
+r12438 | funkydude | 2014-12-21 22:30:57 +0000 (Sun, 21 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/BigWigs.toc
+   M /trunk/Highmaul/TwinOgron.lua
+
+TwinOgron: Fix error on arcane.
+------------------------------------------------------------------------
+r12437 | funkydude | 2014-12-21 21:30:25 +0000 (Sun, 21 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/KargathBladefist.lua
+
+KargathBladefist: Fix impale duration
+------------------------------------------------------------------------
+r12436 | nebula169 | 2014-12-21 20:59:53 +0000 (Sun, 21 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Koragh.lua
+   M /trunk/Highmaul/Locales/deDE.lua
+   M /trunk/Highmaul/Locales/esES.lua
+   M /trunk/Highmaul/Locales/frFR.lua
+   M /trunk/Highmaul/Locales/itIT.lua
+   M /trunk/Highmaul/Locales/koKR.lua
+   M /trunk/Highmaul/Locales/ptBR.lua
+   M /trunk/Highmaul/Locales/ruRU.lua
+   M /trunk/Highmaul/Locales/zhCN.lua
+   M /trunk/Highmaul/Locales/zhTW.lua
+
+Koragh: use the Dominating Power option for the mc balls bar, stop ball bars on next cast (stupid  recharge phase)
+------------------------------------------------------------------------
+r12435 | jongt23 | 2014-12-21 20:20:26 +0000 (Sun, 21 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Locales/esES.lua
+
+esES update
+------------------------------------------------------------------------
+r12434 | ananhaid | 2014-12-20 15:17:06 +0000 (Sat, 20 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Locales/zhCN.lua
+
+- zhCN update.
+------------------------------------------------------------------------
+r12432 | dynaletik | 2014-12-20 10:24:15 +0000 (Sat, 20 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Locales/deDE.lua
+
+- deDE update
+------------------------------------------------------------------------
+r12431 | nebula169 | 2014-12-20 04:12:04 +0000 (Sat, 20 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Koragh.lua
+   M /trunk/Highmaul/Locales/deDE.lua
+   M /trunk/Highmaul/Locales/esES.lua
+   M /trunk/Highmaul/Locales/frFR.lua
+   M /trunk/Highmaul/Locales/itIT.lua
+   M /trunk/Highmaul/Locales/koKR.lua
+   M /trunk/Highmaul/Locales/ptBR.lua
+   M /trunk/Highmaul/Locales/ruRU.lua
+   M /trunk/Highmaul/Locales/zhCN.lua
+   M /trunk/Highmaul/Locales/zhTW.lua
+
+Koragh: combine Dominating Power bar with Overwhelming Energy, don't double warn Expel Magic: Fel when on you
+------------------------------------------------------------------------
+r12430 | nebula169 | 2014-12-20 03:02:32 +0000 (Sat, 20 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Margok.lua
+
+Margok: fix mythic effects on some spells
+------------------------------------------------------------------------
+r12429 | nebula169 | 2014-12-20 01:51:46 +0000 (Sat, 20 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Koragh.lua
+
+Koragh: use the correct spell id for Overwhelming Energy
+------------------------------------------------------------------------
+r12428 | nebula169 | 2014-12-20 01:50:01 +0000 (Sat, 20 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Koragh.lua
+
+Koragh: add damage events for Overwhelming Energy
+------------------------------------------------------------------------
+r12427 | nebula169 | 2014-12-20 01:21:19 +0000 (Sat, 20 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/TwinOgron.lua
+
+TwinOgron: add LFR berserk, tweak Pulverize bars
+------------------------------------------------------------------------
+r12426 | funkydude | 2014-12-20 01:16:46 +0000 (Sat, 20 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Loader.lua
+
+Loader: Fix queue timer being wrong after going through a loading screen.
+------------------------------------------------------------------------
+r12425 | nebula169 | 2014-12-20 00:32:01 +0000 (Sat, 20 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Koragh.lua
+
+Koragh: show the Expel Magic: Frost target, more timer shenanigans
+------------------------------------------------------------------------
+r12424 | funkydude | 2014-12-20 00:14:11 +0000 (Sat, 20 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Plugins/BossBlock.lua
+
+cleanup comments.
+------------------------------------------------------------------------
+r12423 | funkydude | 2014-12-20 00:03:10 +0000 (Sat, 20 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Tectus.lua
+
+Tectus: Add off by default option to show everyone who gets Barrage (set to ME_ONLY).
+------------------------------------------------------------------------
+r12422 | funkydude | 2014-12-19 21:06:28 +0000 (Fri, 19 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Options/Options.lua
+
+Options: support functions for plugin options.
+------------------------------------------------------------------------
+r12421 | ananhaid | 2014-12-19 18:46:00 +0000 (Fri, 19 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Locales/zhCN.lua
+
+- zhCN update.
+------------------------------------------------------------------------
+r12420 | funkydude | 2014-12-19 06:09:04 +0000 (Fri, 19 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/BigWigs.toc
+   M /trunk/Highmaul/TwinOgron.lua
+
+TwinOgron: Fix cancelling arcane volatility countdown.
+------------------------------------------------------------------------
+r12419 | funkydude | 2014-12-18 22:03:36 +0000 (Thu, 18 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Margok.lua
+
+Margok: Add Cho'gall id.
+------------------------------------------------------------------------
+r12418 | nebula169 | 2014-12-18 17:47:26 +0000 (Thu, 18 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Koragh.lua
+
+Koragh: show the add count in the bar, make some bars cd
+------------------------------------------------------------------------
+r12417 | nebula169 | 2014-12-18 17:38:33 +0000 (Thu, 18 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Margok.lua
+
+Margok: show the add count in the bar, too
+------------------------------------------------------------------------
+r12416 | nebula169 | 2014-12-18 17:34:20 +0000 (Thu, 18 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/TwinOgron.lua
+
+TwinOgron: show "cast" bars for each Pulverize hit, show cast bar for Enfeebling Roar
+------------------------------------------------------------------------
+r12415 | ananhaid | 2014-12-18 08:23:12 +0000 (Thu, 18 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Locales/zhCN.lua
+
+fix.
+------------------------------------------------------------------------
+r12414 | ananhaid | 2014-12-18 08:08:34 +0000 (Thu, 18 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Locales/zhCN.lua
+
+- zhCN update.
+------------------------------------------------------------------------
+r12413 | funkydude | 2014-12-18 00:45:38 +0000 (Thu, 18 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/KargathBladefist.lua
+
+KargathBladefist: Add a fallback for berserk rush.
+------------------------------------------------------------------------
+r12412 | funkydude | 2014-12-17 23:52:12 +0000 (Wed, 17 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Core/Core.lua
+
+Core: Add Lich King death to skipped cinematic list.
+------------------------------------------------------------------------
+r12411 | nebula169 | 2014-12-17 22:09:12 +0000 (Wed, 17 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Margok.lua
+
+move blocks around (no changes)
+------------------------------------------------------------------------
+r12410 | nebula169 | 2014-12-17 21:58:30 +0000 (Wed, 17 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Margok.lua
+
+Margok: count add waves, change add dying sound, tweak Mark of Chaos a bit more
+------------------------------------------------------------------------
+r12409 | funkydude | 2014-12-17 20:44:42 +0000 (Wed, 17 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Brackenspore.lua
+
+Brackenspore: Fix green icon.
+------------------------------------------------------------------------
+r12408 | jongt23 | 2014-12-17 20:29:43 +0000 (Wed, 17 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Locales/esES.lua
+
+esES update
+------------------------------------------------------------------------
+r12407 | pettigrow | 2014-12-17 16:44:01 +0000 (Wed, 17 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Locales/frFR.lua
+
+frFR Update
+------------------------------------------------------------------------
+r12406 | nebula169 | 2014-12-17 13:11:51 +0000 (Wed, 17 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Brackenspore.lua
+
+Brackenspore: fix initial mythic ability time, add "soon" warnings for Infesting Spores
+------------------------------------------------------------------------
+r12405 | nebula169 | 2014-12-17 09:28:34 +0000 (Wed, 17 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Locales/deDE.lua
+   M /trunk/Highmaul/Locales/esES.lua
+   M /trunk/Highmaul/Locales/frFR.lua
+   M /trunk/Highmaul/Locales/itIT.lua
+   M /trunk/Highmaul/Locales/koKR.lua
+   M /trunk/Highmaul/Locales/ptBR.lua
+   M /trunk/Highmaul/Locales/ruRU.lua
+   M /trunk/Highmaul/Locales/zhCN.lua
+   M /trunk/Highmaul/Locales/zhTW.lua
+
+update Mar'gok locales
 ------------------------------------------------------------------------
 r12403 | nebula169 | 2014-12-17 06:09:52 +0000 (Wed, 17 Dec 2014) | 1 line
 Changed paths:
@@ -1327,61 +1566,4 @@ Changed paths:
    M /trunk/Core/Core.lua
 
 Core: Add Grimrail cinematics.
-------------------------------------------------------------------------
-r12200 | funkydude | 2014-11-19 04:43:41 +0000 (Wed, 19 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/Plugins/Bars.lua
-   M /trunk/Plugins/Proximity.lua
-
-Proximity: First run through inward/outward pulse animation for targeted proximity modes.
-------------------------------------------------------------------------
-r12199 | nebula169 | 2014-11-18 16:16:45 +0000 (Tue, 18 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/Plugins/Bars.lua
-
-Bars: prevent double messages with short break timers
-------------------------------------------------------------------------
-r12198 | nebula169 | 2014-11-18 15:45:29 +0000 (Tue, 18 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/Draenor/Tarlna.lua
-
-Draenor/Tarlna: add in cast time for Genesis bar
-------------------------------------------------------------------------
-r12197 | nebula169 | 2014-11-18 15:43:35 +0000 (Tue, 18 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/Pandaria/Salyis.lua
-
-Pandaria/Salyis: add combat checks for engage/wipe
-------------------------------------------------------------------------
-r12196 | nebula169 | 2014-11-18 15:37:27 +0000 (Tue, 18 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/Loader.lua
-   M /trunk/Options/Options.lua
-
-compat cleanup
-------------------------------------------------------------------------
-r12195 | funkydude | 2014-11-18 13:04:56 +0000 (Tue, 18 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/BlackrockFoundry/Darmac.lua
-   M /trunk/BlackrockFoundry/Oregorger.lua
-   M /trunk/BlackrockFoundry/TheIronMaidens.lua
-   M /trunk/BlackrockFoundry/Thogar.lua
-   M /trunk/Options/Options.lua
-   M /trunk/SiegeOfOrgrimmar/TheFallenProtectors.lua
-
-tweaks
-------------------------------------------------------------------------
-r12194 | funkydude | 2014-11-17 21:46:48 +0000 (Mon, 17 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/BigWigs.toc
-   M /trunk/Core/Core.lua
-   M /trunk/Options/scripts/authors.lua
-
-Core: add a note about Auchindoun having 2 cinematics, which will need some kind of workaround.
-------------------------------------------------------------------------
-r12193 | funkydude | 2014-11-15 12:08:31 +0000 (Sat, 15 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/Core/Core.lua
-
-Add Bloodmaul Slag Mines cinematic.
 ------------------------------------------------------------------------

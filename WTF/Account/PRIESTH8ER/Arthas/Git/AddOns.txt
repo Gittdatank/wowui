@@ -130,7 +130,7 @@ HudMap: disabled
 HudMap_Ruby: disabled
 Informant: disabled
 KM_Att: disabled
-LagBar: disabled
+LagBar: enabled
 Ace3: enabled
 LibStub: enabled
 LibRock-1.0: enabled
@@ -654,3 +654,5 @@ VEM-WorldEvents: enabled
 VEM-Sound-Default: enabled
 VEM-StatusBarTimers: disabled
 BigWigs_LustingOnTrash: disabled
+SavedInstances: enabled
+GatherMate_Sharing: disabled

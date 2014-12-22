@@ -7,7 +7,7 @@ raquantrepeatach = 10
 raquantrepeatachtm = 0
 raoldvern2 = 6.008
 raaddoninstalledsins = "22/11/2011"
-raminibutshowt = true
+raminibutshowt = false
 RA_Settings = {
 	["RAMinimapPos"] = -176,
 }

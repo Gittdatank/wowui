@@ -1,0 +1,11 @@
+## Interface: 60000
+## Title: LagBar
+## Author: Xruptor
+## Version:  3.3
+## Notes: Displays a simple bar with some Latency Information.
+## SavedVariables: LagBar_DB
+## X-Curse-Packaged-Version: v3.3
+## X-Curse-Project-Name: LagBar FPS
+## X-Curse-Project-ID: lagbar
+## X-Curse-Repository-ID: wow/lagbar/mainline
+LagBar.lua

@@ -63,7 +63,7 @@ GoldSave = {
 	["Got_Arthas::Horde"] = {
 		["show"] = true,
 		["name"] = "Got",
-		["gold"] = 544381825,
+		["gold"] = 305749413,
 	},
 	["Worgit_Moon Guard::Alliance"] = {
 		["show"] = true,
@@ -74,6 +74,11 @@ GoldSave = {
 		["show"] = true,
 		["name"] = "Dbyx",
 		["gold"] = 9745091,
+	},
+	["Lihte_Arthas::Alliance"] = {
+		["show"] = true,
+		["name"] = "Lihte",
+		["gold"] = 2000,
 	},
 	["Gyit_Area 52::Horde"] = {
 		["show"] = true,
@@ -93,7 +98,7 @@ GoldSave = {
 	["Git_Arthas::Horde"] = {
 		["show"] = true,
 		["name"] = "Git",
-		["gold"] = 6549893592,
+		["gold"] = 4559798154,
 	},
 	["Giit_Cho'gall::Horde"] = {
 		["show"] = true,

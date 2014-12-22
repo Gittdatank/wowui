@@ -2608,6 +2608,78 @@ pssisavedbossinfo = {
 		}, -- [25]
 	}, -- [6]
 	{
+		{
+			"Ko'ragh", -- [1]
+			"00:31, 12/22/2014", -- [2]
+			"FLEX", -- [3]
+			"(kill)", -- [4]
+		}, -- [1]
+		{
+			"Imperator Mar'gok", -- [1]
+			"00:17, 12/22/2014", -- [2]
+			"FLEX", -- [3]
+			"(try)", -- [4]
+		}, -- [2]
+		{
+			"Ko'ragh", -- [1]
+			"00:01, 12/22/2014", -- [2]
+			"FLEX", -- [3]
+			"(try)", -- [4]
+		}, -- [3]
+		{
+			"Ko'ragh", -- [1]
+			"23:37, 12/21/2014", -- [2]
+			"FLEX", -- [3]
+			"(kill)", -- [4]
+		}, -- [4]
+		{
+			"Ko'ragh", -- [1]
+			"23:31, 12/21/2014", -- [2]
+			"FLEX", -- [3]
+			"(try)", -- [4]
+		}, -- [5]
+		{
+			"Phemos", -- [1]
+			"23:17, 12/21/2014", -- [2]
+			"FLEX", -- [3]
+			"(kill)", -- [4]
+		}, -- [6]
+		{
+			"Tectus", -- [1]
+			"23:01, 12/21/2014", -- [2]
+			"FLEX", -- [3]
+			"(kill)", -- [4]
+		}, -- [7]
+		{
+			"Brackenspore", -- [1]
+			"22:45, 12/21/2014", -- [2]
+			"FLEX", -- [3]
+			"(kill)", -- [4]
+		}, -- [8]
+		{
+			"The Butcher", -- [1]
+			"22:34, 12/21/2014", -- [2]
+			"FLEX", -- [3]
+			"(kill)", -- [4]
+		}, -- [9]
+		{
+			"Kargath Bladefist", -- [1]
+			"22:20, 12/21/2014", -- [2]
+			"FLEX", -- [3]
+			"(kill)", -- [4]
+		}, -- [10]
+		{
+			"Kargath Bladefist", -- [1]
+			"22:16, 12/21/2014", -- [2]
+			"FLEX", -- [3]
+			"(try)", -- [4]
+		}, -- [11]
+		{
+			"Kargath Bladefist", -- [1]
+			"22:15, 12/21/2014", -- [2]
+			"FLEX", -- [3]
+			"(try)", -- [4]
+		}, -- [12]
 	}, -- [7]
 	{
 	}, -- [8]
@@ -2615,6 +2687,8 @@ pssisavedbossinfo = {
 	}, -- [9]
 	{
 	}, -- [10]
+	{
+	}, -- [11]
 }
 pssisavedfailaftercombat = {
 	{
@@ -3062,6 +3136,35 @@ pssisavedfailaftercombat = {
 		}, -- [25]
 	}, -- [6]
 	{
+		{
+		}, -- [1]
+		{
+			"Got |s4id159200|id (total): |CFFF48CBAScrantnicity|r (1), |CFFFF7C0AGot|r (1).", -- [1]
+		}, -- [2]
+		{
+			"Got |s4id159200|id (total): |CFF68CCEFBloodblock|r (1), |CFFC41F3BIamascrub|r (1), |CFF00FF96Blameshinerr|r (1).", -- [1]
+		}, -- [3]
+		{
+		}, -- [4]
+		{
+		}, -- [5]
+		{
+		}, -- [6]
+		{
+		}, -- [7]
+		{
+		}, -- [8]
+		{
+		}, -- [9]
+		{
+			"Damage from |s4id159412|id (initial, total): |CFF68CCEFWazzie|r (1).", -- [1]
+			"Damage from |s4id159413|id (debuff, total): |CFF00FF96Blameshinerr|r (2), |CFF68CCEFWazzie|r (1).", -- [2]
+			"Damage from |s4id159311|id (total): |CFFFF7C0AGot|r (12), |CFF00FF96Blameshinerr|r (4), |CFFFFF468Falænx|r (4), |CFF00FF96Chronux|r (4), |CFFF48CBAHitsuyaga|r (3), |CFF68CCEFWazzie|r (1), |CFFFFF468Endernx|r (1).", -- [3]
+		}, -- [10]
+		{
+		}, -- [11]
+		{
+		}, -- [12]
 	}, -- [7]
 	{
 	}, -- [8]
@@ -3069,6 +3172,8 @@ pssisavedfailaftercombat = {
 	}, -- [9]
 	{
 	}, -- [10]
+	{
+	}, -- [11]
 }
 pssisavedfailsplayern = {
 	{
@@ -3078,6 +3183,7 @@ pssisavedfailsplayern = {
 		"Gitt - Arthas", -- [4]
 		"Spih - Arthas", -- [5]
 		"Git - Arthas", -- [6]
+		"Got - Arthas", -- [7]
 	}, -- [1]
 	{
 		"0x04000000059B672E", -- [1]
@@ -3086,6 +3192,7 @@ pssisavedfailsplayern = {
 		"0x02000000085AB16A", -- [4]
 		"0x0200000008617ABD", -- [5]
 		"Player-69-08560956", -- [6]
+		"Player-69-08C9FE29", -- [7]
 	}, -- [2]
 }
 psfontsset = {
@@ -3451,6 +3558,30 @@ pssidamageinf_title2 = {
 		}, -- [25]
 	}, -- [6]
 	{
+		{
+		}, -- [1]
+		{
+		}, -- [2]
+		{
+		}, -- [3]
+		{
+		}, -- [4]
+		{
+		}, -- [5]
+		{
+		}, -- [6]
+		{
+		}, -- [7]
+		{
+		}, -- [8]
+		{
+		}, -- [9]
+		{
+		}, -- [10]
+		{
+		}, -- [11]
+		{
+		}, -- [12]
 	}, -- [7]
 	{
 	}, -- [8]
@@ -3458,6 +3589,8 @@ pssidamageinf_title2 = {
 	}, -- [9]
 	{
 	}, -- [10]
+	{
+	}, -- [11]
 }
 pssidamageinf_indexboss = {
 	{
@@ -3794,6 +3927,30 @@ pssidamageinf_indexboss = {
 		}, -- [25]
 	}, -- [6]
 	{
+		{
+		}, -- [1]
+		{
+		}, -- [2]
+		{
+		}, -- [3]
+		{
+		}, -- [4]
+		{
+		}, -- [5]
+		{
+		}, -- [6]
+		{
+		}, -- [7]
+		{
+		}, -- [8]
+		{
+		}, -- [9]
+		{
+		}, -- [10]
+		{
+		}, -- [11]
+		{
+		}, -- [12]
 	}, -- [7]
 	{
 	}, -- [8]
@@ -3801,6 +3958,8 @@ pssidamageinf_indexboss = {
 	}, -- [9]
 	{
 	}, -- [10]
+	{
+	}, -- [11]
 }
 pssidamageinf_additioninfo = {
 	{
@@ -4179,6 +4338,30 @@ pssidamageinf_additioninfo = {
 		}, -- [25]
 	}, -- [6]
 	{
+		{
+		}, -- [1]
+		{
+		}, -- [2]
+		{
+		}, -- [3]
+		{
+		}, -- [4]
+		{
+		}, -- [5]
+		{
+		}, -- [6]
+		{
+		}, -- [7]
+		{
+		}, -- [8]
+		{
+		}, -- [9]
+		{
+		}, -- [10]
+		{
+		}, -- [11]
+		{
+		}, -- [12]
 	}, -- [7]
 	{
 	}, -- [8]
@@ -4186,6 +4369,8 @@ pssidamageinf_additioninfo = {
 	}, -- [9]
 	{
 	}, -- [10]
+	{
+	}, -- [11]
 }
 pssidamageinf_damageinfo = {
 	{
@@ -5416,6 +5601,30 @@ pssidamageinf_damageinfo = {
 		}, -- [25]
 	}, -- [6]
 	{
+		{
+		}, -- [1]
+		{
+		}, -- [2]
+		{
+		}, -- [3]
+		{
+		}, -- [4]
+		{
+		}, -- [5]
+		{
+		}, -- [6]
+		{
+		}, -- [7]
+		{
+		}, -- [8]
+		{
+		}, -- [9]
+		{
+		}, -- [10]
+		{
+		}, -- [11]
+		{
+		}, -- [12]
 	}, -- [7]
 	{
 	}, -- [8]
@@ -5423,6 +5632,8 @@ pssidamageinf_damageinfo = {
 	}, -- [9]
 	{
 	}, -- [10]
+	{
+	}, -- [11]
 }
 pssidamageinf_switchinfo = {
 	{
@@ -5864,6 +6075,30 @@ pssidamageinf_switchinfo = {
 		}, -- [25]
 	}, -- [6]
 	{
+		{
+		}, -- [1]
+		{
+		}, -- [2]
+		{
+		}, -- [3]
+		{
+		}, -- [4]
+		{
+		}, -- [5]
+		{
+		}, -- [6]
+		{
+		}, -- [7]
+		{
+		}, -- [8]
+		{
+		}, -- [9]
+		{
+		}, -- [10]
+		{
+		}, -- [11]
+		{
+		}, -- [12]
 	}, -- [7]
 	{
 	}, -- [8]
@@ -5871,6 +6106,8 @@ pssidamageinf_switchinfo = {
 	}, -- [9]
 	{
 	}, -- [10]
+	{
+	}, -- [11]
 }
 pssidamageinf_classcolor = {
 	{
@@ -7010,6 +7247,78 @@ pssidamageinf_classcolor = {
 		}, -- [25]
 	}, -- [6]
 	{
+		{
+			{
+			}, -- [1]
+			{
+			}, -- [2]
+		}, -- [1]
+		{
+			{
+			}, -- [1]
+			{
+			}, -- [2]
+		}, -- [2]
+		{
+			{
+			}, -- [1]
+			{
+			}, -- [2]
+		}, -- [3]
+		{
+			{
+			}, -- [1]
+			{
+			}, -- [2]
+		}, -- [4]
+		{
+			{
+			}, -- [1]
+			{
+			}, -- [2]
+		}, -- [5]
+		{
+			{
+			}, -- [1]
+			{
+			}, -- [2]
+		}, -- [6]
+		{
+			{
+			}, -- [1]
+			{
+			}, -- [2]
+		}, -- [7]
+		{
+			{
+			}, -- [1]
+			{
+			}, -- [2]
+		}, -- [8]
+		{
+			{
+			}, -- [1]
+			{
+			}, -- [2]
+		}, -- [9]
+		{
+			{
+			}, -- [1]
+			{
+			}, -- [2]
+		}, -- [10]
+		{
+			{
+			}, -- [1]
+			{
+			}, -- [2]
+		}, -- [11]
+		{
+			{
+			}, -- [1]
+			{
+			}, -- [2]
+		}, -- [12]
 	}, -- [7]
 	{
 	}, -- [8]
@@ -7017,6 +7326,8 @@ pssidamageinf_classcolor = {
 	}, -- [9]
 	{
 	}, -- [10]
+	{
+	}, -- [11]
 }
 pssicombatin_indexboss = {
 	{
@@ -7776,6 +8087,48 @@ pssicombatin_indexboss = {
 		}, -- [25]
 	}, -- [6]
 	{
+		{
+			666, -- [1]
+		}, -- [1]
+		{
+			666, -- [1]
+			1, -- [2]
+		}, -- [2]
+		{
+			666, -- [1]
+			1, -- [2]
+		}, -- [3]
+		{
+			666, -- [1]
+		}, -- [4]
+		{
+			666, -- [1]
+		}, -- [5]
+		{
+			666, -- [1]
+		}, -- [6]
+		{
+			666, -- [1]
+		}, -- [7]
+		{
+			666, -- [1]
+			91, -- [2]
+		}, -- [8]
+		{
+			666, -- [1]
+		}, -- [9]
+		{
+			666, -- [1]
+			3, -- [2]
+			1, -- [3]
+			2, -- [4]
+		}, -- [10]
+		{
+			666, -- [1]
+		}, -- [11]
+		{
+			666, -- [1]
+		}, -- [12]
 	}, -- [7]
 	{
 	}, -- [8]
@@ -7783,6 +8136,8 @@ pssicombatin_indexboss = {
 	}, -- [9]
 	{
 	}, -- [10]
+	{
+	}, -- [11]
 }
 pssicombatin_title2 = {
 	{
@@ -8542,6 +8897,48 @@ pssicombatin_title2 = {
 		}, -- [25]
 	}, -- [6]
 	{
+		{
+			"Death info", -- [1]
+		}, -- [1]
+		{
+			"Death info", -- [1]
+			"|s4id159200|id - info", -- [2]
+		}, -- [2]
+		{
+			"Death info", -- [1]
+			"|s4id159200|id - info", -- [2]
+		}, -- [3]
+		{
+			"Death info", -- [1]
+		}, -- [4]
+		{
+			"Death info", -- [1]
+		}, -- [5]
+		{
+			"Death info", -- [1]
+		}, -- [6]
+		{
+			"Death info", -- [1]
+		}, -- [7]
+		{
+			"Death info", -- [1]
+			"|s4id160013|id - casts info", -- [2]
+		}, -- [8]
+		{
+			"Death info", -- [1]
+		}, -- [9]
+		{
+			"Death info", -- [1]
+			"|s4id159311|id - info", -- [2]
+			"|s4id159412|id - info", -- [3]
+			"|s4id159413|id - info", -- [4]
+		}, -- [10]
+		{
+			"Death info", -- [1]
+		}, -- [11]
+		{
+			"Death info", -- [1]
+		}, -- [12]
 	}, -- [7]
 	{
 	}, -- [8]
@@ -8549,6 +8946,8 @@ pssicombatin_title2 = {
 	}, -- [9]
 	{
 	}, -- [10]
+	{
+	}, -- [11]
 }
 pssicombatin_damageinfo = {
 	{
@@ -60386,6 +60785,576 @@ pssicombatin_damageinfo = {
 		}, -- [25]
 	}, -- [6]
 	{
+		{
+			{
+				{
+					"|CFF68CCEFDudez|r > 4.2k, Destabilize (O: 22.3k) [Volatile Anomaly] (Arcane)", -- [1]
+					"|CFF00FF96Blameshinerr|r > 590, Force Nova (O: 8.6k) [Imperator Mar'gok] (Arcane)", -- [2]
+					"|CFFFF7C0APrimalfears|r > 87k, Orb of Chaos (O: 28.9k)  (Arcane)", -- [3]
+				}, -- [1]
+				{
+					512.892999999996, -- [1]
+					552.152999999998, -- [2]
+					659.055999999997, -- [3]
+				}, -- [2]
+				{
+					1, -- [1]
+					2, -- [2]
+					3, -- [3]
+				}, -- [3]
+			}, -- [1]
+		}, -- [1]
+		{
+			{
+				{
+					"|CFFF48CBAScrantnicity|r > 13.8k, Arcane Wrath (O: 157k) [Imperator Mar'gok] (Arcane)", -- [1]
+					"|CFFF48CBACptgraybush|r > 24.6k, Destabilize (O: 4.1k) [Volatile Anomaly] (Arcane)", -- [2]
+					"|CFFAAD372Wildfears|r > 114k, Arcane Wrath (O: 21.6k) [Imperator Mar'gok] (Arcane)", -- [3]
+					"|CFF68CCEFWazzie|r > 96k, Arcane Wrath (O: 10.4k) [Imperator Mar'gok] (Arcane)", -- [4]
+					"|CFFFF7C0AGot|r > 80k, Melee (O: 33k) [Imperator Mar'gok]", -- [5]
+					"|CFF9382C9Vamprixlz|r > 51k, Arcane Wrath (O: 34k) [Imperator Mar'gok] (Arcane)", -- [6]
+					"|CFF00FF96Blameshinerr|r > 24.1k, Melee (O: 10.9k, A: 43k) [Imperator Mar'gok]", -- [7]
+					"|CFF00FF96Chronux|r > 134k, Mark of Chaos (O: 43k)  (Arcane)", -- [8]
+					"|CFFFF7C0AWoodedblood-WyrmrestAccord|r > 112k, Mark of Chaos (O: 54k)  (Arcane)", -- [9]
+					"|CFFF48CBAHitsuyaga|r > 95k, Mark of Chaos (O: 82k)  (Arcane)", -- [10]
+					"|CFFF48CBAScrantnicity|r > 92k, Mark of Chaos (O: 86k)  (Arcane)", -- [11]
+					"|CFFC69B6DClancey|r > 130k, Mark of Chaos (O: 43k)  (Arcane)", -- [12]
+					"|CFF1a3caaDjfallyfal|r > 7.1k, Collapsing Entity (O: 212) [Replicating Arcane Aberration] (Arcane)", -- [13]
+					"|CFF1a3caaLala-Hyjal|r > 98k, Orb of Chaos (O: 43k)  (Arcane)", -- [14]
+					"|CFFC41F3BGawdric|r > 80k, Mark of Chaos (|cffff0000absorbed by Purgatory|r)", -- [15]
+					"|CFFAAD372Wildfears|r > 6.1k, Collapsing Entity (O: 1.8k) [Replicating Arcane Aberration] (Arcane)", -- [16]
+					"|CFFC41F3BIamascrub|r > 6.7k, Force Nova (O: 4k) [Imperator Mar'gok] (Arcane)", -- [17]
+					"|CFFFF7C0AGot|r > 6.8k, Force Nova (O: 3.3k) [Imperator Mar'gok] (Arcane)", -- [18]
+					"|CFF68CCEFDudez|r > 11.6k, Collapsing Entity (O: 1.5k) [Replicating Arcane Aberration] (Arcane)", -- [19]
+					"|CFFAAD372Rilke-Maelstrom|r > 51k, Melee (O: 29.4k) [Replicating Arcane Aberration]", -- [20]
+					"|CFFFFFFFFXanthia|r > 6.8k, Collapsing Entity (O: 2.3k) [Replicating Arcane Aberration] (Arcane)", -- [21]
+					"|CFF1a3caaAhrian|r > 1.4k, Collapsing Entity (O: 11.7k) [Replicating Arcane Aberration] (Arcane)", -- [22]
+					"|CFF68CCEFBloodblock|r > 26.8k, Melee (O: 229k) |cffff0000CRITICAL|r [Imperator Mar'gok]", -- [23]
+				}, -- [1]
+				{
+					96.7109999999957, -- [1]
+					282.466, -- [2]
+					328.648000000001, -- [3]
+					367.082999999999, -- [4]
+					526.515999999996, -- [5]
+					545.129000000001, -- [6]
+					551.617999999995, -- [7]
+					564.559000000001, -- [8]
+					564.559000000001, -- [9]
+					564.559000000001, -- [10]
+					564.559000000001, -- [11]
+					564.559000000001, -- [12]
+					566.553999999997, -- [13]
+					567.373, -- [14]
+					567.489000000001, -- [15]
+					568.591999999997, -- [16]
+					570.212, -- [17]
+					570.398000000001, -- [18]
+					571.014999999999, -- [19]
+					571.815999999999, -- [20]
+					572.635000000002, -- [21]
+					573.036, -- [22]
+					573.036, -- [23]
+				}, -- [2]
+				{
+					1, -- [1]
+					2, -- [2]
+					3, -- [3]
+					4, -- [4]
+					5, -- [5]
+					6, -- [6]
+					7, -- [7]
+					8, -- [8]
+					9, -- [9]
+					10, -- [10]
+					11, -- [11]
+					12, -- [12]
+					13, -- [13]
+					14, -- [14]
+					15, -- [15]
+					16, -- [16]
+					17, -- [17]
+					18, -- [18]
+					19, -- [19]
+					20, -- [20]
+					21, -- [21]
+					22, -- [22]
+					23, -- [23]
+				}, -- [3]
+			}, -- [1]
+			{
+				{
+					"Destructive Resonance: |CFFF48CBAScrantnicity|r", -- [1]
+					"Destructive Resonance: |CFFFF7C0AGot|r", -- [2]
+				}, -- [1]
+				{
+					95.6840000000011, -- [1]
+					486.567999999999, -- [2]
+				}, -- [2]
+				{
+					1, -- [1]
+					2, -- [2]
+				}, -- [3]
+			}, -- [2]
+		}, -- [2]
+		{
+			{
+				{
+					"|CFFC69B6DClancey|r > 49k, Destructive Resonance (O: 6.5k)  (Arcane)", -- [1]
+					"|CFF68CCEFWazzie|r > 21.9k, Nether Blast (O: 24.2k) [Gorian Warmage] (Arcane)", -- [2]
+					"|CFFF48CBAHitsuyaga|r > 34k, Nether Blast (O: 12k) [Gorian Warmage] (Arcane)", -- [3]
+					"|CFFF48CBACptgraybush|r > 150k, Mark of Chaos (O: 9.4k)  (Arcane)", -- [4]
+					"|CFF68CCEFBloodblock|r > 65k, Arcane Wrath (O: 28.7k) [Imperator Mar'gok] (Arcane)", -- [5]
+					"|CFFAAD372Wildfears|r > 79k, Arcane Wrath (O: 26.9k) [Imperator Mar'gok] (Arcane)", -- [6]
+					"|CFFF48CBAHitsuyaga|r > 7.1k, Nether Blast (O: 35k) [Gorian Warmage] (Arcane)", -- [7]
+					"|CFFF48CBAScrantnicity|r > 19.9k, Nether Blast (O: 24k) [Gorian Warmage] (Arcane)", -- [8]
+					"|CFF68CCEFDudez|r > 2.9k, Destabilize (O: 23k) [Volatile Anomaly] (Arcane)", -- [9]
+					"|CFFAAD372Rilke-Maelstrom|r > 15.3k, Nether Blast (O: 30k) [Gorian Warmage] (Arcane)", -- [10]
+					"|CFF00FF96Blameshinerr|r > 9.3k, Melee (O: 10.6k) [Volatile Anomaly]", -- [11]
+					"|CFFC41F3BIamascrub|r >  (|cffff0000absorbed by Purgatory|r)", -- [12]
+					"|CFF00FF96Chronux|r > 42k, Destructive Resonance (O: 16.1k)  (Arcane)", -- [13]
+					"|CFF1a3caaLala-Hyjal|r > 32k, Destructive Resonance (O: 105k)  (Arcane)", -- [14]
+					"|CFFFFFFFFXanthia|r > 36k, Destructive Resonance (O: 3.8k)  (Arcane)", -- [15]
+					"|CFFFF7C0AGot|r > 36k, Melee (O: 77k, A: 30k) [Imperator Mar'gok]", -- [16]
+					"|CFFC69B6DClancey|r > 28.3k, Nether Blast (O: 14k) [Gorian Warmage] (Arcane)", -- [17]
+					"|CFFFFF468Falænx|r > 9.1k, Melee (O: 11.3k) [Volatile Anomaly]", -- [18]
+					"|CFFFF7C0AWoodedblood-WyrmrestAccord|r > |cffff0000unknown|r (last attack got: 18.4k, Melee [Volatile Anomaly])", -- [19]
+					"|CFF1a3caaAhrian|r > 808, Melee (O: 15.5k) [Volatile Anomaly]", -- [20]
+					"|CFF9382C9Vamprixlz|r > 32k, Nether Blast (O: 10.4k) [Gorian Warmage] (Arcane)", -- [21]
+					"|CFFC41F3BGawdric|r >  (|cffff0000absorbed by Purgatory|r)", -- [22]
+				}, -- [1]
+				{
+					94.7960000000021, -- [1]
+					267.783000000003, -- [2]
+					267.983, -- [3]
+					324.683000000005, -- [4]
+					350.962, -- [5]
+					475.639999999999, -- [6]
+					512.915000000001, -- [7]
+					515.748, -- [8]
+					537.942000000003, -- [9]
+					548.578999999998, -- [10]
+					550.200000000004, -- [11]
+					553.440000000002, -- [12]
+					553.825000000004, -- [13]
+					553.825000000004, -- [14]
+					553.825000000004, -- [15]
+					556.264000000003, -- [16]
+					557.484000000004, -- [17]
+					558.286, -- [18]
+					558.686999999998, -- [19]
+					560.306000000004, -- [20]
+					562.762999999999, -- [21]
+					562.929000000004, -- [22]
+				}, -- [2]
+				{
+					1, -- [1]
+					2, -- [2]
+					3, -- [3]
+					4, -- [4]
+					5, -- [5]
+					6, -- [6]
+					7, -- [7]
+					8, -- [8]
+					9, -- [9]
+					10, -- [10]
+					11, -- [11]
+					12, -- [12]
+					13, -- [13]
+					14, -- [14]
+					15, -- [15]
+					16, -- [16]
+					17, -- [17]
+					18, -- [18]
+					19, -- [19]
+					20, -- [20]
+					21, -- [21]
+					22, -- [22]
+				}, -- [3]
+			}, -- [1]
+			{
+				{
+					"Destructive Resonance: |CFF68CCEFBloodblock|r", -- [1]
+					"Destructive Resonance: |CFFC41F3BIamascrub|r", -- [2]
+					"Destructive Resonance: |CFF00FF96Blameshinerr|r", -- [3]
+				}, -- [1]
+				{
+					300.416000000005, -- [1]
+					512.042999999998, -- [2]
+					544.035000000004, -- [3]
+				}, -- [2]
+				{
+					1, -- [1]
+					2, -- [2]
+					3, -- [3]
+				}, -- [3]
+			}, -- [2]
+		}, -- [3]
+		{
+			{
+				{
+					"|CFFAAD372Rilke-Maelstrom|r > 448, Expel Magic: Arcane (O: 138k)  (Arcane)", -- [1]
+					"|CFF68CCEFBloodblock|r > 45k, Overflowing Energy (O: 1.36M, A: 85k) [Ko'ragh] (Arcane)", -- [2]
+					"|CFFAAD372Rilke-Maelstrom|r > 8.5k, Expel Magic: Fire (O: 3k) [Ko'ragh] (Fire)", -- [3]
+					"|CFFF48CBAHitsuyaga|r > 33k, Expel Magic: Fire (O: 21.5k)  (Fire)", -- [4]
+				}, -- [1]
+				{
+					173.275999999998, -- [1]
+					201.610000000001, -- [2]
+					279.377, -- [3]
+					283.402999999998, -- [4]
+				}, -- [2]
+				{
+					1, -- [1]
+					2, -- [2]
+					3, -- [3]
+					4, -- [4]
+				}, -- [3]
+			}, -- [1]
+		}, -- [4]
+		{
+			{
+				{
+					"|CFFAAD372Rilke-Maelstrom|r > 18.3k, Suppression Field (O: 22.8k)  (Arcane)", -- [1]
+					"|CFF00FF96Chronux|r > 81k, Expel Magic: Arcane (O: 120k)  (Arcane)", -- [2]
+					"|CFFFF7C0AWoodedblood-WyrmrestAccord|r > 74k, Expel Magic: Arcane (O: 115k)  (Arcane)", -- [3]
+					"|CFFF48CBACptgraybush|r > 83k, Expel Magic: Arcane (O: 87k)  (Arcane)", -- [4]
+					"|CFFFFF468Falænx|r > 15.2k, Expel Magic: Arcane (O: 15.2k, A: 172k)  (Arcane)", -- [5]
+					"|CFFC69B6DClancey|r > 118k, Expel Magic: Arcane (O: 70k)  (Arcane)", -- [6]
+					"|CFFFF7C0AGot|r > 36k, Expel Magic: Arcane (O: 139k)  (Arcane)", -- [7]
+					"|CFF1a3caaAhrian|r > 8.2k, Suppression Field (O: 21.6k)  (Arcane)", -- [8]
+					"|CFFF48CBAHitsuyaga|r > 24.7k, Suppression Field (O: 8.2k)  (Arcane)", -- [9]
+					"|CFF68CCEFBloodblock|r > 3.9k, Melee (O: 44k) [Volatile Anomaly]", -- [10]
+					"|CFFAAD372Wildfears|r > 8.7k, Caustic Energy (O: 23.4k)  (Arcane)", -- [11]
+					"|CFFFFFFFFXanthia|r > 9.9k, Suppression Field (O: 13k, A: 173)  (Arcane)", -- [12]
+					"|CFFF48CBAScrantnicity|r > 20.5k, Suppression Field (O: 12.8k)  (Arcane)", -- [13]
+					"|CFF00FF96Blameshinerr|r > 13.2k, Melee (O: 20.8k) [Volatile Anomaly]", -- [14]
+					"|CFF1a3caaLala-Hyjal|r > 4.7k, Melee (O: 34k) [Volatile Anomaly]", -- [15]
+					"|CFF68CCEFWazzie|r > 35k, Overflowing Energy (O: 11.6k) [Ko'ragh] (Arcane)", -- [16]
+					"|CFF68CCEFDudez|r > 24.3k, Suppression Field (O: 12.5k)  (Arcane)", -- [17]
+					"|CFF9382C9Vamprixlz|r > |cffff0000unknown|r (last attack got: 40k, Melee [Volatile Anomaly])", -- [18]
+					"|CFFFF7C0ALilp|r > 209k, Melee (O: 15.2k) [Ko'ragh]", -- [19]
+				}, -- [1]
+				{
+					110.042000000001, -- [1]
+					141.599999999999, -- [2]
+					141.599999999999, -- [3]
+					141.703000000001, -- [4]
+					142.017999999996, -- [5]
+					142.017999999996, -- [6]
+					142.330000000002, -- [7]
+					159.409, -- [8]
+					159.809999999998, -- [9]
+					161.029999999999, -- [10]
+					161.447, -- [11]
+					163.868999999999, -- [12]
+					165.072, -- [13]
+					166.292000000001, -- [14]
+					171.570999999996, -- [15]
+					171.972000000002, -- [16]
+					186.138999999996, -- [17]
+					192.220000000001, -- [18]
+					196.296000000002, -- [19]
+				}, -- [2]
+				{
+					1, -- [1]
+					2, -- [2]
+					3, -- [3]
+					4, -- [4]
+					5, -- [5]
+					6, -- [6]
+					7, -- [7]
+					8, -- [8]
+					9, -- [9]
+					10, -- [10]
+					11, -- [11]
+					12, -- [12]
+					13, -- [13]
+					14, -- [14]
+					15, -- [15]
+					16, -- [16]
+					17, -- [17]
+					18, -- [18]
+					19, -- [19]
+				}, -- [3]
+			}, -- [1]
+		}, -- [5]
+		{
+			{
+				{
+					"|CFFAAD372Rilke-Maelstrom|r > 30k, Blaze (O: 3.5k, R: 2.1k) [Phemos] (Fire)", -- [1]
+				}, -- [1]
+				{
+					253.967000000004, -- [1]
+				}, -- [2]
+				{
+					1, -- [1]
+				}, -- [3]
+			}, -- [1]
+		}, -- [6]
+		{
+			{
+				{
+				}, -- [1]
+				{
+				}, -- [2]
+				{
+				}, -- [3]
+			}, -- [1]
+		}, -- [7]
+		{
+			{
+				{
+				}, -- [1]
+				{
+				}, -- [2]
+				{
+				}, -- [3]
+			}, -- [1]
+			{
+				{
+					"Decay: 1. Kick: |CFF00FF96Blameshinerr|r (Spear Hand Strike, 0.8). ", -- [1]
+					"Decay: 2. Kick: |CFFFFF468Falænx|r (Kick, 0.8). ", -- [2]
+					"Decay: 3. Kick: |CFFC69B6DClancey|r (Pummel, 0.6). ", -- [3]
+					"Decay: 4. Kick: |CFF68CCEFBloodblock|r (Counterspell, 1). ", -- [4]
+					"Decay: 5. Kick: |CFFC69B6DClancey|r (Pummel, 0.6). ", -- [5]
+					"Decay: 6. Kick: |CFFFFF468Falænx|r (Kick, 0.6). ", -- [6]
+					"Decay: 7. Kick: |CFF00FF96Chronux|r (Spear Hand Strike, 1.1). ", -- [7]
+					"Decay: 8. Kick: |CFF00FF96Blameshinerr|r (Spear Hand Strike, 0.8). ", -- [8]
+					"Decay: 9. Kick: |CFFFFF468Falænx|r (Kick, 0.5). ", -- [9]
+					"Decay: 10. Kick: |CFFC69B6DClancey|r (Pummel, 0.7). ", -- [10]
+					"Decay: 11. Kick: |CFFFFF468Falænx|r (Kick, 1.3). ", -- [11]
+					"Decay: 12. Kick: |CFFC69B6DClancey|r (Pummel, 0.7). ", -- [12]
+					"Decay: 13. Kick: |CFFFFF468Falænx|r (Kick, 1.2). ", -- [13]
+					"Decay: 14. Kick: |CFF00FF96Blameshinerr|r (Spear Hand Strike, 0.8). ", -- [14]
+					"Decay: 15. Kick: |CFFFFF468Falænx|r (Kick, 0.5). ", -- [15]
+					"Decay: 16. Kick: |CFFC69B6DClancey|r (Pummel, 0.6). Cast: |CFF68CCEFBloodblock|r (Counterspell, 1.2).", -- [16]
+					"Decay: 17. Kick: |CFFFFF468Falænx|r (Kick, 1.4). ", -- [17]
+					"Decay: 18. Kick: |CFFC69B6DClancey|r (Pummel, 0.7). Cast: |CFF68CCEFDudez|r (Counterspell, 1.1).", -- [18]
+					"Decay: 19. Kick: |CFFFFF468Falænx|r (Kick, 0.8). ", -- [19]
+				}, -- [1]
+				{
+					44.9889999999978, -- [1]
+					54.7129999999997, -- [2]
+					64.4349999999977, -- [3]
+					74.1419999999998, -- [4]
+					83.8479999999981, -- [5]
+					93.5709999999999, -- [6]
+					103.296999999999, -- [7]
+					165.240999999998, -- [8]
+					174.946, -- [9]
+					183.416999999998, -- [10]
+					193.124, -- [11]
+					202.829999999998, -- [12]
+					212.552, -- [13]
+					285.456999999999, -- [14]
+					295.182999999997, -- [15]
+					303.683999999998, -- [16]
+					313.389999999999, -- [17]
+					323.112999999998, -- [18]
+					332.835999999999, -- [19]
+				}, -- [2]
+				{
+					1, -- [1]
+					2, -- [2]
+					3, -- [3]
+					4, -- [4]
+					5, -- [5]
+					6, -- [6]
+					7, -- [7]
+					8, -- [8]
+					9, -- [9]
+					10, -- [10]
+					11, -- [11]
+					12, -- [12]
+					13, -- [13]
+					14, -- [14]
+					15, -- [15]
+					16, -- [16]
+					17, -- [17]
+					18, -- [18]
+					19, -- [19]
+				}, -- [3]
+			}, -- [2]
+		}, -- [8]
+		{
+			{
+				{
+					"|CFFFFF468Endernx|r > 4.5k, Gushing Wounds (O: 943) [The Butcher] (Physical)", -- [1]
+				}, -- [1]
+				{
+					210.948, -- [1]
+				}, -- [2]
+				{
+					1, -- [1]
+				}, -- [3]
+			}, -- [1]
+		}, -- [9]
+		{
+			{
+				{
+					"|CFFFFF468Endernx|r > 10.5k, Melee (O: 1.8k) [Iron Grunt]", -- [1]
+					"|CFF68CCEFWazzie|r > 8.3k, Flame Jet (O: 52k)  (Fire)", -- [2]
+				}, -- [1]
+				{
+					138.172000000002, -- [1]
+					229.153000000002, -- [2]
+				}, -- [2]
+				{
+					1, -- [1]
+					2, -- [2]
+				}, -- [3]
+			}, -- [1]
+			{
+				{
+					"Flame Jet: |CFF00FF96Blameshinerr|r, 1k", -- [1]
+					"Flame Jet: |CFF00FF96Blameshinerr|r, 46k", -- [2]
+					"Flame Jet: |CFF00FF96Chronux|r, 60k", -- [3]
+					"Flame Jet: |CFFFF7C0AGot|r, 10k", -- [4]
+					"Flame Jet: |CFF00FF96Blameshinerr|r, 51k", -- [5]
+					"Flame Jet: |CFFFFF468Falænx|r, 61k", -- [6]
+					"Flame Jet: |CFFFF7C0AGot|r, 41k", -- [7]
+					"Flame Jet: |CFFFF7C0AGot|r, 45k", -- [8]
+					"Flame Jet: |CFFFF7C0AGot|r, 42k", -- [9]
+					"Flame Jet: |CFFF48CBAHitsuyaga|r, 61k", -- [10]
+					"Flame Jet: |CFFF48CBAHitsuyaga|r, 61k", -- [11]
+					"Flame Jet: |CFFF48CBAHitsuyaga|r, 61k", -- [12]
+					"Flame Jet: |CFFFFF468Falænx|r, 61k", -- [13]
+					"Flame Jet: |CFFFF7C0AGot|r, 42k", -- [14]
+					"Flame Jet: |CFFFF7C0AGot|r, 53k", -- [15]
+					"Flame Jet: |CFFFF7C0AGot|r, 46k", -- [16]
+					"Flame Jet: |CFFFF7C0AGot|r, 40k", -- [17]
+					"Flame Jet: |CFF00FF96Blameshinerr|r, 41k", -- [18]
+					"Flame Jet: |CFF68CCEFWazzie|r, 8k |cffff0000(O: 52k)|r", -- [19]
+					"Flame Jet: |CFFFF7C0AGot|r, 39k", -- [20]
+					"Flame Jet: |CFFFF7C0AGot|r, 37k", -- [21]
+					"Flame Jet: |CFFFF7C0AGot|r, 37k", -- [22]
+					"Flame Jet: |CFFFF7C0AGot|r, 48k", -- [23]
+					"Flame Jet: |CFFFFF468Endernx|r, 60k", -- [24]
+					"Flame Jet: |CFF00FF96Chronux|r, 60k", -- [25]
+					"Flame Jet: |CFFFFF468Falænx|r, 56k", -- [26]
+					"Flame Jet: |CFF00FF96Chronux|r, 60k", -- [27]
+					"Flame Jet: |CFFFFF468Falænx|r, 61k", -- [28]
+					"Flame Jet: |CFF00FF96Chronux|r, 60k", -- [29]
+				}, -- [1]
+				{
+					21.5320000000029, -- [1]
+					22.5380000000005, -- [2]
+					59.9360000000015, -- [3]
+					61.5040000000008, -- [4]
+					61.5950000000012, -- [5]
+					62.112000000001, -- [6]
+					69.4760000000024, -- [7]
+					70.4670000000006, -- [8]
+					71.469000000001, -- [9]
+					90.3090000000011, -- [10]
+					91.2940000000017, -- [11]
+					92.3130000000019, -- [12]
+					120.195, -- [13]
+					130.470000000001, -- [14]
+					130.737000000001, -- [15]
+					143.016, -- [16]
+					144.018, -- [17]
+					195.808000000001, -- [18]
+					229.153000000002, -- [19]
+					233.397000000001, -- [20]
+					250.186000000002, -- [21]
+					251.188000000002, -- [22]
+					252.174000000003, -- [23]
+					263, -- [24]
+					263.317000000003, -- [25]
+					263.970000000001, -- [26]
+					264.32, -- [27]
+					264.988000000001, -- [28]
+					265.322, -- [29]
+				}, -- [2]
+				{
+					1, -- [1]
+					2, -- [2]
+					3, -- [3]
+					4, -- [4]
+					5, -- [5]
+					6, -- [6]
+					7, -- [7]
+					8, -- [8]
+					9, -- [9]
+					10, -- [10]
+					11, -- [11]
+					12, -- [12]
+					13, -- [13]
+					14, -- [14]
+					15, -- [15]
+					16, -- [16]
+					17, -- [17]
+					18, -- [18]
+					19, -- [19]
+					20, -- [20]
+					21, -- [21]
+					22, -- [22]
+					23, -- [23]
+					24, -- [24]
+					25, -- [25]
+					26, -- [26]
+					27, -- [27]
+					28, -- [28]
+					29, -- [29]
+				}, -- [3]
+			}, -- [2]
+			{
+				{
+					"Mauling Brew: |CFF68CCEFWazzie|r, 50k", -- [1]
+				}, -- [1]
+				{
+					171.834000000003, -- [1]
+				}, -- [2]
+				{
+					1, -- [1]
+				}, -- [3]
+			}, -- [3]
+			{
+				{
+					"Mauling Brew: |CFF68CCEFWazzie|r, 43k", -- [1]
+					"Mauling Brew: |CFF00FF96Blameshinerr|r, 36k", -- [2]
+					"Mauling Brew: |CFF00FF96Blameshinerr|r, 26k", -- [3]
+				}, -- [1]
+				{
+					172.937000000002, -- [1]
+					200.886000000002, -- [2]
+					201.889000000003, -- [3]
+				}, -- [2]
+				{
+					1, -- [1]
+					2, -- [2]
+					3, -- [3]
+				}, -- [3]
+			}, -- [4]
+		}, -- [10]
+		{
+			{
+				{
+					"|CFFFFF468Endernx|r > 6.8k, Melee (O: 57k) [Kargath Bladefist]", -- [1]
+				}, -- [1]
+				{
+					2.67299999999887, -- [1]
+				}, -- [2]
+				{
+					1, -- [1]
+				}, -- [3]
+			}, -- [1]
+		}, -- [11]
+		{
+			{
+				{
+					"|CFFF48CBAScrantnicity|r > 44k, Melee (O: 5.1k) [Kargath Bladefist]", -- [1]
+				}, -- [1]
+				{
+					1.61999999999898, -- [1]
+				}, -- [2]
+				{
+					1, -- [1]
+				}, -- [3]
+			}, -- [1]
+		}, -- [12]
 	}, -- [7]
 	{
 	}, -- [8]
@@ -60393,6 +61362,8 @@ pssicombatin_damageinfo = {
 	}, -- [9]
 	{
 	}, -- [10]
+	{
+	}, -- [11]
 }
 psrscafterfightrep = {
 	0, -- [1]
@@ -60671,7 +61642,7 @@ pspetstableok = {
 }
 pstrackbadsummons = 1
 psmergepets = 1
-psversionsaved2 = 6.011
+psversionsaved2 = 6.013
 psbossmodnoalphavar = 1
 psdonaspanvar = 3
 psshowaddframe34 = 1

@@ -2,13 +2,13 @@
 AUCTIONATOR_SAVEDVARS = {
 	["_50000"] = 500,
 	["_2000"] = 100,
-	["_5000000"] = 10000,
-	["LOG_DE_DATA_X"] = true,
-	["_1000000"] = 2500,
 	["_10000"] = 200,
 	["_500"] = 5,
-	["STARTING_DISCOUNT"] = 5,
+	["_1000000"] = 2500,
 	["_200000"] = 1000,
+	["STARTING_DISCOUNT"] = 5,
+	["LOG_DE_DATA_X"] = true,
+	["_5000000"] = 10000,
 }
 AUCTIONATOR_PRICING_HISTORY = {
 }
@@ -149,18 +149,11 @@ AUCTIONATOR_PRICE_DATABASE = {
 			["sc"] = 5,
 		},
 	},
+	["Arthas_Alliance"] = {
+	},
 }
 AUCTIONATOR_LAST_SCAN_TIME = nil
 AUCTIONATOR_TOONS = {
-	["Got"] = {
-		["firstSeen"] = 1416429667,
-		["firstVersion"] = "3.1.7",
-	},
-	["Gittdabank"] = {
-		["firstSeen"] = 1416518718,
-		["firstVersion"] = "3.1.8",
-		["guid"] = "Player-69-08668C57",
-	},
 	["Git"] = {
 		["firstSeen"] = 1416356731,
 		["firstVersion"] = "3.1.6",
@@ -168,6 +161,19 @@ AUCTIONATOR_TOONS = {
 	["Spih"] = {
 		["firstSeen"] = 1416512585,
 		["firstVersion"] = "3.1.8",
+	},
+	["Gittdabank"] = {
+		["firstSeen"] = 1416518718,
+		["firstVersion"] = "3.1.8",
+		["guid"] = "Player-69-08668C57",
+	},
+	["Lihte"] = {
+		["firstSeen"] = 1419232145,
+		["firstVersion"] = "3.2.2",
+	},
+	["Got"] = {
+		["firstSeen"] = 1416429667,
+		["firstVersion"] = "3.1.7",
 	},
 }
 AUCTIONATOR_STACKING_PREFS = {

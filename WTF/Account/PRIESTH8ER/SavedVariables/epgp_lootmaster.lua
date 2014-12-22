@@ -16,13 +16,14 @@ EPGPLootMaster = {
 		["Gimm - Cho'gall"] = "Gimm - Cho'gall",
 		["Gitt - Arthas"] = "Gitt - Arthas",
 		["Spih - Arthas"] = "Spih - Arthas",
+		["Lihte - Arthas"] = "Lihte - Arthas",
 		["Giit - Cho'gall"] = "Giit - Cho'gall",
-		["Git - Cho'gall"] = "Git - Cho'gall",
 		["Spih - Cho'gall"] = "Spih - Cho'gall",
-		["Git - Azuremyst"] = "Git - Azuremyst",
-		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
-		["Burk - Arthas"] = "Burk - Arthas",
 		["Greny - Azuremyst"] = "Greny - Azuremyst",
+		["Burk - Arthas"] = "Burk - Arthas",
+		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
+		["Git - Azuremyst"] = "Git - Azuremyst",
+		["Git - Cho'gall"] = "Git - Cho'gall",
 		["Git - Arthas"] = "Git - Arthas",
 	},
 	["profiles"] = {
@@ -57,27 +58,6 @@ EPGPLootMaster = {
 		},
 		["Gimm - Cho'gall"] = {
 		},
-		["Gilt - Azuremyst"] = {
-		},
-		["Ezyn - Azuremyst"] = {
-		},
-		["Git - Azuremyst"] = {
-			["button2"] = "Offspec",
-			["mainUIScale"] = 1.06666677792867,
-			["button2_fallback"] = "",
-			["hideMLOnCombat"] = false,
-			["votingSendGuildRankList"] = {
-				nil, -- [1]
-				nil, -- [2]
-				true, -- [3]
-			},
-			["monitorSendAssistantOnly"] = false,
-			["votingSendGuildRank"] = true,
-			["button2_color"] = "836f27",
-			["blizzard_show_offline"] = 1,
-			["buttonNum"] = 2,
-			["votingSendAssistantOnly"] = false,
-		},
 		["Git - Cho'gall"] = {
 			["biddingWhen"] = "always",
 			["hideMLOnCombat"] = false,
@@ -97,6 +77,27 @@ EPGPLootMaster = {
 			["button3_gpIsPercentage"] = true,
 			["monitorSendAssistantOnly"] = false,
 		},
+		["Ezyn - Azuremyst"] = {
+		},
+		["Gilt - Azuremyst"] = {
+		},
+		["Git - Azuremyst"] = {
+			["button2"] = "Offspec",
+			["mainUIScale"] = 1.06666677792867,
+			["button2_fallback"] = "",
+			["hideMLOnCombat"] = false,
+			["votingSendGuildRankList"] = {
+				nil, -- [1]
+				nil, -- [2]
+				true, -- [3]
+			},
+			["monitorSendAssistantOnly"] = false,
+			["votingSendGuildRank"] = true,
+			["button2_color"] = "836f27",
+			["blizzard_show_offline"] = 1,
+			["buttonNum"] = 2,
+			["votingSendAssistantOnly"] = false,
+		},
 		["Git - Arthas"] = {
 			["button3_color"] = "ff60fd",
 			["mainUIScale"] = 0.86666667064031,
@@ -115,23 +116,23 @@ EPGPLootMaster = {
 			["votingSendGuildRankList"] = {
 				[3] = true,
 			},
-			["popupUIScale"] = 0.666666690508525,
+			["button3"] = "Minor",
 			["button5"] = "4p",
 			["button6"] = "Offspec",
 			["button6_gpValue"] = 0,
 			["button2"] = "Major",
 			["button1"] = "BiS",
 			["button2_gpIsPercentage"] = false,
-			["button6_gp"] = "0%",
+			["hideMLOnCombat"] = false,
 			["button2_color"] = "9f78ef",
 			["votingDisallowSelf"] = false,
 			["button2_fallback"] = "",
 			["bidding"] = false,
 			["votingSendGuildRank"] = true,
-			["votingEnableAuto"] = true,
+			["popupUIScale"] = 0.666666690508525,
+			["button6_gp"] = "0%",
 			["button3_gpIsPercentage"] = false,
-			["button3"] = "Minor",
-			["hideMLOnCombat"] = false,
+			["votingEnableAuto"] = true,
 			["votingSendAssistantOnly"] = false,
 		},
 	},

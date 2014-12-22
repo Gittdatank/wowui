@@ -351,6 +351,7 @@ psmainmgotinf			= "попала в"
 psmainmdiedfrom			= "умер от"
 psmainmhealedhimself		= "отлечился"
 psmainmdamagefrom		= "Урон от"
+psmainmdontsplitdamage  = "Не разделили урон"
 
 psdamagetr			= "урон"
 psbosstr			= "Босс"

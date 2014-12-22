@@ -114,22 +114,11 @@ oRA3DB = {
 		},
 		["Promote"] = {
 			["factionrealm"] = {
-				["Horde - Azuremyst"] = {
+				["Horde - Silvermoon"] = {
 					["promotes"] = {
-						"Findadar", -- [1]
-						"Duckiebutter", -- [2]
 					},
-					["promoteGuild"] = false,
 					["promoteRank"] = {
-						["Requiem"] = {
-							nil, -- [1]
-							true, -- [2]
-							true, -- [3]
-							true, -- [4]
-							true, -- [5]
-						},
 					},
-					["promoteAll"] = false,
 				},
 				["Horde - Cho'gall"] = {
 					["promoteRank"] = {
@@ -157,11 +146,22 @@ oRA3DB = {
 						},
 					},
 				},
-				["Horde - Silvermoon"] = {
+				["Horde - Azuremyst"] = {
 					["promotes"] = {
+						"Findadar", -- [1]
+						"Duckiebutter", -- [2]
 					},
+					["promoteGuild"] = false,
 					["promoteRank"] = {
+						["Requiem"] = {
+							nil, -- [1]
+							true, -- [2]
+							true, -- [3]
+							true, -- [4]
+							true, -- [5]
+						},
 					},
+					["promoteAll"] = false,
 				},
 			},
 		},
@@ -206,10 +206,9 @@ oRA3DB = {
 						[740] = true,
 						[73325] = true,
 						[98008] = true,
-						[33206] = true,
 						[77761] = false,
+						[33206] = true,
 						[97462] = true,
-						[2825] = true,
 						[47788] = true,
 					},
 					["neverShowMine"] = true,
@@ -300,12 +299,13 @@ oRA3DB = {
 		["Gimm - Cho'gall"] = "Default",
 		["Gitt - Arthas"] = "Gitt - Monk",
 		["Git - Arthas"] = "Git - Mar 2014",
-		["Git - Cho'gall"] = "Default",
-		["Git - Azuremyst"] = "Default",
-		["Giitt - Feathermoon"] = "Default",
+		["Lihte - Arthas"] = "Default",
 		["Burk - Arthas"] = "Default",
-		["Spih - Cho'gall"] = "Default",
+		["Giitt - Feathermoon"] = "Default",
 		["Greny - Azuremyst"] = "Default",
+		["Git - Cho'gall"] = "Default",
+		["Spih - Cho'gall"] = "Default",
+		["Git - Azuremyst"] = "Default",
 		["Giit - Cho'gall"] = "Giit tank",
 		["Spih - Arthas"] = "Default",
 	},

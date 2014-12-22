@@ -5,60 +5,10 @@ UpgradeListDB = {
 			["SavedOptions"] = {
 				["tableUL"] = {
 					["sorttable"] = {
-						1, -- [1]
-						2, -- [2]
-						3, -- [3]
-						4, -- [4]
 					},
 					["filtered"] = {
-						1, -- [1]
-						2, -- [2]
-						3, -- [3]
-						4, -- [4]
 					},
 					["isMinimalDataformat"] = true,
-					["data"] = {
-						{
-							1, -- [1]
-							685, -- [2]
-							"|cffa335ee|Hitem:113662:0:0:0:0:0:0:0:100:0:6:1:567|h[Collar of Wailing Mouths]|h|r", -- [3]
-							"Mythic", -- [4]
-							"Highmaul", -- [5]
-							"Brackenspore", -- [6]
-							"+108", -- [7]
-							"113662", -- [8]
-						}, -- [1]
-						{
-							2, -- [1]
-							685, -- [2]
-							"|cffa335ee|Hitem:113841:0:0:0:0:0:0:0:100:0:6:1:567|h[Ko'ragh's Family Locket]|h|r", -- [3]
-							"Mythic", -- [4]
-							"Highmaul", -- [5]
-							"Ko'ragh", -- [6]
-							"+83", -- [7]
-							"113841", -- [8]
-						}, -- [2]
-						{
-							3, -- [1]
-							670, -- [2]
-							"|cffa335ee|Hitem:113662:0:0:0:0:0:0:0:100:0:5:1:566|h[Collar of Wailing Mouths]|h|r", -- [3]
-							"Mythic", -- [4]
-							"Highmaul", -- [5]
-							"Brackenspore", -- [6]
-							"+57", -- [7]
-							"113662", -- [8]
-						}, -- [3]
-						{
-							4, -- [1]
-							670, -- [2]
-							"|cffa335ee|Hitem:113841:0:0:0:0:0:0:0:100:0:5:1:566|h[Ko'ragh's Family Locket]|h|r", -- [3]
-							"Mythic", -- [4]
-							"Highmaul", -- [5]
-							"Ko'ragh", -- [6]
-							"+34", -- [7]
-							"113841", -- [8]
-						}, -- [4]
-					},
 					["cols"] = {
 						{
 							["name"] = "Priority",
@@ -139,13 +89,6 @@ UpgradeListDB = {
 							["width"] = 280,
 						}, -- [7]
 					},
-					["defaulthighlight"] = {
-						["a"] = 0.5,
-						["r"] = 1,
-						["g"] = 0.9,
-						["b"] = 0,
-					},
-					["selected"] = 1,
 					["scrollframe"] = {
 						["ScrollBar"] = {
 							["ScrollDownButton"] = {
@@ -156,34 +99,12 @@ UpgradeListDB = {
 						["offset"] = 0,
 					},
 					["offset"] = 0,
-					["head"] = {
-						["cols"] = {
-							{
-							}, -- [1]
-							{
-							}, -- [2]
-							{
-							}, -- [3]
-							{
-							}, -- [4]
-							{
-							}, -- [5]
-							{
-							}, -- [6]
-							{
-							}, -- [7]
-						},
-					},
 					["showing"] = true,
 					["displayRows"] = 14,
 					["DefaultEvents"] = {
 					},
-					["events"] = {
-					},
 					["rows"] = {
 						{
-							["highlight"] = {
-							},
 							["cols"] = {
 								{
 									["text"] = {
@@ -216,8 +137,6 @@ UpgradeListDB = {
 							},
 						}, -- [1]
 						{
-							["highlight"] = {
-							},
 							["cols"] = {
 								{
 									["text"] = {
@@ -250,8 +169,6 @@ UpgradeListDB = {
 							},
 						}, -- [2]
 						{
-							["highlight"] = {
-							},
 							["cols"] = {
 								{
 									["text"] = {
@@ -284,8 +201,6 @@ UpgradeListDB = {
 							},
 						}, -- [3]
 						{
-							["highlight"] = {
-							},
 							["cols"] = {
 								{
 									["text"] = {
@@ -638,6 +553,41 @@ UpgradeListDB = {
 							},
 						}, -- [14]
 					},
+					["data"] = {
+					},
+					["defaulthighlight"] = {
+						["a"] = 0.5,
+						["r"] = 1,
+						["g"] = 0.9,
+						["b"] = 0,
+					},
+					["defaulthighlightblank"] = {
+						["a"] = 0,
+						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
+					},
+					["head"] = {
+						["cols"] = {
+							{
+							}, -- [1]
+							{
+							}, -- [2]
+							{
+							}, -- [3]
+							{
+							}, -- [4]
+							{
+							}, -- [5]
+							{
+							}, -- [6]
+							{
+							}, -- [7]
+						},
+					},
+					["rowHeight"] = 15,
+					["events"] = {
+					},
 					["frame"] = {
 						["col2bg"] = {
 						},
@@ -654,13 +604,6 @@ UpgradeListDB = {
 						["col5bg"] = {
 						},
 					},
-					["defaulthighlightblank"] = {
-						["a"] = 0,
-						["r"] = 0,
-						["g"] = 0,
-						["b"] = 0,
-					},
-					["rowHeight"] = 15,
 				},
 			},
 			["PrimarySpecList"] = {
@@ -1017,6 +960,7 @@ UpgradeListDB = {
 	},
 	["profileKeys"] = {
 		["Got - Arthas"] = "Default",
+		["Lihte - Arthas"] = "Default",
 		["Git - Arthas"] = "Default",
 	},
 	["profiles"] = {
@@ -1034,7 +978,7 @@ UpgradeListDB = {
 			["messages"] = {
 				["scrollwindow"] = {
 					[0] = nil --[[ skipped userdata ]],
-					["tellTimer"] = 388348.128,
+					["tellTimer"] = 76794.273,
 					["channelList"] = {
 					},
 					["flashTimer"] = 0,

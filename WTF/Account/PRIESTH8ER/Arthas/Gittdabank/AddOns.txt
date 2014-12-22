@@ -342,7 +342,7 @@ HandyNotes_DraenorTreasures: disabled
 HandyNotes_Guild: disabled
 RaidRoll: disabled
 RaidRoll_LootTracker: disabled
-SavedInstances: disabled
+SavedInstances: enabled
 VEM-Brawlers: enabled
 VEM-DefaultSkin: enabled
 VEM-GUI: enabled
@@ -388,3 +388,5 @@ VEM-Highmaul: enabled
 GatherMate2: enabled
 GatherMate2_Data: enabled
 BigWigs_LustingOnTrash: disabled
+GatherMate_Sharing: disabled
+LagBar: enabled

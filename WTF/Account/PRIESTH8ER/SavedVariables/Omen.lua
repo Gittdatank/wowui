@@ -14,16 +14,17 @@ Omen3DB = {
 		["Got - Arthas"] = "Got - Dec 2014",
 		["Gitt - Cho'gall"] = "Gitt - Cho'gall",
 		["Giit - Cho'gall"] = "Giit - tank",
-		["Gitt - Arthas"] = "Gitt - Tank",
 		["Spih - Arthas"] = "Spih - Arthas",
-		["Gimm - Cho'gall"] = "Gimm - Cho'gall",
-		["Greny - Azuremyst"] = "Greny - Azuremyst",
+		["Gitt - Arthas"] = "Gitt - Tank",
+		["Lihte - Arthas"] = "Lihte - Arthas",
+		["Git - Cho'gall"] = "Git - Cho'gall",
 		["Spih - Cho'gall"] = "Spih - Cho'gall",
-		["Burk - Arthas"] = "Burk - Arthas",
+		["Greny - Azuremyst"] = "Greny - Azuremyst",
 		["Git - Azuremyst"] = "Git - Azuremyst",
+		["Burk - Arthas"] = "Burk - Arthas",
 		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
 		["Lihte - Cho'gall"] = "Lihte - Cho'gall",
-		["Git - Cho'gall"] = "Git - Cho'gall",
+		["Gimm - Cho'gall"] = "Gimm - Cho'gall",
 		["Git - Arthas"] = "Git - Mar 2014",
 	},
 	["profiles"] = {
@@ -32,6 +33,12 @@ Omen3DB = {
 			["PositionW"] = 199.999938964844,
 			["Shown"] = false,
 			["PositionX"] = 392.249908447266,
+			["PositionH"] = 81.9999847412109,
+		},
+		["Spih - Arthas"] = {
+			["PositionW"] = 199.999984741211,
+			["PositionY"] = 150.749420166016,
+			["PositionX"] = 453,
 			["PositionH"] = 81.9999847412109,
 		},
 		["Got - Dec 2014"] = {
@@ -61,13 +68,13 @@ Omen3DB = {
 			},
 			["FrameStrata"] = "4-HIGH",
 			["VGrip1"] = 102.869464003663,
-			["PositionX"] = 459.849731445313,
-			["Warnings"] = {
-				["Flash"] = false,
-			},
 			["TitleBar"] = {
 				["ShowTitleBar"] = false,
 			},
+			["Warnings"] = {
+				["Flash"] = false,
+			},
+			["PositionX"] = 459.849731445313,
 			["Bar"] = {
 				["FontSize"] = 8,
 				["ShowHeadings"] = false,
@@ -89,9 +96,7 @@ Omen3DB = {
 				["hide"] = true,
 			},
 			["PositionW"] = 242.045654296875,
-			["TitleBar"] = {
-				["ShowTitleBar"] = false,
-			},
+			["PositionX"] = 459.849731445313,
 			["Shown"] = false,
 			["Warnings"] = {
 				["Flash"] = false,
@@ -100,7 +105,9 @@ Omen3DB = {
 			["PositionH"] = 161.350051879883,
 			["VGrip2"] = 139.176333652014,
 			["PositionY"] = 162.100158691406,
-			["PositionX"] = 459.849731445313,
+			["TitleBar"] = {
+				["ShowTitleBar"] = false,
+			},
 			["ClickThrough"] = true,
 			["Locked"] = true,
 			["Background"] = {
@@ -228,10 +235,6 @@ Omen3DB = {
 				["FontSize"] = 10,
 				["ShortNumbers"] = true,
 				["ShowHeadings"] = true,
-				["AlwaysShowSelf"] = true,
-				["FontOutline"] = "",
-				["ShowValue"] = true,
-				["UseClassColors"] = true,
 				["UseCustomClassColors"] = true,
 				["FadeBarColor"] = {
 					["a"] = 1,
@@ -239,18 +242,22 @@ Omen3DB = {
 					["g"] = 0.5,
 					["r"] = 0.5,
 				},
-				["MyBarColor"] = {
-					["a"] = 1,
-					["b"] = 0,
-					["g"] = 0,
-					["r"] = 1,
-				},
+				["ShowValue"] = true,
+				["UseClassColors"] = true,
 				["PetBarColor"] = {
 					["a"] = 1,
 					["b"] = 1,
 					["g"] = 0,
 					["r"] = 0.77,
 				},
+				["Spacing"] = 0,
+				["MyBarColor"] = {
+					["a"] = 1,
+					["b"] = 0,
+					["g"] = 0,
+					["r"] = 1,
+				},
+				["AlwaysShowSelf"] = true,
 				["ShowAggroBar"] = true,
 				["Texture"] = "Blizzard",
 				["HeadingBGColor"] = {
@@ -299,7 +306,7 @@ Omen3DB = {
 				["TPSWindow"] = 10,
 				["ShowPercent"] = true,
 				["Height"] = 12,
-				["Spacing"] = 0,
+				["FontOutline"] = "",
 				["UseMyBarColor"] = false,
 				["FontColor"] = {
 					["a"] = 1,
@@ -452,15 +459,6 @@ Omen3DB = {
 				["FontSize"] = 10,
 				["ShortNumbers"] = true,
 				["ShowHeadings"] = true,
-				["UseCustomClassColors"] = true,
-				["FadeBarColor"] = {
-					["a"] = 1,
-					["b"] = 0.5,
-					["g"] = 0.5,
-					["r"] = 0.5,
-				},
-				["ShowValue"] = true,
-				["UseClassColors"] = true,
 				["PetBarColor"] = {
 					["a"] = 1,
 					["b"] = 1,
@@ -468,13 +466,17 @@ Omen3DB = {
 					["r"] = 0.77,
 				},
 				["Spacing"] = 0,
+				["ShowValue"] = true,
+				["UseClassColors"] = true,
+				["AlwaysShowSelf"] = true,
+				["FontOutline"] = "",
 				["MyBarColor"] = {
 					["a"] = 1,
 					["b"] = 0,
 					["g"] = 0,
 					["r"] = 1,
 				},
-				["AlwaysShowSelf"] = true,
+				["UseCustomClassColors"] = true,
 				["ShowAggroBar"] = true,
 				["Texture"] = "Blizzard",
 				["HeadingBGColor"] = {
@@ -523,7 +525,12 @@ Omen3DB = {
 				["TPSWindow"] = 10,
 				["ShowPercent"] = true,
 				["Height"] = 12,
-				["FontOutline"] = "",
+				["FadeBarColor"] = {
+					["a"] = 1,
+					["b"] = 0.5,
+					["g"] = 0.5,
+					["r"] = 0.5,
+				},
 				["UseMyBarColor"] = false,
 				["FontColor"] = {
 					["a"] = 1,
@@ -650,11 +657,10 @@ Omen3DB = {
 				["Texture"] = "Glamour7",
 			},
 		},
-		["Spih - Arthas"] = {
-			["PositionW"] = 199.999984741211,
-			["PositionY"] = 150.749420166016,
-			["PositionX"] = 453,
-			["PositionH"] = 81.9999847412109,
+		["Lihte - Arthas"] = {
+			["Shown"] = false,
+			["PositionY"] = 675.000122070313,
+			["PositionX"] = 847.500061035156,
 		},
 		["Azuremyst"] = {
 			["MinimapIcon"] = {
@@ -789,46 +795,10 @@ Omen3DB = {
 				["Texture"] = "Minimalist",
 			},
 		},
-		["Gilt - Azuremyst"] = {
-			["MinimapIcon"] = {
-				["hide"] = true,
-			},
-			["PositionW"] = 197.046040251068,
-			["ShowWith"] = {
-				["HideWhenOOC"] = true,
-			},
-			["VGrip1"] = 83.7446018310589,
-			["TitleBar"] = {
-				["ShowTitleBar"] = false,
-			},
-			["PositionH"] = 139.600022520479,
-			["VGrip2"] = 113.301520124374,
-			["PositionY"] = 200.438986266374,
-			["PositionX"] = 489.099787158983,
-			["Warnings"] = {
-				["Flash"] = false,
-			},
-			["Locked"] = true,
-			["Background"] = {
-				["Color"] = {
-					["a"] = 0.540000021457672,
-					["r"] = 0,
-					["g"] = 0,
-					["b"] = 0,
-				},
-				["EdgeSize"] = 10,
-				["Texture"] = "Solid",
-				["BorderTexture"] = "RothSquare",
-			},
-			["ClickThrough"] = true,
-			["Bar"] = {
-				["Font"] = "SCT Emblem",
-				["TPSWindow"] = 15,
-				["Height"] = 22,
-				["ShowHeadings"] = false,
-				["AnimateBars"] = false,
-				["Texture"] = "Smooth",
-			},
+		["Spih - Cho'gall"] = {
+			["PositionY"] = 1171.26928710938,
+			["PositionX"] = 232.730682373047,
+			["PositionH"] = 81.9999847412109,
 		},
 		["Gitt - Arthas"] = {
 			["MinimapIcon"] = {
@@ -872,15 +842,51 @@ Omen3DB = {
 				["Texture"] = "Minimalist",
 			},
 		},
-		["Spih - Cho'gall"] = {
-			["PositionY"] = 1171.26928710938,
-			["PositionX"] = 232.730682373047,
-			["PositionH"] = 81.9999847412109,
-		},
 		["Burk - Arthas"] = {
 			["Shown"] = false,
 			["PositionY"] = 675.000122070313,
 			["PositionX"] = 847.500061035156,
+		},
+		["Gilt - Azuremyst"] = {
+			["MinimapIcon"] = {
+				["hide"] = true,
+			},
+			["PositionW"] = 197.046040251068,
+			["ShowWith"] = {
+				["HideWhenOOC"] = true,
+			},
+			["VGrip1"] = 83.7446018310589,
+			["TitleBar"] = {
+				["ShowTitleBar"] = false,
+			},
+			["PositionH"] = 139.600022520479,
+			["VGrip2"] = 113.301520124374,
+			["PositionY"] = 200.438986266374,
+			["PositionX"] = 489.099787158983,
+			["Warnings"] = {
+				["Flash"] = false,
+			},
+			["Locked"] = true,
+			["Background"] = {
+				["Color"] = {
+					["a"] = 0.540000021457672,
+					["r"] = 0,
+					["g"] = 0,
+					["b"] = 0,
+				},
+				["EdgeSize"] = 10,
+				["Texture"] = "Solid",
+				["BorderTexture"] = "RothSquare",
+			},
+			["ClickThrough"] = true,
+			["Bar"] = {
+				["Font"] = "SCT Emblem",
+				["TPSWindow"] = 15,
+				["Height"] = 22,
+				["ShowHeadings"] = false,
+				["AnimateBars"] = false,
+				["Texture"] = "Smooth",
+			},
 		},
 		["Git - Azuremyst"] = {
 			["MinimapIcon"] = {

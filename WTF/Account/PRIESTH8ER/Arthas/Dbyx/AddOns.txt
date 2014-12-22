@@ -112,3 +112,6 @@ VEM-WorldEvents: enabled
 VEM-Sound-Default: enabled
 VEM-StatusBarTimers: disabled
 BigWigs_LustingOnTrash: disabled
+SavedInstances: enabled
+GatherMate_Sharing: disabled
+LagBar: enabled

@@ -4,6 +4,7 @@ thisaddonwork = true
 secrefmark = 2
 pssetmarknew = {
 	{
+		"Blameshinerr", -- [1]
 	}, -- [1]
 	{
 	}, -- [2]
@@ -14,7 +15,7 @@ pssetmarknew = {
 	{
 	}, -- [5]
 	{
-		"Git", -- [1]
+		"Got", -- [1]
 	}, -- [6]
 	{
 	}, -- [7]
