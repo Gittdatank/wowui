@@ -2272,7 +2272,7 @@ local zonebg={string.lower(psmainbattlegr1),string.lower(psmainbattlegr2),string
 
 for i = 1,GetNumGroupMembers() do
 	local name,_,_,_,_,_,pszone,psonline = GetRaidRosterInfo(i)
-	if psonline==nil then
+	if psonline==nil or psonline==false then
 		table.insert(psoffline,"1"..name)
 	else
 		local bilz=0
@@ -2303,6 +2303,7 @@ table.sort(psoffline)
 
 
 
+
 --1 вариант! босс моды все
 if psbosssmodchosesort==1 then
 psbossmodcolumn1:Show()
@@ -2312,51 +2313,61 @@ psbossmodcolumn4:Show()
 psbossmodcolumn5:Show()
 psbossmodcolumn6:Show()
 
+
 local sortbm={{},{},{},{}} --строчка ник версия для аддона
 local sortbmnameaddon={"DBM", "BigWigs", "RaidWatch2", "DXE"} --назв аддонов
+
 for i=1,#psbossmods1 do
 	local off=0
+	local tempname=psbossmods3[i]
+	if string.find(psbossmods3[i],"%-") then
+		tempname=string.sub(psbossmods3[i],1,string.find(psbossmods3[i],"%-")-1)
+		if (UnitInRaid(tempname)) then
+		else
+			tempname=psbossmods3[i]
+		end
+	end
 	for t=1,#psoffline do
-		if psoffline[t]=="1"..psbossmods3[i] then
+		if psoffline[t]=="1"..psbossmods3[i] or psoffline[t]=="1"..tempname then
 			off=1
 		end
 	end
-	if UnitInRaid(psbossmods3[i]) and off==0 then
-			for j=1,#sortbmnameaddon do
-				if sortbmnameaddon[j]==psbossmods1[i] then
-					local add=""
-					if psbossmods4[i]~=0 and psbossmods4[i]~="0" then
-						add=psbossmods4[i]
-					end
-					local ver1=""
-					local ver2=""
-					for k=1,#bossmods do
-						if bossmods[k]==psbossmods1[i] then
-							if psbossmods2[i]<versions[k] then
-								ver1="|cffff0000"
-								ver2="|r"
-								if reportold then
-									table.insert(psbossmodold1,psbossmods3[i])
-									table.insert(psbossmodold2,psbossmods1[i])
-									table.insert(psbossmodold3,psbossmods2[i]..add)
-									table.insert(psbossmodold4,versions[k]..versions2[k])
-								end
+	if (UnitInRaid(psbossmods3[i]) or UnitInRaid(tempname)) and off==0 then
+		for j=1,#sortbmnameaddon do
+			if sortbmnameaddon[j]==psbossmods1[i] then
+				local add=""
+				if psbossmods4[i]~=0 and psbossmods4[i]~="0" then
+					add=psbossmods4[i]
+				end
+				local ver1=""
+				local ver2=""
+				for k=1,#bossmods do
+					if bossmods[k]==psbossmods1[i] then
+						if psbossmods2[i]<versions[k] then
+							ver1="|cffff0000"
+							ver2="|r"
+							if reportold then
+								table.insert(psbossmodold1,tempname)
+								table.insert(psbossmodold2,psbossmods1[i])
+								table.insert(psbossmodold3,psbossmods2[i]..add)
+								table.insert(psbossmodold4,versions[k]..versions2[k])
 							end
 						end
 					end
-					--ыытест
-					local aadd=psbossmods3[i]
-					if string.len(aadd)>maxletter then
-            aadd=string.sub(aadd,1,maxletter)..".."
-          end
-					table.insert(sortbm[j],psunitclassget(nil,psbossmods3[i])..aadd.."|r\t"..ver1..psbossmods2[i]..add..ver2)
-					for b=1,#psnobossmod do
-						if psnobossmod[b] and psnobossmod[b]==psbossmods3[i] then
-							table.remove(psnobossmod,b)
-						end
+				end
+				--ыытест
+				local aadd=tempname
+				if string.len(aadd)>maxletter then
+					aadd=string.sub(aadd,1,maxletter)..".."
+				end
+				table.insert(sortbm[j],psunitclassget(nil,tempname)..aadd.."|r\t"..ver1..psbossmods2[i]..add..ver2)
+				for b=1,#psnobossmod do
+					if psnobossmod[b] and psnobossmod[b]==tempname then
+						table.remove(psnobossmod,b)
 					end
 				end
 			end
+		end
 	end
 end
 
@@ -2473,16 +2484,24 @@ local sortbm={} --строчка ник аддон версия
 local sortbm2={} --ники для ускоренного поиска
 for i=1,#psbossmods1 do
 	local off=0
+	local tempname=psbossmods3[i]
+	if string.find(psbossmods3[i],"%-") then
+		tempname=string.sub(psbossmods3[i],1,string.find(psbossmods3[i],"%-")-1)
+		if (UnitInRaid(tempname)) then
+		else
+			tempname=psbossmods3[i]
+		end
+	end
 	for t=1,#psoffline do
-		if psoffline[t]=="1"..psbossmods3[i] then
+		if psoffline[t]=="1"..psbossmods3[i] or psoffline[t]=="1"..tempname then
 			off=1
 		end
 	end
-	if UnitInRaid(psbossmods3[i]) and off==0 then
+	if (UnitInRaid(psbossmods3[i]) or UnitInRaid(tempname)) and off==0 then
 		local bil=0
 		if #sortbm2>0 then
 			for j=1,#sortbm2 do
-				if sortbm2[j]==psbossmods3[i] then
+				if sortbm2[j]==tempname then
 					bil=1
 					local add=""
 					if psbossmods4[i]~=0 and psbossmods4[i]~="0" then
@@ -2496,7 +2515,7 @@ for i=1,#psbossmods1 do
 								ver1="|cffff0000"
 								ver2="|r"
 								if reportold then
-									table.insert(psbossmodold1,psbossmods3[i])
+									table.insert(psbossmodold1,tempname)
 									table.insert(psbossmodold2,psbossmods1[i])
 									table.insert(psbossmodold3,psbossmods2[i]..add)
 									table.insert(psbossmodold4,versions[k]..versions2[k])
@@ -2521,7 +2540,7 @@ for i=1,#psbossmods1 do
 								ver1="|cffff0000"
 								ver2="|r"
 								if reportold then
-									table.insert(psbossmodold1,psbossmods3[i])
+									table.insert(psbossmodold1,tempname)
 									table.insert(psbossmodold2,psbossmods1[i])
 									table.insert(psbossmodold3,psbossmods2[i]..add)
 									table.insert(psbossmodold4,versions[k]..versions2[k])
@@ -2529,10 +2548,10 @@ for i=1,#psbossmods1 do
 							end
 						end
 					end
-					table.insert(sortbm,psbossmods3[i].."\t"..ver1..psbossmods1[i].." - "..psbossmods2[i]..add..ver2)
-					table.insert(sortbm2,psbossmods3[i])
+					table.insert(sortbm,tempname.."\t"..ver1..psbossmods1[i].." - "..psbossmods2[i]..add..ver2)
+					table.insert(sortbm2,tempname)
 					for b=1,#psnobossmod do
-						if psnobossmod[b] and psnobossmod[b]==psbossmods3[i] then
+						if psnobossmod[b] and psnobossmod[b]==tempname then
 							table.remove(psnobossmod,b)
 						end
 					end
@@ -2640,16 +2659,24 @@ local sortbm={} --строчка ник аддон версия
 local sortbm2={} --ники для ускоренного поиска
 for i=1,#psbossmods1 do
 	local off=0
+	local tempname=psbossmods3[i]
+	if string.find(psbossmods3[i],"%-") then
+		tempname=string.sub(psbossmods3[i],1,string.find(psbossmods3[i],"%-")-1)
+		if (UnitInRaid(tempname)) then
+		else
+			tempname=psbossmods3[i]
+		end
+	end
 	for t=1,#psoffline do
-		if psoffline[t]=="1"..psbossmods3[i] then
+		if psoffline[t]=="1"..psbossmods3[i] or psoffline[t]=="1"..tempname then
 			off=1
 		end
 	end
-	if UnitInRaid(psbossmods3[i]) and off==0 then
+	if (UnitInRaid(psbossmods3[i]) or UnitInRaid(tempname)) and off==0 then
 		local bil=0
 		if #sortbm2>0 then
 			for j=1,#sortbm2 do
-				if sortbm2[j]==psbossmods3[i] then
+				if sortbm2[j]==tempname then
 					bil=1
 					local add=""
 					if psbossmods4[i]~=0 and psbossmods4[i]~="0" then
@@ -2663,7 +2690,7 @@ for i=1,#psbossmods1 do
 								ver1="|cffff0000"
 								ver2="|r"
 								if reportold then
-									table.insert(psbossmodold1,psbossmods3[i])
+									table.insert(psbossmodold1,tempname)
 									table.insert(psbossmodold2,psbossmods1[i])
 									table.insert(psbossmodold3,psbossmods2[i]..add)
 									table.insert(psbossmodold4,versions[k]..versions2[k])
@@ -2688,7 +2715,7 @@ for i=1,#psbossmods1 do
 								ver1="|cffff0000"
 								ver2="|r"
 								if reportold then
-									table.insert(psbossmodold1,psbossmods3[i])
+									table.insert(psbossmodold1,tempname)
 									table.insert(psbossmodold2,psbossmods1[i])
 									table.insert(psbossmodold3,psbossmods2[i]..add)
 									table.insert(psbossmodold4,versions[k]..versions2[k])
@@ -2697,14 +2724,14 @@ for i=1,#psbossmods1 do
 						end
 					end
 					--ыытест
-					local aadd=psbossmods3[i]
+					local aadd=tempname
 					if string.len(aadd)>maxletter then
             aadd=string.sub(aadd,1,maxletter)..".."
           end
-					table.insert(sortbm,psunitclassget(nil,psbossmods3[i])..aadd.."|r\t"..ver1..psbossmods1[i].." - "..psbossmods2[i]..add..ver2)
-					table.insert(sortbm2,psbossmods3[i])
+					table.insert(sortbm,psunitclassget(nil,tempname)..aadd.."|r\t"..ver1..psbossmods1[i].." - "..psbossmods2[i]..add..ver2)
+					table.insert(sortbm2,tempname)
 					for b=1,#psnobossmod do
-						if psnobossmod[b] and psnobossmod[b]==psbossmods3[i] then
+						if psnobossmod[b] and psnobossmod[b]==tempname then
 							table.remove(psnobossmod,b)
 						end
 					end
@@ -2823,12 +2850,20 @@ local sortbmnameaddon={} --назв аддонов
 for i=1,#psbossmods1 do
 	if psbossmods1[i]==bossmod then
 	local off=0
+	local tempname=psbossmods3[i]
+	if string.find(psbossmods3[i],"%-") then
+		tempname=string.sub(psbossmods3[i],1,string.find(psbossmods3[i],"%-")-1)
+		if (UnitInRaid(tempname)) then
+		else
+			tempname=psbossmods3[i]
+		end
+	end
 	for t=1,#psoffline do
-		if psoffline[t]=="1"..psbossmods3[i] then
+		if psoffline[t]=="1"..psbossmods3[i] or psoffline[t]=="1"..tempname then
 			off=1
 		end
 	end
-	if UnitInRaid(psbossmods3[i]) and off==0 then
+	if (UnitInRaid(psbossmods3[i]) or UnitInRaid(tempname)) and off==0 then
 		local bil=0
 		if #sortbmnameaddon>0 then
 			for j=1,#sortbmnameaddon do
@@ -2846,7 +2881,7 @@ for i=1,#psbossmods1 do
 								ver1="|cffff0000"
 								ver2="|r"
 								if reportold then
-									table.insert(psbossmodold1,psbossmods3[i])
+									table.insert(psbossmodold1,tempname)
 									table.insert(psbossmodold2,psbossmods1[i])
 									table.insert(psbossmodold3,psbossmods2[i]..add)
 									table.insert(psbossmodold4,versions[k]..versions2[k])
@@ -2855,13 +2890,13 @@ for i=1,#psbossmods1 do
 						end
 					end
 					--ыытест
-					local aadd=psbossmods3[i]
+					local aadd=tempname
 					if string.len(aadd)>maxletter then
             aadd=string.sub(aadd,1,maxletter)..".."
           end
-					table.insert(sortbm[j],psunitclassget(nil,psbossmods3[i])..aadd.."|r\t"..ver1..psbossmods2[i]..add..ver2)
+					table.insert(sortbm[j],psunitclassget(nil,tempname)..aadd.."|r\t"..ver1..psbossmods2[i]..add..ver2)
 					for b=1,#psnobossmod do
-						if psnobossmod[b] and psnobossmod[b]==psbossmods3[i] then
+						if psnobossmod[b] and psnobossmod[b]==tempname then
 							table.remove(psnobossmod,b)
 						end
 					end
@@ -2883,7 +2918,7 @@ for i=1,#psbossmods1 do
 								ver1="|cffff0000"
 								ver2="|r"
 								if reportold then
-									table.insert(psbossmodold1,psbossmods3[i])
+									table.insert(psbossmodold1,tempname)
 									table.insert(psbossmodold2,psbossmods1[i])
 									table.insert(psbossmodold3,psbossmods2[i]..add)
 									table.insert(psbossmodold4,versions[k]..versions2[k])
@@ -2892,13 +2927,13 @@ for i=1,#psbossmods1 do
 						end
 					end
 					--ыытест
-					local aadd=psbossmods3[i]
+					local aadd=tempname
 					if string.len(aadd)>maxletter then
             aadd=string.sub(aadd,1,maxletter)..".."
           end
-					table.insert(sortbm[#sortbm],psunitclassget(nil,psbossmods3[i])..aadd.."|r\t"..ver1..psbossmods2[i]..add..ver2)
+					table.insert(sortbm[#sortbm],psunitclassget(nil,tempname)..aadd.."|r\t"..ver1..psbossmods2[i]..add..ver2)
 					for b=1,#psnobossmod do
-						if psnobossmod[b] and psnobossmod[b]==psbossmods3[i] then
+						if psnobossmod[b] and psnobossmod[b]==tempname then
 							table.remove(psnobossmod,b)
 						end
 					end

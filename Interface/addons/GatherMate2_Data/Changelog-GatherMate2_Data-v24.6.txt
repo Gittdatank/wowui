@@ -1,7 +1,7 @@
 ------------------------------------------------------------------------
-r401 | kagaro | 2014-12-21 07:02:53 +0000 (Sun, 21 Dec 2014) | 1 line
+r402 | kagaro | 2014-12-28 07:01:33 +0000 (Sun, 28 Dec 2014) | 1 line
 Changed paths:
-   A /tags/v24.5 (from /trunk:400)
+   A /tags/v24.6 (from /trunk:401)
 
 GatherMate2_Data: Data update
 ------------------------------------------------------------------------
@@ -64,12 +64,4 @@ Changed paths:
    M /trunk/GatherMate2_Data.toc
 
 Put @project-version@ into the TOC
-------------------------------------------------------------------------
-r385 | kagaro | 2014-11-23 07:04:55 +0000 (Sun, 23 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/HerbalismData.lua
-   M /trunk/MiningData.lua
-   M /trunk/TreasureData.lua
-
-GatherMate2_Data: Data update
 ------------------------------------------------------------------------

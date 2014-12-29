@@ -1,9 +1,126 @@
 ------------------------------------------------------------------------
-r12442 | funkydude | 2014-12-22 00:38:10 +0000 (Mon, 22 Dec 2014) | 1 line
+r12460 | funkydude | 2014-12-29 08:22:36 +0000 (Mon, 29 Dec 2014) | 1 line
 Changed paths:
-   A /tags/r12442-release (from /trunk:12441)
+   A /tags/r12460-release (from /trunk:12459)
 
-Tagging as r12442-release
+Tagging as r12460-release
+------------------------------------------------------------------------
+r12459 | funkydude | 2014-12-29 08:12:20 +0000 (Mon, 29 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Plugins/Bars.lua
+
+Bars: Tukui style tweak.
+------------------------------------------------------------------------
+r12458 | nebula169 | 2014-12-29 05:08:28 +0000 (Mon, 29 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Tectus.lua
+
+Tectus: fix error on first Upheaval
+------------------------------------------------------------------------
+r12457 | nebula169 | 2014-12-28 23:08:59 +0000 (Sun, 28 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Koragh.lua
+
+Koragh: throttle the Overwhelming Energy message
+------------------------------------------------------------------------
+r12456 | funkydude | 2014-12-28 23:08:47 +0000 (Sun, 28 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Plugins/Bars.lua
+
+Bars: Fix issue with Tukui skin when also using Tukui. (compensate for pointless variable renaming from "media" to "Medias" which I'm pretty sure isn't a word)
+------------------------------------------------------------------------
+r12455 | funkydude | 2014-12-28 07:17:53 +0000 (Sun, 28 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Loader.lua
+
+Loader: Fix subsequent dungeon entry timers.
+------------------------------------------------------------------------
+r12454 | nebula169 | 2014-12-28 01:54:21 +0000 (Sun, 28 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Margok.lua
+
+Margok: tweak Gaze of the Abyss proximity, leave Force Nova: Replication proximity open longer in mythic phase 3
+------------------------------------------------------------------------
+r12453 | nebula169 | 2014-12-28 00:45:23 +0000 (Sun, 28 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Margok.lua
+
+Margok: register event for Dark Star, fix Gaze of the Abyss duration
+------------------------------------------------------------------------
+r12452 | funkydude | 2014-12-28 00:40:13 +0000 (Sun, 28 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Locales/deDE.lua
+   M /trunk/Highmaul/Locales/esES.lua
+   M /trunk/Highmaul/Locales/frFR.lua
+   M /trunk/Highmaul/Locales/itIT.lua
+   M /trunk/Highmaul/Locales/koKR.lua
+   M /trunk/Highmaul/Locales/ptBR.lua
+   M /trunk/Highmaul/Locales/ruRU.lua
+   M /trunk/Highmaul/Locales/zhCN.lua
+   M /trunk/Highmaul/Locales/zhTW.lua
+   M /trunk/Highmaul/Tectus.lua
+   M /trunk/Loader.lua
+
+Move Highmaul translations to wowace.
+------------------------------------------------------------------------
+r12451 | funkydude | 2014-12-27 23:21:17 +0000 (Sat, 27 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Margok.lua
+
+Margok: self > mod
+------------------------------------------------------------------------
+r12450 | funkydude | 2014-12-27 23:09:43 +0000 (Sat, 27 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Margok.lua
+
+Margok: Turn accelerated assault into a stack message to try and improve the clarity of the warning.
+------------------------------------------------------------------------
+r12449 | nebula169 | 2014-12-27 10:21:33 +0000 (Sat, 27 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Margok.lua
+
+Margok: tweak colors to differentiate spells better, remove "Summon" from the initial Arcane Aberration bars as well
+------------------------------------------------------------------------
+r12448 | nebula169 | 2014-12-27 10:16:25 +0000 (Sat, 27 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/TheButcher.lua
+
+TheButcher: remove the proximity for Bounding Cleave, not terribly useful
+------------------------------------------------------------------------
+r12447 | nebula169 | 2014-12-26 09:42:32 +0000 (Fri, 26 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Draenor/Drov.lua
+
+Drov: revert Call of Earth cast time
+------------------------------------------------------------------------
+r12446 | dreamtears1 | 2014-12-23 11:15:01 +0000 (Tue, 23 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Highmaul/Locales/koKR.lua
+
+koKR Update.
+------------------------------------------------------------------------
+r12445 | MysticalOS | 2014-12-23 08:50:10 +0000 (Tue, 23 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Loader.lua
+
+DBM version
+------------------------------------------------------------------------
+r12444 | funkydude | 2014-12-22 22:33:36 +0000 (Mon, 22 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/BigWigs.toc
+
+bump version (API breakage)
+------------------------------------------------------------------------
+r12443 | funkydude | 2014-12-22 22:24:24 +0000 (Mon, 22 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Core/BossPrototype.lua
+   M /trunk/Core/Core.lua
+   M /trunk/Plugins/Bars.lua
+   M /trunk/Plugins/Messages.lua
+   M /trunk/Plugins/Proximity.lua
+   M /trunk/Plugins/Sound.lua
+
+Remove the sound arg from the BigWigs_Message callback and fire the already existing BigWigs_Sound for all sound events instead.
 ------------------------------------------------------------------------
 r12441 | funkydude | 2014-12-22 00:31:44 +0000 (Mon, 22 Dec 2014) | 1 line
 Changed paths:
@@ -1409,161 +1526,4 @@ Changed paths:
    M /trunk/Highmaul/BigWigs_Highmaul.toc
 
 - zhTW update.
-------------------------------------------------------------------------
-r12221 | funkydude | 2014-11-27 08:01:29 +0000 (Thu, 27 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/SiegeOfOrgrimmar/KorKron.lua
-   M /trunk/SiegeOfOrgrimmar/ParagonsOfTheKlaxxi.lua
-
-Remove a few missed journal calls.
-------------------------------------------------------------------------
-r12220 | funkydude | 2014-11-27 07:37:21 +0000 (Thu, 27 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/BlackrockFoundry/Blackhand.lua
-   M /trunk/BlackrockFoundry/TheIronMaidens.lua
-   M /trunk/BlackrockFoundry/Thogar.lua
-   M /trunk/Highmaul/Brackenspore.lua
-   M /trunk/Highmaul/Margok.lua
-   M /trunk/Highmaul/TheButcher.lua
-
-add some comments.
-------------------------------------------------------------------------
-r12219 | nebula169 | 2014-11-27 03:05:25 +0000 (Thu, 27 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/BlackrockFoundry/Blackhand.lua
-   M /trunk/BlackrockFoundry/Kagraz.lua
-   M /trunk/BlackrockFoundry/Oregorger.lua
-   M /trunk/BlackrockFoundry/TheIronMaidens.lua
-   M /trunk/BlackrockFoundry/Thogar.lua
-   M /trunk/Highmaul/Brackenspore.lua
-   M /trunk/Highmaul/Margok.lua
-   M /trunk/Highmaul/TheButcher.lua
-
-update options
-------------------------------------------------------------------------
-r12218 | funkydude | 2014-11-26 23:45:37 +0000 (Wed, 26 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/Core/Constants.lua
-
-Constants: tweaks
-------------------------------------------------------------------------
-r12217 | funkydude | 2014-11-26 23:34:29 +0000 (Wed, 26 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/Core/Constants.lua
-
-Constants: Fix copy paste.
-------------------------------------------------------------------------
-r12216 | funkydude | 2014-11-26 23:29:11 +0000 (Wed, 26 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/SiegeOfOrgrimmar/Galakras.lua
-   M /trunk/SiegeOfOrgrimmar/GarroshHellscream.lua
-   M /trunk/SiegeOfOrgrimmar/GeneralNazgrim.lua
-   M /trunk/SiegeOfOrgrimmar/IronJuggernaut.lua
-   M /trunk/SiegeOfOrgrimmar/KorKron.lua
-   M /trunk/SiegeOfOrgrimmar/Malkorok.lua
-   M /trunk/SiegeOfOrgrimmar/TheFallenProtectors.lua
-
-Cleanup locale strings.
-------------------------------------------------------------------------
-r12215 | funkydude | 2014-11-26 23:20:41 +0000 (Wed, 26 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/Core/Constants.lua
-
-Constants: Also allow {focus} embeds.
-------------------------------------------------------------------------
-r12214 | funkydude | 2014-11-26 22:42:37 +0000 (Wed, 26 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/Core/BossPrototype.lua
-   M /trunk/Plugins/Proximity.lua
-
-BossPrototype: Fire the spell name & icon in the proximity callback.
-------------------------------------------------------------------------
-r12213 | funkydude | 2014-11-26 20:59:26 +0000 (Wed, 26 Nov 2014) | 4 lines
-Changed paths:
-   M /trunk/Core/Constants.lua
-
-Constants: Enable more flexibility with the options:
--Allow a number (ej/spell ids) to be set as a locale-based option. If a number is set, there's no need to sec the _desc string.
--Allow ej/spell ids to be embedded using {number} in a string option.
-
-------------------------------------------------------------------------
-r12211 | funkydude | 2014-11-24 18:40:52 +0000 (Mon, 24 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/BigWigs.toc
-   M /trunk/Core/Core.lua
-   M /trunk/Loader.lua
-   M /trunk/Plugins/AltPower.lua
-   M /trunk/Plugins/Bars.lua
-   M /trunk/Plugins/InfoBox.lua
-   M /trunk/Plugins/Proximity.lua
-   M /trunk/Plugins/RaidIcon.lua
-   M /trunk/Plugins/Statistics.lua
-
-Fix module resetting since callback change.
-------------------------------------------------------------------------
-r12209 | funkydude | 2014-11-24 02:39:13 +0000 (Mon, 24 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/Core/PluginPrototype.lua
-   M /trunk/Plugins/Proximity.lua
-
-Proximity: Fix player coloring/icons for targeted proximity modes.
-------------------------------------------------------------------------
-r12208 | funkydude | 2014-11-24 02:17:00 +0000 (Mon, 24 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/Core/BossPrototype.lua
-
-BossPrototype: Probably best not to fire enable/disable callbacks after a wipe. If someone needs/wants this, let me know.
-------------------------------------------------------------------------
-r12207 | funkydude | 2014-11-24 00:28:19 +0000 (Mon, 24 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/Core/BossPrototype.lua
-
-BossPrototype: Remove Symbiosis dispels.
-------------------------------------------------------------------------
-r12206 | funkydude | 2014-11-23 13:03:11 +0000 (Sun, 23 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/Plugins/Proximity.lua
-
-Proximity: Enable pulse on targeted proximity modes.
-------------------------------------------------------------------------
-r12205 | funkydude | 2014-11-23 12:43:34 +0000 (Sun, 23 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/Core/BossPrototype.lua
-   M /trunk/Core/Constants.lua
-   M /trunk/Core/Core.lua
-   M /trunk/Loader.lua
-   M /trunk/SiegeOfOrgrimmar/Galakras.lua
-   M /trunk/SiegeOfOrgrimmar/GeneralNazgrim.lua
-
-Revert temp changes
-------------------------------------------------------------------------
-r12204 | funkydude | 2014-11-22 22:13:02 +0000 (Sat, 22 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/SiegeOfOrgrimmar/Galakras.lua
-   M /trunk/SiegeOfOrgrimmar/GeneralNazgrim.lua
-
-More changes to debug a mac crash issue.
-------------------------------------------------------------------------
-r12203 | MysticalOS | 2014-11-22 20:53:14 +0000 (Sat, 22 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/Loader.lua
-
-Bump DBM faker
-------------------------------------------------------------------------
-r12202 | funkydude | 2014-11-21 16:37:45 +0000 (Fri, 21 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/Core/BossPrototype.lua
-   M /trunk/Core/Constants.lua
-   M /trunk/Core/Core.lua
-   M /trunk/Loader.lua
-   M /trunk/SiegeOfOrgrimmar/Galakras.lua
-   M /trunk/SiegeOfOrgrimmar/GeneralNazgrim.lua
-
-Some temp changes to see if it solves a crash a user is experiencing.
-------------------------------------------------------------------------
-r12201 | funkydude | 2014-11-20 20:56:48 +0000 (Thu, 20 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/Core/Core.lua
-
-Core: Add Grimrail cinematics.
 ------------------------------------------------------------------------

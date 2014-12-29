@@ -72,6 +72,9 @@ function BulkOrder_CreateOptions ()
     if g_BulkOrder.ExcludeWarMill==nil then 
         g_BulkOrder.ExcludeWarMill = true 
     end
+    if g_BulkOrder.ExcludeGoblinWorkshop==nil then 
+        g_BulkOrder.ExcludeGoblinWorkshop = true 
+    end
 
     -- GUI stuff!
     local Options = CreateFrame ("Frame", "BulkOrderOptions", UIParent);
@@ -124,6 +127,11 @@ function BulkOrder_CreateOptions ()
     Options.chkWarMill:SetTooltip ('Exclude Dwarven Bunker/ War Mill', 'If this option is checked, BulkOrder will NOT automatically start work orders in the Dwarven Bunker/ War Mill.')
     y=y-25
     
+    Options.chkGoblinWorkshop = Options:CreateCheckBox (TitleExclude, 0, y, 'Gnomish Gearworks/ Goblin Workshop')
+    Options.chkGoblinWorkshop:Bind ('ExcludeGoblinWorkshop', false, true)
+    Options.chkGoblinWorkshop:SetTooltip ('Exclude Gnomish Gearworks/ Goblin Workshop', 'If this option is checked, BulkOrder will NOT automatically start work orders in the Gnomish Gearworks/ Goblin Workshop.')
+    y=y-25
+    
     Options.chkEverything = Options:CreateCheckBox (TitleExclude, 0, y, 'EVERYTHING!')
     Options.chkEverything:Bind ('ExcludeEverything', false, true)
     Options.chkEverything:SetTooltip ('Exclude Everything!', 'If this option is checked, BulkOrder will NOT automatically start work orders in any buildings, ever.\nYou will have to manually press the Start All Work Orders button like some sort of cave man.')
@@ -132,7 +140,7 @@ function BulkOrder_CreateOptions ()
     
     -- Misc
     local TitleMisc = Options:CreateFontString (nil, "ARTWORK", "GameFontHighlight")
-    TitleMisc:SetPoint ("TOPLEFT", 8, -240)
+    TitleMisc:SetPoint ("TOPLEFT", 8, -265)
     TitleMisc:SetText ('Misc.:')
     Options.TitleMisc = TitleMisc
     local y=-6

@@ -251,7 +251,7 @@ C["RAID_LOOKUP"] = {
 						eID = 1195,
 					},
 					[4] = {
-						eName = "Blackenspore",
+						eName = "Brackenspore",
 						eID = 1196,
 					},
 					[5] = {

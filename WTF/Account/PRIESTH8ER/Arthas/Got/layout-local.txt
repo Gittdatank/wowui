@@ -20,10 +20,3 @@ X: -8
 Y: -125
 W: 56
 H: 42
-Frame: MSBTMainOptionsFrame
-FrameLevel: 79
-Anchor: CENTER
-X: -112
-Y: 103
-W: 608
-H: 440

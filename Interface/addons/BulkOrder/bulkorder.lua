@@ -7,6 +7,7 @@ local GARRISON_RESOURCES = 824
 
 local WARMILL = 1
 local TRADINGPOST = 2
+local GOBLINWORKSHOP = 3
 
 local BUILDINGS = {
     [8] = WARMILL,
@@ -15,6 +16,9 @@ local BUILDINGS = {
     [111] = TRADINGPOST,
     [144] = TRADINGPOST,
     [145] = TRADINGPOST,
+    [162] = GOBLINWORKSHOP,
+    [163] = GOBLINWORKSHOP,
+    [164] = GOBLINWORKSHOP,
 }
 -----------------------------------------------------------------
 
@@ -131,7 +135,9 @@ function f:SHIPMENT_CRAFTER_INFO (success, _, maxShipments, plotID)
     end
     
     buildingID = C_Garrison.GetOwnedBuildingInfo (plotID)
-    local excluded = (g_BulkOrder.ExcludeTradingPost and BUILDINGS[buildingID]==TRADINGPOST) or (g_BulkOrder.ExcludeWarMill and BUILDINGS[buildingID]==WARMILL)
+    local excluded = (g_BulkOrder.ExcludeTradingPost and BUILDINGS[buildingID]==TRADINGPOST) 
+        or (g_BulkOrder.ExcludeWarMill and BUILDINGS[buildingID]==WARMILL)
+        or (g_BulkOrder.ExcludeGoblinWorkshop and BUILDINGS[buildingID]==GOBLINWORKSHOP)
     
     if (not self.dontStart) and (not excluded) and (self:GetScript ("OnUpdate")==nil) then
         StartAllWorkOrders ()

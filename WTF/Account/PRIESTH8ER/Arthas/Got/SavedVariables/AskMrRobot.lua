@@ -34,7 +34,7 @@ AmrDb = {
 	["Level"] = 100,
 	["Equipped"] = {
 		{
-			"|cff1eff00|Hitem:114726:0:0:0:0:0:0:0:100:0:11:0|h[Skysinger Helm]|h|r", -- [1]
+			"|cffa335ee|Hitem:116212:0:0:0:0:0:0:0:100:0:4:0|h[Alloy-Inlaid Cap]|h|r", -- [1]
 			"|cffa335ee|Hitem:118848:0:0:0:0:0:0:0:100:0:0:0|h[Battle Hardened Gorget]|h|r", -- [2]
 			"|cffa335ee|Hitem:118890:0:0:0:0:0:0:0:100:0:0:0|h[Studded Frostboar Leather Spaulders]|h|r", -- [3]
 			nil, -- [4]
@@ -42,7 +42,7 @@ AmrDb = {
 			"|cff0070dd|Hitem:119225:0:0:0:0:0:0:0:100:0:0:0|h[Studded Gronn-Stitched Girdle]|h|r", -- [6]
 			"|cff0070dd|Hitem:109809:0:0:0:0:0:0:0:100:0:2:2:523:524|h[Legguards of Burning Focus]|h|r", -- [7]
 			"|cffa335ee|Hitem:116182:0:0:0:0:0:0:0:100:0:13:3:200:525:536|h[Supple Boots of the Harmonious]|h|r", -- [8]
-			"|cffa335ee|Hitem:118689:0:0:0:0:0:0:0:100:0:0:1:545|h[Graveltooth's Manacles]|h|r", -- [9]
+			"|cff0070dd|Hitem:109882:0:0:0:0:0:0:0:100:0:2:2:40:524|h[Blackwater Wristguards]|h|r", -- [9]
 			"|cffa335ee|Hitem:113602:0:5339:0:0:0:0:0:100:0:5:3:561:564:566|h[Throat-Ripper Gauntlets]|h|r", -- [10]
 			"|cffa335ee|Hitem:113846:0:0:0:0:0:0:0:100:0:3:0|h[Seal of Unbound Frost]|h|r", -- [11]
 			"|cffa335ee|Hitem:118870:0:0:0:0:0:0:0:100:0:0:0|h[Signet of the Traitor General]|h|r", -- [12]
@@ -70,8 +70,8 @@ AmrDb = {
 			"|cff0070dd|Hitem:118803:0:0:0:0:0:0:0:100:0:0:0|h[Kihrawr's Scratching Post]|h|r", -- [16]
 		}, -- [2]
 	},
-	["Region"] = "US",
-	["LastCharacterImport"] = "",
+	["LastCharacterImportDate"] = "",
+	["RealmName"] = "Arthas",
 	["Specs"] = {
 		6, -- [1]
 		5, -- [2]
@@ -92,65 +92,6 @@ AmrDb = {
 		[-1] = 456560336,
 		[614] = 9,
 	},
-	["IconInfo"] = {
-	},
-	["LogData"] = {
-		["_wipes"] = {
-		},
-		["_autoLog"] = {
-			[1228] = "disabled",
-			[1136] = "disabled",
-			[1205] = "disabled",
-		},
-		["_lastDiff"] = 1,
-		["_lastZone"] = "FW Horde Garrison Level 3",
-	},
-	["BagItems"] = {
-		"|cff1eff00|Hitem:54443:0:0:0:0:0:0:0:100:0:0:0|h[Embersilk Bag]|h|r", -- [1]
-		"|cff1eff00|Hitem:41599:0:0:0:0:0:0:1233919104:100:0:0:0|h[Frostweave Bag]|h|r", -- [2]
-		"|cffffffff|Hitem:113320:0:0:0:0:0:0:0:100:0:0:0|h[Crate of Cactus Apple Surprise]|h|r", -- [3]
-		"|cffa335ee|Hitem:118293:0:0:0:0:0:0:0:100:0:11:0|h[Solium Band of Endurance]|h|r", -- [4]
-		"|cff1eff00|Hitem:116920:0:0:0:0:0:0:0:100:0:0:0|h[True Steel Lockbox]|h|r", -- [5]
-		"|cffffffff|Hitem:87216:0:0:0:0:0:0:0:100:0:11:0|h[Thermal Anvil]|h|r", -- [6]
-		"|cff0070dd|Hitem:118224:0:0:0:0:0:0:0:100:0:0:0|h[Ogre Brewing Kit]|h|r", -- [7]
-		"|cff0070dd|Hitem:116395:0:0:0:0:0:0:0:100:0:0:0|h[Comprehensive Outpost Construction Guide]|h|r", -- [8]
-		"|cffffffff|Hitem:110560:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Hearthstone]|h|r", -- [9]
-		"|cff0070dd|Hitem:111957:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Blueprint: Salvage Yard, Level 1]|h|r", -- [10]
-		"|cffffffff|Hitem:110667:0:0:0:0:0:0:0:100:0:0:0|h[Tear-stained Letter]|h|r", -- [11]
-		"|cffffffff|Hitem:113277:0:0:0:0:0:0:0:100:0:14:0|h[Ogreblood Potion]|h|r", -- [12]
-		"|cff1eff00|Hitem:52719:0:0:0:0:0:0:0:100:0:0:0|h[Greater Celestial Essence]|h|r", -- [13]
-		"|cffffffff|Hitem:6218:0:0:0:0:0:0:217021568:100:0:0:0|h[Runed Copper Rod]|h|r", -- [14]
-		"|cffffffff|Hitem:40772:0:0:0:0:0:0:765699328:100:0:0:0|h[Gnomish Army Knife]|h|r", -- [15]
-		"|cffffffff|Hitem:109135:0:0:0:0:0:0:0:100:0:0:0|h[Raw Riverbeast Meat]|h|r", -- [16]
-		"|cff0070dd|Hitem:52190:0:0:0:0:0:0:1973464320:100:0:0:0|h[Inferno Ruby]|h|r", -- [17]
-		"|cff1eff00|Hitem:52182:0:0:0:0:0:0:1155281664:100:0:0:0|h[Jasper]|h|r", -- [18]
-		"|cff1eff00|Hitem:52180:0:0:0:0:0:0:734200384:100:0:0:0|h[Nightstone]|h|r", -- [19]
-		"|cff1eff00|Hitem:52177:0:0:0:0:0:0:2125211008:100:0:0:0|h[Carnelian]|h|r", -- [20]
-		"|cffffffff|Hitem:118235:0:0:0:0:0:0:0:100:0:0:0|h[Ogre Diving Cap]|h|r", -- [21]
-		"|cffffffff|Hitem:113277:0:0:0:0:0:0:0:100:0:14:0|h[Ogreblood Potion]|h|r", -- [22]
-		"|cffffffff|Hitem:119299:0:0:0:0:0:0:0:100:0:0:0|h[Secret of Draenor Engineering]|h|r", -- [23]
-		"|cffffffff|Hitem:113277:0:0:0:0:0:0:0:100:0:14:0|h[Ogreblood Potion]|h|r", -- [24]
-		"|cffffffff|Hitem:113277:0:0:0:0:0:0:0:100:0:14:0|h[Ogreblood Potion]|h|r", -- [25]
-		"|cffffffff|Hitem:8383:0:0:0:0:0:0:0:100:0:0:0|h[Plain Letter]|h|r", -- [26]
-		"|cff0070dd|Hitem:118229:0:0:0:0:0:0:0:100:0:0:0|h[Resonant Hidecrystal of the Gorger]|h|r", -- [27]
-		"|cffffffff|Hitem:113274:0:0:0:0:0:0:0:100:0:14:0|h[Plume of Celerity]|h|r", -- [28]
-		"|cffffffff|Hitem:113273:0:0:0:0:0:0:0:100:0:14:0|h[Orb of the Soulstealer]|h|r", -- [29]
-		"|cffe6cc80|Hitem:105689:4434:0:0:0:0:0:1620636032:100:0:0:0|h[Hellscream's Tome of Destruction]|h|r", -- [30]
-		"|cffe6cc80|Hitem:104400:0:0:0:0:0:0:942026880:100:0:0:0|h[Hellscream's Razor]|h|r", -- [31]
-		"|cff1eff00|Hitem:21525:0:0:0:0:0:0:0:100:0:3:0|h[Green Winter Hat]|h|r", -- [32]
-		"|cff0070dd|Hitem:119462:0:0:0:0:0:0:0:100:0:11:0|h[Skullcutter of Trials]|h|r", -- [33]
-		"|cffa335ee|Hitem:113843:0:0:0:0:0:0:0:100:0:3:0|h[Spell-Sink Signet]|h|r", -- [34]
-		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [35]
-		"|cffffffff|Hitem:118428:0:0:0:0:0:0:0:100:0:0:0|h[Legion Chili]|h|r", -- [36]
-		"|cff0070dd|Hitem:116120:0:0:0:0:0:0:0:100:0:0:0|h[Tasty Talador Lunch]|h|r", -- [37]
-		"|cffffffff|Hitem:119348:0:0:0:0:0:0:0:100:0:0:0|h[Admiral Taylor's Garrison Log]|h|r", -- [38]
-		"|cffffffff|Hitem:113278:0:0:0:0:0:0:0:100:0:14:0|h[Scavenger's Eyepiece]|h|r", -- [39]
-		"|cffffffff|Hitem:113278:0:0:0:0:0:0:0:100:0:14:0|h[Scavenger's Eyepiece]|h|r", -- [40]
-		"|cffffffff|Hitem:113278:0:0:0:0:0:0:0:100:0:14:0|h[Scavenger's Eyepiece]|h|r", -- [41]
-		"|cffffffff|Hitem:113278:0:0:0:0:0:0:0:100:0:14:0|h[Scavenger's Eyepiece]|h|r", -- [42]
-		"|cffffffff|Hitem:113277:0:0:0:0:0:0:0:100:0:14:0|h[Ogreblood Potion]|h|r", -- [43]
-	},
-	["RealmName"] = "Arthas",
 	["VoidItems"] = {
 		"|cffa335ee|Hitem:34011:0:0:0:0:0:0:1582692992:100:0:0:0|h[Illidari Runeshield]|h|r", -- [1]
 		"|cffa335ee|Hitem:50729:0:0:0:0:0:0:1185718912:100:0:0:0|h[Icecrown Glacial Wall]|h|r", -- [2]
@@ -232,6 +173,65 @@ AmrDb = {
 		"|cffa335ee|Hitem:103649:0:0:0:0:0:0:683148160:100:491:0:0|h[Xal'atoh, Desecrated Image of Gorehowl]|h|r", -- [78]
 		"|cffa335ee|Hitem:30874:0:0:0:0:0:0:34031104:100:0:0:0|h[The Unbreakable Will]|h|r", -- [79]
 	},
+	["LogData"] = {
+		["_wipes"] = {
+		},
+		["_autoLog"] = {
+			[1228] = "disabled",
+			[1136] = "disabled",
+			[1205] = "disabled",
+		},
+		["_lastDiff"] = 1,
+		["_lastZone"] = "FW Horde Garrison Level 3",
+	},
+	["BagItems"] = {
+		"|cff1eff00|Hitem:54443:0:0:0:0:0:0:0:100:0:0:0|h[Embersilk Bag]|h|r", -- [1]
+		"|cff1eff00|Hitem:41599:0:0:0:0:0:0:1233919104:100:0:0:0|h[Frostweave Bag]|h|r", -- [2]
+		"|cffffffff|Hitem:113320:0:0:0:0:0:0:0:100:0:0:0|h[Crate of Cactus Apple Surprise]|h|r", -- [3]
+		"|cffa335ee|Hitem:118293:0:0:0:0:0:0:0:100:0:11:0|h[Solium Band of Endurance]|h|r", -- [4]
+		"|cff1eff00|Hitem:116920:0:0:0:0:0:0:0:100:0:0:0|h[True Steel Lockbox]|h|r", -- [5]
+		"|cffffffff|Hitem:87216:0:0:0:0:0:0:0:100:0:11:0|h[Thermal Anvil]|h|r", -- [6]
+		"|cff0070dd|Hitem:118224:0:0:0:0:0:0:0:100:0:0:0|h[Ogre Brewing Kit]|h|r", -- [7]
+		"|cff0070dd|Hitem:116395:0:0:0:0:0:0:0:100:0:0:0|h[Comprehensive Outpost Construction Guide]|h|r", -- [8]
+		"|cffffffff|Hitem:110560:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Hearthstone]|h|r", -- [9]
+		"|cff0070dd|Hitem:111957:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Blueprint: Salvage Yard, Level 1]|h|r", -- [10]
+		"|cffffffff|Hitem:110667:0:0:0:0:0:0:0:100:0:0:0|h[Tear-stained Letter]|h|r", -- [11]
+		"|cffffffff|Hitem:113277:0:0:0:0:0:0:0:100:0:14:0|h[Ogreblood Potion]|h|r", -- [12]
+		"|cff1eff00|Hitem:52719:0:0:0:0:0:0:0:100:0:0:0|h[Greater Celestial Essence]|h|r", -- [13]
+		"|cffffffff|Hitem:6218:0:0:0:0:0:0:217021568:100:0:0:0|h[Runed Copper Rod]|h|r", -- [14]
+		"|cffffffff|Hitem:40772:0:0:0:0:0:0:765699328:100:0:0:0|h[Gnomish Army Knife]|h|r", -- [15]
+		"|cffffffff|Hitem:109135:0:0:0:0:0:0:0:100:0:0:0|h[Raw Riverbeast Meat]|h|r", -- [16]
+		"|cff0070dd|Hitem:52190:0:0:0:0:0:0:1973464320:100:0:0:0|h[Inferno Ruby]|h|r", -- [17]
+		"|cff1eff00|Hitem:52182:0:0:0:0:0:0:1155281664:100:0:0:0|h[Jasper]|h|r", -- [18]
+		"|cff1eff00|Hitem:52180:0:0:0:0:0:0:734200384:100:0:0:0|h[Nightstone]|h|r", -- [19]
+		"|cff1eff00|Hitem:52177:0:0:0:0:0:0:2125211008:100:0:0:0|h[Carnelian]|h|r", -- [20]
+		"|cffffffff|Hitem:118235:0:0:0:0:0:0:0:100:0:0:0|h[Ogre Diving Cap]|h|r", -- [21]
+		"|cffffffff|Hitem:113277:0:0:0:0:0:0:0:100:0:14:0|h[Ogreblood Potion]|h|r", -- [22]
+		"|cffffffff|Hitem:119299:0:0:0:0:0:0:0:100:0:0:0|h[Secret of Draenor Engineering]|h|r", -- [23]
+		"|cffffffff|Hitem:113277:0:0:0:0:0:0:0:100:0:14:0|h[Ogreblood Potion]|h|r", -- [24]
+		"|cffffffff|Hitem:113277:0:0:0:0:0:0:0:100:0:14:0|h[Ogreblood Potion]|h|r", -- [25]
+		"|cffffffff|Hitem:8383:0:0:0:0:0:0:0:100:0:0:0|h[Plain Letter]|h|r", -- [26]
+		"|cff0070dd|Hitem:118229:0:0:0:0:0:0:0:100:0:0:0|h[Resonant Hidecrystal of the Gorger]|h|r", -- [27]
+		"|cffffffff|Hitem:113274:0:0:0:0:0:0:0:100:0:14:0|h[Plume of Celerity]|h|r", -- [28]
+		"|cffffffff|Hitem:113273:0:0:0:0:0:0:0:100:0:14:0|h[Orb of the Soulstealer]|h|r", -- [29]
+		"|cffe6cc80|Hitem:105689:4434:0:0:0:0:0:1620636032:100:0:0:0|h[Hellscream's Tome of Destruction]|h|r", -- [30]
+		"|cffe6cc80|Hitem:104400:0:0:0:0:0:0:942026880:100:0:0:0|h[Hellscream's Razor]|h|r", -- [31]
+		"|cff1eff00|Hitem:21525:0:0:0:0:0:0:0:100:0:3:0|h[Green Winter Hat]|h|r", -- [32]
+		"|cff0070dd|Hitem:119462:0:0:0:0:0:0:0:100:0:11:0|h[Skullcutter of Trials]|h|r", -- [33]
+		"|cffa335ee|Hitem:113843:0:0:0:0:0:0:0:100:0:3:0|h[Spell-Sink Signet]|h|r", -- [34]
+		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [35]
+		"|cffffffff|Hitem:118428:0:0:0:0:0:0:0:100:0:0:0|h[Legion Chili]|h|r", -- [36]
+		"|cff0070dd|Hitem:116120:0:0:0:0:0:0:0:100:0:0:0|h[Tasty Talador Lunch]|h|r", -- [37]
+		"|cffffffff|Hitem:119348:0:0:0:0:0:0:0:100:0:0:0|h[Admiral Taylor's Garrison Log]|h|r", -- [38]
+		"|cffffffff|Hitem:113278:0:0:0:0:0:0:0:100:0:14:0|h[Scavenger's Eyepiece]|h|r", -- [39]
+		"|cffffffff|Hitem:113278:0:0:0:0:0:0:0:100:0:14:0|h[Scavenger's Eyepiece]|h|r", -- [40]
+		"|cffffffff|Hitem:113278:0:0:0:0:0:0:0:100:0:14:0|h[Scavenger's Eyepiece]|h|r", -- [41]
+		"|cffffffff|Hitem:113278:0:0:0:0:0:0:0:100:0:14:0|h[Scavenger's Eyepiece]|h|r", -- [42]
+		"|cffffffff|Hitem:113277:0:0:0:0:0:0:0:100:0:14:0|h[Ogreblood Potion]|h|r", -- [43]
+	},
+	["IconInfo"] = {
+	},
+	["LastCharacterImport"] = "",
 	["Reps"] = {
 		[1269] = 3,
 		[1337] = 3,
@@ -247,7 +247,7 @@ AmrDb = {
 	["Professions"] = {
 	},
 	["Class"] = "DRUID",
-	["LastCharacterImportDate"] = "",
+	["Region"] = "US",
 	["BankItemsAndCounts"] = {
 		[23445] = 6,
 		[818] = 3,

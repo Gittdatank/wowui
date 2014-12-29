@@ -141,7 +141,11 @@ if arg2=="SPELL_PERIODIC_DAMAGE" and spellid==158241 then
     if pswipetrue and pswasonbossd15~=2 then
       psiccwipereport_wod1("wipe", "try")
     end
-    addtotwotables2(name2)
+	local quant=arg12
+	if arg13>=0 then
+		quant=quant-arg13
+	end
+    addtotwotables2(name2,quant)
     vezaxsort2()
     local tt2=", "..psdamageceil(arg12)
       if arg13>=0 then

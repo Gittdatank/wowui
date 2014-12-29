@@ -1,9 +1,16 @@
 ------------------------------------------------------------------------
-r414 | oscarucb | 2014-12-16 09:50:10 +0000 (Tue, 16 Dec 2014) | 1 line
+r416 | oscarucb | 2014-12-26 10:56:33 +0000 (Fri, 26 Dec 2014) | 1 line
 Changed paths:
-   A /tags/6.0.8 (from /trunk:413)
+   A /tags/6.0.9 (from /trunk:415)
 
-Tagging as 6.0.8
+Tagging as 6.0.9
+------------------------------------------------------------------------
+r415 | oscarucb | 2014-12-26 04:30:06 +0000 (Fri, 26 Dec 2014) | 2 lines
+Changed paths:
+   M /trunk/SavedInstances.lua
+
+add tracking for Seal of Tempered Fate from Dwarven Bunker/War Mill
+
 ------------------------------------------------------------------------
 r413 | oscarucb | 2014-12-16 05:26:04 +0000 (Tue, 16 Dec 2014) | 2 lines
 Changed paths:
@@ -32,12 +39,5 @@ Changed paths:
 
 exclude garrisons from instance list
 add some missing trade CDs
-
-------------------------------------------------------------------------
-r406 | oscarucb | 2014-11-15 10:26:01 +0000 (Sat, 15 Nov 2014) | 2 lines
-Changed paths:
-   M /trunk/SavedInstances.lua
-
-add missing cd for Inscription: War Paints
 
 ------------------------------------------------------------------------

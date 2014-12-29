@@ -1,10 +1,60 @@
 ------------------------------------------------------------------------
-r141 | zensunim | 2014-12-05 16:48:07 +0000 (Fri, 05 Dec 2014) | 2 lines
+r148 | zensunim | 2014-12-23 08:44:36 +0000 (Tue, 23 Dec 2014) | 5 lines
 Changed paths:
-   A /tags/4.35.7 (from /trunk:140)
+   A /tags/4.35.8 (from /trunk:147)
 
-4.35.7
-* Added and fixed WoD spells for Highmaul
+4.35.8
+* Added WoD spells for Draenor (world)
+* Added WoD spells for Highmaul
+* Added WoD spells for Auchindoun
+* Added WoD spells for Feast of Winter Veil
+------------------------------------------------------------------------
+r147 | zensunim | 2014-12-23 08:42:56 +0000 (Tue, 23 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO.toc
+   M /trunk/GTFO_Fail_WOD.lua
+   M /trunk/GTFO_Spells_Special.lua
+   M /trunk/GTFO_Spells_WOD.lua
+
+Prepping for 4.35.8
+------------------------------------------------------------------------
+r146 | zensunim | 2014-12-18 08:17:30 +0000 (Thu, 18 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/GTFO_Fail_WOD.lua
+   M /trunk/GTFO_Spells_WOD.lua
+
+Highmaul spells
+------------------------------------------------------------------------
+r145 | zensunim | 2014-12-12 07:38:59 +0000 (Fri, 12 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/GTFO_Fail_WOD.lua
+   M /trunk/GTFO_Spells_WOD.lua
+
+Added/fixed Highmual spells
+------------------------------------------------------------------------
+r144 | zensunim | 2014-12-10 22:00:47 +0000 (Wed, 10 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO_Fail_WOD.lua
+   M /trunk/GTFO_Spells_WOD.lua
+
+Added Auchindoun and Highmaul alerts
+------------------------------------------------------------------------
+r143 | zensunim | 2014-12-07 18:02:16 +0000 (Sun, 07 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/GTFO_Spells_WOD.lua
+
+Detected! spell from Talador cave
+------------------------------------------------------------------------
+r142 | zensunim | 2014-12-06 20:59:46 +0000 (Sat, 06 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO.toc
+   M /trunk/GTFO_Fail_WOD.lua
+   M /trunk/GTFO_Spells_WOD.lua
+
+World boss Tarlna & Ko'ragh
 ------------------------------------------------------------------------
 r140 | zensunim | 2014-12-05 16:42:47 +0000 (Fri, 05 Dec 2014) | 1 line
 Changed paths:
@@ -130,26 +180,4 @@ Changed paths:
 - Added WoD spells for Shadowmoon Burial Grounds
 - Added WoD spells for Skyreach
 
-------------------------------------------------------------------------
-r122 | zensunim | 2014-11-16 17:04:52 +0000 (Sun, 16 Nov 2014) | 1 line
-Changed paths:
-   M /trunk/GTFO.lua
-   M /trunk/GTFO.toc
-   M /trunk/GTFO_Fail_WOD.lua
-   M /trunk/GTFO_Spells_WOD.lua
-
-Added WoD spells for Auchindoun
-------------------------------------------------------------------------
-r121 | zensunim | 2014-11-16 04:39:39 +0000 (Sun, 16 Nov 2014) | 4 lines
-Changed paths:
-   M /trunk/GTFO.lua
-   M /trunk/GTFO.toc
-   M /trunk/GTFO_Fail_WOD.lua
-   M /trunk/GTFO_Spells_MP.lua
-   M /trunk/GTFO_Spells_WOD.lua
-
-* Added Pandaria spells for Siege of Orgrimmar (Heroic)
-* Added WoD spells for Draenor (world)
-* Added WoD spells for Bloodmaul Slag Mines
-* Added WoD spells for Iron Docks
 ------------------------------------------------------------------------
