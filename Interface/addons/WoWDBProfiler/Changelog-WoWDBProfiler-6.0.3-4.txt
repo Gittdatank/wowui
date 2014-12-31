@@ -1,8 +1,0 @@
-2014-12-22  MMOSimca  <MMOSimca@gmail.com>
-
-[d65875caafd6] [6.0.3-4]
-* Main.lua:
-
-Added a new blacklisted spell for NPC recording and made the blacklist into a table.
-
-

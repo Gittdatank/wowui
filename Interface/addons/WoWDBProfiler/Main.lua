@@ -90,6 +90,7 @@ local EVENT_MAPPING = {
     BANKFRAME_OPENED = true,
     BATTLEFIELDS_SHOW = true,
     BLACK_MARKET_ITEM_UPDATE = true,
+    BONUS_ROLL_RESULT = true,
     CHAT_MSG_CURRENCY = true,
     CHAT_MSG_LOOT = true,
     CHAT_MSG_MONSTER_SAY = "RecordQuote",
@@ -590,7 +591,7 @@ local function HandleItemUse(item_link, bag_index, slot_index)
     current_action.loot_label = "contains"
 
     -- For items that open instantly with no spell cast
-    if (not _G.GetNumLootItems()) and (private.CONTAINER_ITEM_ID_LIST[item_id] == true) then
+    if _G.GetNumLootItems() == 0 and private.CONTAINER_ITEM_ID_LIST[item_id] == true then
         ClearChatLootData()
         Debug("HandleItemUse: Beginning chat-based loot timer for item with ID %d.", item_id)
         chat_loot_timer_handle = C_Timer.NewTimer(1, ClearChatLootData)
@@ -1272,6 +1273,14 @@ end -- do-block
 
 function WDP:LOOT_SLOT_CLEARED(...)
     ClearChatLootData()
+end
+
+
+-- For now, bonus roll data only pollutes the true drop percentages. We still want to capture the data from SPELL_CONFIRMATION_PROMPT because of legendary quest items though.
+function WDP:BONUS_ROLL_RESULT(event_name)
+    Debug("%s: Bonus roll detected; stopping loot recording for this boss to avoid recording bonus loot.", event_name)
+    ClearKilledBossID()
+    ClearLootToastContainerID()
 end
 
 
