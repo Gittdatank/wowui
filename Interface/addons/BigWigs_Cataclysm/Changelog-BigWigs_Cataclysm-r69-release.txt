@@ -1,0 +1,49 @@
+------------------------------------------------------------------------
+r69 | funkydude | 2014-12-29 16:13:56 +0000 (Mon, 29 Dec 2014) | 1 line
+Changed paths:
+   A /tags/r69-release (from /trunk:68)
+
+Tagging as r69-release
+------------------------------------------------------------------------
+r68 | funkydude | 2014-12-29 16:12:52 +0000 (Mon, 29 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/DragonSoul/DeathwingMadness.lua
+
+DeathwingMadness: Fix small tentacle announcement.
+------------------------------------------------------------------------
+r67 | funkydude | 2014-12-13 17:56:41 +0000 (Sat, 13 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/DragonSoul/DeathwingSpine.lua
+
+DeathwingSpine: Fix roll message.
+------------------------------------------------------------------------
+r65 | ananhaid | 2014-12-05 11:13:35 +0000 (Fri, 05 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/modules.xml
+
+Load module locale files after the modules.
+------------------------------------------------------------------------
+r63 | funkydude | 2014-11-30 23:34:41 +0000 (Sun, 30 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/Bastion/DoubleDragon.lua
+   M /trunk/Bastion/TwilightAscendants.lua
+   M /trunk/Blackwing/Nefarian.lua
+   M /trunk/DragonSoul/DeathwingMadness.lua
+   M /trunk/DragonSoul/DeathwingSpine.lua
+   M /trunk/DragonSoul/Locales/deDE.lua
+   M /trunk/DragonSoul/Locales/esES.lua
+   M /trunk/DragonSoul/Locales/frFR.lua
+   M /trunk/DragonSoul/Locales/itIT.lua
+   M /trunk/DragonSoul/Locales/koKR.lua
+   M /trunk/DragonSoul/Locales/ptBR.lua
+   M /trunk/DragonSoul/Locales/ruRU.lua
+   M /trunk/DragonSoul/Locales/zhCN.lua
+   M /trunk/DragonSoul/Locales/zhTW.lua
+   M /trunk/DragonSoul/Morchok.lua
+   M /trunk/DragonSoul/Yorsahj.lua
+   M /trunk/DragonSoul/Zonozz.lua
+   M /trunk/Firelands/Alysrazor.lua
+   M /trunk/Firelands/Bethtilac.lua
+
+Remove EJ calls.
+------------------------------------------------------------------------

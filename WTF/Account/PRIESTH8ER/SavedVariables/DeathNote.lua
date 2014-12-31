@@ -2,15 +2,15 @@
 DeathNoteDB = {
 	["profileKeys"] = {
 		["Got - Arthas"] = "Got - Arthas",
-		["Lihte - Arthas"] = "Lihte - Arthas",
 		["Git - Arthas"] = "Git - Arthas",
+		["Lihte - Arthas"] = "Lihte - Arthas",
 	},
 	["profiles"] = {
 		["Got - Arthas"] = {
 		},
-		["Lihte - Arthas"] = {
-		},
 		["Git - Arthas"] = {
+		},
+		["Lihte - Arthas"] = {
 		},
 	},
 }

@@ -6,6 +6,8 @@ local LibStub = _G.LibStub
 local BrokerGarrison = LibStub('AceAddon-3.0'):NewAddon(ADDON_NAME, 'AceConsole-3.0', "AceHook-3.0", 'AceEvent-3.0', 'AceTimer-3.0', "LibSink-2.0")
 local Garrison = BrokerGarrison
 
+_G["BrokerGarrison"] = {}
+
 Garrison.versionString = GetAddOnMetadata(ADDON_NAME, "Version");
 Garrison.cleanName = "Broker Garrison"
 
@@ -97,6 +99,7 @@ local DB_DEFAULTS = {
 			hideGarrisonMinimapButton = false,
 			highAccuracy = true,
 			showSeconds = true,
+			updateInCombat = true,
 		},
 		tooltip = {
 			building = {
@@ -474,6 +477,8 @@ function Garrison:SendNotification(paramCharInfo, data, notificationType)
 						-- don't display notifications, just save them and prepare for later output
 						Garrison:AddNotificationToQueue(notificationType, paramCharInfo, notificationTitle)
 					else
+						Garrison.fireEvent(notificationType, paramCharInfo, data)
+
 						debugPrint(notificationText)
 
 						self:Pour(notificationText, colors.green.r, colors.green.g, colors.green.b)
@@ -551,7 +556,7 @@ function Garrison:GetPlayerMissionCount(paramCharInfo, missionCount, missions)
 
 			missionData.timeLeftCalc = math.max(0, timeLeft)
 
-			if (timeLeft < 0 and missionData.start >= 0) then
+			if (timeLeft < 0 and missionData.start >= 0) then				
 				Garrison:SendNotification(paramCharInfo, missionData, TYPE_MISSION)
 			end
 		end
@@ -1586,6 +1591,7 @@ function Garrison:UpdateLDB()
 		invasionAvailableCurrent = invasionAvailableCurrent,
 	}
 	Garrison.data = data
+	--_G["BrokerGarrison"].data = Garrison.data
 
 
 	ldb_object_mission.text = Garrison.replaceVariables(Garrison:GetLDBText(Garrison.TYPE_MISSION), data)
@@ -1654,6 +1660,7 @@ function Garrison:OnInitialize()
 	colors = Garrison.colors
 
 	self:SetupOptions()
+	self:SetupAPI()
 
 	Garrison:SetSinkStorage(configDb.notification.sink)
 

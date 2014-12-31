@@ -560,7 +560,7 @@ CombatReplay: enabled
 CombatReplay_Logger: enabled
 CombatReplay_SavedData: enabled
 DiminishingReturns: disabled
-BL_Cooldown: enabled
+BL_Cooldown: disabled
 BigWigs_Core: enabled
 BigWigs_CommonAuras: disabled
 BigWigs_Options: enabled

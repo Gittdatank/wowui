@@ -4,18 +4,18 @@ GuildBankRepairToggleDB = {
 		["Dbyx - Arthas"] = "Default",
 		["Gitt - Cho'gall"] = "Default",
 		["Giit - Cho'gall"] = "Default",
-		["Lihte - Arthas"] = "Default",
+		["Spih - Arthas"] = "Default",
 		["Gitt - Arthas"] = "Default",
-		["Git - Arthas"] = "Default",
+		["Got - Arthas"] = "Default",
 		["Giit - Azuremyst"] = "Default",
 		["Evyyn - Azuremyst"] = "Default",
-		["Gimm - Cho'gall"] = "Default",
-		["Greny - Azuremyst"] = "Default",
-		["Git - Cho'gall"] = "Default",
-		["Spih - Cho'gall"] = "Default",
 		["Burk - Arthas"] = "Default",
-		["Got - Arthas"] = "Default",
-		["Spih - Arthas"] = "Default",
+		["Git - Cho'gall"] = "Default",
+		["Greny - Azuremyst"] = "Default",
+		["Spih - Cho'gall"] = "Default",
+		["Gimm - Cho'gall"] = "Default",
+		["Git - Arthas"] = "Default",
+		["Lihte - Arthas"] = "Default",
 	},
 	["char"] = {
 		["Gitt - Cho'gall"] = {
@@ -32,18 +32,8 @@ GuildBankRepairToggleDB = {
 				true, -- [8]
 			},
 		},
-		["Git - Arthas"] = {
-			["ranks"] = {
-				true, -- [1]
-				true, -- [2]
-				true, -- [3]
-				true, -- [4]
-				true, -- [5]
-				true, -- [6]
-			},
-			["logout"] = true,
-		},
 		["Git - Cho'gall"] = {
+			["logout"] = true,
 			["ranks"] = {
 				true, -- [1]
 				true, -- [2]
@@ -54,7 +44,17 @@ GuildBankRepairToggleDB = {
 				true, -- [7]
 				true, -- [8]
 			},
+		},
+		["Git - Arthas"] = {
 			["logout"] = true,
+			["ranks"] = {
+				true, -- [1]
+				true, -- [2]
+				true, -- [3]
+				true, -- [4]
+				true, -- [5]
+				true, -- [6]
+			},
 		},
 	},
 }

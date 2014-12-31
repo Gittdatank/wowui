@@ -10,10 +10,9 @@ pssetmarknew = {
 		"Primalfears", -- [1]
 	}, -- [2]
 	{
-		"Shinerr", -- [1]
 	}, -- [3]
 	{
-		"Iamascrub", -- [1]
+		"Shinerr", -- [1]
 	}, -- [4]
 	{
 	}, -- [5]

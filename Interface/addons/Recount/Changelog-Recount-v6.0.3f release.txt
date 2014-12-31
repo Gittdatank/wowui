@@ -1,0 +1,65 @@
+------------------------------------------------------------------------
+r1289 | resike | 2014-12-30 02:27:54 +0000 (Tue, 30 Dec 2014) | 1 line
+Changed paths:
+   A /tags/v6.0.3f release (from /trunk:1288)
+
+Tagging as v6.0.3f release
+------------------------------------------------------------------------
+r1288 | Resike | 2014-12-30 02:10:14 +0000 (Tue, 30 Dec 2014) | 6 lines
+Changed paths:
+   M /trunk/GUI_Config.lua
+   M /trunk/GUI_Main.lua
+   M /trunk/Recount.lua
+   M /trunk/Recount_Modes.lua
+   M /trunk/Tracker.lua
+   M /trunk/TrackerModules/TrackerModule_CCBreakers.lua
+   M /trunk/roster.lua
+
+- Added an option to merge absorbs with Damage Done and Damage Taken, called "Merge Absorbs w/ Damage".
+- Fixed an issue with pet type detection for pets like: "Mirror Image", "Shadow Reflection" or "Storm, Earth, and Fire" spirit monks.
+- Fixed the "Partial Resist" pie chart.
+- Server strip fixes for servers with special characters.
+- Some optimizations.
+- Some other smaller fixes.
+------------------------------------------------------------------------
+r1286 | Resike | 2014-12-23 22:23:27 +0000 (Tue, 23 Dec 2014) | 11 lines
+Changed paths:
+   M /trunk/GUI_Detail.lua
+   M /trunk/GUI_Main.lua
+   M /trunk/Recount_Modes.lua
+   M /trunk/Tracker.lua
+   M /trunk/debug.lua
+   M /trunk/roster.lua
+
+- Added "Multistrike (Crit)" hit type.
+- Absorbs should be properly added to "Healing Taken".
+- Some event fixes.
+- Removed server stripping from some places.
+- SetPoint fix for the Bar's text.
+- Updated server stripping pattern to properly work for "PlayerName-Servername <PetName-ServerName>" style pets.
+- Between 100k and 1m damage the precision will be 1 decimals for short style.
+- After 10m damage the precision will be 2 decimals for short style.
+- Some performance upgrades.
+- Debug code fixes.
+- Some other smaller fixes.
+------------------------------------------------------------------------
+r1284 | Resike | 2014-12-15 19:11:18 +0000 (Mon, 15 Dec 2014) | 3 lines
+Changed paths:
+   M /trunk/Recount_Modes.lua
+   M /trunk/Tracker.lua
+
+- Ignored "Stance of the Sturdy" Ox and "Purgatory" from absorbs.
+- Triggering an absorb should properly update activity time for the caster.
+- Absorbs per second fix.
+------------------------------------------------------------------------
+r1283 | Resike | 2014-12-08 00:59:27 +0000 (Mon, 08 Dec 2014) | 4 lines
+Changed paths:
+   M /trunk/GUI_Detail.lua
+   M /trunk/Recount_Modes.lua
+   M /trunk/Tracker.lua
+
+- Major changes in absorb handling.
+- Server name fixes, for tooltips and details.
+- Some fixes related "Absorbs" and "Deaths" details.
+- Some other minor fixes.
+------------------------------------------------------------------------

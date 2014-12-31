@@ -115,3 +115,4 @@ BigWigs_LustingOnTrash: disabled
 SavedInstances: enabled
 GatherMate_Sharing: disabled
 LagBar: enabled
+BL_Cooldown: disabled

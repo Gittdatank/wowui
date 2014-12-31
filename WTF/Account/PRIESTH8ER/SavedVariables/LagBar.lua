@@ -1,7 +1,7 @@
 
 LagBar_DB = {
-	["y"] = 287.750335693359,
-	["x"] = 540.625,
+	["y"] = 311.750457763672,
+	["x"] = 551.125,
 	["bgShown"] = true,
 	["locked"] = false,
 	["impdisplay"] = true,

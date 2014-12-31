@@ -1,7 +1,5 @@
 
 DerpDB = {
-	["pull"] = {
-	},
 	["sessions"] = {
 		{
 			["time"] = 1418262999,
@@ -64,187 +62,7 @@ DerpDB = {
 			},
 		}, -- [1]
 	},
-	["data"] = {
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [1]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [2]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [3]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [4]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [5]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [6]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [7]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [8]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [9]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [10]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [11]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [12]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [13]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [14]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [15]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [16]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [17]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [18]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [19]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [20]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [21]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [22]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [23]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [24]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [25]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [26]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [27]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [28]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [29]
-		{
-			["ability"] = "Fire Zone",
-			["event"] = "SPELL_DAMAGE",
-			["name"] = "Git",
-			["amount"] = 50,
-		}, -- [30]
+	["pull"] = {
 	},
 	["session"] = {
 		["time"] = 1418262999,
@@ -5550,7 +5368,741 @@ DerpDB = {
 				["amount"] = -5,
 				["status"] = "farm",
 			}, -- [449]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Marcusdapimp",
+				["time"] = 1420000298,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [450]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Xanthia",
+				["time"] = 1420000298,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [451]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Clancey",
+				["time"] = 1420000298,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [452]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Urtagdk",
+				["time"] = 1420000298,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [453]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Primalfearz",
+				["time"] = 1420000298,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [454]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Morgàn",
+				["time"] = 1420000298,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [455]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Pox",
+				["time"] = 1420000299,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [456]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Falænx",
+				["time"] = 1420000299,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [457]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Pajamaparty",
+				["time"] = 1420000300,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [458]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Blameshinerr",
+				["time"] = 1420000301,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [459]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Urtagdk",
+				["time"] = 1420000301,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [460]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Ahrian",
+				["time"] = 1420000301,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [461]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Realistic",
+				["time"] = 1420000301,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [462]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Kalesalad",
+				["time"] = 1420000301,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [463]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Pox",
+				["time"] = 1420000302,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [464]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Marcusdapimp",
+				["time"] = 1420000321,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [465]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Realistic",
+				["time"] = 1420000321,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [466]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Calade",
+				["time"] = 1420000321,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [467]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Pajamaparty",
+				["time"] = 1420000321,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [468]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Shocksfired",
+				["time"] = 1420000321,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [469]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Git",
+				["time"] = 1420000321,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [470]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Realistic",
+				["time"] = 1420000321,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [471]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Clancey",
+				["time"] = 1420000322,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [472]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Heroic",
+				["player"] = "Morgàn",
+				["time"] = 1420000322,
+				["amount"] = 0,
+				["status"] = "progression",
+			}, -- [473]
+			{
+				["spell"] = "Flame Gout",
+				["source"] = "Fire Pillar",
+				["zone"] = "Highmaul",
+				["encounter"] = "Kargath Bladefise",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Realistic",
+				["time"] = 1420002577,
+				["amount"] = -1,
+				["status"] = "farm",
+			}, -- [474]
+			{
+				["spell"] = "Flame Gout",
+				["source"] = "Fire Pillar",
+				["zone"] = "Highmaul",
+				["encounter"] = "Kargath Bladefise",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Nathreizm",
+				["time"] = 1420002577,
+				["amount"] = -1,
+				["status"] = "farm",
+			}, -- [475]
+			{
+				["spell"] = "Flame Gout",
+				["source"] = "Fire Pillar",
+				["zone"] = "Highmaul",
+				["encounter"] = "Kargath Bladefise",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Nytbolt",
+				["time"] = 1420002577,
+				["amount"] = -1,
+				["status"] = "farm",
+			}, -- [476]
+			{
+				["spell"] = "Flame Gout",
+				["source"] = "Fire Pillar",
+				["zone"] = "Highmaul",
+				["encounter"] = "Kargath Bladefise",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Kuz",
+				["time"] = 1420002602,
+				["amount"] = 0,
+				["status"] = "farm",
+			}, -- [477]
+			{
+				["spell"] = "Flame Gout",
+				["source"] = "Fire Pillar",
+				["zone"] = "Highmaul",
+				["encounter"] = "Kargath Bladefise",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Anarza",
+				["time"] = 1420002602,
+				["amount"] = 0,
+				["status"] = "farm",
+			}, -- [478]
+			{
+				["spell"] = "Flame Gout",
+				["source"] = "Fire Pillar",
+				["zone"] = "Highmaul",
+				["encounter"] = "Kargath Bladefise",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Anarza",
+				["time"] = 1420002637,
+				["amount"] = 0,
+				["status"] = "farm",
+			}, -- [479]
+			{
+				["spell"] = "Flame Gout",
+				["source"] = "Fire Pillar",
+				["zone"] = "Highmaul",
+				["encounter"] = "Kargath Bladefise",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Vamprixlz",
+				["time"] = 1420002637,
+				["amount"] = -1,
+				["status"] = "farm",
+			}, -- [480]
+			{
+				["spell"] = "Flame Gout",
+				["source"] = "Fire Pillar",
+				["zone"] = "Highmaul",
+				["encounter"] = "Kargath Bladefise",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Urtag",
+				["time"] = 1420002652,
+				["amount"] = -1,
+				["status"] = "farm",
+			}, -- [481]
+			{
+				["spell"] = "Flame Gout",
+				["source"] = "Fire Pillar",
+				["zone"] = "Highmaul",
+				["encounter"] = "Kargath Bladefise",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Vamprixlz",
+				["time"] = 1420002657,
+				["amount"] = -1,
+				["status"] = "farm",
+			}, -- [482]
+			{
+				["spell"] = "Flame Gout",
+				["source"] = "Fire Pillar",
+				["zone"] = "Highmaul",
+				["encounter"] = "Kargath Bladefise",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Anarza",
+				["time"] = 1420002662,
+				["amount"] = 0,
+				["status"] = "farm",
+			}, -- [483]
+			{
+				["spell"] = "Flame Gout",
+				["source"] = "Fire Pillar",
+				["zone"] = "Highmaul",
+				["encounter"] = "Kargath Bladefise",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Dreltrak",
+				["time"] = 1420002662,
+				["amount"] = -1,
+				["status"] = "farm",
+			}, -- [484]
+			{
+				["spell"] = "Flame Gout",
+				["source"] = "Fire Pillar",
+				["zone"] = "Highmaul",
+				["encounter"] = "Kargath Bladefise",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Nytbolt",
+				["time"] = 1420002662,
+				["amount"] = -1,
+				["status"] = "farm",
+			}, -- [485]
+			{
+				["spell"] = "Flame Gout",
+				["source"] = "Fire Pillar",
+				["zone"] = "Highmaul",
+				["encounter"] = "Kargath Bladefise",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Anarza",
+				["time"] = 1420002667,
+				["amount"] = 0,
+				["status"] = "farm",
+			}, -- [486]
+			{
+				["spell"] = "Flame Gout",
+				["source"] = "Fire Pillar",
+				["zone"] = "Highmaul",
+				["encounter"] = "Kargath Bladefise",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Lala",
+				["time"] = 1420002667,
+				["amount"] = 0,
+				["status"] = "farm",
+			}, -- [487]
+			{
+				["spell"] = "Flame Gout",
+				["source"] = "Fire Pillar",
+				["zone"] = "Highmaul",
+				["encounter"] = "Kargath Bladefise",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Chronux",
+				["time"] = 1420002667,
+				["amount"] = -1,
+				["status"] = "farm",
+			}, -- [488]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Nathreizm",
+				["time"] = 1420004222,
+				["amount"] = -2,
+				["status"] = "farm",
+			}, -- [489]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Awàke",
+				["time"] = 1420004292,
+				["amount"] = -2,
+				["status"] = "farm",
+			}, -- [490]
+			{
+				["spell"] = "Blaze 3 stacks",
+				["source"] = "Phemos",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_AURA_APPLIED_DOSE",
+				["difficulty"] = "Mythic",
+				["player"] = "Nytbolt",
+				["time"] = 1420004393,
+				["amount"] = 0,
+				["status"] = "farm",
+			}, -- [491]
+			{
+				["spell"] = "Blaze 3 stacks",
+				["source"] = "Phemos",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_AURA_APPLIED_DOSE",
+				["difficulty"] = "Mythic",
+				["player"] = "Kalarae",
+				["time"] = 1420004398,
+				["amount"] = 0,
+				["status"] = "farm",
+			}, -- [492]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Wazze",
+				["time"] = 1420004432,
+				["amount"] = -2,
+				["status"] = "farm",
+			}, -- [493]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Morgàn",
+				["time"] = 1420004432,
+				["amount"] = -2,
+				["status"] = "farm",
+			}, -- [494]
+			{
+				["spell"] = "Shield Charge",
+				["source"] = "Pol",
+				["zone"] = "Highmaul",
+				["encounter"] = "Twin Ogron",
+				["event"] = "SPELL_DAMAGE",
+				["difficulty"] = "Mythic",
+				["player"] = "Nytbolt",
+				["time"] = 1420004432,
+				["amount"] = -2,
+				["status"] = "farm",
+			}, -- [495]
 		},
+	},
+	["data"] = {
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [1]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [2]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [3]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [4]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [5]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [6]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [7]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [8]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [9]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [10]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [11]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [12]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [13]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [14]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [15]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [16]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [17]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [18]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [19]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [20]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [21]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [22]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [23]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [24]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [25]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [26]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [27]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [28]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [29]
+		{
+			["ability"] = "Fire Zone",
+			["name"] = "Git",
+			["event"] = "SPELL_DAMAGE",
+			["amount"] = 50,
+		}, -- [30]
 	},
 	["counter"] = 215,
 }

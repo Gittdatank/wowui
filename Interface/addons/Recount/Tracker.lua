@@ -4,7 +4,7 @@ local AceLocale = LibStub("AceLocale-3.0")
 local L = AceLocale:GetLocale("Recount")
 local BossIDs = LibStub("LibBossIDs-1.0")
 
-local revision = tonumber(string.sub("$Revision: 1286 $", 12, -3))
+local revision = tonumber(string.sub("$Revision: 1288 $", 12, -3))
 if Recount.Version < revision then
 	Recount.Version = revision
 end
@@ -51,7 +51,7 @@ end]]
 -- Pre-4.1 CLEU compat end
 
 --Data for Recount is tracked within this file
-local Tracking = {}
+local Tracking = { }
 
 -- Elsia: This is straight from GUIDRegistryLib-0.1 by ArrowMaster.
 
@@ -449,7 +449,7 @@ end
 -- Biffur: Keep track of active shields on each target
 local AllShields = {}
 
-local last_timestamp
+--local last_timestamp
 
 -- This is needed only for abilities that do not offer absorb values through SPELL_AURA_*
 -- It involves a guessing heuristic
@@ -530,7 +530,6 @@ function Recount:SpellDamage(timestamp, eventtype, srcGUID, srcName, srcFlags, d
 	local HitType = "Hit" -- Elsia: Do NOT localize this, it breaks functionality!!! If you need this localized contact me on WowAce or Curse.
 	local isDot
 	if eventtype == "SPELL_PERIODIC_DAMAGE" then
-
 		HitType = "Tick" -- Elsia: Do NOT localize this, it breaks functionality!!! If you need this localized contact me on WowAce or Curse.
 		spellName = spellName .." ("..L["DoT"]..")"
 		isDot = true
@@ -561,8 +560,17 @@ function Recount:SpellDamage(timestamp, eventtype, srcGUID, srcName, srcFlags, d
 	if eventtype == "RANGE_DAMAGE" then
 		spellSchool = school
 	end
+	if absorbed then
+		if Recount.db.profile.MergeDamageAbsorbs then
+			if spellId == 0 then
+				Recount:AddDamageData(srcName, dstName, L["Melee"], SPELLSCHOOL_PHYSICAL, "Absorb", absorbed, nil, srcGUID, srcFlags, dstGUID, dstFlags, spellId, blocked, absorbed)
+			else
+				Recount:AddDamageData(srcName, dstName, spellName, Recount.SpellSchoolName[spellSchool], "Absorb", absorbed, nil, srcGUID, srcFlags, dstGUID, dstFlags, spellId, blocked, absorbed)
+			end
+		end
+	end
 
-	last_timestamp = timestamp
+	--last_timestamp = timestamp
 
 	Recount:AddDamageData(srcName, dstName, spellName, Recount.SpellSchoolName[spellSchool], HitType, amount, resisted, srcGUID, srcFlags, dstGUID, dstFlags, spellId, blocked, absorbed, isDot)
 end
@@ -585,8 +593,13 @@ function Recount:EnvironmentalDamage(timestamp, eventtype, srcGUID, srcName, src
 	if absorbed then
 		HitType = "Absorbed"
 	end]]
+	if absorbed then
+		if Recount.db.profile.MergeDamageAbsorbs then
+			Recount:AddDamageData("Environment", dstName, Recount:FixCaps(enviromentalType), Recount.SpellSchoolName[school], HitType, absorbed, resisted, srcGUID, 0, dstGUID, dstFlags, nil, blocked, absorbed)
+		end
+	end
 
-	last_timestamp = timestamp
+	--last_timestamp = timestamp
 
 	Recount:AddDamageData("Environment", dstName, Recount:FixCaps(enviromentalType), Recount.SpellSchoolName[school], HitType, amount, resisted, srcGUID, 0, dstGUID, dstFlags, nil, blocked, absorbed)
 end
@@ -615,9 +628,13 @@ function Recount:SwingMissed(timestamp, eventtype, srcGUID, srcName, srcFlags, d
 		blocked = amountMissed
 	end
 
-	last_timestamp = timestamp
+	--last_timestamp = timestamp
 
-	Recount:AddDamageData(srcName, dstName, L["Melee"], nil, Recount:FixCaps(missType), nil, nil, srcGUID, srcFlags, dstGUID, dstFlags, spellId, blocked, absorbed) -- Elsia: Do NOT localize this, it breaks functionality!!! If you need this localized contact me on WowAce or Curse. -- Resike: Then why is it localized?
+	if Recount.db.profile.MergeDamageAbsorbs then
+		Recount:AddDamageData(srcName, dstName, L["Melee"], SPELLSCHOOL_PHYSICAL, Recount:FixCaps(missType), absorbed, nil, srcGUID, srcFlags, dstGUID, dstFlags, spellId, blocked, absorbed)
+	else
+		Recount:AddDamageData(srcName, dstName, L["Melee"], SPELLSCHOOL_PHYSICAL, Recount:FixCaps(missType), nil, nil, srcGUID, srcFlags, dstGUID, dstFlags, spellId, blocked, absorbed)
+	end
 end
 
 function Recount:SpellMissed(timestamp, eventtype, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, missType, isOffHand, multistrike, amountMissed)
@@ -637,11 +654,17 @@ function Recount:SpellMissed(timestamp, eventtype, srcGUID, srcName, srcFlags, d
 		absorbed = amountMissed
 	elseif missType == "BLOCK" then
 		blocked = amountMissed
+	elseif missType == "REFLECT" then
+
 	end
 
-	last_timestamp = timestamp
+	--last_timestamp = timestamp
 
-	Recount:AddDamageData(srcName, dstName, spellName, Recount.SpellSchoolName[spellSchool], Recount:FixCaps(missType), nil, nil, srcGUID, srcFlags, dstGUID, dstFlags, spellId, blocked, absorbed)
+	if Recount.db.profile.MergeDamageAbsorbs then
+		Recount:AddDamageData(srcName, dstName, spellName, Recount.SpellSchoolName[spellSchool], Recount:FixCaps(missType), absorbed, nil, srcGUID, srcFlags, dstGUID, dstFlags, spellId, blocked, absorbed)
+	else
+		Recount:AddDamageData(srcName, dstName, spellName, Recount.SpellSchoolName[spellSchool], Recount:FixCaps(missType), nil, nil, srcGUID, srcFlags, dstGUID, dstFlags, spellId, blocked, absorbed)
+	end
 end
 
 function Recount:SpellHeal(timestamp, eventtype, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, amount, overheal, absorbed, critical, multistrike)
@@ -1271,7 +1294,7 @@ end
 --First type tracks min/max & count while the other only counts the total sum in the count column
 local CurTable
 local Details
-function Recount:AddTableDataStats(who, datatype, secondary, detailtype, amount)
+function Recount:AddTableDataStats(who, datatype, secondary, detailtype, amount, reverse)
 	if not who then
 		return
 	end
@@ -1292,8 +1315,14 @@ function Recount:AddTableDataStats(who, datatype, secondary, detailtype, amount)
 		CurTable.Details = Recount:GetTable()
 	end
 
-	CurTable.count = CurTable.count + 1
-	CurTable.amount = CurTable.amount + amount
+	-- Resike: Hack to make Partial Resist PieChart work
+	if reverse then
+		CurTable.count = CurTable.count + amount
+		CurTable.amount = CurTable.amount + 1
+	else
+		CurTable.count = CurTable.count + 1
+		CurTable.amount = CurTable.amount + amount
+	end
 
 	if type(CurTable.Details[detailtype]) ~= "table" then
 		CurTable.Details[detailtype] = Recount:GetTable()
@@ -1311,7 +1340,7 @@ function Recount:AddTableDataStats(who, datatype, secondary, detailtype, amount)
 		elseif amount < Details.min then
 			Details.min = amount
 		end
-	else--If no max has been set time to initialize
+	else -- If no max has been set time to initialize
 		Details.max = amount
 		Details.min = amount
 	end
@@ -1331,8 +1360,14 @@ function Recount:AddTableDataStats(who, datatype, secondary, detailtype, amount)
 		CurTable.Details = Recount:GetTable()
 	end
 
-	CurTable.count = CurTable.count + 1
-	CurTable.amount = CurTable.amount + amount
+	-- Resike: Hack to make Partial Resist PieChart work
+	if reverse then
+		CurTable.count = CurTable.count + amount
+		CurTable.amount = CurTable.amount + 1
+	else
+		CurTable.count = CurTable.count + 1
+		CurTable.amount = CurTable.amount + amount
+	end
 
 	if type(CurTable.Details[detailtype]) ~= "table" then
 		CurTable.Details[detailtype] = Recount:GetTable()
@@ -1350,11 +1385,12 @@ function Recount:AddTableDataStats(who, datatype, secondary, detailtype, amount)
 		elseif amount < Details.min then
 			Details.min = amount
 		end
-	else--If no max has been set time to initialize
+	else -- If no max has been set time to initialize
 		Details.max = amount
 		Details.min = amount
 	end
 end
+
 local first = false
 function Recount:CorrectTableData(who, datatype, secondary, amount)
 	if not who then return end
@@ -1463,7 +1499,9 @@ function Recount:AddTableDataStatsNoAmount(who, datatype, secondary, detailtype)
 end
 
 function Recount:AddTableDataSum(who, datatype, secondary, detailtype, amount)
-	if not who then return end
+	if not who then
+		return
+	end
 	if (not Recount.db.profile.Filters.Data[who.type]) or not Recount.db.profile.GlobalDataCollect or not Recount.CurrentDataCollect then
 		--Have to make sure this won't be used by something that needs to have data recorded for it
 		if dbCombatants[secondary] then
@@ -1489,9 +1527,9 @@ function Recount:AddTableDataSum(who, datatype, secondary, detailtype, amount)
 
 	CurTable.amount = (CurTable.amount or 0) + amount
 
-	if detailtype == nil then
+	--[[if detailtype == nil then
 		Recount:DPrint("DEBUG at: ".. (who or "nil").." "..(datatype or "nil").." ".. (secondary or "nil"))
-	end
+	end]]
 
 	if type(CurTable.Details[detailtype]) ~= "table" then
 		CurTable.Details[detailtype] = Recount:GetTable()
@@ -1599,7 +1637,7 @@ function Recount:DetectPet(name, nGUID, nFlags)
 				if owner then
 					name = name.." <"..owner..">"
 				end
-					--Recount:DPrint("Party guardian: "..name.." "..(nGUID or "nil").." "..(owner or "nil").." "..(ownerID or "nil"))
+				--Recount:DPrint("Party guardian: "..name.." "..(nGUID or "nil").." "..(owner or "nil").." "..(ownerID or "nil"))
 			--end
 		else
 			petName = Recount:GetGuardianOwnerByGUID(nGUID)
@@ -1616,9 +1654,9 @@ end
 function Recount:BossFound()
 	local victim = UnitName("boss1")
 	if victim then
-	Recount.FightingWho = victim
-	Recount.FightingLevel = -1
-	Recount:DPrint("Boss from Boss Frame: "..victim)
+		Recount.FightingWho = victim
+		Recount.FightingLevel = -1
+		Recount:DPrint("Boss from Boss Frame: "..victim)
 	end
 end
 
@@ -1881,17 +1919,17 @@ function Recount:AddDamageData(source, victim, ability, element, hittype, damage
 				end
 				Recount:AddAmount2(victimData, "ElementTakenResist", element, resist)
 				if resist < (damage / 2.5) then
-					--25% Resist
-					Recount:AddTableDataStats(victimData, "PartialResist", ability, "25%"..L["Resist"], resist)
+					-- 25% Resist
+					Recount:AddTableDataStats(victimData, "PartialResist", ability, "25% "..L["Resist"], resist, true)
 				elseif resist < (1.25 * damage) then
-					--50% Resist
-					Recount:AddTableDataStats(victimData, "PartialResist", ability, "50%"..L["Resist"], resist)
+					-- 50% Resist
+					Recount:AddTableDataStats(victimData, "PartialResist", ability, "50% "..L["Resist"], resist, true)
 				else
-					--75% Resist
-					Recount:AddTableDataStats(victimData, "PartialResist", ability, "75%"..L["Resist"], resist)
+					-- 75% Resist
+					Recount:AddTableDataStats(victimData, "PartialResist", ability, "75% "..L["Resist"], resist, true)
 				end
 			else
-				Recount:AddTableDataStats(victimData, "PartialResist", ability, L["No Resist"], 0)
+				Recount:AddTableDataStats(victimData, "PartialResist", ability, L["No Resist"], 0, true)
 			end
 			
 			if blocked or hittype == "Block" then

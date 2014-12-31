@@ -2,7 +2,7 @@
 ## Title: GridStatusRole
 ## Notes: Adds talent specialization role status to Grid.
 ## Author: Greltok
-## Version: 1.8.2
+## Version: 1.8.3
 ## Grid Author: Pastamancer & Maia
 ## X-Website: http://wowace.com/wiki/Grid
 ## X-Category: UnitFrame
@@ -10,7 +10,7 @@
 ## X-GridStatusModule: GridStatusRole
 ## Dependencies: Grid
 ## OptionalDeps: LibGroupInSpecT-1.1
-## X-Curse-Packaged-Version: 1.8.2
+## X-Curse-Packaged-Version: 1.8.3
 ## X-Curse-Project-Name: GridStatusRole
 ## X-Curse-Project-ID: gridstatusrole
 ## X-Curse-Repository-ID: wow/gridstatusrole/mainline

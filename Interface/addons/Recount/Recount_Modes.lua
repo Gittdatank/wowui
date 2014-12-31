@@ -4,7 +4,7 @@ local AceLocale = LibStub("AceLocale-3.0")
 local L = AceLocale:GetLocale( "Recount" )
 local Epsilon = 0.000000000000000001
 
-local revision = tonumber(string.sub("$Revision: 1286 $", 12, -3))
+local revision = tonumber(string.sub("$Revision: 1288 $", 12, -3))
 if Recount.Version < revision then
 	Recount.Version = revision
 end
@@ -42,8 +42,8 @@ DetailTitles.Attacks = {
 
 DetailTitles.Resisted = {
 	TopNames = L["Ability Name"],
-	TopCount = L["Count"],
-	TopAmount = L["Resisted"],
+	TopCount = L["Resisted"],
+	TopAmount = L["Count"],
 	BotNames = L["Type"],
 	BotMin = L["Min"],
 	BotAvg = L["Avg"],
@@ -263,7 +263,7 @@ function DataModes:DamageReturner(data, num)
 		return damage, dps
 	end
 
-	return damage, {{data.Fights[Recount.db.profile.CurDataSet].Attacks, L["'s Hostile Attacks"], DetailTitles.Attacks}, {data.Fights[Recount.db.profile.CurDataSet].DamagedWho, " "..L["Damaged Who"], DetailTitles.DamagedWho}, {data.Fights[Recount.db.profile.CurDataSet].PartialResist, L["'s Partial Resists"],DetailTitles.Resisted}, {data.Fights[Recount.db.profile.CurDataSet].TimeDamaging, L["'s Time Spent Attacking"], DetailTitles.DamageTime}}
+	return damage, {{data.Fights[Recount.db.profile.CurDataSet].Attacks, L["'s Hostile Attacks"], DetailTitles.Attacks}, {data.Fights[Recount.db.profile.CurDataSet].DamagedWho, " "..L["Damaged Who"], DetailTitles.DamagedWho}, {data.Fights[Recount.db.profile.CurDataSet].PartialResist, L["'s Partial Resists"], DetailTitles.Resisted}, {data.Fights[Recount.db.profile.CurDataSet].TimeDamaging, L["'s Time Spent Attacking"], DetailTitles.DamageTime}}
 end
 
 function DataModes:DPSReturner(data, num)
@@ -277,7 +277,7 @@ function DataModes:DPSReturner(data, num)
 		return dps
 	end
 
-	return dps, {{data.Fights[Recount.db.profile.CurDataSet].Attacks, L["'s Hostile Attacks"], DetailTitles.Attacks}, {data.Fights[Recount.db.profile.CurDataSet].DamagedWho, " "..L["Damaged Who"],DetailTitles.DamagedWho}, {data.Fights[Recount.db.profile.CurDataSet].PartialResist, L["'s Partial Resists"], DetailTitles.Resisted}, {data.Fights[Recount.db.profile.CurDataSet].TimeDamaging, L["'s Time Spent Attacking"], DetailTitles.DamageTime}}
+	return dps, {{data.Fights[Recount.db.profile.CurDataSet].Attacks, L["'s Hostile Attacks"], DetailTitles.Attacks}, {data.Fights[Recount.db.profile.CurDataSet].DamagedWho, " "..L["Damaged Who"], DetailTitles.DamagedWho}, {data.Fights[Recount.db.profile.CurDataSet].PartialResist, L["'s Partial Resists"], DetailTitles.Resisted}, {data.Fights[Recount.db.profile.CurDataSet].TimeDamaging, L["'s Time Spent Attacking"], DetailTitles.DamageTime}}
 end
 
 

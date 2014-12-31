@@ -10,7 +10,7 @@ end
 psraidoptionstxtd1={}
 psraidoptionstxtd1[1]={{"|tip2 "..psmainmdamagefrom.." |sid159412|id (initial)", "|tip2 "..psmainmdamagefrom.." |sid159412|id (debuff)", "|tip2 "..psmainmdamagefrom.." |sid159311|id"},
 {},
-{},
+{"|tip2 "..psmainmdamagefrom.." |sid163798|id","|tip2 "..psmainmdamagefrom.." |sid163793|id", "|tip2 "..psmainmgot.." |sid165223|id (total time)", "|tip2 "..psmainmgot.." |sid163666|id"},
 {"|tip2 "..psmainmdamagefrom.." |sid162370|id","|tip2 "..psmainmdamagefrom.." |sid163209|id"},
 {"|tip2 "..psdidfriendlyf.." |sid163374|id","|tip2 "..psmainmdamagefrom.." |sid158241|id","|tip2 "..psmainmdamagefrom.." |sid177608|id","|tip2 "..psmainmdamagefrom.." |sid158159|id","|tip2 "..psmainmgot.." |sid158102|id","|tip2 "..psmainmdamagefrom.." |sid157944|id","|tip2 "..psmainmdamagefrom.." |sid158417|id (radius 8)","|tip1 "..psmainmdontsplitdamage.." |sid158026|id"},
 {},
@@ -30,7 +30,7 @@ end
 psraidoptionschatdefd1={}
 psraidoptionschatdefd1[1]={{1,1,1},
 {},
-{},
+{1,1,1,1},
 {1,1},
 {1,1,2,2,1,1,1,1},
 {},
@@ -43,7 +43,7 @@ psraidoptionschatdefd1[1]={{1,1,1},
 psraidoptionsondefd1={}
 psraidoptionsondefd1[1]={{1,1,1},
 {},
-{},
+{1,1,1,1},
 {1,1},
 {1,1,1,1,1,1,1,1},
 {},

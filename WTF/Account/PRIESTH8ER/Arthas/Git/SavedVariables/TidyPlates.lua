@@ -2,7 +2,7 @@
 TidyPlatesOptions = {
 	["FriendlyAutomation"] = "No Automation",
 	["EnemyAutomation"] = "No Automation",
-	["primary"] = "Quatre/|cFF3782D1Tank",
+	["primary"] = "Slim Horizontal/|cFF3782D1Tank",
 	["EnableCastWatcher"] = 1,
 	["_EnableMiniButton"] = false,
 	["DisableSoftTransitions"] = false,
