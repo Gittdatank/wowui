@@ -221,27 +221,55 @@ UpgradeListDB = {
 						}, -- [1]
 					},
 				},
-				["Waist"] = {
+				["Shoulder"] = {
 					["Row"] = {
 						{
 							1, -- [1]
 							685, -- [2]
-							"|cffa335ee|Hitem:119337:0:0:0:0:0:0:0:100:0:0:1:567|h[Ripswallow Plate Belt]|h|r", -- [3]
+							"|cffa335ee|Hitem:113855:0:0:0:0:0:0:0:100:0:6:1:567|h[Uncrushable Shoulderplates]|h|r", -- [3]
 							"Mythic", -- [4]
 							"Highmaul", -- [5]
-							"(Trash Drop)", -- [6]
-							"+34", -- [7]
-							"119337", -- [8]
+							"Imperator Mar'gok", -- [6]
+							"+68", -- [7]
+							"113855", -- [8]
+						}, -- [1]
+					},
+				},
+				["Hand"] = {
+					["Row"] = {
+						{
+							1, -- [1]
+							685, -- [2]
+							"|cffa335ee|Hitem:113632:0:0:0:0:0:0:0:100:0:6:1:567|h[Gauntlets of the Heavy Hand]|h|r", -- [3]
+							"Mythic", -- [4]
+							"Highmaul", -- [5]
+							"The Butcher", -- [6]
+							"+68", -- [7]
+							"113632", -- [8]
+						}, -- [1]
+					},
+				},
+				["Wrist"] = {
+					["Row"] = {
+						{
+							1, -- [1]
+							685, -- [2]
+							"|cffa335ee|Hitem:113844:0:0:0:0:0:0:0:100:0:6:1:567|h[Bracers of Mirrored Flame]|h|r", -- [3]
+							"Mythic", -- [4]
+							"Highmaul", -- [5]
+							"Ko'ragh", -- [6]
+							"+65", -- [7]
+							"113844", -- [8]
 						}, -- [1]
 						{
 							2, -- [1]
-							685, -- [2]
-							"|cffa335ee|Hitem:113659:0:0:0:0:0:0:0:100:0:6:1:567|h[Fleshchewer Greatbelt]|h|r", -- [3]
-							"Mythic", -- [4]
+							670, -- [2]
+							"|cffa335ee|Hitem:113844:0:0:0:0:0:0:0:100:0:5:1:566|h[Bracers of Mirrored Flame]|h|r", -- [3]
+							"Heroic", -- [4]
 							"Highmaul", -- [5]
-							"Brackenspore", -- [6]
-							"+23", -- [7]
-							"113659", -- [8]
+							"Ko'ragh", -- [6]
+							"+16", -- [7]
+							"113844", -- [8]
 						}, -- [2]
 					},
 				},
@@ -299,56 +327,28 @@ UpgradeListDB = {
 						}, -- [5]
 					},
 				},
-				["Wrist"] = {
+				["Waist"] = {
 					["Row"] = {
 						{
 							1, -- [1]
 							685, -- [2]
-							"|cffa335ee|Hitem:113844:0:0:0:0:0:0:0:100:0:6:1:567|h[Bracers of Mirrored Flame]|h|r", -- [3]
+							"|cffa335ee|Hitem:119337:0:0:0:0:0:0:0:100:0:0:1:567|h[Ripswallow Plate Belt]|h|r", -- [3]
 							"Mythic", -- [4]
 							"Highmaul", -- [5]
-							"Ko'ragh", -- [6]
-							"+65", -- [7]
-							"113844", -- [8]
+							"(Trash Drop)", -- [6]
+							"+34", -- [7]
+							"119337", -- [8]
 						}, -- [1]
 						{
 							2, -- [1]
-							670, -- [2]
-							"|cffa335ee|Hitem:113844:0:0:0:0:0:0:0:100:0:5:1:566|h[Bracers of Mirrored Flame]|h|r", -- [3]
-							"Heroic", -- [4]
+							685, -- [2]
+							"|cffa335ee|Hitem:113659:0:0:0:0:0:0:0:100:0:6:1:567|h[Fleshchewer Greatbelt]|h|r", -- [3]
+							"Mythic", -- [4]
 							"Highmaul", -- [5]
-							"Ko'ragh", -- [6]
-							"+16", -- [7]
-							"113844", -- [8]
+							"Brackenspore", -- [6]
+							"+23", -- [7]
+							"113659", -- [8]
 						}, -- [2]
-					},
-				},
-				["Shoulder"] = {
-					["Row"] = {
-						{
-							1, -- [1]
-							685, -- [2]
-							"|cffa335ee|Hitem:113855:0:0:0:0:0:0:0:100:0:6:1:567|h[Uncrushable Shoulderplates]|h|r", -- [3]
-							"Mythic", -- [4]
-							"Highmaul", -- [5]
-							"Imperator Mar'gok", -- [6]
-							"+68", -- [7]
-							"113855", -- [8]
-						}, -- [1]
-					},
-				},
-				["Hand"] = {
-					["Row"] = {
-						{
-							1, -- [1]
-							685, -- [2]
-							"|cffa335ee|Hitem:113632:0:0:0:0:0:0:0:100:0:6:1:567|h[Gauntlets of the Heavy Hand]|h|r", -- [3]
-							"Mythic", -- [4]
-							"Highmaul", -- [5]
-							"The Butcher", -- [6]
-							"+68", -- [7]
-							"113632", -- [8]
-						}, -- [1]
 					},
 				},
 			},
@@ -365,93 +365,93 @@ UpgradeListDB = {
 						{
 							["name"] = "Priority",
 							["align"] = "CENTER",
-							["defaultsort"] = "asc",
+							["width"] = 42,
 							["bgcolor"] = {
 								["a"] = 1,
-								["b"] = 0,
-								["g"] = 0,
 								["r"] = 0,
+								["g"] = 0,
+								["b"] = 0,
 							},
-							["width"] = 42,
+							["defaultsort"] = "asc",
 						}, -- [1]
 						{
 							["align"] = "CENTER",
+							["name"] = "iLvl",
 							["bgcolor"] = {
 								["a"] = 1,
-								["b"] = 0,
-								["g"] = 0,
 								["r"] = 0,
+								["g"] = 0,
+								["b"] = 0,
 							},
-							["name"] = "iLvl",
 							["width"] = 35,
 						}, -- [2]
 						{
 							["align"] = "CENTER",
+							["name"] = "Item",
 							["bgcolor"] = {
 								["a"] = 1,
-								["b"] = 0,
-								["g"] = 0,
 								["r"] = 0,
+								["g"] = 0,
+								["b"] = 0,
 							},
-							["name"] = "Item",
 							["width"] = 240,
 						}, -- [3]
 						{
 							["align"] = "CENTER",
+							["name"] = "Difficulty",
 							["bgcolor"] = {
 								["a"] = 1,
-								["b"] = 0,
-								["g"] = 0,
 								["r"] = 0,
+								["g"] = 0,
+								["b"] = 0,
 							},
-							["name"] = "Difficulty",
 							["width"] = 80,
 						}, -- [4]
 						{
 							["align"] = "CENTER",
+							["name"] = "Instance",
 							["bgcolor"] = {
 								["a"] = 1,
-								["b"] = 0,
-								["g"] = 0,
 								["r"] = 0,
+								["g"] = 0,
+								["b"] = 0,
 							},
-							["name"] = "Instance",
 							["width"] = 250,
 						}, -- [5]
 						{
 							["align"] = "CENTER",
+							["name"] = "Boss",
 							["bgcolor"] = {
 								["a"] = 1,
-								["b"] = 0,
-								["g"] = 0,
 								["r"] = 0,
+								["g"] = 0,
+								["b"] = 0,
 							},
-							["name"] = "Boss",
 							["width"] = 280,
 						}, -- [6]
 						{
 							["align"] = "CENTER",
+							["name"] = "Note",
 							["bgcolor"] = {
 								["a"] = 1,
-								["b"] = 0,
-								["g"] = 0,
 								["r"] = 0,
+								["g"] = 0,
+								["b"] = 0,
 							},
-							["name"] = "Note",
 							["width"] = 280,
 						}, -- [7]
 					},
 					["defaulthighlight"] = {
 						["a"] = 0.5,
-						["b"] = 0,
-						["g"] = 0.9,
 						["r"] = 1,
+						["g"] = 0.9,
+						["b"] = 0,
 					},
 					["defaulthighlightblank"] = {
 						["a"] = 0,
-						["b"] = 0,
-						["g"] = 0,
 						["r"] = 0,
+						["g"] = 0,
+						["b"] = 0,
 					},
 					["scrollframe"] = {
 						["ScrollBar"] = {
@@ -503,7 +503,6 @@ UpgradeListDB = {
 						["col5bg"] = {
 						},
 					},
-					["rowHeight"] = 15,
 					["rows"] = {
 						{
 							["cols"] = {
@@ -954,31 +953,18 @@ UpgradeListDB = {
 							},
 						}, -- [14]
 					},
+					["rowHeight"] = 15,
 				},
 			},
 		},
 	},
 	["profileKeys"] = {
 		["Got - Arthas"] = "Default",
-		["Git - Arthas"] = "Default",
 		["Lihte - Arthas"] = "Default",
+		["Git - Arthas"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
-			["messages"] = {
-				["scrollwindow"] = {
-					[0] = nil --[[ skipped userdata ]],
-					["tellTimer"] = 71991.963,
-					["channelList"] = {
-					},
-					["flashTimer"] = 0,
-					["zoneChannelList"] = {
-					},
-					["defaultLanguage"] = "Orcish",
-					["messageTypeList"] = {
-					},
-				},
-			},
 			["autodelete"] = {
 				["enable"] = false,
 			},
@@ -988,6 +974,20 @@ UpgradeListDB = {
 			},
 			["sound"] = {
 				["potentialchoice"] = "Zelda-Item",
+			},
+			["messages"] = {
+				["scrollwindow"] = {
+					[0] = nil --[[ skipped userdata ]],
+					["tellTimer"] = 177644.908,
+					["channelList"] = {
+					},
+					["flashTimer"] = 0,
+					["zoneChannelList"] = {
+					},
+					["defaultLanguage"] = "Orcish",
+					["messageTypeList"] = {
+					},
+				},
 			},
 		},
 	},

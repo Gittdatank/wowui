@@ -2,7 +2,7 @@
 AmrDb = {
 	["Talents"] = {
 		"1131322", -- [1]
-		"1133321", -- [2]
+		"1130300", -- [2]
 	},
 	["Glyphs"] = {
 		{
@@ -15,10 +15,8 @@ AmrDb = {
 		}, -- [1]
 		{
 			57856, -- [1]
-			116172, -- [2]
-			47180, -- [3]
-			114295, -- [4]
-			59219, -- [5]
+			114295, -- [2]
+			59219, -- [3]
 		}, -- [2]
 	},
 	["SendSettings"] = {
@@ -30,7 +28,8 @@ AmrDb = {
 	},
 	["CharacterName"] = "Got",
 	["Race"] = "Tauren",
-	["ActiveSpec"] = 1,
+	["ActiveSpec"] = 2,
+	["Guild"] = "Lusting on Trash",
 	["Level"] = 100,
 	["Equipped"] = {
 		{
@@ -53,17 +52,17 @@ AmrDb = {
 		}, -- [1]
 		{
 			"|cffa335ee|Hitem:116212:0:0:0:0:0:0:0:100:0:4:0|h[Alloy-Inlaid Cap]|h|r", -- [1]
-			"|cffa335ee|Hitem:118848:0:0:0:0:0:0:0:100:0:0:0|h[Battle Hardened Gorget]|h|r", -- [2]
+			"|cffa335ee|Hitem:113662:0:0:0:0:0:0:0:100:0:5:1:566|h[Collar of Wailing Mouths]|h|r", -- [2]
 			"|cffa335ee|Hitem:118890:0:0:0:0:0:0:0:100:0:0:0|h[Studded Frostboar Leather Spaulders]|h|r", -- [3]
 			nil, -- [4]
 			"|cffa335ee|Hitem:116180:0:0:0:0:0:0:0:100:0:13:3:197:535:526|h[Supple Vest of the Harmonious]|h|r", -- [5]
 			"|cff0070dd|Hitem:119225:0:0:0:0:0:0:0:100:0:0:0|h[Studded Gronn-Stitched Girdle]|h|r", -- [6]
-			"|cff0070dd|Hitem:109809:0:0:0:0:0:0:0:100:0:2:2:523:524|h[Legguards of Burning Focus]|h|r", -- [7]
+			"|cff0070dd|Hitem:109812:0:0:0:0:0:0:0:100:0:2:3:499:523:524|h[Leafmender Legwraps]|h|r", -- [7]
 			"|cffa335ee|Hitem:116182:0:0:0:0:0:0:0:100:0:13:3:200:525:536|h[Supple Boots of the Harmonious]|h|r", -- [8]
-			"|cff0070dd|Hitem:109882:0:0:0:0:0:0:0:100:0:2:2:40:524|h[Blackwater Wristguards]|h|r", -- [9]
+			"|cffa335ee|Hitem:113634:0:0:0:0:0:0:0:100:0:5:1:566|h[Bracers of Spare Skin]|h|r", -- [9]
 			"|cffa335ee|Hitem:113602:0:5339:0:0:0:0:0:100:0:5:3:561:564:566|h[Throat-Ripper Gauntlets]|h|r", -- [10]
-			"|cffa335ee|Hitem:113846:0:0:0:0:0:0:0:100:0:3:0|h[Seal of Unbound Frost]|h|r", -- [11]
-			"|cffa335ee|Hitem:118870:0:0:0:0:0:0:0:100:0:0:0|h[Signet of the Traitor General]|h|r", -- [12]
+			"|cffa335ee|Hitem:113846:0:0:0:0:0:0:0:100:0:5:1:566|h[Seal of Unbound Frost]|h|r", -- [11]
+			"|cffa335ee|Hitem:113638:0:0:0:0:0:0:0:100:0:5:1:566|h[Gutwrench Ring]|h|r", -- [12]
 			"|cffa335ee|Hitem:112319:0:0:0:0:0:0:0:100:0:13:2:525:530|h[Knight's Badge]|h|r", -- [13]
 			"|cffa335ee|Hitem:118884:0:0:0:0:0:0:0:100:0:0:0|h[Kyb's Foolish Perseverance]|h|r", -- [14]
 			"|cffa335ee|Hitem:118816:0:0:0:0:0:0:0:100:0:0:0|h[Gorenscale Mesh Cloak]|h|r", -- [15]
@@ -71,10 +70,10 @@ AmrDb = {
 		}, -- [2]
 	},
 	["LastCharacterImportDate"] = "",
-	["Class"] = "DRUID",
+	["RealmName"] = "Arthas",
 	["Specs"] = {
 		6, -- [1]
-		5, -- [2]
+		4, -- [2]
 	},
 	["Options"] = {
 	},
@@ -82,92 +81,8 @@ AmrDb = {
 	["Currencies"] = {
 		[392] = 8,
 		[823] = 391,
-		[-1] = 257219070,
+		[-1] = 248779560,
 		[614] = 9,
-	},
-	["BankItems"] = {
-		"|cffe6cc80|Hitem:104400:0:0:0:0:0:0:942026880:100:0:0:0|h[Hellscream's Razor]|h|r", -- [1]
-		"|cffe6cc80|Hitem:105689:4434:0:0:0:0:0:1620636032:100:0:0:0|h[Hellscream's Tome of Destruction]|h|r", -- [2]
-		"|cffffffff|Hitem:54849:0:0:0:0:0:0:1416277504:100:0:0:0|h[Obsidium Bar]|h|r", -- [3]
-		"|cffffffff|Hitem:14256:0:0:0:0:0:0:1954722560:100:0:0:0|h[Felcloth]|h|r", -- [4]
-		"|cffffffff|Hitem:109135:0:0:0:0:0:0:0:100:0:0:0|h[Raw Riverbeast Meat]|h|r", -- [5]
-		"|cffffffff|Hitem:109132:0:0:0:0:0:0:0:100:0:0:0|h[Raw Talbuk Meat]|h|r", -- [6]
-	},
-	["LogData"] = {
-		["_wipes"] = {
-		},
-		["_autoLog"] = {
-			[1228] = "disabled",
-			[1136] = "disabled",
-			[1205] = "disabled",
-		},
-		["_lastZone"] = "FW Horde Garrison Level 3",
-		["_lastDiff"] = 1,
-	},
-	["BagItems"] = {
-		"|cff9d9d9d|Hitem:107476:0:0:0:0:0:0:0:100:0:0:0|h[Blunt Mining Pick]|h|r", -- [1]
-		"|cff9d9d9d|Hitem:56046:0:0:0:0:0:0:0:100:0:0:0|h[Shattered Rock Fragments]|h|r", -- [2]
-		"|cff9d9d9d|Hitem:118898:0:0:0:0:0:0:0:100:0:0:0|h[Rusted Canary Cage]|h|r", -- [3]
-		"|cff0070dd|Hitem:109809:0:0:0:0:0:0:0:100:0:2:2:523:524|h[Legguards of Burning Focus]|h|r", -- [4]
-		"|cff9d9d9d|Hitem:108979:0:0:0:0:0:0:0:100:0:0:0|h[Bleached Bones]|h|r", -- [5]
-		"|cff0070dd|Hitem:109918:0:0:0:0:0:0:0:100:0:2:1:524|h[Soot-Scarred Longcloak]|h|r", -- [6]
-		"|cffa335ee|Hitem:113846:0:0:0:0:0:0:0:100:0:3:0|h[Seal of Unbound Frost]|h|r", -- [7]
-		"|cffff8000|Hitem:115981:0:0:0:0:0:0:0:100:0:5:0|h[Abrogator Stone Cluster]|h|r", -- [8]
-		"|cffff8000|Hitem:115981:0:0:0:0:0:0:0:100:0:5:0|h[Abrogator Stone Cluster]|h|r", -- [9]
-		"|cff1eff00|Hitem:21525:0:0:0:0:0:0:0:100:0:5:0|h[Green Winter Hat]|h|r", -- [10]
-		"|cffa335ee|Hitem:118870:0:0:0:0:0:0:0:100:0:0:0|h[Signet of the Traitor General]|h|r", -- [11]
-		"|cff0070dd|Hitem:109882:0:0:0:0:0:0:0:100:0:2:2:40:524|h[Blackwater Wristguards]|h|r", -- [12]
-		"|cffffffff|Hitem:118344:0:0:0:0:0:0:0:100:0:4:0|h[Arcane Crystal Casing]|h|r", -- [13]
-		"|cffffffff|Hitem:118331:0:0:0:0:0:0:0:100:0:2:0|h[Auction Connecting Valve]|h|r", -- [14]
-		"|cffffffff|Hitem:110667:0:0:0:0:0:0:0:100:0:0:0|h[Tear-stained Letter]|h|r", -- [15]
-		"|cffffffff|Hitem:8383:0:0:0:0:0:0:0:100:0:0:0|h[Plain Letter]|h|r", -- [16]
-		"|cffff8000|Hitem:115280:0:0:0:0:0:0:0:100:0:0:0|h[Abrogator Stone]|h|r", -- [17]
-		"|cffa335ee|Hitem:118848:0:0:0:0:0:0:0:100:0:0:0|h[Battle Hardened Gorget]|h|r", -- [18]
-		"|cff0070dd|Hitem:52190:0:0:0:0:0:0:1973464320:100:0:0:0|h[Inferno Ruby]|h|r", -- [19]
-		"|cff1eff00|Hitem:52182:0:0:0:0:0:0:1155281664:100:0:0:0|h[Jasper]|h|r", -- [20]
-		"|cff1eff00|Hitem:52180:0:0:0:0:0:0:734200384:100:0:0:0|h[Nightstone]|h|r", -- [21]
-		"|cff1eff00|Hitem:52177:0:0:0:0:0:0:2125211008:100:0:0:0|h[Carnelian]|h|r", -- [22]
-		"|cffffffff|Hitem:113320:0:0:0:0:0:0:0:100:0:0:0|h[Crate of Cactus Apple Surprise]|h|r", -- [23]
-		"|cff0070dd|Hitem:118224:0:0:0:0:0:0:0:100:0:0:0|h[Ogre Brewing Kit]|h|r", -- [24]
-		"|cff0070dd|Hitem:116395:0:0:0:0:0:0:0:100:0:0:0|h[Comprehensive Outpost Construction Guide]|h|r", -- [25]
-		"|cffffffff|Hitem:110560:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Hearthstone]|h|r", -- [26]
-		"|cffffffff|Hitem:113821:0:0:0:0:0:0:0:100:0:0:0|h[Battered Iron Horde Helmet]|h|r", -- [27]
-		"|cff0070dd|Hitem:11177:0:0:0:0:0:0:0:100:0:0:0|h[Small Radiant Shard]|h|r", -- [28]
-		"|cffffffff|Hitem:6218:0:0:0:0:0:0:217021568:100:0:0:0|h[Runed Copper Rod]|h|r", -- [29]
-		"|cffffffff|Hitem:87216:0:0:0:0:0:0:0:100:0:11:0|h[Thermal Anvil]|h|r", -- [30]
-		"|cffffffff|Hitem:40772:0:0:0:0:0:0:765699328:100:0:0:0|h[Gnomish Army Knife]|h|r", -- [31]
-		"|cffffffff|Hitem:109134:0:0:0:0:0:0:0:100:0:0:0|h[Raw Elekk Meat]|h|r", -- [32]
-		"|cffffffff|Hitem:109132:0:0:0:0:0:0:0:100:0:0:0|h[Raw Talbuk Meat]|h|r", -- [33]
-		"|cffffffff|Hitem:109131:0:0:0:0:0:0:0:100:0:0:0|h[Raw Clefthoof Meat]|h|r", -- [34]
-		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [35]
-		"|cff1eff00|Hitem:118236:0:0:0:0:0:0:0:100:0:0:0|h[Counterfeit Coin]|h|r", -- [36]
-		"|cff0070dd|Hitem:116120:0:0:0:0:0:0:0:100:0:0:0|h[Tasty Talador Lunch]|h|r", -- [37]
-		"|cff0070dd|Hitem:118630:0:0:0:0:0:0:0:100:0:0:0|h[Hyper Augment Rune]|h|r", -- [38]
-		"|cff0070dd|Hitem:117398:0:0:0:0:0:0:0:100:0:11:0|h[Everbloom Seed Pouch]|h|r", -- [39]
-		"|cff0070dd|Hitem:114808:0:0:0:0:0:0:0:100:0:0:0|h[Fortified Armor Enhancement]|h|r", -- [40]
-		"|cffffffff|Hitem:119348:0:0:0:0:0:0:0:100:0:0:0|h[Admiral Taylor's Garrison Log]|h|r", -- [41]
-		"|cff1eff00|Hitem:21525:0:0:0:0:0:0:0:100:0:3:0|h[Green Winter Hat]|h|r", -- [42]
-		"|cffa335ee|Hitem:113843:0:0:0:0:0:0:0:100:0:3:0|h[Spell-Sink Signet]|h|r", -- [43]
-		"|cff0070dd|Hitem:116154:0:0:0:0:0:0:0:100:0:11:0|h[Barov Lumberjack Caller]|h|r", -- [44]
-		"|cff0070dd|Hitem:114806:0:0:0:0:0:0:0:100:0:0:0|h[Blackrock Armor Set]|h|r", -- [45]
-		"|cffffffff|Hitem:119299:0:0:0:0:0:0:0:100:0:0:0|h[Secret of Draenor Engineering]|h|r", -- [46]
-	},
-	["Professions"] = {
-	},
-	["LastCharacterImport"] = "",
-	["Reps"] = {
-		[1269] = 3,
-		[1337] = 3,
-		[1341] = 3,
-		[1375] = 3,
-		[1387] = 0,
-		[1376] = 0,
-		[1435] = 3,
-		[1388] = 4,
-		[1270] = 3,
-	},
-	["Faction"] = "Horde",
-	["IconInfo"] = {
 	},
 	["VoidItems"] = {
 		"|cffa335ee|Hitem:34011:0:0:0:0:0:0:1582692992:100:0:0:0|h[Illidari Runeshield]|h|r", -- [1]
@@ -250,7 +165,104 @@ AmrDb = {
 		"|cffa335ee|Hitem:103649:0:0:0:0:0:0:683148160:100:491:0:0|h[Xal'atoh, Desecrated Image of Gorehowl]|h|r", -- [78]
 		"|cffa335ee|Hitem:30874:0:0:0:0:0:0:34031104:100:0:0:0|h[The Unbreakable Will]|h|r", -- [79]
 	},
-	["RealmName"] = "Arthas",
+	["LogData"] = {
+		["_wipes"] = {
+		},
+		["_autoLog"] = {
+			[1228] = "disabled",
+			[1136] = "disabled",
+			[1205] = "disabled",
+		},
+		["_lastDiff"] = 0,
+		["_lastZone"] = "Draenor",
+	},
+	["BagItems"] = {
+		"|cff9d9d9d|Hitem:107476:0:0:0:0:0:0:0:100:0:0:0|h[Blunt Mining Pick]|h|r", -- [1]
+		"|cff9d9d9d|Hitem:56046:0:0:0:0:0:0:0:100:0:0:0|h[Shattered Rock Fragments]|h|r", -- [2]
+		"|cff9d9d9d|Hitem:118898:0:0:0:0:0:0:0:100:0:0:0|h[Rusted Canary Cage]|h|r", -- [3]
+		"|cff0070dd|Hitem:109809:0:0:0:0:0:0:0:100:0:2:2:523:524|h[Legguards of Burning Focus]|h|r", -- [4]
+		"|cff9d9d9d|Hitem:108979:0:0:0:0:0:0:0:100:0:0:0|h[Bleached Bones]|h|r", -- [5]
+		"|cff0070dd|Hitem:109918:0:0:0:0:0:0:0:100:0:2:1:524|h[Soot-Scarred Longcloak]|h|r", -- [6]
+		"|cffa335ee|Hitem:113846:0:0:0:0:0:0:0:100:0:3:0|h[Seal of Unbound Frost]|h|r", -- [7]
+		"|cff1eff00|Hitem:114120:0:0:0:0:0:0:0:100:0:0:0|h[Big Crate of Salvage]|h|r", -- [8]
+		"|cff1eff00|Hitem:114120:0:0:0:0:0:0:0:100:0:0:0|h[Big Crate of Salvage]|h|r", -- [9]
+		"|cff1eff00|Hitem:21525:0:0:0:0:0:0:0:100:0:5:0|h[Green Winter Hat]|h|r", -- [10]
+		"|cffa335ee|Hitem:118870:0:0:0:0:0:0:0:100:0:0:0|h[Signet of the Traitor General]|h|r", -- [11]
+		"|cff0070dd|Hitem:109882:0:0:0:0:0:0:0:100:0:2:2:40:524|h[Blackwater Wristguards]|h|r", -- [12]
+		"|cffffffff|Hitem:118344:0:0:0:0:0:0:0:100:0:4:0|h[Arcane Crystal Casing]|h|r", -- [13]
+		"|cffffffff|Hitem:118331:0:0:0:0:0:0:0:100:0:2:0|h[Auction Connecting Valve]|h|r", -- [14]
+		"|cffffffff|Hitem:110667:0:0:0:0:0:0:0:100:0:0:0|h[Tear-stained Letter]|h|r", -- [15]
+		"|cffffffff|Hitem:8383:0:0:0:0:0:0:0:100:0:0:0|h[Plain Letter]|h|r", -- [16]
+		"|cffff8000|Hitem:115280:0:0:0:0:0:0:0:100:0:0:0|h[Abrogator Stone]|h|r", -- [17]
+		"|cffa335ee|Hitem:118848:0:0:0:0:0:0:0:100:0:0:0|h[Battle Hardened Gorget]|h|r", -- [18]
+		"|cff0070dd|Hitem:118475:0:0:0:0:0:0:0:100:0:1:0|h[Hearthstone Strategy Guide]|h|r", -- [19]
+		"|cffa335ee|Hitem:118298:0:0:0:0:0:0:0:100:0:11:0|h[Timeless Solium Band of the Bulwark]|h|r", -- [20]
+		"|cff0070dd|Hitem:118427:0:0:0:0:0:0:0:100:0:0:0|h[Autographed Hearthstone Card]|h|r", -- [21]
+		"|cff1eff00|Hitem:120302:0:0:0:0:0:0:0:100:0:1:0|h[Weapon Enhancement Token]|h|r", -- [22]
+		"|cff1eff00|Hitem:114120:0:0:0:0:0:0:0:100:0:0:0|h[Big Crate of Salvage]|h|r", -- [23]
+		"|cff1eff00|Hitem:114120:0:0:0:0:0:0:0:100:0:0:0|h[Big Crate of Salvage]|h|r", -- [24]
+		"|cff1eff00|Hitem:114120:0:0:0:0:0:0:0:100:0:0:0|h[Big Crate of Salvage]|h|r", -- [25]
+		"|cff1eff00|Hitem:114120:0:0:0:0:0:0:0:100:0:0:0|h[Big Crate of Salvage]|h|r", -- [26]
+		"|cff1eff00|Hitem:114120:0:0:0:0:0:0:0:100:0:0:0|h[Big Crate of Salvage]|h|r", -- [27]
+		"|cff0070dd|Hitem:52190:0:0:0:0:0:0:1973464320:100:0:0:0|h[Inferno Ruby]|h|r", -- [28]
+		"|cff1eff00|Hitem:52182:0:0:0:0:0:0:1155281664:100:0:0:0|h[Jasper]|h|r", -- [29]
+		"|cff1eff00|Hitem:52180:0:0:0:0:0:0:734200384:100:0:0:0|h[Nightstone]|h|r", -- [30]
+		"|cff1eff00|Hitem:52177:0:0:0:0:0:0:2125211008:100:0:0:0|h[Carnelian]|h|r", -- [31]
+		"|cffffffff|Hitem:113320:0:0:0:0:0:0:0:100:0:0:0|h[Crate of Cactus Apple Surprise]|h|r", -- [32]
+		"|cff0070dd|Hitem:118224:0:0:0:0:0:0:0:100:0:0:0|h[Ogre Brewing Kit]|h|r", -- [33]
+		"|cff0070dd|Hitem:116395:0:0:0:0:0:0:0:100:0:0:0|h[Comprehensive Outpost Construction Guide]|h|r", -- [34]
+		"|cffffffff|Hitem:110560:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Hearthstone]|h|r", -- [35]
+		"|cffffffff|Hitem:113821:0:0:0:0:0:0:0:100:0:0:0|h[Battered Iron Horde Helmet]|h|r", -- [36]
+		"|cff0070dd|Hitem:11177:0:0:0:0:0:0:0:100:0:0:0|h[Small Radiant Shard]|h|r", -- [37]
+		"|cffffffff|Hitem:6218:0:0:0:0:0:0:217021568:100:0:0:0|h[Runed Copper Rod]|h|r", -- [38]
+		"|cffffffff|Hitem:87216:0:0:0:0:0:0:0:100:0:11:0|h[Thermal Anvil]|h|r", -- [39]
+		"|cffffffff|Hitem:40772:0:0:0:0:0:0:765699328:100:0:0:0|h[Gnomish Army Knife]|h|r", -- [40]
+		"|cffffffff|Hitem:109134:0:0:0:0:0:0:0:100:0:0:0|h[Raw Elekk Meat]|h|r", -- [41]
+		"|cffffffff|Hitem:109132:0:0:0:0:0:0:0:100:0:0:0|h[Raw Talbuk Meat]|h|r", -- [42]
+		"|cffffffff|Hitem:109131:0:0:0:0:0:0:0:100:0:0:0|h[Raw Clefthoof Meat]|h|r", -- [43]
+		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [44]
+		"|cff1eff00|Hitem:118236:0:0:0:0:0:0:0:100:0:0:0|h[Counterfeit Coin]|h|r", -- [45]
+		"|cff0070dd|Hitem:116120:0:0:0:0:0:0:0:100:0:0:0|h[Tasty Talador Lunch]|h|r", -- [46]
+		"|cff0070dd|Hitem:118630:0:0:0:0:0:0:0:100:0:0:0|h[Hyper Augment Rune]|h|r", -- [47]
+		"|cff0070dd|Hitem:117398:0:0:0:0:0:0:0:100:0:11:0|h[Everbloom Seed Pouch]|h|r", -- [48]
+		"|cff0070dd|Hitem:114808:0:0:0:0:0:0:0:100:0:0:0|h[Fortified Armor Enhancement]|h|r", -- [49]
+		"|cffffffff|Hitem:119348:0:0:0:0:0:0:0:100:0:0:0|h[Admiral Taylor's Garrison Log]|h|r", -- [50]
+		"|cff1eff00|Hitem:21525:0:0:0:0:0:0:0:100:0:3:0|h[Green Winter Hat]|h|r", -- [51]
+		"|cffa335ee|Hitem:113843:0:0:0:0:0:0:0:100:0:3:0|h[Spell-Sink Signet]|h|r", -- [52]
+		"|cff0070dd|Hitem:116154:0:0:0:0:0:0:0:100:0:11:0|h[Barov Lumberjack Caller]|h|r", -- [53]
+		"|cff0070dd|Hitem:114806:0:0:0:0:0:0:0:100:0:0:0|h[Blackrock Armor Set]|h|r", -- [54]
+		"|cffffffff|Hitem:119299:0:0:0:0:0:0:0:100:0:0:0|h[Secret of Draenor Engineering]|h|r", -- [55]
+	},
+	["IconInfo"] = {
+	},
+	["LastCharacterImport"] = "",
+	["Reps"] = {
+		[1269] = 3,
+		[1337] = 3,
+		[1341] = 3,
+		[1375] = 3,
+		[1387] = 0,
+		[1376] = 0,
+		[1435] = 3,
+		[1388] = 4,
+		[1270] = 3,
+	},
+	["Faction"] = "Horde",
+	["Professions"] = {
+		["Engineering"] = 602,
+		["Cooking"] = 51,
+		["First Aid"] = 600,
+		["Enchanting"] = 623,
+	},
+	["BankItems"] = {
+		"|cffe6cc80|Hitem:104400:0:0:0:0:0:0:942026880:100:0:0:0|h[Hellscream's Razor]|h|r", -- [1]
+		"|cffe6cc80|Hitem:105689:4434:0:0:0:0:0:1620636032:100:0:0:0|h[Hellscream's Tome of Destruction]|h|r", -- [2]
+		"|cffffffff|Hitem:54849:0:0:0:0:0:0:1416277504:100:0:0:0|h[Obsidium Bar]|h|r", -- [3]
+		"|cffffffff|Hitem:14256:0:0:0:0:0:0:1954722560:100:0:0:0|h[Felcloth]|h|r", -- [4]
+		"|cffffffff|Hitem:109135:0:0:0:0:0:0:0:100:0:0:0|h[Raw Riverbeast Meat]|h|r", -- [5]
+		"|cffffffff|Hitem:109132:0:0:0:0:0:0:0:100:0:0:0|h[Raw Talbuk Meat]|h|r", -- [6]
+	},
+	["Class"] = "DRUID",
 	["BankItemsAndCounts"] = {
 		[23445] = 6,
 		[818] = 3,
@@ -263,15 +275,15 @@ AmrDb = {
 		[2589] = 179,
 		[2841] = 3,
 		[109132] = 1,
-		[4234] = 75,
-		[65365] = 87,
+		[109135] = 1,
+		[4306] = 72,
 		[783] = 15,
-		[54849] = 1,
+		[2934] = 2,
 		[4338] = 19,
 		[14256] = 1,
 		[105689] = 1,
-		[2934] = 2,
-		[4306] = 72,
-		[109135] = 1,
+		[54849] = 1,
+		[65365] = 87,
+		[4234] = 75,
 	},
 }
