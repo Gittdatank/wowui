@@ -3453,7 +3453,7 @@ function ArkInventory.MenuItemPetJournal( frame, index )
 						-- rename
 						ArkInventory.Lib.Dewdrop:AddLine(
 							"text", BATTLE_PET_RENAME,
-							"disabled", not ArkInventory.PetJournal.JournalIsUnlocked( ),
+							"disabled", not ArkInventory.PetJournal.JournalIsReady( ),
 							"closeWhenClicked", true,
 							"func", function( info )
 								ArkInventory.Lib.StaticDialog:Spawn( "BATTLE_PET_RENAME", pd.guid )
@@ -3469,7 +3469,7 @@ function ArkInventory.MenuItemPetJournal( frame, index )
 						
 						ArkInventory.Lib.Dewdrop:AddLine(
 							"text", txt,
-							"disabled", not ArkInventory.PetJournal.JournalIsUnlocked( ),
+							"disabled", not ArkInventory.PetJournal.JournalIsReady( ),
 							"closeWhenClicked", true,
 							"func", function( info )
 								if pd.fav then
@@ -3608,7 +3608,7 @@ function ArkInventory.MenuItemMountJournal( frame, index )
 						
 						ArkInventory.Lib.Dewdrop:AddLine(
 							"text", txt,
-							"disabled", not ArkInventory.PetJournal.JournalIsUnlocked( ),
+							"disabled", not ArkInventory.PetJournal.JournalIsReady( ),
 							"closeWhenClicked", true,
 							"func", function( info )
 								if md.fav then
@@ -3694,6 +3694,19 @@ function ArkInventory.MenuRestackOpen( frame )
 						"func", function( )
 							PlaySound( "igMainMenuOption" )
 							DepositReagentBank( )
+						end
+					)
+					
+					ArkInventory.Lib.Dewdrop:AddLine( )
+					
+					ArkInventory.Lib.Dewdrop:AddLine(
+						"text", REVERSE_CLEAN_UP_BAGS_TEXT,
+						"tooltipTitle", REVERSE_CLEAN_UP_BAGS_TEXT,
+						"tooltipText", OPTION_TOOLTIP_REVERSE_CLEAN_UP_BAGS,
+						"checked", GetSortBagsRightToLeft( ),
+						"closeWhenClicked", true,
+						"func", function( )
+							SetSortBagsRightToLeft( not GetSortBagsRightToLeft( ) )
 						end
 					)
 					

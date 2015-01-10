@@ -8,5 +8,5 @@ TidyPlatesOptions = {
 	["DisableSoftTransitions"] = false,
 	["CompatibilityMode"] = false,
 	["WelcomeShown"] = true,
-	["secondary"] = "Threat Plates",
+	["secondary"] = "Slim Horizontal/|cFFFF4400Damage",
 }

@@ -6,13 +6,6 @@ X: 246
 Y: -116
 W: 210
 H: 175
-Frame: FollowerLocationInfoFrame
-FrameLevel: 77
-Anchor: CENTER
-X: -99
-Y: -18
-W: 538
-H: 538
 Frame: TomTomCrazyArrow
 FrameLevel: 1
 Anchor: TOP
@@ -20,10 +13,3 @@ X: -8
 Y: -125
 W: 56
 H: 42
-Frame: AuctionFrame
-FrameLevel: 113
-Anchor: TOPLEFT
-X: 16
-Y: -116
-W: 832
-H: 447

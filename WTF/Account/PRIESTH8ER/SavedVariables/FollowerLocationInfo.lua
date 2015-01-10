@@ -21,8 +21,8 @@ FollowerLocationInfoDB = {
 	["ShowFollowerID"] = true,
 	["ShowCoordsFrame"] = true,
 	["questTitleLocale"] = "enUS",
-	["language"] = false,
 	["ShowCollectedFollower"] = false,
+	["language"] = false,
 }
 FLI_tmpDB = {
 	["ability_locales"] = {

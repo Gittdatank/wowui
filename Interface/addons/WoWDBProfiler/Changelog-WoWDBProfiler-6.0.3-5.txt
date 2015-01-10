@@ -1,8 +1,0 @@
-2014-12-31  MMOSimca  <MMOSimca@gmail.com>
-
-[da20cca2ddc6] [6.0.3-5]
-* Main.lua:
-
-Prevented recording bonus roll loot (it skews true loot percentages with spec-based drop data).
-
-

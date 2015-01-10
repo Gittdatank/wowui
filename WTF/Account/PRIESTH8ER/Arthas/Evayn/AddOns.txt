@@ -71,4 +71,7 @@ SellJunk: enabled
 BigWigs_LustingOnTrash: disabled
 SavedInstances: enabled
 GatherMate_Sharing: disabled
-BL_Cooldown: disabled
+BL_Cooldown: enabled
+Stubby: enabled
+!Swatter: enabled
+AngryAssignments: enabled

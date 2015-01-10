@@ -3,7 +3,27 @@ AucAdvancedConfig = {
 	["users.Azuremyst.Git"] = "Default",
 	["profile.Default"] = {
 		["configator.left"] = 545.230834960938,
-		["configator.top"] = 815.769226074219,
+		["match"] = {
+			["undercut"] = {
+			},
+			["undermarket"] = {
+				["undercut"] = 5,
+			},
+		},
+		["stat"] = {
+			["sales"] = {
+				["ignoredsigs"] = {
+				},
+			},
+		},
+		["core"] = {
+			["matcher"] = {
+				["matcherlist"] = {
+					"BeanCount", -- [1]
+					"Undercut", -- [2]
+				},
+			},
+		},
 		["util"] = {
 			["appraiser"] = {
 				["item.82248:-135:1246.bulk"] = true,
@@ -25,37 +45,37 @@ AucAdvancedConfig = {
 				["item.87409.fixed.bid"] = 19999999,
 				["item.80433.model"] = "fixed",
 				["round.magstep"] = 7,
-				["item.74247.fixed.buy"] = 339999,
+				["item.80433.fixed.bid"] = 1999999,
 				["item.72988.model"] = "fixed",
-				["item.87454.bulk"] = true,
-				["item.72988.bulk"] = true,
 				["item.74247.match"] = true,
-				["item.82289:-14:926.bulk"] = true,
+				["item.72988.bulk"] = true,
+				["item.87454.bulk"] = true,
+				["item.74247.model"] = "fixed",
 				["item.82288:-42:926.bulk"] = true,
 				["item.87409.bulk"] = true,
-				["item.72988.stack"] = 5,
+				["item.82276:-43:1246.bulk"] = true,
 				["item.87409.fixed.buy"] = 29999999,
-				["item.72988.fixed.bid"] = 7900,
-				["item.82256:-129:694.bulk"] = true,
+				["item.82247:-136:926.bulk"] = true,
+				["item.82291:-123:1246.bulk"] = true,
 				["item.74247.stack"] = 1,
-				["item.77589.bulk"] = false,
+				["item.80433.bulk"] = true,
 				["item.82222:-41:1104.bulk"] = true,
 				["item.82187:-40:615.bulk"] = true,
 				["item.82251:-39:926.bulk"] = true,
-				["item.80433.fixed.buy"] = 2249999,
-				["item.80433.bulk"] = true,
 				["classic"] = true,
+				["item.77589.bulk"] = false,
+				["item.80433.fixed.buy"] = 2249999,
 				["item.87409.match"] = false,
 				["item.87410.fixed.buy"] = 29999999,
 				["item.72988.match"] = false,
-				["item.82291:-123:1246.bulk"] = true,
-				["item.82247:-136:926.bulk"] = true,
+				["item.82256:-129:694.bulk"] = true,
+				["item.72988.fixed.bid"] = 7900,
 				["item.98116.bulk"] = true,
-				["item.82276:-43:1246.bulk"] = true,
+				["item.72988.stack"] = 5,
 				["columnsortcurDir"] = 1,
-				["item.74247.model"] = "fixed",
+				["item.82289:-14:926.bulk"] = true,
 				["bid.markdown"] = 10.1,
-				["item.80433.fixed.bid"] = 1999999,
+				["item.74247.fixed.buy"] = 339999,
 			},
 			["EasyBuyout"] = {
 			},
@@ -63,70 +83,50 @@ AucAdvancedConfig = {
 			},
 			["simpleauc"] = {
 				["Azuremyst-Horde.72012"] = "49999999:59999999:48:1:1",
-				["Azuremyst-Horde.72000"] = "69999999:89999999:48:1:1",
-				["undercut.percent"] = 10,
+				["Azuremyst-Horde.72015"] = "79999999:89999999:48:1:1",
+				["Arthas-Horde.113588"] = "9350090:9455000:12:2:1",
 				["Azuremyst-Horde.72009"] = "69999999:79999999:48:1:1",
-				["Azuremyst-Horde.62670"] = "1399996:1799996:48:8:20",
-				["Azuremyst-Horde.78882"] = "89999999:99999999:48:1:1",
 				["Azuremyst-Horde.72005"] = "24999999:34999999:48:1:1",
 				["Azuremyst-Horde.72014"] = "19999999:39999999:48:1:1",
-				["Azuremyst-Horde.72008"] = "49999999:59999999:48:1:1",
-				["Arthas-Horde.113588"] = "9350090:9455000:12:2:1",
 				["Azuremyst-Horde.72001"] = "39999999:49999999:48:1:1",
-				["Azuremyst-Horde.72015"] = "79999999:89999999:48:1:1",
+				["Azuremyst-Horde.78882"] = "89999999:99999999:48:1:1",
+				["Azuremyst-Horde.72008"] = "49999999:59999999:48:1:1",
+				["Azuremyst-Horde.62670"] = "1399996:1799996:48:8:20",
+				["undercut.percent"] = 10,
+				["Azuremyst-Horde.72000"] = "69999999:89999999:48:1:1",
 			},
 			["mover"] = {
 				["anchors"] = {
 					"TOPLEFT", -- [1]
 					nil, -- [2]
 					"TOPLEFT", -- [3]
-					16.0000019073486, -- [4]
+					16.7500095367432, -- [4]
 					-116.000007629395, -- [5]
 				},
 			},
 			["automagic"] = {
 				["ammailguix"] = 160,
+				["uierrormsg"] = 1,
+				["ammailguiy"] = 99.9999923706055,
 				["SavedMailButtons"] = {
 				},
-				["ammailguiy"] = 99.9999923706055,
-				["uierrormsg"] = 1,
 			},
 			["pricelevel"] = {
 			},
 		},
-		["core"] = {
-			["matcher"] = {
-				["matcherlist"] = {
-					"BeanCount", -- [1]
-					"Undercut", -- [2]
-				},
-			},
-		},
-		["stat"] = {
-			["sales"] = {
-				["ignoredsigs"] = {
-				},
-			},
-		},
-		["match"] = {
-			["undercut"] = {
-			},
-			["undermarket"] = {
-				["undercut"] = 5,
-			},
-		},
+		["configator.top"] = 815.769226074219,
 	},
 	["version"] = 1,
 }
 AucAdvancedData = {
 	["AserArbitrageRealms"] = {
 		["Moon Guard"] = "Worgit",
+		["Azuremyst"] = "Git",
+		["Feathermoon"] = "Giitt",
+		["Area 52"] = "Gyit",
+		["Cho'gall"] = "Giit",
 		["Silvermoon"] = "Giitt",
 		["Arthas"] = "Git",
-		["Cho'gall"] = "Giit",
-		["Area 52"] = "Gyit",
-		["Feathermoon"] = "Giitt",
-		["Azuremyst"] = "Git",
 	},
 	["Stats"] = {
 	},

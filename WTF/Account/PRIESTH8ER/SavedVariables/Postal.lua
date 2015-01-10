@@ -1,39 +1,5 @@
 
 Postal3DB = {
-	["profileKeys"] = {
-		["Dbyx - Arthas"] = "Dbyx - Arthas",
-		["Git - Arthas"] = "Git - Arthas",
-		["Gilt - Azuremyst"] = "Gilt - Azuremyst",
-		["Evun - Azuremyst"] = "Evun - Azuremyst",
-		["Gyit - Area 52"] = "Gyit - Area 52",
-		["Giit - Cho'gall"] = "Giit - Cho'gall",
-		["Ghit - Azuremyst"] = "Ghit - Azuremyst",
-		["Giit - Azuremyst"] = "Giit - Azuremyst",
-		["Evyyn - Azuremyst"] = "Evyyn - Azuremyst",
-		["Giitt - Silvermoon"] = "Giitt - Silvermoon",
-		["Cowbeary - Azuremyst"] = "Cowbeary - Azuremyst",
-		["Raweo - Azuremyst"] = "Raweo - Azuremyst",
-		["Ezyn - Azuremyst"] = "Ezyn - Azuremyst",
-		["Spih - Cho'gall"] = "Spih - Cho'gall",
-		["Gittdabank - Arthas"] = "Gittdabank - Arthas",
-		["Lihte - Arthas"] = "Lihte - Arthas",
-		["Got - Arthas"] = "Got - Arthas",
-		["Gitt - Cho'gall"] = "Gitt - Cho'gall",
-		["Gimm - Cho'gall"] = "Gimm - Cho'gall",
-		["Burk - Arthas"] = "Burk - Arthas",
-		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
-		["Gitt - Arthas"] = "Gitt - Arthas",
-		["Burk - Azuremyst"] = "Burk - Azuremyst",
-		["Git - Azuremyst"] = "Git - Azuremyst",
-		["Erdone - Azuremyst"] = "Erdone - Azuremyst",
-		["Evn - Azuremyst"] = "Evn - Azuremyst",
-		["Git - Cho'gall"] = "Git - Cho'gall",
-		["Greny - Azuremyst"] = "Greny - Azuremyst",
-		["Olebe - Azuremyst"] = "Olebe - Azuremyst",
-		["Lihte - Cho'gall"] = "Lihte - Cho'gall",
-		["Worgit - Moon Guard"] = "Worgit - Moon Guard",
-		["Spih - Arthas"] = "Spih - Arthas",
-	},
 	["global"] = {
 		["BlackBook"] = {
 			["alts"] = {
@@ -72,6 +38,40 @@ Postal3DB = {
 			},
 		},
 	},
+	["profileKeys"] = {
+		["Dbyx - Arthas"] = "Dbyx - Arthas",
+		["Spih - Arthas"] = "Spih - Arthas",
+		["Lihte - Arthas"] = "Lihte - Arthas",
+		["Evun - Azuremyst"] = "Evun - Azuremyst",
+		["Gyit - Area 52"] = "Gyit - Area 52",
+		["Gimm - Cho'gall"] = "Gimm - Cho'gall",
+		["Ghit - Azuremyst"] = "Ghit - Azuremyst",
+		["Giit - Azuremyst"] = "Giit - Azuremyst",
+		["Evyyn - Azuremyst"] = "Evyyn - Azuremyst",
+		["Giitt - Silvermoon"] = "Giitt - Silvermoon",
+		["Cowbeary - Azuremyst"] = "Cowbeary - Azuremyst",
+		["Raweo - Azuremyst"] = "Raweo - Azuremyst",
+		["Ezyn - Azuremyst"] = "Ezyn - Azuremyst",
+		["Olebe - Azuremyst"] = "Olebe - Azuremyst",
+		["Gittdabank - Arthas"] = "Gittdabank - Arthas",
+		["Worgit - Moon Guard"] = "Worgit - Moon Guard",
+		["Got - Arthas"] = "Got - Arthas",
+		["Gitt - Cho'gall"] = "Gitt - Cho'gall",
+		["Giit - Cho'gall"] = "Giit - Cho'gall",
+		["Greny - Azuremyst"] = "Greny - Azuremyst",
+		["Git - Cho'gall"] = "Git - Cho'gall",
+		["Gitt - Arthas"] = "Gitt - Arthas",
+		["Evn - Azuremyst"] = "Evn - Azuremyst",
+		["Erdone - Azuremyst"] = "Erdone - Azuremyst",
+		["Git - Azuremyst"] = "Git - Azuremyst",
+		["Burk - Azuremyst"] = "Burk - Azuremyst",
+		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
+		["Burk - Arthas"] = "Burk - Arthas",
+		["Spih - Cho'gall"] = "Spih - Cho'gall",
+		["Lihte - Cho'gall"] = "Lihte - Cho'gall",
+		["Gilt - Azuremyst"] = "Gilt - Azuremyst",
+		["Git - Arthas"] = "Git - Arthas",
+	},
 	["profiles"] = {
 		["Dbyx - Arthas"] = {
 			["BlackBook"] = {
@@ -80,38 +80,27 @@ Postal3DB = {
 				},
 			},
 		},
-		["Git - Arthas"] = {
+		["Spih - Arthas"] = {
 			["BlackBook"] = {
 				["recent"] = {
-					"Primalfears|Arthas|Horde", -- [1]
-					"Got|Arthas|Horde", -- [2]
+					"Git|Arthas|Horde", -- [1]
+					"Lihte-Cho'gall|Arthas|Horde", -- [2]
 					"Gittdabank|Arthas|Horde", -- [3]
-					"Tydeson|Arthas|Horde", -- [4]
-					"Simplecow|Arthas|Horde", -- [5]
-					"Lihte-Cho'gall|Arthas|Horde", -- [6]
-					"Dbyx|Arthas|Horde", -- [7]
-					"Spih|Arthas|Horde", -- [8]
-					"Gitt|Arthas|Horde", -- [9]
+					"Esse|Arthas|Horde", -- [4]
+					"Gitt|Arthas|Horde", -- [5]
 				},
 			},
 		},
-		["Gilt - Azuremyst"] = {
-			["BlackBook"] = {
-				["recent"] = {
-					"Git|Azuremyst|Horde", -- [1]
-					"Evn|Azuremyst|Horde", -- [2]
-					"Burk|Azuremyst|Horde", -- [3]
-				},
-			},
+		["Lihte - Arthas"] = {
 		},
 		["Evun - Azuremyst"] = {
 		},
 		["Gyit - Area 52"] = {
 		},
-		["Giit - Cho'gall"] = {
+		["Gimm - Cho'gall"] = {
 			["BlackBook"] = {
 				["recent"] = {
-					"Gitt|Cho'gall|Horde", -- [1]
+					"Git|Cho'gall|Horde", -- [1]
 				},
 			},
 		},
@@ -126,6 +115,27 @@ Postal3DB = {
 			},
 			["OpenSpeed"] = 0.5,
 			["ChatOutput"] = 1,
+			["Select"] = {
+				["SpamChat"] = true,
+				["UseMrPlow"] = true,
+				["KeepFreeSpace"] = 1,
+			},
+			["OpenAll"] = {
+				["NeutralAHExpired"] = true,
+				["KeepFreeSpace"] = 1,
+				["AHOutbid"] = true,
+				["SpamChat"] = true,
+				["NeutralAHWon"] = true,
+				["Attachments"] = true,
+				["AHCancelled"] = true,
+				["NeutralAHCancelled"] = true,
+				["NeutralAHSuccess"] = true,
+				["AHSuccess"] = true,
+				["NeutralAHOutbid"] = true,
+				["UseMrPlow"] = true,
+				["AHWon"] = true,
+				["AHExpired"] = true,
+			},
 			["BlackBook"] = {
 				["ExcludeRandoms"] = true,
 				["AutoFill"] = true,
@@ -134,33 +144,12 @@ Postal3DB = {
 				},
 				["AutoCompleteAlts"] = true,
 				["AutoCompleteGuild"] = true,
-				["AutoCompleteFriends"] = true,
 				["recent"] = {
 				},
+				["AutoCompleteRecent"] = true,
 				["AutoCompleteContacts"] = true,
 				["DisableBlizzardAutoComplete"] = false,
-				["AutoCompleteRecent"] = true,
-			},
-			["OpenAll"] = {
-				["NeutralAHExpired"] = true,
-				["KeepFreeSpace"] = 1,
-				["AHOutbid"] = true,
-				["AHWon"] = true,
-				["NeutralAHWon"] = true,
-				["Attachments"] = true,
-				["AHCancelled"] = true,
-				["NeutralAHCancelled"] = true,
-				["NeutralAHOutbid"] = true,
-				["AHSuccess"] = true,
-				["NeutralAHSuccess"] = true,
-				["UseMrPlow"] = true,
-				["SpamChat"] = true,
-				["AHExpired"] = true,
-			},
-			["Select"] = {
-				["SpamChat"] = true,
-				["UseMrPlow"] = true,
-				["KeepFreeSpace"] = 1,
+				["AutoCompleteFriends"] = true,
 			},
 		},
 		["Giit - Azuremyst"] = {
@@ -200,10 +189,10 @@ Postal3DB = {
 				},
 			},
 		},
-		["Spih - Cho'gall"] = {
+		["Olebe - Azuremyst"] = {
 			["BlackBook"] = {
 				["recent"] = {
-					"Lihte|Cho'gall|Horde", -- [1]
+					"Git", -- [1]
 				},
 			},
 		},
@@ -214,7 +203,7 @@ Postal3DB = {
 				},
 			},
 		},
-		["Lihte - Arthas"] = {
+		["Worgit - Moon Guard"] = {
 		},
 		["Got - Arthas"] = {
 			["OpenAll"] = {
@@ -222,8 +211,9 @@ Postal3DB = {
 			},
 			["BlackBook"] = {
 				["recent"] = {
-					"Scrantnicity|Arthas|Horde", -- [1]
+					"Git-Arthas|Arthas|Horde", -- [1]
 					"Git|Arthas|Horde", -- [2]
+					"Scrantnicity|Arthas|Horde", -- [3]
 				},
 			},
 		},
@@ -248,16 +238,35 @@ Postal3DB = {
 				},
 			},
 		},
-		["Gimm - Cho'gall"] = {
+		["Giit - Cho'gall"] = {
 			["BlackBook"] = {
 				["recent"] = {
-					"Git|Cho'gall|Horde", -- [1]
+					"Gitt|Cho'gall|Horde", -- [1]
 				},
 			},
 		},
-		["Burk - Arthas"] = {
+		["Greny - Azuremyst"] = {
+			["BlackBook"] = {
+				["recent"] = {
+					"Burk|Azuremyst|Horde", -- [1]
+					"Git|Azuremyst|Horde", -- [2]
+				},
+			},
 		},
-		["Giitt - Feathermoon"] = {
+		["Git - Cho'gall"] = {
+			["BlackBook"] = {
+				["recent"] = {
+					"Ãdara|Cho'gall|Horde", -- [1]
+					"His-Cho'gall|Cho'gall|Horde", -- [2]
+					"Poohburr|Cho'gall|Horde", -- [3]
+					"Klëio|Cho'gall|Horde", -- [4]
+					"Nathreizm|Cho'gall|Horde", -- [5]
+					"Urtag|Cho'gall|Horde", -- [6]
+					"Spih|Cho'gall|Horde", -- [7]
+					"Bucnastee|Cho'gall|Horde", -- [8]
+					"Gitt|Cho'gall|Horde", -- [9]
+				},
+			},
 		},
 		["Gitt - Arthas"] = {
 			["BlackBook"] = {
@@ -268,16 +277,19 @@ Postal3DB = {
 				},
 			},
 		},
-		["Burk - Azuremyst"] = {
+		["Evn - Azuremyst"] = {
 			["BlackBook"] = {
 				["recent"] = {
-					"Ghit|Azuremyst|Horde", -- [1]
-					"Pawty|Azuremyst|Horde", -- [2]
-					"Orthodoxical|Azuremyst|Horde", -- [3]
-					"Pristica|Azuremyst|Horde", -- [4]
-					"Gilt|Azuremyst|Horde", -- [5]
-					"Evn|Azuremyst|Horde", -- [6]
-					"Git|Azuremyst|Horde", -- [7]
+					"Git|Azuremyst|Horde", -- [1]
+					"Gilt|Azuremyst|Horde", -- [2]
+					"Burk|Azuremyst|Horde", -- [3]
+				},
+			},
+		},
+		["Erdone - Azuremyst"] = {
+			["BlackBook"] = {
+				["recent"] = {
+					"Git", -- [1]
 				},
 			},
 		},
@@ -307,49 +319,27 @@ Postal3DB = {
 				},
 			},
 		},
-		["Erdone - Azuremyst"] = {
+		["Burk - Azuremyst"] = {
 			["BlackBook"] = {
 				["recent"] = {
-					"Git", -- [1]
+					"Ghit|Azuremyst|Horde", -- [1]
+					"Pawty|Azuremyst|Horde", -- [2]
+					"Orthodoxical|Azuremyst|Horde", -- [3]
+					"Pristica|Azuremyst|Horde", -- [4]
+					"Gilt|Azuremyst|Horde", -- [5]
+					"Evn|Azuremyst|Horde", -- [6]
+					"Git|Azuremyst|Horde", -- [7]
 				},
 			},
 		},
-		["Evn - Azuremyst"] = {
-			["BlackBook"] = {
-				["recent"] = {
-					"Git|Azuremyst|Horde", -- [1]
-					"Gilt|Azuremyst|Horde", -- [2]
-					"Burk|Azuremyst|Horde", -- [3]
-				},
-			},
+		["Giitt - Feathermoon"] = {
 		},
-		["Git - Cho'gall"] = {
-			["BlackBook"] = {
-				["recent"] = {
-					"Ãdara|Cho'gall|Horde", -- [1]
-					"His-Cho'gall|Cho'gall|Horde", -- [2]
-					"Poohburr|Cho'gall|Horde", -- [3]
-					"Klëio|Cho'gall|Horde", -- [4]
-					"Nathreizm|Cho'gall|Horde", -- [5]
-					"Urtag|Cho'gall|Horde", -- [6]
-					"Spih|Cho'gall|Horde", -- [7]
-					"Bucnastee|Cho'gall|Horde", -- [8]
-					"Gitt|Cho'gall|Horde", -- [9]
-				},
-			},
+		["Burk - Arthas"] = {
 		},
-		["Greny - Azuremyst"] = {
+		["Spih - Cho'gall"] = {
 			["BlackBook"] = {
 				["recent"] = {
-					"Burk|Azuremyst|Horde", -- [1]
-					"Git|Azuremyst|Horde", -- [2]
-				},
-			},
-		},
-		["Olebe - Azuremyst"] = {
-			["BlackBook"] = {
-				["recent"] = {
-					"Git", -- [1]
+					"Lihte|Cho'gall|Horde", -- [1]
 				},
 			},
 		},
@@ -361,16 +351,27 @@ Postal3DB = {
 				},
 			},
 		},
-		["Worgit - Moon Guard"] = {
-		},
-		["Spih - Arthas"] = {
+		["Gilt - Azuremyst"] = {
 			["BlackBook"] = {
 				["recent"] = {
-					"Git|Arthas|Horde", -- [1]
-					"Lihte-Cho'gall|Arthas|Horde", -- [2]
-					"Gittdabank|Arthas|Horde", -- [3]
-					"Esse|Arthas|Horde", -- [4]
-					"Gitt|Arthas|Horde", -- [5]
+					"Git|Azuremyst|Horde", -- [1]
+					"Evn|Azuremyst|Horde", -- [2]
+					"Burk|Azuremyst|Horde", -- [3]
+				},
+			},
+		},
+		["Git - Arthas"] = {
+			["BlackBook"] = {
+				["recent"] = {
+					"Gittdabank|Arthas|Horde", -- [1]
+					"Got|Arthas|Horde", -- [2]
+					"Primalfears|Arthas|Horde", -- [3]
+					"Tydeson|Arthas|Horde", -- [4]
+					"Simplecow|Arthas|Horde", -- [5]
+					"Lihte-Cho'gall|Arthas|Horde", -- [6]
+					"Dbyx|Arthas|Horde", -- [7]
+					"Spih|Arthas|Horde", -- [8]
+					"Gitt|Arthas|Horde", -- [9]
 				},
 			},
 		},

@@ -52,8 +52,8 @@
 --
 -- Functions for external use:
 --
---   lib:Rescan ()
---     Force a rescan of all current group members
+--   lib:Rescan (guid or nil)
+--     Force a rescan of the given group member GUID, or of all current group members if nil.
 --
 --   lib:QueuedInspections ()
 --     Returns an array of GUIDs of outstanding inspects.
@@ -72,7 +72,7 @@
 --     Returns an array with the set of unit ids for the current group.
 --]]
 
-local MAJOR, MINOR = "LibGroupInSpecT-1.1", tonumber (("$Revision: 73 $"):match ("(%d+)") or 0)
+local MAJOR, MINOR = "LibGroupInSpecT-1.1", tonumber (("$Revision: 77 $"):match ("(%d+)") or 0)
 
 if not LibStub then error(MAJOR.." requires LibStub") end
 local lib = LibStub:NewLibrary (MAJOR, MINOR)
@@ -233,6 +233,18 @@ local class_fixed_roles_detailed = {
   ROGUE = "melee",
   WARLOCK = "ranged",
 }
+
+local warrior_protection_spec_id = 73
+local warrior_anger_management_talent = 21204
+local warrior_ravager_talent = 21205
+local warrior_gladiators_resolve_talent = 21206
+local warrior_gladiator_stance = GetSpellInfo(156291)
+
+local function HasGladiatorStance (unit, info)
+  -- Check for "not the other two level-100 talents" in case talent info isn't ready.
+  local talents = info.talents
+  return talents and (talents[warrior_gladiators_resolve_talent] or (not talents[warrior_anger_management_talent] and not talents[warrior_ravager_talent])) and UnitBuff(unit, warrior_gladiator_stance)
+end
 
 
 -- Inspects only work after being fully logged in, so track that
@@ -515,6 +527,15 @@ function lib:BuildInfo (unit)
     info.spec_role_detailed  = global_spec_id_roles_detailed[gspec_id]
   end
 
+  -- Fix role if unit is a protection warrior in Gladiator Stance.
+  -- Check for "not the other two level-100 talents" in case talent info isn't ready.
+  if info.global_spec_id == warrior_protection_spec_id then
+    if HasGladiatorStance (unit, info) then
+      info.spec_role = "DAMAGER"
+      info.spec_role_detailed = "melee"
+    end
+  end
+
   if not info.spec_role then info.spec_role = class and class_fixed_roles[class] end
   if not info.spec_role_detailed then info.spec_role_detailed = class and class_fixed_roles_detailed[class] end
 
@@ -733,6 +754,15 @@ function lib:CHAT_MSG_ADDON (prefix, datastr, scope, sender)
   info.spec_role           = gspecs[gspec_id].role
   info.spec_role_detailed  = global_spec_id_roles_detailed[gspec_id]
 
+  -- Fix role if unit is a protection warrior in Gladiator Stance.
+  -- Check for "not the other two level-100 talents" in case talent info isn't ready.
+  if info.global_spec_id == warrior_protection_spec_id then
+    if HasGladiatorStance (unit, info) then
+      info.spec_role = "DAMAGER"
+      info.spec_role_detailed = "melee"
+    end
+  end
+
   local need_inspect = nil
   info.talents = wipe (info.talents or {})
   local talents = self.static_cache.talents[info.class_id]
@@ -840,24 +870,42 @@ function lib:UNIT_AURA (unit)
   local group = self.cache
   local guid = UnitGUID (unit)
   local info = guid and group[guid]
-  if info and not UnitIsUnit (unit, "player") then
-    if UnitIsVisible (unit) then
-      if info.not_visible then
-        info.not_visible = nil
-        --[===[@debug@
-        debug (unit..", aka "..(UnitName(unit) or "nil")..", is now visible") --@end-debug@]===]
-        if not self.state.mainq[guid] then
-          self.state.staleq[guid] = 1
-          self.frame:Show ()
+  if info then
+    if not UnitIsUnit (unit, "player") then
+      if UnitIsVisible (unit) then
+        if info.not_visible then
+          info.not_visible = nil
+          --[===[@debug@
+          debug (unit..", aka "..(UnitName(unit) or "nil")..", is now visible") --@end-debug@]===]
+          if not self.state.mainq[guid] then
+            self.state.staleq[guid] = 1
+            self.frame:Show ()
+          end
         end
+      elseif UnitIsConnected (unit) then
+        --[===[@debug@
+        if not info.not_visible then
+          debug (unit..", aka "..(UnitName(unit) or "nil")..", is no longer visible")
+        end
+        --@end-debug@]===]
+        info.not_visible = true
       end
-    elseif UnitIsConnected (unit) then
-      --[===[@debug@
-      if not info.not_visible then
-        debug (unit..", aka "..(UnitName(unit) or "nil")..", is no longer visible")
+    end
+
+    -- Fix role if unit is a protection warrior in Gladiator Stance.
+    -- Check for "not the other two level-100 talents" in case talent info isn't ready.
+    if info.global_spec_id == warrior_protection_spec_id then
+      if HasGladiatorStance (unit, info) then
+        if info.spec_role ~= "DAMAGER" then
+          info.spec_role = "DAMAGER"
+          info.spec_role_detailed = "melee"
+          self.events:Fire (UPDATE_EVENT, guid, unit, info)
+        end
+      elseif info.spec_role ~= "TANK" then
+        info.spec_role = "TANK"
+        info.spec_role_detailed = "tank"
+        self.events:Fire (UPDATE_EVENT, guid, unit, info)
       end
-      --@end-debug@]===]
-      info.not_visible = true
     end
   end
 end
@@ -898,17 +946,29 @@ function lib:GetCachedInfo (guid)
 end
 
 
-function lib:Rescan ()
+function lib:Rescan (guid)
   local mainq, staleq = self.state.mainq, self.state.staleq
-  for i,unit in ipairs (self:GroupUnits ()) do
-    if UnitExists (unit) then
+  if guid then
+    local unit = self:GuidToUnit (guid)
+    if unit then
       if UnitIsUnit (unit, "player") then
-        self.events:Fire (UPDATE_EVENT, UnitGUID("player"), "player", self:BuildInfo ("player"))
+        self.events:Fire (UPDATE_EVENT, guid, "player", self:BuildInfo ("player"))
       else
-        local guid = UnitGUID (unit)
-        if guid then
-          mainq[guid] = 1
-          staleq[guid] = nil
+        mainq[guid] = 1
+        staleq[guid] = nil
+      end
+    end
+  else
+    for i,unit in ipairs (self:GroupUnits ()) do
+      if UnitExists (unit) then
+        if UnitIsUnit (unit, "player") then
+          self.events:Fire (UPDATE_EVENT, UnitGUID("player"), "player", self:BuildInfo ("player"))
+        else
+          local guid = UnitGUID (unit)
+          if guid then
+            mainq[guid] = 1
+            staleq[guid] = nil
+          end
         end
       end
     end

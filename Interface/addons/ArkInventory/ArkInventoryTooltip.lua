@@ -98,7 +98,10 @@ function ArkInventory.TooltipSetBattlepet( tooltip, h, i )
 	end
 	
 	local sd = ArkInventory.PetJournal.GetSpeciesInfo( speciesID )
-	if not sd then return end
+	if not sd then
+		ArkInventory.Output( "no species data found for ", speciesID, " / ", name )
+		return
+	end
 	
 	local name = sd.name
 	local pd
@@ -713,13 +716,13 @@ function ArkInventory.TooltipObjectCountGet( search_id, tooltip )
 						
 						if td.vault then
 							if ArkInventory.db.global.option.tooltip.add.tabs then
-								table.insert( location_entries, string.format( "%s %s", ArkInventory.Localise["TOOLTIP_VAULT_TABS"], td.tabs ) )
+								location_entries[#location_entries + 1] = string.format( "%s %s", ArkInventory.Localise["TOOLTIP_VAULT_TABS"], td.tabs )
 							else
-								table.insert( location_entries, string.format( "%s", ArkInventory.Global.Location[l].Name ) )
+								location_entries[#location_entries + 1] = string.format( "%s", ArkInventory.Global.Location[l].Name )
 							end
 							item_count_guild = item_count_guild + lc
 						else
-							table.insert( location_entries, string.format( "%s %s%s|r", ArkInventory.Global.Location[l].Name, colour, lc ) )
+							location_entries[#location_entries + 1] = string.format( "%s %s%s|r", ArkInventory.Global.Location[l].Name, colour, lc )
 							item_count_character = item_count_character + lc
 						end
 						
@@ -734,14 +737,14 @@ function ArkInventory.TooltipObjectCountGet( search_id, tooltip )
 						me = ArkInventory.db.global.option.tooltip.highlight
 					end
 					
-					table.insert( character_entries, string.format( "%s%s|r: %s%s|r (%s)", me, name, colour, item_count_character, table.concat( location_entries, ", " ) ) )
+					character_entries[#character_entries + 1] = string.format( "%s%s|r: %s%s|r (%s)", me, name, colour, item_count_character, table.concat( location_entries, ", " ) )
 					character_count = character_count + 1
 					item_count_total = item_count_total + item_count_character
 					
 				end
 				
 				if item_count_guild > 0 then
-					table.insert( guild_entries, string.format( "%s|r: %s%s|r (%s)", name, colour, item_count_guild, table.concat( location_entries, ", " ) ) )
+					guild_entries[#guild_entries + 1] = string.format( "%s|r: %s%s|r (%s)", name, colour, item_count_guild, table.concat( location_entries, ", " ) )
 					guild_count = guild_count + 1
 				end
 				

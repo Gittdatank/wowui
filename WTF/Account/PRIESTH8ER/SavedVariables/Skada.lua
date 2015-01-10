@@ -66,7 +66,7 @@ SkadaDB = {
 		["Got - Dec 2014"] = {
 			["report"] = {
 				["number"] = 7,
-				["mode"] = "Enemy damage taken",
+				["mode"] = "Damage taken",
 				["target"] = "Aprilseventh",
 				["channel"] = "raid",
 			},
@@ -85,7 +85,7 @@ SkadaDB = {
 					["background"] = {
 						["height"] = 258.045837402344,
 					},
-					["mode"] = "Healing",
+					["mode"] = "Damage",
 					["title"] = {
 						["height"] = 14,
 						["font"] = "DorisPP",
@@ -144,9 +144,6 @@ SkadaDB = {
 				{
 					["barheight"] = 11,
 					["barslocked"] = true,
-					["background"] = {
-						["height"] = 258.045837402344,
-					},
 					["y"] = 0,
 					["barfont"] = "DorisPP",
 					["title"] = {
@@ -159,6 +156,9 @@ SkadaDB = {
 					["barwidth"] = 267.657745361328,
 					["point"] = "BOTTOM",
 					["barfontsize"] = 7,
+					["background"] = {
+						["height"] = 258.045837402344,
+					},
 					["bartexture"] = "Minimalist",
 					["x"] = 402.417297363281,
 				}, -- [1]
@@ -167,9 +167,9 @@ SkadaDB = {
 				["hide"] = true,
 			},
 			["report"] = {
-				["channel"] = "officer",
+				["number"] = 14,
+				["channel"] = "raid",
 				["target"] = "Aprilseventh",
-				["mode"] = "Enemy damage taken",
 			},
 			["tooltiprows"] = 10,
 			["reset"] = {

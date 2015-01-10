@@ -20,10 +20,10 @@ EPGPLootMaster = {
 		["Giit - Cho'gall"] = "Giit - Cho'gall",
 		["Spih - Cho'gall"] = "Spih - Cho'gall",
 		["Greny - Azuremyst"] = "Greny - Azuremyst",
-		["Git - Azuremyst"] = "Git - Azuremyst",
-		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
-		["Git - Cho'gall"] = "Git - Cho'gall",
 		["Burk - Arthas"] = "Burk - Arthas",
+		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
+		["Git - Azuremyst"] = "Git - Azuremyst",
+		["Git - Cho'gall"] = "Git - Cho'gall",
 		["Git - Arthas"] = "Git - Arthas",
 	},
 	["profiles"] = {
@@ -58,27 +58,6 @@ EPGPLootMaster = {
 		},
 		["Gimm - Cho'gall"] = {
 		},
-		["Gilt - Azuremyst"] = {
-		},
-		["Ezyn - Azuremyst"] = {
-		},
-		["Git - Azuremyst"] = {
-			["button2"] = "Offspec",
-			["mainUIScale"] = 1.06666677792867,
-			["button2_fallback"] = "",
-			["hideMLOnCombat"] = false,
-			["votingSendGuildRankList"] = {
-				nil, -- [1]
-				nil, -- [2]
-				true, -- [3]
-			},
-			["monitorSendAssistantOnly"] = false,
-			["votingSendGuildRank"] = true,
-			["button2_color"] = "836f27",
-			["blizzard_show_offline"] = 1,
-			["buttonNum"] = 2,
-			["votingSendAssistantOnly"] = false,
-		},
 		["Git - Cho'gall"] = {
 			["biddingWhen"] = "always",
 			["hideMLOnCombat"] = false,
@@ -98,6 +77,27 @@ EPGPLootMaster = {
 			["button3_gpIsPercentage"] = true,
 			["monitorSendAssistantOnly"] = false,
 		},
+		["Ezyn - Azuremyst"] = {
+		},
+		["Gilt - Azuremyst"] = {
+		},
+		["Git - Azuremyst"] = {
+			["button2"] = "Offspec",
+			["mainUIScale"] = 1.06666677792867,
+			["button2_fallback"] = "",
+			["hideMLOnCombat"] = false,
+			["votingSendGuildRankList"] = {
+				nil, -- [1]
+				nil, -- [2]
+				true, -- [3]
+			},
+			["monitorSendAssistantOnly"] = false,
+			["votingSendGuildRank"] = true,
+			["button2_color"] = "836f27",
+			["blizzard_show_offline"] = 1,
+			["buttonNum"] = 2,
+			["votingSendAssistantOnly"] = false,
+		},
 		["Git - Arthas"] = {
 			["button3_color"] = "ff60fd",
 			["mainUIScale"] = 0.866666678587596,
@@ -109,30 +109,30 @@ EPGPLootMaster = {
 			["loot_timeout"] = 90,
 			["button4"] = "2p",
 			["buttonNum"] = 6,
-			["button6_gp"] = "0%",
-			["button3"] = "Minor",
 			["button1_fallback"] = "",
-			["AutoLooter"] = "Tydeson",
-			["button2_fallback"] = "",
+			["button2_color"] = "9f78ef",
 			["button4_color"] = "22c2c6",
 			["button4_fallback"] = "",
-			["votingSendGuildRankList"] = {
-				[3] = true,
-			},
-			["popupUIScale"] = 0.666666690508525,
+			["votingEnableAuto"] = true,
+			["button3"] = "Minor",
 			["button5"] = "4p",
 			["button6"] = "Offspec",
 			["button6_gpValue"] = 0,
 			["button2"] = "Major",
 			["button1"] = "BiS",
-			["button2_gpIsPercentage"] = false,
-			["votingEnableAuto"] = true,
-			["votingDisallowSelf"] = false,
 			["button3_gpIsPercentage"] = false,
+			["hideMLOnCombat"] = false,
+			["button2_fallback"] = "",
+			["votingDisallowSelf"] = false,
+			["popupUIScale"] = 0.666666690508525,
 			["bidding"] = false,
 			["votingSendGuildRank"] = true,
-			["hideMLOnCombat"] = false,
-			["button2_color"] = "9f78ef",
+			["votingSendGuildRankList"] = {
+				[3] = true,
+			},
+			["button2_gpIsPercentage"] = false,
+			["button6_gp"] = "0%",
+			["AutoLooter"] = "Tydeson",
 			["votingSendAssistantOnly"] = false,
 		},
 	},

@@ -356,6 +356,7 @@ frame:SetScript( "OnUpdate",
 				ArkInventory.Frame_Main_Generate( nil, ArkInventory.Const.Window.Draw.Recalculate )
 				ArkInventory.ItemCacheClear( )
 				--ArkInventory.ScanLocation( )
+				ArkInventory.PlayerInfoSet( )
 				
 			end
 			

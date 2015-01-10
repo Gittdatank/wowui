@@ -101,6 +101,8 @@ local EVENT_MAPPING = {
     COMBAT_TEXT_UPDATE = true,
     CURSOR_UPDATE = true,
     FORGE_MASTER_OPENED = true,
+    GARRISON_MISSION_BONUS_ROLL_COMPLETE = "HandleBadChatLootData",
+    GARRISON_MISSION_COMPLETE_RESPONSE = "HandleBadChatLootData",
     GOSSIP_SHOW = true,
     GROUP_ROSTER_UPDATE = true,
     GUILDBANKFRAME_OPENED = true,
@@ -108,7 +110,7 @@ local EVENT_MAPPING = {
     ITEM_UPGRADE_MASTER_OPENED = true,
     LOOT_CLOSED = true,
     LOOT_OPENED = true,
-    LOOT_SLOT_CLEARED = true,
+    LOOT_SLOT_CLEARED = "HandleBadChatLootData",
     MAIL_SHOW = true,
     MERCHANT_CLOSED = true,
     MERCHANT_SHOW = "UpdateMerchantItems",
@@ -170,6 +172,7 @@ local killed_npc_id
 local target_location_timer_handle
 local last_timber_spell_id
 local last_garrison_cache_object_id
+local chat_loot_data
 local chat_loot_timer_handle
 local current_target_id
 local current_area_id
@@ -575,51 +578,39 @@ local function HandleItemUse(item_link, bag_index, slot_index)
         end
     end
 
-    if not bag_index or not slot_index then
-        return
-    end
-    local _, _, _, _, _, is_lootable = _G.GetContainerItemInfo(bag_index, slot_index)
+    local any_loot = false
 
-    if not is_lootable and not private.CONTAINER_ITEM_ID_LIST[item_id] then
-        return
-    end
-
-    table.wipe(current_action)
-    current_loot = nil
-    current_action.target_type = AF.ITEM
-    current_action.identifier = item_id
-    current_action.loot_label = "contains"
-
-    -- For items that open instantly with no spell cast
-    if _G.GetNumLootItems() == 0 and private.CONTAINER_ITEM_ID_LIST[item_id] == true then
-        ClearChatLootData()
-        Debug("HandleItemUse: Beginning chat-based loot timer for item with ID %d.", item_id)
-        chat_loot_timer_handle = C_Timer.NewTimer(1, ClearChatLootData)
-        InitializeCurrentLoot()
-    end
-
-    --[[DatamineTT:ClearLines()
-    DatamineTT:SetBagItem(bag_index, slot_index)
-
-    for line_index = 1, DatamineTT:NumLines() do
-        local current_line = _G["WDPDatamineTTTextLeft" .. line_index]
-
-        if not current_line then
-            Debug("HandleItemUse: Item with ID %d and link %s had an invalid tooltip.", item_id, item_link)
-            return
+    -- Check if Blizzard has marked this item as officially having a chance of containing loot
+    if bag_index and slot_index then
+        local _, _, _, _, _, is_lootable = _G.GetContainerItemInfo(bag_index, slot_index)
+        if is_lootable then
+            any_loot = true
         end
+    end
+    
+    -- Check if we've marked this item as one Blizzard provides bad is_lootable data for
+    if private.CONTAINER_ITEM_ID_LIST[item_id] ~= nil then
+        any_loot = true
+    end
 
-        if current_line:GetText() == _G.ITEM_OPENABLE then
+    if any_loot then
+        -- For item containers that open instantly with no spell cast
+        if (private.CONTAINER_ITEM_ID_LIST[item_id] == true) and ((not _G.GetNumLootItems()) or (_G.GetNumLootItems() == 0)) then
+            ClearChatLootData()
+            Debug("HandleItemUse: Beginning chat-based loot timer for item with ID %d.", item_id)
+            chat_loot_timer_handle = C_Timer.NewTimer(1, ClearChatLootData)
+            chat_loot_data = chat_loot_data or {}
+            chat_loot_data.identifier = item_id
+            chat_loot_data.sources = {}
+        -- For normal item containers
+        else
             table.wipe(current_action)
             current_loot = nil
-
             current_action.target_type = AF.ITEM
             current_action.identifier = item_id
             current_action.loot_label = "contains"
-            return
         end
     end
-    Debug("HandleItemUse: Item with ID %d and link %s did not have a tooltip that contained the string %s.", item_id, item_link, _G.ITEM_OPENABLE)]]--
 end
 
 
@@ -902,10 +893,30 @@ function ClearChatLootData()
     chat_loot_timer_handle:Cancel()
     chat_loot_timer_handle = nil
 
-    if current_loot and current_loot.identifier and (private.CONTAINER_ITEM_ID_LIST[current_loot.identifier] ~= nil) then
-        GenericLootUpdate("items")
+    if chat_loot_data and chat_loot_data.identifier and (private.CONTAINER_ITEM_ID_LIST[chat_loot_data.identifier] ~= nil) and chat_loot_data.sources and (#chat_loot_data.sources > 0) then
+        -- A slimmed down (and more importantly, separate) version of GenericLootUpdate, specifically for AF.ITEM and chat_loot_data
+        local entry = DBEntry("items", chat_loot_data.identifier)
+
+        if entry then
+            local loot_table = LootTable(entry, "contains")
+            entry["contains_count"] = (entry["contains_count"] or 0) + 1
+
+            for loot_token, quantity in pairs(chat_loot_data.sources[chat_loot_data.identifier]) do
+                local label, currency_texture = (":"):split(loot_token)
+
+                if label == "currency" and currency_texture then
+                    table.insert(loot_table, ("currency:%d:%s"):format(quantity, currency_texture))
+                elseif loot_token == "money" then
+                    table.insert(loot_table, ("money:%d"):format(quantity))
+                else
+                    table.insert(loot_table, ("%d:%d"):format(loot_token, quantity))
+                end
+            end
+        end
     end
-    current_loot = nil
+    if chat_loot_data then
+        table.wipe(chat_loot_data)
+    end
 end
 
 
@@ -1271,7 +1282,7 @@ end -- do-block
 
 -- EVENT HANDLERS -----------------------------------------------------
 
-function WDP:LOOT_SLOT_CLEARED(...)
+function WDP:HandleBadChatLootData(...)
     ClearChatLootData()
 end
 
@@ -1349,7 +1360,7 @@ function WDP:SHOW_LOOT_TOAST(event_name, loot_type, item_link, quantity, spec_ID
     Debug("%s: loot_type: %s, item_link: %s, quantity: %s, spec_ID: %s, sex_ID: %s, is_personal: %s, loot_source: %s", event_name, loot_type, item_link, quantity, spec_ID, sex_ID, is_personal, loot_source)
 
     -- Handle Garrison cache specially
-    if lootSource and last_garrison_cache_object_id and (lootSource == private.GARRISON_CACHE_LOOT_SOURCE_ID) then
+    if lootSource and (lootSource == private.GARRISON_CACHE_LOOT_SOURCE_ID) and last_garrison_cache_object_id then
         -- Record location data for cache
         UpdateDBEntryLocation("objects", ("OPENING:%d"):format(last_garrison_cache_object_id))
 
@@ -1481,13 +1492,13 @@ end
 do
     local CHAT_MSG_CURRENCY_UPDATE_FUNCS = {
         [AF.ITEM] = function(currency_texture, quantity)
-            local currency_token = ("currency:%s"):format(currency_texture)
-            local container_id = current_loot.identifier -- For faster access, since this is going to be called 9 times in the next 3 lines
+            local container_id = chat_loot_data.identifier -- For faster access, since this is going to be called 9 times in the next 3 lines
             -- Verify that we're still assigning data to the right items
             if container_id and (private.CONTAINER_ITEM_ID_LIST[container_id] ~= nil) then
                 Debug("CHAT_MSG_CURRENCY: AF.ITEM %s (%d)", currency_token, quantity)
-                current_loot.sources[container_id] = current_loot.sources[container_id] or {}
-                current_loot.sources[container_id][currency_token] = (current_loot.sources[container_id][currency_token] or 0) + quantity
+                local currency_token = ("currency:%s"):format(currency_texture:match("[^\\]+$"):lower())
+                chat_loot_data.sources[container_id] = chat_loot_data.sources[container_id] or {}
+                chat_loot_data.sources[container_id][currency_token] = (chat_loot_data.sources[container_id][currency_token] or 0) + quantity
             else -- If not, cancel the timer and wipe the loot table early
                 Debug("CHAT_MSG_CURRENCY: We would have assigned the wrong loot!")
                 ClearChatLootData()
@@ -1538,14 +1549,24 @@ do
     end
 
 
+    local BLACKLISTED_ITEMS = {
+        [114116] = true,
+        [114119] = true,
+        [114120] = true,
+        [116980] = true,
+        [120319] = true,
+        [120320] = true,
+    }
+
+
     local CHAT_MSG_LOOT_UPDATE_FUNCS = {
         [AF.ITEM] = function(item_id, quantity)
-            local container_id = current_loot.identifier -- For faster access, since this is going to be called 9 times in the next 3 lines
+            local container_id = chat_loot_data.identifier -- For faster access, since this is going to be called 9 times in the next 3 lines
             -- Verify that we're still assigning data to the right items
             if container_id and (private.CONTAINER_ITEM_ID_LIST[container_id] ~= nil) then
                 Debug("CHAT_MSG_LOOT: AF.ITEM %d (%d)", item_id, quantity)
-                current_loot.sources[container_id] = current_loot.sources[container_id] or {}
-                current_loot.sources[container_id][item_id] = (current_loot.sources[container_id][item_id] or 0) + quantity
+                chat_loot_data.sources[container_id] = chat_loot_data.sources[container_id] or {}
+                chat_loot_data.sources[container_id][item_id] = (chat_loot_data.sources[container_id][item_id] or 0) + quantity
             else -- If not, cancel the timer and wipe the loot table early
                 Debug("CHAT_MSG_LOOT: We would have assigned the wrong loot!")
                 ClearChatLootData()
@@ -1610,7 +1631,7 @@ do
 
         -- Take action based on update category
         local update_func = CHAT_MSG_LOOT_UPDATE_FUNCS[category]
-        if not category or not update_func then
+        if not category or not update_func or BLACKLISTED_ITEMS[item_id] then
             return
         end
         update_func(item_id, quantity)
@@ -1706,7 +1727,7 @@ do
             return
         end
 
-        -- We only want to record the item's incoming data; no other need for system messages atm.
+        -- If it is an item, parse its link
         RecordItemData(item_id, item_link, true)
     end
 end
@@ -2860,15 +2881,10 @@ function WDP:UNIT_SPELLCAST_SUCCEEDED(event_name, unit_id, spell_name, spell_ran
         -- Set up timer
         ClearChatLootData()
         Debug("%s: Beginning chat-based loot timer for spellID %d", event_name, spell_id)
-        chat_loot_timer_handle = C_Timer.NewTimer(1, ClearChatLootData)
-
-        -- Standard item handling setup
-        table.wipe(current_action)
-        current_loot = nil
-        current_action.target_type = AF.ITEM
-        current_action.identifier = private.DELAYED_CONTAINER_SPELL_ID_TO_ITEM_ID_MAP[spell_id]
-        current_action.loot_label = "contains"
-        InitializeCurrentLoot()
+        chat_loot_timer_handle = C_Timer.NewTimer(1.5, ClearChatLootData)
+        chat_loot_data = chat_loot_data or {}
+        chat_loot_data.identifier = private.DELAYED_CONTAINER_SPELL_ID_TO_ITEM_ID_MAP[spell_id]
+        chat_loot_data.sources = {}
         return
     end
 

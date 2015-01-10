@@ -247,8 +247,8 @@ function ArkInventory.PlayerInfoSet( )
 		
 	else
 		
-		local gn = GetGuildInfo( "player" )
-		--ArkInventory.Output( "IsInGuild=[", IsInGuild( ), "], g=[", gn, "]" )
+		local gn, _, _, grealm = GetGuildInfo( "player" )
+		--ArkInventory.Output( "IsInGuild=[", IsInGuild( ), "], g=[", gn, "], r=[", grealm, "]" )
 		
 		if not gn then
 			
@@ -260,7 +260,7 @@ function ArkInventory.PlayerInfoSet( )
 			
 		else
 			
-			p.guild_id = string.format( "%s%s%s%s", ArkInventory.Const.GuildTag, gn, ArkInventory.Const.PlayerIDTag, r )
+			p.guild_id = string.format( "%s%s%s%s", ArkInventory.Const.GuildTag, gn, ArkInventory.Const.PlayerIDTag, grealm or r )
 			
 		end
 		
@@ -272,20 +272,17 @@ end
 
 function ArkInventory.VaultInfoSet( )
 	
-	local n = GetGuildInfo( "player" )
+	local n, _, _, r = GetGuildInfo( "player" )
 	local cp = ArkInventory.Global.Me.info
 	
 	if n then
 		
-		local _, gr = ArkInventory.IsConnectedRealm( cp.realm, cp.realm )
-		gr = gr or cp.realm
-		
-		local id = string.format( "%s%s%s%s", ArkInventory.Const.GuildTag, n, ArkInventory.Const.PlayerIDTag, gr )
+		local id = string.format( "%s%s%s%s", ArkInventory.Const.GuildTag, n, ArkInventory.Const.PlayerIDTag, r or cp.realm )
 		
 		local g = ArkInventory.db.global.player.data[id].info
 		
 		g.name = n
-		g.realm = gr
+		g.realm = r or cp.realm
 		g.player_id = id
 		g.faction = cp.faction
 		g.faction_local = cp.faction_local
@@ -3640,24 +3637,18 @@ function ArkInventory.ObjectCountClear( search_id, player_id, loc_id )
 	
 	if (search_id ) and ( player_id ) and (loc_id ) then
 		
-		-- clear the virtual user/locations, then the user
+		-- clear the current user, then move down and do the "shared" user
 		
-		if ( loc_id == ArkInventory.Const.Location.Vault ) then 
-			local cp = ArkInventory.PlayerInfoGet( player_id )
-			ArkInventory.ObjectCountClear( search_id, cp.info.guild_id )
-		elseif ( loc_id == ArkInventory.Const.Location.Pet ) or ( loc_id == ArkInventory.Const.Location.Mount ) then
-			ArkInventory.ObjectCountClear( search_id, ArkInventory.PlayerIDAccount( ) )
+		if player_id == ArkInventory.PlayerIDAccount( ) or ( loc_id == ArkInventory.Const.Location.Vault ) or ( loc_id == ArkInventory.Const.Location.Pet ) or ( loc_id == ArkInventory.Const.Location.Mount ) or ( loc_id == ArkInventory.Const.Location.Toybox ) then
+			ArkInventory.ObjectCountClear( search_id, ArkInventory.Global.Me.info.player_id )
 		end
 		
-		return ArkInventory.ObjectCountClear( search_id, player_id )
-		
 	end
-	
-	--ArkInventory.Output( "ObjectCountClear( ", search_id, ", ", player_id, ", ", loc_id, " )" )	
 	
 	if ( search_id ) and ( player_id ) then
 		
 		-- reset count for a specific item for a specific player
+		--ArkInventory.Output( "ObjectCountClear( ", search_id, ", ", player_id )
 		
 		if ArkInventory.Global.Cache.ItemCountTooltip[player_id] then
 			ArkInventory.Global.Cache.ItemCountTooltip[player_id][search_id] = nil
@@ -3698,6 +3689,7 @@ function ArkInventory.ObjectCountClear( search_id, player_id, loc_id )
 	if ( search_id ) and ( not player_id ) then
 		
 		-- reset count for a specific item for all players
+		--ArkInventory.Output( "ObjectCountClear( ", search_id, " )" )
 		
 		for k, v in pairs( ArkInventory.Global.Cache.ItemCountTooltip ) do
 			v[search_id] = nil
@@ -3709,6 +3701,11 @@ function ArkInventory.ObjectCountClear( search_id, player_id, loc_id )
 		
 		ArkInventory.Global.Cache.ItemCountRaw[search_id] = nil
 		
+		-- erase item/tooltip cache
+		ArkInventory.Table.Clean( ArkInventory.Global.Cache.ItemCountTooltip, nil, true )
+		ArkInventory.Table.Clean( ArkInventory.Global.Cache.ItemCountRaw, nil, true )
+		ArkInventory.Table.Clean( ArkInventory.Global.Cache.ItemCount, nil, true )
+
 		return
 		
 	end
@@ -3716,6 +3713,7 @@ function ArkInventory.ObjectCountClear( search_id, player_id, loc_id )
 	if ( not search_id ) and ( not player_id ) then
 		
 		--ArkInventory.Output( "wipe all item counts" )
+		ArkInventory.Output( "ObjectCountClear( )" )
 		
 		table.wipe( ArkInventory.Global.Cache.ItemCountTooltip )
 		
@@ -3754,7 +3752,7 @@ function ArkInventory.ObjectCountGetRaw( search_id )
 		if pd.info.name then
 			
 			if not d[pid] then
-				d[pid] = { ["vault"] = false, ["location"] = { }, ["total"] = 0, ["faction"] = pd.info.faction, ["realm"] = pd.info.realm }
+				d[pid] = { ["vault"] = false, ["location"] = { }, ["faction"] = pd.info.faction, ["realm"] = pd.info.realm }
 			end
 			
 			--ArkInventory.Output( "rebuild ", search_id, " for ", pid )
@@ -3790,19 +3788,19 @@ function ArkInventory.ObjectCountGetRaw( search_id )
 								
 								-- primary match
 								local oit = ArkInventory.ObjectIDTooltip( sd.h )
-								local match = ( search_id == oit )
+								local matches = ( search_id == oit )
 								
 								-- secondary match
-								if not match and search_alt then
+								if not matches and search_alt then
 									for sa in pairs( search_alt ) do
 										if sa == oit then
-											match = true
+											matches = true
 											break
 										end
 									end
 								end
 								
-								if match then
+								if matches then
 									--ArkInventory.Output( pid, " has ", sd.count, " x ", sd.h, " in loc[", l, "], bag [", b, "] slot [", sn, "]" )
 									c = c + sd.count
 									k = true
@@ -3818,7 +3816,7 @@ function ArkInventory.ObjectCountGetRaw( search_id )
 						
 					end
 					
-					if c> 0 then
+					if c > 0 then
 						
 						if pd.info.class == "GUILD" and l == ArkInventory.Const.Location.Vault then
 							d[pid].vault = true

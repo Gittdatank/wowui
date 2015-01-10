@@ -97,7 +97,7 @@ oRA3DB = {
 					["enable"] = true,
 					["raid"] = {
 						["threshold"] = 3,
-						["master"] = "Tydeson",
+						["master"] = "Git",
 					},
 					["party"] = {
 						["method"] = "personalloot",

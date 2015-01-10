@@ -73,8 +73,8 @@ Bartender4DB = {
 				["Giit tank"] = {
 					["actionbars"] = {
 						{
+							["fadeoutdelay"] = 0,
 							["fadeout"] = true,
-							["fadeoutalpha"] = 0,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
@@ -85,36 +85,36 @@ Bartender4DB = {
 								["x"] = -2.99998559082975,
 								["point"] = "LEFT",
 							},
-							["fadeoutdelay"] = 0,
+							["fadeoutalpha"] = 0,
 						}, -- [1]
 						{
-							["fadeoutalpha"] = 0,
 							["fadeoutdelay"] = 0,
+							["fadeoutalpha"] = 0,
+							["skin"] = {
+								["ID"] = "Blizzard",
+							},
+							["fadeout"] = true,
+							["rows"] = 3,
+							["version"] = 3,
 							["position"] = {
 								["y"] = 44.6208181864254,
 								["x"] = -2.99998559082975,
 								["point"] = "LEFT",
 							},
-							["fadeout"] = true,
-							["rows"] = 3,
-							["version"] = 3,
+						}, -- [2]
+						{
+							["fadeoutdelay"] = 0,
+							["fadeoutalpha"] = 0,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-						}, -- [2]
-						{
-							["fadeoutalpha"] = 0,
-							["fadeoutdelay"] = 0,
+							["fadeout"] = true,
+							["rows"] = 3,
+							["version"] = 3,
 							["position"] = {
 								["y"] = 159.74468693477,
 								["x"] = -2.99998559082975,
 								["point"] = "LEFT",
-							},
-							["fadeout"] = true,
-							["rows"] = 3,
-							["version"] = 3,
-							["skin"] = {
-								["ID"] = "Blizzard",
 							},
 						}, -- [3]
 						{
@@ -140,11 +140,11 @@ Bartender4DB = {
 								["x"] = -189.608283543793,
 								["point"] = "CENTER",
 							},
-							["padding"] = 0,
+							["clickthrough"] = true,
 							["visibility"] = {
 								["nocombat"] = true,
 							},
-							["clickthrough"] = true,
+							["padding"] = 0,
 						}, -- [5]
 						{
 							["skin"] = {
@@ -188,10 +188,10 @@ Bartender4DB = {
 							["enabled"] = true,
 							["buttons"] = 12,
 							["alpha"] = 1,
-							["hidehotkey"] = false,
 							["version"] = 3,
-							["hidemacrotext"] = false,
 							["fadeoutalpha"] = 0.1,
+							["hidemacrotext"] = false,
+							["hidehotkey"] = false,
 							["position"] = {
 								["growHorizontal"] = "RIGHT",
 								["x"] = -510,
@@ -663,8 +663,8 @@ Bartender4DB = {
 				["Gilt - Azuremyst"] = {
 					["actionbars"] = {
 						{
+							["fadeoutdelay"] = 0,
 							["version"] = 3,
-							["fadeoutalpha"] = 0,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
@@ -673,9 +673,9 @@ Bartender4DB = {
 								["x"] = -2.99998559082975,
 								["point"] = "LEFT",
 							},
-							["hidemacrotext"] = true,
 							["rows"] = 3,
-							["fadeoutdelay"] = 0,
+							["hidemacrotext"] = true,
+							["fadeoutalpha"] = 0,
 						}, -- [1]
 						{
 							["fadeoutdelay"] = 0,
@@ -692,18 +692,18 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["fadeoutalpha"] = 0,
 							["fadeoutdelay"] = 0,
-							["position"] = {
-								["y"] = 159.74468693477,
-								["x"] = -2.99998559082975,
-								["point"] = "LEFT",
+							["fadeoutalpha"] = 0,
+							["skin"] = {
+								["ID"] = "Blizzard",
 							},
 							["fadeout"] = true,
 							["rows"] = 3,
 							["version"] = 3,
-							["skin"] = {
-								["ID"] = "Blizzard",
+							["position"] = {
+								["y"] = 159.74468693477,
+								["x"] = -2.99998559082975,
+								["point"] = "LEFT",
 							},
 						}, -- [3]
 						{
@@ -729,11 +729,11 @@ Bartender4DB = {
 								["x"] = -189.608283543793,
 								["point"] = "CENTER",
 							},
-							["padding"] = 0,
+							["clickthrough"] = true,
 							["visibility"] = {
 								["nocombat"] = true,
 							},
-							["clickthrough"] = true,
+							["padding"] = 0,
 						}, -- [5]
 						{
 							["skin"] = {
@@ -814,8 +814,8 @@ Bartender4DB = {
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-							["padding"] = 0,
 							["clickthrough"] = true,
+							["padding"] = 0,
 							["visibility"] = {
 								["nocombat"] = true,
 							},
@@ -1011,19 +1011,19 @@ Bartender4DB = {
 							["version"] = 3,
 						}, -- [2]
 						{
-							["skin"] = {
-								["ID"] = "Blizzard",
-							},
-							["version"] = 3,
 							["position"] = {
 								["y"] = 159.74468693477,
 								["x"] = -2.99998559082975,
 								["point"] = "LEFT",
 							},
+							["fadeoutdelay"] = 0,
+							["skin"] = {
+								["ID"] = "Blizzard",
+							},
 							["fadeoutalpha"] = 0,
 							["rows"] = 3,
 							["fadeout"] = true,
-							["fadeoutdelay"] = 0,
+							["version"] = 3,
 						}, -- [3]
 						{
 							["version"] = 3,
@@ -1043,8 +1043,8 @@ Bartender4DB = {
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-							["clickthrough"] = true,
 							["padding"] = 0,
+							["clickthrough"] = true,
 							["visibility"] = {
 								["nocombat"] = true,
 							},
@@ -1144,8 +1144,8 @@ Bartender4DB = {
 				["Spih - Cho'gall"] = {
 					["actionbars"] = {
 						{
+							["fadeoutalpha"] = 0,
 							["version"] = 3,
-							["fadeoutdelay"] = 0,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
@@ -1154,38 +1154,38 @@ Bartender4DB = {
 								["x"] = -4.00000858306885,
 								["point"] = "LEFT",
 							},
-							["rows"] = 3,
 							["padding"] = 0,
-							["fadeoutalpha"] = 0,
+							["rows"] = 3,
+							["fadeoutdelay"] = 0,
 						}, -- [1]
 						{
-							["fadeoutdelay"] = 0,
 							["fadeoutalpha"] = 0,
+							["fadeoutdelay"] = 0,
+							["skin"] = {
+								["ID"] = "Blizzard",
+							},
+							["version"] = 3,
+							["padding"] = 0,
+							["rows"] = 3,
 							["position"] = {
 								["y"] = 24.5399780273438,
 								["x"] = -4.00000858306885,
 								["point"] = "LEFT",
 							},
-							["version"] = 3,
-							["rows"] = 3,
-							["padding"] = 0,
+						}, -- [2]
+						{
+							["fadeoutalpha"] = 0,
+							["fadeoutdelay"] = 0,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-						}, -- [2]
-						{
-							["fadeoutdelay"] = 0,
-							["fadeoutalpha"] = 0,
+							["version"] = 3,
+							["padding"] = 0,
+							["rows"] = 3,
 							["position"] = {
 								["y"] = 133.788146972656,
 								["x"] = -4.00000858306885,
 								["point"] = "LEFT",
-							},
-							["version"] = 3,
-							["rows"] = 3,
-							["padding"] = 0,
-							["skin"] = {
-								["ID"] = "Blizzard",
 							},
 						}, -- [3]
 						{
@@ -1318,8 +1318,8 @@ Bartender4DB = {
 				["Git - Fury"] = {
 					["actionbars"] = {
 						{
+							["fadeoutalpha"] = 0,
 							["version"] = 3,
-							["fadeoutdelay"] = 0,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
@@ -1328,38 +1328,38 @@ Bartender4DB = {
 								["x"] = -4.00000858306885,
 								["point"] = "LEFT",
 							},
-							["rows"] = 3,
 							["padding"] = 0,
-							["fadeoutalpha"] = 0,
+							["rows"] = 3,
+							["fadeoutdelay"] = 0,
 						}, -- [1]
 						{
-							["fadeoutdelay"] = 0,
 							["version"] = 3,
+							["fadeoutdelay"] = 0,
+							["skin"] = {
+								["ID"] = "Blizzard",
+							},
+							["fadeoutalpha"] = 0,
+							["padding"] = 0,
+							["rows"] = 3,
 							["position"] = {
 								["y"] = -16.4220581054688,
 								["x"] = -4.00000858306885,
 								["point"] = "LEFT",
 							},
+						}, -- [2]
+						{
 							["fadeoutalpha"] = 0,
-							["rows"] = 3,
-							["padding"] = 0,
+							["fadeoutdelay"] = 0,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-						}, -- [2]
-						{
-							["fadeoutdelay"] = 0,
-							["fadeoutalpha"] = 0,
+							["version"] = 3,
+							["padding"] = 0,
+							["rows"] = 3,
 							["position"] = {
 								["y"] = 95.6004638671875,
 								["x"] = -4.00000858306885,
 								["point"] = "LEFT",
-							},
-							["version"] = 3,
-							["rows"] = 3,
-							["padding"] = 0,
-							["skin"] = {
-								["ID"] = "Blizzard",
 							},
 						}, -- [3]
 						{
@@ -1429,46 +1429,46 @@ Bartender4DB = {
 				["Got - Dec 2014"] = {
 					["actionbars"] = {
 						{
+							["padding"] = 0,
 							["fadeoutdelay"] = 0,
-							["version"] = 3,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-							["padding"] = 0,
+							["fadeoutalpha"] = 0,
 							["rows"] = 3,
 							["position"] = {
 								["y"] = -127.502059936523,
 								["x"] = -4.00000858306885,
 								["point"] = "LEFT",
 							},
-							["fadeoutalpha"] = 0,
+							["version"] = 3,
 						}, -- [1]
 						{
+							["padding"] = 0,
+							["fadeoutdelay"] = 0,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-							["fadeoutdelay"] = 0,
 							["position"] = {
 								["y"] = 58.4999694824219,
 								["x"] = -4.00000858306885,
 								["point"] = "LEFT",
 							},
-							["padding"] = 0,
 							["rows"] = 3,
 							["fadeoutalpha"] = 0,
 							["version"] = 3,
 						}, -- [2]
 						{
+							["padding"] = 0,
+							["fadeoutdelay"] = 0,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-							["fadeoutdelay"] = 0,
 							["position"] = {
 								["y"] = 189.370086669922,
 								["x"] = -4.00000858306885,
 								["point"] = "LEFT",
 							},
-							["padding"] = 0,
 							["rows"] = 3,
 							["fadeoutalpha"] = 0,
 							["version"] = 3,
@@ -1628,10 +1628,10 @@ Bartender4DB = {
 							["enabled"] = true,
 							["buttons"] = 12,
 							["alpha"] = 1,
-							["version"] = 3,
 							["fadeoutalpha"] = 0.1,
-							["padding"] = 6,
 							["hidehotkey"] = false,
+							["padding"] = 6,
+							["version"] = 3,
 							["position"] = {
 								["y"] = 41.75,
 								["x"] = -510,
@@ -2131,18 +2131,18 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["version"] = 3,
 							["fadeoutdelay"] = 0,
-							["position"] = {
-								["y"] = 159.74468693477,
-								["x"] = -2.99998559082975,
-								["point"] = "LEFT",
+							["version"] = 3,
+							["skin"] = {
+								["ID"] = "Blizzard",
 							},
 							["fadeout"] = true,
 							["rows"] = 3,
 							["fadeoutalpha"] = 0,
-							["skin"] = {
-								["ID"] = "Blizzard",
+							["position"] = {
+								["y"] = 159.74468693477,
+								["x"] = -2.99998559082975,
+								["point"] = "LEFT",
 							},
 						}, -- [3]
 						{
@@ -2169,11 +2169,11 @@ Bartender4DB = {
 								["x"] = -189.608283543793,
 								["point"] = "CENTER",
 							},
-							["padding"] = 0,
+							["clickthrough"] = true,
 							["visibility"] = {
 								["nocombat"] = true,
 							},
-							["clickthrough"] = true,
+							["padding"] = 0,
 						}, -- [5]
 						{
 							["skin"] = {
@@ -2228,19 +2228,19 @@ Bartender4DB = {
 							["fadeoutalpha"] = 0,
 						}, -- [2]
 						{
-							["skin"] = {
-								["ID"] = "Blizzard",
-							},
-							["fadeout"] = true,
 							["position"] = {
 								["y"] = 159.74468693477,
 								["x"] = -2.99998559082975,
 								["point"] = "LEFT",
 							},
+							["fadeoutdelay"] = 0,
+							["skin"] = {
+								["ID"] = "Blizzard",
+							},
 							["fadeoutalpha"] = 0,
 							["rows"] = 3,
 							["version"] = 3,
-							["fadeoutdelay"] = 0,
+							["fadeout"] = true,
 						}, -- [3]
 						{
 							["version"] = 3,
@@ -2260,8 +2260,8 @@ Bartender4DB = {
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-							["clickthrough"] = true,
 							["padding"] = 0,
+							["clickthrough"] = true,
 							["visibility"] = {
 								["nocombat"] = true,
 							},
@@ -2314,8 +2314,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -2324,8 +2324,8 @@ Bartender4DB = {
 							},
 						}, -- [3]
 						{
-							["padding"] = 5,
 							["rows"] = 12,
+							["padding"] = 5,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 610,
@@ -2496,8 +2496,8 @@ Bartender4DB = {
 				["Gitt - Cho'gall"] = {
 					["actionbars"] = {
 						{
+							["fadeoutalpha"] = 0,
 							["fadeoutdelay"] = 0,
-							["version"] = 3,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
@@ -2506,38 +2506,38 @@ Bartender4DB = {
 								["x"] = -4.00000858306885,
 								["point"] = "LEFT",
 							},
-							["padding"] = 0,
 							["rows"] = 3,
-							["fadeoutalpha"] = 0,
+							["padding"] = 0,
+							["version"] = 3,
 						}, -- [1]
 						{
-							["version"] = 3,
 							["fadeoutdelay"] = 0,
-							["skin"] = {
-								["ID"] = "Blizzard",
-							},
-							["fadeoutalpha"] = 0,
-							["padding"] = 0,
-							["rows"] = 3,
+							["version"] = 3,
 							["position"] = {
 								["y"] = -16.4220581054688,
 								["x"] = -4.00000858306885,
 								["point"] = "LEFT",
 							},
-						}, -- [2]
-						{
-							["version"] = 3,
-							["fadeoutdelay"] = 0,
+							["fadeoutalpha"] = 0,
+							["rows"] = 3,
+							["padding"] = 0,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-							["fadeoutalpha"] = 0,
-							["padding"] = 0,
-							["rows"] = 3,
+						}, -- [2]
+						{
+							["fadeoutdelay"] = 0,
+							["version"] = 3,
 							["position"] = {
 								["y"] = 95.6004638671875,
 								["x"] = -4.00000858306885,
 								["point"] = "LEFT",
+							},
+							["fadeoutalpha"] = 0,
+							["rows"] = 3,
+							["padding"] = 0,
+							["skin"] = {
+								["ID"] = "Blizzard",
 							},
 						}, -- [3]
 						{
@@ -2677,13 +2677,13 @@ Bartender4DB = {
 								["ID"] = "Blizzard",
 							},
 							["fadeoutdelay"] = 0,
-							["fadeoutalpha"] = 0,
+							["version"] = 3,
 							["position"] = {
 								["y"] = -127.502059936523,
 								["x"] = -4.00000858306885,
 								["point"] = "LEFT",
 							},
-							["version"] = 3,
+							["fadeoutalpha"] = 0,
 							["padding"] = 0,
 						}, -- [1]
 						{
@@ -2692,8 +2692,8 @@ Bartender4DB = {
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-							["fadeout"] = true,
 							["version"] = 3,
+							["fadeout"] = true,
 							["fadeoutalpha"] = 0,
 							["position"] = {
 								["y"] = -13.3500366210938,
@@ -2708,8 +2708,8 @@ Bartender4DB = {
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-							["fadeoutdelay"] = 0,
 							["fadeoutalpha"] = 0,
+							["fadeoutdelay"] = 0,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 101.906860351563,
@@ -2719,12 +2719,11 @@ Bartender4DB = {
 							["padding"] = 0,
 						}, -- [3]
 						{
-							["fadeout"] = true,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-							["version"] = 3,
 							["fadeoutalpha"] = 0,
+							["version"] = 3,
 							["position"] = {
 								["y"] = 32.7999974370002,
 								["x"] = -157.847925058721,
@@ -2738,8 +2737,8 @@ Bartender4DB = {
 								["ID"] = "Blizzard",
 							},
 							["clickthrough"] = true,
-							["fadeoutalpha"] = 0,
 							["version"] = 3,
+							["fadeoutalpha"] = 0,
 							["position"] = {
 								["y"] = -184.320434570313,
 								["x"] = -80.8125152587891,
@@ -2752,12 +2751,11 @@ Bartender4DB = {
 							},
 						}, -- [5]
 						{
-							["fadeout"] = true,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-							["version"] = 3,
 							["fadeoutalpha"] = 0,
+							["version"] = 3,
 							["position"] = {
 								["y"] = 63.1999948382377,
 								["x"] = -157.866089121491,
@@ -2791,65 +2789,115 @@ Bartender4DB = {
 						}, -- [10]
 					},
 				},
-				["Greny - Azuremyst"] = {
+				["Git - Cho'gall"] = {
 					["actionbars"] = {
 						{
-							["padding"] = 6,
-							["version"] = 3,
+							["fadeoutalpha"] = 0,
 							["position"] = {
-								["y"] = 41.75,
-								["x"] = -510,
-								["point"] = "BOTTOM",
+								["y"] = -127.502059936523,
+								["x"] = -4.00000858306885,
+								["point"] = "LEFT",
 							},
+							["version"] = 3,
+							["skin"] = {
+								["ID"] = "Blizzard",
+							},
+							["padding"] = 0,
+							["rows"] = 3,
+							["fadeout"] = true,
+							["fadeoutdelay"] = 0,
 						}, -- [1]
 						{
-							["enabled"] = false,
-							["version"] = 3,
-							["position"] = {
-								["y"] = -189.499996309847,
-								["x"] = -231.500148273876,
-								["point"] = "CENTER",
+							["fadeout"] = true,
+							["skin"] = {
+								["ID"] = "Blizzard",
 							},
+							["fadeoutdelay"] = 0,
+							["position"] = {
+								["y"] = -16.4220581054688,
+								["x"] = -4.00000858306885,
+								["point"] = "LEFT",
+							},
+							["padding"] = 0,
+							["rows"] = 3,
+							["fadeoutalpha"] = 0,
+							["version"] = 3,
 						}, -- [2]
 						{
-							["padding"] = 5,
-							["rows"] = 12,
-							["version"] = 3,
-							["position"] = {
-								["y"] = 610,
-								["x"] = -82,
-								["point"] = "BOTTOMRIGHT",
+							["fadeout"] = true,
+							["skin"] = {
+								["ID"] = "Blizzard",
 							},
+							["fadeoutdelay"] = 0,
+							["position"] = {
+								["y"] = 95.6004638671875,
+								["x"] = -4.00000858306885,
+								["point"] = "LEFT",
+							},
+							["padding"] = 0,
+							["rows"] = 3,
+							["fadeoutalpha"] = 0,
+							["version"] = 3,
 						}, -- [3]
 						{
-							["padding"] = 5,
-							["rows"] = 12,
-							["version"] = 3,
-							["position"] = {
-								["y"] = 610,
-								["x"] = -42,
-								["point"] = "BOTTOMRIGHT",
+							["fadeout"] = true,
+							["skin"] = {
+								["ID"] = "Blizzard",
 							},
+							["position"] = {
+								["y"] = 32.7999974370002,
+								["x"] = -157.847925058721,
+								["point"] = "BOTTOM",
+								["scale"] = 0.800000011920929,
+							},
+							["padding"] = 0,
+							["version"] = 3,
+							["fadeoutalpha"] = 0,
 						}, -- [4]
 						{
-							["padding"] = 6,
-							["version"] = 3,
-							["position"] = {
-								["y"] = 83,
-								["x"] = 3,
-								["point"] = "BOTTOM",
+							["fadeoutalpha"] = 0,
+							["skin"] = {
+								["ID"] = "Blizzard",
 							},
+							["position"] = {
+								["y"] = -183.962554931641,
+								["x"] = -108.758483886719,
+								["point"] = "CENTER",
+								["scale"] = 0.75,
+							},
+							["padding"] = 0,
+							["visibility"] = {
+								["nocombat"] = true,
+							},
+							["version"] = 3,
 						}, -- [5]
 						{
-							["padding"] = 6,
-							["version"] = 3,
-							["position"] = {
-								["y"] = 83,
-								["x"] = -510,
-								["point"] = "BOTTOM",
+							["fadeout"] = true,
+							["fadeoutalpha"] = 0,
+							["skin"] = {
+								["ID"] = "Blizzard",
 							},
+							["position"] = {
+								["y"] = 63.1999948382377,
+								["x"] = -157.866089121491,
+								["point"] = "BOTTOM",
+								["scale"] = 0.800000011920929,
+							},
+							["padding"] = 0,
+							["visibility"] = {
+								["nocombat"] = false,
+								["overridebar"] = false,
+							},
+							["version"] = 3,
 						}, -- [6]
 						{
+							["enabled"] = true,
+							["version"] = 3,
+							["position"] = {
+								["y"] = -282.68701171875,
+								["x"] = 435.125915527344,
+								["point"] = "CENTER",
+							},
 						}, -- [7]
 						{
 						}, -- [8]
@@ -2858,93 +2906,110 @@ Bartender4DB = {
 						}, -- [10]
 					},
 				},
-				["Healing"] = {
+				["Gitt - Arthas"] = {
 					["actionbars"] = {
 						{
-							["fadeoutdelay"] = 0,
+							["version"] = 3,
+							["fadeoutalpha"] = 0,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-							["fadeoutalpha"] = 0,
 							["rows"] = 3,
+							["padding"] = 0,
 							["position"] = {
-								["y"] = -71.457482509903,
-								["x"] = -2.99998559082975,
+								["y"] = -127.502059936523,
+								["x"] = -4.00000858306885,
 								["point"] = "LEFT",
 							},
-							["version"] = 3,
+							["fadeoutdelay"] = 0,
 						}, -- [1]
 						{
-							["fadeoutdelay"] = 0,
+							["position"] = {
+								["y"] = -16.4220581054688,
+								["x"] = -4.00000858306885,
+								["point"] = "LEFT",
+							},
+							["fadeoutalpha"] = 0,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-							["fadeoutalpha"] = 0,
 							["rows"] = 3,
+							["padding"] = 0,
 							["version"] = 3,
-							["position"] = {
-								["y"] = 44.6208181864254,
-								["x"] = -2.99998559082975,
-								["point"] = "LEFT",
-							},
+							["fadeoutdelay"] = 0,
 						}, -- [2]
 						{
-							["fadeoutalpha"] = 0,
-							["fadeoutdelay"] = 0,
 							["position"] = {
-								["y"] = 159.74468693477,
-								["x"] = -2.99998559082975,
+								["y"] = 95.6004638671875,
+								["x"] = -4.00000858306885,
 								["point"] = "LEFT",
 							},
-							["fadeout"] = true,
-							["rows"] = 3,
-							["version"] = 3,
+							["fadeoutalpha"] = 0,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
+							["rows"] = 3,
+							["padding"] = 0,
+							["version"] = 3,
+							["fadeoutdelay"] = 0,
 						}, -- [3]
 						{
-							["version"] = 3,
+							["fadeoutalpha"] = 0,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-							["rows"] = 12,
+							["padding"] = 0,
 							["position"] = {
-								["y"] = 610,
-								["x"] = -42,
-								["point"] = "BOTTOMRIGHT",
+								["y"] = 32.7999974370002,
+								["x"] = -157.847925058721,
+								["point"] = "BOTTOM",
+								["scale"] = 0.800000011920929,
 							},
-							["padding"] = 5,
+							["version"] = 3,
 						}, -- [4]
 						{
-							["version"] = 3,
+							["fadeoutalpha"] = 0,
 							["skin"] = {
 								["ID"] = "Blizzard",
+							},
+							["position"] = {
+								["y"] = -182.040405273438,
+								["x"] = 81.6469421386719,
+								["point"] = "CENTER",
+								["scale"] = 0.75,
+							},
+							["padding"] = 3,
+							["visibility"] = {
+								["nocombat"] = false,
+							},
+							["version"] = 3,
+						}, -- [5]
+						{
+							["fadeoutalpha"] = 0,
+							["skin"] = {
+								["ID"] = "Blizzard",
+							},
+							["position"] = {
+								["y"] = 63.1999948382377,
+								["x"] = -157.866089121491,
+								["point"] = "BOTTOM",
+								["scale"] = 0.800000011920929,
 							},
 							["padding"] = 0,
 							["visibility"] = {
 								["nocombat"] = false,
+								["overridebar"] = false,
 							},
-							["position"] = {
-								["y"] = -87.1575119819279,
-								["x"] = -201.130707410833,
-								["point"] = "CENTER",
-							},
-						}, -- [5]
-						{
-							["skin"] = {
-								["ID"] = "Blizzard",
-							},
-							["padding"] = 0,
 							["version"] = 3,
-							["position"] = {
-								["y"] = 44.0000019680818,
-								["x"] = -37.1110679226497,
-								["point"] = "BOTTOM",
-								["scale"] = 0.800000011920929,
-							},
 						}, -- [6]
 						{
+							["enabled"] = true,
+							["version"] = 3,
+							["position"] = {
+								["y"] = -282.68701171875,
+								["x"] = 435.125915527344,
+								["point"] = "CENTER",
+							},
 						}, -- [7]
 						{
 						}, -- [8]
@@ -3082,19 +3147,19 @@ Bartender4DB = {
 							["fadeoutalpha"] = 0,
 						}, -- [2]
 						{
+							["skin"] = {
+								["ID"] = "Blizzard",
+							},
+							["version"] = 3,
 							["position"] = {
 								["y"] = 159.74468693477,
 								["x"] = -2.99998559082975,
 								["point"] = "LEFT",
 							},
-							["fadeoutdelay"] = 0,
-							["skin"] = {
-								["ID"] = "Blizzard",
-							},
 							["fadeoutalpha"] = 0,
 							["rows"] = 3,
 							["fadeout"] = true,
-							["version"] = 3,
+							["fadeoutdelay"] = 0,
 						}, -- [3]
 						{
 							["version"] = 3,
@@ -3149,8 +3214,8 @@ Bartender4DB = {
 				["Git"] = {
 					["actionbars"] = {
 						{
+							["fadeoutalpha"] = 0,
 							["fadeout"] = true,
-							["fadeoutdelay"] = 0,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
@@ -3161,36 +3226,36 @@ Bartender4DB = {
 								["x"] = -2.99998559082975,
 								["point"] = "LEFT",
 							},
-							["fadeoutalpha"] = 0,
+							["fadeoutdelay"] = 0,
 						}, -- [1]
 						{
-							["fadeout"] = true,
 							["fadeoutdelay"] = 0,
+							["fadeout"] = true,
+							["skin"] = {
+								["ID"] = "Blizzard",
+							},
+							["fadeoutalpha"] = 0,
+							["rows"] = 3,
+							["version"] = 3,
 							["position"] = {
 								["y"] = 44.6208181864254,
 								["x"] = -2.99998559082975,
 								["point"] = "LEFT",
 							},
-							["fadeoutalpha"] = 0,
-							["rows"] = 3,
-							["version"] = 3,
+						}, -- [2]
+						{
+							["fadeoutdelay"] = 0,
+							["fadeout"] = true,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-						}, -- [2]
-						{
-							["fadeout"] = true,
-							["fadeoutdelay"] = 0,
+							["fadeoutalpha"] = 0,
+							["rows"] = 3,
+							["version"] = 3,
 							["position"] = {
 								["y"] = 159.74468693477,
 								["x"] = -2.99998559082975,
 								["point"] = "LEFT",
-							},
-							["fadeoutalpha"] = 0,
-							["rows"] = 3,
-							["version"] = 3,
-							["skin"] = {
-								["ID"] = "Blizzard",
 							},
 						}, -- [3]
 						{
@@ -3216,12 +3281,12 @@ Bartender4DB = {
 								["x"] = -189.608283543793,
 								["point"] = "CENTER",
 							},
-							["padding"] = 0,
+							["clickthrough"] = true,
 							["visibility"] = {
 								["nocombat"] = true,
 								["vehicleui"] = false,
 							},
-							["clickthrough"] = true,
+							["padding"] = 0,
 						}, -- [5]
 						{
 							["skin"] = {
@@ -3234,221 +3299,6 @@ Bartender4DB = {
 								["x"] = -37.1110679226497,
 								["point"] = "BOTTOM",
 								["scale"] = 0.800000011920929,
-							},
-						}, -- [6]
-						{
-						}, -- [7]
-						{
-						}, -- [8]
-						nil, -- [9]
-						{
-						}, -- [10]
-					},
-				},
-				["Git - Cho'gall"] = {
-					["actionbars"] = {
-						{
-							["fadeout"] = true,
-							["skin"] = {
-								["ID"] = "Blizzard",
-							},
-							["fadeoutalpha"] = 0,
-							["position"] = {
-								["y"] = -127.502059936523,
-								["x"] = -4.00000858306885,
-								["point"] = "LEFT",
-							},
-							["padding"] = 0,
-							["rows"] = 3,
-							["fadeoutdelay"] = 0,
-							["version"] = 3,
-						}, -- [1]
-						{
-							["fadeoutalpha"] = 0,
-							["position"] = {
-								["y"] = -16.4220581054688,
-								["x"] = -4.00000858306885,
-								["point"] = "LEFT",
-							},
-							["fadeout"] = true,
-							["skin"] = {
-								["ID"] = "Blizzard",
-							},
-							["padding"] = 0,
-							["rows"] = 3,
-							["version"] = 3,
-							["fadeoutdelay"] = 0,
-						}, -- [2]
-						{
-							["fadeoutalpha"] = 0,
-							["position"] = {
-								["y"] = 95.6004638671875,
-								["x"] = -4.00000858306885,
-								["point"] = "LEFT",
-							},
-							["fadeout"] = true,
-							["skin"] = {
-								["ID"] = "Blizzard",
-							},
-							["padding"] = 0,
-							["rows"] = 3,
-							["version"] = 3,
-							["fadeoutdelay"] = 0,
-						}, -- [3]
-						{
-							["fadeout"] = true,
-							["skin"] = {
-								["ID"] = "Blizzard",
-							},
-							["position"] = {
-								["y"] = 32.7999974370002,
-								["x"] = -157.847925058721,
-								["point"] = "BOTTOM",
-								["scale"] = 0.800000011920929,
-							},
-							["padding"] = 0,
-							["version"] = 3,
-							["fadeoutalpha"] = 0,
-						}, -- [4]
-						{
-							["fadeoutalpha"] = 0,
-							["skin"] = {
-								["ID"] = "Blizzard",
-							},
-							["position"] = {
-								["y"] = -183.962554931641,
-								["x"] = -108.758483886719,
-								["point"] = "CENTER",
-								["scale"] = 0.75,
-							},
-							["padding"] = 0,
-							["visibility"] = {
-								["nocombat"] = true,
-							},
-							["version"] = 3,
-						}, -- [5]
-						{
-							["fadeoutalpha"] = 0,
-							["version"] = 3,
-							["skin"] = {
-								["ID"] = "Blizzard",
-							},
-							["position"] = {
-								["y"] = 63.1999948382377,
-								["x"] = -157.866089121491,
-								["point"] = "BOTTOM",
-								["scale"] = 0.800000011920929,
-							},
-							["padding"] = 0,
-							["visibility"] = {
-								["nocombat"] = false,
-								["overridebar"] = false,
-							},
-							["fadeout"] = true,
-						}, -- [6]
-						{
-							["enabled"] = true,
-							["version"] = 3,
-							["position"] = {
-								["y"] = -282.68701171875,
-								["x"] = 435.125915527344,
-								["point"] = "CENTER",
-							},
-						}, -- [7]
-						{
-						}, -- [8]
-						nil, -- [9]
-						{
-						}, -- [10]
-					},
-				},
-				["Git - Azuremyst"] = {
-					["actionbars"] = {
-						{
-							["fadeoutdelay"] = 0,
-							["fadeout"] = true,
-							["skin"] = {
-								["ID"] = "Blizzard",
-							},
-							["position"] = {
-								["y"] = -71.457482509903,
-								["x"] = -2.99998559082975,
-								["point"] = "LEFT",
-							},
-							["rows"] = 3,
-							["fadeoutalpha"] = 0,
-							["version"] = 3,
-						}, -- [1]
-						{
-							["position"] = {
-								["y"] = 44.6208181864254,
-								["x"] = -2.99998559082975,
-								["point"] = "LEFT",
-							},
-							["fadeout"] = true,
-							["skin"] = {
-								["ID"] = "Blizzard",
-							},
-							["fadeoutalpha"] = 0,
-							["rows"] = 3,
-							["version"] = 3,
-							["fadeoutdelay"] = 0,
-						}, -- [2]
-						{
-							["position"] = {
-								["y"] = 159.74468693477,
-								["x"] = -2.99998559082975,
-								["point"] = "LEFT",
-							},
-							["fadeout"] = true,
-							["skin"] = {
-								["ID"] = "Blizzard",
-							},
-							["version"] = 3,
-							["rows"] = 3,
-							["fadeoutalpha"] = 0,
-							["fadeoutdelay"] = 0,
-						}, -- [3]
-						{
-							["version"] = 3,
-							["skin"] = {
-								["ID"] = "Blizzard",
-							},
-							["rows"] = 12,
-							["padding"] = 5,
-							["position"] = {
-								["y"] = 610,
-								["x"] = -42,
-								["point"] = "BOTTOMRIGHT",
-							},
-						}, -- [4]
-						{
-							["version"] = 3,
-							["skin"] = {
-								["ID"] = "Blizzard",
-							},
-							["padding"] = 0,
-							["clickthrough"] = true,
-							["visibility"] = {
-								["nocombat"] = true,
-							},
-							["position"] = {
-								["y"] = -214.540060621136,
-								["x"] = -189.608283543793,
-								["point"] = "CENTER",
-							},
-						}, -- [5]
-						{
-							["position"] = {
-								["y"] = 44.0000019680818,
-								["x"] = -37.1110679226497,
-								["point"] = "BOTTOM",
-								["scale"] = 0.800000011920929,
-							},
-							["padding"] = 0,
-							["version"] = 3,
-							["skin"] = {
-								["ID"] = "Blizzard",
 							},
 						}, -- [6]
 						{
@@ -3518,14 +3368,179 @@ Bartender4DB = {
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-							["clickthrough"] = true,
 							["padding"] = 0,
+							["clickthrough"] = true,
 							["visibility"] = {
 								["nocombat"] = true,
 							},
 							["position"] = {
 								["y"] = -15.3050995599861,
 								["x"] = -199.423447065734,
+								["point"] = "CENTER",
+							},
+						}, -- [5]
+						{
+							["position"] = {
+								["y"] = 44.0000019680818,
+								["x"] = -37.1110679226497,
+								["point"] = "BOTTOM",
+								["scale"] = 0.800000011920929,
+							},
+							["padding"] = 0,
+							["version"] = 3,
+							["skin"] = {
+								["ID"] = "Blizzard",
+							},
+						}, -- [6]
+						{
+						}, -- [7]
+						{
+						}, -- [8]
+						nil, -- [9]
+						{
+						}, -- [10]
+					},
+				},
+				["Greny - Azuremyst"] = {
+					["actionbars"] = {
+						{
+							["padding"] = 6,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 41.75,
+								["x"] = -510,
+								["point"] = "BOTTOM",
+							},
+						}, -- [1]
+						{
+							["enabled"] = false,
+							["version"] = 3,
+							["position"] = {
+								["y"] = -189.499996309847,
+								["x"] = -231.500148273876,
+								["point"] = "CENTER",
+							},
+						}, -- [2]
+						{
+							["padding"] = 5,
+							["rows"] = 12,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 610,
+								["x"] = -82,
+								["point"] = "BOTTOMRIGHT",
+							},
+						}, -- [3]
+						{
+							["padding"] = 5,
+							["rows"] = 12,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 610,
+								["x"] = -42,
+								["point"] = "BOTTOMRIGHT",
+							},
+						}, -- [4]
+						{
+							["padding"] = 6,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 83,
+								["x"] = 3,
+								["point"] = "BOTTOM",
+							},
+						}, -- [5]
+						{
+							["padding"] = 6,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 83,
+								["x"] = -510,
+								["point"] = "BOTTOM",
+							},
+						}, -- [6]
+						{
+						}, -- [7]
+						{
+						}, -- [8]
+						nil, -- [9]
+						{
+						}, -- [10]
+					},
+				},
+				["Git - Azuremyst"] = {
+					["actionbars"] = {
+						{
+							["version"] = 3,
+							["fadeoutdelay"] = 0,
+							["skin"] = {
+								["ID"] = "Blizzard",
+							},
+							["position"] = {
+								["y"] = -71.457482509903,
+								["x"] = -2.99998559082975,
+								["point"] = "LEFT",
+							},
+							["rows"] = 3,
+							["fadeoutalpha"] = 0,
+							["fadeout"] = true,
+						}, -- [1]
+						{
+							["skin"] = {
+								["ID"] = "Blizzard",
+							},
+							["fadeoutdelay"] = 0,
+							["position"] = {
+								["y"] = 44.6208181864254,
+								["x"] = -2.99998559082975,
+								["point"] = "LEFT",
+							},
+							["fadeoutalpha"] = 0,
+							["rows"] = 3,
+							["version"] = 3,
+							["fadeout"] = true,
+						}, -- [2]
+						{
+							["skin"] = {
+								["ID"] = "Blizzard",
+							},
+							["fadeoutdelay"] = 0,
+							["position"] = {
+								["y"] = 159.74468693477,
+								["x"] = -2.99998559082975,
+								["point"] = "LEFT",
+							},
+							["version"] = 3,
+							["rows"] = 3,
+							["fadeoutalpha"] = 0,
+							["fadeout"] = true,
+						}, -- [3]
+						{
+							["version"] = 3,
+							["skin"] = {
+								["ID"] = "Blizzard",
+							},
+							["rows"] = 12,
+							["padding"] = 5,
+							["position"] = {
+								["y"] = 610,
+								["x"] = -42,
+								["point"] = "BOTTOMRIGHT",
+							},
+						}, -- [4]
+						{
+							["version"] = 3,
+							["skin"] = {
+								["ID"] = "Blizzard",
+							},
+							["clickthrough"] = true,
+							["padding"] = 0,
+							["visibility"] = {
+								["nocombat"] = true,
+							},
+							["position"] = {
+								["y"] = -214.540060621136,
+								["x"] = -189.608283543793,
 								["point"] = "CENTER",
 							},
 						}, -- [5]
@@ -3648,18 +3663,18 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
-							["fadeoutalpha"] = 0,
 							["fadeoutdelay"] = 0,
-							["position"] = {
-								["y"] = 159.74468693477,
-								["x"] = -2.99998559082975,
-								["point"] = "LEFT",
+							["fadeoutalpha"] = 0,
+							["skin"] = {
+								["ID"] = "Blizzard",
 							},
 							["fadeout"] = true,
 							["rows"] = 3,
 							["version"] = 3,
-							["skin"] = {
-								["ID"] = "Blizzard",
+							["position"] = {
+								["y"] = 159.74468693477,
+								["x"] = -2.99998559082975,
+								["point"] = "LEFT",
 							},
 						}, -- [3]
 						{
@@ -3712,110 +3727,93 @@ Bartender4DB = {
 						}, -- [10]
 					},
 				},
-				["Gitt - Arthas"] = {
+				["Healing"] = {
 					["actionbars"] = {
 						{
-							["fadeoutalpha"] = 0,
 							["fadeoutdelay"] = 0,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-							["padding"] = 0,
+							["fadeoutalpha"] = 0,
 							["rows"] = 3,
 							["position"] = {
-								["y"] = -127.502059936523,
-								["x"] = -4.00000858306885,
+								["y"] = -71.457482509903,
+								["x"] = -2.99998559082975,
 								["point"] = "LEFT",
 							},
 							["version"] = 3,
 						}, -- [1]
 						{
+							["fadeoutdelay"] = 0,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-							["fadeoutdelay"] = 0,
-							["position"] = {
-								["y"] = -16.4220581054688,
-								["x"] = -4.00000858306885,
-								["point"] = "LEFT",
-							},
-							["padding"] = 0,
+							["fadeoutalpha"] = 0,
 							["rows"] = 3,
 							["version"] = 3,
-							["fadeoutalpha"] = 0,
+							["position"] = {
+								["y"] = 44.6208181864254,
+								["x"] = -2.99998559082975,
+								["point"] = "LEFT",
+							},
 						}, -- [2]
 						{
+							["fadeoutdelay"] = 0,
+							["fadeoutalpha"] = 0,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-							["fadeoutdelay"] = 0,
-							["position"] = {
-								["y"] = 95.6004638671875,
-								["x"] = -4.00000858306885,
-								["point"] = "LEFT",
-							},
-							["padding"] = 0,
+							["fadeout"] = true,
 							["rows"] = 3,
 							["version"] = 3,
-							["fadeoutalpha"] = 0,
+							["position"] = {
+								["y"] = 159.74468693477,
+								["x"] = -2.99998559082975,
+								["point"] = "LEFT",
+							},
 						}, -- [3]
 						{
-							["fadeoutalpha"] = 0,
+							["version"] = 3,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-							["padding"] = 0,
+							["rows"] = 12,
 							["position"] = {
-								["y"] = 32.7999974370002,
-								["x"] = -157.847925058721,
-								["point"] = "BOTTOM",
-								["scale"] = 0.800000011920929,
+								["y"] = 610,
+								["x"] = -42,
+								["point"] = "BOTTOMRIGHT",
 							},
-							["version"] = 3,
+							["padding"] = 5,
 						}, -- [4]
 						{
-							["fadeoutalpha"] = 0,
-							["skin"] = {
-								["ID"] = "Blizzard",
-							},
-							["position"] = {
-								["y"] = -182.040405273438,
-								["x"] = 81.6469421386719,
-								["point"] = "CENTER",
-								["scale"] = 0.75,
-							},
-							["padding"] = 3,
-							["visibility"] = {
-								["nocombat"] = false,
-							},
 							["version"] = 3,
-						}, -- [5]
-						{
-							["fadeoutalpha"] = 0,
 							["skin"] = {
 								["ID"] = "Blizzard",
-							},
-							["position"] = {
-								["y"] = 63.1999948382377,
-								["x"] = -157.866089121491,
-								["point"] = "BOTTOM",
-								["scale"] = 0.800000011920929,
 							},
 							["padding"] = 0,
 							["visibility"] = {
 								["nocombat"] = false,
-								["overridebar"] = false,
 							},
-							["version"] = 3,
-						}, -- [6]
-						{
-							["enabled"] = true,
-							["version"] = 3,
 							["position"] = {
-								["y"] = -282.68701171875,
-								["x"] = 435.125915527344,
+								["y"] = -87.1575119819279,
+								["x"] = -201.130707410833,
 								["point"] = "CENTER",
 							},
+						}, -- [5]
+						{
+							["skin"] = {
+								["ID"] = "Blizzard",
+							},
+							["padding"] = 0,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 44.0000019680818,
+								["x"] = -37.1110679226497,
+								["point"] = "BOTTOM",
+								["scale"] = 0.800000011920929,
+							},
+						}, -- [6]
+						{
 						}, -- [7]
 						{
 						}, -- [8]
@@ -3827,49 +3825,49 @@ Bartender4DB = {
 				["Spih - Arthas"] = {
 					["actionbars"] = {
 						{
+							["version"] = 3,
 							["fadeoutdelay"] = 0,
-							["fadeoutalpha"] = 0,
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-							["rows"] = 3,
 							["padding"] = 0,
+							["rows"] = 3,
 							["position"] = {
 								["y"] = -127.502059936523,
 								["x"] = -4.00000858306885,
 								["point"] = "LEFT",
 							},
-							["version"] = 3,
+							["fadeoutalpha"] = 0,
 						}, -- [1]
 						{
+							["skin"] = {
+								["ID"] = "Blizzard",
+							},
+							["fadeoutdelay"] = 0,
 							["position"] = {
 								["y"] = -16.4220581054688,
 								["x"] = -4.00000858306885,
 								["point"] = "LEFT",
 							},
+							["padding"] = 0,
+							["rows"] = 3,
+							["version"] = 3,
 							["fadeoutalpha"] = 0,
+						}, -- [2]
+						{
 							["skin"] = {
 								["ID"] = "Blizzard",
 							},
-							["rows"] = 3,
-							["padding"] = 0,
-							["version"] = 3,
 							["fadeoutdelay"] = 0,
-						}, -- [2]
-						{
 							["position"] = {
 								["y"] = 95.6004638671875,
 								["x"] = -4.00000858306885,
 								["point"] = "LEFT",
 							},
-							["fadeoutalpha"] = 0,
-							["skin"] = {
-								["ID"] = "Blizzard",
-							},
-							["rows"] = 3,
 							["padding"] = 0,
+							["rows"] = 3,
 							["version"] = 3,
-							["fadeoutdelay"] = 0,
+							["fadeoutalpha"] = 0,
 						}, -- [3]
 						{
 							["fadeoutalpha"] = 0,
@@ -3968,8 +3966,8 @@ Bartender4DB = {
 				["Giitt - Silvermoon"] = {
 					["enabled"] = true,
 					["alpha"] = 1,
+					["fadeout"] = false,
 					["fadeoutalpha"] = 0.1,
-					["fadeoutdelay"] = 0.2,
 					["position"] = {
 						["y"] = 223,
 						["x"] = -31.5000915527344,
@@ -3985,7 +3983,7 @@ Bartender4DB = {
 						["stance"] = {
 						},
 					},
-					["fadeout"] = false,
+					["fadeoutdelay"] = 0.2,
 				},
 				["Gilt - Azuremyst"] = {
 					["version"] = 3,
@@ -4070,8 +4068,8 @@ Bartender4DB = {
 				["Ghit - Azuremyst"] = {
 					["enabled"] = true,
 					["alpha"] = 1,
+					["fadeoutalpha"] = 0.1,
 					["fadeoutdelay"] = 0.2,
-					["fadeout"] = false,
 					["position"] = {
 						["y"] = 223,
 						["x"] = -31.5000915527344,
@@ -4087,7 +4085,7 @@ Bartender4DB = {
 						},
 						["vehicleui"] = false,
 					},
-					["fadeoutalpha"] = 0.1,
+					["fadeout"] = false,
 				},
 				["Evyyn - Azuremyst"] = {
 					["version"] = 3,
@@ -4201,12 +4199,12 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
-				["Git - Cho'gall"] = {
+				["Ezyn Heals"] = {
 					["version"] = 3,
 					["position"] = {
-						["y"] = -58.2623291015625,
-						["x"] = -31.4999694824219,
-						["point"] = "TOP",
+						["y"] = 223,
+						["x"] = -31.5000915527344,
+						["point"] = "BOTTOM",
 					},
 				},
 				["Giitt - Feathermoon"] = {
@@ -4225,12 +4223,12 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
-				["Ezyn Heals"] = {
+				["Git - Cho'gall"] = {
 					["version"] = 3,
 					["position"] = {
-						["y"] = 223,
-						["x"] = -31.5000915527344,
-						["point"] = "BOTTOM",
+						["y"] = -58.2623291015625,
+						["x"] = -31.4999694824219,
+						["point"] = "TOP",
 					},
 				},
 				["Spih - Arthas"] = {
@@ -4266,10 +4264,10 @@ Bartender4DB = {
 				},
 				["Giitt - Silvermoon"] = {
 					["enabled"] = true,
-					["fadeout"] = false,
 					["hidehotkey"] = false,
+					["version"] = 3,
 					["hidemacrotext"] = false,
-					["fadeoutalpha"] = 0.1,
+					["fadeoutdelay"] = 0.2,
 					["rows"] = 1,
 					["alpha"] = 1,
 					["skin"] = {
@@ -4280,9 +4278,9 @@ Bartender4DB = {
 						["Backdrop"] = true,
 						["Gloss"] = 0,
 					},
-					["fadeoutdelay"] = 0.2,
-					["hideequipped"] = false,
-					["version"] = 3,
+					["fadeout"] = false,
+					["vertical"] = false,
+					["fadeoutalpha"] = 0.1,
 					["position"] = {
 						["growHorizontal"] = "RIGHT",
 						["x"] = 37.5,
@@ -4291,15 +4289,15 @@ Bartender4DB = {
 						["growVertical"] = "DOWN",
 						["y"] = 41.75,
 					},
-					["vertical"] = false,
-					["clickthrough"] = false,
+					["hideequipped"] = false,
+					["padding"] = -3,
 					["visibility"] = {
 						["possess"] = false,
 						["stance"] = {
 						},
 						["vehicleui"] = true,
 					},
-					["padding"] = -3,
+					["clickthrough"] = false,
 				},
 				["Gilt - Azuremyst"] = {
 					["version"] = 3,
@@ -4407,10 +4405,10 @@ Bartender4DB = {
 				},
 				["Ghit - Azuremyst"] = {
 					["enabled"] = true,
-					["hidehotkey"] = false,
 					["fadeoutdelay"] = 0.2,
+					["fadeout"] = false,
 					["hidemacrotext"] = false,
-					["version"] = 3,
+					["fadeoutalpha"] = 0.1,
 					["rows"] = 1,
 					["alpha"] = 1,
 					["position"] = {
@@ -4421,9 +4419,9 @@ Bartender4DB = {
 						["growVertical"] = "DOWN",
 						["growHorizontal"] = "RIGHT",
 					},
-					["fadeoutalpha"] = 0.1,
-					["hideequipped"] = false,
-					["fadeout"] = false,
+					["hidehotkey"] = false,
+					["vertical"] = false,
+					["version"] = 3,
 					["skin"] = {
 						["Zoom"] = false,
 						["Colors"] = {
@@ -4432,15 +4430,15 @@ Bartender4DB = {
 						["Backdrop"] = true,
 						["Gloss"] = 0,
 					},
-					["vertical"] = false,
-					["clickthrough"] = false,
+					["hideequipped"] = false,
+					["padding"] = -3,
 					["visibility"] = {
 						["possess"] = false,
 						["stance"] = {
 						},
 						["vehicleui"] = true,
 					},
-					["padding"] = -3,
+					["clickthrough"] = false,
 				},
 				["Evyyn - Azuremyst"] = {
 					["enabled"] = false,
@@ -4517,7 +4515,8 @@ Bartender4DB = {
 					},
 					["version"] = 3,
 				},
-				["Greny - Azuremyst"] = {
+				["Git - Cho'gall"] = {
+					["enabled"] = false,
 					["version"] = 3,
 					["position"] = {
 						["y"] = 41.75,
@@ -4526,7 +4525,7 @@ Bartender4DB = {
 						["scale"] = 1,
 					},
 				},
-				["Healing"] = {
+				["Gitt - Arthas"] = {
 					["enabled"] = false,
 					["version"] = 3,
 					["position"] = {
@@ -4566,8 +4565,17 @@ Bartender4DB = {
 						["scale"] = 1,
 					},
 				},
-				["Git - Cho'gall"] = {
+				["Ezyn Heals"] = {
 					["enabled"] = false,
+					["version"] = 3,
+					["position"] = {
+						["y"] = 41.75,
+						["x"] = 37.5,
+						["point"] = "BOTTOM",
+						["scale"] = 1,
+					},
+				},
+				["Greny - Azuremyst"] = {
 					["version"] = 3,
 					["position"] = {
 						["y"] = 41.75,
@@ -4577,16 +4585,6 @@ Bartender4DB = {
 					},
 				},
 				["Git - Azuremyst"] = {
-					["enabled"] = false,
-					["version"] = 3,
-					["position"] = {
-						["y"] = 41.75,
-						["x"] = 37.5,
-						["point"] = "BOTTOM",
-						["scale"] = 1,
-					},
-				},
-				["Ezyn Heals"] = {
 					["enabled"] = false,
 					["version"] = 3,
 					["position"] = {
@@ -4615,7 +4613,7 @@ Bartender4DB = {
 						["scale"] = 1,
 					},
 				},
-				["Gitt - Arthas"] = {
+				["Healing"] = {
 					["enabled"] = false,
 					["version"] = 3,
 					["position"] = {
@@ -4649,8 +4647,8 @@ Bartender4DB = {
 				},
 				["Giitt - Silvermoon"] = {
 					["enabled"] = false,
+					["fadeout"] = false,
 					["fadeoutalpha"] = 0.1,
-					["fadeoutdelay"] = 0.2,
 					["position"] = {
 						["scale"] = 1,
 						["growVertical"] = "DOWN",
@@ -4663,12 +4661,12 @@ Bartender4DB = {
 						["stance"] = {
 						},
 					},
-					["fadeout"] = false,
+					["fadeoutdelay"] = 0.2,
 				},
 				["Ghit - Azuremyst"] = {
 					["enabled"] = false,
+					["fadeoutalpha"] = 0.1,
 					["fadeoutdelay"] = 0.2,
-					["fadeout"] = false,
 					["position"] = {
 						["scale"] = 1,
 						["growVertical"] = "DOWN",
@@ -4681,7 +4679,7 @@ Bartender4DB = {
 						["stance"] = {
 						},
 					},
-					["fadeoutalpha"] = 0.1,
+					["fadeout"] = false,
 				},
 				["Git - Arthas"] = {
 					["position"] = {
@@ -4698,8 +4696,8 @@ Bartender4DB = {
 				["Ghit - Azuremyst"] = {
 					["enabled"] = true,
 					["alpha"] = 1,
+					["version"] = 3,
 					["fadeoutdelay"] = 0.2,
-					["fadeoutalpha"] = 0.1,
 					["position"] = {
 						["growHorizontal"] = "RIGHT",
 						["x"] = -114.500122070313,
@@ -4715,7 +4713,7 @@ Bartender4DB = {
 						},
 						["vehicleui"] = true,
 					},
-					["version"] = 3,
+					["fadeoutalpha"] = 0.1,
 				},
 			},
 		},
@@ -4739,7 +4737,7 @@ Bartender4DB = {
 				},
 				["Giitt - Silvermoon"] = {
 					["enabled"] = true,
-					["rightCap"] = "DWARF",
+					["fadeoutdelay"] = 0.2,
 					["visibility"] = {
 						["possess"] = false,
 						["vehicleui"] = true,
@@ -4748,9 +4746,9 @@ Bartender4DB = {
 					},
 					["alpha"] = 1,
 					["artLayout"] = "CLASSIC",
-					["fadeoutdelay"] = 0.2,
+					["rightCap"] = "DWARF",
 					["leftCap"] = "DWARF",
-					["fadeout"] = false,
+					["version"] = 3,
 					["position"] = {
 						["growHorizontal"] = "RIGHT",
 						["x"] = -512,
@@ -4762,7 +4760,7 @@ Bartender4DB = {
 					["fadeoutalpha"] = 0.1,
 					["clickthrough"] = false,
 					["artSkin"] = "DWARF",
-					["version"] = 3,
+					["fadeout"] = false,
 				},
 				["Gilt - Azuremyst"] = {
 					["version"] = 3,
@@ -4859,13 +4857,13 @@ Bartender4DB = {
 				},
 				["Ghit - Azuremyst"] = {
 					["enabled"] = true,
-					["fadeout"] = false,
+					["fadeoutdelay"] = 0.2,
 					["artSkin"] = "DWARF",
 					["alpha"] = 1,
 					["artLayout"] = "CLASSIC",
-					["fadeoutdelay"] = 0.2,
+					["fadeout"] = false,
 					["leftCap"] = "DWARF",
-					["fadeoutalpha"] = 0.1,
+					["rightCap"] = "DWARF",
 					["position"] = {
 						["y"] = 47,
 						["x"] = -512,
@@ -4882,7 +4880,7 @@ Bartender4DB = {
 						},
 						["vehicleui"] = true,
 					},
-					["rightCap"] = "DWARF",
+					["fadeoutalpha"] = 0.1,
 				},
 				["Evyyn - Azuremyst"] = {
 					["version"] = 3,
@@ -4952,8 +4950,7 @@ Bartender4DB = {
 					},
 					["version"] = 3,
 				},
-				["Greny - Azuremyst"] = {
-					["enabled"] = true,
+				["Git - Cho'gall"] = {
 					["version"] = 3,
 					["position"] = {
 						["y"] = 47,
@@ -4961,7 +4958,7 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
-				["Healing"] = {
+				["Gitt - Arthas"] = {
 					["version"] = 3,
 					["position"] = {
 						["y"] = 47,
@@ -4993,7 +4990,16 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
-				["Git - Cho'gall"] = {
+				["Ezyn Heals"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 47,
+						["x"] = -512,
+						["point"] = "BOTTOM",
+					},
+				},
+				["Greny - Azuremyst"] = {
+					["enabled"] = true,
 					["version"] = 3,
 					["position"] = {
 						["y"] = 47,
@@ -5002,14 +5008,6 @@ Bartender4DB = {
 					},
 				},
 				["Git - Azuremyst"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 47,
-						["x"] = -512,
-						["point"] = "BOTTOM",
-					},
-				},
-				["Ezyn Heals"] = {
 					["version"] = 3,
 					["position"] = {
 						["y"] = 47,
@@ -5034,7 +5032,7 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
-				["Gitt - Arthas"] = {
+				["Healing"] = {
 					["version"] = 3,
 					["position"] = {
 						["y"] = 47,
@@ -5092,7 +5090,7 @@ Bartender4DB = {
 					["alpha"] = 1,
 					["fadeoutdelay"] = 0.2,
 					["fadeoutalpha"] = 0.1,
-					["hidehotkey"] = false,
+					["version"] = 3,
 					["position"] = {
 						["growHorizontal"] = "RIGHT",
 						["x"] = 463.5,
@@ -5109,7 +5107,7 @@ Bartender4DB = {
 						},
 						["vehicleui"] = true,
 					},
-					["version"] = 3,
+					["hidehotkey"] = false,
 				},
 				["Gilt - Azuremyst"] = {
 					["enabled"] = false,
@@ -5298,7 +5296,8 @@ Bartender4DB = {
 					},
 					["version"] = 3,
 				},
-				["Greny - Azuremyst"] = {
+				["Git - Cho'gall"] = {
+					["enabled"] = false,
 					["onebag"] = true,
 					["version"] = 3,
 					["position"] = {
@@ -5307,7 +5306,7 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
-				["Healing"] = {
+				["Gitt - Arthas"] = {
 					["enabled"] = false,
 					["onebag"] = true,
 					["version"] = 3,
@@ -5347,8 +5346,17 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
-				["Git - Cho'gall"] = {
+				["Ezyn Heals"] = {
 					["enabled"] = false,
+					["onebag"] = true,
+					["version"] = 3,
+					["position"] = {
+						["y"] = 41.75,
+						["x"] = 463.5,
+						["point"] = "BOTTOM",
+					},
+				},
+				["Greny - Azuremyst"] = {
 					["onebag"] = true,
 					["version"] = 3,
 					["position"] = {
@@ -5358,16 +5366,6 @@ Bartender4DB = {
 					},
 				},
 				["Git - Azuremyst"] = {
-					["enabled"] = false,
-					["onebag"] = true,
-					["version"] = 3,
-					["position"] = {
-						["y"] = 41.75,
-						["x"] = 463.5,
-						["point"] = "BOTTOM",
-					},
-				},
-				["Ezyn Heals"] = {
 					["enabled"] = false,
 					["onebag"] = true,
 					["version"] = 3,
@@ -5396,7 +5394,7 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
-				["Gitt - Arthas"] = {
+				["Healing"] = {
 					["enabled"] = false,
 					["onebag"] = true,
 					["version"] = 3,
@@ -5537,12 +5535,12 @@ Bartender4DB = {
 				},
 				["Ghit - Azuremyst"] = {
 					["enabled"] = true,
+					["version"] = 3,
 					["hidehotkey"] = false,
-					["fadeout"] = false,
 					["clickthrough"] = false,
 					["rows"] = 1,
 					["alpha"] = 1,
-					["fadeoutdelay"] = 0.2,
+					["fadeoutalpha"] = 0.1,
 					["skin"] = {
 						["Zoom"] = false,
 						["Colors"] = {
@@ -5552,7 +5550,7 @@ Bartender4DB = {
 						["Gloss"] = 0,
 					},
 					["hideequipped"] = false,
-					["fadeoutalpha"] = 0.1,
+					["fadeoutdelay"] = 0.2,
 					["position"] = {
 						["growHorizontal"] = "RIGHT",
 						["x"] = 53.5000305175781,
@@ -5561,8 +5559,8 @@ Bartender4DB = {
 						["y"] = 51.5,
 						["growVertical"] = "DOWN",
 					},
-					["version"] = 3,
-					["padding"] = 2,
+					["fadeout"] = false,
+					["hidemacrotext"] = false,
 					["visibility"] = {
 						["customdata"] = "[target=vehicle,exists]show;hide",
 						["vehicleui"] = true,
@@ -5570,7 +5568,7 @@ Bartender4DB = {
 						["stance"] = {
 						},
 					},
-					["hidemacrotext"] = false,
+					["padding"] = 2,
 				},
 				["Evyyn - Azuremyst"] = {
 					["version"] = 3,
@@ -5638,7 +5636,8 @@ Bartender4DB = {
 						["point"] = "CENTER",
 					},
 				},
-				["Greny - Azuremyst"] = {
+				["Git - Cho'gall"] = {
+					["enabled"] = false,
 					["version"] = 3,
 					["position"] = {
 						["y"] = 51.50002653396,
@@ -5646,7 +5645,8 @@ Bartender4DB = {
 						["point"] = "CENTER",
 					},
 				},
-				["Healing"] = {
+				["Gitt - Arthas"] = {
+					["enabled"] = false,
 					["version"] = 3,
 					["position"] = {
 						["y"] = 51.50002653396,
@@ -5678,8 +5678,15 @@ Bartender4DB = {
 						["point"] = "CENTER",
 					},
 				},
-				["Git - Cho'gall"] = {
-					["enabled"] = false,
+				["Ezyn Heals"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 51.50002653396,
+						["x"] = 53.499795565504,
+						["point"] = "CENTER",
+					},
+				},
+				["Greny - Azuremyst"] = {
 					["version"] = 3,
 					["position"] = {
 						["y"] = 51.50002653396,
@@ -5688,14 +5695,6 @@ Bartender4DB = {
 					},
 				},
 				["Git - Azuremyst"] = {
-					["version"] = 3,
-					["position"] = {
-						["y"] = 51.50002653396,
-						["x"] = 53.499795565504,
-						["point"] = "CENTER",
-					},
-				},
-				["Ezyn Heals"] = {
 					["version"] = 3,
 					["position"] = {
 						["y"] = 51.50002653396,
@@ -5719,8 +5718,7 @@ Bartender4DB = {
 						["point"] = "CENTER",
 					},
 				},
-				["Gitt - Arthas"] = {
-					["enabled"] = false,
+				["Healing"] = {
 					["version"] = 3,
 					["position"] = {
 						["y"] = 51.50002653396,
@@ -5764,12 +5762,12 @@ Bartender4DB = {
 				},
 				["Giitt - Silvermoon"] = {
 					["enabled"] = true,
-					["padding"] = 2,
-					["fadeout"] = false,
 					["hidemacrotext"] = false,
+					["fadeoutdelay"] = 0.2,
+					["padding"] = 2,
 					["rows"] = 1,
 					["alpha"] = 1,
-					["hidehotkey"] = true,
+					["version"] = 3,
 					["position"] = {
 						["growHorizontal"] = "RIGHT",
 						["x"] = -460,
@@ -5779,7 +5777,7 @@ Bartender4DB = {
 						["y"] = 116,
 					},
 					["hideequipped"] = false,
-					["fadeoutalpha"] = 0.1,
+					["hidehotkey"] = true,
 					["skin"] = {
 						["Zoom"] = false,
 						["Colors"] = {
@@ -5788,14 +5786,14 @@ Bartender4DB = {
 						["Backdrop"] = true,
 						["Gloss"] = 0,
 					},
-					["fadeoutdelay"] = 0.2,
+					["fadeout"] = false,
 					["clickthrough"] = false,
 					["visibility"] = {
 						["stance"] = {
 						},
 						["vehicleui"] = true,
 					},
-					["version"] = 3,
+					["fadeoutalpha"] = 0.1,
 				},
 				["Gilt - Azuremyst"] = {
 					["skin"] = {
@@ -5919,12 +5917,12 @@ Bartender4DB = {
 				},
 				["Ghit - Azuremyst"] = {
 					["enabled"] = true,
+					["fadeoutalpha"] = 0.1,
 					["fadeoutdelay"] = 0.2,
-					["version"] = 3,
 					["padding"] = 2,
 					["rows"] = 1,
 					["alpha"] = 1,
-					["hidehotkey"] = true,
+					["fadeout"] = false,
 					["position"] = {
 						["y"] = -15.0000228881836,
 						["x"] = -82.5000915527344,
@@ -5934,7 +5932,7 @@ Bartender4DB = {
 						["growHorizontal"] = "RIGHT",
 					},
 					["hideequipped"] = false,
-					["fadeout"] = false,
+					["hidehotkey"] = true,
 					["skin"] = {
 						["Zoom"] = false,
 						["Colors"] = {
@@ -5943,14 +5941,14 @@ Bartender4DB = {
 						["Backdrop"] = true,
 						["Gloss"] = 0,
 					},
-					["fadeoutalpha"] = 0.1,
-					["clickthrough"] = false,
+					["version"] = 3,
+					["hidemacrotext"] = false,
 					["visibility"] = {
 						["stance"] = {
 						},
 						["vehicleui"] = true,
 					},
-					["hidemacrotext"] = false,
+					["clickthrough"] = false,
 				},
 				["Evyyn - Azuremyst"] = {
 					["position"] = {
@@ -6028,36 +6026,45 @@ Bartender4DB = {
 					["skin"] = {
 						["ID"] = "Blizzard",
 					},
-					["fadeout"] = true,
+					["fadeoutalpha"] = 0,
 					["position"] = {
 						["y"] = -250.82159579912,
 						["x"] = -4.60000641346028,
 						["point"] = "LEFT",
 						["scale"] = 1.15000009536743,
 					},
-					["version"] = 3,
+					["fadeout"] = true,
 					["padding"] = 0,
-					["fadeoutalpha"] = 0,
-				},
-				["Greny - Azuremyst"] = {
 					["version"] = 3,
-					["position"] = {
-						["y"] = 116,
-						["x"] = -460,
-						["point"] = "BOTTOM",
-						["scale"] = 1,
-					},
 				},
-				["Healing"] = {
-					["position"] = {
-						["y"] = -197.142271578277,
-						["x"] = -3.00000246010224,
-						["point"] = "LEFT",
-						["scale"] = 1,
-					},
+				["Git - Cho'gall"] = {
 					["version"] = 3,
 					["skin"] = {
 						["ID"] = "Blizzard",
+					},
+					["fadeout"] = true,
+					["padding"] = 0,
+					["fadeoutalpha"] = 0,
+					["position"] = {
+						["y"] = -239.048606694145,
+						["x"] = -4.59999791383723,
+						["point"] = "LEFT",
+						["scale"] = 1.15000009536743,
+					},
+				},
+				["Gitt - Arthas"] = {
+					["fadeoutalpha"] = 0,
+					["skin"] = {
+						["ID"] = "Blizzard",
+					},
+					["fadeout"] = true,
+					["padding"] = 0,
+					["version"] = 3,
+					["position"] = {
+						["y"] = -239.048606694145,
+						["x"] = -4.59999791383723,
+						["point"] = "LEFT",
+						["scale"] = 1.15000009536743,
 					},
 				},
 				["Gimm"] = {
@@ -6096,19 +6103,25 @@ Bartender4DB = {
 						["ID"] = "Blizzard",
 					},
 				},
-				["Git - Cho'gall"] = {
-					["version"] = 3,
+				["Ezyn Heals"] = {
 					["skin"] = {
 						["ID"] = "Blizzard",
 					},
-					["fadeout"] = true,
-					["padding"] = 0,
-					["fadeoutalpha"] = 0,
+					["version"] = 3,
 					["position"] = {
-						["y"] = -239.048606694145,
-						["x"] = -4.59999791383723,
+						["y"] = -197.142271578277,
+						["x"] = -3.00000246010224,
 						["point"] = "LEFT",
-						["scale"] = 1.15000009536743,
+						["scale"] = 1,
+					},
+				},
+				["Greny - Azuremyst"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 116,
+						["x"] = -460,
+						["point"] = "BOTTOM",
+						["scale"] = 1,
 					},
 				},
 				["Git - Azuremyst"] = {
@@ -6121,18 +6134,6 @@ Bartender4DB = {
 					["version"] = 3,
 					["skin"] = {
 						["ID"] = "Blizzard",
-					},
-				},
-				["Ezyn Heals"] = {
-					["skin"] = {
-						["ID"] = "Blizzard",
-					},
-					["version"] = 3,
-					["position"] = {
-						["y"] = -197.142271578277,
-						["x"] = -3.00000246010224,
-						["point"] = "LEFT",
-						["scale"] = 1,
 					},
 				},
 				["Giitt - Feathermoon"] = {
@@ -6156,19 +6157,16 @@ Bartender4DB = {
 						["ID"] = "Blizzard",
 					},
 				},
-				["Gitt - Arthas"] = {
-					["fadeoutalpha"] = 0,
+				["Healing"] = {
+					["position"] = {
+						["y"] = -197.142271578277,
+						["x"] = -3.00000246010224,
+						["point"] = "LEFT",
+						["scale"] = 1,
+					},
+					["version"] = 3,
 					["skin"] = {
 						["ID"] = "Blizzard",
-					},
-					["fadeout"] = true,
-					["padding"] = 0,
-					["version"] = 3,
-					["position"] = {
-						["y"] = -239.048606694145,
-						["x"] = -4.59999791383723,
-						["point"] = "LEFT",
-						["scale"] = 1.15000009536743,
 					},
 				},
 				["Spih - Arthas"] = {
@@ -6325,12 +6323,12 @@ Bartender4DB = {
 				},
 				["Ghit - Azuremyst"] = {
 					["enabled"] = true,
+					["version"] = 3,
 					["hidehotkey"] = true,
-					["fadeout"] = false,
 					["clickthrough"] = false,
 					["rows"] = 1,
 					["alpha"] = 1,
-					["fadeoutdelay"] = 0.2,
+					["fadeoutalpha"] = 0.1,
 					["position"] = {
 						["y"] = 116,
 						["x"] = -460,
@@ -6340,7 +6338,7 @@ Bartender4DB = {
 						["growVertical"] = "DOWN",
 					},
 					["hideequipped"] = false,
-					["fadeoutalpha"] = 0.1,
+					["fadeoutdelay"] = 0.2,
 					["skin"] = {
 						["Zoom"] = false,
 						["Colors"] = {
@@ -6349,8 +6347,8 @@ Bartender4DB = {
 						["Backdrop"] = true,
 						["Gloss"] = 0,
 					},
-					["version"] = 3,
-					["hidemacrotext"] = false,
+					["fadeout"] = false,
+					["padding"] = 2,
 					["visibility"] = {
 						["nopet"] = true,
 						["vehicle"] = true,
@@ -6358,7 +6356,7 @@ Bartender4DB = {
 						["stance"] = {
 						},
 					},
-					["padding"] = 2,
+					["hidemacrotext"] = false,
 				},
 				["Evyyn - Azuremyst"] = {
 					["skin"] = {
@@ -6436,15 +6434,18 @@ Bartender4DB = {
 						["point"] = "CENTER",
 					},
 				},
-				["Greny - Azuremyst"] = {
-					["version"] = 3,
+				["Git - Cho'gall"] = {
 					["position"] = {
-						["y"] = 116,
-						["x"] = -120,
-						["point"] = "BOTTOM",
+						["y"] = -248.686940954946,
+						["x"] = 435.125960538133,
+						["point"] = "CENTER",
+					},
+					["version"] = 3,
+					["skin"] = {
+						["ID"] = "Blizzard",
 					},
 				},
-				["Healing"] = {
+				["Gitt - Arthas"] = {
 					["position"] = {
 						["y"] = -248.686940954946,
 						["x"] = 435.125960538133,
@@ -6488,29 +6489,26 @@ Bartender4DB = {
 						["ID"] = "Blizzard",
 					},
 				},
-				["Git - Cho'gall"] = {
+				["Ezyn Heals"] = {
+					["skin"] = {
+						["ID"] = "Blizzard",
+					},
+					["version"] = 3,
 					["position"] = {
 						["y"] = -248.686940954946,
 						["x"] = 435.125960538133,
 						["point"] = "CENTER",
 					},
+				},
+				["Greny - Azuremyst"] = {
 					["version"] = 3,
-					["skin"] = {
-						["ID"] = "Blizzard",
+					["position"] = {
+						["y"] = 116,
+						["x"] = -120,
+						["point"] = "BOTTOM",
 					},
 				},
 				["Git - Azuremyst"] = {
-					["skin"] = {
-						["ID"] = "Blizzard",
-					},
-					["version"] = 3,
-					["position"] = {
-						["y"] = -248.686940954946,
-						["x"] = 435.125960538133,
-						["point"] = "CENTER",
-					},
-				},
-				["Ezyn Heals"] = {
 					["skin"] = {
 						["ID"] = "Blizzard",
 					},
@@ -6540,7 +6538,7 @@ Bartender4DB = {
 						["point"] = "CENTER",
 					},
 				},
-				["Gitt - Arthas"] = {
+				["Healing"] = {
 					["position"] = {
 						["y"] = -248.686940954946,
 						["x"] = 435.125960538133,
@@ -6568,8 +6566,8 @@ Bartender4DB = {
 			["profiles"] = {
 				["Ghit - Azuremyst"] = {
 					["enabled"] = false,
+					["fadeoutdelay"] = 0.2,
 					["fadeout"] = false,
-					["fadeoutalpha"] = 0.1,
 					["position"] = {
 						["scale"] = 1,
 						["growVertical"] = "DOWN",
@@ -6582,7 +6580,7 @@ Bartender4DB = {
 					},
 					["clickthrough"] = false,
 					["alpha"] = 1,
-					["fadeoutdelay"] = 0.2,
+					["fadeoutalpha"] = 0.1,
 				},
 			},
 		},
@@ -6605,12 +6603,12 @@ Bartender4DB = {
 		["Git - Arthas"] = "Git - Arthas",
 		["Lihte - Arthas"] = "Lihte - Arthas",
 		["Gitt - Arthas"] = "Gitt - Arthas",
-		["Git - Cho'gall"] = "Git - Cho'gall",
-		["Spih - Cho'gall"] = "Spih - Cho'gall",
 		["Git - Azuremyst"] = "Git",
+		["Spih - Cho'gall"] = "Spih - Cho'gall",
+		["Greny - Azuremyst"] = "Greny - Azuremyst",
 		["Burk - Azuremyst"] = "Healing",
 		["Burk - Arthas"] = "Burk - Arthas",
-		["Greny - Azuremyst"] = "Greny - Azuremyst",
+		["Git - Cho'gall"] = "Git - Cho'gall",
 		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
 		["Lihte - Cho'gall"] = "Lihte - Cho'gall",
 		["Gimm - Cho'gall"] = "Gimm",
@@ -6776,14 +6774,24 @@ Bartender4DB = {
 			["selfcastmodifier"] = false,
 			["outofrange"] = "hotkey",
 		},
-		["Greny - Azuremyst"] = {
+		["Git - Cho'gall"] = {
 			["focuscastmodifier"] = false,
+			["minimapIcon"] = {
+				["hide"] = true,
+			},
+			["buttonlock"] = true,
 			["blizzardVehicle"] = true,
+			["selfcastmodifier"] = false,
 			["outofrange"] = "hotkey",
 		},
-		["Healing"] = {
+		["Gitt - Arthas"] = {
 			["focuscastmodifier"] = false,
+			["selfcastmodifier"] = false,
+			["buttonlock"] = true,
 			["blizzardVehicle"] = true,
+			["minimapIcon"] = {
+				["hide"] = true,
+			},
 			["outofrange"] = "hotkey",
 		},
 		["Gimm"] = {
@@ -6808,22 +6816,17 @@ Bartender4DB = {
 			["blizzardVehicle"] = true,
 			["outofrange"] = "hotkey",
 		},
-		["Git - Cho'gall"] = {
+		["Ezyn Heals"] = {
 			["focuscastmodifier"] = false,
-			["minimapIcon"] = {
-				["hide"] = true,
-			},
-			["buttonlock"] = true,
 			["blizzardVehicle"] = true,
-			["selfcastmodifier"] = false,
+			["outofrange"] = "hotkey",
+		},
+		["Greny - Azuremyst"] = {
+			["focuscastmodifier"] = false,
+			["blizzardVehicle"] = true,
 			["outofrange"] = "hotkey",
 		},
 		["Git - Azuremyst"] = {
-			["focuscastmodifier"] = false,
-			["blizzardVehicle"] = true,
-			["outofrange"] = "hotkey",
-		},
-		["Ezyn Heals"] = {
 			["focuscastmodifier"] = false,
 			["blizzardVehicle"] = true,
 			["outofrange"] = "hotkey",
@@ -6838,14 +6841,9 @@ Bartender4DB = {
 			["blizzardVehicle"] = true,
 			["outofrange"] = "hotkey",
 		},
-		["Gitt - Arthas"] = {
+		["Healing"] = {
 			["focuscastmodifier"] = false,
-			["selfcastmodifier"] = false,
-			["buttonlock"] = true,
 			["blizzardVehicle"] = true,
-			["minimapIcon"] = {
-				["hide"] = true,
-			},
 			["outofrange"] = "hotkey",
 		},
 		["Spih - Arthas"] = {

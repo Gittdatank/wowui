@@ -560,7 +560,7 @@ CombatReplay: enabled
 CombatReplay_Logger: enabled
 CombatReplay_SavedData: enabled
 DiminishingReturns: disabled
-BL_Cooldown: disabled
+BL_Cooldown: enabled
 BigWigs_Core: enabled
 BigWigs_CommonAuras: disabled
 BigWigs_Options: enabled
@@ -656,3 +656,5 @@ VEM-StatusBarTimers: disabled
 BigWigs_LustingOnTrash: disabled
 SavedInstances: enabled
 GatherMate_Sharing: disabled
+BulkOrder: enabled
+AngryAssignments: enabled
