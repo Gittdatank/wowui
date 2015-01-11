@@ -15,7 +15,11 @@ P['general'] = {
 	['autoAcceptInvite'] = false,
 	['bottomPanel'] = true,
 	['hideErrorFrame'] = true,
+	['objectiveFrameHeight'] = 480,
+	['bonusObjectivePosition'] = "LEFT",
 
+	['afk'] = true,
+	
 	["fontSize"] = 12,
 	["font"] = "ElvUI Font",
 
@@ -27,6 +31,44 @@ P['general'] = {
 	['minimap'] = {
 		['size'] = 176,
 		['locationText'] = 'MOUSEOVER',
+		['icons'] = {
+			['garrison'] = {
+				['scale'] = 0.8,
+				['position'] = "TOPLEFT",
+				['xOffset'] = 0,
+				['yOffset'] = 0,
+			},
+			['calendar'] = {
+				['scale'] = 1,
+				['position'] = "TOPRIGHT",
+				['xOffset'] = 0,
+				['yOffset'] = 0,
+			},
+			['mail'] = {
+				['scale'] = 1,
+				['position'] = "TOPRIGHT",
+				['xOffset'] = 3,
+				['yOffset'] = 4,
+			},
+			['lfgEye'] = {
+				['scale'] = 1,
+				['position'] = "BOTTOMRIGHT",
+				['xOffset'] = 3,
+				['yOffset'] = 0,
+			},
+			['difficulty'] = {
+				['scale'] = 1,
+				['position'] = "TOPLEFT",
+				['xOffset'] = 0,
+				['yOffset'] = 0,
+			},
+			['challengeMode'] = {
+				['scale'] = 1,
+				['position'] = "TOPLEFT",
+				['xOffset'] = 8,
+				['yOffset'] = -8,
+			},
+		}
 	},	
 	
 	['experience'] = {
@@ -67,12 +109,16 @@ P['bags'] = {
     ['sortInverted'] = true,
 	['xOffset'] = 0,
 	['yOffset'] = 0,
+	['xOffsetBank'] = 0,
+	['yOffsetBank'] = 0,
 	['bagSize'] = 34,
 	['bankSize'] = 34,
 	['alignToChat'] = true,
 	['bagWidth'] = 350,
 	['bankWidth'] = 350,
 	['currencyFormat'] = 'ICON_TEXT',
+	['moneyFormat'] = 'SMART',
+	['moneyCoins'] = true,
 	['ignoreItems'] = '',
 	['bagBar'] = {
 		['growthDirection'] = 'VERTICAL',
@@ -90,10 +136,12 @@ P["nameplate"] = {
 	['fontSize'] = 7,
 	['fontOutline'] = 'MONOCHROMEOUTLINE',
 	["smallPlates"] = true,
-	["comboPoints"] = true,
+	["comboPoints"] = false,
 	['nonTargetAlpha'] = 0.6,
 	['combatHide'] = false,
 	['colorNameByValue'] =  true,
+	['showName'] = true,
+	['showLevel'] = true,
 	['targetIndicator'] = {
 		['enable'] = true,
 		['style'] = 'glow',
@@ -183,9 +231,11 @@ P['auras'] = {
 		['enable'] = true,
 		['filter'] = true,
 		['durations'] = true,
+		['position'] = "RIGHT",
 		['font'] = 'ElvUI Pixel',
 		['fontSize'] = 10,
 		['fontOutline'] = 'MONOCHROMEOUTLINE',
+		['reverseStyle'] = false,
 	},
 	
 	['fadeThreshold'] = 5,
@@ -232,8 +282,11 @@ P['chat'] = {
 	['lfgIcons'] = true,
 	['timeStampFormat'] = 'NONE',
 	['keywords'] = '%MYNAME%, ElvUI',
+	['separateSizes'] = false,
 	['panelWidth'] = 412,
 	['panelHeight'] = 180,
+	['panelWidthRight'] = 412,
+	['panelHeightRight'] = 180,
 	['panelBackdropNameLeft'] = '',
 	['panelBackdropNameRight'] = '',
 	['panelBackdrop'] = 'SHOWBOTH',
@@ -256,7 +309,7 @@ P['datatexts'] = {
 		['LeftChatDataPanel'] = {
 			['left'] = 'Talent/Loot Specialization',
 			['middle'] = 'Durability',
-			['right'] = 'Combat/Arena Time',
+			['right'] = 'Garrison',
 		},
 		['RightChatDataPanel'] = {
 			['left'] = 'System',
@@ -273,6 +326,8 @@ P['datatexts'] = {
 	['leftChatPanel'] = true,
 	['rightChatPanel'] = true,
 	['panelTransparency'] = false,
+	['goldFormat'] = 'BLIZZARD',
+	['goldCoins'] = false,
 }
 
 --Tooltip
@@ -282,7 +337,7 @@ P['tooltip'] = {
 	['playerTitles'] = true,
 	['guildRanks'] = true,
 	['inspectInfo'] = true,
-	['itemCount'] = true,
+	['itemCount'] = 'BAGS_ONLY',
 	['spellID'] = true,
 	['visibility'] = {
 		['unitFrames'] = 'NONE',
@@ -350,6 +405,13 @@ P['unitframe'] = {
 		},
 		['classResources'] = {
 			['bgColor'] = {r = 0.1,g = 0.1,b = 0.1, a = 1},
+			['comboPoints'] = {
+				[1] = {r = 0.69, g = 0.31, b = 0.31},
+				[2] = {r = 0.69, g = 0.31, b = 0.31},
+				[3] = {r = 0.65, g = 0.63, b = 0.35},
+				[4] = {r = 0.65, g = 0.63, b = 0.35},
+				[5] = {r = 0.33, g = 0.59, b = 0.33},		
+			},
 			['DEATHKNIGHT'] = {
 				[1] = {r = 1, g = 0, b = 0},
 				[2] = {r = 0, g = 1, b = 0},
@@ -1248,7 +1310,7 @@ P['unitframe'] = {
 				['bossAuras'] = {friendly = false, enemy = false},
 				['sizeOverride'] = 22,
 				['xOffset'] = 0,
-				['yOffset'] = 12
+				['yOffset'] = 12,
 			},
 			['debuffs'] = {
 				['enable'] = true,
@@ -1267,7 +1329,7 @@ P['unitframe'] = {
 				['bossAuras'] = {friendly = false, enemy = false},
 				['sizeOverride'] = 22,
 				['xOffset'] = 0,
-				['yOffset'] = -13,				
+				['yOffset'] = -13,
 			},	
 			['castbar'] = {
 				['enable'] = true,
@@ -1391,6 +1453,12 @@ P['unitframe'] = {
 				['anchorPoint'] = 'TOPLEFT',
 				['xOffset'] = -1,
 				['yOffset'] = 0,
+				['name'] = {
+					['position'] = 'CENTER',
+					['text_format'] = '[namecolor][name:short]',
+					['yOffset'] = 0,				
+					['xOffset'] = 0,				
+				},
 			},
 			['targetsGroup'] = {
 				['enable'] = false,
@@ -1399,6 +1467,12 @@ P['unitframe'] = {
 				['anchorPoint'] = 'TOPLEFT',
 				['xOffset'] = -1,
 				['yOffset'] = 0,
+				['name'] = {
+					['position'] = 'CENTER',
+					['text_format'] = '[namecolor][name:short]',
+					['yOffset'] = 0,				
+					['xOffset'] = 0,				
+				},
 			},		
 			['raidicon'] = {
 				['enable'] = true,
@@ -1537,7 +1611,6 @@ P['unitframe'] = {
 			['rangeCheck'] = true,
 			['threatStyle'] = 'GLOW',
 			['visibility'] = '[@raid26,noexists] hide;show',
-			
 			['growthDirection'] = 'RIGHT_DOWN',
 			['horizontalSpacing'] = 3,
 			['verticalSpacing'] = 3,
@@ -1822,7 +1895,8 @@ P["actionbar"] = {
 			["DRUID"] = "[bonusbar:1,nostealth] 7; [bonusbar:1,stealth] 8; [bonusbar:2] 8; [bonusbar:3] 9; [bonusbar:4] 10;",
 			["PRIEST"] = "[bonusbar:1] 7;",
 			["ROGUE"] = "[stance:1] 7;  [stance:2] 7; [stance:3] 7;", -- set to "[stance:1] 7; [stance:3] 10;" if you want a shadow dance bar
-			["MONK"] = "[bonusbar:1] 7; [bonusbar:2] 8; [bonusbar:3] 9;"
+			["MONK"] = "[bonusbar:1] 7; [bonusbar:2] 8; [bonusbar:3] 9;",
+			["WARRIOR"] = "[bonusbar:1] 7; [bonusbar:2] 8;"
 		},
 		['visibility'] = "[petbattle] hide; show",
 	},
@@ -1917,6 +1991,7 @@ P["actionbar"] = {
 	},
 	['stanceBar'] = {
 		['enabled'] = true,
+		['style'] = 'darkenInactive',
 		['mouseover'] = false,
 		['buttonsPerRow'] = NUM_STANCE_SLOTS,
 		['buttons'] = NUM_STANCE_SLOTS,

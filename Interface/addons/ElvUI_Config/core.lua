@@ -193,14 +193,23 @@ E.Options.args.general = {
 					desc = L['Display a panel across the top of the screen. This is for cosmetic only.'],
 					get = function(info) return E.db.general.topPanel end,
 					set = function(info, value) E.db.general.topPanel = value; E:GetModule('Layout'):TopPanelVisibility() end						
-				},			
-				lfrEnhancement = {
+				},	
+				afk = {
 					order = 18,
-					type = "toggle",
-					name = L['Enhance Raid Browser'],
-					desc = L['Enhance the raid browser frame by adding item level and talent spec information, also add average item level of group information to tooltips.'],
-					get = function(info) return E.private.general.lfrEnhancement end,
-					set = function(info, value) E.private.general.lfrEnhancement = value; E:StaticPopup_Show("PRIVATE_RL") end
+					type = 'toggle',
+					name = L['AFK Mode'],
+					desc = L['When you go AFK display the AFK screen.'],
+					get = function(info) return E.db.general.afk end,
+					set = function(info, value) E.db.general.afk = value; E:GetModule('AFK'):Toggle() end						
+
+				},			
+				smallerWorldMap = {
+					order = 19,
+					type = 'toggle',
+					name = L['Smaller World Map'],
+					desc = L['Make the world map smaller.'],
+					get = function(info) return E.global.general.smallerWorldMap end,
+					set = function(info, value) E.global.general.smallerWorldMap = value; E:StaticPopup_Show("GLOBAL_RL") end					
 				},
 			},
 		},	
@@ -224,13 +233,13 @@ E.Options.args.general = {
 							type = "range",
 							min = 6, max = 22, step = 1,
 							set = function(info, value) E.db.general[ info[#info] ] = value; E:UpdateMedia(); E:UpdateFontTemplates(); end,
-						},	
+						},
 						font = {
 							type = "select", dialogControl = 'LSM30_Font',
 							order = 2,
 							name = L["Default Font"],
 							desc = L["The font that the core of the UI will use."],
-							values = AceGUIWidgetLSMlists.font,	
+							values = AceGUIWidgetLSMlists.font,
 							set = function(info, value) E.db.general[ info[#info] ] = value; E:UpdateMedia(); E:UpdateFontTemplates(); end,
 						},
 						dmgfont = {
@@ -239,18 +248,26 @@ E.Options.args.general = {
 							name = L["CombatText Font"],
 							desc = L["The font that combat text will use. |cffFF0000WARNING: This requires a game restart or re-log for this change to take effect.|r"],
 							values = AceGUIWidgetLSMlists.font,
-							get = function(info) return E.private.general[ info[#info] ] end,							
+							get = function(info) return E.private.general[ info[#info] ] end,
 							set = function(info, value) E.private.general[ info[#info] ] = value; E:UpdateMedia(); E:UpdateFontTemplates(); E:StaticPopup_Show("PRIVATE_RL"); end,
 						},
 						namefont = {
 							type = "select", dialogControl = 'LSM30_Font',
-							order = 3,
+							order = 4,
 							name = L["Name Font"],
 							desc = L["The font that appears on the text above players heads. |cffFF0000WARNING: This requires a game restart or re-log for this change to take effect.|r"],
 							values = AceGUIWidgetLSMlists.font,
-							get = function(info) return E.private.general[ info[#info] ] end,							
+							get = function(info) return E.private.general[ info[#info] ] end,
 							set = function(info, value) E.private.general[ info[#info] ] = value; E:UpdateMedia(); E:UpdateFontTemplates(); E:StaticPopup_Show("PRIVATE_RL"); end,
-						}
+						},
+						replaceBlizzFonts = {
+							order = 5,
+							type = 'toggle',
+							name = L['Replace Blizzard Fonts'],
+							desc = L['Replaces the default Blizzard fonts on various panels and frames with the fonts chosen in the Media section of the ElvUI config. NOTE: Any font that inherits from the fonts ElvUI usually replaces will be affected as well if you disable this. Enabled by default.'],
+							get = function(info) return E.private.general[ info[#info] ] end,
+							set = function(info, value) E.private.general[ info[#info] ] = value; E:StaticPopup_Show("PRIVATE_RL"); end,
+						},
 					},
 				},	
 				textures = {
@@ -293,7 +310,8 @@ E.Options.args.general = {
 							hasAlpha = false,
 							get = function(info)
 								local t = E.db.general[ info[#info] ]
-								return t.r, t.g, t.b, t.a
+								local d = P.general[info[#info]]
+								return t.r, t.g, t.b, t.a, d.r, d.g, d.b
 							end,
 							set = function(info, r, g, b)
 								E.db.general[ info[#info] ] = {}
@@ -312,7 +330,8 @@ E.Options.args.general = {
 							hasAlpha = false,
 							get = function(info)
 								local t = E.db.general[ info[#info] ]
-								return t.r, t.g, t.b, t.a
+								local d = P.general[info[#info]]
+								return t.r, t.g, t.b, t.a, d.r, d.g, d.b
 							end,
 							set = function(info, r, g, b)
 								E.db.general[ info[#info] ] = {}
@@ -330,7 +349,8 @@ E.Options.args.general = {
 							hasAlpha = true,
 							get = function(info)
 								local t = E.db.general[ info[#info] ]
-								return t.r, t.g, t.b, t.a
+								local d = P.general[info[#info]]
+								return t.r, t.g, t.b, t.a, d.r, d.g, d.b, d.a
 							end,
 							set = function(info, r, g, b, a)
 								E.db.general[ info[#info] ] = {}
@@ -348,7 +368,8 @@ E.Options.args.general = {
 							hasAlpha = false,
 							get = function(info)
 								local t = E.db.general[ info[#info] ]
-								return t.r, t.g, t.b, t.a
+								local d = P.general[info[#info]]
+								return t.r, t.g, t.b, t.a, d.r, d.g, d.b
 							end,
 							set = function(info, r, g, b, a)
 								E.db.general[ info[#info] ] = {}
@@ -357,19 +378,6 @@ E.Options.args.general = {
 								E:UpdateMedia()
 							end,						
 						},						
-						resetbutton = {
-							type = "execute",
-							order = 5,
-							name = L["Restore Defaults"],
-							func = function() 
-								E.db.general.backdropcolor = P.general.backdropcolor
-								E.db.general.backdropfadecolor = P.general.backdropfadecolor
-								E.db.general.bordercolor = P.general.bordercolor
-								E.db.general.valuecolor = P.general.valuecolor
-								E:UpdateMedia()
-								E:UpdateFrameTemplates()								
-							end,
-						},
 					},
 				},
 			},
@@ -403,14 +411,298 @@ E.Options.args.general = {
 					name = L['Location Text'],
 					desc = L['Change settings for the display of the location text that is on the minimap.'],
 					get = function(info) return E.db.general.minimap.locationText end,
-					set = function(info, value) E.db.general.minimap.locationText = value; E:GetModule('Minimap'):UpdateSettings() end,
+					set = function(info, value) E.db.general.minimap.locationText = value; E:GetModule('Minimap'):UpdateSettings(); E:GetModule('Minimap'):Update_ZoneText() end,
 					values = {
 						['MOUSEOVER'] = L['Minimap Mouseover'],
 						['SHOW'] = L['Always Display'],
 						['HIDE'] = L['Hide'],
 					},
 					disabled = function() return not E.private.general.minimap.enable end,
-				},				
+				},
+				spacer = {
+					order = 4,
+					type = "description",
+					name = "\n",
+				},
+				icons = {
+					order = 5,
+					type = 'group',
+					name = L["Minimap Buttons"],
+					args = {
+						garrison = {
+							order = 1,
+							type = 'group',
+							name = GARRISON_LOCATION_TOOLTIP,
+							get = function(info) return E.db.general.minimap.icons.garrison[ info[#info] ] end,
+							set = function(info, value) E.db.general.minimap.icons.garrison[ info[#info] ] = value; E:GetModule('Minimap'):UpdateSettings() end,
+							args = {
+								scale = {
+									order = 1,
+									type = 'range',
+									name = L["Scale"],
+									min = 0.5, max = 2, step = 0.05,
+								},
+								position = {
+									order = 2,
+									type = 'select',
+									name = L["Position"],
+									disabled = function() return E.private.general.minimap.hideGarrison end,
+									values = {
+										["LEFT"] = L["Left"],
+										["RIGHT"] = L["Right"],
+										["TOP"] = L["Top"],
+										["BOTTOM"] = L["Bottom"],
+										["TOPLEFT"] = L["Top Left"],
+										["TOPRIGHT"] = L["Top Right"],
+										["BOTTOMLEFT"] = L["Bottom Left"],
+										["BOTTOMRIGHT"] = L["Bottom Right"],
+									},
+								},
+								xOffset = {
+									order = 3,
+									type = 'range',
+									name = L['xOffset'],
+									min = -50, max = 50, step = 1,
+									disabled = function() return E.private.general.minimap.hideGarrison end,
+								},
+								yOffset = {
+									order = 4,
+									type = 'range',
+									name = L['yOffset'],
+									min = -50, max = 50, step = 1,
+									disabled = function() return E.private.general.minimap.hideGarrison end,
+								},
+								hideGarrison = {
+									order = 5,
+									type = 'toggle',
+									name = L["Hide"],
+									get = function(info) return E.private.general.minimap.hideGarrison end,
+									set = function(info, value) E.private.general.minimap.hideGarrison = value; E:StaticPopup_Show("PRIVATE_RL") end,
+								},
+							},
+						},
+						calendar = {
+							order = 2,
+							type = 'group',
+							name = L["Calendar"],
+							get = function(info) return E.db.general.minimap.icons.calendar[ info[#info] ] end,
+							set = function(info, value) E.db.general.minimap.icons.calendar[ info[#info] ] = value; E:GetModule('Minimap'):UpdateSettings() end,
+							args = {
+								scale = {
+									order = 1,
+									type = 'range',
+									name = L["Scale"],
+									min = 0.5, max = 2, step = 0.05,
+								},
+								position = {
+									order = 2,
+									type = 'select',
+									name = L["Position"],
+									disabled = function() return E.private.general.minimap.hideCalendar end,
+									values = {
+										["LEFT"] = L["Left"],
+										["RIGHT"] = L["Right"],
+										["TOP"] = L["Top"],
+										["BOTTOM"] = L["Bottom"],
+										["TOPLEFT"] = L["Top Left"],
+										["TOPRIGHT"] = L["Top Right"],
+										["BOTTOMLEFT"] = L["Bottom Left"],
+										["BOTTOMRIGHT"] = L["Bottom Right"],
+									},
+								},
+								xOffset = {
+									order = 3,
+									type = 'range',
+									name = L['xOffset'],
+									min = -50, max = 50, step = 1,
+									disabled = function() return E.private.general.minimap.hideCalendar end,
+								},
+								yOffset = {
+									order = 4,
+									type = 'range',
+									name = L['yOffset'],
+									min = -50, max = 50, step = 1,
+									disabled = function() return E.private.general.minimap.hideCalendar end,
+								},
+								hideCalendar = {
+									order = 5,
+									type = 'toggle',
+									name = L["Hide"],
+									get = function(info) return E.private.general.minimap.hideCalendar end,
+									set = function(info, value) E.private.general.minimap.hideCalendar = value; E:GetModule('Minimap'):UpdateSettings() end,
+								},
+							},
+						},
+						mail = {
+							order = 3,
+							type = 'group',
+							name = MAIL_LABEL,
+							get = function(info) return E.db.general.minimap.icons.mail[ info[#info] ] end,
+							set = function(info, value) E.db.general.minimap.icons.mail[ info[#info] ] = value; E:GetModule('Minimap'):UpdateSettings() end,
+							args = {
+								scale = {
+									order = 1,
+									type = 'range',
+									name = L["Scale"],
+									min = 0.5, max = 2, step = 0.05,
+								},
+								position = {
+									order = 2,
+									type = 'select',
+									name = L["Position"],
+									values = {
+										["LEFT"] = L["Left"],
+										["RIGHT"] = L["Right"],
+										["TOP"] = L["Top"],
+										["BOTTOM"] = L["Bottom"],
+										["TOPLEFT"] = L["Top Left"],
+										["TOPRIGHT"] = L["Top Right"],
+										["BOTTOMLEFT"] = L["Bottom Left"],
+										["BOTTOMRIGHT"] = L["Bottom Right"],
+									},
+								},
+								xOffset = {
+									order = 3,
+									type = 'range',
+									name = L['xOffset'],
+									min = -50, max = 50, step = 1,
+								},
+								yOffset = {
+									order = 4,
+									type = 'range',
+									name = L['yOffset'],
+									min = -50, max = 50, step = 1,
+								},
+							},
+						},
+						lfgEye = {
+							order = 3,
+							type = 'group',
+							name = L['LFG Queue'],
+							get = function(info) return E.db.general.minimap.icons.lfgEye[ info[#info] ] end,
+							set = function(info, value) E.db.general.minimap.icons.lfgEye[ info[#info] ] = value; E:GetModule('Minimap'):UpdateSettings() end,
+							args = {
+								scale = {
+									order = 1,
+									type = 'range',
+									name = L["Scale"],
+									min = 0.5, max = 2, step = 0.05,
+								},
+								position = {
+									order = 2,
+									type = 'select',
+									name = L["Position"],
+									values = {
+										["LEFT"] = L["Left"],
+										["RIGHT"] = L["Right"],
+										["TOP"] = L["Top"],
+										["BOTTOM"] = L["Bottom"],
+										["TOPLEFT"] = L["Top Left"],
+										["TOPRIGHT"] = L["Top Right"],
+										["BOTTOMLEFT"] = L["Bottom Left"],
+										["BOTTOMRIGHT"] = L["Bottom Right"],
+									},
+								},
+								xOffset = {
+									order = 3,
+									type = 'range',
+									name = L['xOffset'],
+									min = -50, max = 50, step = 1,
+								},
+								yOffset = {
+									order = 4,
+									type = 'range',
+									name = L['yOffset'],
+									min = -50, max = 50, step = 1,
+								},
+							},
+						},
+						difficulty = {
+							order = 4,
+							type = 'group',
+							name = L['Instance Difficulty'],
+							get = function(info) return E.db.general.minimap.icons.difficulty[ info[#info] ] end,
+							set = function(info, value) E.db.general.minimap.icons.difficulty[ info[#info] ] = value; E:GetModule('Minimap'):UpdateSettings() end,
+							args = {
+								scale = {
+									order = 1,
+									type = 'range',
+									name = L["Scale"],
+									min = 0.5, max = 2, step = 0.05,
+								},
+								position = {
+									order = 2,
+									type = 'select',
+									name = L["Position"],
+									values = {
+										["LEFT"] = L["Left"],
+										["RIGHT"] = L["Right"],
+										["TOP"] = L["Top"],
+										["BOTTOM"] = L["Bottom"],
+										["TOPLEFT"] = L["Top Left"],
+										["TOPRIGHT"] = L["Top Right"],
+										["BOTTOMLEFT"] = L["Bottom Left"],
+										["BOTTOMRIGHT"] = L["Bottom Right"],
+									},
+								},
+								xOffset = {
+									order = 3,
+									type = 'range',
+									name = L['xOffset'],
+									min = -50, max = 50, step = 1,
+								},
+								yOffset = {
+									order = 4,
+									type = 'range',
+									name = L['yOffset'],
+									min = -50, max = 50, step = 1,
+								},
+							},
+						},
+						challengeMode = {
+							order = 5,
+							type = 'group',
+							name = CHALLENGE_MODE,
+							get = function(info) return E.db.general.minimap.icons.challengeMode[ info[#info] ] end,
+							set = function(info, value) E.db.general.minimap.icons.challengeMode[ info[#info] ] = value; E:GetModule('Minimap'):UpdateSettings() end,
+							args = {
+								scale = {
+									order = 1,
+									type = 'range',
+									name = L["Scale"],
+									min = 0.5, max = 2, step = 0.05,
+								},
+								position = {
+									order = 2,
+									type = 'select',
+									name = L["Position"],
+									values = {
+										["LEFT"] = L["Left"],
+										["RIGHT"] = L["Right"],
+										["TOP"] = L["Top"],
+										["BOTTOM"] = L["Bottom"],
+										["TOPLEFT"] = L["Top Left"],
+										["TOPRIGHT"] = L["Top Right"],
+										["BOTTOMLEFT"] = L["Bottom Left"],
+										["BOTTOMRIGHT"] = L["Bottom Right"],
+									},
+								},
+								xOffset = {
+									order = 3,
+									type = 'range',
+									name = L['xOffset'],
+									min = -50, max = 50, step = 1,
+								},
+								yOffset = {
+									order = 4,
+									type = 'range',
+									name = L['yOffset'],
+									min = -50, max = 50, step = 1,
+								},
+							},
+						},
+					},
+				},
 			},		
 		},
 		experience = {
@@ -452,6 +744,7 @@ E.Options.args.general = {
 					order = 5,
 					type = "select",
 					name = L['Orientation'],
+					desc = L['Direction the bar moves on gains/losses'],
 					values = {
 						['HORIZONTAL'] = L['Horizontal'],
 						['VERTICAL'] = L['Vertical']
@@ -516,6 +809,7 @@ E.Options.args.general = {
 					order = 5,
 					type = "select",
 					name = L['Orientation'],
+					desc = L['Direction the bar moves on gains/losses'],
 					values = {
 						['HORIZONTAL'] = L['Horizontal'],
 						['VERTICAL'] = L['Vertical']
@@ -624,7 +918,8 @@ E.Options.args.general = {
 			name = L['Cooldown Text'],
 			get = function(info)
 				local t = E.db.cooldown[ info[#info] ]
-				return t.r, t.g, t.b, t.a
+				local d = P.cooldown[info[#info]]
+				return t.r, t.g, t.b, t.a, d.r, d.g, d.b
 			end,
 			set = function(info, r, g, b)
 				E.db.cooldown[ info[#info] ] = {}
@@ -637,7 +932,7 @@ E.Options.args.general = {
 					type = "toggle",
 					order = 1,
 					name = L['Enable'],
-					desc = L['Display cooldown text on anything with the cooldown spiril.'],
+					desc = L['Display cooldown text on anything with the cooldown spiral.'],
 					get = function(info) return E.private.cooldown[ info[#info] ] end,
 					set = function(info, value) E.private.cooldown[ info[#info] ] = value; E:StaticPopup_Show("PRIVATE_RL") end				
 				},			
@@ -652,19 +947,6 @@ E.Options.args.general = {
 						E.db.cooldown[ info[#info] ] = value
 						E:UpdateCooldownSettings();
 					end,				
-				},
-				restoreColors = {
-					type = 'execute',
-					name = L["Restore Defaults"],
-					order = 3,
-					func = function() 
-						E.db.cooldown.expiringColor = P['cooldown'].expiringColor;
-						E.db.cooldown.secondsColor = P['cooldown'].secondsColor;
-						E.db.cooldown.minutesColor = P['cooldown'].minutesColor;
-						E.db.cooldown.hoursColor = P['cooldown'].hoursColor;
-						E.db.cooldown.daysColor = P['cooldown'].daysColor;
-						E:UpdateCooldownSettings();
-					end,
 				},
 				expiringColor = {
 					type = 'color',
@@ -696,6 +978,34 @@ E.Options.args.general = {
 					name = L['Days'],
 					desc = L['Color when the text is in the days format.'],			
 				},				
+			},
+		},
+		objectiveFrame = {
+			order = 11,
+			type = "group",
+			name = L['Objective Frame'],
+			get = function(info) return E.db.general[ info[#info] ] end,
+			set = function(info, value) E.db.general[ info[#info] ] = value end,
+			args = {
+				objectiveFrameHeight = {
+					order = 1,
+					type = 'range',
+					name = L["Objective Frame Height"],
+					desc = L["Height of the objective tracker. Increase size to be able to see more objectives."],
+					min = 400, max = E.screenheight, step = 1,
+					set = function(info, value) E.db.general.objectiveFrameHeight = value; E:GetModule('Blizzard'):ObjectiveFrameHeight(); end,
+				},
+				bonusObjectivePosition = {
+					order = 2,
+					type = 'select',
+					name = L["Bonus Reward Position"],
+					desc = L["Position of bonus quest reward frame relative to the objective tracker."],
+					values = {
+						['RIGHT'] = L["Right"],
+						['LEFT'] = L["Left"],
+						['AUTO'] = L["Auto"],
+					},			
+				},
 			},
 		},
 	},
@@ -743,7 +1053,8 @@ local DONATORS = {
 	"Adorno",
 	"Domoaligato",
 	"Smorg",
-	"Pyrokee"
+	"Pyrokee",
+	"Portable"
 }
 
 local DEVELOPERS = {

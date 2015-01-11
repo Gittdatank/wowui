@@ -37,6 +37,7 @@ function TukuiActionBars:DisableBlizzard()
 		
 		Button:UnregisterAllEvents()
 		Button:SetAttribute("statehidden", true)
+		Button:SetAttribute("showgrid", 1)
 	end
 	
 	hooksecurefunc("TalentFrame_LoadUI", function()
@@ -90,6 +91,11 @@ function TukuiActionBars:ShowGrid()
 		Button:Show()
 		ActionButton_ShowGrid(Button)
 	end
+end
+
+function TukuiActionBars:ChangeBlizzardOptionsDescription()
+	InterfaceOptionsActionBarsPanelRight.Text:SetText(L.ActionBars.CenterBar)
+	InterfaceOptionsActionBarsPanelRightTwo.Text:SetText(SHOW_MULTIBAR3_TEXT)
 end
 
 function TukuiActionBars:AddPanels()
@@ -178,8 +184,7 @@ function TukuiActionBars:AddPanels()
 		A7.Backdrop:SetTemplate()
 	end
 	
-	SHOW_MULTIBAR4_TEXT = SHOW_MULTIBAR3_TEXT
-	SHOW_MULTIBAR3_TEXT = L.ActionBars.CenterBar
+	InterfaceOptionsFrame:HookScript("OnShow", TukuiActionBars.ChangeBlizzardOptionsDescription)
 	
 	Panels.ActionBar1 = A1
 	Panels.ActionBar2 = A2
@@ -305,9 +310,17 @@ function TukuiActionBars:UpdateStanceBar(...)
 				
 				if IsActive then
 					StanceBarFrame.lastSelected = Button:GetID()
-					Button:SetChecked(1)
+					Button:SetChecked(true)
+					
+					if Button.Backdrop then
+						Button.Backdrop:SetBackdropBorderColor(0, 1, 0)
+					end
 				else
-					Button:SetChecked(0)
+					Button:SetChecked(false)
+					
+					if Button.Backdrop then
+						Button.Backdrop:SetBackdropBorderColor(unpack(C.General.BorderColor))
+					end
 				end
 
 				if IsCastable then

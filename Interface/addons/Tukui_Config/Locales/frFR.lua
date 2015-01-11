@@ -55,13 +55,18 @@ TukuiConfig["frFR"] = {
 		},
 		
 		["ShapeShift"] = {
-			["Name"] = "Postures",
-			["Desc"] = "Activer les barre des postures Tukui",
+			["Name"] = "Barre de Postures",
+			["Desc"] = "Activer les barre des postures",
 		},
 		
 		["Pet"] = {
-			["Name"] = "Familier",
-			["Desc"] = "Activer la barre de Familier Tukui",
+			["Name"] = "Barre du Familier",
+			["Desc"] = "Activer la barre de Familier",
+		},
+		
+		["SwitchBarOnStance"] = {
+			["Name"] = "Changement de barre sur posture",
+			["Desc"] = "Change la barre d'action principale lorsque l'on change de posture",
 		},
 		
 		["NormalButtonSize"] = {
@@ -365,6 +370,11 @@ TukuiConfig["frFR"] = {
 			["Name"] = "Police de caractère",
 			["Desc"] = "Définir la police de caractère des barres d'unités",
 		},
+		
+		["HealthText"] = {
+			["Name"] = "Show Health Text",
+			["Desc"] = "Add a text in the nameplate which show current health",
+		},
 	},
 	
 	["Party"] = {
@@ -412,12 +422,32 @@ TukuiConfig["frFR"] = {
 			["Name"] = "Texture de la barre de santé",
 			["Desc"] = "Définir une texture pour les barres de santé",
 		},
+		
+		["RangeAlpha"] = {
+			["Name"] = "Opacité hors-d'atteinte",
+			["Desc"] = "Défini l'opacité des unitées qui sont hors d'atteinte",
+		},
 	},
 	
 	["Raid"] = {
 		["Enable"] = {
 			["Name"] = "Activer les cadres de raid",
 			["Desc"] = "Derp",
+		},
+		
+		["ShowPets"] = {
+			["Name"] = "Show Pets",
+			["Desc"] = "Derp",
+		},
+		
+		["Highlight"] = {
+			["Name"] = "Highlight",
+			["Desc"] = "Highlight your current focus/target",
+		},
+		
+		["MaxUnitPerColumn"] = {
+			["Name"] = "Raid members per column",
+			["Desc"] = "Change the max number of raid members per column",
 		},
 		
 		["HealBar"] = {
@@ -455,6 +485,11 @@ TukuiConfig["frFR"] = {
 			["Desc"] = "Indiquez le montant de la santé perdue de l'unité.",
 		},
 		
+		["VerticalHealth"] = {
+			["Name"] = "Vertical Health",
+			["Desc"] = "Display health lost vertically",
+		},
+		
 		["Font"] = {
 			["Name"] = "Police de caractère des noms",
 			["Desc"] = "Définir la police de caractère des noms des cadre de raid",
@@ -487,6 +522,11 @@ TukuiConfig["frFR"] = {
 			["Desc"] = "Derp",
 		},
 		
+		["MouseOver"] = {
+			["Name"] = "Mouseover",
+			["Desc"] = "Enable mouseover tooltip",
+		},
+		
 		["HideOnUnitFrames"] = {
 			["Name"] = "cacher sur cadre d'unités",
 			["Desc"] = "Ne pas afficher les info-bulles sur les cadres unités",
@@ -517,6 +557,11 @@ TukuiConfig["frFR"] = {
 		["Enable"] = {
 			["Name"] = "Activé cadre des unités",
 			["Desc"] = "Derp",
+		},
+		
+		["TargetEnemyHostileColor"] = {
+			["Name"] = "Enemy Target Hostile Color",
+			["Desc"] = "Enemy target health bar will be colored by hostility instead of by class color",
 		},
 		
 		["Portrait"] = {
@@ -569,6 +614,11 @@ TukuiConfig["frFR"] = {
 			["Desc"] = "Créer une barre de totem de style Tukui",
 		},
 		
+		["ComboBar"] = {
+			["Name"] = "Combo Points",
+			["Desc"] = "Enable the combo points bar",
+		},
+		
 		["AnticipationBar"] = {
 			["Name"] = "Barre d'anticipation Voleur",
 			["Desc"] = "Afficher une barre indiquant les points d'anticipation voleur",
@@ -589,6 +639,51 @@ TukuiConfig["frFR"] = {
 			["Desc"] = "Si activé, les cadres d'unités seront d'une couleur sombre avec les barres de puissance aux couleurs des classes",
 		},
 		
+		["Threat"] = {
+			["Name"] = "Enable threat display",
+			["Desc"] = "Health Bar on party and raid members will turn if they have aggro",
+		},
+		
+		["Arena"] = {
+			["Name"] = "Arena Frames",
+			["Desc"] = "Display arena opponents when inside a battleground or arena",
+		},
+		
+		["Boss"] = {
+			["Name"] = "Boss Frames",
+			["Desc"] = "Display boss frames while doing pve",
+		},
+		
+		["TargetAuras"] = {
+			["Name"] = "Target Auras",
+			["Desc"] = "Display buffs and debuffs on target",
+		},
+		
+		["FocusAuras"] = {
+			["Name"] = "Focus Auras",
+			["Desc"] = "Display buffs and debuffs on focus",
+		},
+		
+		["FocusTargetAuras"] = {
+			["Name"] = "Focus Target Auras",
+			["Desc"] = "Display buffs and debuffs on focus target",
+		},
+		
+		["ArenaAuras"] = {
+			["Name"] = "Arena Frames Auras",
+			["Desc"] = "Display debuffs on arena frames",
+		},
+		
+		["BossAuras"] = {
+			["Name"] = "Boss Frames Auras",
+			["Desc"] = "Display debuffs on boss frames",
+		},
+		
+		["AltPowerText"] = {
+			["Name"] = "Boss AltPower Text",
+			["Desc"] = "Display boss altpower text values on altpower bar",
+		},
+		
 		["Font"] = {
 			["Name"] = "Police de caractère",
 			["Desc"] = "Défini une police de caractère pour les cadres unités",
@@ -602,6 +697,11 @@ TukuiConfig["frFR"] = {
 		["HealthTexture"] = {
 			["Name"] = "Texture de la barre de santé",
 			["Desc"] = "Définir une texture pour les barres de santé",
+		},
+		
+		["CastTexture"] = {
+			["Name"] = "Cast Bar Texture",
+			["Desc"] = "Set a texture for cast bars",
 		},
 	},
 }

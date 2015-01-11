@@ -7,6 +7,7 @@ local Class = select(2, UnitClass("player"))
 function TukuiUnitFrames:Player()
 	local HealthTexture = T.GetTexture(C["UnitFrames"].HealthTexture)
 	local PowerTexture = T.GetTexture(C["UnitFrames"].PowerTexture)
+	local CastTexture = T.GetTexture(C["UnitFrames"].CastTexture)
 	local Font = T.GetFont(C["UnitFrames"].Font)
 	local DarkTheme = C["UnitFrames"].DarkTheme
 
@@ -130,7 +131,7 @@ function TukuiUnitFrames:Player()
 
 	if (C.UnitFrames.CastBar) then
 		local CastBar = CreateFrame("StatusBar", "TukuiPlayerCastBar", self)
-		CastBar:SetStatusBarTexture(C.Medias.Normal)
+		CastBar:SetStatusBarTexture(CastTexture)
 		CastBar:SetFrameLevel(6)
 		CastBar:SetInside(Panel)
 
@@ -149,6 +150,8 @@ function TukuiUnitFrames:Player()
 		CastBar.Text:SetFontObject(Font)
 		CastBar.Text:Point("LEFT", Panel, "LEFT", 4, 0)
 		CastBar.Text:SetTextColor(0.84, 0.75, 0.65)
+		CastBar.Text:SetWidth(166)
+		CastBar.Text:SetJustifyH("LEFT")
 
 		if (C.UnitFrames.CastBarIcon) then
 			CastBar.Button = CreateFrame("Frame", nil, CastBar)
@@ -248,14 +251,15 @@ function TukuiUnitFrames:Player()
 		ThirdBar:SetWidth(250)
 		ThirdBar:SetStatusBarTexture(C.Medias.Normal)
 		ThirdBar:SetStatusBarColor(0.3, 0.3, 0, 1)
-
+		
+		ThirdBar:SetFrameLevel(Health:GetFrameLevel() - 2)
 		SecondBar:SetFrameLevel(ThirdBar:GetFrameLevel() + 1)
 		FirstBar:SetFrameLevel(ThirdBar:GetFrameLevel() + 2)
 
 		self.HealPrediction = {
 			myBar = FirstBar,
 			otherBar = SecondBar,
-			absBar = ThirdBar,
+			absorbBar = ThirdBar,
 			maxOverflow = 1,
 		}
 	end
@@ -288,6 +292,7 @@ function TukuiUnitFrames:Player()
 			Bar[i]:Height(8)
 			Bar[i]:SetStatusBarTexture(C.Medias.Normal)
 			Bar[i]:EnableMouse(true)
+			Bar[i]:SetFrameLevel(Health:GetFrameLevel())
 
 			if i == 1 then
 				Bar[i]:Width((250 / 4) - 2)
@@ -314,7 +319,9 @@ function TukuiUnitFrames:Player()
 	RaidIcon:SetSize(16, 16)
 	RaidIcon:SetPoint("TOP", self, 0, 8)
 	
-	self:RegisterEvent("PLAYER_ENTERING_WORLD", TukuiUnitFrames.Update) -- http://www.tukui.org/tickets/tukui/index.php?page=bug_show&bug_id=218
+	local Threat = Health:CreateTexture(nil, "OVERLAY")
+	Threat.Override = TukuiUnitFrames.UpdateThreat
+	
 	self:HookScript("OnEnter", TukuiUnitFrames.MouseOnPlayer)
 	self:HookScript("OnLeave", TukuiUnitFrames.MouseOnPlayer)
 	
@@ -329,6 +336,7 @@ function TukuiUnitFrames:Player()
 	self.Leader = Leader
 	self.MasterLooter = MasterLooter
 	self.RaidIcon = RaidIcon
+	self.Threat = Threat
 	
 	-- Classes
 	TukuiUnitFrames.AddClassFeatures[Class](self)

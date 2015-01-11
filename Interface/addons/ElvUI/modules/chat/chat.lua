@@ -1,4 +1,4 @@
-﻿local E, L, V, P, G = unpack(select(2, ...)); --Inport: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
+local E, L, V, P, G = unpack(select(2, ...)); --Inport: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local CH = E:NewModule('Chat', 'AceTimer-3.0', 'AceHook-3.0', 'AceEvent-3.0')
 local LSM = LibStub("LibSharedMedia-3.0")
 local CreatedFrames = 0;
@@ -18,7 +18,6 @@ local tinsert, tremove, tsort, twipe, tconcat = table.insert, table.remove, tabl
 
 local PLAYER_REALM = gsub(E.myrealm,'[%s%-]','')
 local PLAYER_NAME = E.myname.."-"..PLAYER_REALM
-
 
 local TIMESTAMP_FORMAT
 local DEFAULT_STRINGS = {
@@ -118,28 +117,25 @@ local rolePaths = {
 
 local specialChatIcons = {
 	["BleedingHollow"] = {
-		["Tirain"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\tyrone_biggums_chat_logo.tga:16:18|t"
+		["Tirain"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\chatLogos\\tyroneBiggums.tga:16:18|t"
 	},
 	["Spirestone"] = {
-		["Sinth"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\tyrone_biggums_chat_logo.tga:16:18|t",
-		["Itzjonny"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\hulk_head:18:22|t",
-		["Incisìon"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\short_bus.tga:16:16|t",
-		["Salaen"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\beiber_chat.tga:18:20|t",
+		["Sinth"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\chatLogos\\tyroneBiggums.tga:16:18|t",
 	},
 	["Illidan"] = {
-		["Affinichi"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\Bathrobe_Chat_Logo.blp:15:15|t",
-		["Uplift"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\Bathrobe_Chat_Logo.blp:15:15|t",
-		["Affinitii"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\Bathrobe_Chat_Logo.blp:15:15|t",
-		["Affinity"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\Bathrobe_Chat_Logo.blp:15:15|t"
+		["Affinichi"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\chatLogos\\bathrobe.blp:15:15|t",
+		["Uplift"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\chatLogos\\bathrobe.blp:15:15|t",
+		["Affinitii"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\chatLogos\\bathrobe.blp:15:15|t",
+		["Affinity"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\chatLogos\\bathrobe.blp:15:15|t"
 	},
 	["ShatteredHand"] = {
-		["Elv"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\ElvUI_Chat_Logo:13:22|t",
-		["Sarah"] =  "|TInterface\\AddOns\\ElvUI\\media\\textures\\ElvUI_Chat_Logo:13:22|t",
-		["Sara"] =  "|TInterface\\AddOns\\ElvUI\\media\\textures\\helloKittyChatLogo.tga:18:20|t",
+		["Elv"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\chatLogos\\elvui.blp:13:22|t",
+		["Sarah"] =  "|TInterface\\AddOns\\ElvUI\\media\\textures\\chatLogos\\elvui.blp:13:22|t",
+		["Sara"] =  "|TInterface\\AddOns\\ElvUI\\media\\textures\\chatLogos\\helloKitty.tga:18:20|t",
 
-		["Vinceypoo"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\logo_illuminati.tga:18:18|t",
-		["Vincey"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\logo_illuminati.tga:18:18|t",
-		["Vinceanity"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\logo_illuminati.tga:18:18|t",	
+		["Vinceypoo"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\chatLogos\\illuminati.tga:18:18|t",
+		["Vincey"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\chatLogos\\illuminati.tga:18:18|t",
+		["Vinceanity"] = "|TInterface\\AddOns\\ElvUI\\media\\textures\\chatLogos\\illuminati.tga:18:18|t",	
 	},
 }
 
@@ -474,12 +470,12 @@ function CH:UpdateAnchors()
 end
 
 function CH:PositionChat(override)
-	if not self.db.lockPositions or ((InCombatLockdown() and not override and self.initialMove) or (IsMouseButtonDown("LeftButton") and not override)) then return end
+	if ((InCombatLockdown() and not override and self.initialMove) or (IsMouseButtonDown("LeftButton") and not override)) then return end
 	if not RightChatPanel or not LeftChatPanel then return; end
-	RightChatPanel:SetSize(E.db.chat.panelWidth, E.db.chat.panelHeight)
+	RightChatPanel:SetSize(E.db.chat.separateSizes and E.db.chat.panelWidthRight or E.db.chat.panelWidth, E.db.chat.separateSizes and E.db.chat.panelHeightRight or E.db.chat.panelHeight)
 	LeftChatPanel:SetSize(E.db.chat.panelWidth, E.db.chat.panelHeight)	
 	
-	if E.private.chat.enable ~= true then return end
+	if not self.db.lockPositions or E.private.chat.enable ~= true then return end
 		
 	local chat, chatbg, tab, id, point, button, isDocked, chatFound
 	for _, frameName in pairs(CHAT_FRAMES) do
@@ -521,7 +517,6 @@ function CH:PositionChat(override)
 				isDocked = false
 			end	
 		end	
-
 		
 		if point == "BOTTOMRIGHT" and chat:IsShown() and not (id > NUM_CHAT_WINDOWS) and id == self.RightChatWindowID then
 			chat:ClearAllPoints()
@@ -532,12 +527,11 @@ function CH:PositionChat(override)
 				chat:SetPoint("BOTTOMLEFT", RightChatDataPanel, "BOTTOMLEFT", 1, 1)
 			end
 			if id ~= 2 then
-				chat:SetSize(E.db.chat.panelWidth - 11, (E.db.chat.panelHeight - BASE_OFFSET))
+				chat:SetSize((E.db.chat.separateSizes and E.db.chat.panelWidthRight or E.db.chat.panelWidth) - 11, (E.db.chat.separateSizes and E.db.chat.panelHeightRight or E.db.chat.panelHeight) - BASE_OFFSET)
 			else
 				chat:SetSize(E.db.chat.panelWidth - 11, (E.db.chat.panelHeight - BASE_OFFSET) - CombatLogQuickButtonFrame_Custom:GetHeight())				
 			end
-			
-			
+
 			FCF_SavePositionAndDimensions(chat)			
 			
 			tab:SetParent(RightChatPanel)
@@ -719,7 +713,7 @@ function CH:DisableChatThrottle()
 end
 
 function CH:ShortChannel()
-	return format("|Hchannel:%s|h[%s]|h", self, DEFAULT_STRINGS[self] or self:gsub("channel:", ""))
+	return format("|Hchannel:%s|h[%s]|h", self, DEFAULT_STRINGS[self:upper()] or self:gsub("channel:", ""))
 end
 
 function CH:ConcatenateTimeStamp(msg)
@@ -737,20 +731,35 @@ end
 
 
 
-local function GetBNFriendColor(name, id)
-	local _, _, game, _, _, _, _, class = BNGetToonInfo(id)
-
-	if game ~= BNET_CLIENT_WOW or not class then
-		return name
-	else
-		for k,v in pairs(LOCALIZED_CLASS_NAMES_MALE) do if class == v then class = k end end
-		for k,v in pairs(LOCALIZED_CLASS_NAMES_FEMALE) do if class == v then class = k end end
-
-		if RAID_CLASS_COLORS[class] then
-			return "|c"..RAID_CLASS_COLORS[class].colorStr..name.."|r"
-		else
-			return name
+function CH:GetBNFriendColor(name, id)
+	local _, _, _, _, _, _, _, class = BNGetToonInfo(id)
+	if(not class or class == "") then
+		local toonName, toonID
+		for i=1, BNGetNumFriends() do
+			_, presenceName, _, _, _, toonID = BNGetFriendInfo(i)
+			if(presenceName == name) then
+				_, _, _, _, _, _, _, class = BNGetToonInfo(toonID)
+				if(class) then
+					break;
+				end
+			end
 		end
+	end
+
+	if(class) then
+		for k,v in pairs(LOCALIZED_CLASS_NAMES_MALE) do if class == v then class = k end end
+		for k,v in pairs(LOCALIZED_CLASS_NAMES_FEMALE) do if class == v then class = k end end	
+	end
+
+	if(not class or not RAID_CLASS_COLORS[class]) then
+		return name
+	end
+
+
+	if RAID_CLASS_COLORS[class] then
+		return "|c"..RAID_CLASS_COLORS[class].colorStr..name.."|r"
+	else
+		return name
 	end
 end
 
@@ -1075,7 +1084,7 @@ function CH:ChatFrame_MessageEventHandler(event, ...)
 			if ( type ~= "BN_WHISPER" and type ~= "BN_WHISPER_INFORM" and type ~= "BN_CONVERSATION" ) then
 				playerLink = "|Hplayer:"..arg2..":"..arg11..":"..chatGroup..(chatTarget and ":"..chatTarget or "").."|h";
 			else
-				coloredName = GetBNFriendColor(arg2, arg13)
+				coloredName = CH:GetBNFriendColor(arg2, arg13)
 				playerLink = "|HBNplayer:"..arg2..":"..arg13..":"..arg11..":"..chatGroup..(chatTarget and ":"..chatTarget or "").."|h";
 			end
 			
@@ -1119,7 +1128,7 @@ function CH:ChatFrame_MessageEventHandler(event, ...)
 			
 			local accessID = ChatHistory_GetAccessID(chatGroup, chatTarget);
 			local typeID = ChatHistory_GetAccessID(infoType, chatTarget, arg12 == "" and arg13 or arg12);
-			if CH.db.shortChannels then
+			if CH.db.shortChannels and type ~= "EMOTE" and type ~= "TEXT_EMOTE" then
 				body = body:gsub("|Hchannel:(.-)|h%[(.-)%]|h", CH.ShortChannel)
 				body = body:gsub('CHANNEL:', '')
 				body = body:gsub("^(.-|h) "..L['whispers'], "%1")
@@ -1204,20 +1213,23 @@ function CH:SetupChat(event, ...)
 		frame:SetShadowOffset((E.mult or 1), -(E.mult or 1))	
 		frame:SetFading(self.db.fade)
 		
-		frame:SetScript("OnHyperlinkClick", URLChatFrame_OnHyperlinkShow)
-		frame:SetScript("OnMouseWheel", ChatFrame_OnMouseScroll)
-		
-		if id > NUM_CHAT_WINDOWS then
-			frame:SetScript("OnEvent", CH.FloatingChatFrame_OnEvent)
-		elseif id ~= 2 then
-			frame:SetScript("OnEvent", CH.ChatFrame_OnEvent)
-		end
-		
-		hooksecurefunc(frame, "SetScript", function(f, script, func)
-			if script == "OnMouseWheel" and func ~= ChatFrame_OnMouseScroll then
-				f:SetScript(script, ChatFrame_OnMouseScroll)
+		if not frame.scriptsSet then
+			frame:SetScript("OnHyperlinkClick", URLChatFrame_OnHyperlinkShow)
+			frame:SetScript("OnMouseWheel", ChatFrame_OnMouseScroll)
+			
+			if id > NUM_CHAT_WINDOWS then
+				frame:SetScript("OnEvent", CH.FloatingChatFrame_OnEvent)
+			elseif id ~= 2 then
+				frame:SetScript("OnEvent", CH.ChatFrame_OnEvent)
 			end
-		end)
+			
+			hooksecurefunc(frame, "SetScript", function(f, script, func)
+				if script == "OnMouseWheel" and func ~= ChatFrame_OnMouseScroll then
+					f:SetScript(script, ChatFrame_OnMouseScroll)
+				end
+			end)
+			frame.scriptsSet = true
+		end
 	
 		if not _G[frameName.."Tab"].glow.anim then
 			E:SetUpAnimGroup(_G[frameName.."Tab"].glow)
@@ -1315,6 +1327,18 @@ function CH:ThrottleSound()
 end
 
 function CH:CheckKeyword(message)
+	for itemLink in message:gmatch("|%x+|Hitem:.-|h.-|h|r") do
+		for keyword, _ in pairs(CH.Keywords) do
+			if itemLink == keyword then
+				if self.db.keywordSound ~= 'None' and not self.SoundPlayed  then
+					PlaySoundFile(LSM:Fetch("sound", self.db.keywordSound), "Master")
+					self.SoundPlayed = true
+					self.SoundTimer = CH:ScheduleTimer('ThrottleSound', 1)
+				end
+			end
+		end
+	end
+	
 	local rebuiltString, lowerCaseWord
 	local isFirstWord = true
 	for word in message:gmatch("[^%s]+") do

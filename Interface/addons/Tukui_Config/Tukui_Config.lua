@@ -10,7 +10,15 @@ if (Locale == "enGB") then
 end
 
 function TukuiConfig:SetOption(group, option, value)
-	local C = TukuiConfigNotShared
+	local C
+	local Realm = GetRealmName()
+	local Name = UnitName("Player")
+	
+	if (TukuiConfigPerAccount) then
+		C = TukuiConfigShared.Account
+	else
+		C = TukuiConfigShared[Realm][Name]
+	end
 	
 	if (not C[group]) then
 		C[group] = {}
@@ -174,6 +182,16 @@ end
 
 local EditBoxOnEditFocusLost = function(self)
 	self:SetAutoFocus(false)
+end
+
+local EditBoxOnTextChange = function(self)
+	local Value = self:GetText()
+	
+	if (type(tonumber(Value)) == "number") then -- Assume we want a number, not a string
+		Value = tonumber(Value)
+	end
+	
+	TukuiConfig:SetOption(self.Group, self.Option, Value)
 end
 
 local EditBoxOnEnterPressed = function(self)
@@ -475,6 +493,7 @@ local CreateConfigEditBox = function(parent, group, option, value, max)
 	EditBox.Box:SetScript("OnEscapePressed", EditBoxOnEnterPressed)
 	EditBox.Box:SetScript("OnEnterPressed", EditBoxOnEnterPressed)
 	EditBox.Box:SetScript("OnEditFocusLost", EditBoxOnEditFocusLost)
+	EditBox.Box:SetScript("OnTextChanged", EditBoxOnTextChange)
 	EditBox.Box:SetText(value)
 	
 	if (not max) then
@@ -629,12 +648,13 @@ local CreateConfigDropDown = function(parent, group, option, value, type)
 	Label:SetShadowOffset(1.25, -1.25)
 	Label:SetPoint("LEFT", DropDown, "RIGHT", 5, 0)
 	
-	local List = CreateFrame("Frame", nil, DropDown)
+	local List = CreateFrame("Frame", nil, UIParent)
 	List:Point("TOPLEFT", DropDown, "BOTTOMLEFT", 0, -3)
 	List:SetTemplate()
 	List:Hide()
 	List:Width(100)
 	List:SetFrameLevel(DropDown:GetFrameLevel() + 3)
+	List:SetFrameStrata("HIGH")
 	List:EnableMouse(true)
 	List.Owner = DropDown
 	
@@ -836,6 +856,8 @@ end
 -- Create the config window
 function TukuiConfig:CreateConfigWindow()
 	local C = Tukui[2]
+	local L = Tukui[3]
+	local SettingText = TukuiConfigPerAccount and L.Others.CharSettings or L.Others.GlobalSettings
 	
 	self:UpdateColorDefaults()
 	
@@ -848,7 +870,7 @@ function TukuiConfig:CreateConfigWindow()
 		end
 	end
 	
-	NumGroups = NumGroups + 2 -- Reload & Close buttons
+	NumGroups = NumGroups + 3 -- Reload & Close & Global buttons
 	
 	local Height = (12 + (NumGroups * 20) + ((NumGroups - 1) * 4)) -- Padding + (NumButtons * ButtonSize) + ((NumButtons - 1) * ButtonSpacing)
 	
@@ -906,6 +928,27 @@ function TukuiConfig:CreateConfigWindow()
 	ReloadButton.Text:SetFont(C.Medias.Font, 12)
 	ReloadButton.Text:Point("CENTER", ReloadButton)
 	ReloadButton.Text:SetText("|cff00FF00"..APPLY.."|r")
+	
+	local GlobalButton = CreateFrame("Button", nil, ConfigFrame)
+	GlobalButton:Size(132, 20)
+	GlobalButton:SetTemplate()
+	GlobalButton:SetScript("OnClick", function()
+		if not TukuiConfigPerAccount then
+			TukuiConfigPerAccount = true
+		else
+			TukuiConfigPerAccount = false
+		end
+		
+		ReloadUI()
+	end)
+	GlobalButton:StyleButton()
+	GlobalButton:SetFrameLevel(LeftWindow:GetFrameLevel() + 1)
+	GlobalButton:SetPoint("BOTTOM", ReloadButton, "TOP", 0, 4)
+	
+	GlobalButton.Text = GlobalButton:CreateFontString(nil, "OVERLAY")
+	GlobalButton.Text:SetFont(C.Medias.Font, 12)
+	GlobalButton.Text:Point("CENTER", GlobalButton)
+	GlobalButton.Text:SetText("|cff00FF00"..SettingText.."|r")
 	
 	local LastButton
 	local ButtonCount = 0

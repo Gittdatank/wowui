@@ -58,6 +58,11 @@ TukuiConfig["ruRU"] = {
 			["Name"] = "Панель стоек/тотемы",
 			["Desc"] = "Использовать панель стоек/тотемов в стиле Tukui",
 		},
+
+		["SwitchBarOnStance"] = {
+			["Name"] = "Swap main bar on new stance",
+			["Desc"] = "Enable main action bar swap when you change stance.",
+		},
 		
 		["Pet"] = {
 			["Name"] = "Панель питомца",
@@ -365,6 +370,11 @@ TukuiConfig["ruRU"] = {
 			["Name"] = "Шрифт индикатора здоровья",
 			["Desc"] = "Установить шрифт для индикаторов здоровья",
 		},
+		
+		["HealthText"] = {
+			["Name"] = "Show Health Text",
+			["Desc"] = "Add a text in the nameplate which show current health",
+		},
 	},
 	
 	["Party"] = {
@@ -412,12 +422,32 @@ TukuiConfig["ruRU"] = {
 			["Name"] = "Текстура полосы здоровья",
 			["Desc"] = "Установить текстуру полосы здоровья",
 		},
+		
+		["RangeAlpha"] = {
+			["Name"] = "Прозрачность юнитов вне радиуса",
+			["Desc"] = "Установить прозрачность рамок юнитов вне досягаемости ваших заклинаний",
+		},
 	},
 	
 	["Raid"] = {
 		["Enable"] = {
 			["Name"] = "Рамки рейда",
 			["Desc"] = "Использовать рамки рейда Tukui",
+		},
+		
+		["ShowPets"] = {
+			["Name"] = "Show Pets",
+			["Desc"] = "Derp",
+		},
+		
+		["Highlight"] = {
+			["Name"] = "Highlight",
+			["Desc"] = "Highlight your current focus/target",
+		},
+		
+		["MaxUnitPerColumn"] = {
+			["Name"] = "Raid members per column",
+			["Desc"] = "Change the max number of raid members per column",
 		},
 		
 		["HealBar"] = {
@@ -455,6 +485,11 @@ TukuiConfig["ruRU"] = {
 			["Desc"] = "Показывать количество недостающего здоровья.",
 		},
 		
+		["VerticalHealth"] = {
+			["Name"] = "Vertical Health",
+			["Desc"] = "Display health lost vertically",
+		},
+		
 		["Font"] = {
 			["Name"] = "Шрифт имен на рамках рейда",
 			["Desc"] = "Установить шрифт для имен на рамках рейда",
@@ -487,6 +522,11 @@ TukuiConfig["ruRU"] = {
 			["Desc"] = "Использовать подсказки в стиле Tukui",
 		},
 		
+		["MouseOver"] = {
+			["Name"] = "Mouseover",
+			["Desc"] = "Enable mouseover tooltip",
+		},
+		
 		["HideOnUnitFrames"] = {
 			["Name"] = "Скрыть для рамок юнитов",
 			["Desc"] = "Не отображать подсказки на рамках юнитов",
@@ -517,6 +557,11 @@ TukuiConfig["ruRU"] = {
 		["Enable"] = {
 			["Name"] = "Включить рамки юнитов",
 			["Desc"] = "Использовать рамки юнитов Tukui",
+		},
+		
+		["TargetEnemyHostileColor"] = {
+			["Name"] = "Enemy Target Hostile Color",
+			["Desc"] = "Enemy target health bar will be colored by hostility instead of by class color",
 		},
 		
 		["Portrait"] = {
@@ -569,6 +614,11 @@ TukuiConfig["ruRU"] = {
 			["Desc"] = "Создаёт панель тотемов в стиле tukui",
 		},
 		
+		["ComboBar"] = {
+			["Name"] = "Combo Points",
+			["Desc"] = "Enable the combo points bar",
+		},
+		
 		["AnticipationBar"] = {
 			["Name"] = "Пполоса Предчувствия для разбойников",
 			["Desc"] = "Отображает панель Предчувствия разбойника с дополнительными комбо-поинтами",
@@ -589,6 +639,51 @@ TukuiConfig["ruRU"] = {
 			["Desc"] = "Если включено, рамки юнитов окрасятся в тёмный цвет, а полоса ресурса в цвет класса",
 		},
 		
+		["Threat"] = {
+			["Name"] = "Enable threat display",
+			["Desc"] = "Health Bar on party and raid members will turn if they have aggro",
+		},
+		
+		["Arena"] = {
+			["Name"] = "Arena Frames",
+			["Desc"] = "Display arena opponents when inside a battleground or arena",
+		},
+		
+		["Boss"] = {
+			["Name"] = "Boss Frames",
+			["Desc"] = "Display boss frames while doing pve",
+		},
+		
+		["TargetAuras"] = {
+			["Name"] = "Target Auras",
+			["Desc"] = "Display buffs and debuffs on target",
+		},
+		
+		["FocusAuras"] = {
+			["Name"] = "Focus Auras",
+			["Desc"] = "Display buffs and debuffs on focus",
+		},
+		
+		["FocusTargetAuras"] = {
+			["Name"] = "Focus Target Auras",
+			["Desc"] = "Display buffs and debuffs on focus target",
+		},
+		
+		["ArenaAuras"] = {
+			["Name"] = "Arena Frames Auras",
+			["Desc"] = "Display debuffs on arena frames",
+		},
+		
+		["BossAuras"] = {
+			["Name"] = "Boss Frames Auras",
+			["Desc"] = "Display debuffs on boss frames",
+		},
+		
+		["AltPowerText"] = {
+			["Name"] = "Boss AltPower Text",
+			["Desc"] = "Display boss altpower text values on altpower bar",
+		},
+		
 		["Font"] = {
 			["Name"] = "Шрифт рамок юнитов",
 			["Desc"] = "Установить шрифт рамок юнитов",
@@ -602,6 +697,11 @@ TukuiConfig["ruRU"] = {
 		["HealthTexture"] = {
 			["Name"] = "Текстура плосы здоровтья",
 			["Desc"] = "Установить текстуру для плосы здоровтья",
+		},
+		
+		["CastTexture"] = {
+			["Name"] = "Cast Bar Texture",
+			["Desc"] = "Set a texture for cast bars",
 		},
 	},
 }

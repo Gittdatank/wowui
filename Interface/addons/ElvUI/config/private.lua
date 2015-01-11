@@ -12,9 +12,12 @@ V['general'] = {
 	['chatBubbles'] = 'backdrop',
 	['pixelPerfect'] = true,
 	['lfrEnhancement'] = true,
-
+	['replaceBlizzFonts'] = true,
+	['smallerWorldMap'] = true,
 	['minimap'] = {
 		['enable'] = true,
+		['hideGarrison'] = true,
+		['hideCalendar'] = true,
 	},
 }
 
@@ -64,7 +67,7 @@ V['skins'] = {
 		["trainer"] = true,
 		["socket"] = true,
 		['loot'] = true,
-		["alertframes"] = true,
+		["alertframes"] = false,
 		["bgscore"] = true,
 		["merchant"] = true,
 		["mail"] = true,
@@ -76,6 +79,7 @@ V['skins'] = {
 		["worldmap"] = true,
 		["taxi"] = true,
 		["quest"] = true,
+		["questChoice"] = false,
 		["petition"] = true,
 		["dressingroom"] = true,
 		["pvp"] = true,

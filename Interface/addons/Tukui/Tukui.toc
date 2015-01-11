@@ -1,15 +1,15 @@
 ## Interface: 60000
 ## Author: Tukz & Hydra
-## Version: 16.01
+## Version: 16.16
 ## Title: |cffff8000Tukui|r
 ## Notes: UI of awesomeness!
 ## SavedVariables: TukuiData
 ## SavedVariablesPerCharacter: TukuiDataPerChar
-## OptionalDeps: Tukui_Config, Tukui_EditedConfig, Clique
+## OptionalDeps: Tukui_Config, Clique
 ## X-oUF: TukuiUnitFrameFramework
 ## Website: http://www.tukui.org
 ## X-Tukui-ProjectID: -1
-## X-Tukui-ProjectFolders: Tukui
+## X-Tukui-ProjectFolders: Tukui, Tukui_Config
 
 Core\Init.lua
 Config\Init.xml

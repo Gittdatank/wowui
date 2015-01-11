@@ -19,11 +19,14 @@ local UnitPlayerControlled = UnitPlayerControlled
 local UnitIsGhost = UnitIsGhost
 local UnitIsDead = UnitIsDead
 local UnitPowerType = UnitPowerType
-local Class = select(2, UnitClass("player"))
 
 TukuiUnitFrames.Units = {}
 TukuiUnitFrames.Headers = {}
 TukuiUnitFrames.Framework = TukuiUnitFrameFramework
+TukuiUnitFrames.HighlightBorder = {
+	bgFile = "Interface\\Buttons\\WHITE8x8",
+	insets = {top = -2, left = -2, bottom = -2, right = -2}
+}
 
 TukuiUnitFrames.RaidBuffsTracking = {
 	PRIEST = {
@@ -34,6 +37,7 @@ TukuiUnitFrames.RaidBuffsTracking = {
 	},
 	DRUID = {
 		{774, "TOPLEFT", {0.8, 0.4, 0.8}},      -- Rejuvenation
+		{155777, "LEFT", {0.8, 0.4, 0.8}},      -- Germination
 		{8936, "TOPRIGHT", {0.2, 0.8, 0.2}},    -- Regrowth
 		{33763, "BOTTOMLEFT", {0.4, 0.8, 0.2}}, -- Lifebloom
 		{48438, "BOTTOMRIGHT", {0.8, 0.4, 0}},  -- Wild Growth
@@ -91,8 +95,13 @@ function TukuiUnitFrames:DisableBlizzard()
 		InterfaceOptionsFrameCategoriesButton11:SetScale(0.00001)
 		InterfaceOptionsFrameCategoriesButton11:SetAlpha(0)
 		
-		CompactRaidFrameManager:SetParent(Panels.Hider)
-		CompactUnitFrameProfiles:UnregisterAllEvents()
+		if CompactRaidFrameManager then
+			CompactRaidFrameManager:SetParent(Panels.Hider)
+		end
+		
+		if CompactUnitFrameProfiles then
+			CompactUnitFrameProfiles:UnregisterAllEvents()
+		end
 		
 		for i = 1, MAX_PARTY_MEMBERS do
 			local PartyMember = _G["PartyMemberFrame" .. i]
@@ -186,6 +195,19 @@ function TukuiUnitFrames:MouseOnPlayer()
 	end
 end
 
+
+function TukuiUnitFrames:Highlight()
+	if UnitIsUnit("focus", self.unit) then
+		self.Highlight:SetBackdropColor(218/255, 197/255, 92/255, .7)
+		self.Highlight:Show()
+	elseif UnitIsUnit("target", self.unit) then
+		self.Highlight:SetBackdropColor(75/255,  175/255, 76/255, 1)
+		self.Highlight:Show()	
+	else
+		self.Highlight:Hide()
+	end
+end
+
 function TukuiUnitFrames:UpdateShadow(height)
 	local Frame = self:GetParent()
 	local Shadow = Frame.Shadow
@@ -207,6 +229,24 @@ function TukuiUnitFrames:UpdateBuffsHeaderPosition(height)
 
 	Buffs:ClearAllPoints() 
 	Buffs:Point("BOTTOMLEFT", Frame, "TOPLEFT", 0, height)
+end
+
+function TukuiUnitFrames:UpdateDebuffsHeaderPosition()
+	local NumBuffs = self.visibleBuffs
+	local PerRow = self.numRow
+	local Size = self.size
+	local Row = math.ceil((NumBuffs / PerRow))
+	local Parent = self:GetParent()
+	local Debuffs = Parent.Debuffs
+	local Y = Size * Row
+	local Addition = Size
+	
+	if NumBuffs == 0 then
+		Addition = 0
+	end
+	
+	Debuffs:ClearAllPoints() 
+	Debuffs:SetPoint("BOTTOMLEFT", self, "BOTTOMLEFT", -2, Y + Addition)
 end
 
 function TukuiUnitFrames:CustomCastTimeText(duration)
@@ -253,20 +293,37 @@ function TukuiUnitFrames:UpdateNamePosition()
 end
 
 function TukuiUnitFrames:UpdateThreat(event, unit)
-	if not unit then
+	if (not unit) or (not C.UnitFrames.Threat) then
 		return
 	end
 	
-	local Colors = T["Colors"]
-	local Status = UnitThreatSituation(unit)
-	local Health = self.Health
-	local Class = select(2, UnitClass(unit))
-	local Color = not UnitIsPlayer(unit) and Colors.reaction[5] or C["UnitFrames"].DarkTheme and {0.2, 0.2, 0.2} or Colors.class[Class] or {0, 0, 0}
+	local Panel = self.Panel
+	
+	if Panel then
+		local Status = UnitThreatSituation(unit)
+		
+		if Status and Status > 0 then
+			Panel:SetBackdropBorderColor(1, 0, 0)
+		else
+			Panel:SetBackdropBorderColor(C["General"].BorderColor[1] * 0.7, C["General"].BorderColor[2] * 0.7, C["General"].BorderColor[3] * 0.7)
+		end
+	end
+end
 
-	if Status and Status > 0 then
-		Health:SetStatusBarColor(1, 0, 0)
+function TukuiUnitFrames:PreUpdateHealth(unit)
+	local DarkTheme = C["UnitFrames"].DarkTheme
+	local HostileColor = C["UnitFrames"].TargetEnemyHostileColor
+	
+	if (DarkTheme == true) or (HostileColor ~= true) then
+		return
+	end
+	
+	local Parent = self:GetParent()
+	
+	if UnitIsEnemy(unit, "player") then
+		self.colorClass = false
 	else
-		Health:SetStatusBarColor(Color[1], Color[2], Color[3])
+		self.colorClass = true
 	end
 end
 
@@ -282,32 +339,15 @@ function TukuiUnitFrames:PostUpdateHealth(unit, min, max)
 	else
 		local r, g, b
 		local IsRaid = string.match(self:GetParent():GetName(), "Button") or false
-		
-		if (IsRaid) then
-			TukuiUnitFrames.UpdateThreat(self:GetParent(), nil, unit)
-			
-			if (unit == "player") then
-				unit = raid
-			end
-		end
-		
-		if (C["UnitFrames"].DarkTheme ~= true and unit == "target" and UnitIsEnemy(unit, "player") and UnitIsPlayer(unit)) or (C["UnitFrames"].DarkTheme ~= true and unit == "target" and not UnitIsPlayer(unit) and UnitIsFriend(unit, "player")) then
-			local Colors = T["Colors"]
-			local Color = Colors.reaction[UnitReaction(unit, "player")]
-			
-			if Color then 
-				r, g, b = Color[1], Color[2], Color[3]
-				self:SetStatusBarColor(r, g, b)
-			else
-				r, g, b = 75/255,  175/255, 76/255
-				self:SetStatusBarColor(r, g, b)
-			end
-		end
 
 		if (min ~= max) then
 			r, g, b = T.ColorGradient(min, max, 0.69, 0.31, 0.31, 0.65, 0.63, 0.35, 0.33, 0.59, 0.33)
 			if (unit == "player" and self:GetAttribute("normalUnit") ~= "pet") then
-				self.Value:SetFormattedText("|cffAF5050%d|r |cffD7BEA5-|r |cff%02x%02x%02x%d%%|r", min, r * 255, g * 255, b * 255, floor(min / max * 100))
+				if (IsRaid) then
+					self.Value:SetText("|cffff2222-"..TukuiUnitFrames.ShortValue(max-min).."|r")
+				else
+					self.Value:SetFormattedText("|cffAF5050%d|r |cffD7BEA5-|r |cff%02x%02x%02x%d%%|r", min, r * 255, g * 255, b * 255, floor(min / max * 100))
+				end
 			elseif (unit == "target" or (unit and strfind(unit, "boss%d"))) then
 				self.Value:SetFormattedText("|cffAF5050%s|r |cffD7BEA5-|r |cff%02x%02x%02x%d%%|r", TukuiUnitFrames.ShortValue(min), r * 255, g * 255, b * 255, floor(min / max * 100))
 			elseif (unit and strfind(unit, "arena%d")) or (unit == "focus") or (unit == "focustarget") then
@@ -317,8 +357,12 @@ function TukuiUnitFrames:PostUpdateHealth(unit, min, max)
 			end
 		else
 			if (unit == "player" and self:GetAttribute("normalUnit") ~= "pet") then
-				self.Value:SetText("|cff559655"..max.."|r")
-			elseif (unit == "target" or unit == "focus"  or unit == "focustarget" or (unit and strfind(unit, "arena%d"))) then
+				if (IsRaid) then
+					self.Value:SetText(" ")
+				else
+					self.Value:SetText("|cff559655"..max.."|r")
+				end
+			elseif (unit == "target" or unit == "focus"  or unit == "focustarget" or (unit and strfind(unit, "arena%d")) or (unit and strfind(unit, "boss%d"))) then
 				self.Value:SetText("|cff559655"..TukuiUnitFrames.ShortValue(max).."|r")
 			else
 				self.Value:SetText(" ")
@@ -344,7 +388,7 @@ function TukuiUnitFrames:PostUpdatePower(unit, min, max)
 	else
 		if (min ~= max) then
 			if (pType == 0) then
-				if (unit == "target") then
+				if (unit == "target" or (unit and strfind(unit, "boss%d"))) then
 					self.Value:SetFormattedText("%d%% |cffD7BEA5-|r %s", floor(min / max * 100), TukuiUnitFrames.ShortValue(max - (max - min)))
 				elseif (unit == "player" and Parent:GetAttribute("normalUnit") == "pet" or unit == "pet") then
 					self.Value:SetFormattedText("%d%%", floor(min / max * 100))
@@ -357,7 +401,7 @@ function TukuiUnitFrames:PostUpdatePower(unit, min, max)
 				self.Value:SetText(max - (max - min))
 			end
 		else
-			if (unit == "pet" or unit == "target" or unit == "focus" or unit == "focustarget" or (unit and strfind(unit, "arena%d"))) then
+			if (unit == "pet" or unit == "target" or unit == "focus" or unit == "focustarget" or (unit and strfind(unit, "arena%d")) or (unit and strfind(unit, "boss%d"))) then
 				self.Value:SetText(TukuiUnitFrames.ShortValue(min))
 			else
 				self.Value:SetText(min)
@@ -576,7 +620,7 @@ function TukuiUnitFrames:CreateAuraWatchIcon(icon)
 	
 	if (icon.cd) then
 		icon.cd:SetHideCountdownNumbers(true)
-		icon.cd:SetReverse()
+		icon.cd:SetReverse(true)
 	end
 	
 	icon.overlay:SetTexture()
@@ -584,6 +628,8 @@ end
 
 -- create the icon
 function TukuiUnitFrames:CreateAuraWatch(frame)
+	local Class = select(2, UnitClass("player"))
+
 	local Auras = CreateFrame("Frame", nil, frame)
 	Auras:SetPoint("TOPLEFT", frame.Health, 2, -2)
 	Auras:SetPoint("BOTTOMRIGHT", frame.Health, -2, 2)
@@ -643,20 +689,30 @@ function TukuiUnitFrames:CreateAuraWatch(frame)
 end
 
 function TukuiUnitFrames:EclipseDirection()
-	if (GetEclipseDirection() == "sun") then
+	local Power = UnitPower("Player", SPELL_POWER_ECLIPSE)
+	
+	if (Power < 0) then
 			self.Text:SetText("|cffE5994C"..L.UnitFrames.Starfire.."|r")
-	elseif (GetEclipseDirection() == "moon") then
+	elseif (Power > 0) then
 			self.Text:SetText("|cff4478BC"..L.UnitFrames.Wrath.."|r")
 	else
 			self.Text:SetText("")
 	end
 end
 
-function TukuiUnitFrames:UpdateBossAltPower(minimum, current, maximum)
+function TukuiUnitFrames:UpdateAltPower(minimum, current, maximum)
 	if (not current) or (not maximum) then return end
 	
 	local r, g, b = T.ColorGradient(current, maximum, 0, .8 ,0 ,.8 ,.8 ,0 ,.8 ,0 ,0)
+	
 	self:SetStatusBarColor(r, g, b)
+	self:SetBackdropColor(r * 0.1, g * 0.1, b * 0.1)
+	
+	if self.Value then
+		local Text = self.Value
+		
+		Text:SetText(current.." / "..maximum)
+	end
 end
 
 function TukuiUnitFrames:Update()
@@ -681,6 +737,27 @@ function TukuiUnitFrames:UpdatePriestClassBars()
 		
 		Serendipity:ClearAllPoints()
 		Serendipity:Point("BOTTOMLEFT", Frame, "TOPLEFT", 0, 1)
+	else
+		Shadow:Point("TOPLEFT", -4, 4)
+	end
+end
+
+function TukuiUnitFrames:UpdateMageClassBars()
+	local Frame = self:GetParent()
+	local Arcane = Frame.ArcaneChargeBar
+	local Totems = Frame.Totems
+	local Shadow = Frame.Shadow
+
+	if (Arcane and Arcane:IsShown()) and (Totems and Totems:IsShown()) then
+		Shadow:Point("TOPLEFT", -4, 21)
+		
+		Totems:ClearAllPoints()
+		Totems:Point("BOTTOMLEFT", Frame, "TOPLEFT", 0, 10)		
+	elseif (Arcane and Arcane:IsShown()) or (Totems and Totems:IsShown()) then
+		Shadow:Point("TOPLEFT", -4, 12)
+		
+		Totems:ClearAllPoints()
+		Totems:Point("BOTTOMLEFT", Frame, "TOPLEFT", 0, 1)
 	else
 		Shadow:Point("TOPLEFT", -4, 4)
 	end
@@ -756,6 +833,7 @@ function TukuiUnitFrames:GetRaidFramesAttributes()
 		"initial-height", T.Scale(50),
 		"showParty", true,
 		"showRaid", true,
+		"showPlayer", true,
 		"showSolo", false,
 		"xoffset", T.Scale(4),
 		"yOffset", T.Scale(-4),
@@ -764,7 +842,7 @@ function TukuiUnitFrames:GetRaidFramesAttributes()
 		"groupingOrder", "1,2,3,4,5,6,7,8",
 		"groupBy", C["Raid"].GroupBy.Value,
 		"maxColumns", math.ceil(40/5),
-		"unitsPerColumn", 10,
+		"unitsPerColumn", C["Raid"].MaxUnitPerColumn,
 		"columnSpacing", T.Scale(4),
 		"columnAnchorPoint", "LEFT"
 end
@@ -777,11 +855,11 @@ function TukuiUnitFrames:GetPetRaidFramesAttributes()
 		"SecureGroupPetHeaderTemplate", 
 		Properties,
 		"showParty", false,
-		"showRaid", true,
+		"showRaid", C["Raid"].ShowPets,
 		"showSolo", false,
 		"maxColumns", math.ceil(40/5),
 		"point", "TOP",
-		"unitsPerColumn", 10,
+		"unitsPerColumn", C["Raid"].MaxUnitPerColumn,
 		"columnSpacing", T.Scale(4),
 		"columnAnchorPoint", "LEFT",
 		"yOffset", T.Scale(-4),
@@ -839,7 +917,7 @@ end
 
 function TukuiUnitFrames:CreateUnits()
 	local Movers = T["Movers"]
-	
+
 	local Player = oUF:Spawn("player")
 	Player:SetPoint("BOTTOMLEFT", TukuiUnitFrames.Anchor, "TOPLEFT", 0, 8)
 	Player:SetParent(Panels.PetBattleHider)
@@ -877,41 +955,45 @@ function TukuiUnitFrames:CreateUnits()
 	self.Units.Focus = Focus
 	self.Units.FocusTarget = FocusTarget
 	
-	local Arena = {}
+	if (C.UnitFrames.Arena) then
+		local Arena = {}
 	
-	for i = 1, 5 do
-		Arena[i] = oUF:Spawn("arena"..i, nil)
-		Arena[i]:SetParent(Panels.PetBattleHider)
-		if (i == 1) then
-			Arena[i]:SetPoint("BOTTOMRIGHT", TukuiUnitFrames.Anchor, "TOPRIGHT", 0, 300)
-		else
-			Arena[i]:SetPoint("BOTTOM", Arena[i-1], "TOP", 0, 35)
-		end
-		Arena[i]:Size(200, 29)
+		for i = 1, 5 do
+			Arena[i] = oUF:Spawn("arena"..i, nil)
+			Arena[i]:SetParent(Panels.PetBattleHider)
+			if (i == 1) then
+				Arena[i]:SetPoint("BOTTOMRIGHT", TukuiUnitFrames.Anchor, "TOPRIGHT", 0, 300)
+			else
+				Arena[i]:SetPoint("BOTTOM", Arena[i-1], "TOP", 0, 35)
+			end
+			Arena[i]:Size(200, 29)
 		
-		Movers:RegisterFrame(Arena[i])
+			Movers:RegisterFrame(Arena[i])
+		end
+	
+		self.Units.Arena = Arena
+	
+		self:CreateArenaPreparationFrames()
 	end
 	
-	self.Units.Arena = Arena
-	
-	self:CreateArenaPreparationFrames()
-	
-	local Boss = {}
-	
-	for i = 1, 5 do
-		Boss[i] = oUF:Spawn("boss"..i, nil)
-		Boss[i]:SetParent(Panels.PetBattleHider)
-		if (i == 1) then
-			Boss[i]:SetPoint("BOTTOMRIGHT", TukuiUnitFrames.Anchor, "TOPRIGHT", 0, 300)
-		else
-			Boss[i]:SetPoint("BOTTOM", Boss[i-1], "TOP", 0, 35)             
-		end
-		Boss[i]:Size(200, 29)
+	if (C.UnitFrames.Boss) then
+		local Boss = {}
 		
-		Movers:RegisterFrame(Boss[i])
-	end
+		for i = 1, 5 do
+			Boss[i] = oUF:Spawn("boss"..i, nil)
+			Boss[i]:SetParent(Panels.PetBattleHider)
+			if (i == 1) then
+				Boss[i]:SetPoint("BOTTOMRIGHT", TukuiUnitFrames.Anchor, "TOPRIGHT", 0, 300)
+			else
+				Boss[i]:SetPoint("BOTTOM", Boss[i-1], "TOP", 0, 35)             
+			end
+			Boss[i]:Size(200, 29)
+		
+			Movers:RegisterFrame(Boss[i])
+		end
 	
-	self.Units.Boss = Boss
+		self.Units.Boss = Boss
+	end
 	
 	if C.Party.Enable then
 		local Gap = C.Party.Portrait and 74 or 30
@@ -923,23 +1005,24 @@ function TukuiUnitFrames:CreateUnits()
 		TukuiUnitFrames.Headers.Party = Party
 		
 		Movers:RegisterFrame(Party)
-		Movers:RegisterFrame(Pet)
 	end
 	
 	if C.Raid.Enable then
 		local Raid = oUF:SpawnHeader(TukuiUnitFrames:GetRaidFramesAttributes())
 		Raid:SetParent(Panels.PetBattleHider)
 		Raid:Point("TOPLEFT", UIParent, "TOPLEFT", 30, -30)
-
-		local Pet = oUF:SpawnHeader(TukuiUnitFrames:GetPetRaidFramesAttributes())
-		Pet:SetParent(Panels.PetBattleHider)
-		Pet:Point("TOPLEFT", Raid, "TOPRIGHT", 4, 0)
+		
+		if C.Raid.ShowPets then
+			local Pet = oUF:SpawnHeader(TukuiUnitFrames:GetPetRaidFramesAttributes())
+			Pet:SetParent(Panels.PetBattleHider)
+			Pet:Point("TOPLEFT", Raid, "TOPRIGHT", 4, 0)
+			
+			TukuiUnitFrames.Headers.RaidPet = Pet
+			Movers:RegisterFrame(Pet)
+		end
 		
 		TukuiUnitFrames.Headers.Raid = Raid
-		TukuiUnitFrames.Headers.RaidPet = Pet
-		
 		Movers:RegisterFrame(Raid)
-		Movers:RegisterFrame(Pet)
 	end
 	
 	Movers:RegisterFrame(Player)
@@ -1001,6 +1084,10 @@ function TukuiUnitFrames:OnEvent(event)
 end
 
 function TukuiUnitFrames:Enable()
+	if (not C.UnitFrames.Enable) then
+		return
+	end
+	
 	self.Backdrop = {
 		bgFile = C.Medias.Blank,
 		insets = {top = -T.Mult, left = -T.Mult, bottom = -T.Mult, right = -T.Mult},
@@ -1013,10 +1100,12 @@ function TukuiUnitFrames:Enable()
 	self:CreateUnits()
 	
 	-- Arena Preparation
-	self:RegisterEvent("PLAYER_ENTERING_WORLD")
-	self:RegisterEvent("ARENA_PREP_OPPONENT_SPECIALIZATIONS")
-	self:RegisterEvent("ARENA_OPPONENT_UPDATE")	
-	self:SetScript("OnEvent", self.OnEvent)
+	if (C.UnitFrames.Arena) then
+		self:RegisterEvent("PLAYER_ENTERING_WORLD")
+		self:RegisterEvent("ARENA_PREP_OPPONENT_SPECIALIZATIONS")
+		self:RegisterEvent("ARENA_OPPONENT_UPDATE")	
+		self:SetScript("OnEvent", self.OnEvent)
+	end
 end
 
 T["UnitFrames"] = TukuiUnitFrames

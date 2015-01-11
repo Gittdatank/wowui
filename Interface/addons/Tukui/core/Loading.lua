@@ -3,12 +3,16 @@ local T, C, L = select(2, ...):unpack()
 local Loading = CreateFrame("Frame")
 
 function Loading:LoadCustomSettings()
-	if (not TukuiConfigNotShared) then
-		TukuiConfigNotShared = {}
+	local Settings
+	local Name = UnitName("Player")
+	local Realm = GetRealmName()
+	
+	if (TukuiConfigPerAccount) then
+		Settings = TukuiConfigShared.Account
+	else
+		Settings = TukuiConfigShared[Realm][Name]
 	end
-
-	local Settings = TukuiConfigNotShared
-
+	
 	for group, options in pairs(Settings) do
 		if C[group] then
 			local Count = 0
@@ -106,14 +110,16 @@ function Loading:OnEvent(event, addon)
 			T["Miscellaneous"]["Durability"]:Enable()
 			T["Miscellaneous"]["Capture"]:Enable()
 			T["Miscellaneous"]["Ghost"]:Enable()
-			
-		-- MINIMAP
-			T["Maps"]["Minimap"]:Enable()
+			T["Miscellaneous"]["VehicleIndicator"]:Enable()
 			
 		-- BUFFS
 			if (C.Auras.Enable) then
 				T["Auras"]:Enable()
 			end
+			
+		-- Maps
+			T["Maps"]["Minimap"]:Enable()
+			T["Maps"]["Zonemap"]:Enable()
 			
 		-- DATATEXTS
 			T["DataTexts"]:Enable()
@@ -135,9 +141,6 @@ function Loading:OnEvent(event, addon)
 	elseif (event == "PLAYER_ENTERING_WORLD") then
 		-- OBJECTIVE TRACKER
 			T["Miscellaneous"]["ObjectiveTracker"]:Enable()
-		
-		-- BETA NOTE
-		T.BetaNote()	
 	end
 end
 

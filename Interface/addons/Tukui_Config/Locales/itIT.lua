@@ -54,13 +54,18 @@ TukuiConfig["itIT"] = {
 		},
 		
 		["ShapeShift"] = {
-			["Name"] = "ShapeShift",
-			["Desc"] = "Enable Tukui style ShapeShift bar",
+			["Name"] = "Stance Bar",
+			["Desc"] = "Enable Tukui style stance bar",
 		},
 		
 		["Pet"] = {
-			["Name"] = "Pet",
-			["Desc"] = "Enable Tukui style Pet bar",
+			["Name"] = "Pet Bar",
+			["Desc"] = "Enable Tukui style pet bar",
+		},
+		
+		["SwitchBarOnStance"] = {
+			["Name"] = "Swap main bar on new stance",
+			["Desc"] = "Enable main action bar swap when you change stance.",
 		},
 		
 		["NormalButtonSize"] = {
@@ -364,6 +369,11 @@ TukuiConfig["itIT"] = {
 			["Name"] = "NamePlates Font",
 			["Desc"] = "Set a font for nameplates",
 		},
+		
+		["HealthText"] = {
+			["Name"] = "Show Health Text",
+			["Desc"] = "Add a text in the nameplate which show current health",
+		},
 	},
 	
 	["Party"] = {
@@ -411,12 +421,32 @@ TukuiConfig["itIT"] = {
 			["Name"] = "Health Bar Texture",
 			["Desc"] = "Set a texture for health bars",
 		},
+		
+		["RangeAlpha"] = {
+			["Name"] = "Out Of Range Alpha",
+			["Desc"] = "Set the transparency of units that are out of range",
+		},
 	},
 	
 	["Raid"] = {
 		["Enable"] = {
 			["Name"] = "Enable Raid Frames",
 			["Desc"] = "Derp",
+		},
+		
+		["ShowPets"] = {
+			["Name"] = "Show Pets",
+			["Desc"] = "Derp",
+		},
+		
+		["Highlight"] = {
+			["Name"] = "Highlight",
+			["Desc"] = "Highlight your current focus/target",
+		},
+		
+		["MaxUnitPerColumn"] = {
+			["Name"] = "Raid members per column",
+			["Desc"] = "Change the max number of raid members per column",
 		},
 		
 		["HealBar"] = {
@@ -454,6 +484,11 @@ TukuiConfig["itIT"] = {
 			["Desc"] = "Show the amount of health the unit lost.",
 		},
 		
+		["VerticalHealth"] = {
+			["Name"] = "Vertical Health",
+			["Desc"] = "Display health lost vertically",
+		},
+		
 		["Font"] = {
 			["Name"] = "Raid Frame Name Font",
 			["Desc"] = "Set a font for name text on raid frames",
@@ -486,6 +521,11 @@ TukuiConfig["itIT"] = {
 			["Desc"] = "Derp",
 		},
 		
+		["MouseOver"] = {
+			["Name"] = "Mouseover",
+			["Desc"] = "Enable mouseover tooltip",
+		},
+		
 		["HideOnUnitFrames"] = {
 			["Name"] = "Hide on Unit Frames",
 			["Desc"] = "Don't display Tooltips on unit frames",
@@ -516,6 +556,11 @@ TukuiConfig["itIT"] = {
 		["Enable"] = {
 			["Name"] = "Enable Unit Frames",
 			["Desc"] = "Derp",
+		},
+		
+		["TargetEnemyHostileColor"] = {
+			["Name"] = "Enemy Target Hostile Color",
+			["Desc"] = "Enemy target health bar will be colored by hostility instead of by class color",
 		},
 		
 		["Portrait"] = {
@@ -568,6 +613,11 @@ TukuiConfig["itIT"] = {
 			["Desc"] = "Create a tukui style totem bar",
 		},
 		
+		["ComboBar"] = {
+			["Name"] = "Combo Points",
+			["Desc"] = "Enable the combo points bar",
+		},
+		
 		["AnticipationBar"] = {
 			["Name"] = "Rogue Anticipation Bar",
 			["Desc"] = "Display a bar showing rogue anticipation points",
@@ -588,6 +638,51 @@ TukuiConfig["itIT"] = {
 			["Desc"] = "If enabled, unit frames will be a dark color with class colored power bars",
 		},
 		
+		["Threat"] = {
+			["Name"] = "Enable threat display",
+			["Desc"] = "Health Bar on party and raid members will turn if they have aggro",
+		},
+		
+		["Arena"] = {
+			["Name"] = "Arena Frames",
+			["Desc"] = "Display arena opponents when inside a battleground or arena",
+		},
+		
+		["Boss"] = {
+			["Name"] = "Boss Frames",
+			["Desc"] = "Display boss frames while doing pve",
+		},
+		
+		["TargetAuras"] = {
+			["Name"] = "Target Auras",
+			["Desc"] = "Display buffs and debuffs on target",
+		},
+		
+		["FocusAuras"] = {
+			["Name"] = "Focus Auras",
+			["Desc"] = "Display buffs and debuffs on focus",
+		},
+		
+		["FocusTargetAuras"] = {
+			["Name"] = "Focus Target Auras",
+			["Desc"] = "Display buffs and debuffs on focus target",
+		},
+		
+		["ArenaAuras"] = {
+			["Name"] = "Arena Frames Auras",
+			["Desc"] = "Display debuffs on arena frames",
+		},
+		
+		["BossAuras"] = {
+			["Name"] = "Boss Frames Auras",
+			["Desc"] = "Display debuffs on boss frames",
+		},
+		
+		["AltPowerText"] = {
+			["Name"] = "Boss AltPower Text",
+			["Desc"] = "Display boss altpower text values on altpower bar",
+		},
+		
 		["Font"] = {
 			["Name"] = "Unit Frame Font",
 			["Desc"] = "Set a font for unit frames",
@@ -601,6 +696,11 @@ TukuiConfig["itIT"] = {
 		["HealthTexture"] = {
 			["Name"] = "Health Bar Texture",
 			["Desc"] = "Set a texture for health bars",
+		},
+		
+		["CastTexture"] = {
+			["Name"] = "Cast Bar Texture",
+			["Desc"] = "Set a texture for cast bars",
 		},
 	},
 }

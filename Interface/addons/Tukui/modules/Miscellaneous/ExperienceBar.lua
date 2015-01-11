@@ -1,7 +1,6 @@
 local T, C, L = select(2, ...):unpack()
 
 local Miscellaneous = T["Miscellaneous"]
-local MaxLevel = MAX_PLAYER_LEVEL
 local Experience = CreateFrame("Frame", nil, UIParent)
 local HideTooltip = GameTooltip_Hide
 local Panels = T["Panels"]
@@ -23,10 +22,10 @@ function Experience:SetTooltip()
 		GameTooltip:SetOwner(Panel, "ANCHOR_TOPRIGHT", 0, 5)
 	end
 	
-	GameTooltip:AddLine(string.format("|cff4BAF4C"..XP..": %d / %d (%d%% - %d/%d)|r", Current, Max, Current / Max * 100, Bars - (Bars * (Max - Current) / Max), Bars))
+	GameTooltip:AddLine(string.format("|cff0090FF"..XP..": %d / %d (%d%% - %d/%d)|r", Current, Max, Current / Max * 100, Bars - (Bars * (Max - Current) / Max), Bars))
 	
 	if Rested then
-		GameTooltip:AddLine(string.format("|cff0090FF"..TUTORIAL_TITLE26..": +%d (%d%%)|r", Rested, Rested / Max * 100))
+		GameTooltip:AddLine(string.format("|cff4BAF4C"..TUTORIAL_TITLE26..": +%d (%d%%)|r", Rested, Rested / Max * 100))
 	end
 	
 	GameTooltip:Show()
@@ -37,30 +36,33 @@ function Experience:GetExperience()
 end
 
 function Experience:Update(event, owner)
-	if (UnitLevel("player") == MaxLevel) then
+	if (UnitLevel("player") == MAX_PLAYER_LEVEL) then
 		self:Disable()
+		
 		return
+	else
+		self:Enable()
 	end
 	
 	local Current, Max = self:GetExperience()
 	local Rested = GetXPExhaustion()
+	local IsRested = GetRestState()
 	
 	for i = 1, self.NumBars do
 		self["XPBar"..i]:SetMinMaxValues(0, Max)
 		self["XPBar"..i]:SetValue(Current)
 		
-		if Rested then
+		if (IsRested == 1 and Rested) then
 			self["RestedBar"..i]:SetMinMaxValues(0, Max)
 			self["RestedBar"..i]:SetValue(Rested + Current)
+		else
+			self["RestedBar"..i]:SetMinMaxValues(0, 1)
+			self["RestedBar"..i]:SetValue(0)
 		end
 	end
 end
 
 function Experience:Create()
-	if (UnitLevel("player") == MaxLevel) then
-		return
-	end
-	
 	for i = 1, self.NumBars do
 		local XPBar = CreateFrame("StatusBar", nil, UIParent)
 		local RestedBar = CreateFrame("StatusBar", nil, UIParent)
@@ -68,6 +70,8 @@ function Experience:Create()
 		XPBar:SetStatusBarTexture(C.Medias.Normal)
 		XPBar:SetStatusBarColor(unpack(self.XPColor))
 		XPBar:EnableMouse()
+		XPBar:SetFrameStrata("MEDIUM")
+		XPBar:SetFrameLevel(4)
 		XPBar:CreateBackdrop()
 		XPBar:SetScript("OnEnter", Experience.SetTooltip)
 		XPBar:SetScript("OnLeave", HideTooltip)
@@ -98,20 +102,38 @@ function Experience:Create()
 	self:RegisterEvent("PLAYER_LEVEL_UP")
 	self:RegisterEvent("UPDATE_EXHAUSTION")
 	self:RegisterEvent("PLAYER_ENTERING_WORLD")
+	self:RegisterEvent("PLAYER_UPDATE_RESTING")
 	
 	self:SetScript("OnEvent", self.Update)
 end
 
 function Experience:Enable()
-	self:Create()
+	if not self.IsCreated then
+		self:Create()
+		
+		self.IsCreated = true
+	end
+	
+	for i = 1, self.NumBars do
+		if not self["XPBar"..i]:IsShown() then
+			self["XPBar"..i]:Show()
+		end
+		
+		if not self["RestedBar"..i]:IsShown() then
+			self["RestedBar"..i]:Show()
+		end
+	end	
 end
 
 function Experience:Disable()
-	self:UnregisterAllEvents()
-	
 	for i = 1, self.NumBars do
-		self["XPBar"..i]:Hide()
-		self["RestedBar"..i]:Hide()
+		if self["XPBar"..i]:IsShown() then
+			self["XPBar"..i]:Hide()
+		end
+		
+		if self["RestedBar"..i]:IsShown() then
+			self["RestedBar"..i]:Hide()
+		end
 	end
 end
 

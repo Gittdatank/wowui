@@ -447,15 +447,6 @@ G.unitframe.aurafilters['Whitelist'] = {
 		[SpellName(22812)] = Defaults(), --Barkskin
 		--[SpellName(1490)] = Defaults(), --Curse of the Elements (5% magic damage taken debuff)
 		--[SpellName(116202)] = Defaults(), --Aura of the Elements (5% magic damage taken debuff)
-		[SpellName(123059)] = Defaults(), --Destabilize (Amber-Shaper Un'sok)
-		[SpellName(136431)] = Defaults(), --Shell Concussion (Tortos)
-		[SpellName(137332)] = Defaults(), --Beast of Nightmares (Twin Consorts)
-		[SpellName(137375)] = Defaults(), --Beast of Nightmares (Twin Consorts)
-		[SpellName(144351)] = Defaults(), --Mark of Arrogance (Norushen)
-		[SpellName(142863)] = Defaults(), --Weak Ancient Barrier (Malkorok)
-		[SpellName(142864)] = Defaults(), --Ancient Barrier (Malkorok)
-		[SpellName(142865)] = Defaults(), --Strong Ancient Barrier (Malkorok)
-		[SpellName(143198)] = Defaults(), --Garrote (Fallen Protectors)
 	},
 }
 
@@ -641,7 +632,7 @@ E.ReverseTimer = {
 
 --BuffWatch
 --List of personal spells to show on unitframes as icon
-local function ClassBuff(id, point, color, anyUnit, onlyShowMissing, style, displayText, textColor, textThreshold, xOffset, yOffset)
+local function ClassBuff(id, point, color, anyUnit, onlyShowMissing, style, displayText, decimalThreshold, textColor, textThreshold, xOffset, yOffset)
 	local r, g, b = unpack(color)
 	
 	local r2, g2, b2 = 1, 1, 1
@@ -650,7 +641,7 @@ local function ClassBuff(id, point, color, anyUnit, onlyShowMissing, style, disp
 	end
 	
 	return {["enabled"] = true, ["id"] = id, ["point"] = point, ["color"] = {["r"] = r, ["g"] = g, ["b"] = b}, 
-	["anyUnit"] = anyUnit, ["onlyShowMissing"] = onlyShowMissing, ['style'] = style or 'coloredIcon', ['displayText'] = displayText or false, 
+	["anyUnit"] = anyUnit, ["onlyShowMissing"] = onlyShowMissing, ['style'] = style or 'coloredIcon', ['displayText'] = displayText or false, ['decimalThreshold'] = decimalThreshold or 5,
 	['textColor'] = {["r"] = r2, ["g"] = g2, ["b"] = b2}, ['textThreshold'] = textThreshold or -1, ['xOffset'] = xOffset or 0, ['yOffset'] = yOffset or 0}
 end
 
@@ -678,8 +669,8 @@ G.unitframe.buffwatch = {
 		ClassBuff(1038, "BOTTOMRIGHT", {0.93, 0.75, 0}, true),	-- Hand of Salvation
 		ClassBuff(6940, "BOTTOMRIGHT", {0.89, 0.1, 0.1}, true),	-- Hand of Sacrifice
 		ClassBuff(114039, "BOTTOMRIGHT", {164/255, 105/255, 184/255}), -- Hand of Purity
-		ClassBuff(20925, 'TOPLEFT', {0.93, 0.75, 0}), -- Sacred Shield
-		ClassBuff(114163, 'BOTTOMLEFT', {0.87, 0.7, 0.03}), -- Eternal Flame
+		ClassBuff(148039, 'TOPLEFT', {0.93, 0.75, 0}), -- Sacred Shield
+		ClassBuff(156322, 'BOTTOMLEFT', {0.87, 0.7, 0.03}), -- Eternal Flame
 	},
 	SHAMAN = {
 		ClassBuff(61295, "TOPRIGHT", {0.7, 0.3, 0.7}),	 -- Riptide
@@ -725,8 +716,6 @@ G.unitframe.ChannelTicks = {
 	--[SpellName(44203)] = 4, -- "Tranquility"
 	[SpellName(16914)] = 10, -- "Hurricane"
 	--Priest
-	[SpellName(15407)] = 3, -- "Mind Flay"
-	[SpellName(129197)] = 3, -- "Mind Flay (Insanity)"
 	[SpellName(48045)] = 5, -- "Mind Sear"
 	[SpellName(47540)] = 2, -- "Penance"
 	--[SpellName(64901)] = 4, -- Hymn of Hope
@@ -739,6 +728,20 @@ G.unitframe.ChannelTicks = {
 	--Monk
 	[SpellName(115175)] = 9, -- "Smoothing Mist"
 }
+
+local f = CreateFrame("Frame")
+f:RegisterEvent("PLAYER_ENTERING_WORLD")
+f:SetScript("OnEvent", function(self)
+	self:UnregisterEvent("PLAYER_ENTERING_WORLD")
+
+	local mfTicks = 3
+	if string.lower((UnitClass("player"))) == "priest" and IsSpellKnown(157223) then --Enhanced Mind Flay
+		mfTicks = 4
+	end
+
+	E.global.unitframe.ChannelTicks[SpellName(15407)] = mfTicks -- "Mind Flay"
+	E.global.unitframe.ChannelTicks[SpellName(129197)] = mfTicks -- "Mind Flay (Insanity)"
+end)
 
 G.unitframe.ChannelTicksSize = {
     --Warlock

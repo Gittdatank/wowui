@@ -71,6 +71,8 @@ function TukuiUnitFrames:Party()
 	if DarkTheme then
 		Power.colorTapping = true
 		Power.colorClass = true
+		Power.colorClassNPC = true
+		Power.colorClassPet = true
 		Power.Background.multiplier = 0.1				
 	else
 		Power.colorPower = true
@@ -83,10 +85,6 @@ function TukuiUnitFrames:Party()
 	local Name = Health:CreateFontString(nil, "OVERLAY")
 	Name:SetPoint("TOPLEFT", -1, 18)
 	Name:SetFontObject(Font)
-	
-	local Role = Health:CreateFontString(nil, "OVERLAY")
-	Role:SetPoint("TOPRIGHT", 3, 18)
-	Role:SetFontObject(Font)
 	
 	if (C.Party.Portrait) then
 		local Portrait = CreateFrame("PlayerModel", nil, self)
@@ -172,13 +170,14 @@ function TukuiUnitFrames:Party()
 		ThirdBar:SetStatusBarTexture(C.Medias.Normal)
 		ThirdBar:SetStatusBarColor(0.3, 0.3, 0, 1)
 		
+		ThirdBar:SetFrameLevel(Health:GetFrameLevel() - 2)
 		SecondBar:SetFrameLevel(ThirdBar:GetFrameLevel() + 1)
 		FirstBar:SetFrameLevel(ThirdBar:GetFrameLevel() + 2)
 		
 		self.HealPrediction = {
 			myBar = FirstBar,
 			otherBar = SecondBar,
-			absBar = ThirdBar,
+			absorbBar = ThirdBar,
 			maxOverflow = 1,
 		}
 	end
@@ -200,6 +199,11 @@ function TukuiUnitFrames:Party()
 	local Threat = Health:CreateTexture(nil, "OVERLAY")
 	Threat.Override = TukuiUnitFrames.UpdateThreat
 	
+	local Range = {
+		insideAlpha = 1, 
+		outsideAlpha = C["Party"].RangeAlpha,
+	}
+	
 	self.Health = Health
 	self.Health.bg = Health.Background
 	self.Power = Power
@@ -214,6 +218,6 @@ function TukuiUnitFrames:Party()
 	self.RaidIcon = RaidIcon
 	self.PhaseIcon = PhaseIcon
 	self.Threat = Threat
-	self:Tag(Name, "[Tukui:GetNameColor][Tukui:NameLong]")
-	self:Tag(Role, "[Tukui:Role]")
+	self.Range = Range
+	self:Tag(Name, "[Tukui:GetNameColor][Tukui:NameLong][Tukui:Role]")
 end

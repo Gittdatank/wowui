@@ -39,6 +39,8 @@ end
 function A:UpdateReminder(event, unit)
 	if (event == "UNIT_AURA" and unit ~= "player") then return end	
 	local frame = self.frame
+	local reverseStyle = E.db.auras.consolidatedBuffs.reverseStyle
+
 	for i = 1, NUM_LE_RAID_BUFF_TYPES do
 		local spellName, rank, texture, duration, expirationTime, spellId, slot = GetRaidBuffTrayAuraInfo(i);
 		local button = self.frame[i]
@@ -50,20 +52,21 @@ function A:UpdateReminder(event, unit)
 			button.t:SetTexture(texture)
 
 			if (duration == 0 and expirationTime == 0) or E.db.auras.consolidatedBuffs.durations ~= true then
-				button.t:SetAlpha(0.3)
+				button.t:SetAlpha(reverseStyle == true and 1 or 0.3)
 				button:SetScript('OnUpdate', nil)
 				button.timer:SetText(nil)
 				CooldownFrame_SetTimer(button.cd, 0, 0, 0)
 			else
 				CooldownFrame_SetTimer(button.cd, expirationTime - duration, duration, 1)
 				button.t:SetAlpha(1)
+				button.cd:SetReverse(reverseStyle == true and true or false)
 				button:SetScript('OnUpdate', A.UpdateConsolidatedTime)
 			end
 			button.spellName = spellName
 		else
 			CooldownFrame_SetTimer(button.cd, 0, 0, 0)
 			button.spellName = nil
-			button.t:SetAlpha(1)
+			button.t:SetAlpha(reverseStyle == true and 0.3 or 1)
 			button:SetScript('OnUpdate', nil)
 			button.timer:SetText(nil)
 			button.t:SetTexture(self.DefaultIcons[i])
@@ -153,12 +156,12 @@ function A:Update_ConsolidatedBuffsSettings(isCallback)
 		local button = frame[i]
 		button.t:SetAlpha(1)
 		button:ClearAllPoints()
-		button:Size(E.ConsolidatedBuffsWidth - (E.PixelMode and 1 or 4)) -- 4 needs to be 1
+		button:Size(E.ConsolidatedBuffsWidth - (E.PixelMode and 0 or 4)) -- 4 needs to be 1
 		
 		if i == 1 then
 			button:Point("TOP", ElvUI_ConsolidatedBuffs, "TOP", 0, -(E.PixelMode and 0 or 2))
 		else
-			button:Point("TOP", frame[ignoreIcons[i - 1] or (i - 1)], "BOTTOM", 0, (E.PixelMode and 1 or -1))
+			button:Point("TOP", frame[ignoreIcons[i - 1] or (i - 1)], "BOTTOM", 0, (E.PixelMode and 2 or -1))
 		end
 
 		if i == NUM_LE_RAID_BUFF_TYPES then
@@ -204,8 +207,13 @@ function A:Construct_ConsolidatedBuffs()
 	local frame = CreateFrame('Frame', 'ElvUI_ConsolidatedBuffs', Minimap)
 	frame:SetTemplate('Default')
 	frame:Width(E.ConsolidatedBuffsWidth)
-	frame:Point('TOPLEFT', Minimap.backdrop, 'TOPRIGHT', (E.PixelMode and -1 or 1), 0)
-	frame:Point('BOTTOMLEFT', Minimap.backdrop, 'BOTTOMRIGHT', (E.PixelMode and -1 or 1), 0)
+	if E.db.auras.consolidatedBuffs.position == "LEFT" then
+		frame:Point('TOPRIGHT', Minimap.backdrop, 'TOPLEFT', (E.PixelMode and 1 or -1), 0)
+		frame:Point('BOTTOMRIGHT', Minimap.backdrop, 'BOTTOMLEFT', (E.PixelMode and 1 or -1), 0)
+	else
+		frame:Point('TOPLEFT', Minimap.backdrop, 'TOPRIGHT', (E.PixelMode and -1 or 1), 0)
+		frame:Point('BOTTOMLEFT', Minimap.backdrop, 'BOTTOMRIGHT', (E.PixelMode and -1 or 1), 0)
+	end
 	self.frame = frame
 	
 	for i=1, NUM_LE_RAID_BUFF_TYPES do

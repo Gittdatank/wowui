@@ -12,6 +12,10 @@ Movers.Frames = {}
 Movers.Defaults = {}
 
 function Movers:SaveDefaults(frame, a1, p, a2, x, y)
+	if not a1 then
+		return
+	end
+	
 	if not p then
 		p = UIParent
 	end
@@ -23,55 +27,58 @@ function Movers:SaveDefaults(frame, a1, p, a2, x, y)
 end
 
 function Movers:RestoreDefaults(button)
-	if (self.DragInfo and not self.DragInfo:IsShown()) then 
-		local FrameName = self:GetName()
-		local Data = Movers.Defaults[FrameName]
-		local SavedVariables = TukuiDataPerChar.Move
+	local FrameName = self.Parent:GetName()
+	local Data = Movers.Defaults[FrameName]
+	local SavedVariables = TukuiData[GetRealmName()][UnitName("Player")].Move
+
+	if (button == "RightButton") and (Data) then
+		local Anchor1, ParentName, Anchor2, X, Y = unpack(Data)
+		local Frame = _G[FrameName]
+		local Parent = _G[ParentName]
 	
-		if (button == "RightButton") and (Data) then
-			local Anchor1, ParentName, Anchor2, X, Y = unpack(Data)
-			local Frame = _G[FrameName]
-			local Parent = _G[ParentName]
+		Frame:ClearAllPoints()
+		Frame:SetPoint(Anchor1, Parent, Anchor2, X, Y)
 		
-			Frame:ClearAllPoints()
-			Frame:SetPoint(Anchor1, Parent, Anchor2, X, Y)
-		
-			-- Delete Saved Variable
-			SavedVariables[FrameName] = nil
-		end
+		Frame.DragInfo:ClearAllPoints()
+		Frame.DragInfo:SetAllPoints(Frame)
+	
+		-- Delete Saved Variable
+		SavedVariables[FrameName] = nil
 	end
 end
 
 function Movers:RegisterFrame(frame)
+	local Anchor1, Parent, Anchor2, X, Y = frame:GetPoint()
+
 	tinsert(self.Frames, frame)
 	
-	frame:HookScript("OnMouseUp", self.RestoreDefaults)
+	self:SaveDefaults(frame, Anchor1, Parent, Anchor2, X, Y)
 end
 
 function Movers:OnDragStart()
-	local Anchor1, Parent, Anchor2, X, Y = self:GetPoint()
-	
 	self:StartMoving()
-	
-	Movers:SaveDefaults(self, Anchor1, Parent, Anchor2, X, Y)
 end
 
 function Movers:OnDragStop()
 	self:StopMovingOrSizing()
 	
-	local Data = TukuiDataPerChar.Move
+	local Data = TukuiData[GetRealmName()][UnitName("Player")].Move
 	local Anchor1, Parent, Anchor2, X, Y = self:GetPoint()
-	local Frame = self:GetName()
+	local FrameName = self.Parent:GetName()
+	local Frame = self.Parent
+	
+	Frame:ClearAllPoints()
+	Frame:SetPoint(Anchor1, Parent, Anchor2, X, Y)
 	
 	if not Parent then
 		Parent = UIParent
 	end
 	
-	Data[Frame] = {Anchor1, Parent:GetName(), Anchor2, X, Y}
+	Data[FrameName] = {Anchor1, Parent:GetName(), Anchor2, X, Y}
 end
 
 function Movers:CreateDragInfo()
-	self.DragInfo = CreateFrame("Frame", nil, self)
+	self.DragInfo = CreateFrame("Button", nil, self)
 	self.DragInfo:SetAllPoints(self)
 	self.DragInfo:SetTemplate()
 	self.DragInfo:SetBackdropBorderColor(1, 0, 0)
@@ -79,9 +86,14 @@ function Movers:CreateDragInfo()
 	self.DragInfo.Text:SetText(self:GetName())
 	self.DragInfo.Text:SetPoint("CENTER")
 	self.DragInfo.Text:SetTextColor(1, 0, 0)
-	self.DragInfo:SetFrameLevel(self:GetFrameLevel() + 100)
+	self.DragInfo:SetFrameLevel(100)
 	self.DragInfo:SetFrameStrata("HIGH")
+	self.DragInfo:SetMovable(true)
+	self.DragInfo:RegisterForDrag("LeftButton")
 	self.DragInfo:Hide()
+	self.DragInfo:SetScript("OnMouseUp", Movers.RestoreDefaults)
+	
+	self.DragInfo.Parent = self.DragInfo:GetParent()
 end
 
 function Movers:StartOrStopMoving()
@@ -109,51 +121,71 @@ function Movers:StartOrStopMoving()
 				Frame:SetAttribute("unit", "player")
 			end
 			
-			if not Frame:IsMouseEnabled() then
-				Frame:EnableMouse(true)
-				
-				Frame.WasMouseDisabled = true
+			Frame.DragInfo:SetScript("OnDragStart", self.OnDragStart)
+			Frame.DragInfo:SetScript("OnDragStop", self.OnDragStop)
+			Frame.DragInfo:SetParent(UIParent)
+			Frame.DragInfo:Show()
+			
+			if Frame.DragInfo:GetFrameLevel() ~= 100 then
+				Frame.DragInfo:SetFrameLevel(100)
 			end
 			
-			Frame:SetMovable(true)
-			Frame:RegisterForDrag("LeftButton")
-			Frame:SetScript("OnDragStart", self.OnDragStart)
-			Frame:SetScript("OnDragStop", self.OnDragStop)
-			Frame.DragInfo:Show()
+			if Frame.DragInfo:GetFrameStrata() ~= "HIGH" then
+				Frame.DragInfo:SetFrameStrata("HIGH")
+			end
+			
+			if Frame.DragInfo:GetHeight() < 15 then
+				Frame.DragInfo:ClearAllPoints()
+				Frame.DragInfo:SetWidth(Frame:GetWidth())
+				Frame.DragInfo:SetHeight(23)
+				Frame.DragInfo:SetPoint("TOP", Frame)
+			end
 		else
 			if Frame.unit then
 				Frame.unit = Frame.oldunit
 				Frame:SetAttribute("unit", Frame.unit)
 			end
-			
-			if Frame.WasMouseDisabled then
-				Frame:EnableMouse(false)
-				
-				Frame.WasMouseDisabled = false
-			end
 
-			Frame:SetScript("OnDragStart", nil)
-			Frame:SetScript("OnDragStop", nil)
-			
 			if Frame.DragInfo then
+				Frame.DragInfo:SetParent(Frame.DragInfo.Parent)
 				Frame.DragInfo:Hide()
+				Frame.DragInfo:SetScript("OnDragStart", nil)
+				Frame.DragInfo:SetScript("OnDragStop", nil)
+				
+				if Frame.DragInfo.CurrentHeight then
+					Frame.DragInfo:ClearAllPoints()
+					Frame.DragInfo:SetAllPoints(Frame)
+				end
 			end
 		end		
 	end
 end
 
+function Movers:IsRegisteredFrame(frame)
+	local Match = false
+	
+	for i = 1, #self.Frames do
+		if self.Frames[i] == frame then
+			Match = true
+		end
+	end
+	
+	return Match
+end
+
 Movers:SetScript("OnEvent", function(self, event)
 	if (event == "PLAYER_ENTERING_WORLD") then
-		if not TukuiDataPerChar.Move then
-			TukuiDataPerChar.Move = {}
+		if not TukuiData[GetRealmName()][UnitName("Player")].Move then
+			TukuiData[GetRealmName()][UnitName("Player")].Move = {}
 		end
 	
-		local Data = TukuiDataPerChar.Move
+		local Data = TukuiData[GetRealmName()][UnitName("Player")].Move
 	
 		for Frame, Position in pairs(Data) do
 			local Frame = _G[Frame]
+			local IsRegistered = self:IsRegisteredFrame(Frame)
 			
-			if Frame then
+			if Frame and IsRegistered then
 				local Anchor1, Parent, Anchor2, X, Y = Frame:GetPoint()
 
 				self:SaveDefaults(Frame, Anchor1, Parent, Anchor2, X, Y)

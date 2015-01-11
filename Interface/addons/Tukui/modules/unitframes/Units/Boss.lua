@@ -6,6 +6,7 @@ function TukuiUnitFrames:Boss()
 	local DarkTheme = C["UnitFrames"].DarkTheme
 	local HealthTexture = T.GetTexture(C["UnitFrames"].HealthTexture)
 	local PowerTexture = T.GetTexture(C["UnitFrames"].PowerTexture)
+	local CastTexture = T.GetTexture(C["UnitFrames"].CastTexture)
 	local Font = T.GetFont(C["UnitFrames"].Font)
 
 	self:RegisterForClicks("AnyUp")
@@ -72,6 +73,8 @@ function TukuiUnitFrames:Boss()
 	if DarkTheme then
 		Power.colorTapping = true
 		Power.colorClass = true
+		Power.colorClassNPC = true
+		Power.colorClassPet = true
 		Power.Background.multiplier = 0.1				
 	else
 		Power.colorPower = true
@@ -87,29 +90,34 @@ function TukuiUnitFrames:Boss()
 	Name:SetFontObject(Font)
 	Name.frequentUpdates = 0.2
 	
-	local Buffs = CreateFrame("Frame", nil, self)
-	Buffs:SetHeight(26)
-	Buffs:SetWidth(252)
-	Buffs:Point("RIGHT", self, "LEFT", -4, 0)
-	Buffs.size = 26
-	Buffs.num = 3
-	Buffs.spacing = 2
-	Buffs.initialAnchor = "RIGHT"
-	Buffs["growth-x"] = "LEFT"
-	Buffs.PostCreateIcon = TukuiUnitFrames.PostCreateAura
-	Buffs.PostUpdateIcon = TukuiUnitFrames.PostUpdateAura
+	if (C.UnitFrames.BossAuras) then
+		local Buffs = CreateFrame("Frame", nil, self)
+		Buffs:SetHeight(26)
+		Buffs:SetWidth(252)
+		Buffs:Point("RIGHT", self, "LEFT", -4, 0)
+		Buffs.size = 26
+		Buffs.num = 3
+		Buffs.spacing = 2
+		Buffs.initialAnchor = "RIGHT"
+		Buffs["growth-x"] = "LEFT"
+		Buffs.PostCreateIcon = TukuiUnitFrames.PostCreateAura
+		Buffs.PostUpdateIcon = TukuiUnitFrames.PostUpdateAura
 
-	local Debuffs = CreateFrame("Frame", nil, self)
-	Debuffs:SetHeight(26)
-	Debuffs:SetWidth(200)
-	Debuffs:Point("LEFT", self, "RIGHT", 4, 0)
-	Debuffs.size = 26
-	Debuffs.num = 5
-	Debuffs.spacing = 2
-	Debuffs.initialAnchor = "LEFT"
-	Debuffs["growth-x"] = "RIGHT"
-	Debuffs.PostCreateIcon = TukuiUnitFrames.PostCreateAura
-	Debuffs.PostUpdateIcon = TukuiUnitFrames.PostUpdateAura
+		local Debuffs = CreateFrame("Frame", nil, self)
+		Debuffs:SetHeight(26)
+		Debuffs:SetWidth(200)
+		Debuffs:Point("LEFT", self, "RIGHT", 4, 0)
+		Debuffs.size = 26
+		Debuffs.num = 5
+		Debuffs.spacing = 2
+		Debuffs.initialAnchor = "LEFT"
+		Debuffs["growth-x"] = "RIGHT"
+		Debuffs.PostCreateIcon = TukuiUnitFrames.PostCreateAura
+		Debuffs.PostUpdateIcon = TukuiUnitFrames.PostUpdateAura
+	
+		self.Debuffs = Debuffs
+		self.Buffs = Buffs
+	end
 	
 	if (C.UnitFrames.CastBar) then
 		local CastBar = CreateFrame("StatusBar", nil, self)
@@ -118,10 +126,10 @@ function TukuiUnitFrames:Boss()
 		CastBar:SetPoint("RIGHT", 0, 0)
 		CastBar:SetPoint("BOTTOM", 0, -22)
 		CastBar:SetHeight(16)
-		CastBar:SetStatusBarTexture(C.Medias.Normal)
+		CastBar:SetStatusBarTexture(CastTexture)
 		CastBar:SetFrameLevel(6)
 		CastBar:SetBackdrop(TukuiUnitFrames.Backdrop)
-		CastBar:SetBackdropColor(unpack(C.Medias.BackdropColor))
+		CastBar:SetBackdropColor(unpack(C.General.BackdropColor))
 		CastBar:CreateShadow()
 		
 		CastBar.Time = CastBar:CreateFontString(nil, "OVERLAY")
@@ -134,12 +142,14 @@ function TukuiUnitFrames:Boss()
 		CastBar.Text:SetFontObject(Font)
 		CastBar.Text:Point("LEFT", CastBar, "LEFT", 4, 0)
 		CastBar.Text:SetTextColor(0.84, 0.75, 0.65)
-
+		CastBar.Text:SetWidth(166)
+		CastBar.Text:SetJustifyH("LEFT")
+		
 		CastBar.Button = CreateFrame("Frame", nil, CastBar)
 		CastBar.Button:Size(CastBar:GetHeight())
 		CastBar.Button:SetPoint("RIGHT", CastBar, "LEFT", -4, 0)
 		CastBar.Button:SetBackdrop(TukuiUnitFrames.Backdrop)
-		CastBar.Button:SetBackdropColor(unpack(C.Medias.BackdropColor))
+		CastBar.Button:SetBackdropColor(unpack(C.General.BackdropColor))
 		CastBar.Button:CreateShadow()
 		
 		CastBar.Icon = CastBar.Button:CreateTexture(nil, "ARTWORK")
@@ -155,15 +165,14 @@ function TukuiUnitFrames:Boss()
 		self.Castbar.Icon = CastBar.Icon
 	end
 	
-	local AltPowerBar = CreateFrame("StatusBar", nil, Health)
-	AltPowerBar:SetFrameLevel(Health:GetFrameLevel() + 1)
+	local AltPowerBar = CreateFrame("StatusBar", nil, self)
 	AltPowerBar:Height(4)
 	AltPowerBar:SetStatusBarTexture(C.Medias.Normal)
 	AltPowerBar:GetStatusBarTexture():SetHorizTile(false)
 	AltPowerBar:SetStatusBarColor(0, 0, 0)
 	AltPowerBar:SetPoint("LEFT")
 	AltPowerBar:SetPoint("RIGHT")
-	AltPowerBar:SetPoint("TOP", Health, "TOP")
+	AltPowerBar:SetPoint("BOTTOM", Health, "TOP", 0, 1)
 	AltPowerBar:SetBackdrop({
 		bgFile = C.Medias.Blank, 
 		edgeFile = C.Medias.Blank, 
@@ -172,7 +181,15 @@ function TukuiUnitFrames:Boss()
 	})
 	AltPowerBar:SetBackdropColor(0, 0, 0)
 	AltPowerBar:SetBackdropBorderColor(0, 0, 0)
-	AltPowerBar.PostUpdate = TukuiUnitFrames.UpdateBossAltPower
+	AltPowerBar:CreateShadow()
+	
+	if C.UnitFrames.AltPowerText then
+		AltPowerBar.Value = AltPowerBar:CreateFontString(nil, "OVERLAY")
+		AltPowerBar.Value:SetFontObject(Font)
+		AltPowerBar.Value:Point("CENTER", 0, 0)
+	end
+	
+	AltPowerBar.PostUpdate = TukuiUnitFrames.UpdateAltPower
 	
 	local RaidIcon = Health:CreateTexture(nil, "OVERLAY")
 	RaidIcon:SetSize(16, 16)
@@ -184,8 +201,6 @@ function TukuiUnitFrames:Boss()
 	self.Power = Power
 	self.Power.bg = Power.Background
 	self.Name = Name
-	self.Debuffs = Debuffs
 	self.AltPowerBar = AltPowerBar
-	self.Buffs = Buffs
 	self.RaidIcon = RaidIcon
 end

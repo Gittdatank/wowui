@@ -59,11 +59,20 @@ function Tooltip:CreateAnchor()
 	Movers:RegisterFrame(Anchor)
 end
 
-function Tooltip:SetTooltipDefaultAnchor()
+function Tooltip:SetTooltipDefaultAnchor(parent)
 	local Anchor = Tooltip.Anchor
 	
-	self:SetOwner(Anchor)
-	self:SetAnchorType("ANCHOR_TOPRIGHT", 0, 9)
+	if (C.Tooltips.MouseOver) then
+		if (parent ~= UIParent) then
+			self:SetOwner(Anchor)
+			self:SetAnchorType("ANCHOR_TOPRIGHT", 0, 9)
+		else
+			self:SetOwner(parent, "ANCHOR_CURSOR")
+		end	
+	else
+		self:SetOwner(Anchor)
+		self:SetAnchorType("ANCHOR_TOPRIGHT", 0, 9)
+	end
 end
 
 function Tooltip:GetColor(unit)
@@ -144,7 +153,7 @@ function Tooltip:OnTooltipSetUnit()
 		end
 	end
 
-	if (UnitIsPlayer(Unit)) then
+	if (UnitIsPlayer(Unit) and UnitIsFriend("Player", Unit)) then
 		if (C.Tooltips.ShowSpec) then
 			local Talent = T.Tooltips.Talent
 			
@@ -228,7 +237,7 @@ function Tooltip:OnTooltipSetUnit()
 		HealthBar.Text:SetText(Short(Health) .. " / " .. Short(MaxHealth))
 	end
 	
-	if (C.Tooltips.ShowSpec and UnitIsPlayer(Unit)) then
+	if (C.Tooltips.ShowSpec and UnitIsPlayer(Unit) and UnitIsFriend("Player", Unit)) then
 		GameTooltip:AddLine(" ")
 		GameTooltip:AddLine(STAT_AVERAGE_ITEM_LEVEL..": |cff3eea23"..ILevel.."|r")
 		GameTooltip:AddLine(SPECIALIZATION..": |cff3eea23"..TalentSpec.."|r")
@@ -294,6 +303,12 @@ function Tooltip:SetColor()
 end
 
 function Tooltip:OnUpdate(elapsed)
+	local Owner = self:GetOwner()
+
+	if (not Owner) then
+		return
+	end
+    
 	local Red, Green, Blue = self:GetBackdropColor()
 	local Owner = self:GetOwner():GetName()
 	local Anchor = self:GetAnchorType()
@@ -337,6 +352,12 @@ function Tooltip:OnValueChanged()
 	local _, Max = HealthBar:GetMinMaxValues()
 	local Value = HealthBar:GetValue()
 	
+	if (Max == 1) then
+		self.Text:Hide()
+	else
+		self.Text:Show()
+	end
+	
 	self.Text:SetText(Short(Value) .. " / " .. Short(Max))
 end
 
@@ -346,6 +367,7 @@ function Tooltip:Enable()
 	end
 	
 	self:CreateAnchor()
+	
 	hooksecurefunc("GameTooltip_SetDefaultAnchor", self.SetTooltipDefaultAnchor)
 
 	for _, Tooltip in pairs(Tooltip.Tooltips) do
@@ -357,6 +379,8 @@ function Tooltip:Enable()
 		
 		Tooltip:HookScript("OnShow", self.Skin)
 	end
+	
+	ItemRefCloseButton:SkinCloseButton()
 	
 	HealthBar:SetStatusBarTexture(T.GetTexture(C["Tooltips"].HealthTexture))
 	HealthBar:CreateBackdrop()

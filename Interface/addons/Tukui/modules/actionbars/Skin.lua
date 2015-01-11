@@ -30,9 +30,13 @@ function TukuiActionBars:SkinButton()
 	HotKey:ClearAllPoints()
 	HotKey:Point("TOPRIGHT", 0, -3)
 	
-	if (Border and Border:IsShown()) then
-		Border:Hide()
-		Border = Noop
+	if Border and Button.isSkinned then
+		Border:SetTexture('')
+		if Border:IsShown() then
+			Button:SetBackdropBorderColor(.08, .70, 0)
+		else
+			Button:SetBackdropBorderColor(unpack(C['General'].BorderColor))
+		end
 	end
 	
 	if (Btname and Normal and C.ActionBars.Macro) then
@@ -66,9 +70,6 @@ function TukuiActionBars:SkinButton()
 	end
  
 	if (C.ActionBars.HotKey) then
-		-- Do we really needed to force an update to button hotkey on login now? 
-		ActionButton_UpdateHotkeys(self, self.buttonType)
-		
 		HotKey:SetFontObject(Font)
 		HotKey.ClearAllPoints = Noop
 		HotKey.SetPoint = Noop
@@ -78,19 +79,18 @@ function TukuiActionBars:SkinButton()
 	end
 	
 	if (Name:match("Extra")) then
-		Button:SetTemplate()
 		Button.Pushed = true
-		Icon:SetDrawLayer("ARTWORK")
-	else
-		Button:CreateBackdrop()
-		Button.Backdrop:SetOutside(Button, 0, 0)	
-		Button:UnregisterEvent("ACTIONBAR_SHOWGRID")
-		Button:UnregisterEvent("ACTIONBAR_HIDEGRID")
 	end
+
+	Button:SetTemplate()
+	Button:UnregisterEvent("ACTIONBAR_SHOWGRID")
+	Button:UnregisterEvent("ACTIONBAR_HIDEGRID")
 	
 	Icon:SetTexCoord(unpack(T.IconCoord))
 	Icon:SetInside()
-	
+	Icon:SetDrawLayer('BACKGROUND', 7)
+
+
 	if (Normal) then
 		Normal:ClearAllPoints()
 		Normal:SetPoint("TOPLEFT")
@@ -115,8 +115,7 @@ function TukuiActionBars:SkinPetAndShiftButton(Normal, Button, Icon, Name, Pet)
 	
 	Button:SetWidth(PetSize)
 	Button:SetHeight(PetSize)
-	Button:CreateBackdrop()
-	Button.Backdrop:SetOutside(Button, 0, 0)
+	Button:SetTemplate()
 	
 	if (C.ActionBars.HotKey) then
 		HotKey:SetFontObject(Font)
@@ -128,9 +127,9 @@ function TukuiActionBars:SkinPetAndShiftButton(Normal, Button, Icon, Name, Pet)
 	end
 	
 	Icon:SetTexCoord(unpack(T.IconCoord))
-	Icon:ClearAllPoints()
 	Icon:SetInside()
-	
+	Icon:SetDrawLayer('BACKGROUND', 7)
+
 	if (Pet) then			
 		if (PetSize < 30) then
 			local AutoCast = _G[Name.."AutoCastable"]
@@ -226,6 +225,11 @@ function TukuiActionBars:StyleFlyout()
 	TukuiActionBars.SkinFlyoutButtons()
 end
 
+local ProcBackdrop = {
+	edgeFile = C.Medias.Blank, edgeSize = T.Mult,
+	insets = {left = T.Mult, right = T.Mult, top = T.Mult, bottom = T.Mult},
+}
+
 -- NOTE: Try to find a better animation for this.
 function TukuiActionBars:StartButtonHighlight()
 	if self.overlay then
@@ -233,11 +237,6 @@ function TukuiActionBars:StartButtonHighlight()
 		ActionButton_HideOverlayGlow(self)
 	end
 	
-	local ProcBackdrop = {
-		edgeFile = C.Medias.Blank, edgeSize = T.Mult,
-		insets = {left = T.Mult, right = T.Mult, top = T.Mult, bottom = T.Mult},
-	}
-
 	if not self.Animation then
 		local NewProc = CreateFrame("Frame", nil, self)
 		NewProc:SetBackdrop(ProcBackdrop)

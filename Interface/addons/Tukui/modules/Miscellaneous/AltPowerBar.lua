@@ -8,7 +8,7 @@ function AltPowerBar:Update()
 	local Power = UnitPower("player", ALTERNATE_POWER_INDEX)
 	local MaxPower = UnitPowerMax("player", ALTERNATE_POWER_INDEX)
 	local R, G, B = T.ColorGradient(Power, MaxPower, 0, .8, 0, .8, .8, 0, .8, 0, 0)
-	local PowerName = select(10, UnitAlternatePowerInfo("player")) or ""
+	local PowerName = select(10, UnitAlternatePowerInfo("player")) or UNKNOWN
 	
 	Status:SetMinMaxValues(0, UnitPowerMax("player", ALTERNATE_POWER_INDEX))
 	Status:SetValue(Power)
@@ -44,7 +44,7 @@ function AltPowerBar:Create()
 	self:SetAllPoints(DataTextLeft)
 	self:SetTemplate()
 	self:SetFrameStrata(DataTextLeft:GetFrameStrata())
-	self:SetFrameLevel(DataTextLeft:GetFrameLevel() + 1)
+	self:SetFrameLevel(DataTextLeft:GetFrameLevel() + 10)
 	self:RegisterEvent("UNIT_POWER_BAR_SHOW")
 	self:RegisterEvent("UNIT_POWER_BAR_HIDE")
 	self:RegisterEvent("PLAYER_ENTERING_WORLD")

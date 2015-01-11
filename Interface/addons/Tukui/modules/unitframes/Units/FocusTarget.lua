@@ -6,6 +6,7 @@ function TukuiUnitFrames:FocusTarget()
 	local DarkTheme = C["UnitFrames"].DarkTheme
 	local HealthTexture = T.GetTexture(C["UnitFrames"].HealthTexture)
 	local PowerTexture = T.GetTexture(C["UnitFrames"].PowerTexture)
+	local CastTexture = T.GetTexture(C["UnitFrames"].CastTexture)
 	local Font = T.GetFont(C["UnitFrames"].Font)
 
 	self:RegisterForClicks("AnyUp")
@@ -70,6 +71,8 @@ function TukuiUnitFrames:FocusTarget()
 	if DarkTheme then
 		Power.colorTapping = true
 		Power.colorClass = true
+		Power.colorClassNPC = true
+		Power.colorClassPet = true
 		Power.Background.multiplier = 0.1				
 	else
 		Power.colorPower = true
@@ -86,6 +89,35 @@ function TukuiUnitFrames:FocusTarget()
 	Name:SetJustifyH("CENTER")
 	Name:SetFontObject(Font)
 	self:Tag(Name, "[Tukui:GetNameColor][Tukui:NameLong]")
+	
+	if (C.UnitFrames.FocusTargetAuras) then
+		local Buffs = CreateFrame("Frame", nil, self)
+		Buffs:SetHeight(26)
+		Buffs:SetWidth(252)
+		Buffs:Point("RIGHT", self, "LEFT", -4, 0)
+		Buffs.size = 26
+		Buffs.num = 3
+		Buffs.spacing = 2
+		Buffs.initialAnchor = "RIGHT"
+		Buffs["growth-x"] = "LEFT"
+		Buffs.PostCreateIcon = TukuiUnitFrames.PostCreateAura
+		Buffs.PostUpdateIcon = TukuiUnitFrames.PostUpdateAura
+
+		local Debuffs = CreateFrame("Frame", nil, self)
+		Debuffs:SetHeight(26)
+		Debuffs:SetWidth(200)
+		Debuffs:Point("LEFT", self, "RIGHT", 4, 0)
+		Debuffs.size = 26
+		Debuffs.num = 5
+		Debuffs.spacing = 2
+		Debuffs.initialAnchor = "LEFT"
+		Debuffs["growth-x"] = "RIGHT"
+		Debuffs.PostCreateIcon = TukuiUnitFrames.PostCreateAura
+		Debuffs.PostUpdateIcon = TukuiUnitFrames.PostUpdateAura
+	
+		self.Debuffs = Debuffs
+		self.Buffs = Buffs
+	end
 
 	if (C.UnitFrames.CastBar) then
 		local CastBar = CreateFrame("StatusBar", nil, self)
@@ -94,7 +126,7 @@ function TukuiUnitFrames:FocusTarget()
 		CastBar:SetPoint("RIGHT", -20, 0)
 		CastBar:SetPoint("BOTTOM", 0, -22)
 		CastBar:SetHeight(16)
-		CastBar:SetStatusBarTexture(C.Medias.Normal)
+		CastBar:SetStatusBarTexture(CastTexture)
 		CastBar:SetFrameLevel(6)
 		CastBar:SetBackdrop(TukuiUnitFrames.Backdrop)
 		CastBar:SetBackdropColor(unpack(C.Medias.BackdropColor))
@@ -110,6 +142,8 @@ function TukuiUnitFrames:FocusTarget()
 		CastBar.Text:SetFontObject(Font)
 		CastBar.Text:Point("LEFT", CastBar, "LEFT", 4, 0)
 		CastBar.Text:SetTextColor(0.84, 0.75, 0.65)
+		CastBar.Text:SetWidth(166)
+		CastBar.Text:SetJustifyH("LEFT")
 
 		CastBar.Button = CreateFrame("Frame", nil, CastBar)
 		CastBar.Button:Size(CastBar:GetHeight())

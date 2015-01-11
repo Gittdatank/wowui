@@ -8,7 +8,7 @@ oUF.colors.tapped = {
 }
 
 oUF.colors.disconnected = {
-	0.84, 0.75, 0.65
+	0.1, 0.1, 0.1
 }
 
 oUF.colors.power = {
@@ -22,6 +22,7 @@ oUF.colors.power = {
 	["FUEL"] = {0, 0.55, 0.5},
 	["POWER_TYPE_STEAM"] = {0.55, 0.57, 0.61},
 	["POWER_TYPE_PYRITE"] = {0.60, 0.09, 0.17},
+	["ALTPOWER"] = {0, 1, 1},
 }
 
 oUF.colors.runes = {

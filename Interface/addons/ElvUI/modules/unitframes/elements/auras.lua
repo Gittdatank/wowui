@@ -39,7 +39,7 @@ function UF:Construct_AuraIcon(button)
 
 	button.cd.noOCC = true
 	button.cd.noCooldownCount = true
-	button.cd:SetReverse()
+	button.cd:SetReverse(true)
 	button.cd:SetInside()
 	button.cd:SetHideCountdownNumbers(true)
 	
@@ -134,7 +134,7 @@ function UF:PostUpdateAura(unit, button, index, offset, filter, isDebuff, durati
 	local name, _, _, _, dtype, duration, expiration, _, isStealable = UnitAura(unit, index, button.filter)
 
 	
-	local isFriend = UnitIsFriend('player', unit) == 1 and true or false
+	local isFriend = UnitIsFriend('player', unit)
 	if button.isDebuff then
 		if(not isFriend and button.owner ~= "player" and button.owner ~= "vehicle") --[[and (not E.isDebuffWhiteList[name])]] then
 			button:SetBackdropBorderColor(0.9, 0.1, 0.1)
@@ -244,7 +244,7 @@ function UF:AuraFilter(unit, icon, name, rank, texture, count, dtype, duration, 
 	local anotherFilterExists = false
 	local playerOnlyFilter = false
 	local isPlayer = unitCaster == 'player' or unitCaster == 'vehicle'
-	local isFriend = UnitIsFriend('player', unit) == 1 and true or false
+	local isFriend = UnitIsFriend('player', unit)
 	local auraType = isFriend and db.friendlyAuraType or db.enemyAuraType
 	
 	icon.isPlayer = isPlayer
@@ -277,7 +277,7 @@ function UF:AuraFilter(unit, icon, name, rank, texture, count, dtype, duration, 
 
 
 	if UF:CheckFilter(db.noConsolidated, isFriend) then
-		if shouldConsolidate == 1 then
+		if shouldConsolidate == true then
 			returnValue = false;
 		end
 		

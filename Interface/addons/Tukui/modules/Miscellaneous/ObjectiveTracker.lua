@@ -10,7 +10,9 @@ function ObjectiveTracker:SetQuestItemButton(block)
 	if (Button and not Button.IsSkinned) then
 		local Icon = Button.icon
 		
-		Button:SkinButton()
+		Button:SetNormalTexture("")
+		Button:CreateBackdrop()
+		Button.Backdrop:SetOutside(Button, 0, 0)
 		Button:StyleButton()
 		
 		Icon:SetTexCoord(.1,.9,.1,.9)
@@ -41,8 +43,12 @@ function ObjectiveTracker:UpdatePopup()
 	end
 end
 
+function ObjectiveTracker:SetTrackerPosition()
+	ObjectiveTrackerFrame:SetPoint("TOPRIGHT", ObjectiveTracker)
+end
+
 function ObjectiveTracker:AddHooks()
-	hooksecurefunc(QUEST_TRACKER_MODULE, "SetBlockHeader", self.SetQuestItemButton)
+	hooksecurefunc(QUEST_TRACKER_MODULE, "SetBlockHeader", self.SetQuestItemButton) -- TAINTING?!?
 	hooksecurefunc(AUTO_QUEST_POPUP_TRACKER_MODULE, "Update", self.UpdatePopup)
 end
 
@@ -59,26 +65,31 @@ function ObjectiveTracker:Minimize()
 end
 
 function ObjectiveTracker:Enable()
+	-- http://git.tukui.org/Tukz/tukui/issues/80
+	if select(4, GetAddOnInfo("DugisGuideViewerZ")) then
+		return
+	end
+	
 	local Movers = T["Movers"]
 	local Frame = ObjectiveTrackerFrame
 	local Minimize = ObjectiveTrackerFrame.HeaderMenu.MinimizeButton
 	local ScenarioStageBlock = ScenarioStageBlock
-	local Data = TukuiDataPerChar
+	local Data = TukuiData[GetRealmName()][UnitName("Player")]
 	local Anchor1, Parent, Anchor2, X, Y = "TOPRIGHT", UIParent, "TOPRIGHT", -T.ScreenHeight / 5, -T.ScreenHeight / 4
 	
+	self:Size(235, 23)
+	self:SetPoint(Anchor1, Parent, Anchor2, X, Y)
+	self:AddHooks()
+	self.SetTrackerPosition(Frame)
+
+	Movers:RegisterFrame(self)
+	Movers:SaveDefaults(self, Anchor1, Parent, Anchor2, X, Y)
+
 	if Data and Data.Move and Data.Move.TukuiObjectiveTracker then
-		Anchor1, Parent, Anchor2, X, Y = unpack(Data.Move.TukuiObjectiveTracker)
+		self:ClearAllPoints()
+		self:SetPoint(unpack(Data.Move.TukuiObjectiveTracker))
 	end
 	
-	ObjectiveTracker:Size(Frame:GetWidth(), 23)
-	ObjectiveTracker:SetMovable(true)
-	ObjectiveTracker:SetPoint(Anchor1, Parent, Anchor2, X, Y)
-
-	Frame:SetParent(ObjectiveTracker)
-	Frame:SetPoint("TOPRIGHT")
-	Frame.ClearAllPoints = Noop
-	Frame.SetPoint = Noop
-
 	for i = 1, 5 do
 		local Module = ObjectiveTrackerFrame.MODULES[i]
 
@@ -99,9 +110,8 @@ function ObjectiveTracker:Enable()
 	Minimize.Text:SetText("X")
 	Minimize:HookScript("OnClick", ObjectiveTracker.Minimize)
 	
-	ObjectiveTracker:AddHooks()
-	
-	Movers:RegisterFrame(ObjectiveTracker)
+	Frame.ClearAllPoints = function() end
+	Frame.SetPoint = function() end
 end
 
 Miscellaneous.ObjectiveTracker = ObjectiveTracker

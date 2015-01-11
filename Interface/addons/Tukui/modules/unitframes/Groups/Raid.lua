@@ -22,13 +22,16 @@ function TukuiUnitFrames:Raid()
 	Health:SetPoint("TOPRIGHT")
 	Health:Height(28)
 	Health:SetStatusBarTexture(HealthTexture)
-	Health:SetOrientation("VERTICAL")
+	
+	if C.Raid.VerticalHealth then
+		Health:SetOrientation("VERTICAL")
+	end
 	
 	Health.Background = Health:CreateTexture(nil, "BORDER")
 	Health.Background:SetAllPoints()
 	Health.Background:SetTexture(.1, .1, .1)
 	
-	if C.Party.ShowHealthText then
+	if C.Raid.ShowHealthText then
 		Health.Value = Health:CreateFontString(nil, "OVERLAY")
 		Health.Value:SetFontObject(HealthFont)
 		Health.Value:Point("CENTER", Health, 0, 0)
@@ -76,6 +79,8 @@ function TukuiUnitFrames:Raid()
 	if DarkTheme then
 		Power.colorTapping = true
 		Power.colorClass = true
+		Power.colorClassNPC = true
+		Power.colorClassPet = true
 		Power.Background.multiplier = 0.1				
 	else
 		Power.colorPower = true
@@ -125,37 +130,47 @@ function TukuiUnitFrames:Raid()
 	
 	if (C.Raid.HealBar) then
 		local FirstBar = CreateFrame("StatusBar", nil, Health)
-		FirstBar:SetPoint("BOTTOM", Health:GetStatusBarTexture(), "TOP", 0, 0)
+		local SecondBar = CreateFrame("StatusBar", nil, Health)
+		local ThirdBar = CreateFrame("StatusBar", nil, Health)
+		
 		FirstBar:Width(66)
 		FirstBar:Height(28)
 		FirstBar:SetStatusBarTexture(C.Medias.Normal)
 		FirstBar:SetStatusBarColor(0, 0.3, 0.15, 1)
 		FirstBar:SetMinMaxValues(0,1)
-		FirstBar:SetOrientation("VERTICAL")
 		
-		local SecondBar = CreateFrame("StatusBar", nil, Health)
-		SecondBar:SetPoint("BOTTOM", Health:GetStatusBarTexture(), "TOP", 0, 0)
 		SecondBar:Width(66)
 		SecondBar:Height(28)
 		SecondBar:SetStatusBarTexture(C.Medias.Normal)
 		SecondBar:SetStatusBarColor(0, 0.3, 0, 1)
-		SecondBar:SetOrientation("VERTICAL")
-		
-		local ThirdBar = CreateFrame("StatusBar", nil, Health)
-		ThirdBar:SetPoint("BOTTOM", Health:GetStatusBarTexture(), "TOP", 0, 0)
+			
 		ThirdBar:Width(66)
 		ThirdBar:Height(28)
 		ThirdBar:SetStatusBarTexture(C.Medias.Normal)
 		ThirdBar:SetStatusBarColor(0.3, 0.3, 0, 1)
-		ThirdBar:SetOrientation("VERTICAL")
 		
+		if C.Raid.VerticalHealth then
+			FirstBar:SetOrientation("VERTICAL")
+			SecondBar:SetOrientation("VERTICAL")
+			ThirdBar:SetOrientation("VERTICAL")
+			
+			FirstBar:SetPoint("BOTTOM", Health:GetStatusBarTexture(), "TOP", 0, 0)
+			SecondBar:SetPoint("BOTTOM", Health:GetStatusBarTexture(), "TOP", 0, 0)
+			ThirdBar:SetPoint("BOTTOM", Health:GetStatusBarTexture(), "TOP", 0, 0)
+		else
+			FirstBar:SetPoint("LEFT", Health:GetStatusBarTexture(), "RIGHT", 0, 0)
+			SecondBar:SetPoint("LEFT", Health:GetStatusBarTexture(), "RIGHT", 0, 0)
+			ThirdBar:SetPoint("LEFT", Health:GetStatusBarTexture(), "RIGHT", 0, 0)			
+		end
+		
+		ThirdBar:SetFrameLevel(Health:GetFrameLevel() - 2)
 		SecondBar:SetFrameLevel(ThirdBar:GetFrameLevel() + 1)
 		FirstBar:SetFrameLevel(ThirdBar:GetFrameLevel() + 2)
 		
 		self.HealPrediction = {
 			myBar = FirstBar,
 			otherBar = SecondBar,
-			absBar = ThirdBar,
+			absorbBar = ThirdBar,
 			maxOverflow = 1,
 		}
 	end
@@ -185,6 +200,8 @@ function TukuiUnitFrames:Raid()
         RaidDebuffs.ShowDispelableDebuff = true
         RaidDebuffs.FilterDispelableDebuff = true
         RaidDebuffs.MatchBySpellName = true
+    	RaidDebuffs.ShowBossDebuff = true
+    	RaidDebuffs.BossDebuffPriority = 5
 
         RaidDebuffs.count = RaidDebuffs:CreateFontString(nil, "OVERLAY")
         RaidDebuffs.count:SetFont(C.Medias.Font, 12, "OUTLINE")
@@ -211,7 +228,22 @@ function TukuiUnitFrames:Raid()
 	end
 	
 	local Threat = Health:CreateTexture(nil, "OVERLAY")
-	Threat.Override = TukuiUnitFrames.UpdateThreat	
+	Threat.Override = TukuiUnitFrames.UpdateThreat
+	
+	if C.Raid.Highlight then
+		local Highlight = CreateFrame("Frame", nil, self)
+		Highlight:SetPoint("TOPLEFT", self, "TOPLEFT")
+		Highlight:SetPoint("BOTTOMRIGHT", self, "BOTTOMRIGHT")
+		Highlight:SetBackdrop(TukuiUnitFrames.HighlightBorder)
+		Highlight:SetFrameLevel(0)
+		Highlight:Hide()
+		
+		self:RegisterEvent("PLAYER_TARGET_CHANGED", TukuiUnitFrames.Highlight)
+		self:RegisterEvent("RAID_ROSTER_UPDATE", TukuiUnitFrames.Highlight)
+		self:RegisterEvent("PLAYER_FOCUS_CHANGED", TukuiUnitFrames.Highlight)
+		
+		self.Highlight = Highlight
+	end
 	
 	self:Tag(Name, "[Tukui:GetNameColor][Tukui:NameShort]")
 	self.Health.bg = Health.Background
