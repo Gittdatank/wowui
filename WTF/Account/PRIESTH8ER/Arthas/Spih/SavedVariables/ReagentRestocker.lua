@@ -1,0 +1,40 @@
+
+ReagentRestockerDB = {
+	["Items"] = {
+	},
+	["MapTable"] = {
+		["hide"] = true,
+	},
+	["Options"] = {
+		["AutoSell"] = true,
+		["AutoSellUnusable"] = false,
+		["AutoDepositReagents"] = false,
+		["ReagentWarning"] = true,
+		["PullFromGuildBank"] = false,
+		["AutoSellQualityLevel"] = 0,
+		["AutoBuy"] = true,
+		["AutoSellWater"] = false,
+		["PullFromBank"] = false,
+		["UnusableQualityLevel"] = 7,
+		["AutoSellFoodWater"] = false,
+		["DisableNewUI"] = false,
+		["Debug"] = false,
+		["AutoSellQuality"] = false,
+		["Reputation"] = 0,
+		["UseTextLDB"] = false,
+		["UpgradeWater"] = false,
+		["OverstockToBank"] = false,
+		["MapIcon"] = false,
+		["UnusedNotification"] = true,
+		["AutoDestroyGrays"] = false,
+		["KeepReceipts"] = false,
+		["AutoSellFood"] = false,
+		["SingleLDB"] = true,
+		["OverstockToGuildBank"] = false,
+		["CheckData"] = false,
+	},
+	["Tags"] = {
+	},
+	["Version"] = "10.0",
+	["DataVersion"] = 17,
+}

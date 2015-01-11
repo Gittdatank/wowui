@@ -49,7 +49,7 @@ SexyMap: disabled
 ShadowedUF_Options: disabled
 ShadowedUnitFrames: disabled
 Skada: enabled
-TidyPlates: enabled
+TidyPlates: disabled
 TidyPlatesHub: enabled
 TidyPlatesWidgets: enabled
 TidyPlates_ThreatPlates: disabled

@@ -26,19 +26,19 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1404968199.459"] = {
-			"%s has earned the achievement |cffffff00|Hachievement:3182:02000000087E4F74:1:7:9:14:4294967295:4294967295:4294967295:4294967295|h[I Could Say That This Cache Was Rare (10 player)]|h|r!", -- [1]
-			"Yaboi-Arthas", -- [2]
+		["1405023276.858"] = {
+			"%s has earned the achievement |cffffff00|Hachievement:1157:0200000008883A9F:1:7:10:14:4294967295:4294967295:4294967295:4294967295|h[Duel-icious]|h|r!", -- [1]
+			"Gramz-Arthas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Yaboi", -- [5]
+			"Gramz", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			4079, -- [11]
-			"0x02000000087E4F74", -- [12]
+			25890, -- [11]
+			"0x0200000008883A9F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
@@ -62,62 +62,26 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1404967931.388"] = {
-			"%s has earned the achievement |cffffff00|Hachievement:1181:02000000086A5C48:1:7:9:14:4294967295:4294967295:4294967295:4294967295|h[Got My Mind On My Money]|h|r!", -- [1]
-			"Frostnbieber-Arthas", -- [2]
+		["1405021565.725"] = {
+			"hello is this gitt?", -- [1]
+			"Pandemoniar", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Frostnbieber", -- [5]
+			"Pandemoniar", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3994, -- [11]
-			"0x02000000086A5C48", -- [12]
+			10930, -- [11]
+			"0x0200000008E3310B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
-			[20] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[20] = "CHAT_MSG_WHISPER",
 		},
-		["1405026488.126"] = {
-			"LFR at it's finest", -- [1]
-			"Majtahal-BleedingHollow", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Majtahal-BleedingHollow", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			43411, -- [11]
-			"0x02000000085CA0A7", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			[20] = "CHAT_MSG_INSTANCE_CHAT",
-		},
-		["1404968021.088"] = {
-			"Aura of Pride on Twiztedviper!", -- [1]
-			"Twiztedviper-Icecrown", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Twiztedviper-Icecrown", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			4011, -- [11]
-			"0x028000000626B38D", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			[20] = "CHAT_MSG_SAY",
-		},
-		["1405026321.476"] = {
-			"2", -- [1]
+		["1405026323.201"] = {
+			"1", -- [1]
 			"Smooth-Mal'Ganis", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
@@ -127,12 +91,48 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43367, -- [11]
+			43368, -- [11]
 			"0x05000000062289F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
+		},
+		["1405026165.614"] = {
+			"hence the good start..", -- [1]
+			"Ceus-Gnomeregan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Ceus-Gnomeregan", -- [5]
+			"AFK", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			43341, -- [11]
+			"0x048000000746AB15", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			[20] = "CHAT_MSG_INSTANCE_CHAT",
+		},
+		["1405026478.5"] = {
+			"STOP DPS", -- [1]
+			"Shadøwhunter-Goldrinn", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Shadøwhunter-Goldrinn", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			43410, -- [11]
+			"0x04000000055702C3", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			[20] = "CHAT_MSG_RAID_WARNING",
 		},
 		["1404968066.539"] = {
 			"ty", -- [1]
@@ -188,19 +188,19 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1415922766.29"] = {
-			"%s has earned the achievement |cffffff00|Hachievement:8922:Player-69-085E9CB7:1:11:13:14:4294967295:4294967295:4294967295:4294967295|h[Welcome to Draenor]|h|r!", -- [1]
-			"Scrantnicity", -- [2]
+		["1421003175.085"] = {
+			"%s has earned the achievement |cffffff00|Hachievement:8820:Player-69-08617ABD:1:1:11:15:4294967295:4294967295:4294967295:4294967295|h[WoW's 10th Anniversary]|h|r!", -- [1]
+			"Spih", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Scrantnicity", -- [5]
+			"Spih", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			69, -- [11]
-			"Player-69-085E9CB7", -- [12]
+			343, -- [11]
+			"Player-69-08617ABD", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
@@ -228,41 +228,41 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405027143.749"] = {
-			"tanks didnt know wtf to do", -- [1]
-			"Snickerdodle-Arthas", -- [2]
+		["1405026357.894"] = {
+			"so close", -- [1]
+			"Smooth-Mal'Ganis", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Snickerdodle", -- [5]
+			"Smooth-Mal'Ganis", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43498, -- [11]
-			"0x0200000008A9D206", -- [12]
+			43381, -- [11]
+			"0x05000000062289F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405026477.876"] = {
-			"off boss chodes", -- [1]
-			"Badie-Thrall", -- [2]
+		["1405026400.332"] = {
+			"uh no", -- [1]
+			"Majtahal-BleedingHollow", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Badie-Thrall", -- [5]
+			"Majtahal-BleedingHollow", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43409, -- [11]
-			"0x050000000594E7E6", -- [12]
+			43394, -- [11]
+			"0x02000000085CA0A7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
-			[20] = "CHAT_MSG_RAID_WARNING",
+			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
 		["1405026240.656"] = {
 			"also keep in mind if u go pvp go unholy and stack strength", -- [1]
@@ -282,23 +282,23 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405027012.447"] = {
-			"--\"", -- [1]
-			"Ðarknëssoul-Goldrinn", -- [2]
+		["1405025977.2"] = {
+			"frost dk str crit mastery haste", -- [1]
+			"Rabidhobbo-Zul'jin", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Ðarknëssoul-Goldrinn", -- [5]
+			"Rabidhobbo-Zul'jin", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43488, -- [11]
-			"0x040000000647EED3", -- [12]
+			43312, -- [11]
+			"0x0200000008A80C34", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
-			[20] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
+			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
 		["1405026166.087"] = {
 			"xD", -- [1]
@@ -318,41 +318,41 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405026385.52"] = {
-			"yay rez!", -- [1]
-			"Smooth-Mal'Ganis", -- [2]
+		["1405026627.642"] = {
+			"Defensive Stance in 5, STOP DPS NOW!", -- [1]
+			"Spih-Arthas", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Smooth-Mal'Ganis", -- [5]
+			"Spih", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43390, -- [11]
-			"0x05000000062289F5", -- [12]
+			43420, -- [11]
+			"0x0200000008617ABD", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
-			[20] = "CHAT_MSG_INSTANCE_CHAT",
+			[20] = "CHAT_MSG_SAY",
 		},
-		["1404967621.968"] = {
-			"%s has earned the achievement |cffffff00|Hachievement:2911:02000000087E4F74:1:7:9:14:4294967295:4294967295:4294967295:4294967295|h[Shutout (10 player)]|h|r!", -- [1]
-			"Yaboi-Arthas", -- [2]
-			"", -- [3]
+		["1404967733.377"] = {
+			"Gift of the Titans on Hephæstas!", -- [1]
+			"Hephæstas-Thunderhorn", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Yaboi", -- [5]
+			"Hephæstas-Thunderhorn", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3943, -- [11]
-			"0x02000000087E4F74", -- [12]
+			3963, -- [11]
+			"0x02800000054C1F0E", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
-			[20] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[20] = "CHAT_MSG_SAY",
 		},
 		["1405026150.409"] = {
 			"but for some its easier to understand", -- [1]
@@ -372,8 +372,8 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1404967868.573"] = {
-			"%s has earned the achievement |cffffff00|Hachievement:2937:02000000087E4F74:1:7:9:14:4294967295:4294967295:4294967295:4294967295|h[Must Deconstruct Faster (10 player)]|h|r!", -- [1]
+		["1404968199.459"] = {
+			"%s has earned the achievement |cffffff00|Hachievement:3182:02000000087E4F74:1:7:9:14:4294967295:4294967295:4294967295:4294967295|h[I Could Say That This Cache Was Rare (10 player)]|h|r!", -- [1]
 			"Yaboi-Arthas", -- [2]
 			"", -- [3]
 			"", -- [4]
@@ -383,7 +383,7 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3988, -- [11]
+			4079, -- [11]
 			"0x02000000087E4F74", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -408,41 +408,41 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_WHISPER",
 		},
-		["1405026801.545"] = {
-			"10. Valfiend-ShatteredHalls  263353958 (125245.6, 4.4%)", -- [1]
-			"Ainion-ArgentDawn", -- [2]
+		["1404968049.497"] = {
+			"wow that was close", -- [1]
+			"Boltese-Dalaran", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Ainion-ArgentDawn", -- [5]
+			"Boltese-Dalaran", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43456, -- [11]
-			"0x02000000083C5870", -- [12]
+			4024, -- [11]
+			"0x050000000516AE06", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405025946.123"] = {
-			"shit ok", -- [1]
-			"Timberg-Arthas", -- [2]
-			"", -- [3]
+		["1405026472.351"] = {
+			"stop ", -- [1]
+			"Majtahal-BleedingHollow", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Timberg", -- [5]
+			"Majtahal-BleedingHollow", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43306, -- [11]
-			"0x0200000006CE8580", -- [12]
+			43407, -- [11]
+			"0x02000000085CA0A7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
-			[20] = "CHAT_MSG_WHISPER",
+			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
 		["1405026504.023"] = {
 			"healers keep up the good work", -- [1]
@@ -480,8 +480,44 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405026472.351"] = {
-			"stop ", -- [1]
+		["1405026117.853"] = {
+			"and not listing to smooth will also help", -- [1]
+			"Valfiend-ShatteredHalls", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Valfiend-ShatteredHalls", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			43333, -- [11]
+			"0x0480000006BAD954", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			[20] = "CHAT_MSG_INSTANCE_CHAT",
+		},
+		["1405025858.07"] = {
+			"omg", -- [1]
+			"Smooth-Mal'Ganis", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Smooth-Mal'Ganis", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			43294, -- [11]
+			"0x05000000062289F5", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			[20] = "CHAT_MSG_INSTANCE_CHAT",
+		},
+		["1405026332.365"] = {
+			"so that flex group?", -- [1]
 			"Majtahal-BleedingHollow", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
@@ -491,48 +527,8 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43407, -- [11]
+			43376, -- [11]
 			"0x02000000085CA0A7", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			[20] = "CHAT_MSG_INSTANCE_CHAT",
-		},
-		["1415922700.054"] = {
-			"got dced, a character with that name already exists =P", -- [1]
-			"|Kb296|k000000|k", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			64, -- [11]
-			false, -- [12]
-			296, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			nil, -- [17]
-			nil, -- [18]
-			nil, -- [19]
-			"CHAT_MSG_BN_WHISPER_INFORM", -- [20]
-		},
-		["1405026165.614"] = {
-			"hence the good start..", -- [1]
-			"Ceus-Gnomeregan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Ceus-Gnomeregan", -- [5]
-			"AFK", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			43341, -- [11]
-			"0x048000000746AB15", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
@@ -578,98 +574,8 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405021624.789"] = {
-			"hello is this gitt?", -- [1]
-			"Pandemoniar-Arthas", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Pandemoniar", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			11611, -- [11]
-			"0x0200000008E3310B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			[20] = "CHAT_MSG_WHISPER",
-		},
-		["1405026509.294"] = {
-			"STOP ATTACKING", -- [1]
-			"Borinovan-Thrall", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Borinovan-Thrall", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			43413, -- [11]
-			"0x05000000061019C4", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			[20] = "CHAT_MSG_INSTANCE_CHAT",
-		},
-		["1404968030.1"] = {
-			"Divine Hymn activated!!!", -- [1]
-			"Boltese-Dalaran", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Boltese-Dalaran", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			4013, -- [11]
-			"0x050000000516AE06", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			[20] = "CHAT_MSG_SAY",
-		},
-		["1404967793.997"] = {
-			"prison", -- [1]
-			"Cahri-Lothar", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Cahri-Lothar", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			3971, -- [11]
-			"0x0200000006D4585A", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			[20] = "CHAT_MSG_INSTANCE_CHAT",
-		},
-		["1405026446.602"] = {
-			"Defensive Stance in 5, STOP DPS NOW!", -- [1]
-			"Spih-Arthas", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Spih", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			43401, -- [11]
-			"0x0200000008617ABD", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			[20] = "CHAT_MSG_SAY",
-		},
-		["1405026332.365"] = {
-			"so that flex group?", -- [1]
+		["1405026488.126"] = {
+			"LFR at it's finest", -- [1]
 			"Majtahal-BleedingHollow", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
@@ -679,12 +585,106 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43376, -- [11]
+			43411, -- [11]
 			"0x02000000085CA0A7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
+		},
+		["1405026374.034"] = {
+			"this is last boss btw", -- [1]
+			"Smooth-Mal'Ganis", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Smooth-Mal'Ganis", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			43387, -- [11]
+			"0x05000000062289F5", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			[20] = "CHAT_MSG_INSTANCE_CHAT",
+		},
+		["1405025976.925"] = {
+			"ever go 1 hands do mastery", -- [1]
+			"Smooth-Mal'Ganis", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Smooth-Mal'Ganis", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			43311, -- [11]
+			"0x05000000062289F5", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			[20] = "CHAT_MSG_INSTANCE_CHAT",
+		},
+		["1405026317.908"] = {
+			"4", -- [1]
+			"Smooth-Mal'Ganis", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Smooth-Mal'Ganis", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			43365, -- [11]
+			"0x05000000062289F5", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			[20] = "CHAT_MSG_INSTANCE_CHAT",
+		},
+		["1405026466.563"] = {
+			"stop dps", -- [1]
+			"Shadøwhunter-Goldrinn", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Shadøwhunter-Goldrinn", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			43404, -- [11]
+			"0x04000000055702C3", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			[20] = "CHAT_MSG_RAID_WARNING",
+		},
+		["1416071413.521"] = {
+			"%s has earned the achievement |cffffff00|Hachievement:9146:Player-69-09793F36:1:11:15:14:4294967295:4294967295:4294967295:4294967295|h[Patrol Mission Specialist]|h|r!", -- [1]
+			"Scarysexi-Arthas", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Scarysexi", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			318, -- [11]
+			"Player-69-09793F36", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			nil, -- [17]
+			nil, -- [18]
+			nil, -- [19]
+			"CHAT_MSG_GUILD_ACHIEVEMENT", -- [20]
 		},
 		["1405026358.291"] = {
 			"dont waste a rez on him", -- [1]
@@ -704,23 +704,23 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1404968068.51"] = {
-			"a bit", -- [1]
-			"Twiztedviper-Icecrown", -- [2]
+		["1404968370.183"] = {
+			"Whisper lust for raid inv", -- [1]
+			"Primalfears-Arthas", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Twiztedviper-Icecrown", -- [5]
+			"Primalfears", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			4046, -- [11]
-			"0x028000000626B38D", -- [12]
+			4121, -- [11]
+			"0x02000000085672F8", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
-			[20] = "CHAT_MSG_INSTANCE_CHAT",
+			[20] = "CHAT_MSG_GUILD",
 		},
 		["1404968030.288"] = {
 			"Divine Hymn activated!!!", -- [1]
@@ -830,59 +830,59 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405026379.045"] = {
-			"lmao", -- [1]
-			"Majtahal-BleedingHollow", -- [2]
+		["1405026080.16"] = {
+			"sure giving advice like you were.", -- [1]
+			"Ceus-Gnomeregan", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Majtahal-BleedingHollow", -- [5]
-			"", -- [6]
+			"Ceus-Gnomeregan", -- [5]
+			"AFK", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43389, -- [11]
-			"0x02000000085CA0A7", -- [12]
+			43328, -- [11]
+			"0x048000000746AB15", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405021726.465"] = {
-			"this is pandemonia in 2nites H-SoO raid i think i had your BTAG earlier but erased after i erased over 30 names on a world boss tour, my btag is - Wowaddicted#1898, see u later at raid", -- [1]
-			"Pandemoniar-Arthas", -- [2]
+		["1405026304.818"] = {
+			"she was angry with the dothraki", -- [1]
+			"Ceus-Gnomeregan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Ceus-Gnomeregan", -- [5]
+			"AFK", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			43361, -- [11]
+			"0x048000000746AB15", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			[20] = "CHAT_MSG_INSTANCE_CHAT",
+		},
+		["1405025946.123"] = {
+			"shit ok", -- [1]
+			"Timberg-Arthas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Pandemoniar", -- [5]
+			"Timberg", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			12573, -- [11]
-			"0x0200000008E3310B", -- [12]
+			43306, -- [11]
+			"0x0200000006CE8580", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			[20] = "CHAT_MSG_WHISPER",
-		},
-		["1405026150.672"] = {
-			"./facepalm", -- [1]
-			"Smooth-Mal'Ganis", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Smooth-Mal'Ganis", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			43339, -- [11]
-			"0x05000000062289F5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
 		["1405026352.158"] = {
 			"Shoulda let him die...", -- [1]
@@ -902,19 +902,19 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405026080.16"] = {
-			"sure giving advice like you were.", -- [1]
-			"Ceus-Gnomeregan", -- [2]
+		["1405025945.419"] = {
+			"Ok", -- [1]
+			"Ainion-ArgentDawn", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Ceus-Gnomeregan", -- [5]
-			"AFK", -- [6]
+			"Ainion-ArgentDawn", -- [5]
+			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43328, -- [11]
-			"0x048000000746AB15", -- [12]
+			43305, -- [11]
+			"0x02000000083C5870", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
@@ -938,81 +938,77 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405026473.273"] = {
-			"Ravager on Spih", -- [1]
-			"Spih-Arthas", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Spih", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			43408, -- [11]
-			"0x0200000008617ABD", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			[20] = "CHAT_MSG_SAY",
-		},
-		["1416071413.521"] = {
-			"%s has earned the achievement |cffffff00|Hachievement:9146:Player-69-09793F36:1:11:15:14:4294967295:4294967295:4294967295:4294967295|h[Patrol Mission Specialist]|h|r!", -- [1]
-			"Scarysexi-Arthas", -- [2]
+		["1404967868.573"] = {
+			"%s has earned the achievement |cffffff00|Hachievement:2937:02000000087E4F74:1:7:9:14:4294967295:4294967295:4294967295:4294967295|h[Must Deconstruct Faster (10 player)]|h|r!", -- [1]
+			"Yaboi-Arthas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Scarysexi", -- [5]
+			"Yaboi", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			318, -- [11]
-			"Player-69-09793F36", -- [12]
+			3988, -- [11]
+			"0x02000000087E4F74", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
-			false, -- [16]
-			nil, -- [17]
-			nil, -- [18]
-			nil, -- [19]
-			"CHAT_MSG_GUILD_ACHIEVEMENT", -- [20]
+			[20] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		},
-		["1404967683.748"] = {
-			"Gift of the Titans on Hephæstas!", -- [1]
-			"Hephæstas-Thunderhorn", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Hephæstas-Thunderhorn", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			3953, -- [11]
-			"0x02800000054C1F0E", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			[20] = "CHAT_MSG_SAY",
-		},
-		["1405025883.222"] = {
-			"you guys have any raid spots for next week? guilds not raiding -Aroke", -- [1]
-			"Timberg", -- [2]
+		["1405027220.476"] = {
+			"where did u get that mount from ? ", -- [1]
+			"Twanter-Arthas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Timberg", -- [5]
+			"Twanter", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43295, -- [11]
-			"0x0200000006CE8580", -- [12]
+			44082, -- [11]
+			"0x02000000088112D7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			[20] = "CHAT_MSG_WHISPER",
+		},
+		["1404968021.088"] = {
+			"Aura of Pride on Twiztedviper!", -- [1]
+			"Twiztedviper-Icecrown", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Twiztedviper-Icecrown", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			4011, -- [11]
+			"0x028000000626B38D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			[20] = "CHAT_MSG_SAY",
+		},
+		["1405026321.476"] = {
+			"2", -- [1]
+			"Smooth-Mal'Ganis", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Smooth-Mal'Ganis", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			43367, -- [11]
+			"0x05000000062289F5", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
 		["1405026143.785"] = {
 			"it is", -- [1]
@@ -1032,41 +1028,41 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405026148.037"] = {
-			"sorry, had a lil fight wiht my sister", -- [1]
-			"Keyshya-ArgentDawn", -- [2]
-			"Orcish", -- [3]
+		["1404967931.388"] = {
+			"%s has earned the achievement |cffffff00|Hachievement:1181:02000000086A5C48:1:7:9:14:4294967295:4294967295:4294967295:4294967295|h[Got My Mind On My Money]|h|r!", -- [1]
+			"Frostnbieber-Arthas", -- [2]
+			"", -- [3]
 			"", -- [4]
-			"Keyshya-ArgentDawn", -- [5]
+			"Frostnbieber", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43337, -- [11]
-			"0x0200000006899EAD", -- [12]
+			3994, -- [11]
+			"0x02000000086A5C48", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
-			[20] = "CHAT_MSG_INSTANCE_CHAT",
+			[20] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		},
-		["1405026361.872"] = {
-			"Vote kick him after", -- [1]
-			"Ainion-ArgentDawn", -- [2]
+		["1404968030.1"] = {
+			"Divine Hymn activated!!!", -- [1]
+			"Boltese-Dalaran", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Ainion-ArgentDawn", -- [5]
+			"Boltese-Dalaran", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43384, -- [11]
-			"0x02000000083C5870", -- [12]
+			4013, -- [11]
+			"0x050000000516AE06", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
-			[20] = "CHAT_MSG_INSTANCE_CHAT",
+			[20] = "CHAT_MSG_SAY",
 		},
 		["1416071361.182"] = {
 			"Grats", -- [1]
@@ -1126,41 +1122,41 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405026642.407"] = {
-			"STOP ATTACKING ", -- [1]
-			"Shadøwhunter-Goldrinn", -- [2]
+		["1405026244.04"] = {
+			"we ressing?", -- [1]
+			"Keyshya-ArgentDawn", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Shadøwhunter-Goldrinn", -- [5]
+			"Keyshya-ArgentDawn", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43424, -- [11]
-			"0x04000000055702C3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			[20] = "CHAT_MSG_RAID_WARNING",
-		},
-		["1405027108.703"] = {
-			"put us in que", -- [1]
-			"Snickerdodle-Arthas", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Snickerdodle", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			43497, -- [11]
-			"0x0200000008A9D206", -- [12]
+			43353, -- [11]
+			"0x0200000006899EAD", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
+		},
+		["1404967809.521"] = {
+			"Bursting Pride on Hephæstas!", -- [1]
+			"Hephæstas-Thunderhorn", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Hephæstas-Thunderhorn", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			3975, -- [11]
+			"0x02800000054C1F0E", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			[20] = "CHAT_MSG_SAY",
 		},
 		["1405027254.378"] = {
 			"buy from vendor for 3k", -- [1]
@@ -1234,7 +1230,7 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
 		},
-		["1404967733.377"] = {
+		["1404967683.748"] = {
 			"Gift of the Titans on Hephæstas!", -- [1]
 			"Hephæstas-Thunderhorn", -- [2]
 			"Orcish", -- [3]
@@ -1245,44 +1241,44 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3963, -- [11]
+			3953, -- [11]
 			"0x02800000054C1F0E", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			[20] = "CHAT_MSG_SAY",
 		},
-		["1405025976.925"] = {
-			"ever go 1 hands do mastery", -- [1]
-			"Smooth-Mal'Ganis", -- [2]
-			"Orcish", -- [3]
+		["1405025933.29"] = {
+			"vacation next week", -- [1]
+			"Timberg-Arthas", -- [2]
+			"", -- [3]
 			"", -- [4]
-			"Smooth-Mal'Ganis", -- [5]
+			"Timberg", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43311, -- [11]
-			"0x05000000062289F5", -- [12]
+			43303, -- [11]
+			"0x0200000006CE8580", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
-			[20] = "CHAT_MSG_INSTANCE_CHAT",
+			[20] = "CHAT_MSG_WHISPER_INFORM",
 		},
-		["1405027070.383"] = {
-			"shit", -- [1]
-			"Shanho-Mannoroth", -- [2]
+		["1405026098.837"] = {
+			"look up how to set up your character, do better dps and stop linking recount ", -- [1]
+			"Valfiend-ShatteredHalls", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Shanho-Mannoroth", -- [5]
+			"Valfiend-ShatteredHalls", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43491, -- [11]
-			"0x0200000006EBC6F4", -- [12]
+			43332, -- [11]
+			"0x0480000006BAD954", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
@@ -1306,37 +1302,37 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405026400.332"] = {
-			"uh no", -- [1]
-			"Majtahal-BleedingHollow", -- [2]
+		["1405027070.383"] = {
+			"shit", -- [1]
+			"Shanho-Mannoroth", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Majtahal-BleedingHollow", -- [5]
+			"Shanho-Mannoroth", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43394, -- [11]
-			"0x02000000085CA0A7", -- [12]
+			43491, -- [11]
+			"0x0200000006EBC6F4", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405025977.2"] = {
-			"frost dk str crit mastery haste", -- [1]
-			"Rabidhobbo-Zul'jin", -- [2]
+		["1404967793.997"] = {
+			"prison", -- [1]
+			"Cahri-Lothar", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Rabidhobbo-Zul'jin", -- [5]
+			"Cahri-Lothar", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43312, -- [11]
-			"0x0200000008A80C34", -- [12]
+			3971, -- [11]
+			"0x0200000006D4585A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
@@ -1360,59 +1356,59 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405026029.336"] = {
-			"lmao", -- [1]
-			"Majtahal-BleedingHollow", -- [2]
+		["1405026150.672"] = {
+			"./facepalm", -- [1]
+			"Smooth-Mal'Ganis", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Majtahal-BleedingHollow", -- [5]
+			"Smooth-Mal'Ganis", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43318, -- [11]
-			"0x02000000085CA0A7", -- [12]
+			43339, -- [11]
+			"0x05000000062289F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405027008.239"] = {
-			"thats the reason why i fucking hate lfr...", -- [1]
-			"Ðarknëssoul-Goldrinn", -- [2]
+		["1405026148.037"] = {
+			"sorry, had a lil fight wiht my sister", -- [1]
+			"Keyshya-ArgentDawn", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Ðarknëssoul-Goldrinn", -- [5]
+			"Keyshya-ArgentDawn", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43487, -- [11]
-			"0x040000000647EED3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			[20] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
-		},
-		["1405026304.818"] = {
-			"she was angry with the dothraki", -- [1]
-			"Ceus-Gnomeregan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Ceus-Gnomeregan", -- [5]
-			"AFK", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			43361, -- [11]
-			"0x048000000746AB15", -- [12]
+			43337, -- [11]
+			"0x0200000006899EAD", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
+		},
+		["1405026642.407"] = {
+			"STOP ATTACKING ", -- [1]
+			"Shadøwhunter-Goldrinn", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Shadøwhunter-Goldrinn", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			43424, -- [11]
+			"0x04000000055702C3", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			[20] = "CHAT_MSG_RAID_WARNING",
 		},
 		["1405026078.246"] = {
 			"frost stats depend if one hand or duals", -- [1]
@@ -1432,23 +1428,23 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405025940.016"] = {
-			"they're blue", -- [1]
-			"Smooth-Mal'Ganis", -- [2]
+		["1405027012.447"] = {
+			"--\"", -- [1]
+			"Ðarknëssoul-Goldrinn", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Smooth-Mal'Ganis", -- [5]
+			"Ðarknëssoul-Goldrinn", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43304, -- [11]
-			"0x05000000062289F5", -- [12]
+			43488, -- [11]
+			"0x040000000647EED3", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
-			[20] = "CHAT_MSG_INSTANCE_CHAT",
+			[20] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
 		},
 		["1405026121.396"] = {
 			"icyveins or noxxic are a good start", -- [1]
@@ -1504,55 +1500,55 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405026317.908"] = {
-			"4", -- [1]
-			"Smooth-Mal'Ganis", -- [2]
+		["1405026782.778"] = {
+			"just burn boss", -- [1]
+			"Badie-Thrall", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Smooth-Mal'Ganis", -- [5]
+			"Badie-Thrall", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43365, -- [11]
-			"0x05000000062289F5", -- [12]
+			43432, -- [11]
+			"0x050000000594E7E6", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			[20] = "CHAT_MSG_RAID_WARNING",
+		},
+		["1405026801.545"] = {
+			"10. Valfiend-ShatteredHalls  263353958 (125245.6, 4.4%)", -- [1]
+			"Ainion-ArgentDawn", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Ainion-ArgentDawn", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			43456, -- [11]
+			"0x02000000083C5870", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1404968049.497"] = {
-			"wow that was close", -- [1]
-			"Boltese-Dalaran", -- [2]
+		["1405026379.045"] = {
+			"lmao", -- [1]
+			"Majtahal-BleedingHollow", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Boltese-Dalaran", -- [5]
+			"Majtahal-BleedingHollow", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			4024, -- [11]
-			"0x050000000516AE06", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			[20] = "CHAT_MSG_INSTANCE_CHAT",
-		},
-		["1405026022.865"] = {
-			"what?", -- [1]
-			"Smooth-Mal'Ganis", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Smooth-Mal'Ganis", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			43317, -- [11]
-			"0x05000000062289F5", -- [12]
+			43389, -- [11]
+			"0x02000000085CA0A7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
@@ -1576,19 +1572,19 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405026405.285"] = {
-			"if we wipe*", -- [1]
-			"Ainion-ArgentDawn", -- [2]
+		["1405026316.246"] = {
+			"yolo pull in 5", -- [1]
+			"Smooth-Mal'Ganis", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Ainion-ArgentDawn", -- [5]
+			"Smooth-Mal'Ganis", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43395, -- [11]
-			"0x02000000083C5870", -- [12]
+			43364, -- [11]
+			"0x05000000062289F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
@@ -1612,23 +1608,27 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1404968375.215"] = {
-			"for?", -- [1]
-			"Frostnbieber-Arthas", -- [2]
-			"Orcish", -- [3]
+		["1415922700.054"] = {
+			"got dced, a character with that name already exists =P", -- [1]
+			"|Kb296|k000000|k", -- [2]
+			"", -- [3]
 			"", -- [4]
-			"Frostnbieber", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			4122, -- [11]
-			"0x02000000086A5C48", -- [12]
-			0, -- [13]
+			64, -- [11]
+			false, -- [12]
+			296, -- [13]
 			false, -- [14]
 			false, -- [15]
-			[20] = "CHAT_MSG_GUILD",
+			false, -- [16]
+			nil, -- [17]
+			nil, -- [18]
+			nil, -- [19]
+			"CHAT_MSG_BN_WHISPER_INFORM", -- [20]
 		},
 		["1405025973.159"] = {
 			"?", -- [1]
@@ -1684,26 +1684,62 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405023276.858"] = {
-			"%s has earned the achievement |cffffff00|Hachievement:1157:0200000008883A9F:1:7:10:14:4294967295:4294967295:4294967295:4294967295|h[Duel-icious]|h|r!", -- [1]
-			"Gramz-Arthas", -- [2]
+		["1404967708.063"] = {
+			"Gift of the Titans on Hephæstas!", -- [1]
+			"Hephæstas-Thunderhorn", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Hephæstas-Thunderhorn", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			3958, -- [11]
+			"0x02800000054C1F0E", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			[20] = "CHAT_MSG_SAY",
+		},
+		["1405021624.789"] = {
+			"hello is this gitt?", -- [1]
+			"Pandemoniar-Arthas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Gramz", -- [5]
+			"Pandemoniar", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			25890, -- [11]
-			"0x0200000008883A9F", -- [12]
+			11611, -- [11]
+			"0x0200000008E3310B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
-			[20] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[20] = "CHAT_MSG_WHISPER",
 		},
-		["1405025858.07"] = {
-			"omg", -- [1]
+		["1404968375.215"] = {
+			"for?", -- [1]
+			"Frostnbieber-Arthas", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Frostnbieber", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			4122, -- [11]
+			"0x02000000086A5C48", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			[20] = "CHAT_MSG_GUILD",
+		},
+		["1405026022.865"] = {
+			"what?", -- [1]
 			"Smooth-Mal'Ganis", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
@@ -1713,44 +1749,8 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43294, -- [11]
+			43317, -- [11]
 			"0x05000000062289F5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			[20] = "CHAT_MSG_INSTANCE_CHAT",
-		},
-		["1405026316.246"] = {
-			"yolo pull in 5", -- [1]
-			"Smooth-Mal'Ganis", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Smooth-Mal'Ganis", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			43364, -- [11]
-			"0x05000000062289F5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			[20] = "CHAT_MSG_INSTANCE_CHAT",
-		},
-		["1405025945.419"] = {
-			"Ok", -- [1]
-			"Ainion-ArgentDawn", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Ainion-ArgentDawn", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			43305, -- [11]
-			"0x02000000083C5870", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
@@ -1774,26 +1774,8 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405021565.725"] = {
-			"hello is this gitt?", -- [1]
-			"Pandemoniar", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Pandemoniar", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			10930, -- [11]
-			"0x0200000008E3310B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			[20] = "CHAT_MSG_WHISPER",
-		},
-		["1405026357.894"] = {
-			"so close", -- [1]
+		["1405025940.016"] = {
+			"they're blue", -- [1]
 			"Smooth-Mal'Ganis", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
@@ -1803,66 +1785,84 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43381, -- [11]
+			43304, -- [11]
 			"0x05000000062289F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405026627.642"] = {
-			"Defensive Stance in 5, STOP DPS NOW!", -- [1]
-			"Spih-Arthas", -- [2]
+		["1405027008.239"] = {
+			"thats the reason why i fucking hate lfr...", -- [1]
+			"Ðarknëssoul-Goldrinn", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Spih", -- [5]
+			"Ðarknëssoul-Goldrinn", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43420, -- [11]
-			"0x0200000008617ABD", -- [12]
+			43487, -- [11]
+			"0x040000000647EED3", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
-			[20] = "CHAT_MSG_SAY",
+			[20] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
 		},
-		["1405026323.201"] = {
-			"1", -- [1]
-			"Smooth-Mal'Ganis", -- [2]
+		["1405026029.336"] = {
+			"lmao", -- [1]
+			"Majtahal-BleedingHollow", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Smooth-Mal'Ganis", -- [5]
+			"Majtahal-BleedingHollow", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43368, -- [11]
-			"0x05000000062289F5", -- [12]
+			43318, -- [11]
+			"0x02000000085CA0A7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405027220.476"] = {
-			"where did u get that mount from ? ", -- [1]
-			"Twanter-Arthas", -- [2]
-			"", -- [3]
+		["1405026405.285"] = {
+			"if we wipe*", -- [1]
+			"Ainion-ArgentDawn", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Twanter", -- [5]
+			"Ainion-ArgentDawn", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			44082, -- [11]
-			"0x02000000088112D7", -- [12]
+			43395, -- [11]
+			"0x02000000083C5870", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
-			[20] = "CHAT_MSG_WHISPER",
+			[20] = "CHAT_MSG_INSTANCE_CHAT",
+		},
+		["1405026477.876"] = {
+			"off boss chodes", -- [1]
+			"Badie-Thrall", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Badie-Thrall", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			43409, -- [11]
+			"0x050000000594E7E6", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			[20] = "CHAT_MSG_RAID_WARNING",
 		},
 		["1405026347.938"] = {
 			"Hence why i said to not listen to smooth", -- [1]
@@ -1882,26 +1882,8 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405026117.853"] = {
-			"and not listing to smooth will also help", -- [1]
-			"Valfiend-ShatteredHalls", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Valfiend-ShatteredHalls", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			43333, -- [11]
-			"0x0480000006BAD954", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			[20] = "CHAT_MSG_INSTANCE_CHAT",
-		},
-		["1405026374.034"] = {
-			"this is last boss btw", -- [1]
+		["1405026080.5"] = {
+			"he is pvp geared", -- [1]
 			"Smooth-Mal'Ganis", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
@@ -1911,8 +1893,26 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43387, -- [11]
+			43329, -- [11]
 			"0x05000000062289F5", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			[20] = "CHAT_MSG_INSTANCE_CHAT",
+		},
+		["1405027108.703"] = {
+			"put us in que", -- [1]
+			"Snickerdodle-Arthas", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Snickerdodle", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			43497, -- [11]
+			"0x0200000008A9D206", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
@@ -1936,19 +1936,19 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405026244.04"] = {
-			"we ressing?", -- [1]
-			"Keyshya-ArgentDawn", -- [2]
+		["1405026361.872"] = {
+			"Vote kick him after", -- [1]
+			"Ainion-ArgentDawn", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Keyshya-ArgentDawn", -- [5]
+			"Ainion-ArgentDawn", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43353, -- [11]
-			"0x0200000006899EAD", -- [12]
+			43384, -- [11]
+			"0x02000000083C5870", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
@@ -1972,23 +1972,23 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405026466.563"] = {
-			"stop dps", -- [1]
-			"Shadøwhunter-Goldrinn", -- [2]
-			"Orcish", -- [3]
+		["1405025883.222"] = {
+			"you guys have any raid spots for next week? guilds not raiding -Aroke", -- [1]
+			"Timberg", -- [2]
+			"", -- [3]
 			"", -- [4]
-			"Shadøwhunter-Goldrinn", -- [5]
+			"Timberg", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43404, -- [11]
-			"0x04000000055702C3", -- [12]
+			43295, -- [11]
+			"0x0200000006CE8580", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
-			[20] = "CHAT_MSG_RAID_WARNING",
+			[20] = "CHAT_MSG_WHISPER",
 		},
 		["1405026794.233"] = {
 			"Defensive Stance in 5, STOP DPS NOW!", -- [1]
@@ -2008,23 +2008,23 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_SAY",
 		},
-		["1404968370.183"] = {
-			"Whisper lust for raid inv", -- [1]
-			"Primalfears-Arthas", -- [2]
+		["1405026473.273"] = {
+			"Ravager on Spih", -- [1]
+			"Spih-Arthas", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Primalfears", -- [5]
+			"Spih", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			4121, -- [11]
-			"0x02000000085672F8", -- [12]
+			43408, -- [11]
+			"0x0200000008617ABD", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
-			[20] = "CHAT_MSG_GUILD",
+			[20] = "CHAT_MSG_SAY",
 		},
 		["1404967795.567"] = {
 			"%s has earned the achievement |cffffff00|Hachievement:2930:02000000087E4F74:1:7:9:14:4294967295:4294967295:4294967295:4294967295|h[Stokin' the Furnace (10 player)]|h|r!", -- [1]
@@ -2062,59 +2062,59 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_WHISPER_INFORM",
 		},
-		["1405025933.29"] = {
-			"vacation next week", -- [1]
-			"Timberg-Arthas", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Timberg", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			43303, -- [11]
-			"0x0200000006CE8580", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			[20] = "CHAT_MSG_WHISPER_INFORM",
-		},
-		["1404967809.521"] = {
-			"Bursting Pride on Hephæstas!", -- [1]
-			"Hephæstas-Thunderhorn", -- [2]
+		["1404968060.41"] = {
+			"ress", -- [1]
+			"Billywill-Azralon", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Hephæstas-Thunderhorn", -- [5]
+			"Billywill-Azralon", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3975, -- [11]
-			"0x02800000054C1F0E", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			[20] = "CHAT_MSG_SAY",
-		},
-		["1405026098.837"] = {
-			"look up how to set up your character, do better dps and stop linking recount ", -- [1]
-			"Valfiend-ShatteredHalls", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Valfiend-ShatteredHalls", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			43332, -- [11]
-			"0x0480000006BAD954", -- [12]
+			4030, -- [11]
+			"0x048000000553601D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
+		},
+		["1404968068.51"] = {
+			"a bit", -- [1]
+			"Twiztedviper-Icecrown", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Twiztedviper-Icecrown", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			4046, -- [11]
+			"0x028000000626B38D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			[20] = "CHAT_MSG_INSTANCE_CHAT",
+		},
+		["1405021726.465"] = {
+			"this is pandemonia in 2nites H-SoO raid i think i had your BTAG earlier but erased after i erased over 30 names on a world boss tour, my btag is - Wowaddicted#1898, see u later at raid", -- [1]
+			"Pandemoniar-Arthas", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Pandemoniar", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			12573, -- [11]
+			"0x0200000008E3310B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			[20] = "CHAT_MSG_WHISPER",
 		},
 		["1405026434.687"] = {
 			"i just gave you 2 minutes of your life back your welcome", -- [1]
@@ -2134,23 +2134,23 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405026478.5"] = {
-			"STOP DPS", -- [1]
-			"Shadøwhunter-Goldrinn", -- [2]
+		["1405026446.602"] = {
+			"Defensive Stance in 5, STOP DPS NOW!", -- [1]
+			"Spih-Arthas", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Shadøwhunter-Goldrinn", -- [5]
+			"Spih", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43410, -- [11]
-			"0x04000000055702C3", -- [12]
+			43401, -- [11]
+			"0x0200000008617ABD", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
-			[20] = "CHAT_MSG_RAID_WARNING",
+			[20] = "CHAT_MSG_SAY",
 		},
 		["1405026635.921"] = {
 			"STOP ATTACKING", -- [1]
@@ -2170,23 +2170,23 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1404967708.063"] = {
-			"Gift of the Titans on Hephæstas!", -- [1]
-			"Hephæstas-Thunderhorn", -- [2]
+		["1405026509.294"] = {
+			"STOP ATTACKING", -- [1]
+			"Borinovan-Thrall", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Hephæstas-Thunderhorn", -- [5]
+			"Borinovan-Thrall", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3958, -- [11]
-			"0x02800000054C1F0E", -- [12]
+			43413, -- [11]
+			"0x05000000061019C4", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
-			[20] = "CHAT_MSG_SAY",
+			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
 		["1405027265.388"] = {
 			"guild vendor", -- [1]
@@ -2242,41 +2242,45 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1405026782.778"] = {
-			"just burn boss", -- [1]
-			"Badie-Thrall", -- [2]
+		["1405027143.749"] = {
+			"tanks didnt know wtf to do", -- [1]
+			"Snickerdodle-Arthas", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Badie-Thrall", -- [5]
+			"Snickerdodle", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			43432, -- [11]
-			"0x050000000594E7E6", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			[20] = "CHAT_MSG_RAID_WARNING",
-		},
-		["1405026080.5"] = {
-			"he is pvp geared", -- [1]
-			"Smooth-Mal'Ganis", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Smooth-Mal'Ganis", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			43329, -- [11]
-			"0x05000000062289F5", -- [12]
+			43498, -- [11]
+			"0x0200000008A9D206", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
+		},
+		["1415922766.29"] = {
+			"%s has earned the achievement |cffffff00|Hachievement:8922:Player-69-085E9CB7:1:11:13:14:4294967295:4294967295:4294967295:4294967295|h[Welcome to Draenor]|h|r!", -- [1]
+			"Scrantnicity", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Scrantnicity", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			69, -- [11]
+			"Player-69-085E9CB7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			nil, -- [17]
+			nil, -- [18]
+			nil, -- [19]
+			"CHAT_MSG_GUILD_ACHIEVEMENT", -- [20]
 		},
 		["1405026430.857"] = {
 			"i was gonna slap someone", -- [1]
@@ -2296,19 +2300,19 @@ ElvCharacterDB = {
 			false, -- [15]
 			[20] = "CHAT_MSG_INSTANCE_CHAT",
 		},
-		["1404968060.41"] = {
-			"ress", -- [1]
-			"Billywill-Azralon", -- [2]
+		["1405026385.52"] = {
+			"yay rez!", -- [1]
+			"Smooth-Mal'Ganis", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Billywill-Azralon", -- [5]
+			"Smooth-Mal'Ganis", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			4030, -- [11]
-			"0x048000000553601D", -- [12]
+			43390, -- [11]
+			"0x05000000062289F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]

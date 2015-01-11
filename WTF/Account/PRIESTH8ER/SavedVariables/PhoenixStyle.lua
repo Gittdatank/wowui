@@ -69712,19 +69712,14 @@ pssichatrepdef = "raid"
 pssaveexpradiobutset = 1
 pspetstableok = {
 	{
-		"Pet-0-3133-1182-17008-35189-01012261A0", -- [1]
 	}, -- [1]
 	{
-		"Player-69-068B4269", -- [1]
 	}, -- [2]
 	{
-		226860.604, -- [1]
 	}, -- [3]
 	{
-		"Dooktöwn", -- [1]
 	}, -- [4]
 	{
-		2, -- [1]
 	}, -- [5]
 }
 pstrackbadsummons = 1

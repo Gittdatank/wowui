@@ -1,0 +1,15 @@
+Version: 1
+Frame: ItemRefTooltip
+FrameLevel: 1
+Anchor: CENTER
+X: 4
+Y: -156
+W: 128
+H: 64
+Frame: PSFmain1
+FrameLevel: 9
+Anchor: CENTER
+X: -114
+Y: 90
+W: 930
+H: 500

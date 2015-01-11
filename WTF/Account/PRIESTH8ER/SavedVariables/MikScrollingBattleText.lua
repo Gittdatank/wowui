@@ -5,23 +5,277 @@ MSBTProfiles_SavedVars = {
 			["critFontName"] = "DorisPP",
 			["stickyCritsDisabled"] = true,
 			["animationSpeed"] = 30,
-			["normalFontSize"] = 8,
-			["hideFullOverheals"] = true,
+			["triggers"] = {
+				["MSBT_TRIGGER_KILL_SHOT"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_DECIMATION"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BACKLASH"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BERSERK"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_OVERPOWER"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_SWORD_AND_BOARD"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_RIME"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_THE_ART_OF_WAR"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_VITAL_MISTS"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_FINGERS_OF_FROST"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_PREDATORS_SWIFTNESS"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BLINDSIDE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_EXECUTE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_LOCK_AND_LOAD"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_TIDAL_WAVES"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_ECLIPSE_LUNAR"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_MANA_TEA"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_PVP_TRINKET"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BRAIN_FREEZE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_LAVA_SURGE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_SUDDEN_DEATH"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_RUNE_STRIKE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_OWLKIN_FRENZY"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_MAELSTROM_WEAPON"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_SHOOTING_STARS"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BLOODSURGE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_KILLING_MACHINE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_ECLIPSE_SOLAR"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_MISSILE_BARRAGE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_VICTORY_RUSH"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_SHADOW_INFUSION"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_CLEARCASTING"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_ELUSIVE_BREW"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_NIGHTFALL"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_MOLTEN_CORE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_HAMMER_OF_WRATH"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_REVENGE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_POWER_GUARD"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_LOW_MANA"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_TASTE_FOR_BLOOD"] = {
+					["disabled"] = true,
+				},
+			},
+			["groupNumbers"] = true,
 			["creationVersion"] = "5.7.123",
 			["critFontSize"] = 10,
-			["normalFontName"] = "DorisPP",
-			["groupNumbers"] = true,
+			["shortenNumbers"] = true,
+			["events"] = {
+				["NOTIFICATION_BUFF_FADE"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_DEBUFF_FADE"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_BUFF"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_DAMAGE_CRIT"] = {
+					["message"] = "%a %n",
+				},
+				["NOTIFICATION_ALT_POWER_LOSS"] = {
+					["fontSize"] = 25.2499656677246,
+					["alwaysSticky"] = true,
+					["soundFile"] = "Whisper Ping",
+				},
+				["NOTIFICATION_ALT_POWER_GAIN"] = {
+					["soundFile"] = "Whisper Ping",
+					["alwaysSticky"] = true,
+					["fontSize"] = 24.9949645996094,
+				},
+				["NOTIFICATION_SHADOW_ORBS_FULL"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_HEAL"] = {
+					["message"] = "%a %s %n",
+					["scrollArea"] = "Custom1",
+				},
+				["NOTIFICATION_CP_FULL"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_DAMAGE"] = {
+					["message"] = "%a %n",
+				},
+				["NOTIFICATION_CHI_FULL"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_SHADOW_ORBS_CHANGE"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_HOT_CRIT"] = {
+					["message"] = "%a %s %n",
+					["scrollArea"] = "Custom1",
+				},
+				["NOTIFICATION_ITEM_BUFF_FADE"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_HEAL_CRIT"] = {
+					["message"] = "%a %s %n",
+					["scrollArea"] = "Custom1",
+				},
+				["NOTIFICATION_ITEM_COOLDOWN"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_CHI_CHANGE"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_DEBUFF_STACK"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_ITEM_BUFF"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_ABSORB"] = {
+					["message"] = "Absorb! %a",
+				},
+				["NOTIFICATION_HOLY_POWER_FULL"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_MONSTER_EMOTE"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_EXPERIENCE_GAIN"] = {
+					["disabled"] = false,
+				},
+				["NOTIFICATION_HOLY_POWER_CHANGE"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_ENVIRONMENTAL"] = {
+					["message"] = "%a %e",
+				},
+				["NOTIFICATION_ENEMY_BUFF"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_BUFF_STACK"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_EXTRA_ATTACK"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_POWER_GAIN"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_HOT"] = {
+					["message"] = "%a %s %n",
+					["scrollArea"] = "Custom1",
+				},
+				["NOTIFICATION_CP_GAIN"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_PET_COOLDOWN"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_COOLDOWN"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_POWER_LOSS"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_DEBUFF"] = {
+					["disabled"] = true,
+				},
+			},
 			["soundsDisabled"] = true,
 			["scrollAreas"] = {
 				["Incoming"] = {
-					["stickyTextAlignIndex"] = 1,
+					["stickyBehavior"] = "Normal",
 					["direction"] = "Up",
 					["offsetX"] = 518,
-					["animationStyle"] = "Straight",
-					["stickyBehavior"] = "Normal",
-					["offsetY"] = 230,
 					["textAlignIndex"] = 1,
 					["behavior"] = "MSBT_NORMAL",
+					["offsetY"] = 230,
+					["animationStyle"] = "Straight",
+					["stickyTextAlignIndex"] = 1,
+				},
+				["Notification"] = {
+					["offsetX"] = -960,
+					["offsetY"] = 380,
+				},
+				["Static"] = {
+					["offsetX"] = -561,
+					["offsetY"] = 424,
+				},
+				["Custom1"] = {
+					["direction"] = "Down",
+					["stickyDirection"] = "Down",
+					["scrollHeight"] = 202.058792114258,
+					["name"] = "Incoming Heals",
+					["offsetX"] = 130,
+					["stickyTextAlignIndex"] = 1,
+					["offsetY"] = 398,
+					["textAlignIndex"] = 1,
+					["stickyAnimationStyle"] = "Static",
 				},
 				["Outgoing"] = {
 					["direction"] = "Up",
@@ -36,27 +290,189 @@ MSBTProfiles_SavedVars = {
 					["animationStyle"] = "Straight",
 					["normalFontSize"] = 7.90997123718262,
 				},
+			},
+			["normalFontName"] = "DorisPP",
+			["hideFullOverheals"] = true,
+			["normalFontSize"] = 8,
+		},
+		["Git - Fury"] = {
+			["powerThrottleDuration"] = 0,
+			["soundsDisabled"] = true,
+			["scrollAreas"] = {
+				["Notification"] = {
+					["offsetX"] = -960,
+					["offsetY"] = 380,
+				},
+				["Outgoing"] = {
+					["direction"] = "Up",
+					["behavior"] = "MSBT_NORMAL",
+					["stickyBehavior"] = "Normal",
+					["animationStyle"] = "Straight",
+					["stickyTextAlignIndex"] = 2,
+					["stickyDirection"] = "Up",
+					["scrollHeight"] = 430.147430419922,
+					["offsetX"] = 577,
+					["critFontSize"] = 16.6650466918945,
+					["iconAlign"] = "Left",
+					["offsetY"] = 128,
+					["textAlignIndex"] = 2,
+					["normalFontSize"] = 14.2850370407105,
+				},
 				["Static"] = {
 					["offsetX"] = -561,
 					["offsetY"] = 424,
 				},
 				["Custom1"] = {
-					["direction"] = "Down",
+					["stickyTextAlignIndex"] = 1,
 					["stickyDirection"] = "Down",
 					["scrollHeight"] = 202.058792114258,
 					["name"] = "Incoming Heals",
+					["direction"] = "Down",
 					["offsetX"] = 130,
-					["stickyTextAlignIndex"] = 1,
 					["offsetY"] = 398,
 					["textAlignIndex"] = 1,
 					["stickyAnimationStyle"] = "Static",
 				},
-				["Notification"] = {
-					["offsetX"] = -960,
-					["offsetY"] = 380,
+				["Incoming"] = {
+					["stickyTextAlignIndex"] = 1,
+					["direction"] = "Up",
+					["offsetX"] = 141,
+					["textAlignIndex"] = 1,
+					["behavior"] = "MSBT_NORMAL",
+					["offsetY"] = -178,
+					["animationStyle"] = "Straight",
+					["stickyBehavior"] = "Normal",
 				},
 			},
 			["shortenNumbers"] = true,
+			["triggers"] = {
+				["MSBT_TRIGGER_KILL_SHOT"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_DECIMATION"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BACKLASH"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BERSERK"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_OVERPOWER"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_SWORD_AND_BOARD"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_RIME"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_THE_ART_OF_WAR"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_VITAL_MISTS"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_FINGERS_OF_FROST"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_MANA_TEA"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BLINDSIDE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_EXECUTE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_LOCK_AND_LOAD"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_TIDAL_WAVES"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_ECLIPSE_LUNAR"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_PREDATORS_SWIFTNESS"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_PVP_TRINKET"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BRAIN_FREEZE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_LAVA_SURGE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_SUDDEN_DEATH"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_RUNE_STRIKE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_OWLKIN_FRENZY"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_MAELSTROM_WEAPON"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_SHOOTING_STARS"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BLOODSURGE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_KILLING_MACHINE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_ECLIPSE_SOLAR"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_MISSILE_BARRAGE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_VICTORY_RUSH"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_SHADOW_INFUSION"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_CLEARCASTING"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_ELUSIVE_BREW"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_NIGHTFALL"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_MOLTEN_CORE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_HAMMER_OF_WRATH"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_REVENGE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_POWER_GUARD"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_LOW_MANA"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_TASTE_FOR_BLOOD"] = {
+					["disabled"] = true,
+				},
+			},
+			["critFontName"] = "DorisPP",
+			["animationSpeed"] = 30,
+			["hotThrottleDuration"] = 0,
+			["dotThrottleDuration"] = 0,
+			["creationVersion"] = "5.7.123",
+			["critFontSize"] = 10,
 			["events"] = {
 				["NOTIFICATION_BUFF_FADE"] = {
 					["disabled"] = true,
@@ -64,7 +480,7 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_DEBUFF_FADE"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_BUFF"] = {
+				["NOTIFICATION_PET_COOLDOWN"] = {
 					["disabled"] = true,
 				},
 				["INCOMING_DAMAGE_CRIT"] = {
@@ -119,6 +535,168 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_DEBUFF_STACK"] = {
 					["disabled"] = true,
 				},
+				["NOTIFICATION_ITEM_BUFF"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_ABSORB"] = {
+					["message"] = "Absorb! %a",
+				},
+				["NOTIFICATION_HOLY_POWER_FULL"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_MONSTER_EMOTE"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_EXPERIENCE_GAIN"] = {
+					["disabled"] = false,
+				},
+				["NOTIFICATION_HOLY_POWER_CHANGE"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_EXTRA_ATTACK"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_ENEMY_BUFF"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_COOLDOWN"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_ENVIRONMENTAL"] = {
+					["message"] = "%a %e",
+				},
+				["NOTIFICATION_POWER_GAIN"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_HOT"] = {
+					["message"] = "%a %s %n",
+					["scrollArea"] = "Custom1",
+				},
+				["NOTIFICATION_CP_GAIN"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_BUFF"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_BUFF_STACK"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_POWER_LOSS"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_DEBUFF"] = {
+					["disabled"] = true,
+				},
+			},
+			["groupNumbers"] = true,
+			["abbreviateAbilities"] = true,
+			["hideFullOverheals"] = true,
+			["normalFontName"] = "DorisPP",
+			["healThreshold"] = 7500,
+			["normalFontSize"] = 8,
+		},
+		["Gitt - Pally"] = {
+			["critFontName"] = "DorisPP",
+			["animationSpeed"] = 40,
+			["normalFontSize"] = 10,
+			["creationVersion"] = "5.7.123",
+			["critFontSize"] = 15,
+			["groupNumbers"] = true,
+			["soundsDisabled"] = true,
+			["shortenNumbers"] = true,
+			["scrollAreas"] = {
+				["Notification"] = {
+					["offsetX"] = 560,
+					["offsetY"] = 103,
+				},
+				["Outgoing"] = {
+					["scrollHeight"] = 350,
+					["direction"] = "Up",
+					["offsetX"] = 540,
+					["iconAlign"] = "Left",
+					["stickyBehavior"] = "Normal",
+					["offsetY"] = -294,
+					["animationStyle"] = "Straight",
+					["behavior"] = "MSBT_NORMAL",
+				},
+				["Static"] = {
+					["disabled"] = true,
+				},
+				["Custom1"] = {
+					["scrollHeight"] = 350,
+					["offsetX"] = 904,
+					["name"] = "Incoming Heals",
+					["offsetY"] = -295,
+					["textAlignIndex"] = 3,
+					["stickyTextAlignIndex"] = 3,
+				},
+				["Incoming"] = {
+					["stickyTextAlignIndex"] = 1,
+					["offsetX"] = 115,
+					["behavior"] = "CurvedRight",
+					["offsetY"] = -173,
+					["textAlignIndex"] = 1,
+				},
+			},
+			["normalFontName"] = "DorisPP",
+			["events"] = {
+				["NOTIFICATION_BUFF_FADE"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_DEBUFF_FADE"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_BUFF"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_DAMAGE_CRIT"] = {
+					["message"] = "%a %n",
+				},
+				["NOTIFICATION_ALT_POWER_LOSS"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_ALT_POWER_GAIN"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_SHADOW_ORBS_FULL"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_HEAL"] = {
+					["message"] = "%a %s %n",
+					["scrollArea"] = "Custom1",
+				},
+				["NOTIFICATION_CP_FULL"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_DAMAGE"] = {
+					["message"] = "%a %n",
+				},
+				["NOTIFICATION_CHI_FULL"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_SHADOW_ORBS_CHANGE"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_HOT_CRIT"] = {
+					["message"] = "%a %s %n",
+					["scrollArea"] = "Custom1",
+				},
+				["NOTIFICATION_ITEM_BUFF_FADE"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_HEAL_CRIT"] = {
+					["message"] = "%a %s %n",
+					["scrollArea"] = "Custom1",
+				},
+				["NOTIFICATION_POWER_LOSS"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_CHI_CHANGE"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_DEBUFF_STACK"] = {
+					["disabled"] = true,
+				},
 				["NOTIFICATION_DEBUFF"] = {
 					["disabled"] = true,
 				},
@@ -131,13 +709,13 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_MONSTER_EMOTE"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_POWER_LOSS"] = {
+				["NOTIFICATION_PET_COOLDOWN"] = {
 					["disabled"] = true,
 				},
 				["NOTIFICATION_HOLY_POWER_CHANGE"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_COOLDOWN"] = {
+				["NOTIFICATION_ITEM_COOLDOWN"] = {
 					["disabled"] = true,
 				},
 				["NOTIFICATION_ENEMY_BUFF"] = {
@@ -149,7 +727,7 @@ MSBTProfiles_SavedVars = {
 				["INCOMING_ENVIRONMENTAL"] = {
 					["message"] = "%a %e",
 				},
-				["NOTIFICATION_PET_COOLDOWN"] = {
+				["NOTIFICATION_COOLDOWN"] = {
 					["disabled"] = true,
 				},
 				["INCOMING_HOT"] = {
@@ -203,7 +781,7 @@ MSBTProfiles_SavedVars = {
 				["MSBT_TRIGGER_FINGERS_OF_FROST"] = {
 					["disabled"] = true,
 				},
-				["MSBT_TRIGGER_PREDATORS_SWIFTNESS"] = {
+				["MSBT_TRIGGER_MANA_TEA"] = {
 					["disabled"] = true,
 				},
 				["MSBT_TRIGGER_BLINDSIDE"] = {
@@ -221,7 +799,7 @@ MSBTProfiles_SavedVars = {
 				["MSBT_TRIGGER_ECLIPSE_LUNAR"] = {
 					["disabled"] = true,
 				},
-				["MSBT_TRIGGER_TASTE_FOR_BLOOD"] = {
+				["MSBT_TRIGGER_MAELSTROM_WEAPON"] = {
 					["disabled"] = true,
 				},
 				["MSBT_TRIGGER_PVP_TRINKET"] = {
@@ -236,13 +814,13 @@ MSBTProfiles_SavedVars = {
 				["MSBT_TRIGGER_SUDDEN_DEATH"] = {
 					["disabled"] = true,
 				},
-				["MSBT_TRIGGER_RUNE_STRIKE"] = {
+				["MSBT_TRIGGER_TASTE_FOR_BLOOD"] = {
 					["disabled"] = true,
 				},
 				["MSBT_TRIGGER_OWLKIN_FRENZY"] = {
 					["disabled"] = true,
 				},
-				["MSBT_TRIGGER_MAELSTROM_WEAPON"] = {
+				["MSBT_TRIGGER_RUNE_STRIKE"] = {
 					["disabled"] = true,
 				},
 				["MSBT_TRIGGER_SHOOTING_STARS"] = {
@@ -290,19 +868,15 @@ MSBTProfiles_SavedVars = {
 				["MSBT_TRIGGER_BRAIN_FREEZE"] = {
 					["disabled"] = true,
 				},
-				["MSBT_TRIGGER_MANA_TEA"] = {
+				["MSBT_TRIGGER_PREDATORS_SWIFTNESS"] = {
 					["disabled"] = true,
 				},
 			},
 		},
-		["Git - Fury"] = {
+		["Gitdk - Jan 2015"] = {
 			["powerThrottleDuration"] = 0,
 			["soundsDisabled"] = true,
 			["scrollAreas"] = {
-				["Notification"] = {
-					["offsetX"] = -960,
-					["offsetY"] = 380,
-				},
 				["Incoming"] = {
 					["stickyBehavior"] = "Normal",
 					["stickyTextAlignIndex"] = 1,
@@ -313,6 +887,10 @@ MSBTProfiles_SavedVars = {
 					["textAlignIndex"] = 1,
 					["direction"] = "Up",
 				},
+				["Notification"] = {
+					["offsetX"] = -960,
+					["offsetY"] = 380,
+				},
 				["Static"] = {
 					["offsetX"] = -561,
 					["offsetY"] = 424,
@@ -321,19 +899,19 @@ MSBTProfiles_SavedVars = {
 					["stickyTextAlignIndex"] = 1,
 					["stickyDirection"] = "Down",
 					["scrollHeight"] = 202.058792114258,
-					["name"] = "Incoming Heals",
-					["direction"] = "Down",
 					["offsetX"] = 130,
+					["direction"] = "Down",
+					["name"] = "Incoming Heals",
 					["offsetY"] = 398,
 					["textAlignIndex"] = 1,
 					["stickyAnimationStyle"] = "Static",
 				},
 				["Outgoing"] = {
-					["direction"] = "Up",
+					["stickyTextAlignIndex"] = 2,
 					["behavior"] = "MSBT_NORMAL",
 					["stickyBehavior"] = "Normal",
 					["textAlignIndex"] = 2,
-					["stickyTextAlignIndex"] = 2,
+					["direction"] = "Up",
 					["stickyDirection"] = "Up",
 					["scrollHeight"] = 430.147430419922,
 					["offsetX"] = 577,
@@ -352,7 +930,7 @@ MSBTProfiles_SavedVars = {
 				["MSBT_TRIGGER_DECIMATION"] = {
 					["disabled"] = true,
 				},
-				["MSBT_TRIGGER_BACKLASH"] = {
+				["MSBT_TRIGGER_MAELSTROM_WEAPON"] = {
 					["disabled"] = true,
 				},
 				["MSBT_TRIGGER_BERSERK"] = {
@@ -415,7 +993,7 @@ MSBTProfiles_SavedVars = {
 				["MSBT_TRIGGER_OWLKIN_FRENZY"] = {
 					["disabled"] = true,
 				},
-				["MSBT_TRIGGER_MAELSTROM_WEAPON"] = {
+				["MSBT_TRIGGER_BACKLASH"] = {
 					["disabled"] = true,
 				},
 				["MSBT_TRIGGER_SHOOTING_STARS"] = {
@@ -467,9 +1045,9 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 			},
-			["critFontName"] = "DorisPP",
-			["animationSpeed"] = 30,
 			["hotThrottleDuration"] = 0,
+			["animationSpeed"] = 30,
+			["abbreviateAbilities"] = true,
 			["dotThrottleDuration"] = 0,
 			["creationVersion"] = "5.7.123",
 			["critFontSize"] = 10,
@@ -481,7 +1059,7 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_DEBUFF_FADE"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_PET_COOLDOWN"] = {
+				["NOTIFICATION_BUFF"] = {
 					["disabled"] = true,
 				},
 				["INCOMING_DAMAGE_CRIT"] = {
@@ -566,7 +1144,7 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_EXTRA_ATTACK"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_BUFF"] = {
+				["NOTIFICATION_PET_COOLDOWN"] = {
 					["disabled"] = true,
 				},
 				["INCOMING_HOT"] = {
@@ -589,421 +1167,18 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 			},
-			["abbreviateAbilities"] = true,
 			["hideFullOverheals"] = true,
+			["critFontName"] = "DorisPP",
 			["normalFontName"] = "DorisPP",
 			["healThreshold"] = 7500,
 			["normalFontSize"] = 8,
 		},
-		["Gitt - Pally"] = {
-			["critFontName"] = "DorisPP",
-			["animationSpeed"] = 40,
-			["triggers"] = {
-				["MSBT_TRIGGER_KILL_SHOT"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_DECIMATION"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_BACKLASH"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_BERSERK"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_OVERPOWER"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_SWORD_AND_BOARD"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_RIME"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_THE_ART_OF_WAR"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_VITAL_MISTS"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_FINGERS_OF_FROST"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_MANA_TEA"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_BLINDSIDE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_EXECUTE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_LOCK_AND_LOAD"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_TIDAL_WAVES"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_ECLIPSE_LUNAR"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_PREDATORS_SWIFTNESS"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_PVP_TRINKET"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_BRAIN_FREEZE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_LAVA_SURGE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_SUDDEN_DEATH"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_TASTE_FOR_BLOOD"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_OWLKIN_FRENZY"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_RUNE_STRIKE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_SHOOTING_STARS"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_BLOODSURGE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_KILLING_MACHINE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_ECLIPSE_SOLAR"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_MISSILE_BARRAGE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_VICTORY_RUSH"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_SHADOW_INFUSION"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_CLEARCASTING"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_ELUSIVE_BREW"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_NIGHTFALL"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_MOLTEN_CORE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_HAMMER_OF_WRATH"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_REVENGE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_POWER_GUARD"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_LOW_MANA"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_MAELSTROM_WEAPON"] = {
-					["disabled"] = true,
-				},
-			},
-			["creationVersion"] = "5.7.123",
-			["critFontSize"] = 15,
-			["events"] = {
-				["NOTIFICATION_BUFF_FADE"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_DEBUFF_FADE"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_BUFF"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_DAMAGE_CRIT"] = {
-					["message"] = "%a %n",
-				},
-				["NOTIFICATION_ALT_POWER_LOSS"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_ALT_POWER_GAIN"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_SHADOW_ORBS_FULL"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_HEAL"] = {
-					["message"] = "%a %s %n",
-					["scrollArea"] = "Custom1",
-				},
-				["NOTIFICATION_CP_FULL"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_DAMAGE"] = {
-					["message"] = "%a %n",
-				},
-				["NOTIFICATION_CHI_FULL"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_SHADOW_ORBS_CHANGE"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_HOT_CRIT"] = {
-					["message"] = "%a %s %n",
-					["scrollArea"] = "Custom1",
-				},
-				["NOTIFICATION_ITEM_BUFF_FADE"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_HEAL_CRIT"] = {
-					["message"] = "%a %s %n",
-					["scrollArea"] = "Custom1",
-				},
-				["NOTIFICATION_POWER_LOSS"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_CHI_CHANGE"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_DEBUFF_STACK"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_ITEM_BUFF"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_ABSORB"] = {
-					["message"] = "Absorb! %a",
-				},
-				["NOTIFICATION_HOLY_POWER_FULL"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_MONSTER_EMOTE"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_EXPERIENCE_GAIN"] = {
-					["disabled"] = false,
-				},
-				["NOTIFICATION_HOLY_POWER_CHANGE"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_EXTRA_ATTACK"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_ENEMY_BUFF"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_BUFF_STACK"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_ENVIRONMENTAL"] = {
-					["message"] = "%a %e",
-				},
-				["NOTIFICATION_POWER_GAIN"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_HOT"] = {
-					["message"] = "%a %s %n",
-					["scrollArea"] = "Custom1",
-				},
-				["NOTIFICATION_CP_GAIN"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_COOLDOWN"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_ITEM_COOLDOWN"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_PET_COOLDOWN"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_DEBUFF"] = {
-					["disabled"] = true,
-				},
-			},
-			["groupNumbers"] = true,
-			["normalFontName"] = "DorisPP",
-			["scrollAreas"] = {
-				["Notification"] = {
-					["offsetX"] = 560,
-					["offsetY"] = 103,
-				},
-				["Incoming"] = {
-					["stickyTextAlignIndex"] = 1,
-					["offsetX"] = 115,
-					["behavior"] = "CurvedRight",
-					["offsetY"] = -173,
-					["textAlignIndex"] = 1,
-				},
-				["Static"] = {
-					["disabled"] = true,
-				},
-				["Custom1"] = {
-					["scrollHeight"] = 350,
-					["offsetX"] = 904,
-					["stickyTextAlignIndex"] = 3,
-					["offsetY"] = -295,
-					["textAlignIndex"] = 3,
-					["name"] = "Incoming Heals",
-				},
-				["Outgoing"] = {
-					["behavior"] = "MSBT_NORMAL",
-					["scrollHeight"] = 350,
-					["offsetX"] = 540,
-					["stickyBehavior"] = "Normal",
-					["iconAlign"] = "Left",
-					["offsetY"] = -294,
-					["animationStyle"] = "Straight",
-					["direction"] = "Up",
-				},
-			},
-			["shortenNumbers"] = true,
-			["soundsDisabled"] = true,
-			["normalFontSize"] = 10,
-		},
 		["Git - Mar 2014"] = {
-			["triggers"] = {
-				["MSBT_TRIGGER_KILL_SHOT"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_DECIMATION"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_MAELSTROM_WEAPON"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_BERSERK"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_OVERPOWER"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_SWORD_AND_BOARD"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_RIME"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_THE_ART_OF_WAR"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_VITAL_MISTS"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_FINGERS_OF_FROST"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_PREDATORS_SWIFTNESS"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_BLINDSIDE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_EXECUTE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_LOCK_AND_LOAD"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_TIDAL_WAVES"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_ECLIPSE_LUNAR"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_MANA_TEA"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_PVP_TRINKET"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_BRAIN_FREEZE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_LAVA_SURGE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_SUDDEN_DEATH"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_RUNE_STRIKE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_OWLKIN_FRENZY"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_BACKLASH"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_SHOOTING_STARS"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_BLOODSURGE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_KILLING_MACHINE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_ECLIPSE_SOLAR"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_MISSILE_BARRAGE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_VICTORY_RUSH"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_SHADOW_INFUSION"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_CLEARCASTING"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_ELUSIVE_BREW"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_NIGHTFALL"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_MOLTEN_CORE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_HAMMER_OF_WRATH"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_REVENGE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_POWER_GUARD"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_LOW_MANA"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_TASTE_FOR_BLOOD"] = {
-					["disabled"] = true,
-				},
-			},
+			["normalFontSize"] = 8,
 			["critFontName"] = "DorisPP",
 			["damageThreshold"] = 12000,
 			["animationSpeed"] = 30,
-			["shortenNumbers"] = true,
-			["hideFullOverheals"] = true,
-			["creationVersion"] = "5.7.123",
-			["critFontSize"] = 10,
-			["groupNumbers"] = true,
+			["normalFontName"] = "DorisPP",
 			["events"] = {
 				["NOTIFICATION_BUFF_FADE"] = {
 					["disabled"] = true,
@@ -1066,7 +1241,7 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_DEBUFF_STACK"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_ITEM_BUFF"] = {
+				["NOTIFICATION_DEBUFF"] = {
 					["disabled"] = true,
 				},
 				["INCOMING_ABSORB"] = {
@@ -1078,25 +1253,25 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_MONSTER_EMOTE"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_EXPERIENCE_GAIN"] = {
-					["disabled"] = false,
+				["NOTIFICATION_POWER_LOSS"] = {
+					["disabled"] = true,
 				},
 				["NOTIFICATION_HOLY_POWER_CHANGE"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_EXTRA_ATTACK"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_ENEMY_BUFF"] = {
 					["disabled"] = true,
 				},
 				["NOTIFICATION_COOLDOWN"] = {
 					["disabled"] = true,
 				},
+				["NOTIFICATION_ENEMY_BUFF"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_BUFF_STACK"] = {
+					["disabled"] = true,
+				},
 				["INCOMING_ENVIRONMENTAL"] = {
 					["message"] = "%a %e",
 				},
-				["NOTIFICATION_POWER_GAIN"] = {
+				["NOTIFICATION_BUFF"] = {
 					["disabled"] = true,
 				},
 				["INCOMING_HOT"] = {
@@ -1106,20 +1281,24 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_CP_GAIN"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_BUFF"] = {
+				["NOTIFICATION_POWER_GAIN"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_BUFF_STACK"] = {
+				["NOTIFICATION_EXTRA_ATTACK"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_POWER_LOSS"] = {
-					["disabled"] = true,
+				["NOTIFICATION_EXPERIENCE_GAIN"] = {
+					["disabled"] = false,
 				},
-				["NOTIFICATION_DEBUFF"] = {
+				["NOTIFICATION_ITEM_BUFF"] = {
 					["disabled"] = true,
 				},
 			},
+			["creationVersion"] = "5.7.123",
+			["critFontSize"] = 10,
+			["hideFullOverheals"] = true,
 			["soundsDisabled"] = true,
+			["groupNumbers"] = true,
 			["scrollAreas"] = {
 				["Outgoing"] = {
 					["stickyTextAlignIndex"] = 3,
@@ -1127,14 +1306,20 @@ MSBTProfiles_SavedVars = {
 					["stickyDirection"] = "Down",
 					["scrollHeight"] = 205,
 					["offsetX"] = -200,
-					["stickyBehavior"] = "Normal",
-					["offsetY"] = 394,
 					["textAlignIndex"] = 3,
+					["offsetY"] = 394,
 					["animationStyle"] = "Straight",
+					["stickyBehavior"] = "Normal",
 				},
-				["Notification"] = {
-					["offsetX"] = -960,
-					["offsetY"] = 380,
+				["Incoming"] = {
+					["behavior"] = "MSBT_NORMAL",
+					["stickyTextAlignIndex"] = 1,
+					["offsetX"] = 141,
+					["animationStyle"] = "Straight",
+					["stickyBehavior"] = "Normal",
+					["offsetY"] = -178,
+					["textAlignIndex"] = 1,
+					["direction"] = "Up",
 				},
 				["Static"] = {
 					["offsetX"] = -561,
@@ -1151,27 +1336,13 @@ MSBTProfiles_SavedVars = {
 					["textAlignIndex"] = 1,
 					["stickyAnimationStyle"] = "Static",
 				},
-				["Incoming"] = {
-					["direction"] = "Up",
-					["stickyTextAlignIndex"] = 1,
-					["offsetX"] = 141,
-					["textAlignIndex"] = 1,
-					["behavior"] = "MSBT_NORMAL",
-					["offsetY"] = -178,
-					["animationStyle"] = "Straight",
-					["stickyBehavior"] = "Normal",
+				["Notification"] = {
+					["offsetX"] = -960,
+					["offsetY"] = 380,
 				},
 			},
-			["normalFontName"] = "DorisPP",
+			["shortenNumbers"] = true,
 			["healThreshold"] = 21800,
-			["normalFontSize"] = 8,
-		},
-		["Gimm"] = {
-			["creationVersion"] = "5.7.123",
-		},
-		["Got - Dec 2014"] = {
-			["critFontName"] = "DorisPP",
-			["animationSpeed"] = 30,
 			["triggers"] = {
 				["MSBT_TRIGGER_KILL_SHOT"] = {
 					["disabled"] = true,
@@ -1221,13 +1392,13 @@ MSBTProfiles_SavedVars = {
 				["MSBT_TRIGGER_ECLIPSE_LUNAR"] = {
 					["disabled"] = true,
 				},
-				["MSBT_TRIGGER_MANA_TEA"] = {
+				["MSBT_TRIGGER_TASTE_FOR_BLOOD"] = {
 					["disabled"] = true,
 				},
 				["MSBT_TRIGGER_PVP_TRINKET"] = {
 					["disabled"] = true,
 				},
-				["MSBT_TRIGGER_BRAIN_FREEZE"] = {
+				["MSBT_TRIGGER_LOW_MANA"] = {
 					["disabled"] = true,
 				},
 				["MSBT_TRIGGER_LAVA_SURGE"] = {
@@ -1272,10 +1443,10 @@ MSBTProfiles_SavedVars = {
 				["MSBT_TRIGGER_ELUSIVE_BREW"] = {
 					["disabled"] = true,
 				},
-				["MSBT_TRIGGER_NIGHTFALL"] = {
+				["MSBT_TRIGGER_MOLTEN_CORE"] = {
 					["disabled"] = true,
 				},
-				["MSBT_TRIGGER_MOLTEN_CORE"] = {
+				["MSBT_TRIGGER_NIGHTFALL"] = {
 					["disabled"] = true,
 				},
 				["MSBT_TRIGGER_HAMMER_OF_WRATH"] = {
@@ -1287,65 +1458,24 @@ MSBTProfiles_SavedVars = {
 				["MSBT_TRIGGER_POWER_GUARD"] = {
 					["disabled"] = true,
 				},
-				["MSBT_TRIGGER_LOW_MANA"] = {
+				["MSBT_TRIGGER_BRAIN_FREEZE"] = {
 					["disabled"] = true,
 				},
-				["MSBT_TRIGGER_TASTE_FOR_BLOOD"] = {
+				["MSBT_TRIGGER_MANA_TEA"] = {
 					["disabled"] = true,
 				},
 			},
-			["groupNumbers"] = true,
+		},
+		["Gimm"] = {
+			["creationVersion"] = "5.7.123",
+		},
+		["Got - Dec 2014"] = {
+			["critFontName"] = "DorisPP",
+			["animationSpeed"] = 30,
+			["normalFontSize"] = 8,
+			["hideFullOverheals"] = true,
 			["creationVersion"] = "5.7.123",
 			["critFontSize"] = 10,
-			["shortenNumbers"] = true,
-			["hideFullOverheals"] = true,
-			["soundsDisabled"] = true,
-			["scrollAreas"] = {
-				["Outgoing"] = {
-					["direction"] = "Up",
-					["behavior"] = "MSBT_NORMAL",
-					["stickyBehavior"] = "Normal",
-					["animationStyle"] = "Straight",
-					["stickyTextAlignIndex"] = 2,
-					["critFontSize"] = 16.6650466918945,
-					["scrollHeight"] = 430.147430419922,
-					["offsetX"] = 577,
-					["stickyDirection"] = "Up",
-					["iconAlign"] = "Left",
-					["offsetY"] = 128,
-					["textAlignIndex"] = 2,
-					["normalFontSize"] = 14.2850370407105,
-				},
-				["Notification"] = {
-					["offsetX"] = -960,
-					["offsetY"] = 380,
-				},
-				["Static"] = {
-					["offsetX"] = -561,
-					["offsetY"] = 424,
-				},
-				["Custom1"] = {
-					["stickyTextAlignIndex"] = 1,
-					["stickyDirection"] = "Down",
-					["scrollHeight"] = 202.058792114258,
-					["name"] = "Incoming Heals",
-					["direction"] = "Down",
-					["offsetX"] = 130,
-					["offsetY"] = 398,
-					["textAlignIndex"] = 1,
-					["stickyAnimationStyle"] = "Static",
-				},
-				["Incoming"] = {
-					["direction"] = "Up",
-					["stickyTextAlignIndex"] = 1,
-					["offsetX"] = 141,
-					["textAlignIndex"] = 1,
-					["behavior"] = "MSBT_NORMAL",
-					["offsetY"] = -178,
-					["animationStyle"] = "Straight",
-					["stickyBehavior"] = "Normal",
-				},
-			},
 			["normalFontName"] = "DorisPP",
 			["events"] = {
 				["NOTIFICATION_BUFF_FADE"] = {
@@ -1409,7 +1539,7 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_DEBUFF_STACK"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_ITEM_BUFF"] = {
+				["NOTIFICATION_DEBUFF"] = {
 					["disabled"] = true,
 				},
 				["INCOMING_ABSORB"] = {
@@ -1421,25 +1551,25 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_MONSTER_EMOTE"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_EXPERIENCE_GAIN"] = {
-					["disabled"] = false,
-				},
-				["NOTIFICATION_HOLY_POWER_CHANGE"] = {
+				["NOTIFICATION_POWER_LOSS"] = {
 					["disabled"] = true,
 				},
-				["INCOMING_ENVIRONMENTAL"] = {
-					["message"] = "%a %e",
-				},
-				["NOTIFICATION_ENEMY_BUFF"] = {
+				["NOTIFICATION_HOLY_POWER_CHANGE"] = {
 					["disabled"] = true,
 				},
 				["NOTIFICATION_BUFF_STACK"] = {
 					["disabled"] = true,
 				},
+				["NOTIFICATION_ENEMY_BUFF"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_COOLDOWN"] = {
+					["disabled"] = true,
+				},
 				["NOTIFICATION_EXTRA_ATTACK"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_POWER_GAIN"] = {
+				["NOTIFICATION_BUFF"] = {
 					["disabled"] = true,
 				},
 				["INCOMING_HOT"] = {
@@ -1449,20 +1579,190 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_CP_GAIN"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_BUFF"] = {
+				["NOTIFICATION_POWER_GAIN"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_COOLDOWN"] = {
-					["disabled"] = true,
+				["INCOMING_ENVIRONMENTAL"] = {
+					["message"] = "%a %e",
 				},
-				["NOTIFICATION_POWER_LOSS"] = {
-					["disabled"] = true,
+				["NOTIFICATION_EXPERIENCE_GAIN"] = {
+					["disabled"] = false,
 				},
-				["NOTIFICATION_DEBUFF"] = {
+				["NOTIFICATION_ITEM_BUFF"] = {
 					["disabled"] = true,
 				},
 			},
-			["normalFontSize"] = 8,
+			["soundsDisabled"] = true,
+			["scrollAreas"] = {
+				["Outgoing"] = {
+					["direction"] = "Up",
+					["behavior"] = "MSBT_NORMAL",
+					["stickyBehavior"] = "Normal",
+					["textAlignIndex"] = 2,
+					["stickyTextAlignIndex"] = 2,
+					["critFontSize"] = 16.6650466918945,
+					["scrollHeight"] = 430.147430419922,
+					["offsetX"] = 577,
+					["stickyDirection"] = "Up",
+					["iconAlign"] = "Left",
+					["offsetY"] = 128,
+					["animationStyle"] = "Straight",
+					["normalFontSize"] = 14.2850370407105,
+				},
+				["Incoming"] = {
+					["behavior"] = "MSBT_NORMAL",
+					["stickyTextAlignIndex"] = 1,
+					["offsetX"] = 141,
+					["animationStyle"] = "Straight",
+					["stickyBehavior"] = "Normal",
+					["offsetY"] = -178,
+					["textAlignIndex"] = 1,
+					["direction"] = "Up",
+				},
+				["Static"] = {
+					["offsetX"] = -561,
+					["offsetY"] = 424,
+				},
+				["Custom1"] = {
+					["stickyTextAlignIndex"] = 1,
+					["stickyDirection"] = "Down",
+					["scrollHeight"] = 202.058792114258,
+					["name"] = "Incoming Heals",
+					["direction"] = "Down",
+					["offsetX"] = 130,
+					["offsetY"] = 398,
+					["textAlignIndex"] = 1,
+					["stickyAnimationStyle"] = "Static",
+				},
+				["Notification"] = {
+					["offsetX"] = -960,
+					["offsetY"] = 380,
+				},
+			},
+			["shortenNumbers"] = true,
+			["groupNumbers"] = true,
+			["triggers"] = {
+				["MSBT_TRIGGER_KILL_SHOT"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_DECIMATION"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_MAELSTROM_WEAPON"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BERSERK"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_OVERPOWER"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_SWORD_AND_BOARD"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_RIME"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_THE_ART_OF_WAR"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_VITAL_MISTS"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_FINGERS_OF_FROST"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_PREDATORS_SWIFTNESS"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BLINDSIDE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_EXECUTE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_LOCK_AND_LOAD"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_TIDAL_WAVES"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_ECLIPSE_LUNAR"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_TASTE_FOR_BLOOD"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_PVP_TRINKET"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_LOW_MANA"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_LAVA_SURGE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_SUDDEN_DEATH"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_RUNE_STRIKE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_OWLKIN_FRENZY"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BACKLASH"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_SHOOTING_STARS"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BLOODSURGE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_KILLING_MACHINE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_ECLIPSE_SOLAR"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_MISSILE_BARRAGE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_VICTORY_RUSH"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_SHADOW_INFUSION"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_CLEARCASTING"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_ELUSIVE_BREW"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_MOLTEN_CORE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_NIGHTFALL"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_HAMMER_OF_WRATH"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_REVENGE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_POWER_GUARD"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BRAIN_FREEZE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_MANA_TEA"] = {
+					["disabled"] = true,
+				},
+			},
 		},
 		["Default"] = {
 			["powerThrottleDuration"] = 0,
@@ -1474,29 +1774,27 @@ MSBTProfiles_SavedVars = {
 			["soundsDisabled"] = true,
 			["hotThrottleDuration"] = 0,
 			["scrollAreas"] = {
-				["Notification"] = {
-					["disabled"] = true,
-				},
 				["Incoming"] = {
 					["offsetX"] = -185,
 					["offsetY"] = -112,
+				},
+				["Outgoing"] = {
+					["offsetX"] = 131,
+					["offsetY"] = -115,
 				},
 				["Static"] = {
 					["disabled"] = true,
 					["offsetY"] = 374,
 				},
-				["Outgoing"] = {
-					["offsetX"] = 131,
-					["offsetY"] = -115,
+				["Notification"] = {
+					["disabled"] = true,
 				},
 			},
 			["shortenNumbers"] = true,
 			["normalFontName"] = "DorisPP",
 			["normalFontSize"] = 10,
 		},
-		["Gitt Pally DPS"] = {
-			["critFontName"] = "DorisPP",
-			["animationSpeed"] = 40,
+		["Gitt - Monk"] = {
 			["triggers"] = {
 				["MSBT_TRIGGER_KILL_SHOT"] = {
 					["disabled"] = true,
@@ -1504,7 +1802,7 @@ MSBTProfiles_SavedVars = {
 				["MSBT_TRIGGER_DECIMATION"] = {
 					["disabled"] = true,
 				},
-				["MSBT_TRIGGER_MAELSTROM_WEAPON"] = {
+				["MSBT_TRIGGER_BACKLASH"] = {
 					["disabled"] = true,
 				},
 				["MSBT_TRIGGER_BERSERK"] = {
@@ -1528,7 +1826,7 @@ MSBTProfiles_SavedVars = {
 				["MSBT_TRIGGER_FINGERS_OF_FROST"] = {
 					["disabled"] = true,
 				},
-				["MSBT_TRIGGER_PREDATORS_SWIFTNESS"] = {
+				["MSBT_TRIGGER_MANA_TEA"] = {
 					["disabled"] = true,
 				},
 				["MSBT_TRIGGER_BLINDSIDE"] = {
@@ -1546,7 +1844,7 @@ MSBTProfiles_SavedVars = {
 				["MSBT_TRIGGER_ECLIPSE_LUNAR"] = {
 					["disabled"] = true,
 				},
-				["MSBT_TRIGGER_MANA_TEA"] = {
+				["MSBT_TRIGGER_PREDATORS_SWIFTNESS"] = {
 					["disabled"] = true,
 				},
 				["MSBT_TRIGGER_PVP_TRINKET"] = {
@@ -1567,7 +1865,7 @@ MSBTProfiles_SavedVars = {
 				["MSBT_TRIGGER_OWLKIN_FRENZY"] = {
 					["disabled"] = true,
 				},
-				["MSBT_TRIGGER_BACKLASH"] = {
+				["MSBT_TRIGGER_MAELSTROM_WEAPON"] = {
 					["disabled"] = true,
 				},
 				["MSBT_TRIGGER_SHOOTING_STARS"] = {
@@ -1619,52 +1917,14 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 			},
-			["creationVersion"] = "5.7.123",
-			["critFontSize"] = 15,
-			["groupNumbers"] = true,
-			["soundsDisabled"] = true,
-			["normalFontName"] = "DorisPP",
-			["scrollAreas"] = {
-				["Outgoing"] = {
-					["stickyTextAlignIndex"] = 3,
-					["normalFontSize"] = 18,
-					["stickyBehavior"] = "MSBT_NORMAL",
-					["behavior"] = "MSBT_NORMAL",
-					["direction"] = "Up",
-					["critFontSize"] = 25,
-					["stickyDirection"] = "Up",
-					["scrollHeight"] = 490,
-					["offsetX"] = -205,
-					["scrollWidth"] = 370,
-					["iconAlign"] = "Left",
-					["offsetY"] = 110,
-					["animationStyle"] = "Straight",
-					["stickyAnimationStyle"] = "Static",
-				},
-				["Notification"] = {
-					["offsetX"] = 560,
-					["offsetY"] = 103,
-				},
-				["Static"] = {
-					["disabled"] = true,
-				},
-				["Custom1"] = {
-					["scrollHeight"] = 350,
-					["offsetX"] = 904,
-					["stickyTextAlignIndex"] = 3,
-					["offsetY"] = -295,
-					["textAlignIndex"] = 3,
-					["name"] = "Incoming Heals",
-				},
-				["Incoming"] = {
-					["stickyTextAlignIndex"] = 1,
-					["offsetX"] = 115,
-					["behavior"] = "CurvedRight",
-					["offsetY"] = -173,
-					["textAlignIndex"] = 1,
-				},
-			},
+			["critFontName"] = "DorisPP",
+			["damageThreshold"] = 12000,
+			["animationSpeed"] = 30,
 			["shortenNumbers"] = true,
+			["hideFullOverheals"] = true,
+			["creationVersion"] = "5.7.123",
+			["critFontSize"] = 10,
+			["groupNumbers"] = true,
 			["events"] = {
 				["NOTIFICATION_BUFF_FADE"] = {
 					["disabled"] = true,
@@ -1679,10 +1939,14 @@ MSBTProfiles_SavedVars = {
 					["message"] = "%a %n",
 				},
 				["NOTIFICATION_ALT_POWER_LOSS"] = {
-					["disabled"] = true,
+					["fontSize"] = 25.2499656677246,
+					["alwaysSticky"] = true,
+					["soundFile"] = "Whisper Ping",
 				},
 				["NOTIFICATION_ALT_POWER_GAIN"] = {
-					["disabled"] = true,
+					["soundFile"] = "Whisper Ping",
+					["alwaysSticky"] = true,
+					["fontSize"] = 24.9949645996094,
 				},
 				["NOTIFICATION_SHADOW_ORBS_FULL"] = {
 					["disabled"] = true,
@@ -1741,17 +2005,17 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_HOLY_POWER_CHANGE"] = {
 					["disabled"] = true,
 				},
-				["INCOMING_ENVIRONMENTAL"] = {
-					["message"] = "%a %e",
+				["NOTIFICATION_EXTRA_ATTACK"] = {
+					["disabled"] = true,
 				},
 				["NOTIFICATION_ENEMY_BUFF"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_BUFF_STACK"] = {
+				["NOTIFICATION_COOLDOWN"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_EXTRA_ATTACK"] = {
-					["disabled"] = true,
+				["INCOMING_ENVIRONMENTAL"] = {
+					["message"] = "%a %e",
 				},
 				["NOTIFICATION_POWER_GAIN"] = {
 					["disabled"] = true,
@@ -1766,7 +2030,7 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_BUFF"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_COOLDOWN"] = {
+				["NOTIFICATION_BUFF_STACK"] = {
 					["disabled"] = true,
 				},
 				["NOTIFICATION_POWER_LOSS"] = {
@@ -1776,9 +2040,54 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 			},
-			["normalFontSize"] = 10,
+			["soundsDisabled"] = true,
+			["scrollAreas"] = {
+				["Notification"] = {
+					["offsetX"] = -960,
+					["offsetY"] = 380,
+				},
+				["Outgoing"] = {
+					["stickyTextAlignIndex"] = 3,
+					["behavior"] = "MSBT_NORMAL",
+					["stickyDirection"] = "Down",
+					["scrollHeight"] = 205,
+					["offsetX"] = -200,
+					["stickyBehavior"] = "Normal",
+					["offsetY"] = 394,
+					["textAlignIndex"] = 3,
+					["animationStyle"] = "Straight",
+				},
+				["Static"] = {
+					["offsetX"] = -561,
+					["offsetY"] = 424,
+				},
+				["Custom1"] = {
+					["stickyTextAlignIndex"] = 1,
+					["stickyDirection"] = "Down",
+					["scrollHeight"] = 202.058792114258,
+					["name"] = "Incoming Heals",
+					["direction"] = "Down",
+					["offsetX"] = 130,
+					["offsetY"] = 398,
+					["textAlignIndex"] = 1,
+					["stickyAnimationStyle"] = "Static",
+				},
+				["Incoming"] = {
+					["stickyTextAlignIndex"] = 1,
+					["direction"] = "Up",
+					["offsetX"] = 141,
+					["textAlignIndex"] = 1,
+					["behavior"] = "MSBT_NORMAL",
+					["offsetY"] = -178,
+					["animationStyle"] = "Straight",
+					["stickyBehavior"] = "Normal",
+				},
+			},
+			["normalFontName"] = "DorisPP",
+			["healThreshold"] = 21800,
+			["normalFontSize"] = 8,
 		},
-		["Gitt - Monk"] = {
+		["Gitt - Monk (DPS)"] = {
 			["normalFontSize"] = 8,
 			["critFontName"] = "DorisPP",
 			["damageThreshold"] = 12000,
@@ -1796,7 +2105,7 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_DEBUFF_FADE"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_PET_COOLDOWN"] = {
+				["NOTIFICATION_BUFF"] = {
 					["disabled"] = true,
 				},
 				["INCOMING_DAMAGE_CRIT"] = {
@@ -1881,7 +2190,7 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_EXTRA_ATTACK"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_BUFF"] = {
+				["NOTIFICATION_PET_COOLDOWN"] = {
 					["disabled"] = true,
 				},
 				["INCOMING_HOT"] = {
@@ -1905,19 +2214,19 @@ MSBTProfiles_SavedVars = {
 				},
 			},
 			["scrollAreas"] = {
-				["Notification"] = {
-					["offsetX"] = -960,
-					["offsetY"] = 380,
-				},
 				["Incoming"] = {
-					["stickyBehavior"] = "Normal",
+					["direction"] = "Up",
 					["stickyTextAlignIndex"] = 1,
 					["offsetX"] = 141,
 					["animationStyle"] = "Straight",
-					["behavior"] = "MSBT_NORMAL",
+					["stickyBehavior"] = "Normal",
 					["offsetY"] = -178,
 					["textAlignIndex"] = 1,
-					["direction"] = "Up",
+					["behavior"] = "MSBT_NORMAL",
+				},
+				["Notification"] = {
+					["offsetX"] = -960,
+					["offsetY"] = 380,
 				},
 				["Static"] = {
 					["offsetX"] = -561,
@@ -1928,22 +2237,24 @@ MSBTProfiles_SavedVars = {
 					["stickyDirection"] = "Down",
 					["scrollHeight"] = 202.058792114258,
 					["name"] = "Incoming Heals",
-					["direction"] = "Down",
 					["offsetX"] = 130,
+					["direction"] = "Down",
 					["offsetY"] = 398,
 					["textAlignIndex"] = 1,
 					["stickyAnimationStyle"] = "Static",
 				},
 				["Outgoing"] = {
 					["stickyTextAlignIndex"] = 3,
-					["behavior"] = "MSBT_NORMAL",
-					["stickyDirection"] = "Down",
-					["scrollHeight"] = 205,
-					["offsetX"] = -200,
-					["animationStyle"] = "Straight",
-					["offsetY"] = 394,
-					["textAlignIndex"] = 3,
 					["stickyBehavior"] = "Normal",
+					["direction"] = "Up",
+					["stickyDirection"] = "Up",
+					["scrollHeight"] = 464.117950439453,
+					["offsetX"] = -318,
+					["animationStyle"] = "Straight",
+					["iconAlign"] = "Left",
+					["offsetY"] = 109,
+					["textAlignIndex"] = 3,
+					["behavior"] = "MSBT_NORMAL",
 				},
 			},
 			["shortenNumbers"] = true,
@@ -1955,7 +2266,7 @@ MSBTProfiles_SavedVars = {
 				["MSBT_TRIGGER_DECIMATION"] = {
 					["disabled"] = true,
 				},
-				["MSBT_TRIGGER_BACKLASH"] = {
+				["MSBT_TRIGGER_MAELSTROM_WEAPON"] = {
 					["disabled"] = true,
 				},
 				["MSBT_TRIGGER_BERSERK"] = {
@@ -2018,7 +2329,7 @@ MSBTProfiles_SavedVars = {
 				["MSBT_TRIGGER_OWLKIN_FRENZY"] = {
 					["disabled"] = true,
 				},
-				["MSBT_TRIGGER_MAELSTROM_WEAPON"] = {
+				["MSBT_TRIGGER_BACKLASH"] = {
 					["disabled"] = true,
 				},
 				["MSBT_TRIGGER_SHOOTING_STARS"] = {
@@ -2072,11 +2383,135 @@ MSBTProfiles_SavedVars = {
 			},
 		},
 		["Gitt"] = {
-			["normalFontSize"] = 8,
+			["triggers"] = {
+				["MSBT_TRIGGER_KILL_SHOT"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_DECIMATION"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BACKLASH"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BERSERK"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_OVERPOWER"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_SWORD_AND_BOARD"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_RIME"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_THE_ART_OF_WAR"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_VITAL_MISTS"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_FINGERS_OF_FROST"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_PREDATORS_SWIFTNESS"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BLINDSIDE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_EXECUTE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_LOCK_AND_LOAD"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_TIDAL_WAVES"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_ECLIPSE_LUNAR"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_MANA_TEA"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_PVP_TRINKET"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BRAIN_FREEZE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_LAVA_SURGE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_SUDDEN_DEATH"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_RUNE_STRIKE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_OWLKIN_FRENZY"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_TASTE_FOR_BLOOD"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_SHOOTING_STARS"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BLOODSURGE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_KILLING_MACHINE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_ECLIPSE_SOLAR"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_MISSILE_BARRAGE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_VICTORY_RUSH"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_SHADOW_INFUSION"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_CLEARCASTING"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_ELUSIVE_BREW"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_NIGHTFALL"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_MOLTEN_CORE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_HAMMER_OF_WRATH"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_REVENGE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_POWER_GUARD"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_LOW_MANA"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_MAELSTROM_WEAPON"] = {
+					["disabled"] = true,
+				},
+			},
 			["critFontName"] = "DorisPP",
 			["damageThreshold"] = 12000,
 			["animationSpeed"] = 30,
-			["normalFontName"] = "DorisPP",
+			["shortenNumbers"] = true,
+			["soundsDisabled"] = true,
+			["creationVersion"] = "5.7.123",
+			["critFontSize"] = 10,
 			["events"] = {
 				["NOTIFICATION_BUFF_FADE"] = {
 					["disabled"] = true,
@@ -2139,7 +2574,7 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_DEBUFF_STACK"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_DEBUFF"] = {
+				["NOTIFICATION_ITEM_BUFF"] = {
 					["disabled"] = true,
 				},
 				["INCOMING_ABSORB"] = {
@@ -2151,14 +2586,14 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_MONSTER_EMOTE"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_PET_COOLDOWN"] = {
-					["disabled"] = true,
+				["NOTIFICATION_EXPERIENCE_GAIN"] = {
+					["disabled"] = false,
 				},
 				["NOTIFICATION_HOLY_POWER_CHANGE"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_ITEM_COOLDOWN"] = {
-					["disabled"] = true,
+				["INCOMING_ENVIRONMENTAL"] = {
+					["message"] = "%a %e",
 				},
 				["NOTIFICATION_ENEMY_BUFF"] = {
 					["disabled"] = true,
@@ -2166,10 +2601,10 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_BUFF_STACK"] = {
 					["disabled"] = true,
 				},
-				["INCOMING_ENVIRONMENTAL"] = {
-					["message"] = "%a %e",
+				["NOTIFICATION_EXTRA_ATTACK"] = {
+					["disabled"] = true,
 				},
-				["NOTIFICATION_COOLDOWN"] = {
+				["NOTIFICATION_POWER_GAIN"] = {
 					["disabled"] = true,
 				},
 				["INCOMING_HOT"] = {
@@ -2179,34 +2614,50 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_CP_GAIN"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_POWER_GAIN"] = {
+				["NOTIFICATION_COOLDOWN"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_EXTRA_ATTACK"] = {
+				["NOTIFICATION_ITEM_COOLDOWN"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_EXPERIENCE_GAIN"] = {
-					["disabled"] = false,
+				["NOTIFICATION_PET_COOLDOWN"] = {
+					["disabled"] = true,
 				},
-				["NOTIFICATION_ITEM_BUFF"] = {
+				["NOTIFICATION_DEBUFF"] = {
 					["disabled"] = true,
 				},
 			},
-			["creationVersion"] = "5.7.123",
-			["critFontSize"] = 10,
-			["hideFullOverheals"] = true,
-			["soundsDisabled"] = true,
 			["groupNumbers"] = true,
+			["hideFullOverheals"] = true,
 			["scrollAreas"] = {
 				["Incoming"] = {
-					["behavior"] = "MSBT_NORMAL",
 					["stickyTextAlignIndex"] = 1,
+					["direction"] = "Up",
 					["offsetX"] = 141,
-					["animationStyle"] = "Straight",
+					["textAlignIndex"] = 1,
 					["stickyBehavior"] = "Normal",
 					["offsetY"] = -178,
+					["animationStyle"] = "Straight",
+					["behavior"] = "MSBT_NORMAL",
+				},
+				["Notification"] = {
+					["offsetX"] = -960,
+					["offsetY"] = 380,
+				},
+				["Static"] = {
+					["offsetX"] = -561,
+					["offsetY"] = 424,
+				},
+				["Custom1"] = {
+					["stickyTextAlignIndex"] = 1,
+					["stickyDirection"] = "Down",
+					["scrollHeight"] = 202.058792114258,
+					["name"] = "Incoming Heals",
+					["direction"] = "Down",
+					["offsetX"] = 130,
+					["offsetY"] = 398,
 					["textAlignIndex"] = 1,
-					["direction"] = "Up",
+					["stickyAnimationStyle"] = "Static",
 				},
 				["Outgoing"] = {
 					["stickyTextAlignIndex"] = 3,
@@ -2214,452 +2665,17 @@ MSBTProfiles_SavedVars = {
 					["stickyDirection"] = "Down",
 					["scrollHeight"] = 205,
 					["offsetX"] = -200,
-					["textAlignIndex"] = 3,
+					["stickyBehavior"] = "Normal",
 					["offsetY"] = 394,
 					["animationStyle"] = "Straight",
-					["stickyBehavior"] = "Normal",
-				},
-				["Static"] = {
-					["offsetX"] = -561,
-					["offsetY"] = 424,
-				},
-				["Custom1"] = {
-					["stickyTextAlignIndex"] = 1,
-					["stickyDirection"] = "Down",
-					["scrollHeight"] = 202.058792114258,
-					["name"] = "Incoming Heals",
-					["direction"] = "Down",
-					["offsetX"] = 130,
-					["offsetY"] = 398,
-					["textAlignIndex"] = 1,
-					["stickyAnimationStyle"] = "Static",
-				},
-				["Notification"] = {
-					["offsetX"] = -960,
-					["offsetY"] = 380,
-				},
-			},
-			["shortenNumbers"] = true,
-			["healThreshold"] = 21800,
-			["triggers"] = {
-				["MSBT_TRIGGER_KILL_SHOT"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_DECIMATION"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_BACKLASH"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_BERSERK"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_OVERPOWER"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_SWORD_AND_BOARD"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_RIME"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_THE_ART_OF_WAR"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_VITAL_MISTS"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_FINGERS_OF_FROST"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_PREDATORS_SWIFTNESS"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_BLINDSIDE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_EXECUTE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_LOCK_AND_LOAD"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_TIDAL_WAVES"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_ECLIPSE_LUNAR"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_MAELSTROM_WEAPON"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_PVP_TRINKET"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_LOW_MANA"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_LAVA_SURGE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_SUDDEN_DEATH"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_RUNE_STRIKE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_OWLKIN_FRENZY"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_TASTE_FOR_BLOOD"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_SHOOTING_STARS"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_BLOODSURGE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_KILLING_MACHINE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_ECLIPSE_SOLAR"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_MISSILE_BARRAGE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_VICTORY_RUSH"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_SHADOW_INFUSION"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_CLEARCASTING"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_ELUSIVE_BREW"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_MOLTEN_CORE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_NIGHTFALL"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_HAMMER_OF_WRATH"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_REVENGE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_POWER_GUARD"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_BRAIN_FREEZE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_MANA_TEA"] = {
-					["disabled"] = true,
-				},
-			},
-		},
-		["Gitt - Monk (DPS)"] = {
-			["triggers"] = {
-				["MSBT_TRIGGER_KILL_SHOT"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_DECIMATION"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_MAELSTROM_WEAPON"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_BERSERK"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_OVERPOWER"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_SWORD_AND_BOARD"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_RIME"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_THE_ART_OF_WAR"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_VITAL_MISTS"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_FINGERS_OF_FROST"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_MANA_TEA"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_BLINDSIDE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_EXECUTE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_LOCK_AND_LOAD"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_TIDAL_WAVES"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_ECLIPSE_LUNAR"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_PREDATORS_SWIFTNESS"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_PVP_TRINKET"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_BRAIN_FREEZE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_LAVA_SURGE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_SUDDEN_DEATH"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_RUNE_STRIKE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_OWLKIN_FRENZY"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_BACKLASH"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_SHOOTING_STARS"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_BLOODSURGE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_KILLING_MACHINE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_ECLIPSE_SOLAR"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_MISSILE_BARRAGE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_VICTORY_RUSH"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_SHADOW_INFUSION"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_CLEARCASTING"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_ELUSIVE_BREW"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_NIGHTFALL"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_MOLTEN_CORE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_HAMMER_OF_WRATH"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_REVENGE"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_POWER_GUARD"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_LOW_MANA"] = {
-					["disabled"] = true,
-				},
-				["MSBT_TRIGGER_TASTE_FOR_BLOOD"] = {
-					["disabled"] = true,
-				},
-			},
-			["critFontName"] = "DorisPP",
-			["damageThreshold"] = 12000,
-			["animationSpeed"] = 30,
-			["shortenNumbers"] = true,
-			["soundsDisabled"] = true,
-			["creationVersion"] = "5.7.123",
-			["critFontSize"] = 10,
-			["events"] = {
-				["NOTIFICATION_BUFF_FADE"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_DEBUFF_FADE"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_BUFF"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_DAMAGE_CRIT"] = {
-					["message"] = "%a %n",
-				},
-				["NOTIFICATION_ALT_POWER_LOSS"] = {
-					["fontSize"] = 25.2499656677246,
-					["alwaysSticky"] = true,
-					["soundFile"] = "Whisper Ping",
-				},
-				["NOTIFICATION_ALT_POWER_GAIN"] = {
-					["soundFile"] = "Whisper Ping",
-					["alwaysSticky"] = true,
-					["fontSize"] = 24.9949645996094,
-				},
-				["NOTIFICATION_SHADOW_ORBS_FULL"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_HEAL"] = {
-					["message"] = "%a %s %n",
-					["scrollArea"] = "Custom1",
-				},
-				["NOTIFICATION_CP_FULL"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_DAMAGE"] = {
-					["message"] = "%a %n",
-				},
-				["NOTIFICATION_CHI_FULL"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_SHADOW_ORBS_CHANGE"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_HOT_CRIT"] = {
-					["message"] = "%a %s %n",
-					["scrollArea"] = "Custom1",
-				},
-				["NOTIFICATION_ITEM_BUFF_FADE"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_HEAL_CRIT"] = {
-					["message"] = "%a %s %n",
-					["scrollArea"] = "Custom1",
-				},
-				["NOTIFICATION_ITEM_COOLDOWN"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_CHI_CHANGE"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_DEBUFF_STACK"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_ITEM_BUFF"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_ABSORB"] = {
-					["message"] = "Absorb! %a",
-				},
-				["NOTIFICATION_HOLY_POWER_FULL"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_MONSTER_EMOTE"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_EXPERIENCE_GAIN"] = {
-					["disabled"] = false,
-				},
-				["NOTIFICATION_HOLY_POWER_CHANGE"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_ENVIRONMENTAL"] = {
-					["message"] = "%a %e",
-				},
-				["NOTIFICATION_ENEMY_BUFF"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_BUFF_STACK"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_EXTRA_ATTACK"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_POWER_GAIN"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_HOT"] = {
-					["message"] = "%a %s %n",
-					["scrollArea"] = "Custom1",
-				},
-				["NOTIFICATION_CP_GAIN"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_PET_COOLDOWN"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_COOLDOWN"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_POWER_LOSS"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_DEBUFF"] = {
-					["disabled"] = true,
-				},
-			},
-			["groupNumbers"] = true,
-			["hideFullOverheals"] = true,
-			["scrollAreas"] = {
-				["Incoming"] = {
-					["behavior"] = "MSBT_NORMAL",
-					["direction"] = "Up",
-					["offsetX"] = 141,
-					["textAlignIndex"] = 1,
-					["stickyBehavior"] = "Normal",
-					["offsetY"] = -178,
-					["animationStyle"] = "Straight",
-					["stickyTextAlignIndex"] = 1,
-				},
-				["Outgoing"] = {
-					["stickyTextAlignIndex"] = 3,
-					["stickyBehavior"] = "Normal",
-					["behavior"] = "MSBT_NORMAL",
-					["stickyDirection"] = "Up",
-					["scrollHeight"] = 464.117950439453,
-					["offsetX"] = -318,
 					["textAlignIndex"] = 3,
-					["iconAlign"] = "Left",
-					["offsetY"] = 109,
-					["animationStyle"] = "Straight",
-					["direction"] = "Up",
-				},
-				["Static"] = {
-					["offsetX"] = -561,
-					["offsetY"] = 424,
-				},
-				["Custom1"] = {
-					["stickyTextAlignIndex"] = 1,
-					["stickyDirection"] = "Down",
-					["scrollHeight"] = 202.058792114258,
-					["name"] = "Incoming Heals",
-					["offsetX"] = 130,
-					["direction"] = "Down",
-					["offsetY"] = 398,
-					["textAlignIndex"] = 1,
-					["stickyAnimationStyle"] = "Static",
-				},
-				["Notification"] = {
-					["offsetX"] = -960,
-					["offsetY"] = 380,
 				},
 			},
 			["normalFontName"] = "DorisPP",
 			["healThreshold"] = 21800,
 			["normalFontSize"] = 8,
 		},
-		["Gitt - Pally - Tank"] = {
+		["Gitt Pally DPS"] = {
 			["critFontName"] = "DorisPP",
 			["animationSpeed"] = 40,
 			["normalFontSize"] = 10,
@@ -2673,7 +2689,7 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_DEBUFF_FADE"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_BUFF"] = {
+				["NOTIFICATION_PET_COOLDOWN"] = {
 					["disabled"] = true,
 				},
 				["INCOMING_DAMAGE_CRIT"] = {
@@ -2715,7 +2731,7 @@ MSBTProfiles_SavedVars = {
 					["message"] = "%a %s %n",
 					["scrollArea"] = "Custom1",
 				},
-				["NOTIFICATION_POWER_LOSS"] = {
+				["NOTIFICATION_ITEM_COOLDOWN"] = {
 					["disabled"] = true,
 				},
 				["NOTIFICATION_CHI_CHANGE"] = {
@@ -2736,25 +2752,25 @@ MSBTProfiles_SavedVars = {
 				["NOTIFICATION_MONSTER_EMOTE"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_PET_COOLDOWN"] = {
+				["NOTIFICATION_POWER_LOSS"] = {
 					["disabled"] = true,
 				},
 				["NOTIFICATION_HOLY_POWER_CHANGE"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_ITEM_COOLDOWN"] = {
+				["NOTIFICATION_BUFF_STACK"] = {
 					["disabled"] = true,
 				},
 				["NOTIFICATION_ENEMY_BUFF"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_BUFF_STACK"] = {
+				["NOTIFICATION_COOLDOWN"] = {
 					["disabled"] = true,
 				},
 				["NOTIFICATION_EXTRA_ATTACK"] = {
 					["disabled"] = true,
 				},
-				["NOTIFICATION_COOLDOWN"] = {
+				["NOTIFICATION_BUFF"] = {
 					["disabled"] = true,
 				},
 				["INCOMING_HOT"] = {
@@ -2779,6 +2795,22 @@ MSBTProfiles_SavedVars = {
 			},
 			["shortenNumbers"] = true,
 			["scrollAreas"] = {
+				["Outgoing"] = {
+					["stickyTextAlignIndex"] = 3,
+					["stickyAnimationStyle"] = "Static",
+					["stickyBehavior"] = "MSBT_NORMAL",
+					["behavior"] = "MSBT_NORMAL",
+					["direction"] = "Up",
+					["stickyDirection"] = "Up",
+					["critFontSize"] = 25,
+					["scrollHeight"] = 490,
+					["offsetX"] = -205,
+					["scrollWidth"] = 370,
+					["iconAlign"] = "Left",
+					["offsetY"] = 110,
+					["animationStyle"] = "Straight",
+					["normalFontSize"] = 18,
+				},
 				["Incoming"] = {
 					["stickyTextAlignIndex"] = 1,
 					["offsetX"] = 115,
@@ -2786,26 +2818,16 @@ MSBTProfiles_SavedVars = {
 					["offsetY"] = -173,
 					["textAlignIndex"] = 1,
 				},
-				["Outgoing"] = {
-					["direction"] = "Up",
-					["scrollHeight"] = 350,
-					["offsetX"] = 540,
-					["iconAlign"] = "Left",
-					["stickyBehavior"] = "Normal",
-					["offsetY"] = -294,
-					["animationStyle"] = "Straight",
-					["behavior"] = "MSBT_NORMAL",
-				},
 				["Static"] = {
 					["disabled"] = true,
 				},
 				["Custom1"] = {
-					["stickyTextAlignIndex"] = 3,
+					["scrollHeight"] = 350,
 					["offsetX"] = 904,
 					["name"] = "Incoming Heals",
 					["offsetY"] = -295,
 					["textAlignIndex"] = 3,
-					["scrollHeight"] = 350,
+					["stickyTextAlignIndex"] = 3,
 				},
 				["Notification"] = {
 					["offsetX"] = 560,
@@ -2821,7 +2843,7 @@ MSBTProfiles_SavedVars = {
 				["MSBT_TRIGGER_DECIMATION"] = {
 					["disabled"] = true,
 				},
-				["MSBT_TRIGGER_BACKLASH"] = {
+				["MSBT_TRIGGER_MAELSTROM_WEAPON"] = {
 					["disabled"] = true,
 				},
 				["MSBT_TRIGGER_BERSERK"] = {
@@ -2863,7 +2885,7 @@ MSBTProfiles_SavedVars = {
 				["MSBT_TRIGGER_ECLIPSE_LUNAR"] = {
 					["disabled"] = true,
 				},
-				["MSBT_TRIGGER_MAELSTROM_WEAPON"] = {
+				["MSBT_TRIGGER_TASTE_FOR_BLOOD"] = {
 					["disabled"] = true,
 				},
 				["MSBT_TRIGGER_PVP_TRINKET"] = {
@@ -2884,7 +2906,7 @@ MSBTProfiles_SavedVars = {
 				["MSBT_TRIGGER_OWLKIN_FRENZY"] = {
 					["disabled"] = true,
 				},
-				["MSBT_TRIGGER_TASTE_FOR_BLOOD"] = {
+				["MSBT_TRIGGER_BACKLASH"] = {
 					["disabled"] = true,
 				},
 				["MSBT_TRIGGER_SHOOTING_STARS"] = {
@@ -2936,6 +2958,284 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 			},
+		},
+		["Gitt - Pally - Tank"] = {
+			["critFontName"] = "DorisPP",
+			["animationSpeed"] = 40,
+			["triggers"] = {
+				["MSBT_TRIGGER_KILL_SHOT"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_DECIMATION"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BACKLASH"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BERSERK"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_OVERPOWER"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_SWORD_AND_BOARD"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_RIME"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_THE_ART_OF_WAR"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_VITAL_MISTS"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_FINGERS_OF_FROST"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_PREDATORS_SWIFTNESS"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BLINDSIDE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_EXECUTE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_LOCK_AND_LOAD"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_TIDAL_WAVES"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_ECLIPSE_LUNAR"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_MANA_TEA"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_PVP_TRINKET"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BRAIN_FREEZE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_LAVA_SURGE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_SUDDEN_DEATH"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_RUNE_STRIKE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_OWLKIN_FRENZY"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_TASTE_FOR_BLOOD"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_SHOOTING_STARS"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_BLOODSURGE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_KILLING_MACHINE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_ECLIPSE_SOLAR"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_MISSILE_BARRAGE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_VICTORY_RUSH"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_SHADOW_INFUSION"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_CLEARCASTING"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_ELUSIVE_BREW"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_NIGHTFALL"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_MOLTEN_CORE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_HAMMER_OF_WRATH"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_REVENGE"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_POWER_GUARD"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_LOW_MANA"] = {
+					["disabled"] = true,
+				},
+				["MSBT_TRIGGER_MAELSTROM_WEAPON"] = {
+					["disabled"] = true,
+				},
+			},
+			["creationVersion"] = "5.7.123",
+			["critFontSize"] = 15,
+			["events"] = {
+				["NOTIFICATION_BUFF_FADE"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_DEBUFF_FADE"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_BUFF"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_DAMAGE_CRIT"] = {
+					["message"] = "%a %n",
+				},
+				["NOTIFICATION_ALT_POWER_LOSS"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_ALT_POWER_GAIN"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_SHADOW_ORBS_FULL"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_HEAL"] = {
+					["message"] = "%a %s %n",
+					["scrollArea"] = "Custom1",
+				},
+				["NOTIFICATION_CP_FULL"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_DAMAGE"] = {
+					["message"] = "%a %n",
+				},
+				["NOTIFICATION_CHI_FULL"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_SHADOW_ORBS_CHANGE"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_HOT_CRIT"] = {
+					["message"] = "%a %s %n",
+					["scrollArea"] = "Custom1",
+				},
+				["NOTIFICATION_ITEM_BUFF_FADE"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_HEAL_CRIT"] = {
+					["message"] = "%a %s %n",
+					["scrollArea"] = "Custom1",
+				},
+				["NOTIFICATION_POWER_LOSS"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_CHI_CHANGE"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_DEBUFF_STACK"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_ITEM_BUFF"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_ABSORB"] = {
+					["message"] = "Absorb! %a",
+				},
+				["NOTIFICATION_HOLY_POWER_FULL"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_MONSTER_EMOTE"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_EXPERIENCE_GAIN"] = {
+					["disabled"] = false,
+				},
+				["NOTIFICATION_HOLY_POWER_CHANGE"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_EXTRA_ATTACK"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_ENEMY_BUFF"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_BUFF_STACK"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_ENVIRONMENTAL"] = {
+					["message"] = "%a %e",
+				},
+				["NOTIFICATION_POWER_GAIN"] = {
+					["disabled"] = true,
+				},
+				["INCOMING_HOT"] = {
+					["message"] = "%a %s %n",
+					["scrollArea"] = "Custom1",
+				},
+				["NOTIFICATION_CP_GAIN"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_COOLDOWN"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_ITEM_COOLDOWN"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_PET_COOLDOWN"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_DEBUFF"] = {
+					["disabled"] = true,
+				},
+			},
+			["groupNumbers"] = true,
+			["normalFontName"] = "DorisPP",
+			["scrollAreas"] = {
+				["Incoming"] = {
+					["stickyTextAlignIndex"] = 1,
+					["offsetX"] = 115,
+					["behavior"] = "CurvedRight",
+					["offsetY"] = -173,
+					["textAlignIndex"] = 1,
+				},
+				["Notification"] = {
+					["offsetX"] = 560,
+					["offsetY"] = 103,
+				},
+				["Static"] = {
+					["disabled"] = true,
+				},
+				["Custom1"] = {
+					["stickyTextAlignIndex"] = 3,
+					["offsetX"] = 904,
+					["scrollHeight"] = 350,
+					["offsetY"] = -295,
+					["textAlignIndex"] = 3,
+					["name"] = "Incoming Heals",
+				},
+				["Outgoing"] = {
+					["stickyBehavior"] = "Normal",
+					["scrollHeight"] = 350,
+					["offsetX"] = 540,
+					["behavior"] = "MSBT_NORMAL",
+					["iconAlign"] = "Left",
+					["offsetY"] = -294,
+					["animationStyle"] = "Straight",
+					["direction"] = "Up",
+				},
+			},
+			["shortenNumbers"] = true,
+			["soundsDisabled"] = true,
+			["normalFontSize"] = 10,
 		},
 	},
 }
