@@ -21,10 +21,10 @@ EPGPLootMaster = {
 		["Spih - Cho'gall"] = "Spih - Cho'gall",
 		["Greny - Azuremyst"] = "Greny - Azuremyst",
 		["Giit - Cho'gall"] = "Giit - Cho'gall",
-		["Git - Azuremyst"] = "Git - Azuremyst",
-		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
 		["Git - Cho'gall"] = "Git - Cho'gall",
+		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
 		["Burk - Arthas"] = "Burk - Arthas",
+		["Git - Azuremyst"] = "Git - Azuremyst",
 		["Git - Arthas"] = "Git - Arthas",
 	},
 	["profiles"] = {
@@ -61,10 +61,6 @@ EPGPLootMaster = {
 		},
 		["Gimm - Cho'gall"] = {
 		},
-		["Gilt - Azuremyst"] = {
-		},
-		["Ezyn - Azuremyst"] = {
-		},
 		["Git - Azuremyst"] = {
 			["button2"] = "Offspec",
 			["mainUIScale"] = 1.06666677792867,
@@ -81,6 +77,8 @@ EPGPLootMaster = {
 			["blizzard_show_offline"] = 1,
 			["buttonNum"] = 2,
 			["votingSendAssistantOnly"] = false,
+		},
+		["Ezyn - Azuremyst"] = {
 		},
 		["Git - Cho'gall"] = {
 			["biddingWhen"] = "always",
@@ -101,6 +99,8 @@ EPGPLootMaster = {
 			["button3_gpIsPercentage"] = true,
 			["monitorSendAssistantOnly"] = false,
 		},
+		["Gilt - Azuremyst"] = {
+		},
 		["Git - Arthas"] = {
 			["button3_color"] = "ff60fd",
 			["mainUIScale"] = 0.866666678587596,
@@ -113,29 +113,29 @@ EPGPLootMaster = {
 			["button4"] = "2p",
 			["buttonNum"] = 6,
 			["button1_fallback"] = "",
-			["button2_color"] = "9f78ef",
+			["AutoLooter"] = "Tydeson",
 			["button4_color"] = "22c2c6",
 			["button4_fallback"] = "",
-			["votingSendGuildRankList"] = {
-				[3] = true,
-			},
+			["votingEnableAuto"] = true,
 			["popupUIScale"] = 0.666666690508525,
 			["button5"] = "4p",
 			["button6"] = "Offspec",
 			["button6_gpValue"] = 0,
 			["button2"] = "Major",
 			["button1"] = "BiS",
-			["button2_gpIsPercentage"] = false,
+			["button3_gpIsPercentage"] = false,
 			["hideMLOnCombat"] = false,
-			["AutoLooter"] = "Tydeson",
-			["votingDisallowSelf"] = false,
 			["button2_fallback"] = "",
+			["votingDisallowSelf"] = false,
+			["button3"] = "Minor",
 			["bidding"] = false,
 			["votingSendGuildRank"] = true,
+			["votingSendGuildRankList"] = {
+				[3] = true,
+			},
+			["button2_gpIsPercentage"] = false,
 			["button6_gp"] = "0%",
-			["button3"] = "Minor",
-			["button3_gpIsPercentage"] = false,
-			["votingEnableAuto"] = true,
+			["button2_color"] = "9f78ef",
 			["votingSendAssistantOnly"] = false,
 		},
 	},

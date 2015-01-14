@@ -779,7 +779,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_bmb:_shuffle_gone"] = {
+				["WeakAuras_sac"] = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
@@ -807,7 +807,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_bmb:_fortifying_brew"] = {
+				["WeakAuras_bmb:_shuffle_gone"] = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
@@ -871,11 +871,11 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_eh_not_usable_2.0"] = {
+				["WeakAuras_ko'ragh_-_expel_magic:_fire_2"] = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_hand_of_purity"] = {
+				["WeakAuras_eh_not_usable_2.0"] = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
@@ -1115,7 +1115,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_ko'ragh_-_expel_magic:_fire_2"] = {
+				["WeakAuras_hand_of_purity"] = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
@@ -1155,7 +1155,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_sac"] = {
+				["WeakAuras_bmb:_fortifying_brew"] = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},

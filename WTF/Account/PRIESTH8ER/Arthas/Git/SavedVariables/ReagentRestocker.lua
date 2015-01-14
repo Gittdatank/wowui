@@ -1,7 +1,7 @@
 
 ReagentRestockerDB = {
 	["Items"] = {
-		[109160] = {
+		[109220] = {
 			["item_sell"] = 2500,
 			["item_rarity"] = 1,
 			["tocversion"] = 60000,
@@ -9,16 +9,16 @@ ReagentRestockerDB = {
 				["Buy"] = true,
 			},
 			["item_min_level"] = 90,
-			["qty"] = 20,
-			["item_texture"] = "Interface\\ICONS\\Trade_Alchemy_DPotion_C14.blp",
+			["qty"] = 40,
+			["item_texture"] = "Interface\\ICONS\\Trade_Alchemy_DPotion_A25.blp",
 			["item_level"] = 100,
 			["item_euip_loc"] = "",
 			["item_stack_count"] = 20,
 			["item_type"] = "Consumable",
-			["item_name"] = "Greater Draenic Stamina Flask",
-			["item_link"] = "|cffffffff|Hitem:109160:0:0:0:0:0:0:0:100:0:0:0|h[Greater Draenic Stamina Flask]|h|r",
-			["low_warning"] = 2,
-			["item_sub_type"] = "Flask",
+			["item_name"] = "Draenic Armor Potion",
+			["item_link"] = "|cffffffff|Hitem:109220:0:0:0:0:0:0:0:100:0:0:0|h[Draenic Armor Potion]|h|r",
+			["low_warning"] = 10,
+			["item_sub_type"] = "Potion",
 		},
 		[109156] = {
 			["item_sell"] = 2500,
@@ -39,25 +39,6 @@ ReagentRestockerDB = {
 			["low_warning"] = 2,
 			["item_sub_type"] = "Flask",
 		},
-		[109220] = {
-			["item_sell"] = 2500,
-			["item_rarity"] = 1,
-			["tocversion"] = 60000,
-			["tags"] = {
-				["Buy"] = true,
-			},
-			["item_min_level"] = 90,
-			["qty"] = 40,
-			["item_texture"] = "Interface\\ICONS\\Trade_Alchemy_DPotion_A25.blp",
-			["item_level"] = 100,
-			["item_euip_loc"] = "",
-			["item_stack_count"] = 20,
-			["item_type"] = "Consumable",
-			["item_name"] = "Draenic Armor Potion",
-			["item_link"] = "|cffffffff|Hitem:109220:0:0:0:0:0:0:0:100:0:0:0|h[Draenic Armor Potion]|h|r",
-			["low_warning"] = 10,
-			["item_sub_type"] = "Potion",
-		},
 		[109223] = {
 			["item_sell"] = 1200,
 			["item_rarity"] = 1,
@@ -76,6 +57,25 @@ ReagentRestockerDB = {
 			["qty"] = 40,
 			["item_level"] = 100,
 			["item_sub_type"] = "Potion",
+		},
+		[109160] = {
+			["item_sell"] = 2500,
+			["item_rarity"] = 1,
+			["tocversion"] = 60000,
+			["tags"] = {
+				["Buy"] = true,
+			},
+			["item_min_level"] = 90,
+			["qty"] = 20,
+			["item_texture"] = "Interface\\ICONS\\Trade_Alchemy_DPotion_C14.blp",
+			["item_level"] = 100,
+			["item_euip_loc"] = "",
+			["item_stack_count"] = 20,
+			["item_type"] = "Consumable",
+			["item_name"] = "Greater Draenic Stamina Flask",
+			["item_link"] = "|cffffffff|Hitem:109160:0:0:0:0:0:0:0:100:0:0:0|h[Greater Draenic Stamina Flask]|h|r",
+			["low_warning"] = 2,
+			["item_sub_type"] = "Flask",
 		},
 	},
 	["MapTable"] = {
@@ -111,10 +111,10 @@ ReagentRestockerDB = {
 	},
 	["Tags"] = {
 		["Buy"] = {
-			[109160] = 109160,
-			[109156] = 109156,
 			[109220] = 109220,
+			[109156] = 109156,
 			[109223] = 109223,
+			[109160] = 109160,
 		},
 	},
 	["DataVersion"] = 17,

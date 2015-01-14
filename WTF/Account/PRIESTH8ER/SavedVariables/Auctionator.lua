@@ -2,13 +2,13 @@
 AUCTIONATOR_SAVEDVARS = {
 	["_50000"] = 500,
 	["_2000"] = 100,
+	["_5000000"] = 10000,
+	["LOG_DE_DATA_X"] = true,
+	["_1000000"] = 2500,
 	["_10000"] = 200,
 	["_500"] = 5,
-	["_1000000"] = 2500,
-	["_200000"] = 1000,
 	["STARTING_DISCOUNT"] = 5,
-	["LOG_DE_DATA_X"] = true,
-	["_5000000"] = 10000,
+	["_200000"] = 1000,
 }
 AUCTIONATOR_PRICING_HISTORY = {
 }
@@ -261,6 +261,7 @@ AUCTIONATOR_TOONS = {
 	["Gitdk"] = {
 		["firstSeen"] = 1421001149,
 		["firstVersion"] = "3.2.2",
+		["guid"] = "Player-69-09A783B9",
 	},
 	["Spih"] = {
 		["firstSeen"] = 1416512585,

@@ -1,8 +1,8 @@
 
 FriendGroups_SavedVars = {
-	["enable_oqueue"] = true,
+	["hide_offline"] = false,
 	["colour_classes"] = false,
 	["collapsed"] = {
 	},
-	["hide_offline"] = false,
+	["enable_oqueue"] = true,
 }

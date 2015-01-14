@@ -126,29 +126,29 @@ RangeDisplayDB3 = {
 			["locked"] = true,
 			["mute"] = true,
 			["units"] = {
-				["pet"] = {
+				["arena2"] = {
 				},
 				["playertarget"] = {
+					["y"] = -123.895774841309,
 					["fontSize"] = 10,
 					["font"] = "DorisPP",
-					["y"] = -123.895774841309,
 					["x"] = -6.747709267074240e-005,
 				},
 				["focus"] = {
 					["enabled"] = false,
 				},
-				["arena2"] = {
+				["arena5"] = {
 				},
 				["mouseover"] = {
-					["mouseAnchor"] = false,
 					["y"] = -277.784861528928,
-					["x"] = -65.9838804260981,
+					["relPoint"] = "RIGHT",
 					["point"] = "RIGHT",
+					["mouseAnchor"] = false,
 					["font"] = "SCT Emblem",
 					["enabled"] = false,
-					["relPoint"] = "RIGHT",
+					["x"] = -65.9838804260981,
 				},
-				["arena5"] = {
+				["pet"] = {
 				},
 				["arena4"] = {
 				},
@@ -158,29 +158,29 @@ RangeDisplayDB3 = {
 			["locked"] = true,
 			["mute"] = true,
 			["units"] = {
-				["arena2"] = {
-				},
 				["playertarget"] = {
 					["y"] = -123.895774841309,
 					["fontSize"] = 10,
 					["font"] = "DorisPP",
 					["x"] = -6.747709267074240e-005,
 				},
+				["arena2"] = {
+				},
 				["focus"] = {
 					["enabled"] = false,
 				},
 				["arena5"] = {
+				},
+				["pet"] = {
 				},
 				["mouseover"] = {
 					["y"] = -277.784861528928,
 					["x"] = -65.9838804260981,
 					["point"] = "RIGHT",
 					["mouseAnchor"] = false,
-					["relPoint"] = "RIGHT",
-					["enabled"] = false,
 					["font"] = "SCT Emblem",
-				},
-				["pet"] = {
+					["enabled"] = false,
+					["relPoint"] = "RIGHT",
 				},
 				["arena4"] = {
 				},
@@ -305,27 +305,27 @@ RangeDisplayDB3 = {
 			["locked"] = true,
 			["mute"] = true,
 			["units"] = {
+				["pet"] = {
+				},
 				["playertarget"] = {
-					["y"] = -123.895774841309,
 					["fontSize"] = 10,
 					["font"] = "DorisPP",
+					["y"] = -123.895774841309,
 					["x"] = -6.747709267074240e-005,
-				},
-				["arena2"] = {
 				},
 				["focus"] = {
 					["enabled"] = false,
 				},
-				["pet"] = {
+				["arena2"] = {
 				},
 				["mouseover"] = {
-					["y"] = -277.784861528928,
-					["relPoint"] = "RIGHT",
-					["point"] = "RIGHT",
 					["mouseAnchor"] = false,
+					["y"] = -277.784861528928,
 					["x"] = -65.9838804260981,
-					["enabled"] = false,
+					["point"] = "RIGHT",
 					["font"] = "SCT Emblem",
+					["enabled"] = false,
+					["relPoint"] = "RIGHT",
 				},
 				["arena5"] = {
 				},

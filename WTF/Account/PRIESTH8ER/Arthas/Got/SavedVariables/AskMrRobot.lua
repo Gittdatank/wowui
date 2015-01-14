@@ -69,7 +69,16 @@ AmrDb = {
 		}, -- [2]
 	},
 	["Class"] = "DRUID",
-	["LastCharacterImportDate"] = "",
+	["BankItems"] = {
+		"|cffe6cc80|Hitem:104400:0:0:0:0:0:0:942026880:100:0:0:0|h[Hellscream's Razor]|h|r", -- [1]
+		"|cffffffff|Hitem:109693:0:0:0:0:0:0:0:100:0:0:0|h[Draenic Dust]|h|r", -- [2]
+		"|cff0070dd|Hitem:74252:0:0:0:0:0:0:0:100:0:0:0|h[Small Ethereal Shard]|h|r", -- [3]
+		"|cffffffff|Hitem:109135:0:0:0:0:0:0:0:100:0:0:0|h[Raw Riverbeast Meat]|h|r", -- [4]
+		"|cffffffff|Hitem:54849:0:0:0:0:0:0:1416277504:100:0:0:0|h[Obsidium Bar]|h|r", -- [5]
+		"|cff0070dd|Hitem:11138:0:0:0:0:0:0:0:100:0:0:0|h[Small Glowing Shard]|h|r", -- [6]
+		"|cffffffff|Hitem:14256:0:0:0:0:0:0:1954722560:100:0:0:0|h[Felcloth]|h|r", -- [7]
+		"|cff0070dd|Hitem:14343:0:0:0:0:0:0:0:100:0:0:0|h[Small Brilliant Shard]|h|r", -- [8]
+	},
 	["Specs"] = {
 		6, -- [1]
 		4, -- [2]
@@ -82,86 +91,6 @@ AmrDb = {
 		[823] = 1998,
 		[-1] = 257651236,
 		[614] = 9,
-	},
-	["RealmName"] = "Arthas",
-	["LogData"] = {
-		["_wipes"] = {
-		},
-		["_autoLog"] = {
-			[1228] = "disabled",
-			[1136] = "disabled",
-			[1205] = "disabled",
-		},
-		["_lastDiff"] = 1,
-		["_lastZone"] = "FW Horde Garrison Level 3",
-	},
-	["BagItems"] = {
-		"|cffa335ee|Hitem:118816:0:0:0:0:0:0:0:100:0:0:0|h[Gorenscale Mesh Cloak]|h|r", -- [1]
-		"|cffa335ee|Hitem:113599:0:0:0:0:0:0:0:100:0:5:1:566|h[Grunt's Solid Signet]|h|r", -- [2]
-		"|cffa335ee|Hitem:113634:0:0:0:0:0:0:0:100:0:5:1:566|h[Bracers of Spare Skin]|h|r", -- [3]
-		"|cff0070dd|Hitem:114370:0:0:0:0:0:0:0:100:0:1:0|h[Tormented Seal of Fortitude]|h|r", -- [4]
-		"|cffa335ee|Hitem:113650:0:0:0:0:0:0:0:100:0:5:1:566|h[Pillar of the Earth]|h|r", -- [5]
-		"|cffa335ee|Hitem:113649:0:0:0:0:0:0:0:100:0:5:1:566|h[Mountainwalker's Boots]|h|r", -- [6]
-		"|cff0070dd|Hitem:74247:0:0:0:0:0:0:0:100:0:0:0|h[Ethereal Shard]|h|r", -- [7]
-		"|cff0070dd|Hitem:118475:0:0:0:0:0:0:0:100:0:1:0|h[Hearthstone Strategy Guide]|h|r", -- [8]
-		"|cff0070dd|Hitem:118427:0:0:0:0:0:0:0:100:0:0:0|h[Autographed Hearthstone Card]|h|r", -- [9]
-		"|cff1eff00|Hitem:113261:0:0:0:0:0:0:0:100:0:0:0|h[Sorcerous Fire]|h|r", -- [10]
-		"|cff1eff00|Hitem:116581:0:0:0:0:0:0:0:100:0:0:1:136|h[Shadowsage Spellblade of the Deft]|h|r", -- [11]
-		"|cffffffff|Hitem:40772:0:0:0:0:0:0:765699328:100:0:0:0|h[Gnomish Army Knife]|h|r", -- [12]
-		"|cffffffff|Hitem:113320:0:0:0:0:0:0:0:100:0:0:0|h[Crate of Cactus Apple Surprise]|h|r", -- [13]
-		"|cff0070dd|Hitem:118224:0:0:0:0:0:0:0:100:0:0:0|h[Ogre Brewing Kit]|h|r", -- [14]
-		"|cff0070dd|Hitem:116395:0:0:0:0:0:0:0:100:0:0:0|h[Comprehensive Outpost Construction Guide]|h|r", -- [15]
-		"|cffffffff|Hitem:110560:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Hearthstone]|h|r", -- [16]
-		"|cffffffff|Hitem:113821:0:0:0:0:0:0:0:100:0:0:0|h[Battered Iron Horde Helmet]|h|r", -- [17]
-		"|cffffffff|Hitem:118345:0:0:0:0:0:0:0:100:0:4:0|h[Arcane Crystal Conduit]|h|r", -- [18]
-		"|cffffffff|Hitem:118344:0:0:0:0:0:0:0:100:0:4:0|h[Arcane Crystal Casing]|h|r", -- [19]
-		"|cffffffff|Hitem:118344:0:0:0:0:0:0:0:100:0:4:0|h[Arcane Crystal Casing]|h|r", -- [20]
-		"|cffffffff|Hitem:118331:0:0:0:0:0:0:0:100:0:2:0|h[Auction Connecting Valve]|h|r", -- [21]
-		"|cffffffff|Hitem:110667:0:0:0:0:0:0:0:100:0:0:0|h[Tear-stained Letter]|h|r", -- [22]
-		"|cffffffff|Hitem:8383:0:0:0:0:0:0:0:100:0:0:0|h[Plain Letter]|h|r", -- [23]
-		"|cff0070dd|Hitem:109809:0:0:0:0:0:0:0:100:0:2:1:524|h[Legguards of Burning Focus]|h|r", -- [24]
-		"|cff0070dd|Hitem:109809:0:0:0:0:0:0:0:100:0:2:2:523:524|h[Legguards of Burning Focus]|h|r", -- [25]
-		"|cffa335ee|Hitem:116205:0:0:0:0:0:0:0:100:0:4:0|h[Firewalker's Treads]|h|r", -- [26]
-		"|cff0070dd|Hitem:109918:0:0:0:0:0:0:0:100:0:2:1:524|h[Soot-Scarred Longcloak]|h|r", -- [27]
-		"|cffa335ee|Hitem:118848:0:0:0:0:0:0:0:100:0:0:0|h[Battle Hardened Gorget]|h|r", -- [28]
-		"|cffa335ee|Hitem:116285:0:0:0:0:0:0:0:100:0:4:0|h[Cratermaker Choker]|h|r", -- [29]
-		"|cffa335ee|Hitem:113638:0:0:0:0:0:0:0:100:0:5:1:566|h[Gutwrench Ring]|h|r", -- [30]
-		"|cffa335ee|Hitem:118870:0:0:0:0:0:0:0:100:0:0:0|h[Signet of the Traitor General]|h|r", -- [31]
-		"|cffa335ee|Hitem:113846:0:0:0:0:0:0:0:100:0:3:0|h[Seal of Unbound Frost]|h|r", -- [32]
-		"|cffa335ee|Hitem:113843:0:0:0:0:0:0:0:100:0:3:0|h[Spell-Sink Signet]|h|r", -- [33]
-		"|cff0070dd|Hitem:116154:0:0:0:0:0:0:0:100:0:11:0|h[Barov Lumberjack Caller]|h|r", -- [34]
-		"|cffffffff|Hitem:119299:0:0:0:0:0:0:0:100:0:0:0|h[Secret of Draenor Engineering]|h|r", -- [35]
-		"|cffffffff|Hitem:6218:0:0:0:0:0:0:217021568:100:0:0:0|h[Runed Copper Rod]|h|r", -- [36]
-		"|cffffffff|Hitem:87216:0:0:0:0:0:0:0:100:0:11:0|h[Thermal Anvil]|h|r", -- [37]
-		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [38]
-		"|cff1eff00|Hitem:118236:0:0:0:0:0:0:0:100:0:0:0|h[Counterfeit Coin]|h|r", -- [39]
-		"|cff1eff00|Hitem:118903:0:0:0:0:0:0:0:100:0:0:0|h[Preserved Mining Pick]|h|r", -- [40]
-		"|cff0070dd|Hitem:116120:0:0:0:0:0:0:0:100:0:0:0|h[Tasty Talador Lunch]|h|r", -- [41]
-		"|cff0070dd|Hitem:118475:0:0:0:0:0:0:0:100:0:1:0|h[Hearthstone Strategy Guide]|h|r", -- [42]
-		"|cff0070dd|Hitem:118630:0:0:0:0:0:0:0:100:0:0:0|h[Hyper Augment Rune]|h|r", -- [43]
-		"|cff0070dd|Hitem:117398:0:0:0:0:0:0:0:100:0:11:0|h[Everbloom Seed Pouch]|h|r", -- [44]
-		"|cffffffff|Hitem:119348:0:0:0:0:0:0:0:100:0:0:0|h[Admiral Taylor's Garrison Log]|h|r", -- [45]
-		"|cff0070dd|Hitem:110050:0:0:0:0:0:0:0:100:0:2:1:524|h[Dagger of the Sanguine Emeralds]|h|r", -- [46]
-		"|cffa335ee|Hitem:116365:0:0:0:0:0:0:0:100:0:4:0|h[Captured Arcane Fragment]|h|r", -- [47]
-		"|cffe6cc80|Hitem:105689:4434:0:0:0:0:0:1620636032:100:0:0:0|h[Hellscream's Tome of Destruction]|h|r", -- [48]
-		"|cff1eff00|Hitem:21525:0:0:0:0:0:0:0:100:0:5:0|h[Green Winter Hat]|h|r", -- [49]
-	},
-	["IconInfo"] = {
-	},
-	["LastCharacterImport"] = "",
-	["Reps"] = {
-		[1269] = 3,
-		[1337] = 3,
-		[1341] = 3,
-		[1375] = 3,
-		[1387] = 0,
-		[1376] = 0,
-		[1270] = 3,
-		[1388] = 4,
-		[1435] = 3,
-	},
-	["Faction"] = "Horde",
-	["Professions"] = {
 	},
 	["VoidItems"] = {
 		"|cffa335ee|Hitem:34011:0:0:0:0:0:0:1582692992:100:0:0:0|h[Illidari Runeshield]|h|r", -- [1]
@@ -244,104 +173,174 @@ AmrDb = {
 		"|cffa335ee|Hitem:103649:0:0:0:0:0:0:683148160:100:491:0:0|h[Xal'atoh, Desecrated Image of Gorehowl]|h|r", -- [78]
 		"|cffa335ee|Hitem:30874:0:0:0:0:0:0:34031104:100:0:0:0|h[The Unbreakable Will]|h|r", -- [79]
 	},
-	["BankItems"] = {
-		"|cffe6cc80|Hitem:104400:0:0:0:0:0:0:942026880:100:0:0:0|h[Hellscream's Razor]|h|r", -- [1]
-		"|cff0070dd|Hitem:74247:0:0:0:0:0:0:0:100:0:0:0|h[Ethereal Shard]|h|r", -- [2]
-		"|cff0070dd|Hitem:74252:0:0:0:0:0:0:0:100:0:0:0|h[Small Ethereal Shard]|h|r", -- [3]
-		"|cff1eff00|Hitem:11082:0:0:0:0:0:0:0:100:0:0:0|h[Greater Astral Essence]|h|r", -- [4]
-		"|cff1eff00|Hitem:10998:0:0:0:0:0:0:0:100:0:0:0|h[Lesser Astral Essence]|h|r", -- [5]
-		"|cff0070dd|Hitem:22448:0:0:0:0:0:0:0:100:0:0:0|h[Small Prismatic Shard]|h|r", -- [6]
-		"|cffffffff|Hitem:109135:0:0:0:0:0:0:0:100:0:0:0|h[Raw Riverbeast Meat]|h|r", -- [7]
-		"|cffffffff|Hitem:54849:0:0:0:0:0:0:1416277504:100:0:0:0|h[Obsidium Bar]|h|r", -- [8]
-		"|cffffffff|Hitem:14256:0:0:0:0:0:0:1954722560:100:0:0:0|h[Felcloth]|h|r", -- [9]
-		"|cff0070dd|Hitem:14344:0:0:0:0:0:0:0:100:0:0:0|h[Large Brilliant Shard]|h|r", -- [10]
-		"|cff0070dd|Hitem:34052:0:0:0:0:0:0:0:100:0:0:0|h[Dream Shard]|h|r", -- [11]
-		"|cff0070dd|Hitem:14343:0:0:0:0:0:0:0:100:0:0:0|h[Small Brilliant Shard]|h|r", -- [12]
+	["LogData"] = {
+		["_wipes"] = {
+		},
+		["_autoLog"] = {
+			[1228] = "disabled",
+			[1136] = "disabled",
+			[1205] = "disabled",
+		},
+		["_lastZone"] = "FW Horde Garrison Level 3",
+		["_lastDiff"] = 1,
 	},
+	["BagItems"] = {
+		"|cffa335ee|Hitem:118816:0:0:0:0:0:0:0:100:0:0:0|h[Gorenscale Mesh Cloak]|h|r", -- [1]
+		"|cffa335ee|Hitem:113599:0:0:0:0:0:0:0:100:0:5:1:566|h[Grunt's Solid Signet]|h|r", -- [2]
+		"|cffa335ee|Hitem:113634:0:0:0:0:0:0:0:100:0:5:1:566|h[Bracers of Spare Skin]|h|r", -- [3]
+		"|cff0070dd|Hitem:114370:0:0:0:0:0:0:0:100:0:1:0|h[Tormented Seal of Fortitude]|h|r", -- [4]
+		"|cffa335ee|Hitem:113650:0:0:0:0:0:0:0:100:0:5:1:566|h[Pillar of the Earth]|h|r", -- [5]
+		"|cffa335ee|Hitem:113649:0:0:0:0:0:0:0:100:0:5:1:566|h[Mountainwalker's Boots]|h|r", -- [6]
+		"|cff0070dd|Hitem:74247:0:0:0:0:0:0:0:100:0:0:0|h[Ethereal Shard]|h|r", -- [7]
+		"|cff0070dd|Hitem:118475:0:0:0:0:0:0:0:100:0:1:0|h[Hearthstone Strategy Guide]|h|r", -- [8]
+		"|cff0070dd|Hitem:118427:0:0:0:0:0:0:0:100:0:0:0|h[Autographed Hearthstone Card]|h|r", -- [9]
+		"|cff1eff00|Hitem:113261:0:0:0:0:0:0:0:100:0:0:0|h[Sorcerous Fire]|h|r", -- [10]
+		"|cff1eff00|Hitem:116581:0:0:0:0:0:0:0:100:0:0:1:136|h[Shadowsage Spellblade of the Deft]|h|r", -- [11]
+		"|cffffffff|Hitem:40772:0:0:0:0:0:0:765699328:100:0:0:0|h[Gnomish Army Knife]|h|r", -- [12]
+		"|cffffffff|Hitem:113320:0:0:0:0:0:0:0:100:0:0:0|h[Crate of Cactus Apple Surprise]|h|r", -- [13]
+		"|cff0070dd|Hitem:118224:0:0:0:0:0:0:0:100:0:0:0|h[Ogre Brewing Kit]|h|r", -- [14]
+		"|cff0070dd|Hitem:116395:0:0:0:0:0:0:0:100:0:0:0|h[Comprehensive Outpost Construction Guide]|h|r", -- [15]
+		"|cffffffff|Hitem:110560:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Hearthstone]|h|r", -- [16]
+		"|cffffffff|Hitem:113821:0:0:0:0:0:0:0:100:0:0:0|h[Battered Iron Horde Helmet]|h|r", -- [17]
+		"|cffffffff|Hitem:118345:0:0:0:0:0:0:0:100:0:4:0|h[Arcane Crystal Conduit]|h|r", -- [18]
+		"|cffffffff|Hitem:118344:0:0:0:0:0:0:0:100:0:4:0|h[Arcane Crystal Casing]|h|r", -- [19]
+		"|cffffffff|Hitem:118344:0:0:0:0:0:0:0:100:0:4:0|h[Arcane Crystal Casing]|h|r", -- [20]
+		"|cffffffff|Hitem:118331:0:0:0:0:0:0:0:100:0:2:0|h[Auction Connecting Valve]|h|r", -- [21]
+		"|cffffffff|Hitem:110667:0:0:0:0:0:0:0:100:0:0:0|h[Tear-stained Letter]|h|r", -- [22]
+		"|cffffffff|Hitem:8383:0:0:0:0:0:0:0:100:0:0:0|h[Plain Letter]|h|r", -- [23]
+		"|cff0070dd|Hitem:109809:0:0:0:0:0:0:0:100:0:2:1:524|h[Legguards of Burning Focus]|h|r", -- [24]
+		"|cff0070dd|Hitem:109809:0:0:0:0:0:0:0:100:0:2:2:523:524|h[Legguards of Burning Focus]|h|r", -- [25]
+		"|cffa335ee|Hitem:116205:0:0:0:0:0:0:0:100:0:4:0|h[Firewalker's Treads]|h|r", -- [26]
+		"|cff0070dd|Hitem:109918:0:0:0:0:0:0:0:100:0:2:1:524|h[Soot-Scarred Longcloak]|h|r", -- [27]
+		"|cffa335ee|Hitem:118848:0:0:0:0:0:0:0:100:0:0:0|h[Battle Hardened Gorget]|h|r", -- [28]
+		"|cffa335ee|Hitem:116285:0:0:0:0:0:0:0:100:0:4:0|h[Cratermaker Choker]|h|r", -- [29]
+		"|cffa335ee|Hitem:113638:0:0:0:0:0:0:0:100:0:5:1:566|h[Gutwrench Ring]|h|r", -- [30]
+		"|cffa335ee|Hitem:118870:0:0:0:0:0:0:0:100:0:0:0|h[Signet of the Traitor General]|h|r", -- [31]
+		"|cffa335ee|Hitem:113846:0:0:0:0:0:0:0:100:0:3:0|h[Seal of Unbound Frost]|h|r", -- [32]
+		"|cffa335ee|Hitem:113843:0:0:0:0:0:0:0:100:0:3:0|h[Spell-Sink Signet]|h|r", -- [33]
+		"|cff0070dd|Hitem:116154:0:0:0:0:0:0:0:100:0:11:0|h[Barov Lumberjack Caller]|h|r", -- [34]
+		"|cffffffff|Hitem:119299:0:0:0:0:0:0:0:100:0:0:0|h[Secret of Draenor Engineering]|h|r", -- [35]
+		"|cffffffff|Hitem:6218:0:0:0:0:0:0:217021568:100:0:0:0|h[Runed Copper Rod]|h|r", -- [36]
+		"|cffffffff|Hitem:87216:0:0:0:0:0:0:0:100:0:11:0|h[Thermal Anvil]|h|r", -- [37]
+		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [38]
+		"|cff1eff00|Hitem:118236:0:0:0:0:0:0:0:100:0:0:0|h[Counterfeit Coin]|h|r", -- [39]
+		"|cff1eff00|Hitem:118903:0:0:0:0:0:0:0:100:0:0:0|h[Preserved Mining Pick]|h|r", -- [40]
+		"|cff0070dd|Hitem:116120:0:0:0:0:0:0:0:100:0:0:0|h[Tasty Talador Lunch]|h|r", -- [41]
+		"|cff0070dd|Hitem:118475:0:0:0:0:0:0:0:100:0:1:0|h[Hearthstone Strategy Guide]|h|r", -- [42]
+		"|cff0070dd|Hitem:118630:0:0:0:0:0:0:0:100:0:0:0|h[Hyper Augment Rune]|h|r", -- [43]
+		"|cff0070dd|Hitem:117398:0:0:0:0:0:0:0:100:0:11:0|h[Everbloom Seed Pouch]|h|r", -- [44]
+		"|cffffffff|Hitem:119348:0:0:0:0:0:0:0:100:0:0:0|h[Admiral Taylor's Garrison Log]|h|r", -- [45]
+		"|cff0070dd|Hitem:110050:0:0:0:0:0:0:0:100:0:2:1:524|h[Dagger of the Sanguine Emeralds]|h|r", -- [46]
+		"|cffa335ee|Hitem:116365:0:0:0:0:0:0:0:100:0:4:0|h[Captured Arcane Fragment]|h|r", -- [47]
+		"|cffe6cc80|Hitem:105689:4434:0:0:0:0:0:1620636032:100:0:0:0|h[Hellscream's Tome of Destruction]|h|r", -- [48]
+		"|cff1eff00|Hitem:21525:0:0:0:0:0:0:0:100:0:5:0|h[Green Winter Hat]|h|r", -- [49]
+	},
+	["Professions"] = {
+	},
+	["LastCharacterImport"] = "",
+	["Reps"] = {
+		[1269] = 3,
+		[1337] = 3,
+		[1341] = 3,
+		[1375] = 3,
+		[1387] = 0,
+		[1376] = 0,
+		[1435] = 3,
+		[1388] = 4,
+		[1270] = 3,
+	},
+	["Faction"] = "Horde",
+	["IconInfo"] = {
+	},
+	["RealmName"] = "Arthas",
+	["LastCharacterImportDate"] = "",
 	["BankItemsAndCounts"] = {
 		[109132] = 2,
-		[74247] = 1,
+		[74247] = 2,
 		[2841] = 3,
-		[90146] = 14,
+		[90146] = 13,
 		[774] = 3,
-		[110609] = 4,
-		[52719] = 8,
-		[109125] = 84,
+		[110609] = 14,
+		[52719] = 11,
+		[109125] = 136,
 		[109133] = 2,
 		[16202] = 3,
 		[16203] = 4,
 		[74248] = 14,
-		[10998] = 1,
-		[113261] = 10,
-		[111245] = 28,
+		[10998] = 2,
+		[113261] = 13,
+		[111245] = 26,
 		[38682] = 18,
-		[109118] = 330,
-		[109126] = 101,
+		[109118] = 464,
+		[109126] = 161,
 		[109134] = 3,
-		[11137] = 3,
-		[115508] = 3,
+		[11137] = 4,
+		[11138] = 1,
 		[1210] = 2,
-		[74249] = 100,
-		[113262] = 3,
-		[109119] = 212,
-		[109127] = 173,
+		[74249] = 132,
+		[113262] = 6,
+		[109119] = 402,
+		[109127] = 226,
 		[109135] = 1,
-		[113588] = 4,
-		[74250] = 7,
-		[22446] = 8,
-		[22448] = 1,
+		[113588] = 12,
+		[74250] = 8,
+		[22446] = 11,
+		[22448] = 2,
 		[22450] = 2,
-		[109128] = 98,
+		[109128] = 164,
 		[65365] = 87,
-		[111557] = 131,
-		[14344] = 1,
+		[111557] = 148,
+		[14344] = 2,
 		[39354] = 5,
-		[11174] = 6,
+		[11174] = 7,
 		[11175] = 2,
-		[11176] = 5,
+		[11176] = 8,
 		[11177] = 2,
 		[2319] = 3,
-		[34052] = 1,
-		[109129] = 74,
+		[34052] = 2,
+		[109129] = 94,
 		[74252] = 1,
-		[109693] = 2,
+		[109693] = 1,
 		[114781] = 7,
+		[11134] = 2,
 		[10938] = 2,
 		[10939] = 4,
-		[10940] = 5,
-		[16204] = 2,
+		[10940] = 11,
+		[115508] = 58,
+		[34055] = 20,
+		[11135] = 2,
 		[4234] = 75,
-		[34055] = 15,
-		[34054] = 81,
-		[115504] = 43,
-		[4338] = 19,
-		[52555] = 34,
+		[14343] = 1,
+		[818] = 3,
+		[120945] = 89,
+		[34054] = 113,
+		[52555] = 79,
 		[89112] = 31,
 		[54849] = 1,
-		[2589] = 179,
-		[11082] = 1,
+		[113264] = 13,
+		[4338] = 19,
 		[14256] = 1,
-		[56516] = 31,
-		[11083] = 9,
-		[52722] = 2,
+		[11082] = 3,
+		[11083] = 10,
+		[2589] = 179,
 		[69237] = 4,
-		[34053] = 3,
+		[34053] = 4,
 		[109131] = 6,
 		[23445] = 6,
 		[2592] = 55,
-		[111366] = 17,
-		[34056] = 9,
-		[52718] = 23,
-		[104400] = 1,
-		[783] = 15,
 		[4306] = 72,
-		[22445] = 30,
-		[22447] = 26,
-		[22449] = 2,
-		[113264] = 7,
+		[783] = 15,
+		[104400] = 1,
+		[52718] = 37,
+		[34056] = 13,
+		[111366] = 17,
+		[22445] = 59,
+		[22447] = 40,
+		[22449] = 4,
+		[52722] = 2,
 		[2934] = 2,
-		[120945] = 52,
-		[818] = 3,
-		[14343] = 1,
+		[56516] = 31,
+		[109124] = 25,
+		[16204] = 2,
 	},
 }

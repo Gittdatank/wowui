@@ -103,39 +103,39 @@ SkadaDB = {
 			},
 		},
 		["Got - Dec 2014"] = {
+			["report"] = {
+				["number"] = 7,
+				["mode"] = "Damage taken",
+				["target"] = "Aprilseventh",
+				["channel"] = "raid",
+			},
+			["tooltiprows"] = 10,
 			["windows"] = {
 				{
 					["barheight"] = 11,
-					["barslocked"] = true,
+					["bartexture"] = "Minimalist",
+					["barwidth"] = 267.657745361328,
+					["barfontsize"] = 7,
 					["y"] = 0,
 					["barfont"] = "DorisPP",
-					["title"] = {
-						["font"] = "DorisPP",
-						["fontsize"] = 9,
-						["height"] = 14,
-						["texture"] = "Flat",
-					},
-					["mode"] = "Damage",
-					["barwidth"] = 267.657745361328,
+					["barslocked"] = true,
+					["x"] = 402.417297363281,
 					["point"] = "BOTTOM",
-					["barfontsize"] = 7,
 					["background"] = {
 						["height"] = 258.045837402344,
 					},
-					["bartexture"] = "Minimalist",
-					["x"] = 402.417297363281,
+					["mode"] = "Damage",
+					["title"] = {
+						["height"] = 14,
+						["font"] = "DorisPP",
+						["fontsize"] = 9,
+						["texture"] = "Flat",
+					},
 				}, -- [1]
 			},
 			["icon"] = {
 				["hide"] = true,
 			},
-			["report"] = {
-				["number"] = 7,
-				["channel"] = "raid",
-				["target"] = "Aprilseventh",
-				["mode"] = "Damage taken",
-			},
-			["tooltiprows"] = 10,
 			["reset"] = {
 				["join"] = 2,
 			},
@@ -158,11 +158,11 @@ SkadaDB = {
 					["barfont"] = "DorisPP",
 					["barslocked"] = true,
 					["x"] = 402.417297363281,
+					["point"] = "BOTTOM",
+					["mode"] = "Damage",
 					["background"] = {
 						["height"] = 258.045837402344,
 					},
-					["mode"] = "Damage",
-					["point"] = "BOTTOM",
 					["title"] = {
 						["height"] = 14,
 						["font"] = "DorisPP",
@@ -179,38 +179,38 @@ SkadaDB = {
 			},
 		},
 		["Git - Mar 2014"] = {
-			["report"] = {
-				["number"] = 14,
-				["target"] = "Aprilseventh",
-				["channel"] = "raid",
-			},
-			["tooltiprows"] = 10,
 			["windows"] = {
 				{
 					["barheight"] = 11,
-					["bartexture"] = "Minimalist",
-					["barwidth"] = 267.657745361328,
-					["barfontsize"] = 7,
-					["y"] = 0,
-					["barfont"] = "DorisPP",
 					["barslocked"] = true,
-					["title"] = {
-						["height"] = 14,
-						["font"] = "DorisPP",
-						["fontsize"] = 9,
-						["texture"] = "Flat",
-					},
-					["point"] = "BOTTOM",
 					["background"] = {
 						["height"] = 258.045837402344,
 					},
+					["y"] = 0,
+					["barfont"] = "DorisPP",
+					["title"] = {
+						["font"] = "DorisPP",
+						["fontsize"] = 9,
+						["height"] = 14,
+						["texture"] = "Flat",
+					},
 					["mode"] = "Damage",
+					["barwidth"] = 267.657745361328,
+					["point"] = "BOTTOM",
+					["barfontsize"] = 7,
+					["bartexture"] = "Minimalist",
 					["x"] = 402.417297363281,
 				}, -- [1]
 			},
 			["icon"] = {
 				["hide"] = true,
 			},
+			["report"] = {
+				["number"] = 14,
+				["channel"] = "raid",
+				["target"] = "Aprilseventh",
+			},
+			["tooltiprows"] = 10,
 			["reset"] = {
 				["join"] = 2,
 			},

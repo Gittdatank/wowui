@@ -19,7 +19,7 @@ Postal3DB = {
 				"Giit|Cho'gall|Horde|85|DRUID", -- [14]
 				"Gilt|Azuremyst|Horde|85|DRUID", -- [15]
 				"Gimm|Cho'gall|Horde|54|MONK", -- [16]
-				"Gitdk|Arthas|Horde|55|DEATHKNIGHT", -- [17]
+				"Gitdk|Arthas|Horde|90|DEATHKNIGHT", -- [17]
 				"Gittdabank|Arthas|Horde|1|MAGE", -- [18]
 				"Gitt|Arthas|Horde|90|MONK", -- [19]
 				"Gitt|Cho'gall|Horde|85|PALADIN", -- [20]
@@ -221,15 +221,15 @@ Postal3DB = {
 		["Worgit - Moon Guard"] = {
 		},
 		["Got - Arthas"] = {
+			["OpenAll"] = {
+				["Attachments"] = false,
+			},
 			["BlackBook"] = {
 				["recent"] = {
 					"Git-Arthas|Arthas|Horde", -- [1]
 					"Git|Arthas|Horde", -- [2]
 					"Scrantnicity|Arthas|Horde", -- [3]
 				},
-			},
-			["OpenAll"] = {
-				["Attachments"] = false,
 			},
 		},
 		["Gitt - Cho'gall"] = {
@@ -368,9 +368,9 @@ Postal3DB = {
 		["Git - Arthas"] = {
 			["BlackBook"] = {
 				["recent"] = {
-					"Gitdk|Arthas|Horde", -- [1]
-					"Gittdabank|Arthas|Horde", -- [2]
-					"Got|Arthas|Horde", -- [3]
+					"Got|Arthas|Horde", -- [1]
+					"Gitdk|Arthas|Horde", -- [2]
+					"Gittdabank|Arthas|Horde", -- [3]
 					"Primalfears|Arthas|Horde", -- [4]
 					"Tydeson|Arthas|Horde", -- [5]
 					"Simplecow|Arthas|Horde", -- [6]

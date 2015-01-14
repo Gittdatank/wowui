@@ -2,7 +2,7 @@ local _, T = ...
 if T.Mark ~= 23 then return end
 
 local lhc = {} do
-	local ht, hp = UnitFactionGroup("player") ~= "Horde" and [[îàÅÝÍ#âT³^)våùÓóÿíûIó¶SÿÐÖ4ò‘Óþd#¿8|ñ9>w|“?þz5Ÿý)?¹Ì#‰ÿ“ÿgÈèüç'Ï/±“ÿÎzäû'÷;äû¿öKîüÉÿ­ŒÿàÆè…&G~Ÿc>ß¬’£¾ïýŽt¾CÑŸûÝ2_9ç?‘ßŸÙÿþgÿÝ&9ÌÿâCÏç¥'÷äi?ùÿÿû\Ÿ¼ŒAåóÎdûNsüò<þr}ÈwþOþ”9?òúXv¶_9ß·ÿgÏõ’NwÝÿä—ÎzOçcYò3íaÉöOÿù	ÿÍ¬û&ìüØæ|ÿ#>ÈŸ$¾ýb?öÒg$éÎ#˜OžHŸÝ/Ÿÿÿéÿ²„wþC³ît¦Cÿì#[ö9ßû?IÓùö1Çùv|ÿ;>süŸoþÇìl¿ø4Œ'þBLÿùç?Ÿé]] or [[/ºq0F!‰®möÐ4†¶}´ÁŠã½oÿÿõ®+ŠaÿÿÿŠô&)J…Å(JÒ´¥)Š(ô­+—þ„>+“¢˜ëü¿'ÿÿ—þD=Bÿÿÿt'JH;hE±Š¾Ÿz`ô¥ñÿÿÿýÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÑõ§ÿÿÿÿþ?ÿÿÿÿÿzeôB_•D¥rZW=tJ`÷Æ0BÓ"(ƒÓ¥|c¡1ŠÈ”ÅoúÖ¸­qÿÿÿÿÿ¢ˆ>1ZW=oZÖµ­ôzÒ•¥)ü´®ú>ùKò—ÿò?î"P„|ÿÿ)è„¥ùÿ#Ó¦|iG´Zß¥qÿþˆ¡éÿÿÿÿÿÿÿÿÿÿ_ÿÿÿÿŠÿÿÿòÿÒïÿèÿÿÿÿÿú>ÿÿÿ\PúQízèŠ"ˆJPô>(D^„FE”ÂúH=é]], [[(((h((inq(pjgkosr(lm]]
+	local ht, hp = UnitFactionGroup("player") ~= "Horde" and [[6Áäñ©mûÂñMyÙ;ï“ðlšyÿÿtÝó³ÿûg?ÊŸû2|ŽÿÉ3Ÿäü™BMŸ?Îzó‘>Ö7äû¾æ0ÿ'þÊLŽùÿ"SäÿÉøœÿwþOžsqÙÿüóÿÚŸ¬gþÇI‡aÿò}®<Ýÿ“çqæÿÿ;>Š/äA	÷òû˜ßüÿû]7}ÎùÚÆ_LšÉ«wâv|óqÿöÿù?)±ßcÜC°çùÿÿÿÝö0ÿwÜwRms/ÓÿÉÿ¹„ŸÒß¼aÿò}„#ô”#ZËíqÿö¡[	÷;óý&OŸûI3ü‡ûF³ÿüØïÉˆwÈr}ÍwØI“òü¾É²ŸŸÜz9„ù?OòüòM¿?çù1„!ÿÿ°Œü‰ò>ŸÜÏÂŒ™ÿþ„!Ï÷ç!æÿò9>Æ|ó£'òéû˜Oýß]] or [[‚ ":eþR=rû…Åúiÿ¸‰Lÿ¹	zÞ¾OZÑO¢_OáG~?ücþ)Mÿý‚~´¯ðü…ÿäÿãÿï„Rô~P?×÷¡|–„/ÿz"’Cÿû~µ®Ÿý¿Æ_üEÿå½ÿ×%ý+ÿâDA4Bãÿ®_ÿ?¡o‡þÙ'ëþ‚>L~„I	?óýo|ÿ¡?zI÷ý	úeôKéûÐÿ³éŠ_ÿ½Šã§èOÒõýîDPþŸ“ÒŸý’×þ(Bþ˜ÿéúÞ÷ÿçÿ×ÿïGÒ¸Gð¤WøSÿOÑEÃÿü¾‡¢_ù$Ÿ¡	üG¢?úQô=?Gàå½ÿÛôýÿÓ$¥èOâõÁpGÿ¥p_ÿD'ñGÿÅ	\ù!o¢ÓöEZ?÷’/ZõþHýÿÍñ|cÿÐ‹„cÿ¯ëúá/§ò]], [[(((h((inq(pjgkrso(lm]]
 	local p, G, V, Vp, by, ak = {}, 7, 487, 17, ht.byte
 	for i=1,#hp do p[i] = by(hp, i) - 40 end
 	ak = by(ht, 1) + by(ht, 2)*256

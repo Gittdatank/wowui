@@ -623,7 +623,7 @@ ArkInventoryRules_Example: enabled
 BlockChinese: enabled
 VEM-Core: disabled
 MarketWatcher: disabled
-HandyNotes: disabled
+HandyNotes: enabled
 TheUndermineJournalGE: disabled
 ArkInventory: enabled
 ArkInventoryConfig: enabled
@@ -641,7 +641,7 @@ BigWigs_Highmaul: enabled
 BigWigs_WrathOfTheLichKing: enabled
 BigWigs_Ra-denAssist: disabled
 CombatTime: enabled
-HandyNotes_DraenorTreasures: disabled
+HandyNotes_DraenorTreasures: enabled
 VEM-DefaultSkin: disabled
 VEM-GUI: disabled
 VEM-BlackrockFoundry: disabled
