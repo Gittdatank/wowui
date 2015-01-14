@@ -661,3 +661,4 @@ TidyPlates_Slim_Vertical: enabled
 TidyPlates_Renaitre: enabled
 MasterPlan: enabled
 AngryAssignments: enabled
+LargerMacroIconSelection: disabled

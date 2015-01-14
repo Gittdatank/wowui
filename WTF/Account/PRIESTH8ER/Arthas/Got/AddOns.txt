@@ -658,3 +658,4 @@ SavedInstances: enabled
 GatherMate_Sharing: disabled
 BulkOrder: enabled
 AngryAssignments: enabled
+LargerMacroIconSelection: disabled

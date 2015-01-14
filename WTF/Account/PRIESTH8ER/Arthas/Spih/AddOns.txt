@@ -148,3 +148,4 @@ BL_Cooldown: enabled
 Stubby: enabled
 !Swatter: enabled
 AngryAssignments: enabled
+LargerMacroIconSelection: disabled
