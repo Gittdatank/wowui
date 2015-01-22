@@ -1,0 +1,50 @@
+------------------------------------------------------------------------
+r89 | kunda | 2015-01-19 10:49:32 +0000 (Mon, 19 Jan 2015) | 1 line
+Changed paths:
+   A /tags/60000-1 (from /trunk:88)
+
+Tagging as 60000-1
+------------------------------------------------------------------------
+r88 | kunda | 2015-01-19 10:28:17 +0000 (Mon, 19 Jan 2015) | 1 line
+Changed paths:
+   M /trunk/GridIndicatorCornerIcons.lua
+
+update
+------------------------------------------------------------------------
+r87 | kunda | 2015-01-18 20:37:29 +0000 (Sun, 18 Jan 2015) | 1 line
+Changed paths:
+   M /trunk/GridIndicatorCornerIcons.lua
+
+update
+------------------------------------------------------------------------
+r86 | kunda | 2015-01-18 20:34:56 +0000 (Sun, 18 Jan 2015) | 1 line
+Changed paths:
+   M /trunk/GridIndicatorCornerIcons-localization-deDE.lua
+   M /trunk/GridIndicatorCornerIcons-localization-enUS.lua
+   M /trunk/GridIndicatorCornerIcons-localization-koKR.lua
+   M /trunk/GridIndicatorCornerIcons-localization-ruRU.lua
+   M /trunk/GridIndicatorCornerIcons-localization-zhCN.lua
+   M /trunk/GridIndicatorCornerIcons-localization-zhTW.lua
+   M /trunk/GridIndicatorCornerIcons.lua
+
+update
+------------------------------------------------------------------------
+r85 | kunda | 2015-01-17 14:19:35 +0000 (Sat, 17 Jan 2015) | 1 line
+Changed paths:
+   M /trunk/GridIndicatorCornerIcons.lua
+
+update
+------------------------------------------------------------------------
+r84 | kunda | 2015-01-16 23:19:49 +0000 (Fri, 16 Jan 2015) | 1 line
+Changed paths:
+   M /trunk/GridIndicatorCornerIcons-localization-deDE.lua
+   M /trunk/GridIndicatorCornerIcons-localization-enUS.lua
+   M /trunk/GridIndicatorCornerIcons-localization-koKR.lua
+   M /trunk/GridIndicatorCornerIcons-localization-ruRU.lua
+   M /trunk/GridIndicatorCornerIcons-localization-zhCN.lua
+   M /trunk/GridIndicatorCornerIcons-localization-zhTW.lua
+   M /trunk/GridIndicatorCornerIcons.lua
+   M /trunk/GridIndicatorCornerIcons.toc
+
+update
+------------------------------------------------------------------------

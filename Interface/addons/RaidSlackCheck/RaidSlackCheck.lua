@@ -5,7 +5,7 @@ if GetLocale()=="deDE" or GetLocale()=="ruRU" or GetLocale()=="zhTW" or GetLocal
 rsclocalel()
 end
 
-rscversion=6.009
+rscversion=6.010
 
 
 --zone ID where addon check flasks

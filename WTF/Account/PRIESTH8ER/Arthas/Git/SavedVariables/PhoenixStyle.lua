@@ -1,18 +1,19 @@
 
 thisaddononoff = false
 thisaddonwork = true
-secrefmark = 2
+secrefmark = 1
 pssetmarknew = {
 	{
 		"Gramz", -- [1]
 	}, -- [1]
 	{
+		"Shinerr", -- [1]
 	}, -- [2]
 	{
-		"Iamascrub", -- [1]
+		"Dotsfired", -- [1]
 	}, -- [3]
 	{
-		"Tydeson", -- [1]
+		"Kalarae", -- [1]
 	}, -- [4]
 	{
 	}, -- [5]
@@ -20,8 +21,10 @@ pssetmarknew = {
 		"Git", -- [1]
 	}, -- [6]
 	{
+		"Urtag", -- [1]
 	}, -- [7]
 	{
+		"Tydeson", -- [1]
 	}, -- [8]
 }
 psversionday = 13

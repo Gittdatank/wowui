@@ -17,9 +17,9 @@ SkadaDB = {
 		["Cowbeary - Azuremyst"] = "Default",
 		["Gilt - Azuremyst"] = "Default",
 		["Ezyn - Azuremyst"] = "Default",
-		["Lihte - Arthas"] = "Default",
-		["Gimm - Cho'gall"] = "Default",
 		["Worgit - Moon Guard"] = "Default",
+		["Gimm - Cho'gall"] = "Default",
+		["Lihte - Arthas"] = "Default",
 		["Got - Arthas"] = "Got - Dec 2014",
 		["Gitt - Cho'gall"] = "Default",
 		["Giit - Cho'gall"] = "Default",
@@ -185,9 +185,6 @@ SkadaDB = {
 				{
 					["barheight"] = 11,
 					["barslocked"] = true,
-					["background"] = {
-						["height"] = 258.045837402344,
-					},
 					["y"] = 0,
 					["barfont"] = "DorisPP",
 					["title"] = {
@@ -196,11 +193,14 @@ SkadaDB = {
 						["height"] = 14,
 						["texture"] = "Flat",
 					},
-					["mode"] = "Damage",
-					["barwidth"] = 267.657745361328,
 					["point"] = "BOTTOM",
-					["barfontsize"] = 7,
+					["mode"] = "Damage",
 					["bartexture"] = "Minimalist",
+					["barwidth"] = 267.657745361328,
+					["barfontsize"] = 7,
+					["background"] = {
+						["height"] = 258.045837402344,
+					},
 					["x"] = 402.417297363281,
 				}, -- [1]
 			},
@@ -241,10 +241,10 @@ SkadaDB = {
 						["fontsize"] = 9,
 						["texture"] = "Flat",
 					},
+					["mode"] = "Damage",
 					["background"] = {
 						["height"] = 258.045837402344,
 					},
-					["mode"] = "Damage",
 					["point"] = "BOTTOM",
 					["x"] = 402.417297363281,
 				}, -- [1]
@@ -273,10 +273,10 @@ SkadaDB = {
 					["barfont"] = "DorisPP",
 					["barslocked"] = true,
 					["x"] = 402.417297363281,
+					["mode"] = "Damage",
 					["background"] = {
 						["height"] = 258.045837402344,
 					},
-					["mode"] = "Damage taken by spell",
 					["point"] = "BOTTOM",
 					["title"] = {
 						["height"] = 14,
@@ -363,7 +363,13 @@ SkadaDB = {
 					["snapto"] = true,
 					["mode"] = "Damage",
 					["point"] = "LEFT",
-					["bartexture"] = "Minimalist",
+					["buttons"] = {
+						["report"] = true,
+						["menu"] = true,
+						["mode"] = true,
+						["segment"] = true,
+						["reset"] = true,
+					},
 					["barwidth"] = 203.249938964844,
 					["barspacing"] = 0,
 					["reversegrowth"] = false,
@@ -391,13 +397,7 @@ SkadaDB = {
 					["classcolorbars"] = true,
 					["enabletitle"] = true,
 					["clickthrough"] = false,
-					["buttons"] = {
-						["report"] = true,
-						["menu"] = true,
-						["mode"] = true,
-						["segment"] = true,
-						["reset"] = true,
-					},
+					["bartexture"] = "Minimalist",
 					["name"] = "Damage",
 				}, -- [2]
 			},
@@ -427,10 +427,10 @@ SkadaDB = {
 					["barslocked"] = true,
 					["x"] = 402.417297363281,
 					["point"] = "BOTTOM",
-					["mode"] = "Healing",
 					["background"] = {
 						["height"] = 258.045837402344,
 					},
+					["mode"] = "Healing",
 					["title"] = {
 						["height"] = 14,
 						["font"] = "DorisPP",

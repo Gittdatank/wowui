@@ -14,9 +14,9 @@ Y: -132
 W: 210
 H: 318
 Frame: PSFmain1
-FrameLevel: 9
+FrameLevel: 20
 Anchor: CENTER
-X: -48
-Y: -27
+X: 33
+Y: -20
 W: 930
 H: 500

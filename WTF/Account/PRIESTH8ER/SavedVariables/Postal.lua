@@ -24,12 +24,12 @@ Postal3DB = {
 		["Gimm - Cho'gall"] = "Gimm - Cho'gall",
 		["Git - Arthas"] = "Git - Arthas",
 		["Gitt - Arthas"] = "Gitt - Arthas",
-		["Git - Cho'gall"] = "Git - Cho'gall",
-		["Greny - Azuremyst"] = "Greny - Azuremyst",
-		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
 		["Erdone - Azuremyst"] = "Erdone - Azuremyst",
-		["Evn - Azuremyst"] = "Evn - Azuremyst",
+		["Git - Cho'gall"] = "Git - Cho'gall",
+		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
 		["Git - Azuremyst"] = "Git - Azuremyst",
+		["Evn - Azuremyst"] = "Evn - Azuremyst",
+		["Greny - Azuremyst"] = "Greny - Azuremyst",
 		["Olebe - Azuremyst"] = "Olebe - Azuremyst",
 		["Lihte - Cho'gall"] = "Lihte - Cho'gall",
 		["Raweo - Azuremyst"] = "Raweo - Azuremyst",
@@ -159,19 +159,19 @@ Postal3DB = {
 				["AutoCompleteAlts"] = true,
 				["AutoCompleteGuild"] = true,
 				["AutoCompleteFriends"] = true,
-				["AutoCompleteRecent"] = true,
-				["AutoCompleteContacts"] = true,
-				["DisableBlizzardAutoComplete"] = false,
 				["recent"] = {
 				},
+				["AutoCompleteContacts"] = true,
+				["DisableBlizzardAutoComplete"] = false,
+				["AutoCompleteRecent"] = true,
 			},
 			["OpenAll"] = {
 				["NeutralAHExpired"] = true,
 				["KeepFreeSpace"] = 1,
 				["AHOutbid"] = true,
-				["Attachments"] = true,
-				["NeutralAHWon"] = true,
 				["AHWon"] = true,
+				["NeutralAHWon"] = true,
+				["Attachments"] = true,
 				["AHCancelled"] = true,
 				["NeutralAHCancelled"] = true,
 				["NeutralAHOutbid"] = true,
@@ -285,6 +285,13 @@ Postal3DB = {
 				},
 			},
 		},
+		["Erdone - Azuremyst"] = {
+			["BlackBook"] = {
+				["recent"] = {
+					"Git", -- [1]
+				},
+			},
+		},
 		["Git - Cho'gall"] = {
 			["BlackBook"] = {
 				["recent"] = {
@@ -300,31 +307,7 @@ Postal3DB = {
 				},
 			},
 		},
-		["Greny - Azuremyst"] = {
-			["BlackBook"] = {
-				["recent"] = {
-					"Burk|Azuremyst|Horde", -- [1]
-					"Git|Azuremyst|Horde", -- [2]
-				},
-			},
-		},
 		["Giitt - Feathermoon"] = {
-		},
-		["Erdone - Azuremyst"] = {
-			["BlackBook"] = {
-				["recent"] = {
-					"Git", -- [1]
-				},
-			},
-		},
-		["Evn - Azuremyst"] = {
-			["BlackBook"] = {
-				["recent"] = {
-					"Git|Azuremyst|Horde", -- [1]
-					"Gilt|Azuremyst|Horde", -- [2]
-					"Burk|Azuremyst|Horde", -- [3]
-				},
-			},
 		},
 		["Git - Azuremyst"] = {
 			["OpenAll"] = {
@@ -349,6 +332,23 @@ Postal3DB = {
 					"Ezyn|Azuremyst|Horde", -- [15]
 					"Evyyn|Azuremyst|Horde", -- [16]
 					"Dreadmist|Azuremyst|Horde", -- [17]
+				},
+			},
+		},
+		["Evn - Azuremyst"] = {
+			["BlackBook"] = {
+				["recent"] = {
+					"Git|Azuremyst|Horde", -- [1]
+					"Gilt|Azuremyst|Horde", -- [2]
+					"Burk|Azuremyst|Horde", -- [3]
+				},
+			},
+		},
+		["Greny - Azuremyst"] = {
+			["BlackBook"] = {
+				["recent"] = {
+					"Burk|Azuremyst|Horde", -- [1]
+					"Git|Azuremyst|Horde", -- [2]
 				},
 			},
 		},

@@ -404,3 +404,4 @@ TidyPlates_Slim_Vertical: disabled
 TidyPlates_Renaitre: disabled
 TitanCurrency: disabled
 UpgradeList: disabled
+ReagentRestocker: disabled

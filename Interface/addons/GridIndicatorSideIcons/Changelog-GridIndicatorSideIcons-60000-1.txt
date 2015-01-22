@@ -1,0 +1,42 @@
+------------------------------------------------------------------------
+r94 | kunda | 2015-01-19 10:50:22 +0000 (Mon, 19 Jan 2015) | 1 line
+Changed paths:
+   A /tags/60000-1 (from /trunk:93)
+
+Tagging as 60000-1
+------------------------------------------------------------------------
+r93 | kunda | 2015-01-19 10:30:10 +0000 (Mon, 19 Jan 2015) | 1 line
+Changed paths:
+   M /trunk/GridIndicatorSideIcons.lua
+
+update
+------------------------------------------------------------------------
+r92 | kunda | 2015-01-18 20:41:25 +0000 (Sun, 18 Jan 2015) | 1 line
+Changed paths:
+   M /trunk/GridIndicatorSideIcons-localization-deDE.lua
+   M /trunk/GridIndicatorSideIcons-localization-enUS.lua
+   M /trunk/GridIndicatorSideIcons-localization-koKR.lua
+   M /trunk/GridIndicatorSideIcons-localization-zhCN.lua
+   M /trunk/GridIndicatorSideIcons-localization-zhTW.lua
+   M /trunk/GridIndicatorSideIcons.lua
+
+update
+------------------------------------------------------------------------
+r91 | kunda | 2015-01-17 14:23:27 +0000 (Sat, 17 Jan 2015) | 1 line
+Changed paths:
+   M /trunk/GridIndicatorSideIcons.lua
+
+update
+------------------------------------------------------------------------
+r90 | kunda | 2015-01-16 23:22:02 +0000 (Fri, 16 Jan 2015) | 1 line
+Changed paths:
+   M /trunk/GridIndicatorSideIcons-localization-deDE.lua
+   M /trunk/GridIndicatorSideIcons-localization-enUS.lua
+   M /trunk/GridIndicatorSideIcons-localization-koKR.lua
+   M /trunk/GridIndicatorSideIcons-localization-zhCN.lua
+   M /trunk/GridIndicatorSideIcons-localization-zhTW.lua
+   M /trunk/GridIndicatorSideIcons.lua
+   M /trunk/GridIndicatorSideIcons.toc
+
+update
+------------------------------------------------------------------------

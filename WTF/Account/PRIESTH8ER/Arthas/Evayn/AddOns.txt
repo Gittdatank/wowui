@@ -75,3 +75,4 @@ BL_Cooldown: enabled
 Stubby: enabled
 !Swatter: enabled
 LargerMacroIconSelection: disabled
+ReagentRestocker: disabled

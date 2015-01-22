@@ -4,7 +4,7 @@ local AceLocale = LibStub("AceLocale-3.0")
 local L = AceLocale:GetLocale("Recount")
 local BossIDs = LibStub("LibBossIDs-1.0")
 
-local revision = tonumber(string.sub("$Revision: 1288 $", 12, -3))
+local revision = tonumber(string.sub("$Revision: 1294 $", 12, -3))
 if Recount.Version < revision then
 	Recount.Version = revision
 end
@@ -41,7 +41,7 @@ local Epsilon = 0.000000000000000001
 
 -- Pre-4.1 CLEU compat start
 --[[local TOC
-local dummyTable = {}
+local dummyTable = { }
 local loopprevent
 do
 	-- Because GetBuildInfo() still returns 40000 on the PTR
@@ -510,8 +510,8 @@ function Recount:SwingDamage(timestamp, eventtype, srcGUID, srcName, srcFlags, d
 	Recount:SpellDamage(timestamp, eventtype, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, 0, L["Melee"], SPELLSCHOOL_PHYSICAL, amount, overkill, school, resisted, blocked, absorbed, critical, glancing, crushing, isOffHand, multistrike)
 end
 
-function Recount:SpellBuildingDamage(timestamp, eventtype, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, amount, overkill, school, resisted, blocked, absorbed, critical, glancing, crushing)
-	-- Ignoring these for now
+function Recount:SpellBuildingDamage(timestamp, eventtype, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, amount, overkill, school, resisted, blocked, absorbed, critical, glancing, crushing, isOffHand, multistrike)
+	Recount:SpellDamage(timestamp, eventtype, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, amount, overkill, school, resisted, blocked, absorbed, critical, glancing, crushing, isOffHand, multistrike)
 end
 
 function Recount:SpellBuildingHeal(timestamp, eventtype, srcGUID, srcName, srcFlags, dstGUID, dstName, dstFlags, spellId, spellName, spellSchool, amount, overheal, critical)
@@ -661,9 +661,9 @@ function Recount:SpellMissed(timestamp, eventtype, srcGUID, srcName, srcFlags, d
 	--last_timestamp = timestamp
 
 	if Recount.db.profile.MergeDamageAbsorbs then
-		Recount:AddDamageData(srcName, dstName, spellName, Recount.SpellSchoolName[spellSchool], Recount:FixCaps(missType), absorbed, nil, srcGUID, srcFlags, dstGUID, dstFlags, spellId, blocked, absorbed)
+		Recount:AddDamageData(srcName, dstName, spellName, Recount.SpellSchoolName[spellSchool], Recount:FixCaps(missType), absorbed, nil, srcGUID, srcFlags, dstGUID, dstFlags, spellId, blocked, absorbed, false)
 	else
-		Recount:AddDamageData(srcName, dstName, spellName, Recount.SpellSchoolName[spellSchool], Recount:FixCaps(missType), nil, nil, srcGUID, srcFlags, dstGUID, dstFlags, spellId, blocked, absorbed)
+		Recount:AddDamageData(srcName, dstName, spellName, Recount.SpellSchoolName[spellSchool], Recount:FixCaps(missType), nil, nil, srcGUID, srcFlags, dstGUID, dstFlags, spellId, blocked, absorbed, false)
 	end
 end
 
@@ -981,7 +981,6 @@ local QuickExitEvents = {
 	["ENCHANT_APPLIED"] = true,
 	["ENCHANT_REMOVED"] = true,
 	["SPELL_CREATE"] = true,
-	["SPELL_BUILDING_DAMAGE"] = true,
 	["SPELL_BUILDING_HEAL"] = true
 }
 
@@ -1169,7 +1168,9 @@ end
 
 --Only care about event tracking for those we want to track deaths for
 function Recount:AddCurrentEvent(who, eventType, incoming, number, event)
-	if not who then return end
+	if not who then
+		return
+	end
 	if Recount.db.profile.Filters.TrackDeaths[who.type] then
 		who.LastEvents = who.LastEvents or {}
 		who.LastEventTimes = who.LastEventTimes or {}
@@ -1182,8 +1183,8 @@ function Recount:AddCurrentEvent(who, eventType, incoming, number, event)
 		who.LastEvents[who.NextEventNum] = event --(eventType or "").." "..(abiliy or "").." "..(number or "")
 
 		local name, realm 
-		
-		if who.unit then
+
+		if who.unit and UnitExists(who.unit) then
 			name, realm = UnitName(who.unit)
 		else
 			name = ""
@@ -1196,7 +1197,7 @@ function Recount:AddCurrentEvent(who, eventType, incoming, number, event)
 			who.UnitLockout = Recount.CurTime
 		end
 
-		if who.unit then
+		if who.unit and UnitExists(who.unit) then
 			if UnitHealthMax(who.unit) ~= 100 then
 				who.LastEventHealth = who.LastEventHealth or {}
 				who.LastEventHealth[who.NextEventNum] = UnitHealth(who.unit).." ("..math_floor(100 * UnitHealth(who.unit) / (UnitHealthMax(who.unit) + Epsilon)).."%)"
@@ -1531,7 +1532,7 @@ function Recount:AddTableDataSum(who, datatype, secondary, detailtype, amount)
 		Recount:DPrint("DEBUG at: ".. (who or "nil").." "..(datatype or "nil").." ".. (secondary or "nil"))
 	end]]
 
-	if type(CurTable.Details[detailtype]) ~= "table" then
+	if detailtype and type(CurTable.Details[detailtype]) ~= "table" then
 		CurTable.Details[detailtype] = Recount:GetTable()
 		CurTable.Details[detailtype].count = 0
 	end
@@ -2329,7 +2330,7 @@ function Recount:HandleDeath(arg)
 
 	if RecountDeathTrack then
 		--Recount:DPrint(who.LastDamageTaken)
-		RecountDeathTrack:AddDeath(victim, DeathTime-(Recount.InCombatT2 or DeathTime), who.LastDamageTaken , who, who.DeathLogs)--[[who.LastDamageAbility.." "..who.LastDamageTaken]]
+		RecountDeathTrack:AddDeath(victim, DeathTime - (Recount.InCombatT2 or DeathTime), who.LastDamageTaken , who, who.DeathLogs)--[[who.LastDamageAbility.." "..who.LastDamageTaken]]
 	end
 
 	--who.DeathLogs[#who.DeathLogs+1] = DeathLog

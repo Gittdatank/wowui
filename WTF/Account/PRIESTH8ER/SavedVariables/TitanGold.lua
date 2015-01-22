@@ -68,7 +68,7 @@ GoldSave = {
 	["Got_Arthas::Horde"] = {
 		["show"] = true,
 		["name"] = "Got",
-		["gold"] = 214476519,
+		["gold"] = 218380326,
 	},
 	["Worgit_Moon Guard::Alliance"] = {
 		["show"] = true,
@@ -103,7 +103,7 @@ GoldSave = {
 	["Git_Arthas::Horde"] = {
 		["show"] = true,
 		["name"] = "Git",
-		["gold"] = 4300514474,
+		["gold"] = 4186443574,
 	},
 	["Gyit_Area 52::Horde"] = {
 		["show"] = true,

@@ -2,15 +2,181 @@
 -- GridIndicatorSideIcons by kunda                                            --
 -- -------------------------------------------------------------------------- --
 
-local L = GridIndicatorSideIcons_Locales
-local media = LibStub("LibSharedMedia-3.0", true)
+local addonName, prg = ...
+if type(prg)   ~= "table" then print("ERROR", addonName) return end
+if type(prg.L) ~= "table" then print("ERROR", addonName, "No localization table.") return end
+for k, v in pairs(prg.L) do if type(v) ~= "string" then prg.L[k] = tostring(k) end end
+local L = setmetatable(prg.L, {
+	__index = function(t, k)
+		t[k] = k
+		--print(addonName, "prg.L:", k)
+		return k
+	end
+})
 
 local Grid = Grid
-
+if not Grid.L then Grid.L = {} end
+local LGrid = setmetatable(Grid.L, {
+	__index = function(t, k)
+		t[k] = k
+		--print(addonName, "Grid.L:", k)
+		return k
+	end
+})
 local GridFrame = Grid:GetModule("GridFrame")
-local GridIndicatorSideIcons = GridFrame:NewModule("GridIndicatorSideIcons", "AceEvent-3.0")
+local GridIndicatorSideIcons = GridFrame:NewModule("GridIndicatorSideIcons")
 
 local configMode = false
+
+local BACKDROP = {
+	edgeFile = "Interface\\Buttons\\WHITE8X8", edgeSize = 2,
+	insets = {left = 2, right = 2, top = 2, bottom = 2},
+}
+
+
+
+local function NewIndicator(frame)
+	local icon = CreateFrame("Frame", nil, frame)
+	icon:SetBackdrop(BACKDROP)
+	icon:SetBackdropBorderColor(1, 1, 1, 0)
+	icon:SetBackdropColor(0, 0, 0, 0)
+	icon:Hide()
+
+	local texture = icon:CreateTexture(nil, "ARTWORK")
+	texture:SetPoint("CENTER", 0, 0)
+	icon.texture = texture
+
+	local cooldown = CreateFrame("Cooldown", nil, icon, "CooldownFrameTemplate")
+	cooldown:SetAllPoints(true)
+	cooldown:SetDrawBling(false)
+	cooldown:SetDrawEdge(false)
+	cooldown:SetHideCountdownNumbers(true)
+	cooldown:SetReverse(true)
+	icon.cooldown = cooldown
+
+	return icon
+end
+
+
+
+local function ResetIndicator(self)
+	local frame = self.__owner
+	local indicator = self.__id
+	local AddonProfile = GridIndicatorSideIcons.db.profile
+	local GridProfile = GridFrame.db.profile
+
+	local xoffsetTB = AddonProfile.xoffsetTB
+	local yoffsetTB = AddonProfile.yoffsetTB
+	local xoffsetLR = AddonProfile.xoffsetLR
+	local yoffsetLR = AddonProfile.yoffsetLR
+
+	local borderSize = AddonProfile.iconBorderSize
+	if AddonProfile.OriginalSize then
+		borderSize = GridProfile.iconBorderSize
+	end
+
+	local wh = 0
+	local point = {"CENTER", frame, "CENTER", 0, 0}
+	if     indicator == "icontop"    then wh = AddonProfile.iconSizeTop    point = {"TOP", frame, "TOP", xoffsetTB, yoffsetTB}
+	elseif indicator == "iconbottom" then wh = AddonProfile.iconSizeBottom point = {"BOTTOM", frame, "BOTTOM", xoffsetTB, (yoffsetTB*-1)}
+	elseif indicator == "iconleft"   then wh = AddonProfile.iconSizeLeft   point = {"LEFT", frame, "LEFT", (xoffsetLR*-1), yoffsetLR}
+	elseif indicator == "iconright"  then wh = AddonProfile.iconSizeRight  point = {"RIGHT", frame, "RIGHT", xoffsetLR, yoffsetLR}
+	end
+	if AddonProfile.OriginalSize then
+		wh = GridProfile.iconSize
+	end
+
+	BACKDROP.edgeSize      = borderSize
+	BACKDROP.insets.left   = borderSize
+	BACKDROP.insets.right  = borderSize
+	BACKDROP.insets.top    = borderSize
+	BACKDROP.insets.bottom = borderSize
+
+	if borderSize == 0 then
+		self:SetBackdrop(nil)
+	else
+		self:SetBackdrop(BACKDROP)
+	end
+
+	self:SetWidth(wh + (2*borderSize))
+	self:SetHeight(wh + (2*borderSize))
+	self:SetParent(frame.indicators.bar)
+	self:SetFrameLevel(frame.indicators.bar:GetFrameLevel() + 1)
+	self:ClearAllPoints()
+	self:SetPoint(point[1], point[2], point[3], point[4], point[5])
+
+	self.texture:SetWidth(wh)
+	self.texture:SetHeight(wh)
+end
+
+
+
+local function SetIndicator(self, color, text, value, maxValue, texture, texCoords, count, start, duration)
+	if not texture then return end
+
+	local enableIconCooldown = GridIndicatorSideIcons.db.profile.enableIconCooldown
+	local enableIconStackText = GridIndicatorSideIcons.db.profile.enableIconStackText
+	if GridIndicatorSideIcons.db.profile.OriginalSize then
+		enableIconCooldown = GridFrame.db.profile.enableIconCooldown
+		enableIconStackText = GridFrame.db.profile.enableIconStackText
+	end
+
+	if type(texture) == "table" then
+		self.texture:SetTexture(texture.r, texture.g, texture.b, texture.a or 1)
+	else
+		self.texture:SetTexture(texture)
+	end
+
+	if type(texCoords) == "table" then
+		self.texture:SetTexCoord(texCoords.left, texCoords.right, texCoords.top, texCoords.bottom)
+	else
+		self.texture:SetTexCoord(0, 1, 0, 1)
+	end
+
+	if type(color) == "table" then
+		self:SetAlpha(color.a or 1)
+		self:SetBackdropBorderColor(color.r, color.g, color.b, color.ignore and 0 or color.a or 1)
+	else
+		self:SetAlpha(1)
+		self:SetBackdropBorderColor(0, 0, 0, 0)
+	end
+
+	if enableIconCooldown and type(duration) == "number" and duration > 0 and type(start) == "number" and start > 0 then
+		self.cooldown:SetCooldown(start, duration)
+		self.cooldown:Show()
+	else
+		self.cooldown:Hide()
+	end
+
+	if enableIconStackText then
+		self.cooldown:SetHideCountdownNumbers(false)
+	else
+		self.cooldown:SetHideCountdownNumbers(true)
+	end
+
+	self:Show()
+end
+
+
+
+local function ClearIndicator(self)
+	if configMode then return end
+	self:Hide()
+	self.texture:SetTexture(1, 1, 1, 0)
+	self.texture:SetTexCoord(0, 1, 0, 1)
+	self.cooldown:Hide()
+end
+
+
+
+local function SetIconSize(frame)
+	ResetIndicator(frame.indicators.icontop)
+	ResetIndicator(frame.indicators.iconbottom)
+	ResetIndicator(frame.indicators.iconleft)
+	ResetIndicator(frame.indicators.iconright)
+end
+
+
 
 GridIndicatorSideIcons.defaultDB = {
 	iconSizeTop = 8,
@@ -19,68 +185,69 @@ GridIndicatorSideIcons.defaultDB = {
 	iconSizeRight = 8,
 	xoffsetTB = 0,
 	yoffsetTB = 0,
-	xoffsetLR = 2,
-	yoffsetLR = 2,
+	xoffsetLR = 0,
+	yoffsetLR = 0,
 	iconBorderSize = 0,
-	enableIconStackText = false,
 	enableIconCooldown = false,
-	IconStackTextSize = 8,
-	IconStackTextXaxis = 1,
-	IconStackTextYaxis = -1,
+	enableIconStackText = false,
 	OriginalSize = false,
 }
+
+
 
 local options = {
 	type = "group",
 	icon = "Interface\\AddOns\\GridIndicatorSideIcons\\GridIndicatorSideIcons-icon-TRBL",
 	name = L["Icon (Sides)"],
-	desc = L["Options for Icon (Sides) indicators."],
+	desc = format(LGrid["Options for %s indicator."], L["Icon (Sides)"]),
 	order = -0.581,
 	args = {
 		["configuration"] = {
 			type = "toggle",
 			name = L["Configuration Mode"],
-			desc = L["Shows all Icon (Sides) indicators."],
-			order = 10,
-			get = function() return configMode end,
+			order = 5,
+			get = function(self) return configMode end,
 			set = function(_, v)
 				configMode = v
-				for _, f in pairs(GridFrame.registeredFrames) do
-					GridIndicatorSideIcons:GridIndicatorSideIconsConfig(f)
-				end
+				GridIndicatorSideIcons:ConfigMode()
 			end
 		},
 		["header1"] = {
 			type = "header",
-			order = 15,
+			order = 10,
 			width = "full",
 			name = "",
 		},
+		["desc1"] = {
+			type = "description",
+			order = 11,
+			width = "full",
+			name = L["Offset"].." ("..LGrid["Top"].."/"..LGrid["Bottom"].."):",
+		},
 		["xoffsetTB"] = {
 			type = "range",
-			name = L["Offset X-axis (top/bottom)"],
-			desc = L["Adjust the offset of the X-axis for the top and bottom icon."],
+			name = LGrid["Horizontal"],
 			order = 20,
-			width = "double",
+			width = "fill",
 			min = -20,
 			max = 20,
 			step = 1,
-			get = function()
-				return GridIndicatorSideIcons.db.profile.xoffsetTB
-			end,
+			get = function() return GridIndicatorSideIcons.db.profile.xoffsetTB end,
 			set = function(_, v)
 				GridIndicatorSideIcons.db.profile.xoffsetTB = v
 				for _, f in pairs(GridFrame.registeredFrames) do
-					GridIndicatorSideIcons.SetIconSize(f)
+					SetIconSize(f)
+				end
+				if configMode then
+					GridIndicatorSideIcons:ConfigMode()
 				end
 			end,
 		},
 		["yoffsetTB"] = {
 			type = "range",
-			name = L["Offset Y-axis (top/bottom)"],
-			desc = L["Adjust the offset of the Y-axis for the top and bottom icon."],
+			name = LGrid["Vertical"],
 			order = 30,
-			width = "double",
+			width = "fill",
 			min = -20,
 			max = 20,
 			step = 1,
@@ -88,16 +255,24 @@ local options = {
 			set = function(_, v)
 				GridIndicatorSideIcons.db.profile.yoffsetTB = v
 				for _, f in pairs(GridFrame.registeredFrames) do
-					GridIndicatorSideIcons.SetIconSize(f)
+					SetIconSize(f)
+				end
+				if configMode then
+					GridIndicatorSideIcons:ConfigMode()
 				end
 			end,
 		},
+		["desc1a"] = {
+			type = "description",
+			order = 31,
+			width = "full",
+			name = L["Offset"].." ("..LGrid["Left"].."/"..LGrid["Right"].."):",
+		},
 		["xoffsetLR"] = {
 			type = "range",
-			name = L["Offset X-axis (left/right)"],
-			desc = L["Adjust the offset of the X-axis for the left and right icon."],
+			name = LGrid["Horizontal"],
 			order = 40,
-			width = "double",
+			width = "fill",
 			min = -20,
 			max = 20,
 			step = 1,
@@ -105,16 +280,18 @@ local options = {
 			set = function(_, v)
 				GridIndicatorSideIcons.db.profile.xoffsetLR = v
 				for _, f in pairs(GridFrame.registeredFrames) do
-					GridIndicatorSideIcons.SetIconSize(f)
+					SetIconSize(f)
+				end
+				if configMode then
+					GridIndicatorSideIcons:ConfigMode()
 				end
 			end,
 		},
 		["yoffsetLR"] = {
 			type = "range",
-			name = L["Offset Y-axis (left/right)"],
-			desc = L["Adjust the offset of the Y-axis for the left and right icon."],
+			name = LGrid["Vertical"],
 			order = 50,
-			width = "double",
+			width = "fill",
 			min = -20,
 			max = 20,
 			step = 1,
@@ -122,7 +299,10 @@ local options = {
 			set = function(_, v)
 				GridIndicatorSideIcons.db.profile.yoffsetLR = v
 				for _, f in pairs(GridFrame.registeredFrames) do
-					GridIndicatorSideIcons.SetIconSize(f)
+					SetIconSize(f)
+				end
+				if configMode then
+					GridIndicatorSideIcons:ConfigMode()
 				end
 			end,
 		},
@@ -135,238 +315,216 @@ local options = {
 		["originalsize"] = {
 			type = "toggle",
 			name = L["Same settings as Grid"],
-			desc = L["If enabled, the settings for the Icon (Sides) indicators are adjustable with the standard Grid options. If deactivated, you can set individual settings for the Icon (Sides) indicators."],
 			order = 60,
-			width = "double",
+			width = "full",
 			get = function() return GridIndicatorSideIcons.db.profile.OriginalSize end,
 			set = function(_, v)
 				GridIndicatorSideIcons.db.profile.OriginalSize = v
 				for _, f in pairs(GridFrame.registeredFrames) do
-					GridIndicatorSideIcons.SetIconSize(f)
+					SetIconSize(f)
 				end
 				if configMode then
-					for _, f in pairs(GridFrame.registeredFrames) do
-						GridIndicatorSideIcons:GridIndicatorSideIconsConfig(f)
-					end
+					GridIndicatorSideIcons:ConfigMode()
 				end
 			end,
 		},
-		["header3"] = {
-			type = "header",
-			order = 65,
-			width = "full",
-			name = "",
-		},
-		["iconbordersize"] = {
-			type = "range",
-			name = L["Icon Border Size"],
-			desc = L["Adjust the size of the icon's border."],
-			order = 70,
-			width = "double",
-			disabled = function() return GridIndicatorSideIcons.db.profile.OriginalSize end,
-			min = 0,
-			max = 4,
-			step = 1,
-			get = function() return GridIndicatorSideIcons.db.profile.iconBorderSize end,
-			set = function(_, v)
-				GridIndicatorSideIcons.db.profile.iconBorderSize = v
-				for _, f in pairs(GridFrame.registeredFrames) do
-					GridIndicatorSideIcons.SetIconSize(f)
-				end
-				if configMode then
-					for _, f in pairs(GridFrame.registeredFrames) do
-						GridIndicatorSideIcons:GridIndicatorSideIconsConfig(f)
-					end
-				end
-			end,
-		},
-		["header4"] = {
-			type = "header",
-			order = 75,
-			width = "full",
-			name = "",
-		},
-		["iconcooldown"] = {
-			type = "toggle",
-			name = L["Enable Icon Cooldown Frame"],
-			desc = L["Toggle icon's cooldown frame."],
-			order = 80,
-			width = "double",
-			disabled = function() return GridIndicatorSideIcons.db.profile.OriginalSize end,
-			get = function() return GridIndicatorSideIcons.db.profile.enableIconCooldown end,
-			set = function(_, v)
-				GridIndicatorSideIcons.db.profile.enableIconCooldown = v
-				if configMode then
-					for _, f in pairs(GridFrame.registeredFrames) do
-						GridIndicatorSideIcons:GridIndicatorSideIconsConfig(f)
-					end
-				end
-			end,
-		},
-		["iconstacktext"] = {
-			type = "toggle",
-			name = L["Enable Icon Stack Text"],
-			desc = L["Toggle icon's stack count text."],
-			order = 90,
-			width = "double",
-			disabled = function() return GridIndicatorSideIcons.db.profile.OriginalSize end,
-			get = function() return GridIndicatorSideIcons.db.profile.enableIconStackText end,
-			set = function(_, v)
-				GridIndicatorSideIcons.db.profile.enableIconStackText = v
-				if configMode then
-					for _, f in pairs(GridFrame.registeredFrames) do
-						GridIndicatorSideIcons:GridIndicatorSideIconsConfig(f)
-					end
-				end
-			end,
-		},
-		["header5"] = {
-			type = "header",
-			order = 95,
-			width = "full",
-			name = "",
-		},
-		["iconstacktextfontsize"] = {
-			type = "range",
-			name = L["Icon Stack Text: Font Size"],
-			desc = L["Adjust the font size for Icon Stack Text."],
-			order = 100,
-			width = "double",
-			disabled = function() return not GridIndicatorSideIcons.db.profile.enableIconStackText or GridIndicatorSideIcons.db.profile.OriginalSize end,
-			min = 6,
-			max = 24,
-			step = 1,
-			get = function() return GridIndicatorSideIcons.db.profile.IconStackTextSize end,
-			set = function(_, v)
-				GridIndicatorSideIcons.db.profile.IconStackTextSize = v
-				for _, f in pairs(GridFrame.registeredFrames) do
-					GridIndicatorSideIcons.SetIconSize(f)
-				end
-			end,
-		},
-		["iconstacktextxoffset"] = {
-			type = "range",
-			name = L["Icon Stack Text: Offset X-axis"],
-			desc = L["Adjust the offset for Icon Stack Text of the X-axis."],
-			order = 110,
-			width = "double",
-			disabled = function() return not GridIndicatorSideIcons.db.profile.enableIconStackText or GridIndicatorSideIcons.db.profile.OriginalSize end,
-			min = -20,
-			max = 20,
-			step = 1,
-			get = function() return GridIndicatorSideIcons.db.profile.IconStackTextXaxis end,
-			set = function(_, v)
-				GridIndicatorSideIcons.db.profile.IconStackTextXaxis = v
-				for _, f in pairs(GridFrame.registeredFrames) do
-					GridIndicatorSideIcons.SetIconSize(f)
-				end
-			end,
-		},
-		["iconstacktextyoffset"] = {
-			type = "range",
-			name = L["Icon Stack Text: Offset Y-axis"],
-			desc = L["Adjust the offset for Icon Stack Text of the Y-axis."],
-			order = 111,
-			width = "double",
-			disabled = function() return not GridIndicatorSideIcons.db.profile.enableIconStackText or GridIndicatorSideIcons.db.profile.OriginalSize end,
-			min = -20,
-			max = 20,
-			step = 1,
-			get = function() return GridIndicatorSideIcons.db.profile.IconStackTextYaxis end,
-			set = function(_, v)
-				GridIndicatorSideIcons.db.profile.IconStackTextYaxis = v
-				for _, f in pairs(GridFrame.registeredFrames) do
-					GridIndicatorSideIcons.SetIconSize(f)
-				end
-			end,
-		},
-		["header6"] = {
-			type = "header",
-			order = 115,
-			width = "full",
-			name = "",
-		},
-		["iconsizetop"] = {
-			type = "range",
-			icon = "Interface\\AddOns\\GridIndicatorSideIcons\\GridIndicatorSideIcons-icon-T",
-			name = L["Icon Size Top"],
-			desc = L["Adjust the size of the top icon."],
-			order = 120,
-			disabled = function() return GridIndicatorSideIcons.db.profile.OriginalSize end,
-			min = 5,
-			max = 50,
-			step = 1,
-			get = function() return GridIndicatorSideIcons.db.profile.iconSizeTop end,
-			set = function(_, v)
-				GridIndicatorSideIcons.db.profile.iconSizeTop = v
-				for _, f in pairs(GridFrame.registeredFrames) do
-					GridIndicatorSideIcons.SetIconSize(f)
-				end
-			end,
-		},
-		["iconsizebottom"] = {
-			type = "range",
-			icon = "Interface\\AddOns\\GridIndicatorSideIcons\\GridIndicatorSideIcons-icon-B",
-			name = L["Icon Size Bottom"],
-			desc = L["Adjust the size of the bottom icon."],
-			order = 130,
-			disabled = function() return GridIndicatorSideIcons.db.profile.OriginalSize end,
-			min = 5,
-			max = 50,
-			step = 1,
-			get = function() return GridIndicatorSideIcons.db.profile.iconSizeBottom end,
-			set = function(_, v)
-				GridIndicatorSideIcons.db.profile.iconSizeBottom = v
-				for _, f in pairs(GridFrame.registeredFrames) do
-					GridIndicatorSideIcons.SetIconSize(f)
-				end
-			end,
-		},
-		["iconsizeleft"] = {
-			type = "range",
-			icon = "Interface\\AddOns\\GridIndicatorSideIcons\\GridIndicatorSideIcons-icon-L",
-			name = L["Icon Size Left"],
-			desc = L["Adjust the size of the left icon."],
-			order = 140,
-			disabled = function() return GridIndicatorSideIcons.db.profile.OriginalSize end,
-			min = 5,
-			max = 50,
-			step = 1,
-			get = function() return GridIndicatorSideIcons.db.profile.iconSizeLeft end,
-			set = function(_, v)
-				GridIndicatorSideIcons.db.profile.iconSizeLeft = v
-				for _, f in pairs(GridFrame.registeredFrames) do
-					GridIndicatorSideIcons.SetIconSize(f)
-				end
-			end,
-		},
-		["iconsizeright"] = {
-			type = "range",
-			icon = "Interface\\AddOns\\GridIndicatorSideIcons\\GridIndicatorSideIcons-icon-R",
-			name = L["Icon Size Right"],
-			desc = L["Adjust the size of the right icon."],
-			order = 150,
-			disabled = function() return GridIndicatorSideIcons.db.profile.OriginalSize end,
-			min = 5,
-			max = 50,
-			step = 1,
-			get = function() return GridIndicatorSideIcons.db.profile.iconSizeRight end,
-			set = function(_, v)
-				GridIndicatorSideIcons.db.profile.iconSizeRight = v
-				for _, f in pairs(GridFrame.registeredFrames) do
-					GridIndicatorSideIcons.SetIconSize(f)
-				end
-			end,
+		["originalopt"] = {
+			name = " ",
+			order = 61,
+			type = "group",
+			dialogInline = true,
+			args = {
+				["iconbordersize"] = {
+					type = "range",
+					name = LGrid["Icon Border Size"],
+					order = 70,
+					width = "double",
+					disabled = function() return GridIndicatorSideIcons.db.profile.OriginalSize end,
+					min = 0,
+					max = 4,
+					step = 1,
+					get = function() return GridIndicatorSideIcons.db.profile.iconBorderSize end,
+					set = function(_, v)
+						GridIndicatorSideIcons.db.profile.iconBorderSize = v
+						for _, f in pairs(GridFrame.registeredFrames) do
+							SetIconSize(f)
+						end
+						if configMode then
+							GridIndicatorSideIcons:ConfigMode()
+						end
+					end,
+				},
+				["dummy1"] = {
+					type = "description",
+					order = 71,
+					width = "full",
+					name = "",
+				},
+				["iconcooldown"] = {
+					type = "toggle",
+					name = format(LGrid["Enable %s"], LGrid["Icon Cooldown Frame"]),
+					order = 80,
+					width = "double",
+					disabled = function() return GridIndicatorSideIcons.db.profile.OriginalSize end,
+					get = function() return GridIndicatorSideIcons.db.profile.enableIconCooldown end,
+					set = function(_, v)
+						GridIndicatorSideIcons.db.profile.enableIconCooldown = v
+						for _, f in pairs(GridFrame.registeredFrames) do
+							SetIconSize(f)
+						end
+						if configMode then
+							GridIndicatorSideIcons:ConfigMode()
+						end
+					end,
+				},
+				["dummy2"] = {
+					type = "description",
+					order = 81,
+					width = "full",
+					name = "",
+				},
+				["iconstacktext"] = {
+					type = "toggle",
+					name = format(LGrid["Enable %s"], LGrid["Icon Stack Text"]),
+					order = 90,
+					width = "double",
+					disabled = function()
+						local a = GridIndicatorSideIcons.db.profile.OriginalSize
+						local b = GridIndicatorSideIcons.db.profile.enableIconCooldown
+						if not a and b then
+							return false
+						else
+							return true
+						end
+					end,
+					get = function() return GridIndicatorSideIcons.db.profile.enableIconStackText end,
+					set = function(_, v)
+						GridIndicatorSideIcons.db.profile.enableIconStackText = v
+						for _, f in pairs(GridFrame.registeredFrames) do
+							SetIconSize(f)
+						end
+						if configMode then
+							GridIndicatorSideIcons:ConfigMode()
+						end
+					end,
+				},
+				["header5"] = {
+					type = "header",
+					order = 91,
+					width = "full",
+					name = "",
+				},
+				["desc2"] = {
+					type = "description",
+					order = 92,
+					width = "full",
+					name = LGrid["Icon Size"]..":",
+				},
+				["iconsizetop"] = {
+					type = "range",
+					name = LGrid["Top"],
+					order = 120,
+					width = "double",
+					disabled = function() return GridIndicatorSideIcons.db.profile.OriginalSize end,
+					min = 5,
+					max = 50,
+					step = 1,
+					get = function() return GridIndicatorSideIcons.db.profile.iconSizeTop end,
+					set = function(_, v)
+						GridIndicatorSideIcons.db.profile.iconSizeTop = v
+						for _, f in pairs(GridFrame.registeredFrames) do
+							SetIconSize(f)
+						end
+						if configMode then
+							GridIndicatorSideIcons:ConfigMode()
+						end
+					end,
+				},
+				["dummy3"] = {
+					type = "description",
+					order = 121,
+					width = "full",
+					name = "",
+				},
+				["iconsizebottom"] = {
+					type = "range",
+					name = LGrid["Bottom"],
+					order = 130,
+					width = "double",
+					disabled = function() return GridIndicatorSideIcons.db.profile.OriginalSize end,
+					min = 5,
+					max = 50,
+					step = 1,
+					get = function() return GridIndicatorSideIcons.db.profile.iconSizeBottom end,
+					set = function(_, v)
+						GridIndicatorSideIcons.db.profile.iconSizeBottom = v
+						for _, f in pairs(GridFrame.registeredFrames) do
+							SetIconSize(f)
+						end
+						if configMode then
+							GridIndicatorSideIcons:ConfigMode()
+						end
+					end,
+				},
+				["dummy4"] = {
+					type = "description",
+					order = 131,
+					width = "full",
+					name = "",
+				},
+				["iconsizeleft"] = {
+					type = "range",
+					name = LGrid["Left"],
+					order = 140,
+					width = "double",
+					disabled = function() return GridIndicatorSideIcons.db.profile.OriginalSize end,
+					min = 5,
+					max = 50,
+					step = 1,
+					get = function() return GridIndicatorSideIcons.db.profile.iconSizeLeft end,
+					set = function(_, v)
+						GridIndicatorSideIcons.db.profile.iconSizeLeft = v
+						for _, f in pairs(GridFrame.registeredFrames) do
+							SetIconSize(f)
+						end
+						if configMode then
+							GridIndicatorSideIcons:ConfigMode()
+						end
+					end,
+				},
+				["dummy5"] = {
+					type = "description",
+					order = 141,
+					width = "full",
+					name = "",
+				},
+				["iconsizeright"] = {
+					type = "range",
+					name = LGrid["Right"],
+					order = 150,
+					width = "double",
+					disabled = function() return GridIndicatorSideIcons.db.profile.OriginalSize end,
+					min = 5,
+					max = 50,
+					step = 1,
+					get = function() return GridIndicatorSideIcons.db.profile.iconSizeRight end,
+					set = function(_, v)
+						GridIndicatorSideIcons.db.profile.iconSizeRight = v
+						for _, f in pairs(GridFrame.registeredFrames) do
+							SetIconSize(f)
+						end
+						if configMode then
+							GridIndicatorSideIcons:ConfigMode()
+						end
+					end,
+				}
+			}
 		}
 	}
 }
 Grid.options.args["GridIndicatorSideIcons"] = options
 
-local indicators = GridFrame.prototype.indicators
-table.insert(indicators, { type = "icontop", order = 7.11, name = L["Top Icon"] })
-table.insert(indicators, { type = "iconbottom", order = 7.12, name = L["Bottom Icon"] })
-table.insert(indicators, { type = "iconleft", order = 7.13, name = L["Left Icon"] })
-table.insert(indicators, { type = "iconright", order = 7.14, name = L["Right Icon"] })
+
 
 local statusmap = GridFrame.db.profile.statusmap
 if not statusmap["icontop"] then
@@ -376,62 +534,40 @@ if not statusmap["icontop"] then
 	statusmap["iconright"] = {}
 end
 
+
+
 function GridIndicatorSideIcons:OnInitialize()
-	GridIndicatorSideIcons.ConfigWarningFrame = CreateFrame("Frame", nil, UIParent)
-	GridIndicatorSideIcons.ConfigWarningFrame:EnableMouse(true)
-	GridIndicatorSideIcons.ConfigWarningFrame:SetMovable(true)
-	GridIndicatorSideIcons.ConfigWarningFrame:SetResizable(true)
-	GridIndicatorSideIcons.ConfigWarningFrame:SetToplevel(true)
-	GridIndicatorSideIcons.ConfigWarningFrame:SetClampedToScreen(true)
-	GridIndicatorSideIcons.ConfigWarningFrame:SetHeight(44)
-	GridIndicatorSideIcons.ConfigWarningFrame:SetPoint("LEFT", GridLayoutFrame, "RIGHT", 20, 0)
-	GridIndicatorSideIcons.ConfigWarningFrame:Hide()
-	GridIndicatorSideIcons.ConfigWarningBackground = GridIndicatorSideIcons.ConfigWarningFrame:CreateTexture(nil, "BACKGROUND")
-	GridIndicatorSideIcons.ConfigWarningBackground:SetAllPoints(GridIndicatorSideIcons.ConfigWarningFrame)
-	GridIndicatorSideIcons.ConfigWarningBackground:SetTexture(0, 0, 0, 1)
-	GridIndicatorSideIcons.ConfigWarningButton = CreateFrame("Button", nil, GridIndicatorSideIcons.ConfigWarningFrame, "UIPanelButtonTemplate")
-	GridIndicatorSideIcons.ConfigWarningButton:SetHeight(24)
-	GridIndicatorSideIcons.ConfigWarningButton:SetPoint("LEFT", GridIndicatorSideIcons.ConfigWarningFrame, "LEFT", 10, 0)
-	GridIndicatorSideIcons.ConfigWarningButton:SetText(L["Icon (Sides)"].."  |TInterface\\DialogFrame\\UI-Dialog-Icon-AlertNew:17.5:20:0:0:64:64:0:64:0:56|t  "..L["Configuration Mode"])
-	GridIndicatorSideIcons.ConfigWarningButton:SetScript("OnClick", function()
-		configMode = false
-		for _, f in pairs(GridFrame.registeredFrames) do
-			GridIndicatorSideIcons:GridIndicatorSideIconsConfig(f)
-		end
-	end)
-	local w = GridIndicatorSideIcons.ConfigWarningButton:GetTextWidth()
-	GridIndicatorSideIcons.ConfigWarningButton:SetWidth(w+50)
-	GridIndicatorSideIcons.ConfigWarningFrame:SetWidth(w+50+20)
+	if not self.db then
+		self.db = Grid.db:RegisterNamespace(self.moduleName, { profile = self.defaultDB or { } })
+	end
+	GridFrame:RegisterIndicator("icontop",    LGrid["Top"],    NewIndicator, ResetIndicator, SetIndicator, ClearIndicator)
+	GridFrame:RegisterIndicator("iconbottom", LGrid["Bottom"], NewIndicator, ResetIndicator, SetIndicator, ClearIndicator)
+	GridFrame:RegisterIndicator("iconleft",   LGrid["Left"],   NewIndicator, ResetIndicator, SetIndicator, ClearIndicator)
+	GridFrame:RegisterIndicator("iconright",  LGrid["Right"],  NewIndicator, ResetIndicator, SetIndicator, ClearIndicator)
 
-	GridFrame:RegisterModule(self.moduleName, self)
-
-	hooksecurefunc(GridFrame, "UpdateOptionsMenu", self.CleanOptionsMenu)
-	self:CleanOptionsMenu()
-
-	hooksecurefunc(GridFrame.prototype, "SetIndicator", self.SetIndicator)
-	hooksecurefunc(GridFrame.prototype, "ClearIndicator", self.ClearIndicator)
-	hooksecurefunc(GridFrame.prototype, "SetIconSize", self.SetIconSize)
+	hooksecurefunc(GridFrame, "UpdateOptionsMenu", self.ChangeOptionsMenu)
+	GridIndicatorSideIcons:ChangeOptionsMenu()
+	GridIndicatorSideIcons:CreateConfigFrame()
 end
+
+
 
 function GridIndicatorSideIcons:OnEnable()
-	self:RegisterMessage("Grid_Enabled", "DisableConfigMode")
-	self:RegisterMessage("Grid_Disabled", "DisableConfigMode")
 end
 
+
+
 function GridIndicatorSideIcons:OnDisable()
-	configMode = false
-	self:UnregisterMessage("Grid_Enabled")
-	self:UnregisterMessage("Grid_Disabled")
 end
+
+
 
 function GridIndicatorSideIcons:Reset()
 end
 
-function GridIndicatorSideIcons:DisableConfigMode()
-	configMode = false
-end
 
-function GridIndicatorSideIcons:CleanOptionsMenu()
+
+function GridIndicatorSideIcons:ChangeOptionsMenu()
 	if not GridIndicatorSideIcons:IsEnabled() then return end
 	if not Grid.options then return end
 	if not Grid.options.args then return end
@@ -442,480 +578,108 @@ function GridIndicatorSideIcons:CleanOptionsMenu()
 	if not Grid.options.args[GridIndicator].args then return end
 
 	if not Grid.options.args[GridIndicator].args.icontop then return end
+
+	Grid.options.args[GridIndicator].args.icontop.icon  = "Interface\\AddOns\\GridIndicatorSideIcons\\GridIndicatorSideIcons-icon-T"
+	Grid.options.args[GridIndicator].args.iconright.icon = "Interface\\AddOns\\GridIndicatorSideIcons\\GridIndicatorSideIcons-icon-R"
+	Grid.options.args[GridIndicator].args.iconbottom.icon = "Interface\\AddOns\\GridIndicatorSideIcons\\GridIndicatorSideIcons-icon-B"
+	Grid.options.args[GridIndicator].args.iconleft.icon  = "Interface\\AddOns\\GridIndicatorSideIcons\\GridIndicatorSideIcons-icon-L"
+
+	Grid.options.args[GridIndicator].args.icontop.order  = 1
+	Grid.options.args[GridIndicator].args.iconright.order = 2
+	Grid.options.args[GridIndicator].args.iconbottom.order = 3
+	Grid.options.args[GridIndicator].args.iconleft.order  = 4
 	
 	Grid.options.args[GridIndicator].args.GridIndicatorSideIcons = {
 		type = "group",
 		icon = "Interface\\AddOns\\GridIndicatorSideIcons\\GridIndicatorSideIcons-icon-TRBL",
 		name = L["Icon (Sides)"],
-		desc = L["Options for Icon (Sides) indicators."],
 		order = 8.1,
 		args = {
 			["icontop"] = Grid.options.args[GridIndicator].args.icontop,
+			["iconright"] = Grid.options.args[GridIndicator].args.iconright,
 			["iconbottom"] = Grid.options.args[GridIndicator].args.iconbottom,
-			["iconleft"] = Grid.options.args[GridIndicator].args.iconleft,
-			["iconright"] = Grid.options.args[GridIndicator].args.iconright
+			["iconleft"] = Grid.options.args[GridIndicator].args.iconleft
 		}
 	}
-	
-	Grid.options.args[GridIndicator].args.icontop.icon  = "Interface\\AddOns\\GridIndicatorSideIcons\\GridIndicatorSideIcons-icon-T"
-	Grid.options.args[GridIndicator].args.iconbottom.icon = "Interface\\AddOns\\GridIndicatorSideIcons\\GridIndicatorSideIcons-icon-B"
-	Grid.options.args[GridIndicator].args.iconleft.icon  = "Interface\\AddOns\\GridIndicatorSideIcons\\GridIndicatorSideIcons-icon-L"
-	Grid.options.args[GridIndicator].args.iconright.icon = "Interface\\AddOns\\GridIndicatorSideIcons\\GridIndicatorSideIcons-icon-R"
-	
+
 	Grid.options.args[GridIndicator].args.icontop = nil
+	Grid.options.args[GridIndicator].args.iconright = nil
 	Grid.options.args[GridIndicator].args.iconbottom = nil
 	Grid.options.args[GridIndicator].args.iconleft = nil
-	Grid.options.args[GridIndicator].args.iconright = nil
 end
 
-function GridIndicatorSideIcons:GridIndicatorSideIconsConfig(frame)
+
+
+function GridIndicatorSideIcons:CreateConfigFrame()
+	GridIndicatorSideIcons.ConfigWarningFrame = CreateFrame("Frame", nil, UIParent)
+	local frame = GridIndicatorSideIcons.ConfigWarningFrame
+	frame:EnableMouse(true)
+	frame:SetMovable(true)
+	frame:SetToplevel(true)
+	frame:SetClampedToScreen(true)
+	frame:SetHeight(100)
+	frame:SetBackdrop({
+		bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background",
+		edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
+		tile = true, tileSize = 32, edgeSize = 32,
+		insets = {left = 8, right = 8, top = 8, bottom = 8}
+	})
+	frame:SetPoint("LEFT", GridLayoutFrame, "RIGHT", 40, 0)
+	frame:SetScript("OnMouseDown", function(self)
+		self.isMoving = true
+		self:StartMoving()
+	end)
+	frame:SetScript("OnMouseUp", function(self)
+		if not self.isMoving then return end
+		self.isMoving = nil
+		self:StopMovingOrSizing()
+	end)
+	frame:Hide()
+
+	local background = frame:CreateTexture(nil, "ARTWORK")
+	background:SetPoint("TOP", 0, -15)
+	background:SetTexture("Interface\\DialogFrame\\UI-Dialog-Icon-AlertNew")
+	background:SetHeight(24)
+	background:SetWidth(24)
+
+	local txt = frame:CreateFontString(nil, "ARTWORK", "GameFontNormalSmall")
+	txt:SetPoint("TOP", background, "BOTTOM", 0, -5)
+	txt:SetText("Grid - "..L["Icon (Sides)"].." - "..L["Configuration Mode"])
+	txt:SetTextColor(1, 1, 1, 1)
+
+	local button = CreateFrame("Button", nil, frame, "UIPanelButtonTemplate")
+	button:SetHeight(24)
+	button:SetPoint("TOP", txt, "BOTTOM", 0, -5)
+	button:SetText(CLOSE)
+	button:SetScript("OnClick", function()
+		configMode = false
+		GridIndicatorSideIcons:ConfigMode()
+	end)
+
+	local w = txt:GetStringWidth()
+	button:SetWidth(w+50)
+	frame:SetWidth(w+50+60)
+end
+
+
+
+function GridIndicatorSideIcons:ConfigMode()
 	if configMode then
 		GridIndicatorSideIcons.ConfigWarningFrame:Show()
 		local curTime = GetTime()
-		self.SetIndicator(frame, "icontop", {r=0.29, g=0.21, b=0.81, a=1}, "3", 3, 8, "Interface\\Icons\\Spell_Holy_ArcaneIntellect", curTime, 10, 8)
-		self.SetIndicator(frame, "iconbottom", {r=0.12, g=0.46, b=0.97, a=1}, "4", 4, 8, "Interface\\Icons\\Spell_Holy_PrayerOfFortitude", curTime, 30, 8)
-		self.SetIndicator(frame, "iconleft", {r=0.42, g=0.07, b=0.24, a=1}, "5", 5, 8, "Interface\\TargetingFrame\\UI-RaidTargetingIcon_2", curTime, 50, 8)
-		self.SetIndicator(frame, "iconright", {r=0.16, g=0.78, b=0.21, a=1}, "8", 8, 8, "Interface\\TargetingFrame\\UI-RaidTargetingIcon_8", curTime, 80, 8)
+		for _, frame in pairs(GridFrame.registeredFrames) do
+			SetIndicator(frame.indicators.icontop,    {r=0.29, g=0.21, b=0.81, a=1}, "3", 3, 8, "Interface\\Icons\\Spell_Holy_ArcaneIntellect",     {left=0   , right=1   , top=0   , bottom=1   }, 8, curTime, 9)
+			SetIndicator(frame.indicators.iconbottom, {r=0.78, g=0.69, b=0.97, a=1}, "4", 4, 8, "Interface\\Icons\\Spell_Holy_WordFortitude",       {left=0   , right=1   , top=0   , bottom=1   }, 8, curTime, 15)
+			SetIndicator(frame.indicators.iconleft,   {r=0.42, g=0.07, b=0.24, a=1}, "5", 5, 8, "Interface\\TargetingFrame\\UI-RaidTargetingIcons", {left=0   , right=0.25, top=0   , bottom=0.25}, 8, curTime, 9)
+			SetIndicator(frame.indicators.iconright,  {r=0.16, g=0.21, b=0.78, a=1}, "8", 8, 8, "Interface\\Icons\\Spell_Shadow_DemonBreath",       {left=0   , right=1   , top=0   , bottom=1   }, 8, curTime, 80)
+		end
 	else
 		GridIndicatorSideIcons.ConfigWarningFrame:Hide()
-		self.ClearIndicator(frame, "icontop")
-		self.ClearIndicator(frame, "iconbottom")
-		self.ClearIndicator(frame, "iconleft")
-		self.ClearIndicator(frame, "iconright")
-		GridFrame:UpdateAllFrames()
-	end
-end
-
-function GridIndicatorSideIcons.CreateIndicator(f, indicator)
-	local font = media and media:Fetch("font", GridFrame.db.profile.font) or STANDARD_TEXT_FONT
-	local xoffsetTB = GridIndicatorSideIcons.db.profile.xoffsetTB
-	local yoffsetTB = GridIndicatorSideIcons.db.profile.yoffsetTB
-	local xoffsetLR = GridIndicatorSideIcons.db.profile.xoffsetLR
-	local yoffsetLR = GridIndicatorSideIcons.db.profile.yoffsetLR
-	local borderSize = GridIndicatorSideIcons.db.profile.iconBorderSize
-	local iconStackTextSize = GridIndicatorSideIcons.db.profile.IconStackTextSize
-	local iconStackTextXaxis = GridIndicatorSideIcons.db.profile.IconStackTextXaxis
-	local iconStackTextYaxis = GridIndicatorSideIcons.db.profile.IconStackTextYaxis
-	if GridIndicatorSideIcons.db.profile.OriginalSize then
-		borderSize = GridFrame.db.profile.iconBorderSize
-		iconStackTextSize = GridFrame.db.profile.fontSize
-		iconStackTextXaxis = 1
-		iconStackTextYaxis = -1
-	end
-
-	if indicator == "icontop" then
-		local wh = GridIndicatorSideIcons.db.profile.iconSizeTop
-		if GridIndicatorSideIcons.db.profile.OriginalSize then
-			wh = GridFrame.db.profile.iconSize
+		for _, frame in pairs(GridFrame.registeredFrames) do
+			ClearIndicator(frame.indicators.icontop)
+			ClearIndicator(frame.indicators.iconbottom)
+			ClearIndicator(frame.indicators.iconleft)
+			ClearIndicator(frame.indicators.iconright)
 		end
-
-		f.icontopBG = CreateFrame("Frame", nil, f)
-		f.icontopBG:SetWidth(wh + (2*borderSize))
-		f.icontopBG:SetHeight(wh + (2*borderSize))
-		f.icontopBG:SetPoint("TOP", f, "TOP", xoffsetTB, yoffsetTB)
-		f.icontopBG:SetBackdrop( {
-					edgeFile = "Interface\\Buttons\\WHITE8X8", edgeSize = 2,
-					insets = {left = 2, right = 2, top = 2, bottom = 2},
-					})
-		f.icontopBG:SetBackdropBorderColor(1, 1, 1, 0)
-		f.icontopBG:SetBackdropColor(0, 0, 0, 0)
-		f.icontopBG:SetFrameLevel(f.Bar:GetFrameLevel()+2)
-		f.icontopBG:Hide()
-
-		f.icontop = f.icontopBG:CreateTexture(nil, "OVERLAY")
-		f.icontop:SetWidth(wh)
-		f.icontop:SetHeight(wh)
-		f.icontop:SetPoint("CENTER", f.icontopBG, "CENTER")
-
-		f.icontopText = f.icontopBG:CreateFontString(nil, "OVERLAY")
-		f.icontopText:SetAllPoints(f.icontopBG)
-		f.icontopText:SetFontObject(GameFontHighlightSmall)
-		f.icontopText:SetFont(font, GridFrame.db.profile.fontSize)
-		f.icontopText:SetJustifyH("CENTER")
-		f.icontopText:SetJustifyV("MIDDLE")
-
-		f.icontopCD = CreateFrame("Cooldown", nil, f.icontopBG, "CooldownFrameTemplate")
-		f.icontopCD:SetAllPoints(f.icontop)
-		f.icontopCD:SetScript("OnHide", function()
-			f.icontopStackText:SetParent(f.icontopBG)
-			f.icontopStackText:SetPoint("BOTTOMRIGHT", f.icontopBG, iconStackTextXaxis, -iconStackTextYaxis)
-		end)
-
-		f.icontopStackText = f.icontopBG:CreateFontString(nil, "OVERLAY")
-		f.icontopStackText:SetPoint("BOTTOMRIGHT", f.icontopBG, iconStackTextXaxis, -iconStackTextYaxis)
-		f.icontopStackText:SetFontObject(GameFontHighlightSmall)
-		f.icontopStackText:SetFont(font, iconStackTextSize, "OUTLINE")
-		f.icontopStackText:SetJustifyH("CENTER")
-		f.icontopStackText:SetJustifyV("BOTTOM")
-	elseif indicator == "iconbottom" then
-		local wh = GridIndicatorSideIcons.db.profile.iconSizeBottom
-		if GridIndicatorSideIcons.db.profile.OriginalSize then
-			wh = GridFrame.db.profile.iconSize
-		end
-
-		f.iconbottomBG = CreateFrame("Frame", nil, f)
-		f.iconbottomBG:SetWidth(wh + (2*borderSize))
-		f.iconbottomBG:SetHeight(wh + (2*borderSize))
-		f.iconbottomBG:SetPoint("BOTTOM", f, "BOTTOM", xoffsetTB, (yoffsetTB*-1))
-		f.iconbottomBG:SetBackdrop( {
-					edgeFile = "Interface\\Buttons\\WHITE8X8", edgeSize = 2,
-					insets = {left = 2, right = 2, top = 2, bottom = 2},
-					})
-		f.iconbottomBG:SetBackdropBorderColor(1, 1, 1, 0)
-		f.iconbottomBG:SetBackdropColor(0, 0, 0, 0)
-		f.iconbottomBG:SetFrameLevel(f.Bar:GetFrameLevel()+2)
-		f.iconbottomBG:Hide()
-
-		f.iconbottom = f.iconbottomBG:CreateTexture(nil, "OVERLAY")
-		f.iconbottom:SetWidth(wh)
-		f.iconbottom:SetHeight(wh)
-		f.iconbottom:SetPoint("CENTER", f.iconbottomBG, "CENTER")
-
-		f.iconbottomText = f.iconbottomBG:CreateFontString(nil, "OVERLAY")
-		f.iconbottomText:SetAllPoints(f.iconbottomBG)
-		f.iconbottomText:SetFontObject(GameFontHighlightSmall)
-		f.iconbottomText:SetFont(font, GridFrame.db.profile.fontSize)
-		f.iconbottomText:SetJustifyH("CENTER")
-		f.iconbottomText:SetJustifyV("MIDDLE")
-
-		f.iconbottomCD = CreateFrame("Cooldown", nil, f.iconbottomBG, "CooldownFrameTemplate")
-		f.iconbottomCD:SetAllPoints(f.iconbottom)
-		f.iconbottomCD:SetScript("OnHide", function()
-			f.iconbottomStackText:SetParent(f.iconbottomBG)
-			f.iconbottomStackText:SetPoint("BOTTOMRIGHT", f.iconbottomBG, iconStackTextXaxis, -iconStackTextYaxis)
-		end)
-
-		f.iconbottomStackText = f.iconbottomBG:CreateFontString(nil, "OVERLAY")
-		f.iconbottomStackText:SetPoint("BOTTOMRIGHT", f.iconbottomBG, iconStackTextXaxis, -iconStackTextYaxis)
-		f.iconbottomStackText:SetFontObject(GameFontHighlightSmall)
-		f.iconbottomStackText:SetFont(font, iconStackTextSize, "OUTLINE")
-		f.iconbottomStackText:SetJustifyH("CENTER")
-		f.iconbottomStackText:SetJustifyV("BOTTOM")
-	elseif indicator == "iconleft" then
-		local wh = GridIndicatorSideIcons.db.profile.iconSizeLeft
-		if GridIndicatorSideIcons.db.profile.OriginalSize then
-			wh = GridFrame.db.profile.iconSize
-		end
-
-		f.iconleftBG = CreateFrame("Frame", nil, f)
-		f.iconleftBG:SetWidth(wh + (2*borderSize))
-		f.iconleftBG:SetHeight(wh + (2*borderSize))
-		f.iconleftBG:SetPoint("LEFT", f, "LEFT", (xoffsetLR*-1), yoffsetLR)
-		f.iconleftBG:SetBackdrop( {
-					edgeFile = "Interface\\Buttons\\WHITE8X8", edgeSize = 2,
-					insets = {left = 2, right = 2, top = 2, bottom = 2},
-					})
-		f.iconleftBG:SetBackdropBorderColor(1, 1, 1, 0)
-		f.iconleftBG:SetBackdropColor(0, 0, 0, 0)
-		f.iconleftBG:SetFrameLevel(f.Bar:GetFrameLevel()+2)
-		f.iconleftBG:Hide()
-
-		f.iconleft = f.iconleftBG:CreateTexture(nil, "OVERLAY")
-		f.iconleft:SetWidth(wh)
-		f.iconleft:SetHeight(wh)
-		f.iconleft:SetPoint("CENTER", f.iconleftBG, "CENTER")
-
-		f.iconleftText = f.iconleftBG:CreateFontString(nil, "OVERLAY")
-		f.iconleftText:SetAllPoints(f.iconleftBG)
-		f.iconleftText:SetFontObject(GameFontHighlightSmall)
-		f.iconleftText:SetFont(font, GridFrame.db.profile.fontSize)
-		f.iconleftText:SetJustifyH("CENTER")
-		f.iconleftText:SetJustifyV("MIDDLE")
-
-		f.iconleftCD = CreateFrame("Cooldown", nil, f.iconleftBG, "CooldownFrameTemplate")
-		f.iconleftCD:SetAllPoints(f.iconleft)
-		f.iconleftCD:SetScript("OnHide", function()
-			f.iconleftStackText:SetParent(f.iconleftBG)
-			f.iconleftStackText:SetPoint("BOTTOMRIGHT", f.iconleftBG, iconStackTextXaxis, -iconStackTextYaxis)
-		end)
-
-		f.iconleftStackText = f.iconleftBG:CreateFontString(nil, "OVERLAY")
-		f.iconleftStackText:SetPoint("BOTTOMRIGHT", f.iconleftBG, iconStackTextXaxis, -iconStackTextYaxis)
-		f.iconleftStackText:SetFontObject(GameFontHighlightSmall)
-		f.iconleftStackText:SetFont(font, iconStackTextSize, "OUTLINE")
-		f.iconleftStackText:SetJustifyH("CENTER")
-		f.iconleftStackText:SetJustifyV("BOTTOM")
-	elseif indicator == "iconright" then
-		local wh = GridIndicatorSideIcons.db.profile.iconSizeRight
-		if GridIndicatorSideIcons.db.profile.OriginalSize then
-			wh = GridFrame.db.profile.iconSize
-		end
-
-		f.iconrightBG = CreateFrame("Frame", nil, f)
-		f.iconrightBG:SetWidth(wh + (2*borderSize))
-		f.iconrightBG:SetHeight(wh + (2*borderSize))
-		f.iconrightBG:SetPoint("RIGHT", f, "RIGHT", xoffsetLR, yoffsetLR)
-		f.iconrightBG:SetBackdrop( {
-					edgeFile = "Interface\\Buttons\\WHITE8X8", edgeSize = 2,
-					insets = {left = 2, right = 2, top = 2, bottom = 2},
-					})
-		f.iconrightBG:SetBackdropBorderColor(1, 1, 1, 0)
-		f.iconrightBG:SetBackdropColor(0, 0, 0, 0)
-		f.iconrightBG:SetFrameLevel(f.Bar:GetFrameLevel()+2)
-		f.iconrightBG:Hide()
-
-		f.iconright = f.iconrightBG:CreateTexture(nil, "OVERLAY")
-		f.iconright:SetWidth(wh)
-		f.iconright:SetHeight(wh)
-		f.iconright:SetPoint("CENTER", f.iconrightBG, "CENTER")
-
-		f.iconrightText = f.iconrightBG:CreateFontString(nil, "OVERLAY")
-		f.iconrightText:SetAllPoints(f.iconrightBG)
-		f.iconrightText:SetFontObject(GameFontHighlightSmall)
-		f.iconrightText:SetFont(font, GridFrame.db.profile.fontSize)
-		f.iconrightText:SetJustifyH("CENTER")
-		f.iconrightText:SetJustifyV("MIDDLE")
-
-		f.iconrightCD = CreateFrame("Cooldown", nil, f.iconrightBG, "CooldownFrameTemplate")
-		f.iconrightCD:SetAllPoints(f.iconright)
-		f.iconrightCD:SetScript("OnHide", function()
-			f.iconrightStackText:SetParent(f.iconrightBG)
-			f.iconrightStackText:SetPoint("BOTTOMRIGHT", f.iconrightBG, iconStackTextXaxis, -iconStackTextYaxis)
-		end)
-
-		f.iconrightStackText = f.iconrightBG:CreateFontString(nil, "OVERLAY")
-		f.iconrightStackText:SetPoint("BOTTOMRIGHT", f.iconrightBG, iconStackTextXaxis, -iconStackTextYaxis)
-		f.iconrightStackText:SetFontObject(GameFontHighlightSmall)
-		f.iconrightStackText:SetFont(font, iconStackTextSize, "OUTLINE")
-		f.iconrightStackText:SetJustifyH("CENTER")
-		f.iconrightStackText:SetJustifyV("BOTTOM")
-	end
-end
-
-function GridIndicatorSideIcons.SetIndicator(frame, indicator, color, text, value, maxValue, texture, start, duration, stack, texCoords)
-
-	if indicator == "icontop"
-	or indicator == "iconbottom"
-	or indicator == "iconleft"
-	or indicator == "iconright"
-	then
-		if not frame[indicator] then
-			GridIndicatorSideIcons.CreateIndicator(frame, indicator)
-		end
-		if texture then
-			local borderSize = GridIndicatorSideIcons.db.profile.iconBorderSize
-			local enabledCD = GridIndicatorSideIcons.db.profile.enableIconCooldown
-			local IconStackTextXaxis = GridIndicatorSideIcons.db.profile.IconStackTextXaxis
-			local IconStackTextYaxis = GridIndicatorSideIcons.db.profile.IconStackTextYaxis
-			local enabledStackTxt = GridIndicatorSideIcons.db.profile.enableIconStackText
-			if GridIndicatorSideIcons.db.profile.OriginalSize then
-				borderSize = GridFrame.db.profile.iconBorderSize
-				enabledCD = GridFrame.db.profile.enableIconCooldown
-				IconStackTextXaxis = 2
-				IconStackTextYaxis = 2
-				enabledStackTxt = GridFrame.db.profile.enableIconStackText
-			end
-
-			if type(texture) == "table" then
-				frame[indicator]:SetTexture(texture.r, texture.g, texture.b, texture.a or 1)
-			else
-				frame[indicator]:SetTexture(texture)
-			end
-			if type(texCoords) == "table" then
-				frame[indicator]:SetTexCoord(texCoords.left, texCoords.right, texCoords.top, texCoords.bottom)
-			else
-				frame[indicator]:SetTexCoord(0, 1, 0, 1)
-			end
-
-			if type(color) == "table" then
-				if not color.ignore then
-					if borderSize > 0 then
-						frame[indicator.."BG"]:SetBackdropBorderColor(color.r, color.g, color.b, color.a or 1)
-					end
-				else
-					frame[indicator.."BG"]:SetBackdropBorderColor(0, 0, 0, 0)
-				end
-				frame[indicator]:SetAlpha(color.a or 1)
-			else
-				frame[indicator.."BG"]:SetBackdropBorderColor(0, 0, 0, 0)
-				frame[indicator]:SetAlpha(1)
-			end
-
-			if enabledCD and type(duration) == "number" and duration > 0 and type(start) == "number" and start > 0 then
-				frame[indicator.."CD"]:SetCooldown(start, duration)
-				frame[indicator.."CD"]:Show()
-				frame[indicator.."StackText"]:SetParent(frame[indicator.."CD"])
-				frame[indicator.."StackText"]:SetPoint("BOTTOMRIGHT", frame[indicator.."BG"], IconStackTextXaxis, -IconStackTextYaxis)
-			else
-				frame[indicator.."CD"]:Hide()
-			end
-
-			if enabledStackTxt and tonumber(stack) and tonumber(stack) > 1 then
-				frame[indicator.."StackText"]:SetText(stack)
-			else
-				frame[indicator.."StackText"]:SetText("")
-			end
-
-			frame[indicator.."BG"]:Show()
-			frame[indicator]:Show()
-		else
-			frame[indicator.."BG"]:Hide()
-		end
-	end
-end
-
-function GridIndicatorSideIcons.ClearIndicator(frame, indicator)
-	if indicator == "icontop"
-	or indicator == "iconbottom"
-	or indicator == "iconleft"
-	or indicator == "iconright"
-	then
-		if frame[indicator] then
-			frame[indicator]:SetTexture(1, 1, 1, 0)
-			frame[indicator.."BG"]:Hide()
-			frame[indicator.."StackText"]:SetText("")
-			frame[indicator.."CD"]:Hide()
-		end
-	end
-end
-
-function GridIndicatorSideIcons.SetIconSize(f)
-	local xoffsetTB = GridIndicatorSideIcons.db.profile.xoffsetTB
-	local yoffsetTB = GridIndicatorSideIcons.db.profile.yoffsetTB
-	local xoffsetLR = GridIndicatorSideIcons.db.profile.xoffsetLR
-	local yoffsetLR = GridIndicatorSideIcons.db.profile.yoffsetLR
-	local borderSize = GridIndicatorSideIcons.db.profile.iconBorderSize
-	local iconStackTextSize = GridIndicatorSideIcons.db.profile.IconStackTextSize
-	local iconStackTextXaxis = GridIndicatorSideIcons.db.profile.IconStackTextXaxis
-	local iconStackTextYaxis = GridIndicatorSideIcons.db.profile.IconStackTextYaxis
-	local font = media and media:Fetch("font", GridFrame.db.profile.font) or STANDARD_TEXT_FONT
-	if GridIndicatorSideIcons.db.profile.OriginalSize then
-		borderSize = GridFrame.db.profile.iconBorderSize
-		iconStackTextSize = GridFrame.db.profile.fontSize
-		iconStackTextXaxis = 1
-		iconStackTextYaxis = -1
-	end
-
-	if f.icontop then
-		local size = GridIndicatorSideIcons.db.profile.iconSizeTop
-		if GridIndicatorSideIcons.db.profile.OriginalSize then
-			size = GridFrame.db.profile.iconSize
-		end
-
-		local backdrop = f.icontopBG:GetBackdrop()
-
-		backdrop.edgeSize = borderSize
-		backdrop.insets.left = borderSize
-		backdrop.insets.right = borderSize
-		backdrop.insets.top = borderSize
-		backdrop.insets.bottom = borderSize
-
-		local r, g, b, a = f.icontopBG:GetBackdropBorderColor()
-
-		f.icontopBG:SetBackdrop(backdrop)
-		if borderSize == 0 then
-			f.icontopBG:SetBackdropBorderColor(0, 0, 0, 0)
-		else
-			f.icontopBG:SetBackdropBorderColor(r, g, b, a)
-		end
-
-		f.icontopBG:SetPoint("TOP", f, "TOP", xoffsetTB, yoffsetTB)
-		f.icontopBG:SetWidth(size + (2*borderSize))
-		f.icontopBG:SetHeight(size + (2*borderSize))
-
-		f.icontop:SetWidth(size)
-		f.icontop:SetHeight(size)
-
-		f.icontopStackText:SetFont(font, iconStackTextSize, "OUTLINE")
-		f.icontopStackText:SetPoint("BOTTOMRIGHT", f.icontopBG, iconStackTextXaxis, -iconStackTextYaxis)
-	end
-	if f.iconbottom then
-		local size = GridIndicatorSideIcons.db.profile.iconSizeBottom
-		if GridIndicatorSideIcons.db.profile.OriginalSize then
-			size = GridFrame.db.profile.iconSize
-		end
-
-		local backdrop = f.iconbottomBG:GetBackdrop()
-
-		backdrop.edgeSize = borderSize
-		backdrop.insets.left = borderSize
-		backdrop.insets.right = borderSize
-		backdrop.insets.top = borderSize
-		backdrop.insets.bottom = borderSize
-
-		local r, g, b, a = f.iconbottomBG:GetBackdropBorderColor()
-
-		f.iconbottomBG:SetBackdrop(backdrop)
-		if borderSize == 0 then
-			f.iconbottomBG:SetBackdropBorderColor(0, 0, 0, 0)
-		else
-			f.iconbottomBG:SetBackdropBorderColor(r, g, b, a)
-		end
-
-		f.iconbottomBG:SetPoint("BOTTOM", f, "BOTTOM", xoffsetTB, (yoffsetTB*-1))
-		f.iconbottomBG:SetWidth(size + (2*borderSize))
-		f.iconbottomBG:SetHeight(size + (2*borderSize))
-
-		f.iconbottom:SetWidth(size)
-		f.iconbottom:SetHeight(size)
-
-		f.iconbottomStackText:SetFont(font, iconStackTextSize, "OUTLINE")
-		f.iconbottomStackText:SetPoint("BOTTOMRIGHT", f.iconbottomBG, iconStackTextXaxis, -iconStackTextYaxis)
-	end
-	if f.iconleft then
-		local size = GridIndicatorSideIcons.db.profile.iconSizeLeft
-		if GridIndicatorSideIcons.db.profile.OriginalSize then
-			size = GridFrame.db.profile.iconSize
-		end
-
-		local backdrop = f.iconleftBG:GetBackdrop()
-
-		backdrop.edgeSize = borderSize
-		backdrop.insets.left = borderSize
-		backdrop.insets.right = borderSize
-		backdrop.insets.top = borderSize
-		backdrop.insets.bottom = borderSize
-
-		local r, g, b, a = f.iconleftBG:GetBackdropBorderColor()
-
-		f.iconleftBG:SetBackdrop(backdrop)
-		if borderSize == 0 then
-			f.iconleftBG:SetBackdropBorderColor(0, 0, 0, 0)
-		else
-			f.iconleftBG:SetBackdropBorderColor(r, g, b, a)
-		end
-
-		f.iconleftBG:SetPoint("LEFT", f, "LEFT", (xoffsetLR*-1), yoffsetLR)
-		f.iconleftBG:SetWidth(size + (2*borderSize))
-		f.iconleftBG:SetHeight(size + (2*borderSize))
-
-		f.iconleft:SetWidth(size)
-		f.iconleft:SetHeight(size)
-
-		f.iconleftStackText:SetFont(font, iconStackTextSize, "OUTLINE")
-		f.iconleftStackText:SetPoint("BOTTOMRIGHT", f.iconleftBG, iconStackTextXaxis, -iconStackTextYaxis)
-	end
-	if f.iconright then
-		local size = GridIndicatorSideIcons.db.profile.iconSizeRight
-		if GridIndicatorSideIcons.db.profile.OriginalSize then
-			size = GridFrame.db.profile.iconSize
-		end
-
-		local backdrop = f.iconrightBG:GetBackdrop()
-
-		backdrop.edgeSize = borderSize
-		backdrop.insets.left = borderSize
-		backdrop.insets.right = borderSize
-		backdrop.insets.top = borderSize
-		backdrop.insets.bottom = borderSize
-
-		local r, g, b, a = f.iconrightBG:GetBackdropBorderColor()
-
-		f.iconrightBG:SetBackdrop(backdrop)
-		if borderSize == 0 then
-			f.iconrightBG:SetBackdropBorderColor(0, 0, 0, 0)
-		else
-			f.iconrightBG:SetBackdropBorderColor(r, g, b, a)
-		end
-
-		f.iconrightBG:SetPoint("RIGHT", f, "RIGHT", xoffsetLR, yoffsetLR)
-		f.iconrightBG:SetWidth(size + (2*borderSize))
-		f.iconrightBG:SetHeight(size + (2*borderSize))
-
-		f.iconright:SetWidth(size)
-		f.iconright:SetHeight(size)
-
-		f.iconrightStackText:SetFont(font, iconStackTextSize, "OUTLINE")
-		f.iconrightStackText:SetPoint("BOTTOMRIGHT", f.iconrightBG, iconStackTextXaxis, -iconStackTextYaxis)
 	end
 end

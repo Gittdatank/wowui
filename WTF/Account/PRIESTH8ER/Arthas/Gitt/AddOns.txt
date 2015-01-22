@@ -86,3 +86,4 @@ Stubby: enabled
 !Swatter: enabled
 AngryAssignments: enabled
 LargerMacroIconSelection: disabled
+ReagentRestocker: disabled

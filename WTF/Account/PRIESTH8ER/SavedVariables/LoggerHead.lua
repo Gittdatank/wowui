@@ -16,9 +16,9 @@ LoggerHeadDB = {
 		["Spih - Arthas"] = "Default",
 		["Gitt - Arthas"] = "Default",
 		["Giit - Cho'gall"] = "Default",
-		["Git - Cho'gall"] = "Default",
-		["Giitt - Feathermoon"] = "Default",
 		["Git - Azuremyst"] = "Default",
+		["Giitt - Feathermoon"] = "Default",
+		["Git - Cho'gall"] = "Default",
 		["Greny - Azuremyst"] = "Default",
 		["Burk - Arthas"] = "Default",
 		["Spih - Cho'gall"] = "Default",
@@ -139,13 +139,13 @@ LoggerHeadDB = {
 						[2] = true,
 						[8] = true,
 					},
+					["Shadowfang Keep"] = {
+						[2] = false,
+					},
 					["Shado-Pan Monastery"] = {
 						false, -- [1]
 						true, -- [2]
 						[8] = false,
-					},
-					["Shadowfang Keep"] = {
-						[2] = false,
 					},
 					["Hellfire Citadel: Ramparts"] = {
 						false, -- [1]
@@ -357,13 +357,13 @@ LoggerHeadDB = {
 					},
 				},
 				["none"] = {
+					["Kalimdor"] = {
+						[0] = false,
+					},
 					["Tol Barad"] = {
 						true, -- [1]
 					},
 					["Pandaria"] = {
-						[0] = false,
-					},
-					["Kalimdor"] = {
 						[0] = false,
 					},
 				},

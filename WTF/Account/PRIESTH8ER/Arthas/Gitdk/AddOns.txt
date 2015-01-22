@@ -662,3 +662,4 @@ TidyPlates_Renaitre: enabled
 MasterPlan: enabled
 AngryAssignments: enabled
 LargerMacroIconSelection: disabled
+ReagentRestocker: disabled

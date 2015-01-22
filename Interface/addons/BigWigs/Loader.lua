@@ -23,7 +23,7 @@ do
 	--@end-alpha@]===]
 
 	-- This will (in ZIPs), be replaced by the highest revision number in the source tree.
-	myRevision = tonumber("12535")
+	myRevision = tonumber("12550")
 
 	-- If myRevision ends up NOT being a number, it means we're running a SVN copy.
 	if type(myRevision) ~= "number" then
@@ -462,7 +462,7 @@ do
 	elseif L == "ruRU" then
 	--	delayedMessages[#delayedMessages+1] = "Think you can translate Big Wigs into Russian (ruRU)? Check out our easy translator tool: http://www.wowace.com/addons/big-wigs/localization/"
 	elseif L == "itIT" then
-		delayedMessages[#delayedMessages+1] = "Think you can translate Big Wigs into Italian (itIT)? Check out our easy translator tool: http://www.wowace.com/addons/big-wigs/localization/"
+	--	delayedMessages[#delayedMessages+1] = "Think you can translate Big Wigs into Italian (itIT)? Check out our easy translator tool: http://www.wowace.com/addons/big-wigs/localization/"
 	end
 
 	CTimerAfter(11, function()
@@ -641,7 +641,14 @@ do
 			timerBar.text = timerBar:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
 			timerBar.text:SetPoint("CENTER", timerBar, "CENTER")
 
-			prev = GetTime() + 40
+			self.LFG_PROPOSAL_SHOW = function()
+				prev = GetTime() + 40
+				-- Play in Master for those that have SFX off or very low.
+				-- We can't do PlaySound("ReadyCheck", "Master") as PlaySound is throttled, and Blizz already plays it.
+				PlaySoundFile("Sound\\Interface\\levelup2.ogg", "Master")
+			end
+			self:LFG_PROPOSAL_SHOW()
+
 			timerBar:SetScript("OnUpdate", function(f)
 				local timeLeft = prev - GetTime()
 				if timeLeft > 0 then
@@ -649,8 +656,6 @@ do
 					f.text:SetFormattedText("Big Wigs: %.1f", timeLeft)
 				end
 			end)
-
-			self.LFG_PROPOSAL_SHOW = function() prev = GetTime() + 40 end
 		end
 	end
 end

@@ -11,7 +11,7 @@ local FilterSize	= 20
 local RampUp		= 5
 local RampDown		= 10
 
-Recount.Version = tonumber(string.sub("$Revision: 1288 $", 12, -3))
+Recount.Version = tonumber(string.sub("$Revision: 1290 $", 12, -3))
 
 local _G = _G
 local abs = abs
@@ -42,6 +42,7 @@ local UnitAffectingCombat = UnitAffectingCombat
 local UnitClass = UnitClass
 local UnitExists = UnitExists
 local UnitGUID = UnitGUID
+local UnitInParty = UnitInParty
 local UnitIsFriend = UnitIsFriend
 local UnitIsPlayer = UnitIsPlayer
 local UnitIsTrivial = UnitIsTrivial
@@ -1343,7 +1344,8 @@ function Recount:GroupCheck()
 	Recount.LastGroupCheck = gettime + 0.25
 	for k, v in pairs(dbCombatants) do
 		if k ~= Recount.PlayerName then
-			local Unit = Recount:GetUnitIDFromName(k)
+			--local Unit = Recount:GetUnitIDFromName(k)
+			local Unit = UnitInParty(k)
 			-- Must be in our group
 			if Unit then
 				v.unit = Unit

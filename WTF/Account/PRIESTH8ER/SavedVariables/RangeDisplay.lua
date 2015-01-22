@@ -118,19 +118,7 @@ RangeDisplayDB3 = {
 			["locked"] = true,
 			["mute"] = true,
 			["units"] = {
-				["mouseover"] = {
-					["mouseAnchor"] = false,
-					["y"] = -277.784861528928,
-					["relPoint"] = "RIGHT",
-					["point"] = "RIGHT",
-					["font"] = "SCT Emblem",
-					["enabled"] = false,
-					["x"] = -65.9838804260981,
-				},
-				["arena2"] = {
-				},
-				["focus"] = {
-					["enabled"] = false,
+				["pet"] = {
 				},
 				["playertarget"] = {
 					["fontSize"] = 10,
@@ -138,7 +126,19 @@ RangeDisplayDB3 = {
 					["y"] = -123.895774841309,
 					["font"] = "DorisPP",
 				},
-				["pet"] = {
+				["focus"] = {
+					["enabled"] = false,
+				},
+				["arena2"] = {
+				},
+				["mouseover"] = {
+					["mouseAnchor"] = false,
+					["y"] = -277.784861528928,
+					["font"] = "SCT Emblem",
+					["point"] = "RIGHT",
+					["relPoint"] = "RIGHT",
+					["enabled"] = false,
+					["x"] = -65.9838804260981,
 				},
 				["arena5"] = {
 				},
@@ -425,29 +425,29 @@ RangeDisplayDB3 = {
 			["locked"] = true,
 			["mute"] = true,
 			["units"] = {
-				["arena2"] = {
-				},
 				["playertarget"] = {
 					["y"] = -123.895774841309,
 					["fontSize"] = 10,
 					["x"] = -6.747709267074240e-005,
 					["font"] = "DorisPP",
 				},
+				["arena2"] = {
+				},
 				["focus"] = {
 					["enabled"] = false,
 				},
 				["arena5"] = {
 				},
+				["pet"] = {
+				},
 				["mouseover"] = {
 					["y"] = -277.784861528928,
-					["x"] = -65.9838804260981,
+					["font"] = "SCT Emblem",
 					["point"] = "RIGHT",
 					["mouseAnchor"] = false,
 					["relPoint"] = "RIGHT",
 					["enabled"] = false,
-					["font"] = "SCT Emblem",
-				},
-				["pet"] = {
+					["x"] = -65.9838804260981,
 				},
 				["arena4"] = {
 				},

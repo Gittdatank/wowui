@@ -16,10 +16,10 @@ EPGPLootMaster = {
 		["Gimm - Cho'gall"] = "Gimm - Cho'gall",
 		["Git - Arthas"] = "Git - Arthas",
 		["Gitt - Arthas"] = "Gitt - Arthas",
-		["Burk - Arthas"] = "Burk - Arthas",
-		["Git - Cho'gall"] = "Git - Cho'gall",
-		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
 		["Git - Azuremyst"] = "Git - Azuremyst",
+		["Burk - Arthas"] = "Burk - Arthas",
+		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
+		["Git - Cho'gall"] = "Git - Cho'gall",
 		["Giit - Cho'gall"] = "Giit - Cho'gall",
 		["Greny - Azuremyst"] = "Greny - Azuremyst",
 		["Spih - Cho'gall"] = "Spih - Cho'gall",
@@ -76,19 +76,23 @@ EPGPLootMaster = {
 			["button2"] = "Major",
 			["button1"] = "BiS",
 			["button2_gpIsPercentage"] = false,
+			["hideMLOnCombat"] = false,
 			["button6_gp"] = "0%",
-			["votingEnableAuto"] = true,
 			["votingDisallowSelf"] = false,
-			["button3_gpIsPercentage"] = false,
+			["button3"] = "Minor",
 			["bidding"] = false,
 			["votingSendGuildRank"] = true,
-			["button3"] = "Minor",
 			["button2_fallback"] = "",
-			["hideMLOnCombat"] = false,
 			["AutoLooter"] = "Tydeson",
+			["button3_gpIsPercentage"] = false,
+			["votingEnableAuto"] = true,
 			["votingSendAssistantOnly"] = false,
 		},
 		["Giit - Azuremyst"] = {
+		},
+		["Gilt - Azuremyst"] = {
+		},
+		["Gitdk - Arthas"] = {
 		},
 		["Git - Cho'gall"] = {
 			["biddingWhen"] = "always",
@@ -109,8 +113,6 @@ EPGPLootMaster = {
 			["button3_gpValue"] = 0,
 			["button2_fallback"] = "OFFSPEC",
 		},
-		["Gitdk - Arthas"] = {
-		},
 		["Git - Azuremyst"] = {
 			["button2"] = "Offspec",
 			["mainUIScale"] = 1.06666677792867,
@@ -127,8 +129,6 @@ EPGPLootMaster = {
 			["votingSendAssistantOnly"] = false,
 			["buttonNum"] = 2,
 			["blizzard_show_offline"] = 1,
-		},
-		["Gilt - Azuremyst"] = {
 		},
 		["Ezyn - Azuremyst"] = {
 		},

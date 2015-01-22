@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
--- Tidy Plates: ClassicPlates 2.2 (6.0.3) - Dic/01/2014.
+-- Tidy Plates: ClassicPlates 2.3 (6.0.3) - Jan/14/2015.
 -- Author - delabarra
 -- Special thanks to Asethien.
 -------------------------------------------------------------------------------
@@ -35,29 +35,29 @@ StyleDefault.skullicon = {
 }
 
 StyleDefault.castborder = {
-	texture =					path.."CastBarBorder",
+	texture =					path.."CastStop",
 	width = 128,
 	height = 64,
-	x = 13,
-	y = 3,
+	x = -5,
+	y = -8,
 	show = true,
 }
 
 StyleDefault.castnostop = {
-	texture = 					path.."CastBarBorder",
+	texture = 					path.."CastNoStop",
 	width = 128,
 	height = 64,
-	x = 13, 
-	y = 3,
+	x = -5,
+	y = -8,
 	show = true,
 }
 
 StyleDefault.castbar = {
 	texture =					path.."StatusBar",
 	width = 86,
-	height = 7,
-	x = 20,
-	y = -10,
+	height = 8,
+	x = 2,
+	y = -21,
 	orientation = "HORIZONTAL",
 }
 
@@ -108,11 +108,12 @@ StyleDefault.target = {
 StyleDefault.name = {
 	typeface =					font,
 	size = 12,
+	width = 128,
 	y = 19,
-	x = 40,
-	align = "LEFT",
-	anchor = "LEFT",
-	vertical = "CENTER",
+	x = 6,
+	align = "CENTER",
+	--anchor = "CENTER",
+	--vertical = "CENTER",
 	shadow = true,
 }
 
@@ -127,10 +128,10 @@ StyleDefault.level = {
 
 StyleDefault.customtext = {
 	typeface =					font,
-	size = 9,
+	size = 8.5,
 	width = 90,
 	x = 6,
-	y = 4,
+	y = 4.5,
 	align = "CENTER",
 	anchor = "CENTER",
 	shadow = true,
@@ -141,8 +142,8 @@ StyleDefault.customtext = {
 StyleDefault.spelltext = {
 	typeface =					font,
 	size = 9,
-	x = 20,
-	y = -10,
+	x = 0,
+	y = -21,
 	width = 70,
 	align = "CENTER",
 	vertical = "BOTTOM",
@@ -152,18 +153,18 @@ StyleDefault.spelltext = {
 }
 
 StyleDefault.spellicon = {
-	width =8,
-	height = 9,
-	x = 7,
-	y = -10,
+	width =10,
+	height = 10,
+	x = -10,
+	y = -21,
 	anchor = "RIGHT",
 }
 
 StyleDefault.raidicon = {
 	width = 14,
 	height = 14,
-	x = -58,
-	y = 28,
+	x = -66,
+	y = 30,
 	anchor = "CENTER",
 }
 
@@ -233,11 +234,11 @@ StyleTextOnly.target.anchor = "CENTER"
 local WidgetConfig = {}
 WidgetConfig.ClassIcon = { anchor = "RIGHT", x = 25, y = -1 }
 WidgetConfig.TotemIcon = { anchor = "RIGHT", x = 25, y = -1 }
-WidgetConfig.ThreatWheelWidget = { anchor = "LEFT", x = -50, y = 0 }
+WidgetConfig.ThreatWheelWidget = { anchor = "LEFT", x = -52, y = 3 }
 WidgetConfig.ThreatLineWidget = {  x = 0 ,y = -10 }
-WidgetConfig.ComboWidget = { x = 8 ,y = -38 }
+WidgetConfig.ComboWidget = { x = 8 ,y = -27 }
 WidgetConfig.RangeWidget = { anchor = "BOTTOM", x = 0 ,y = 0 }
-WidgetConfig.DebuffWidget = { anchor = "TOP" , x = 21 ,y = 20 }
+WidgetConfig.DebuffWidget = { anchor = "TOP" , x = 17 ,y = 20 }
 
 local DamageThemeName = "Classic/|cFFFF4400Damage"
 local TankThemeName = "Classic/|cFF3782D1Tank"
