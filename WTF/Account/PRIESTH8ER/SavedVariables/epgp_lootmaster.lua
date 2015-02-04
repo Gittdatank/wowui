@@ -15,11 +15,12 @@ EPGPLootMaster = {
 		["Gitt - Cho'gall"] = "Gitt - Cho'gall",
 		["Gimm - Cho'gall"] = "Gimm - Cho'gall",
 		["Git - Arthas"] = "Git - Arthas",
-		["Gitt - Arthas"] = "Gitt - Arthas",
-		["Git - Azuremyst"] = "Git - Azuremyst",
 		["Burk - Arthas"] = "Burk - Arthas",
-		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
+		["Gitt - Arthas"] = "Gitt - Arthas",
 		["Git - Cho'gall"] = "Git - Cho'gall",
+		["Giitt - Feathermoon"] = "Giitt - Feathermoon",
+		["Evayn - Arthas"] = "Evayn - Arthas",
+		["Git - Azuremyst"] = "Git - Azuremyst",
 		["Giit - Cho'gall"] = "Giit - Cho'gall",
 		["Greny - Azuremyst"] = "Greny - Azuremyst",
 		["Spih - Cho'gall"] = "Spih - Cho'gall",
@@ -62,8 +63,11 @@ EPGPLootMaster = {
 			["loot_timeout"] = 90,
 			["button4"] = "2p",
 			["buttonNum"] = 6,
+			["votingEnableAuto"] = true,
+			["button3_gpIsPercentage"] = false,
 			["button1_fallback"] = "",
 			["button2_color"] = "9f78ef",
+			["button2_fallback"] = "",
 			["button4_color"] = "22c2c6",
 			["button4_fallback"] = "",
 			["votingSendGuildRankList"] = {
@@ -76,23 +80,16 @@ EPGPLootMaster = {
 			["button2"] = "Major",
 			["button1"] = "BiS",
 			["button2_gpIsPercentage"] = false,
-			["hideMLOnCombat"] = false,
-			["button6_gp"] = "0%",
+			["AutoLooter"] = "Tydeson",
 			["votingDisallowSelf"] = false,
-			["button3"] = "Minor",
+			["button6_gp"] = "0%",
 			["bidding"] = false,
 			["votingSendGuildRank"] = true,
-			["button2_fallback"] = "",
-			["AutoLooter"] = "Tydeson",
-			["button3_gpIsPercentage"] = false,
-			["votingEnableAuto"] = true,
+			["button3"] = "Minor",
+			["hideMLOnCombat"] = false,
 			["votingSendAssistantOnly"] = false,
 		},
 		["Giit - Azuremyst"] = {
-		},
-		["Gilt - Azuremyst"] = {
-		},
-		["Gitdk - Arthas"] = {
 		},
 		["Git - Cho'gall"] = {
 			["biddingWhen"] = "always",
@@ -113,6 +110,8 @@ EPGPLootMaster = {
 			["button3_gpValue"] = 0,
 			["button2_fallback"] = "OFFSPEC",
 		},
+		["Gitdk - Arthas"] = {
+		},
 		["Git - Azuremyst"] = {
 			["button2"] = "Offspec",
 			["mainUIScale"] = 1.06666677792867,
@@ -129,6 +128,8 @@ EPGPLootMaster = {
 			["votingSendAssistantOnly"] = false,
 			["buttonNum"] = 2,
 			["blizzard_show_offline"] = 1,
+		},
+		["Gilt - Azuremyst"] = {
 		},
 		["Ezyn - Azuremyst"] = {
 		},

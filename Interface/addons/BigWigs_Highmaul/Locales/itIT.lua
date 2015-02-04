@@ -28,6 +28,7 @@ L["creeping_moss_add_heal"] = "Muschio sotto l'ADD MAGGIORE (lo sta curando)"
 L["creeping_moss_boss_heal"] = "Muschio sotto IL BOSS (lo sta curando)"
 L["mythic_ability"] = "Abilità Speciale"
 L["mythic_ability_desc"] = "Avvisi per quando arriva il prossimo Richiamo delle Maree o Funghi Esplosivi."
+L["mythic_ability_wave"] = "Ondata in arrivo!"
 
 end
 

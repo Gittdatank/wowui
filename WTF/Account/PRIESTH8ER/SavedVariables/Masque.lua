@@ -10,13 +10,14 @@ MasqueDB = {
 		["Gimm - Cho'gall"] = "Default",
 		["Gitt - Arthas"] = "Default",
 		["Spih - Arthas"] = "Default",
+		["Got - Arthas"] = "Default",
 		["Evyyn - Azuremyst"] = "Default",
 		["Gitdk - Arthas"] = "Default",
-		["Greny - Azuremyst"] = "Default",
 		["Burk - Arthas"] = "Default",
-		["Got - Arthas"] = "Default",
+		["Greny - Azuremyst"] = "Default",
 		["Git - Cho'gall"] = "Default",
 		["Git - Arthas"] = "Default",
+		["Evayn - Arthas"] = "Default",
 		["Lihte - Arthas"] = "Default",
 	},
 	["profiles"] = {
@@ -711,7 +712,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_tcd:_s_barrier_2"] = {
+				["WeakAuras_spiritshell"] = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
@@ -719,7 +720,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_spiritshell"] = {
+				["WeakAuras_tcd:_s_barrier_2"] = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
@@ -763,13 +764,13 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_imperator:_gaze_of_the_abyss_proximity"] = {
-					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
-				},
 				["Raven_Special Buffs"] = {
 					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
+				},
+				["WeakAuras_imperator:_gaze_of_the_abyss_proximity"] = {
+					["Inherit"] = false,
+					["SkinID"] = "Zoomed",
 				},
 				["WeakAuras_shield_slam_glad_1.5"] = {
 					["Inherit"] = false,
@@ -815,7 +816,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_bmb:_fortifying_brew"] = {
+				["WeakAuras_sac"] = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
@@ -843,7 +844,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_sac"] = {
+				["WeakAuras_bmb:_shuffle_gone"] = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
@@ -903,15 +904,15 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
+				["WeakAuras_ko'ragh_-_expel_magic:_fire_2"] = {
+					["Inherit"] = false,
+					["SkinID"] = "Zoomed",
+				},
 				["WeakAuras_hand_of_purity"] = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
 				["WeakAuras_eh_not_usable_2.0"] = {
-					["Inherit"] = false,
-					["SkinID"] = "Zoomed",
-				},
-				["WeakAuras_ko'ragh_-_expel_magic:_fire_2"] = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
@@ -923,13 +924,13 @@ MasqueDB = {
 					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
 				},
-				["Bagnon_inventory"] = {
-					["SkinID"] = "Zoomed",
-					["Inherit"] = false,
-				},
 				["WeakAuras_halo"] = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
+				},
+				["Bagnon_inventory"] = {
+					["SkinID"] = "Zoomed",
+					["Inherit"] = false,
 				},
 				["WeakAuras_bloodbath"] = {
 					["Inherit"] = false,
@@ -974,7 +975,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_mark_of_chaos:_replication_2"] = {
+				["WeakAuras_sf"] = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
@@ -982,7 +983,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_sf"] = {
+				["WeakAuras_mark_of_chaos:_replication_2"] = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
@@ -1025,7 +1026,7 @@ MasqueDB = {
 					["SkinID"] = "Zoomed",
 					["Inherit"] = false,
 				},
-				["WeakAuras_branded:_fortification_with_say"] = {
+				["WeakAuras_bmcd:_interupt"] = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
@@ -1075,7 +1076,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_bmcd:_interupt"] = {
+				["WeakAuras_branded:_fortification_with_say"] = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
@@ -1163,7 +1164,7 @@ MasqueDB = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},
-				["WeakAuras_bmb:_shuffle_gone"] = {
+				["WeakAuras_bmb:_fortifying_brew"] = {
 					["Inherit"] = false,
 					["SkinID"] = "Zoomed",
 				},

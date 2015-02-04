@@ -23,7 +23,7 @@ do
 	--@end-alpha@]===]
 
 	-- This will (in ZIPs), be replaced by the highest revision number in the source tree.
-	myRevision = tonumber("12550")
+	myRevision = tonumber("12621")
 
 	-- If myRevision ends up NOT being a number, it means we're running a SVN copy.
 	if type(myRevision) ~= "number" then
@@ -456,13 +456,13 @@ do
 
 	local L = GetLocale()
 	if L == "ptBR" then
-		delayedMessages[#delayedMessages+1] = "Think you can translate Big Wigs into Brazilian Portuguese (ptBR)? Check out our easy translator tool: http://www.wowace.com/addons/big-wigs/localization/"
+		delayedMessages[#delayedMessages+1] = "We *really* need help translating Big Wigs! Think you can help us? Please check out our translator website: goo.gl/nwR5cy"
 	elseif L == "zhTW" then
-	--	delayedMessages[#delayedMessages+1] = "Think you can translate Big Wigs into Traditional Chinese (zhTW)? Check out our easy translator tool: http://www.wowace.com/addons/big-wigs/localization/"
+	--	delayedMessages[#delayedMessages+1] = "Think you can translate Big Wigs into Traditional Chinese (zhTW)? Check out our easy translator tool: goo.gl/nwR5cy"
 	elseif L == "ruRU" then
-	--	delayedMessages[#delayedMessages+1] = "Think you can translate Big Wigs into Russian (ruRU)? Check out our easy translator tool: http://www.wowace.com/addons/big-wigs/localization/"
+	--	delayedMessages[#delayedMessages+1] = "Think you can translate Big Wigs into Russian (ruRU)? Check out our easy translator tool: goo.gl/nwR5cy"
 	elseif L == "itIT" then
-	--	delayedMessages[#delayedMessages+1] = "Think you can translate Big Wigs into Italian (itIT)? Check out our easy translator tool: http://www.wowace.com/addons/big-wigs/localization/"
+	--	delayedMessages[#delayedMessages+1] = "Think you can translate Big Wigs into Italian (itIT)? Check out our easy translator tool: goo.gl/nwR5cy"
 	end
 
 	CTimerAfter(11, function()
@@ -483,9 +483,9 @@ end
 
 do
 	-- This is a crapfest mainly because DBM's actual handling of versions is a crapfest, I'll try explain how this works...
-	local DBMdotRevision = "12328" -- The changing version of the local client, changes with every alpha revision using an SVN keyword.
-	local DBMdotReleaseRevision = "12328" -- This is manually changed by them every release, they use it to track the highest release version, a new DBM release is the only time it will change.
-	local DBMdotDisplayVersion = "6.0.11" -- Same as above but is changed between alpha and release cycles e.g. "N.N.N" for a release and "N.N.N alpha" for the alpha duration
+	local DBMdotRevision = "12656" -- The changing version of the local client, changes with every alpha revision using an SVN keyword.
+	local DBMdotReleaseRevision = "12656" -- This is manually changed by them every release, they use it to track the highest release version, a new DBM release is the only time it will change.
+	local DBMdotDisplayVersion = "6.0.14" -- Same as above but is changed between alpha and release cycles e.g. "N.N.N" for a release and "N.N.N alpha" for the alpha duration
 
 	local timer, prevUpgradedUser = nil, nil
 	local function sendMsg()
@@ -961,56 +961,58 @@ end
 -- LDB Plugin
 --
 
-local ldb11 = LibStub("LibDataBroker-1.1", true)
-if ldb11 then
-	ldb = ldb11:NewDataObject("BigWigs", {
-		type = "launcher",
-		label = "Big Wigs",
-		icon = "Interface\\AddOns\\BigWigs\\Textures\\icons\\core-disabled",
-	})
+do
+	local ldb11 = LibStub("LibDataBroker-1.1", true)
+	if ldb11 then
+		ldb = ldb11:NewDataObject("BigWigs", {
+			type = "launcher",
+			label = "Big Wigs",
+			icon = "Interface\\AddOns\\BigWigs\\Textures\\icons\\core-disabled",
+		})
 
-	function ldb.OnClick(self, button)
-		if button == "RightButton" then
-			loadCoreAndOpenOptions()
-		else
-			loadAndEnableCore()
-			if IsAltKeyDown() then
-				if IsControlKeyDown() then
-					BigWigs:Disable()
+		function ldb.OnClick(self, button)
+			if button == "RightButton" then
+				loadCoreAndOpenOptions()
+			else
+				loadAndEnableCore()
+				if IsAltKeyDown() then
+					if IsControlKeyDown() then
+						BigWigs:Disable()
+					else
+						for name, module in BigWigs:IterateBossModules() do
+							if module:IsEnabled() then module:Disable() end
+						end
+						sysprint(L.modulesDisabled)
+					end
 				else
 					for name, module in BigWigs:IterateBossModules() do
-						if module:IsEnabled() then module:Disable() end
+						if module:IsEnabled() then module:Reboot() end
 					end
-					sysprint(L.modulesDisabled)
+					sysprint(L.modulesReset)
 				end
-			else
-				for name, module in BigWigs:IterateBossModules() do
-					if module:IsEnabled() then module:Reboot() end
-				end
-				sysprint(L.modulesReset)
 			end
 		end
-	end
 
-	function ldb.OnTooltipShow(tt)
-		tt:AddLine("Big Wigs")
-		local h = nil
-		if BigWigs and BigWigs:IsEnabled() then
-			local added = nil
-			for name, module in BigWigs:IterateBossModules() do
-				if module:IsEnabled() then
-					if not added then
-						tt:AddLine(L.activeBossModules, 1, 1, 1)
-						added = true
+		function ldb.OnTooltipShow(tt)
+			tt:AddLine("Big Wigs")
+			local h = nil
+			if BigWigs and BigWigs:IsEnabled() then
+				local added = nil
+				for name, module in BigWigs:IterateBossModules() do
+					if module:IsEnabled() then
+						if not added then
+							tt:AddLine(L.activeBossModules, 1, 1, 1)
+							added = true
+						end
+						tt:AddLine(module.displayName)
 					end
-					tt:AddLine(module.displayName)
 				end
 			end
+			for i, v in next, tooltipFunctions do
+				v(tt)
+			end
+			tt:AddLine(L.tooltipHint, 0.2, 1, 0.2, 1)
 		end
-		for i, v in next, tooltipFunctions do
-			v(tt)
-		end
-		tt:AddLine(L.tooltipHint, 0.2, 1, 0.2, 1)
 	end
 end
 

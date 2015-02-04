@@ -87,6 +87,7 @@ L["modifierKeyDesc"] = "Permite que as barras sejão clicaveis se estiver com a 
 L["monochrome"] = "Monocromo"
 L["monochromeDesc"] = "Troca o indicador monocromo, removendo qualquer embelezamento das fontes."
 L["move"] = "Mover"
+L["movieBlocked"] = "Você já viu esta animação anteriormente, prosseguindo."
 L["Neutral"] = "Neutro"
 L["newBestTime"] = "Novo recorde!"
 L["none"] = "Nenhuma"

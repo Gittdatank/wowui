@@ -2,13 +2,13 @@
 AUCTIONATOR_SAVEDVARS = {
 	["_50000"] = 500,
 	["_2000"] = 100,
-	["_200000"] = 1000,
-	["STARTING_DISCOUNT"] = 5,
-	["_1000000"] = 2500,
 	["_5000000"] = 10000,
 	["LOG_DE_DATA_X"] = true,
-	["_500"] = 5,
+	["_1000000"] = 2500,
 	["_10000"] = 200,
+	["_500"] = 5,
+	["STARTING_DISCOUNT"] = 5,
+	["_200000"] = 1000,
 }
 AUCTIONATOR_PRICING_HISTORY = {
 }
@@ -74,11 +74,11 @@ AUCTIONATOR_PRICE_DATABASE = {
 			["sc"] = 4,
 		},
 		["Stout Augment Rune"] = {
-			["mr"] = 400000,
+			["mr"] = 850000,
 			["cc"] = 4,
 			["id"] = "118631",
+			["H1534"] = 850000,
 			["sc"] = 0,
-			["H1509"] = 400000,
 		},
 		["Gorenscale Mesh Cloak"] = {
 			["mr"] = 1450000000,
@@ -261,6 +261,10 @@ AUCTIONATOR_TOONS = {
 	["Got"] = {
 		["firstSeen"] = 1416429667,
 		["firstVersion"] = "3.1.7",
+	},
+	["Evayn"] = {
+		["firstSeen"] = 1422323238,
+		["firstVersion"] = "3.2.2",
 	},
 	["Spih"] = {
 		["firstSeen"] = 1416512585,

@@ -4,6 +4,18 @@ BossNotesPersonalNotesDB = {
 		["Dbyx - Arthas"] = {
 			["playerClass"] = "WARLOCK",
 		},
+		["Evyyn - Azuremyst"] = {
+			["playerClass"] = "ROGUE",
+		},
+		["Gitdk - Arthas"] = {
+			["playerClass"] = "DEATHKNIGHT",
+		},
+		["Worgit - Moon Guard"] = {
+			["playerClass"] = "WARRIOR",
+		},
+		["Got - Arthas"] = {
+			["playerClass"] = "DRUID",
+		},
 		["Gitt - Cho'gall"] = {
 			["playerClass"] = "PALADIN",
 			["notes"] = {
@@ -133,29 +145,20 @@ BossNotesPersonalNotesDB = {
 			},
 			["publicNotesNotificationSeen"] = true,
 		},
-		["Gimm - Cho'gall"] = {
-			["playerClass"] = "MONK",
-		},
-		["Git - Arthas"] = {
-			["playerClass"] = "WARRIOR",
-		},
-		["Got - Arthas"] = {
+		["Giit - Cho'gall"] = {
 			["playerClass"] = "DRUID",
 		},
 		["Gitt - Arthas"] = {
 			["playerClass"] = "MONK",
 		},
-		["Giit - Cho'gall"] = {
-			["playerClass"] = "DRUID",
+		["Git - Arthas"] = {
+			["playerClass"] = "WARRIOR",
 		},
-		["Greny - Azuremyst"] = {
-			["playerClass"] = "HUNTER",
+		["Evayn - Arthas"] = {
+			["playerClass"] = "WARRIOR",
 		},
-		["Evyyn - Azuremyst"] = {
-			["playerClass"] = "ROGUE",
-		},
-		["Gitdk - Arthas"] = {
-			["playerClass"] = "DEATHKNIGHT",
+		["Burk - Arthas"] = {
+			["playerClass"] = "SHAMAN",
 		},
 		["Git - Cho'gall"] = {
 			["playerClass"] = "WARRIOR",
@@ -200,14 +203,17 @@ BossNotesPersonalNotesDB = {
 			},
 			["publicNotesNotificationSeen"] = true,
 		},
-		["Burk - Arthas"] = {
-			["playerClass"] = "SHAMAN",
+		["Greny - Azuremyst"] = {
+			["playerClass"] = "HUNTER",
 		},
 		["Spih - Cho'gall"] = {
 			["playerClass"] = "PRIEST",
 		},
-		["Worgit - Moon Guard"] = {
-			["playerClass"] = "WARRIOR",
+		["Gimm - Cho'gall"] = {
+			["playerClass"] = "MONK",
+		},
+		["Lihte - Arthas"] = {
+			["playerClass"] = "DEATHKNIGHT",
 		},
 		["Spih - Arthas"] = {
 			["playerClass"] = "PRIEST",
@@ -222,9 +228,6 @@ BossNotesPersonalNotesDB = {
 			},
 			["publicNotesNotificationSeen"] = true,
 		},
-		["Lihte - Arthas"] = {
-			["playerClass"] = "DEATHKNIGHT",
-		},
 	},
 	["global"] = {
 		["allCharacters"] = true,
@@ -232,20 +235,21 @@ BossNotesPersonalNotesDB = {
 	},
 	["profileKeys"] = {
 		["Dbyx - Arthas"] = "Default",
-		["Gitt - Cho'gall"] = "Default",
-		["Gimm - Cho'gall"] = "Default",
-		["Git - Arthas"] = "Default",
-		["Got - Arthas"] = "Default",
-		["Gitt - Arthas"] = "Default",
-		["Giit - Cho'gall"] = "Default",
-		["Greny - Azuremyst"] = "Default",
 		["Evyyn - Azuremyst"] = "Default",
 		["Gitdk - Arthas"] = "Default",
-		["Git - Cho'gall"] = "Default",
-		["Burk - Arthas"] = "Default",
-		["Spih - Cho'gall"] = "Default",
 		["Worgit - Moon Guard"] = "Default",
-		["Spih - Arthas"] = "Default",
+		["Got - Arthas"] = "Default",
+		["Gitt - Cho'gall"] = "Default",
+		["Giit - Cho'gall"] = "Default",
+		["Gitt - Arthas"] = "Default",
+		["Git - Arthas"] = "Default",
+		["Evayn - Arthas"] = "Default",
+		["Burk - Arthas"] = "Default",
+		["Git - Cho'gall"] = "Default",
+		["Greny - Azuremyst"] = "Default",
+		["Spih - Cho'gall"] = "Default",
+		["Gimm - Cho'gall"] = "Default",
 		["Lihte - Arthas"] = "Default",
+		["Spih - Arthas"] = "Default",
 	},
 }

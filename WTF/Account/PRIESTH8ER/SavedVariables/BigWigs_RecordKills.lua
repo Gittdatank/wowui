@@ -5,15 +5,16 @@ RKDatabase = {
 		["Gitt - Cho'gall"] = "Default",
 		["Giit - Cho'gall"] = "Default",
 		["Spih - Arthas"] = "Default",
-		["Gitt - Arthas"] = "Default",
 		["Gimm - Cho'gall"] = "Default",
+		["Gitt - Arthas"] = "Default",
+		["Got - Arthas"] = "Default",
 		["Giit - Azuremyst"] = "Default",
 		["Evyyn - Azuremyst"] = "Default",
 		["Gitdk - Arthas"] = "Default",
 		["Git - Cho'gall"] = "Default",
 		["Greny - Azuremyst"] = "Default",
 		["Spih - Cho'gall"] = "Default",
-		["Got - Arthas"] = "Default",
+		["Evayn - Arthas"] = "Default",
 		["Lihte - Arthas"] = "Default",
 		["Git - Arthas"] = "Default",
 	},
@@ -27,11 +28,11 @@ RKDatabase = {
 					["The Spirit Kings"] = {
 						[6] = 238,
 					},
-					["Will of the Emperor"] = {
-						[6] = 289,
-					},
 					["Feng the Accursed"] = {
 						[6] = 142,
+					},
+					["Will of the Emperor"] = {
+						[6] = 289,
 					},
 					["Elegon"] = {
 						[6] = 170,
@@ -89,6 +90,14 @@ RKDatabase = {
 						[5] = 528,
 						[14] = 440,
 					},
+					["Garrosh Hellscream"] = {
+						[6] = 699,
+						[7] = 558,
+						[15] = 295,
+						[3] = 558,
+						[4] = 295,
+						[14] = 314,
+					},
 					["Iron Juggernaut"] = {
 						[6] = 211,
 						[7] = 250,
@@ -97,14 +106,6 @@ RKDatabase = {
 						[4] = 257,
 						[5] = 345,
 						[14] = 199,
-					},
-					["Siegecrafter Blackfuse"] = {
-						[6] = 335,
-						[7] = 277,
-						[15] = 196,
-						[3] = 200,
-						[4] = 196,
-						[14] = 151,
 					},
 					["Sha of Pride"] = {
 						[6] = 240,
@@ -124,14 +125,6 @@ RKDatabase = {
 						[5] = 286,
 						[14] = 164,
 					},
-					["Paragons of the Klaxxi"] = {
-						[6] = 608,
-						[7] = 426,
-						[15] = 324,
-						[3] = 427,
-						[4] = 324,
-						[14] = 309,
-					},
 					["Thok the Bloodthirsty"] = {
 						[6] = 339,
 						[7] = 401,
@@ -139,6 +132,15 @@ RKDatabase = {
 						[3] = 410,
 						[4] = 271,
 						[14] = 178,
+					},
+					["Kor'kron Dark Shaman"] = {
+						[6] = 295,
+						[7] = 152,
+						[15] = 233,
+						[3] = 233,
+						[4] = 252,
+						[5] = 427,
+						[14] = 152,
 					},
 					["Malkorok"] = {
 						[6] = 218,
@@ -175,22 +177,21 @@ RKDatabase = {
 						[5] = 560,
 						[14] = 142,
 					},
-					["Kor'kron Dark Shaman"] = {
-						[6] = 295,
-						[7] = 152,
-						[15] = 233,
-						[3] = 233,
-						[4] = 252,
-						[5] = 427,
-						[14] = 152,
+					["Paragons of the Klaxxi"] = {
+						[6] = 608,
+						[7] = 426,
+						[15] = 324,
+						[3] = 427,
+						[4] = 324,
+						[14] = 309,
 					},
-					["Garrosh Hellscream"] = {
-						[6] = 699,
-						[7] = 558,
-						[15] = 295,
-						[3] = 558,
-						[4] = 295,
-						[14] = 314,
+					["Siegecrafter Blackfuse"] = {
+						[6] = 335,
+						[7] = 277,
+						[15] = 196,
+						[3] = 200,
+						[4] = 196,
+						[14] = 151,
 					},
 					["The Fallen Protectors"] = {
 						[6] = 268,
@@ -231,10 +232,10 @@ RKDatabase = {
 						[4] = 128,
 						[7] = 316,
 					},
-					["Primordius"] = {
-						[5] = 154,
-						[6] = 369,
-						[7] = 272,
+					["Horridon"] = {
+						[5] = 211,
+						[6] = 584,
+						[7] = 630,
 					},
 					["Megaera"] = {
 						[6] = 409,
@@ -249,10 +250,10 @@ RKDatabase = {
 						[4] = 363,
 						[7] = 372,
 					},
-					["Horridon"] = {
-						[5] = 211,
-						[6] = 584,
-						[7] = 630,
+					["Primordius"] = {
+						[5] = 154,
+						[6] = 369,
+						[7] = 272,
 					},
 					["Council of Elders"] = {
 						[6] = 385,
@@ -267,7 +268,12 @@ RKDatabase = {
 					["Brackenspore"] = {
 						[14] = 259,
 						[16] = 422,
-						[15] = 257,
+						[15] = 239,
+					},
+					["Kargath Bladefist"] = {
+						[14] = 233,
+						[16] = 267,
+						[15] = 177,
 					},
 					["Ko'ragh"] = {
 						[14] = 204,
@@ -275,25 +281,21 @@ RKDatabase = {
 						[15] = 222,
 						[7] = 306,
 					},
-					["The Butcher"] = {
-						[14] = 184,
-						[16] = 231,
-						[15] = 196,
-					},
 					["Tectus"] = {
 						[14] = 270,
 						[16] = 208,
-						[15] = 286,
+						[15] = 285,
 						[7] = 211,
 					},
 					["Imperator Mar'gok"] = {
 						[14] = 517,
-						[15] = 561,
+						[16] = 865,
+						[15] = 552,
 					},
-					["Kargath Bladefist"] = {
-						[14] = 233,
-						[16] = 267,
-						[15] = 177,
+					["The Butcher"] = {
+						[14] = 184,
+						[16] = 231,
+						[15] = 196,
 					},
 					["Twin Ogron"] = {
 						[14] = 231,
@@ -305,8 +307,8 @@ RKDatabase = {
 			},
 			["firstLoad"] = false,
 			["warlordsUpdate"] = true,
-			["diffShown"] = 16,
 			["prevDiffShown"] = 16,
+			["diffShown"] = 16,
 		},
 	},
 }

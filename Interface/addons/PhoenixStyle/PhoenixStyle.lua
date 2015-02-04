@@ -11,7 +11,7 @@ pslocale()
 end
 
 
-	psversion=6.016
+	psversion=6.017
 
 
 	psverstiptext="alpha"
@@ -395,7 +395,7 @@ if psdethrepwaittab1 and curtime>psdethrepwaittab1 then
   if curtime>psdethrepwaittab1+5 then
     psdethrepwaittab1=nil
     psdethrepwaittab2=nil
-	print ("нет2")
+	--print ("нет2")
   else
     psdethrepwaittab1=nil
     if psdeathreportantispam==nil or psdeathreportantispam==0 or (psdeathreportantispam~=0 and curtime>psdeathreportantispam) then
@@ -4813,6 +4813,21 @@ local psnumgrup=2
 	if GetRaidDifficultyID()==16 then
 	psnumgrup=4
 	end
+	-- new:
+	if select(3,GetInstanceInfo())==18 then
+	psnumgrup=8
+	end
+	if select(3,GetInstanceInfo())==14 then
+	  psnumgrup=8
+	end
+	if select(3,GetInstanceInfo())==15 then
+	  psnumgrup=8
+	end
+	
+	
+	
+	
+	
 for i = 1,GetNumGroupMembers() do
   local nameee,_,subgroup,_,_,_,_,_,isDead = GetRaidRosterInfo(i)
   if nameee and ((isDead==1 or UnitIsDeadOrGhost(nameee)==true) and subgroup<=psnumgrup) then
@@ -4820,7 +4835,7 @@ for i = 1,GetNumGroupMembers() do
   end
 end
 
-if ((psnumgrup==2 and psnumdead>=num10) or (psnumgrup==5 and psnumdead>=num25)) then
+if ((psnumgrup==2 and psnumdead>=num10) or (psnumgrup>2 and psnumdead>=num25)) then
 pswipetrue=1
 psthiscombatwipe=1
 end

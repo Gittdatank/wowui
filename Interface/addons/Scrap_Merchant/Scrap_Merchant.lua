@@ -315,7 +315,7 @@ end
 function Scrap:OnItemSold (...)
 	if Scrap_Learn and self:IsVisible() and not self.selling then
 		local id = GetContainerItemID(...)
-		if not id or Scrap_Junk[id] ~= nil or Scrap_AI[id] or self:CheckFilters(id, ...) then
+		if not id or Scrap_Junk[id] ~= nil or self:CheckFilters(id, ...) then
 			return
 		end
 			

@@ -27,7 +27,8 @@ if L then
 L["creeping_moss_add_heal"] = "大怪在苔蘚上(治療)"
 L["creeping_moss_boss_heal"] = "王在苔蘚上(治療)"
 L["mythic_ability"] = "特殊技能"
-L["mythic_ability_desc"] = "為下一次海潮呼喚或爆炸真菌顯示計時器。"
+L["mythic_ability_desc"] = "為下一次海潮呼喚或爆炸真菌顯示計時器。" -- Needs review
+L["mythic_ability_wave"] = "海潮來襲！" -- Needs review
 
 end
 

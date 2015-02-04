@@ -20,7 +20,7 @@ local CreateFrame, error, setmetatable, UIParent = CreateFrame, error, setmetata
 if not LibStub then error("LibCandyBar-3.0 requires LibStub.") end
 local cbh = LibStub:GetLibrary("CallbackHandler-1.0")
 if not cbh then error("LibCandyBar-3.0 requires CallbackHandler-1.0") end
-local lib, old = LibStub:NewLibrary("LibCandyBar-3.0", 83) -- Bump minor on changes
+local lib, old = LibStub:NewLibrary("LibCandyBar-3.0", 85) -- Bump minor on changes
 if not lib then return end
 lib.callbacks = lib.callbacks or cbh:New(lib)
 local cb = lib.callbacks
@@ -139,7 +139,7 @@ end
 
 local function restyleBar(self)
 	if not self.running then return end
-	-- In the past we used a :GetTexture check here, but as of WoW v5 it randomly returns nil, so use our own variable.
+	-- In the past we used a :GetTexture check here, but as of WoW v5 it randomly returns nil, so use our own trustworthy variable.
 	if self.candyBarIconFrame.icon then
 		self.candyBarBar:SetPoint("TOPLEFT", self.candyBarIconFrame, "TOPRIGHT")
 		self.candyBarBar:SetPoint("BOTTOMLEFT", self.candyBarIconFrame, "BOTTOMRIGHT")
@@ -199,7 +199,17 @@ end
 function barPrototype:SetLabel(text) self.candyBarLabel:SetText(text); restyleBar(self) end
 --- Sets the icon next to the bar.
 -- @param icon Path to the icon texture or nil to not display an icon.
-function barPrototype:SetIcon(icon) self.candyBarIconFrame:SetTexture(icon); self.candyBarIconFrame.icon = icon; restyleBar(self) end
+-- @param ... Optional icon coordinates for texture trimming.
+function barPrototype:SetIcon(icon, ...)
+	self.candyBarIconFrame.icon = icon
+	self.candyBarIconFrame:SetTexture(icon)
+	if ... then
+		self.candyBarIconFrame:SetTexCoord(...)
+	else
+		self.candyBarIconFrame:SetTexCoord(0.07, 0.93, 0.07, 0.93)
+	end
+	restyleBar(self)
+end
 --- Sets wether or not the time indicator on the right of the bar should be shown.
 -- Time is shown by default.
 -- @param bool true to show the time, false/nil to hide the time.
@@ -273,7 +283,6 @@ function lib:New(texture, width, height)
 		local icon = bar:CreateTexture(nil, "LOW")
 		icon:SetPoint("TOPLEFT")
 		icon:SetPoint("BOTTOMLEFT")
-		icon:SetTexCoord(0.07, 0.93, 0.07, 0.93)
 		icon:Show()
 		bar.candyBarIconFrame = icon
 
@@ -327,6 +336,7 @@ function lib:New(texture, width, height)
 	end
 
 	bar.candyBarBackground:SetVertexColor(0.5, 0.5, 0.5, 0.3)
+	bar.candyBarBar:SetStatusBarColor(0.5, 0.5, 0.5, 1)
 	bar:ClearAllPoints()
 	bar:SetWidth(width)
 	bar:SetHeight(height)

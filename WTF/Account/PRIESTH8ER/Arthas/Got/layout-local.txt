@@ -6,6 +6,13 @@ X: 246
 Y: -116
 W: 210
 H: 175
+Frame: AskMrRobot_Dialog
+FrameLevel: 92
+Anchor: TOP
+X: 249
+Y: -95
+W: 615
+H: 550
 Frame: TomTomCrazyArrow
 FrameLevel: 1
 Anchor: TOP
@@ -13,3 +20,10 @@ X: -8
 Y: -125
 W: 56
 H: 42
+Frame: AuctionFrame
+FrameLevel: 100
+Anchor: TOPLEFT
+X: 16
+Y: -115
+W: 832
+H: 447
