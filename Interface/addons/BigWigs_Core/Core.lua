@@ -150,8 +150,13 @@ end
 
 local function zoneChanged()
 	if not IsInInstance() then
-		for _, module in next, bossCore.modules do
-			if module.isEngaged then module:Wipe() end
+		-- We may be hearthing whilst a module is enabled and engaged, only wipe if we're a ghost (released spirit from an old zone).
+		if UnitIsDeadOrGhost("player") then
+			for _, module in next, bossCore.modules do
+				if module.isEngaged then
+					module:Wipe()
+				end
+			end
 		end
 	else
 		SetMapToCurrentZone() -- Hack because Astrolabe likes to screw with map setting in rare situations, so we need to force an update.
@@ -350,6 +355,18 @@ do
 	end
 end
 
+function addon:RAID_BOSS_WHISPER(_, msg) -- Purely for Transcriptor to assist in logging purposes.
+	if IsInGroup() then
+		local len = msg:len()
+		if len < 230 then -- Safety
+			SendAddonMessage("Transcriptor", msg, IsInGroup(2) and "INSTANCE_CHAT" or "RAID")
+		else
+			local id = msg:match("spell:%d+") or ""
+			self:Print(("Detected a boss whisper with %d characters. %s"):format(len, id))
+		end
+	end
+end
+
 -------------------------------------------------------------------------------
 -- Initialization
 --
@@ -403,6 +420,8 @@ function addon:OnEnable()
 
 	self:RegisterEvent("ENCOUNTER_START")
 
+	self:RegisterEvent("RAID_BOSS_WHISPER")
+
 	pluginCore:Enable()
 	bossCore:Enable()
 
@@ -415,6 +434,8 @@ function addon:OnDisable()
 	self:UnregisterMessage("BigWigs_AddonMessage")
 
 	self:UnregisterEvent("ENCOUNTER_START")
+
+	self:UnregisterEvent("RAID_BOSS_WHISPER")
 
 	zoneChanged() -- Unregister zone events
 	bossCore:Disable()
@@ -575,7 +596,7 @@ do
 					if v > 0 then
 						local n = GetSpellInfo(v)
 						if not n then error(("Invalid spell ID %d in the toggleOptions for module %s."):format(v, module.name)) end
-						module.toggleDefaults[n] = bitflags
+						module.toggleDefaults[v] = bitflags
 					else
 						local n = EJ_GetSectionInfo(-v)
 						if not n then error(("Invalid ej ID %d in the toggleOptions for module %s."):format(-v, module.name)) end

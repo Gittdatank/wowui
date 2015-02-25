@@ -1212,13 +1212,13 @@ end
 function plugin:PauseBar(_, module, text)
 	if not normalAnchor then return end
 	for k in next, normalAnchor.bars do
-		if k:Get("bigwigs:module") == module and k.candyBarLabel:GetText() == text then
+		if k:Get("bigwigs:module") == module and k:GetLabel() == text then
 			k:Pause()
 			return
 		end
 	end
 	for k in next, emphasizeAnchor.bars do
-		if k:Get("bigwigs:module") == module and k.candyBarLabel:GetText() == text then
+		if k:Get("bigwigs:module") == module and k:GetLabel() == text then
 			k:Pause()
 			return
 		end
@@ -1228,13 +1228,13 @@ end
 function plugin:ResumeBar(_, module, text)
 	if not normalAnchor then return end
 	for k in next, normalAnchor.bars do
-		if k:Get("bigwigs:module") == module and k.candyBarLabel:GetText() == text then
+		if k:Get("bigwigs:module") == module and k:GetLabel() == text then
 			k:Resume()
 			return
 		end
 	end
 	for k in next, emphasizeAnchor.bars do
-		if k:Get("bigwigs:module") == module and k.candyBarLabel:GetText() == text then
+		if k:Get("bigwigs:module") == module and k:GetLabel() == text then
 			k:Resume()
 			return
 		end
@@ -1249,14 +1249,14 @@ function plugin:StopSpecificBar(_, module, text)
 	if not normalAnchor then return end
 	local dirty = nil
 	for k in next, normalAnchor.bars do
-		if k:Get("bigwigs:module") == module and k.candyBarLabel:GetText() == text then
+		if k:Get("bigwigs:module") == module and k:GetLabel() == text then
 			k:Stop()
 			dirty = true
 		end
 	end
 	if dirty then rearrangeBars(normalAnchor) dirty = nil end
 	for k in next, emphasizeAnchor.bars do
-		if k:Get("bigwigs:module") == module and k.candyBarLabel:GetText() == text then
+		if k:Get("bigwigs:module") == module and k:GetLabel() == text then
 			k:Stop()
 			dirty = true
 		end
@@ -1290,12 +1290,12 @@ end
 function plugin:GetBarTimeLeft(module, text)
 	if not normalAnchor then return end
 	for k in next, normalAnchor.bars do
-		if k:Get("bigwigs:module") == module and k.candyBarLabel:GetText() == text then
+		if k:Get("bigwigs:module") == module and k:GetLabel() == text then
 			return k.remaining
 		end
 	end
 	for k in next, emphasizeAnchor.bars do
-		if k:Get("bigwigs:module") == module and k.candyBarLabel:GetText() == text then
+		if k:Get("bigwigs:module") == module and k:GetLabel() == text then
 			return k.remaining
 		end
 	end
@@ -1363,7 +1363,7 @@ end
 -- Super Emphasize the clicked bar
 clickHandlers.emphasize = function(bar)
 	-- Add 0.2sec here to catch messages for this option triggered when the bar ends.
-	plugin:SendMessage("BigWigs_TempSuperEmphasize", bar:Get("bigwigs:module"), bar:Get("bigwigs:option"), bar.candyBarLabel:GetText(), bar.remaining)
+	plugin:SendMessage("BigWigs_TempSuperEmphasize", bar:Get("bigwigs:module"), bar:Get("bigwigs:option"), bar:GetLabel(), bar.remaining)
 end
 
 -- Report the bar status to the active group type (raid, party, solo)
@@ -1387,7 +1387,7 @@ do
 		end
 	end
 	clickHandlers.report = function(bar)
-		local text = ("%s: %s"):format(bar.candyBarLabel:GetText(), timeDetails(bar.remaining))
+		local text = ("%s: %s"):format(bar:GetLabel(), timeDetails(bar.remaining))
 		SendChatMessage(text, (IsInGroup(2) and "INSTANCE_CHAT") or (IsInRaid() and "RAID") or (IsInGroup() and "PARTY") or "SAY")
 	end
 end
@@ -1469,15 +1469,24 @@ function plugin:BigWigs_StartBar(_, module, key, text, time, icon, isApprox)
 	bar:SetIcon(db.icon and icon or nil)
 	bar:SetScale(db.scale)
 	bar:SetFill(db.fill)
-	if db.emphasize and time < db.emphasizeTime then
-		self:EmphasizeBar(bar)
-	end
 	if db.interceptMouse and not db.onlyInterceptOnKeypress then
 		refixClickOnBar(true, bar)
 	end
 	currentBarStyler.ApplyStyle(bar)
-	bar:Start()
+
+	if db.emphasize and time < db.emphasizeTime then
+		self:EmphasizeBar(bar, true)
+	else
+		bar:Start() -- Don't fire :Start twice when emphasizeRestart is on
+	end
 	rearrangeBars(bar:Get("bigwigs:anchor"))
+
+	self:SendMessage("BigWigs_BarCreated", self, bar, module, key, text, time, icon, isApprox)
+	-- Check if :EmphasizeBar(bar) was run and trigger the callback.
+	-- Bit of a roundabout method to approaching this so that we purposely keep callbacks firing last.
+	if bar:Get("bigwigs:emphasized") then
+		self:SendMessage("BigWigs_BarEmphasized", self, bar)
+	end
 end
 
 --------------------------------------------------------------------------------
@@ -1490,8 +1499,9 @@ do
 	empUpdate:SetScript("OnLoop", function()
 		for k in next, normalAnchor.bars do
 			if k.remaining < db.emphasizeTime and not k:Get("bigwigs:emphasized") then
-				plugin:EmphasizeBar(k)
 				dirty = true
+				plugin:EmphasizeBar(k)
+				plugin:SendMessage("BigWigs_BarEmphasized", plugin, k)
 			end
 		end
 		if dirty then
@@ -1506,13 +1516,13 @@ do
 	anim:SetDuration(0.2)
 end
 
-function plugin:EmphasizeBar(bar)
+function plugin:EmphasizeBar(bar, start)
 	if db.emphasizeMove then
 		normalAnchor.bars[bar] = nil
 		emphasizeAnchor.bars[bar] = true
 		bar:Set("bigwigs:anchor", emphasizeAnchor)
 	end
-	if db.emphasizeRestart then
+	if start or db.emphasizeRestart then
 		bar:Start() -- restart the bar -> remaining time is a full length bar again after moving it to the emphasize anchor
 	end
 	local module = bar:Get("bigwigs:module")
@@ -1592,7 +1602,7 @@ do
 		elseif timeLeft < 11 then
 			plugin:SendMessage("BigWigs_Message", plugin, nil, L.pullIn:format(timeLeft), "Attention")
 			if timeLeft < 6 and BigWigs.db.profile.sound then
-				PlaySoundFile(("Interface\\AddOns\\BigWigs\\Sounds\\%d.ogg"):format(timeLeft), "Master")
+				plugin:SendMessage("BigWigs_PlayCountdownNumber", plugin, timeLeft)
 			end
 		end
 	end

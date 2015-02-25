@@ -16,7 +16,7 @@ do
 	colorize = setmetatable({}, { __index =
 		function(self, key)
 			if not r then r, g, b = GameFontNormal:GetTextColor() end
-			self[key] = string.format("|cff%02x%02x%02x%s|r", r * 255, g * 255, b * 255, key)
+			self[key] = ("|cff%02x%02x%02x%s|r"):format(r * 255, g * 255, b * 255, key)
 			return self[key]
 		end
 	})
@@ -487,7 +487,7 @@ end
 local function getSlaveToggle(label, desc, key, module, flag, master)
 	local toggle = AceGUI:Create("CheckBox")
 	toggle:SetLabel(colorize[label])
-	if flag == C.MESSAGE or flag == C.ME_ONLY or flag == C.FLASH or flag == C.PULSE then
+	if flag == C.MESSAGE or flag == C.ME_ONLY or flag == C.FLASH or flag == C.PULSE or flag == C.EMPHASIZE or flag == C.COUNTDOWN then
 		toggle:SetRelativeWidth(0.5)
 	else
 		toggle:SetFullWidth(true)
@@ -540,7 +540,18 @@ local function advancedToggles(dbKey, module, check)
 			end
 		end
 	end
-	advancedOptions[#advancedOptions + 1] = getSlaveToggle(L.EMPHASIZE, L.EMPHASIZE_desc, dbKey, module, C.EMPHASIZE, check)
+
+	local emphasizeGroup = AceGUI:Create("InlineGroup")
+	emphasizeGroup:SetLayout("Flow")
+	emphasizeGroup:SetFullWidth(true)
+
+	local emphasize = getSlaveToggle(L.EMPHASIZE, L.EMPHASIZE_desc, dbKey, module, C.EMPHASIZE, check)
+	emphasizeGroup:AddChild(emphasize)
+
+	local countdown = getSlaveToggle(L.COUNTDOWN, L.COUNTDOWN_desc, dbKey, module, C.COUNTDOWN, check)
+	emphasizeGroup:AddChild(countdown)
+
+	advancedOptions[#advancedOptions + 1] = emphasizeGroup
 
 	return unpack(advancedOptions)
 end
@@ -560,7 +571,7 @@ local function advancedTabSelect(widget, callback, tab)
 		local group = AceGUI:Create("SimpleGroup")
 		group:SetFullWidth(true)
 		widget:AddChild(group)
-		soundModule:SetSoundOptions(module.name, key, module.toggleDefaults[key])
+		soundModule:SetSoundOptions(module.name, key, module.db.profile[key])
 		acd:Open("Big Wigs: Sounds Override", group)
 	elseif tab == "colors" then
 		local group = AceGUI:Create("SimpleGroup")
@@ -717,13 +728,17 @@ do
 			if type(o) == "number" then
 				if o > 0 then
 					local link = GetSpellLink(o)
-					if currentSize + #link + 1 > 255 then
-						printList(channel, header, abilities)
-						wipe(abilities)
-						currentSize = 0
+					if not link then
+						BigWigs:Print(("Failed to fetch the link for spell id %d."):format(key))
+					else
+						if currentSize + #link + 1 > 255 then
+							printList(channel, header, abilities)
+							wipe(abilities)
+							currentSize = 0
+						end
+						abilities[#abilities + 1] = link
+						currentSize = currentSize + #link + 1
 					end
-					abilities[#abilities + 1] = link
-					currentSize = currentSize + #link + 1
 				else
 					local _, _, _, _, _, _, _, _, link = EJ_GetSectionInfo(-o)
 					if currentSize + #link + 1 > 255 then
@@ -743,7 +758,7 @@ end
 local function SecondsToTime(time)
 	local m = floor(time/60)
 	local s = mod(time, 60)
-	return format("%d:%02d", m, s)
+	return ("%d:%02d"):format(m, s)
 end
 
 local function populateToggleOptions(widget, module)

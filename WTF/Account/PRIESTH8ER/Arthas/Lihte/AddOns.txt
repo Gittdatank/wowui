@@ -76,3 +76,5 @@ Stubby: enabled
 !Swatter: enabled
 LargerMacroIconSelection: disabled
 ReagentRestocker: disabled
+Titan: enabled
+DeathNote: enabled

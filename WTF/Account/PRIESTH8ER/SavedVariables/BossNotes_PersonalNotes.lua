@@ -103,11 +103,8 @@ BossNotesPersonalNotesDB = {
 						["content"] = ".\nFirst Time: 7 Bumps\nSecond Time: 7 Bumps\nThird Time: 5 Bumps\n.\n---Black Phase---\nGroup 2 {Square}\nGroup 3 {Triangle}\nGroup 4 {Diamond}\nGroup 5 {Star}\n.",
 					},
 				},
-				["encounter:69465"] = {
+				["instance:DragonSoul"] = {
 					[""] = {
-						["clientVersion"] = "5.2.0",
-						["time"] = 1366161488,
-						["content"] = "====First And Third Storm===\n1. Gitt\n2. Caix\n3. Surprise\n4, Lilprincess\n5. Tydesin\n6. Blood\n\n==== Second Storm ===\n1. ~~\n2. Saint\n3. Gega\n4. Marcus\n5. Got\n6. Phaze",
 					},
 				},
 				["encounter:62164"] = {
@@ -124,13 +121,6 @@ BossNotesPersonalNotesDB = {
 						["content"] = "--CC--\n{Cross} Tydesin, Sway\n{Square} Flex, Blood\n{Moon} Kleio\n{Triangle} Urtag, Buc\n{Diamond} Kadira, Alastair\n.\n--Hide--\n1. Flex\n2. Kleio\n3. Nab\n4. Xeke \n5. Git\n6. Gawdric\n7. Blood\n8. Lilp\n9. Bucnastee\n10. Death\n11. Sway\n12. Tyd",
 					},
 				},
-				["encounter:62543"] = {
-					[""] = {
-						["clientVersion"] = "5.1.0",
-						["time"] = 1355286802,
-						["content"] = "---Unseen Strike---\n1) Barrier + Demo\n2) Totem + Rally\n3) Demo + Rally",
-					},
-				},
 				["encounter:55689"] = {
 					[""] = {
 						["clientVersion"] = "4.3.4",
@@ -138,8 +128,18 @@ BossNotesPersonalNotesDB = {
 						["content"] = ".\n---Lightning Phase---\n.\nGroup 1 {Square}\nGroup 2 {Triangle}\nGroup 3 {Diamond}\nGroup 4 {Star}\n.",
 					},
 				},
-				["instance:DragonSoul"] = {
+				["encounter:62543"] = {
 					[""] = {
+						["clientVersion"] = "5.1.0",
+						["time"] = 1355286802,
+						["content"] = "---Unseen Strike---\n1) Barrier + Demo\n2) Totem + Rally\n3) Demo + Rally",
+					},
+				},
+				["encounter:69465"] = {
+					[""] = {
+						["clientVersion"] = "5.2.0",
+						["time"] = 1366161488,
+						["content"] = "====First And Third Storm===\n1. Gitt\n2. Caix\n3. Surprise\n4, Lilprincess\n5. Tydesin\n6. Blood\n\n==== Second Storm ===\n1. ~~\n2. Saint\n3. Gega\n4. Marcus\n5. Got\n6. Phaze",
 					},
 				},
 			},
@@ -151,14 +151,36 @@ BossNotesPersonalNotesDB = {
 		["Gitt - Arthas"] = {
 			["playerClass"] = "MONK",
 		},
-		["Git - Arthas"] = {
-			["playerClass"] = "WARRIOR",
+		["Spih - Arthas"] = {
+			["playerClass"] = "PRIEST",
+			["notes"] = {
+				["encounter:71529"] = {
+					[""] = {
+						["clientVersion"] = "5.4.8",
+						["time"] = 1404699731,
+						["content"] = "3- smoke bomb\n5 - barrier\n6 - ascen/bop totem\n7 - arn htt\n8 - arn ascen/devo\n9 - sp VE\n11 - Shamans AG\n14 - Demo/rally mith\n15 - arn sl\n17 - Demo/rally nandini\n19 - Demo /rally hippo\n20 - Totem SL",
+					},
+				},
+			},
+			["publicNotesNotificationSeen"] = true,
 		},
 		["Evayn - Arthas"] = {
 			["playerClass"] = "WARRIOR",
 		},
+		["Lihte - Arthas"] = {
+			["playerClass"] = "DEATHKNIGHT",
+		},
+		["Gimm - Cho'gall"] = {
+			["playerClass"] = "MONK",
+		},
 		["Burk - Arthas"] = {
 			["playerClass"] = "SHAMAN",
+		},
+		["Spih - Cho'gall"] = {
+			["playerClass"] = "PRIEST",
+		},
+		["Greny - Azuremyst"] = {
+			["playerClass"] = "HUNTER",
 		},
 		["Git - Cho'gall"] = {
 			["playerClass"] = "WARRIOR",
@@ -203,30 +225,8 @@ BossNotesPersonalNotesDB = {
 			},
 			["publicNotesNotificationSeen"] = true,
 		},
-		["Greny - Azuremyst"] = {
-			["playerClass"] = "HUNTER",
-		},
-		["Spih - Cho'gall"] = {
-			["playerClass"] = "PRIEST",
-		},
-		["Gimm - Cho'gall"] = {
-			["playerClass"] = "MONK",
-		},
-		["Lihte - Arthas"] = {
-			["playerClass"] = "DEATHKNIGHT",
-		},
-		["Spih - Arthas"] = {
-			["playerClass"] = "PRIEST",
-			["notes"] = {
-				["encounter:71529"] = {
-					[""] = {
-						["clientVersion"] = "5.4.8",
-						["time"] = 1404699731,
-						["content"] = "3- smoke bomb\n5 - barrier\n6 - ascen/bop totem\n7 - arn htt\n8 - arn ascen/devo\n9 - sp VE\n11 - Shamans AG\n14 - Demo/rally mith\n15 - arn sl\n17 - Demo/rally nandini\n19 - Demo /rally hippo\n20 - Totem SL",
-					},
-				},
-			},
-			["publicNotesNotificationSeen"] = true,
+		["Git - Arthas"] = {
+			["playerClass"] = "WARRIOR",
 		},
 	},
 	["global"] = {
@@ -242,14 +242,14 @@ BossNotesPersonalNotesDB = {
 		["Gitt - Cho'gall"] = "Default",
 		["Giit - Cho'gall"] = "Default",
 		["Gitt - Arthas"] = "Default",
-		["Git - Arthas"] = "Default",
-		["Evayn - Arthas"] = "Default",
-		["Burk - Arthas"] = "Default",
-		["Git - Cho'gall"] = "Default",
-		["Greny - Azuremyst"] = "Default",
-		["Spih - Cho'gall"] = "Default",
-		["Gimm - Cho'gall"] = "Default",
-		["Lihte - Arthas"] = "Default",
 		["Spih - Arthas"] = "Default",
+		["Evayn - Arthas"] = "Default",
+		["Lihte - Arthas"] = "Default",
+		["Gimm - Cho'gall"] = "Default",
+		["Burk - Arthas"] = "Default",
+		["Spih - Cho'gall"] = "Default",
+		["Greny - Azuremyst"] = "Default",
+		["Git - Cho'gall"] = "Default",
+		["Git - Arthas"] = "Default",
 	},
 }

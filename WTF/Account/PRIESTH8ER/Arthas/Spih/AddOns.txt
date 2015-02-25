@@ -69,7 +69,7 @@ TitanVolume: disabled
 TitanRepair: disabled
 TitanPerformance: disabled
 TitanXP: disabled
-Titan: disabled
+Titan: enabled
 TomTom: disabled
 WhoPulled: disabled
 BigWigs_Mogushan: enabled
@@ -150,3 +150,4 @@ Stubby: enabled
 AngryAssignments: enabled
 LargerMacroIconSelection: disabled
 ReagentRestocker: disabled
+DeathNote: enabled

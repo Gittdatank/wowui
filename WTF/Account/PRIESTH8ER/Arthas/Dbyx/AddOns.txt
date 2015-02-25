@@ -32,7 +32,7 @@ TipTac: disabled
 TipTacItemRef: disabled
 TipTacOptions: disabled
 TipTacTalents: disabled
-Titan: disabled
+Titan: enabled
 TitanBag: disabled
 TitanClock: disabled
 TitanDurability: disabled
@@ -121,3 +121,4 @@ Stubby: enabled
 AngryAssignments: enabled
 LargerMacroIconSelection: disabled
 ReagentRestocker: disabled
+DeathNote: enabled

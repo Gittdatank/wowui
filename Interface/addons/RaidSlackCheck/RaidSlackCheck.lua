@@ -5,12 +5,12 @@ if GetLocale()=="deDE" or GetLocale()=="ruRU" or GetLocale()=="zhTW" or GetLocal
 rsclocalel()
 end
 
-rscversion=6.010
+rscversion=6.012
 
 
 --zone ID where addon check flasks
 
-rscignorezonedef={{994},{"Highmaul"}}
+rscignorezonedef={{994, 988},{"Highmaul", "Blackrock Foundry"}}
 
 
 
@@ -306,6 +306,7 @@ rscfoodmanytable={
 
 160740,
 160914,
+175215,
   
 }
 
@@ -340,6 +341,7 @@ rscrobotsid={
 22700,
 44389,
 54711,
+157066,
 }
 
 
@@ -889,11 +891,11 @@ if arg1=="RaidSlackCheck" then
 --	end
 --rscignorezone=nil
 --elseif rscignorezone3==nil then
-if rscignorezone7==nil then
-	rscignorezone7={{},{}}
+if rscignorezone8==nil then
+	rscignorezone8={{},{}}
 	for i=1,#rscignorezonedef[1] do
-		table.insert(rscignorezone7[1],rscignorezonedef[1][i])
-		table.insert(rscignorezone7[2],rscignorezonedef[2][i])
+		table.insert(rscignorezone8[1],rscignorezonedef[1][i])
+		table.insert(rscignorezone8[2],rscignorezonedef[2][i])
 	end
 rscignorezonedef=nil
 end
@@ -1401,10 +1403,10 @@ elseif a1 and a2 and a2=="raid" then
 
 local mojn=1
 
-if #rscignorezone7[1]>0 then
-	for ug=1,#rscignorezone7[1] do
-		if rscignorezone7[1][ug]==GetCurrentMapAreaID() then
-			rscignorezone7[2][ug]=GetMapNameByID(GetCurrentMapAreaID())
+if #rscignorezone8[1]>0 then
+	for ug=1,#rscignorezone8[1] do
+		if rscignorezone8[1][ug]==GetCurrentMapAreaID() then
+			rscignorezone8[2][ug]=GetMapNameByID(GetCurrentMapAreaID())
 			mojn=0
 		end
 	end

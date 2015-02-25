@@ -441,7 +441,29 @@ function psdeathrepfindactiveboss()
     elseif pswasonbossd16 then
       psdeathrepbossnametemp=psbossnames[3][1][6]
     elseif pswasonbossd17 then
-	  psdeathrepbossnametemp=psbossnames[3][1][6]
+	  psdeathrepbossnametemp=psbossnames[3][1][7]
+	end
+	
+    if pswasonbossd21 then
+      psdeathrepbossnametemp=psbossnames[3][2][1]
+    elseif pswasonbossd22 then
+      psdeathrepbossnametemp=psbossnames[3][2][2]
+    elseif pswasonbossd23 then
+      psdeathrepbossnametemp=psbossnames[3][2][3]
+    elseif pswasonbossd24 then
+      psdeathrepbossnametemp=psbossnames[3][2][4]
+    elseif pswasonbossd25 then
+      psdeathrepbossnametemp=psbossnames[3][2][5]
+    elseif pswasonbossd26 then
+      psdeathrepbossnametemp=psbossnames[3][2][6]
+    elseif pswasonbossd27 then
+	  psdeathrepbossnametemp=psbossnames[3][2][7]
+    elseif pswasonbossd28 then
+	  psdeathrepbossnametemp=psbossnames[3][2][8]
+    elseif pswasonbossd29 then
+	  psdeathrepbossnametemp=psbossnames[3][2][9]
+    elseif pswasonbossd210 then
+	  psdeathrepbossnametemp=psbossnames[3][2][10]
 	end
   end
 end

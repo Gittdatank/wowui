@@ -264,7 +264,7 @@ TitanPerformance: disabled
 TitanRepair: disabled
 TitanVolume: disabled
 TitanXP: disabled
-Titan: disabled
+Titan: enabled
 TomTom: disabled
 Trinity2: disabled
 TrinityBars2: disabled
@@ -393,7 +393,7 @@ LagBar: disabled
 AngryAssignments: enabled
 Broker_Garrison: disabled
 BulkOrder: disabled
-DeathNote: disabled
+DeathNote: enabled
 FollowerLocationInfo: disabled
 MasterPlan: disabled
 PhoenixStyleMod_WoD_tier1: disabled

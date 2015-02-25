@@ -8,7 +8,7 @@ AutoTurnInCharacterDB = {
 	},
 	["enabled"] = true,
 	["todarkmoon"] = true,
-	["debug"] = false,
+	["autoequip"] = false,
 	["questshare"] = false,
 	["armor"] = {
 	},
@@ -17,9 +17,9 @@ AutoTurnInCharacterDB = {
 	["completeonly"] = false,
 	["stat"] = {
 	},
-	["version"] = "4.5.N",
 	["tournament"] = 2,
-	["autoequip"] = false,
+	["version"] = "4.5.N",
+	["debug"] = false,
 	["lootreward"] = 1,
 	["all"] = 1,
 	["trivial"] = false,

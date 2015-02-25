@@ -1,0 +1,8 @@
+2015-02-24  MMOSimca  <MMOSimca@gmail.com>
+
+[6e55341c3fa4] [6.1.0-1]
+* Constants.lua:
+
+Added support for many new items: 13 more item crafting tokens and 32 more item containers.
+
+

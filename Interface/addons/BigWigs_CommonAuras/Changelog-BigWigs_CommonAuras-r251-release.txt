@@ -1,0 +1,19 @@
+------------------------------------------------------------------------
+r251 | funkydude | 2015-02-24 23:57:05 +0000 (Tue, 24 Feb 2015) | 1 line
+Changed paths:
+   A /tags/r251-release (from /trunk:250)
+
+Tagging as r251-release
+------------------------------------------------------------------------
+r250 | funkydude | 2015-02-24 23:43:24 +0000 (Tue, 24 Feb 2015) | 1 line
+Changed paths:
+   M /trunk/BigWigs_CommonAuras.toc
+
+bump version
+------------------------------------------------------------------------
+r249 | _yusaku_ | 2015-02-22 09:33:58 +0000 (Sun, 22 Feb 2015) | 1 line
+Changed paths:
+   M /trunk/CommonAuras.lua
+
+itIT Translation Tweaks
+------------------------------------------------------------------------

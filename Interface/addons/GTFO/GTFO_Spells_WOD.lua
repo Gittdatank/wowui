@@ -245,6 +245,12 @@ GTFO.SpellID["176871"] = {
 	sound = 1;
 };
 
+GTFO.SpellID["167687"] = {
+	--desc = "Solar Breath (Rukhmar)";
+	sound = 1;
+	tankSound = 0;
+};
+
 --TODO: Acid Breath (Drov the Ruiner) - avoidable?
 
 -- **************
@@ -723,7 +729,7 @@ GTFO.SpellID["156203"] = {
 
 GTFO.SpellID["156388"] = {
 	--desc = "Explosive Shard - Initial Hit (Oregorger)";
-	sound = 3;
+	sound = 2;
 };
 
 GTFO.SpellID["156932"] = {
@@ -762,7 +768,6 @@ GTFO.SpellID["162663"] = {
 GTFO.SpellID["154989"] = {
 	--desc = "Inferno Breath (Beastlord Darmac)";
 	sound = 1;
-	tankSound = 0; -- Avoidable by tank?
 	applicationOnly = true;
 };
 
@@ -788,8 +793,16 @@ GTFO.SpellID["156823"] = {
 	sound = 1;
 };
 
--- Flamebender Ka'graz
--- TODO: Singe - too many stacks?
+GTFO.SpellID["155657"] = {
+	--desc = "Flame Infusion (Pack Beast)";
+	sound = 1;
+};
+
+GTFO.SpellID["155049"] = {
+	--desc = "Singe (Flamebender Ka'graz)";
+	sound = 1;
+	applicationOnly = true;
+};
 
 GTFO.SpellID["155314"] = {
 	--desc = "Lava Slash (Flamebender Ka'graz)";
@@ -799,7 +812,6 @@ GTFO.SpellID["155314"] = {
 GTFO.SpellID["156713"] = {
 	--desc = "Unquenchable Flame (Flamebender Ka'graz)";
 	sound = 1;
-	test = true;
 };
 
 GTFO.SpellID["155484"] = {
@@ -822,6 +834,16 @@ GTFO.SpellID["161570"] = {
 -- TODO: Lava Shock - avoidable?
 -- TODO: Obliteration - avoidable?
 -- TODO: Heat Blast - avoidable?
+
+GTFO.SpellID["174773"] = {
+	--desc = "Exhaust Fumes (Operator Thogar)";
+	sound = 1;
+};
+
+GTFO.SpellID["165195"] = {
+	--desc = "Prototype Pulse Grenade (Operator Thogar)";
+	sound = 1;
+};
 
 GTFO.SpellID["156932"] = {
 	--desc = "Rupture (Foreman Feldspar)";
@@ -846,9 +868,30 @@ GTFO.SpellID["158683"] = {
 	sound = 1;
 };
 
+GTFO.SpellID["175585"] = {
+	--desc = "Living Blaze (Forgemistress Flamehand)";
+	sound = 4;
+	ignoreSelfInflicted = true;	
+};
+
+GTFO.SpellID["175577"] = {
+	--desc = "Flame Jets (Forgemistress Flamehand)";
+	sound = 1;
+};
+
 -- Blackhand
 GTFO.SpellID["156401"] = {
 	--desc = "Molten Slag (Blackhand)";
+	sound = 1;
+};
+
+GTFO.SpellID["162490"] = {
+	--desc = "Blaze (Blackhand)";
+	sound = 1;
+};
+
+GTFO.SpellID["156617"] = {
+	--desc = "Blaze (Blackhand)";
 	sound = 1;
 };
 
@@ -993,8 +1036,12 @@ GTFO.SpellID["174576"] = {
 
 GTFO.SpellID["162397"] = {
 	--desc = "Expel Magic: Arcane (Ko'ragh)";
-	sound = 4;
-	negatingDebuffSpellID = 162186; -- Expel Magic: Arcane
+	soundFunction = function() 
+		if (GTFO_HasDebuff("player", 162186)) then -- Expel Magic: Arcane
+			return 1; -- Tank is hurting self
+		end
+		return 4;
+	end;
 };
 
 GTFO.SpellID["161345"] = {
@@ -1033,3 +1080,9 @@ GTFO.SpellID["157769"] = {
 	negatingDebuffSpellID = 157763; -- Fixate
 	negatingIgnoreTime = 2;
 };
+
+GTFO.SpellID["157357"] = {
+	--desc = "Force Nova: Replication (Imperator Mar'gok)";
+	sound = 4;
+};
+

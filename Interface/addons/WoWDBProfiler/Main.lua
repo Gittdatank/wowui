@@ -659,9 +659,9 @@ do
 end -- do-block
 
 
-local GenericLootUpdate
+local GenericLootUpdate, LootTable
 do
-    local function LootTable(entry, loot_type, top_field)
+    function LootTable(entry, loot_type, top_field)
         if top_field then
             entry[top_field] = entry[top_field] or {}
             entry[top_field][loot_type] = entry[top_field][loot_type] or {}
@@ -1381,6 +1381,9 @@ function WDP:SHOW_LOOT_TOAST(event_name, loot_type, item_link, quantity, spec_ID
         else
             Debug("%s: Currency texture is nil, from currency link %s", event_name, item_link)
         end
+        
+        -- Wipe object ID until future mouseover
+        last_garrison_cache_object_id = nil
     elseif raid_boss_id then
         local npc = NPCEntry(raid_boss_id)
         if npc then

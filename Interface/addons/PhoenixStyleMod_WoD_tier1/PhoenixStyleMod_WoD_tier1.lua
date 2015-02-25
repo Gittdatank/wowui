@@ -16,6 +16,17 @@ psraidoptionstxtd1[1]={{"|tip2 "..psmainmdamagefrom.." |sid159412|id (initial)",
 {},
 {"|tip2 "..psmainmgot.." |sid159200|id"},
 }
+psraidoptionstxtd1[2]={{"|tip2 "..psmainmdamagefrom.." |sid155301|id"},
+{"|tip2 "..psmainmdamagefrom.." |sid156374|id","|tip2 "..psmainmdamagefrom.." |sid155900|id"},
+{},
+{},
+{},
+{},
+{},
+{},
+{},
+{},
+}
 
 
 for i=1,#psraidoptionstxtd1 do
@@ -36,7 +47,17 @@ psraidoptionschatdefd1[1]={{1,1,1},
 {},
 {1},
 }
-
+psraidoptionschatdefd1[2]={{1},
+{1,1},
+{},
+{},
+{},
+{},
+{},
+{},
+{},
+{},
+}
 
 
 --chat settings on or off
@@ -49,13 +70,22 @@ psraidoptionsondefd1[1]={{1,1,1},
 {},
 {1},
 }
-
-
+psraidoptionsondefd1[2]={{1},
+{1,1},
+{},
+{},
+{},
+{},
+{},
+{},
+{},
+{},
+}
 
 
 
 SetMapToCurrentZone()
-if GetCurrentMapAreaID()==pslocations[3][1] then
+if GetCurrentMapAreaID()==pslocations[3][1] or GetCurrentMapAreaID()==pslocations[3][2] then
 	PhoenixStyleMod_patchwod3:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 end
 	PhoenixStyleMod_patchwod3:RegisterEvent("PLAYER_REGEN_DISABLED")
@@ -185,7 +215,7 @@ local a1, a2, a3, a4, a5 = GetInstanceInfo()
 if UnitInRaid("player") or (a2=="raid" or (a2=="party" and a3==2)) then
 SetMapToCurrentZone()
 end
-if GetCurrentMapAreaID()==pslocations[3][1] then
+if GetCurrentMapAreaID()==pslocations[3][1] or GetCurrentMapAreaID()==pslocations[3][2] then
 PhoenixStyleMod_patchwod3:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 else
 PhoenixStyleMod_patchwod3:UnregisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
@@ -307,7 +337,7 @@ function pscmroncombatstartcheckboss_wod1(id)
 if psbossblock==nil then
 
 SetMapToCurrentZone()
-if GetCurrentMapAreaID()==pslocations[3][1] then
+if GetCurrentMapAreaID()==pslocations[3][1] or GetCurrentMapAreaID()==pslocations[3][2] then
   pscmrcheckforevade_wod1=GetTime()+10
 end
 
@@ -340,6 +370,39 @@ if GetCurrentMapAreaID()==pslocations[3][1] then
 	end
 end
 
+if GetCurrentMapAreaID()==pslocations[3][2] then
+	if (id==76877) and psbossfiled21 then
+		pswasonbossd21=1
+	end
+	if (id==77182) and psbossfiled22 then
+		pswasonbossd22=1
+	end
+	if (id==76806) and psbossfiled23 then
+		pswasonbossd23=1
+	end
+	if (id==76973 or id==76974) and psbossfiled24 then
+		pswasonbossd24=1
+	end
+	if (id==76814) and psbossfiled25 then
+		pswasonbossd25=1
+	end
+	if (id==77692) and psbossfiled26 then
+		pswasonbossd26=1
+	end
+	if (id==76865) and psbossfiled27 then
+		pswasonbossd27=1
+	end
+	if (id==76906) and psbossfiled28 then
+		pswasonbossd28=1
+	end
+	if (id==77557) and psbossfiled29 then
+		pswasonbossd29=1
+	end
+	if (id==77325) and psbossfiled210 then
+		pswasonbossd210=1
+	end
+end
+
 
 end
 
@@ -356,11 +419,6 @@ local arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, ne
 --Inst 6
 if GetCurrentMapAreaID()==pslocations[3][1] then
 
-
-
-
-
-
 if pswasonbossd11 then
 pscombatlogbossd11(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
 elseif pswasonbossd12 then
@@ -375,6 +433,7 @@ elseif pswasonbossd16 then
 pscombatlogbossd16(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
 elseif pswasonbossd17 then
 pscombatlogbossd17(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
+
 else
 
 pscombatlogbossd11(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
@@ -385,12 +444,52 @@ pscombatlogbossd15(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, nam
 pscombatlogbossd16(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
 pscombatlogbossd17(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
 
-
-
 end
 
 end
 --inst 6 end
+
+
+--Inst 6
+if GetCurrentMapAreaID()==pslocations[3][2] then
+
+
+if pswasonbossd21 then
+pscombatlogbossd21(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
+elseif pswasonbossd22 then
+pscombatlogbossd22(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
+elseif pswasonbossd23 then
+pscombatlogbossd23(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
+elseif pswasonbossd24 then
+pscombatlogbossd24(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
+elseif pswasonbossd25 then
+pscombatlogbossd25(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
+elseif pswasonbossd26 then
+pscombatlogbossd26(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
+elseif pswasonbossd27 then
+pscombatlogbossd27(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
+elseif pswasonbossd28 then
+pscombatlogbossd28(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
+elseif pswasonbossd29 then
+pscombatlogbossd29(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
+elseif pswasonbossd210 then
+pscombatlogbossd210(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
+
+pscombatlogbossd21(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
+pscombatlogbossd22(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
+pscombatlogbossd23(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
+pscombatlogbossd24(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
+pscombatlogbossd25(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
+pscombatlogbossd26(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
+pscombatlogbossd27(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
+pscombatlogbossd28(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
+pscombatlogbossd29(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
+pscombatlogbossd210(arg1, arg2, hideCaster, guid1, name1, flag1, new1, guid2, name2, flag2, new2, spellid, spellname, arg11,arg12,arg13,arg14,arg15)
+
+end
+
+end
+--Inst 7
 
 
 --res to reset info
@@ -506,7 +605,7 @@ end
 
 
 
-pslastmoduleloadtxt=pscmrlastmoduleloadtxt_wod1
+pslastmoduleloadtxt="Raids WoD"
 
 
 --перенос переменных
@@ -514,29 +613,29 @@ pslastmoduleloadtxt=pscmrlastmoduleloadtxt_wod1
 pscmrpassvariables_wod1()
 
 
-
-	if psraidoptionson[3][1]==nil then psraidoptionson[3][1]={}
+for i=1,#psraidoptionsond1 do
+	if psraidoptionson[3][i]==nil then psraidoptionson[3][i]={}
 	end
-	for j=1,#psraidoptionsond1[1] do
-		if psraidoptionson[3][1][j]==nil then
-			psraidoptionson[3][1][j]={}
+	for j=1,#psraidoptionsond1[i] do
+		if psraidoptionson[3][i][j]==nil then
+			psraidoptionson[3][i][j]={}
 		end
-		for t=1,#psraidoptionsond1[1][j] do
-			if psraidoptionson[3][1][j][t]==nil then
-				psraidoptionson[3][1][j][t]=psraidoptionsond1[1][j][t]
+		for t=1,#psraidoptionsond1[i][j] do
+			if psraidoptionson[3][i][j][t]==nil then
+				psraidoptionson[3][i][j][t]=psraidoptionsond1[i][j][t]
 			end
 		end
 	end
 
-	if psraidoptionstxt[1]==nil then psraidoptionstxt[1]={}
+	if psraidoptionstxt[i]==nil then psraidoptionstxt[i]={}
 	end
-	for j=1,#psraidoptionstxtd1[1] do
-		if psraidoptionstxt[1][j]==nil then
-			psraidoptionstxt[1][j]={}
+	for j=1,#psraidoptionstxtd1[i] do
+		if psraidoptionstxt[i][j]==nil then
+			psraidoptionstxt[i][j]={}
 		end
-		for t=1,#psraidoptionstxtd1[1][j] do
-			if psraidoptionstxt[1][j][t]==nil then
-				psraidoptionstxt[1][j][t]=psraidoptionstxtd1[1][j][t]
+		for t=1,#psraidoptionstxtd1[i][j] do
+			if psraidoptionstxt[i][j][t]==nil then
+				psraidoptionstxt[i][j][t]=psraidoptionstxtd1[i][j][t]
 			end
 		end
 	end
@@ -544,33 +643,19 @@ pscmrpassvariables_wod1()
 
 
 
-
-
-
-
---ыытест что мы тут убирали, тестим
---psraidoptionstxtd1=nil
-
-
-
---psraidoptionstxtd11=nil
---psraidoptionstxtd12=nil
---psraidoptionstxtd13=nil
---psraidoptionstxtd14=nil
-
-	if psraidoptionschat[3][1]==nil then psraidoptionschat[3][1]={}
+	if psraidoptionschat[3][i]==nil then psraidoptionschat[3][i]={}
 	end
-	for j=1,#psraidoptionschatd1[1] do
-		if psraidoptionschat[3][1][j]==nil then
-			psraidoptionschat[3][1][j]={}
+	for j=1,#psraidoptionschatd1[i] do
+		if psraidoptionschat[3][i][j]==nil then
+			psraidoptionschat[3][i][j]={}
 		end
-		for t=1,#psraidoptionschatd1[1][j] do
-			if psraidoptionschat[3][1][j][t]==nil then
-				psraidoptionschat[3][1][j][t]=psraidoptionschatd1[1][j][t]
+		for t=1,#psraidoptionschatd1[i][j] do
+			if psraidoptionschat[3][i][j][t]==nil then
+				psraidoptionschat[3][i][j][t]=psraidoptionschatd1[i][j][t]
 			end
 		end
 	end
-
+end
 
 
 
@@ -664,6 +749,56 @@ end
 
 
 
+
+if (pswasonbossd21) then
+pscmrbossREPORTd211(wipe, tryorkill, reset, checkforwipe)
+pscmrbossRESETd211(wipe, tryorkill, reset, checkforwipe)
+end
+
+if (pswasonbossd22) then
+pscmrbossREPORTd221(wipe, tryorkill, reset, checkforwipe)
+pscmrbossRESETd221(wipe, tryorkill, reset, checkforwipe)
+end
+
+if (pswasonbossd23) then
+pscmrbossREPORTd231(wipe, tryorkill, reset, checkforwipe)
+pscmrbossRESETd231(wipe, tryorkill, reset, checkforwipe)
+end
+
+if (pswasonbossd24) then
+pscmrbossREPORTd241(wipe, tryorkill, reset, checkforwipe)
+pscmrbossRESETd241(wipe, tryorkill, reset, checkforwipe)
+end
+
+if (pswasonbossd25) then
+pscmrbossREPORTd251(wipe, tryorkill, reset, checkforwipe)
+pscmrbossRESETd251(wipe, tryorkill, reset, checkforwipe)
+end
+
+if (pswasonbossd26) then
+pscmrbossREPORTd261(wipe, tryorkill, reset, checkforwipe)
+pscmrbossRESETd261(wipe, tryorkill, reset, checkforwipe)
+end
+
+if (pswasonbossd27) then
+pscmrbossREPORTd271(wipe, tryorkill, reset, checkforwipe)
+pscmrbossRESETd271(wipe, tryorkill, reset, checkforwipe)
+end
+
+if (pswasonbossd28) then
+pscmrbossREPORTd281(wipe, tryorkill, reset, checkforwipe)
+pscmrbossRESETd281(wipe, tryorkill, reset, checkforwipe)
+end
+
+if (pswasonbossd29) then
+pscmrbossREPORTd291(wipe, tryorkill, reset, checkforwipe)
+pscmrbossRESETd291(wipe, tryorkill, reset, checkforwipe)
+end
+
+if (pswasonbossd210) then
+pscmrbossREPORTd2101(wipe, tryorkill, reset, checkforwipe)
+pscmrbossRESETd2101(wipe, tryorkill, reset, checkforwipe)
+end
 
 		end
 

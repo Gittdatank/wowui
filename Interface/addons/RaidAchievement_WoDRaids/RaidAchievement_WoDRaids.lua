@@ -1,7 +1,10 @@
 ﻿function wodrraonload()
+	wodrraachdone1=true
+	wodrracounter1=0
+	wodrratimerfurnace=nil
 
 SetMapToCurrentZone()
-if GetCurrentMapAreaID()==9999999 then
+if GetCurrentMapAreaID()==988 then
 	RaidAchievement_wodrra:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 	RaidAchievement_wodrra:RegisterEvent("UNIT_POWER")
 	RaidAchievement_wodrra:RegisterEvent("CHAT_MSG_RAID_BOSS_EMOTE")
@@ -20,7 +23,9 @@ end
 
 wodrraspisokach25={
 
-
+8929,
+8980, --http://www.wowhead.com/achievement=8980 Stamp Stamp Revolution
+8930, --http://www.wowhead.com/achievement=8930 Ya, We've got time
 
 
 }
@@ -43,7 +48,7 @@ function wodrra_OnUpdate(curtime)
 if rpradelayzonech and curtime>rpradelayzonech then
 rpradelayzonech=nil
 SetMapToCurrentZone()
-if GetCurrentMapAreaID()==9999999 then
+if GetCurrentMapAreaID()==988 then
 RaidAchievement_wodrra:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 RaidAchievement_wodrra:RegisterEvent("UNIT_POWER")
 RaidAchievement_wodrra:RegisterEvent("CHAT_MSG_RAID_BOSS_EMOTE")
@@ -55,6 +60,11 @@ end
 end
 
 
+-- Ya, We've got time
+if wodrratimerfurnace and GetTime()>wodrratimerfurnace then
+   wodrratimerfurnace=nil -- reset timer since achievement is failed
+   wodrrafailnoreason(3)
+end
 
 
 --после 10 сек после ачивки чек
@@ -136,6 +146,9 @@ if event == "PLAYER_REGEN_DISABLED" then
 if (rabilresnut and GetTime()<rabilresnut+3) or racheckbossincombat then
 else
 --обнулять все данные при начале боя тут:
+wodrraachdone1=true
+wodrracounter1=0
+wodrratimerfurnace=nil
 raramapwidth=nil
 raramapheight=nil
 psranormgolong=nil
@@ -208,6 +221,50 @@ local arg1, arg2, arg3,arg4,arg5,arg6,argNEW1,arg7,arg8,arg9,argNEW2,arg10,arg11
 
 --ТУТ АЧИВЫ
 
+--BRF (2 dung)
+if GetCurrentMapAreaID()==988 then
+
+if arg2=="UNIT_DIED" then
+  if wodrraspisokon[1]==1 and wodrraachdone1 then
+  local id=raGetUnitID(arg7)
+  if id==77337 then
+      wodrrafailnoreason(1)
+    end
+  end
+end
+
+-- Stamp Stamp Revolution
+
+if (arg2=="SPELL_DAMAGE" and arg10==158140) and arg4 and arg8 then
+   raunitisplayer(arg7,arg8)
+   if raunitplayertrue then
+      if wodrraspisokon[2]==1 and wodrraachdone1 then
+         wodrrafailnoreason(2,arg8)
+      end
+   end
+end
+
+-- Ya, We've Got Time
+
+if arg2=="UNIT_DIED" then
+  if wodrraspisokon[3]==1 and wodrraachdone1 then
+     local id=raGetUnitID(arg7)
+     if id==76815 then
+       wodrracounter1=wodrracounter1+1
+
+       if wodrratimerfurnace==nil then -- start the timer if this was first kill
+          wodrratimerfurnace=GetTime()+10
+       end
+       if wodrracounter1==4 then
+          wodrratimerfurnace=nil -- reset timer since achievement is completed
+          wodrraachcompl(3)
+       end
+     end
+  end
+end
+end
+--
+--
 
 
 
@@ -280,7 +337,7 @@ local t = f:CreateFontString()
 t:SetFont(GameFontNormal:GetFont(), rafontsset[2])
 t:SetWidth(548)
 if i==3 then
-  t:SetText(wodrraName.." - |cffff0000"..raspectext.."|r")
+  t:SetText(wodrraName)
 else
   t:SetText(wodrraName)
 end

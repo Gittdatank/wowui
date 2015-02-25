@@ -660,3 +660,4 @@ BulkOrder: enabled
 AngryAssignments: enabled
 LargerMacroIconSelection: disabled
 ReagentRestocker: disabled
+DeathNote: enabled

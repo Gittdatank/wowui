@@ -1,5 +1,5 @@
-## Interface: 60000
-## X-Curse-Packaged-Version: r69-release
+## Interface: 60100
+## X-Curse-Packaged-Version: r73-release
 ## X-Curse-Project-Name: BigWigs_Cataclysm
 ## X-Curse-Project-ID: bigwigs_cataclysm
 ## X-Curse-Repository-ID: wow/bigwigs_cataclysm/mainline

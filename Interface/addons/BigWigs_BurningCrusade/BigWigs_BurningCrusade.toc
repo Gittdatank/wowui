@@ -1,5 +1,5 @@
-## Interface: 60000
-## X-Curse-Packaged-Version: r41-release
+## Interface: 60100
+## X-Curse-Packaged-Version: r45-release
 ## X-Curse-Project-Name: BigWigs_BurningCrusade
 ## X-Curse-Project-ID: bigwigs_burningcrusade
 ## X-Curse-Repository-ID: wow/bigwigs_burningcrusade/mainline
@@ -13,7 +13,7 @@
 ## Dependencies: BigWigs
 
 ## X-Category: Raid
-## X-BigWigs-LoadOn-ZoneId: 775, 780, 779, 776, 799, 782
+## X-BigWigs-LoadOn-ZoneId: 775, 780, 779, 776, 799, 782, 466
 ## X-BigWigs-LoadOn-WorldBoss: 473, 17711, 465, 18728
 
 modules.xml

@@ -46,6 +46,7 @@ function mod:OnBossEnable()
 	self:Log("SPELL_CAST_SUCCESS", "Energize", 164438)
 	self:Log("SPELL_CAST_START", "ParchedGasp", 164357)
 
+	--self:Log("SPELL_CAST_SUCCESS", "UncheckedGrowthSpawned", 181113) -- XXX 6.1
 	self:RegisterEvent("CHAT_MSG_MONSTER_EMOTE", "UncheckedGrowthSpawned")
 
 	self:Death("Win", 81522)
@@ -80,7 +81,7 @@ function mod:BrittleBarkOver(args)
 end
 
 function mod:Energize(args)
-	if self.isEngaged then
+	if self.isEngaged then -- This happens when killing the trash, we only want it during the encounter.
 		energy = energy + 25
 		if energy < 101 then
 			self:Message(164275, "Neutral", nil, L.energyStatus:format(energy), "spell_lightning_lightningbolt01")
@@ -94,8 +95,13 @@ function mod:ParchedGasp(args)
 end
 
 function mod:UncheckedGrowthSpawned(_, msg)
-	if self:Tank() and msg:find(self:SpellName(164294), nil, true) then -- Unchecked Growth
+	if msg:find(self:SpellName(164294), nil, true) then -- Unchecked Growth
 		self:Message(164294, "Urgent", nil, CL.add_spawned)
 	end
 end
+
+-- XXX for patch 6.1
+--function mod:UncheckedGrowthSpawned()
+--	self:Message(164294, "Urgent", nil, CL.add_spawned)
+--end
 

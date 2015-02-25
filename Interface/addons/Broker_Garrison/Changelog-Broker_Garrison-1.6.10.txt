@@ -1,0 +1,12 @@
+tag 1.6.10
+b70ca3dd8107c462ea85af00084d929bfb2e3c28
+Steffen Buehl <sb@sbuehl.com>
+2015-02-16 09:41:56 +0100
+
+tagging as 1.6.10
+
+
+--------------------
+
+Steffen Buehl:
+	- Fix + Cleanup

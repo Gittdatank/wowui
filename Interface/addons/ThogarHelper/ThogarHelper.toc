@@ -1,0 +1,13 @@
+## Interface: 60000
+## Title: ThogarHelper
+## Notes: Announce where the trains are coming on the Operator Thogar encounter in Blackrock Foundry
+## Author: xLevante
+## Version: 1.50
+## SavedVariables: ThogarHelperDB
+## OptionalDeps: Ace3
+## X-Embeds: Ace3
+## X-Category: Interface Enhancements
+
+embeds.xml
+
+Core.lua

@@ -26,3 +26,13 @@ Ko'ragh.lua
 Tectus.lua
 The Butcher.lua
 Twin Ogron.lua
+Gruul.lua
+Oregorger.lua
+Blast Furnace.lua
+Hans'gar & Franzok.lua
+Flamebender Ka'graz.lua
+Kromog.lua
+Beastlord Darmac.lua
+Operator Thogar.lua
+Iron Maidens.lua
+Blackhand.lua

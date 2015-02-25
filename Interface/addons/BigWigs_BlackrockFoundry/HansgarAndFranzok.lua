@@ -13,19 +13,7 @@ mod.engageId = 1693
 --
 
 local phase = 1
-local bossAway = nil
 local stamperWarned = nil
-
---------------------------------------------------------------------------------
--- Localization
---
-
-local L = mod:NewLocale("enUS", true)
-if L then
-	--L.hansgar_return_trigger = "Wait till they get a load of me."
-	--L.franzok_return_trigger = "Hah, you think that was good? You just wait!"
-end
-L = mod:GetLocale()
 
 --------------------------------------------------------------------------------
 -- Initialization
@@ -41,7 +29,9 @@ function mod:GetOptions()
 		156938, -- Crippling Suplex
 		157139, -- Shattered Vertebrae
 		{155818, "FLASH"}, -- Scorching Burns
+		{155747, "FLASH", "SAY"}, -- Body Slam
 		"stages",
+		--"berserk",
 		"bosskill"
 	}, {
 		[162124] = "mythic",
@@ -59,22 +49,22 @@ function mod:OnBossEnable()
 	self:Log("SPELL_AURA_APPLIED", "ScorchingBurnsDamage", 155818)
 	self:Log("SPELL_PERIODIC_DAMAGE", "ScorchingBurnsDamage", 155818)
 	self:Log("SPELL_PERIODIC_MISSED", "ScorchingBurnsDamage", 155818)
-	self:RegisterUnitEvent("UNIT_SPELLCAST_SUCCEEDED", "JumpAway", "boss1", "boss2")
-	self:RegisterEvent("CHAT_MSG_MONSTER_YELL", "JumpBack")
+	self:RegisterUnitEvent("UNIT_SPELLCAST_SUCCEEDED", nil, "boss1", "boss2")
 	self:Log("SPELL_AURA_APPLIED", "SmartStampers", 162124)
 end
 
 function mod:OnEngage()
 	phase = 1
-	bossAway = nil
 	self:CDBar(153470, 20) -- Skullcracker
 	self:CDBar(160838, 45) -- Disrupting Roar
 	if self:Mythic() then
 		stamperWarned = nil
 		self:Bar(162124, 13) -- Smart Stampers
+		--self:Berserk(360)
 	end
 
-	--self:RegisterUnitEvent("UNIT_HEALTH_FREQUENT", "Phases", "boss1")
+	self:RegisterUnitEvent("UNIT_HEALTH_FREQUENT", "Phases", "boss1")
+	self:RegisterUnitEvent("UNIT_TARGETABLE_CHANGED", "Jumps", "boss1", "boss2")
 end
 
 --------------------------------------------------------------------------------
@@ -88,6 +78,14 @@ function mod:SmartStampers(args)
 	end
 end
 
+function mod:Phases(unit)
+	local hp = UnitHealth(unit) / UnitHealthMax(unit) * 100
+	if (phase == 1 and hp < 87) or (phase == 2 and hp < 57) or (phase == 3 and hp < 27) then -- 85%, 55%, 25%
+		self:UnregisterUnitEvent("UNIT_HEALTH_FREQUENT", unit)
+		self:Message(156938, "Urgent", "Info", CL.soon:format(self:SpellName(156938)), false)
+	end
+end
+
 -- Phase fuckery
 do
 	local phaseThreats = {
@@ -97,29 +95,17 @@ do
 		--mod:SpellName(158139), -- Stamping Presses (Hans'gar returns)
 	}
 
-	function mod:Phases(unit)
-		local hp = UnitHealth(unit) / UnitHealthMax(unit)
-		if (phase == 1 and hp < 89) or (phase == 2 and hp < 58) or (phase == 3 and hp < 28) then -- 85%, 55%, 25%
-			self:UnregisterUnitEvent("UNIT_HEALTH_FREQUENT", unit)
-			self:Message("stages", "Neutral", "Info", CL.soon:format(phaseThreats[phase]), false)
-		end
-	end
-	function mod:JumpAway(unit, spellName, _, _, spellId)
-		if spellId == 156220 then -- Tactical Retreat (jumped away)
-			bossAway = UnitName(unit)
-			self:Message("stages", "Neutral", "Info", phaseThreats[phase], false)
-			if self:MobId(UnitGUID(unit)) == 76974 then -- Franzok
-				self:StopBar(153470) -- Skullcracker
-				self:StopBar(160838) -- Disrupting Roar
-			end
+	function mod:JumpAway(unit)
+		self:Message("stages", "Neutral", "Info", phaseThreats[phase], false)
+		if self:MobId(UnitGUID(unit)) == 76974 then -- Franzok
+			self:StopBar(153470) -- Skullcracker
+			self:StopBar(160838) -- Disrupting Roar
 		end
 	end
 
-	function mod:JumpBack(_, msg, unit, _, _, target)
-		-- bleh locales, i'll just start with the sender check approach instead of waiting for funky to switch it later >.>
-		-- atleast they yell pretty close to when UNIT_TARGETABLE_CHANGED use to fire
-		if bossAway == unit and not target then -- jumped back
-			bossAway = nil
+	function mod:Jumps(unit)
+		if UnitExists(unit) then -- jumped back
+			self:RegisterUnitEvent("UNIT_HEALTH_FREQUENT", "Phases", "boss1")
 			if phase < 3 then
 				self:Message("stages", "Neutral", "Info", CL.over:format(phaseThreats[phase]), false)
 				phase = phase + 1
@@ -137,14 +123,44 @@ do
 				end
 			else
 				-- phase 3, Searing while Hans'gar is up, then Stamping when he jumps back down
-				self:Message("stages", "Neutral", "Info", self:SpellName(158139), false) -- Stamping Presses
+				self:Message("stages", "Neutral", "Info", CL.soon:format(self:SpellName(158139)), false) -- Stamping Presses
+			end
+		elseif self:MobId(UnitGUID(unit)) == 76974 then -- Franzok jumped away (doesn't Tactical Retreat anymore?)
+			self:Message("stages", "Neutral", "Info", phaseThreats[phase], false)
+			if self:MobId(UnitGUID(unit)) == 76974 then -- Franzok
+				self:StopBar(153470) -- Skullcracker
+				self:StopBar(160838) -- Disrupting Roar
 			end
 		end
 	end
 end
 
+do
+	local function printTarget(self, name, guid)
+		if self:Me(guid) then
+			self:Say(155747)
+			self:Flash(155747)
+		elseif self:Range(name) < 10 then
+			self:RangeMessage(155747)
+			self:Flash(155747)
+			return
+		end
+		self:TargetMessage(155747, name, "Attention", "Alarm")
+	end
+	function mod:UNIT_SPELLCAST_SUCCEEDED(unit, spellName, _, _, spellId)
+		if spellId == 156220 then -- Tactical Retreat (Hans'gar jumped away)
+			self:JumpAway(unit)
+		elseif spellId == 156546 or spellId == 156542 then -- Crippling Suplex (tank picked up)
+			self:TargetMessage(156938, UnitName(unit.."target"), "Important", (self:Tank() or self:Healer()) and "Warning" or "Alarm")
+			self:Bar(156938, 9) -- 8.7-9.5 until damage taken
+		elseif spellId == 157923 then -- Jump Slam. -- XXX This id is midair: Test 157922 which is earlier but might be unstable.
+			self:GetBossTarget(printTarget, 0.5, UnitGUID(unit))
+		end
+	end
+end
+
 function mod:CripplingSuplex(args)
-	self:Message(args.spellId, "Urgent", self:Tank() and "Warning" or "Alarm")
+	self:Message(args.spellId, "Important", "Alarm", CL.casting:format(args.spellName))
 	self:Bar(157139, 8) -- Shattered Vertebrae
 end
 

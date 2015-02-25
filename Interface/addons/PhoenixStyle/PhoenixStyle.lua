@@ -11,7 +11,7 @@ pslocale()
 end
 
 
-	psversion=6.017
+	psversion=6.018
 
 
 	psverstiptext="alpha"
@@ -160,9 +160,9 @@ psdeathgriplocal=GetSpellInfo(49560)
 
 
 --cataclysm & Panda data
-pslocations={{752,754,758,773,800,824},{77777,897,896,886,930,953},{994}}
-pslocationnamesdef={{"Baradin Hold","Blackwing Descent","The Bastion of Twilight","Throne of the Four Winds","Firelands", "Dragon Soul"},{"New Baradin Hold","Heart of Fear","Mogu'shan Vaults","Terrace of Endless Spring","Throne of Thunder","Siege of Orgrimmar"},{"Highmaul"}}
-psaddontoload={{"PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_Firelands","PhoenixStyleMod_DragonSoul"},{"PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier2","PhoenixStyleMod_Panda_tier3"},{"PhoenixStyleMod_WoD_tier1"}}
+pslocations={{752,754,758,773,800,824},{77777,897,896,886,930,953},{994,988}}
+pslocationnamesdef={{"Baradin Hold","Blackwing Descent","The Bastion of Twilight","Throne of the Four Winds","Firelands", "Dragon Soul"},{"New Baradin Hold","Heart of Fear","Mogu'shan Vaults","Terrace of Endless Spring","Throne of Thunder","Siege of Orgrimmar"},{"Highmaul", "Blackrock Foundry"}}
+psaddontoload={{"PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_CataMiniRaids","PhoenixStyleMod_Firelands","PhoenixStyleMod_DragonSoul"},{"PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier1","PhoenixStyleMod_Panda_tier2","PhoenixStyleMod_Panda_tier3"},{"PhoenixStyleMod_WoD_tier1","PhoenixStyleMod_WoD_tier1"}}
 
 psbossnamesdef={
 {{"Argaloth","Occu'thar", "Alizabal, Mistress of Hate"},{"Magmaw","Omnitron Defense System","Maloriak","Atramedes","Chimaeron","Nefarian"},{"Halfus Wyrmbreaker","Valiona & Theralion","Twilight Ascendant Council","Cho'gall","Sinestra"},{"Conclave of Wind", "Al'Akir"},{"Beth'tilac", "Lord Rhyolith","Alysrazor","Shannox","Baleroc","Majordomo Staghelm","Ragnaros"},{"Morchok","Warlord Zon'ozz","Yor'sahj the Unsleeping","Hagara the Stormbinder","Ultraxion","Warmaster Blackhorn","Spine of Deathwing","Madness of Deathwing"}},
@@ -170,7 +170,9 @@ psbossnamesdef={
 {"Jin'rokh the Breaker","Horridon","The Council of Elders","Tortos","Megaera","Ji-Kun","Durumu the Forgotten","Primordius","Dark Animus","Iron Qon","Twin Consorts","Lei Shen","Ra-den"},
 {"Immerseus","The Fallen Protectors","Norushen","Sha of Pride","Galakras","Iron Juggernaut","Kor'kron Dark Shaman","General Nazgrim","Malkorok","Spoils of Pandaria","Thok the Bloodthirsty","Siegecrafter Blackfuse","Paragons of the Klaxxi","Garrosh Hellscream"},
 },
-{{"Kargath Bladefist","The Butcher","Brackenspore","Tectus","Twin Ogron","Ko'ragh","Imperator Mar'gok"}}
+{{"Kargath Bladefist","The Butcher","Brackenspore","Tectus","Twin Ogron","Ko'ragh","Imperator Mar'gok"},
+{"Gruul","Oregorger","Blast Furnace","Hans'gar & Franzok","Flamebender Ka'graz","Kromog","Beastlord Darmac","Operator Thogar","Iron Maidens","Blackhand"}
+}
 }
 psbossid={
 {{{47120},{52363},{55869}},{{41570},{0,42180,42166,42178,42179},{41378},{41442},{43296},{41376}},{{44600},{0,45992,45993},{0,43735,43686,43687,43688,43689},{43324},{45213}},{{0,45871,45870,45872},{46753}},{{52498},{52558},{52530},{53691},{53494},{52571},{52409}},{{55265},{55308},{55312},{55689},{55294},{56427},{0,53879, 56598, 55870},{0,53879}}},
@@ -178,7 +180,9 @@ psbossid={
 {{69465},{68476},{0,69078,69132,69134,69131},{67977},{0,68065,70212,70235,70247},{69712},{68036},{69017},{69427},{0,68079,68080,68081,68078},{0,68905,68904},{68397},{62983}},
 {{0,71543, 72436},{0,71479, 71475, 71480},{72276},{71734},{72249},{71466},{0,71859, 71858},{71515},{71454},{71889},{71529},{71504},{0,71152, 71153, 71154, 71155, 71156, 71157, 71158, 71160, 71161},{71865}},
 },
-{{{78714},{77404},{78491},{78948},{78237},{79015},{77428}}}
+{{{78714},{77404},{78491},{78948},{78237},{79015},{77428}},
+{{76877},{77182},{76806},{76973,76974},{76814},{77692},{76865},{76906},{77557},{77325}}
+}
 }
 
 --obj.modelId = select(4, EJ_GetCreatureInfo(1, tonumber(name)))
@@ -190,7 +194,8 @@ ps_modelid={
 {{47552},{47325},{47229},{46559},{47414},{46675},{47189},{47009},{47527},{46627},{46975},{46770},{47739}},
 {{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0},{0}},
 },
-{{{0},{0},{0},{0},{0},{0},{0}}}
+{{{0},{0},{0},{0},{0},{0},{0}},
+{{0},{0},{0},{0},{0},{0},{0},{0},{0},{0}}}
 }
 
 --options for SayAnnouncer
@@ -202,7 +207,8 @@ ps_saoptions_def={
 ps_sa_id={
 {{{},{},{}},{{},{79501,79888,92053,80157},{},{78092,92677},{},{79339}},{{},{86622,86788,86369},{92075,92067},{81685}},{{},{89668}},{{},{},{},{99836,99839},{99516},{98535},{98164}},{{},{"103434|AddComm"..psiccheroic},{},{109541,109325},{},{108046},{},{}}}, --не забыть дефалт добавить вкл/выкл
 {{{}},{{},{122949},{},{121881,122064},{},{}},{{130395},{116784,116417},{},{118303},{},{}},{{111850},{},{},{}},{{137399},{136769},{},{},{139822},{},{},{},{},{},{},{},{}},{{},{},{},{},{},{},{},{},{},{},{},{},{},{}}},
-{{{},{},{},{},{},{},{}}}
+{{{},{},{},{},{},{},{}},
+{{},{},{},{},{},{},{},{},{},{}}}
 }
 --"106794|AddComm"..psmainbutdragonsoul1
 

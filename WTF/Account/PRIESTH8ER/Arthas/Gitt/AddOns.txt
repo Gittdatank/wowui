@@ -87,3 +87,5 @@ Stubby: enabled
 AngryAssignments: enabled
 LargerMacroIconSelection: disabled
 ReagentRestocker: disabled
+Titan: enabled
+DeathNote: enabled

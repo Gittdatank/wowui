@@ -1308,10 +1308,10 @@ elseif a1 and a2 and a2=="raid" then
 local mojn=1
 
 SetMapToCurrentZone()
-if #rscignorezone7[1]>0 then
-	for ug=1,#rscignorezone7[1] do
-		if rscignorezone7[1][ug]==GetCurrentMapAreaID() then
-			rscignorezone7[2][ug]=GetMapNameByID(GetCurrentMapAreaID())
+if #rscignorezone8[1]>0 then
+	for ug=1,#rscignorezone8[1] do
+		if rscignorezone8[1][ug]==GetCurrentMapAreaID() then
+			rscignorezone8[2][ug]=GetMapNameByID(GetCurrentMapAreaID())
 			mojn=0
 		end
 	end
@@ -1414,17 +1414,17 @@ function rsczoneflaskch(nn)
 SetMapToCurrentZone()
 if nn==1 then
 	local rrr=0
-	if #rscignorezone7[1]>0 then
-		for i=1,#rscignorezone7[1] do
-			if rscignorezone7[1][i]==GetCurrentMapAreaID() then
-				rscignorezone7[2][i]=GetMapNameByID(GetCurrentMapAreaID())
+	if #rscignorezone8[1]>0 then
+		for i=1,#rscignorezone8[1] do
+			if rscignorezone8[1][i]==GetCurrentMapAreaID() then
+				rscignorezone8[2][i]=GetMapNameByID(GetCurrentMapAreaID())
 				rrr=1
 			end
 		end
 	end
 	if rrr==0 then
-		table.insert(rscignorezone7[2],GetMapNameByID(GetCurrentMapAreaID()))
-		table.insert(rscignorezone7[1],GetCurrentMapAreaID())
+		table.insert(rscignorezone8[2],GetMapNameByID(GetCurrentMapAreaID()))
+		table.insert(rscignorezone8[1],GetCurrentMapAreaID())
 		out ("|cff99ffffRaidSlackCheck|r - "..rsczonereport2.."|cff00ff00"..GetMapNameByID(GetCurrentMapAreaID()).."|r")
 	else
 		out ("|cff99ffffRaidSlackCheck|r - "..rsczonereport7)
@@ -1434,13 +1434,13 @@ end
 --remove
 if nn==2 then
 	local rrr=0
-	if #rscignorezone7[1]>0 then
-		for i=1,#rscignorezone7[1] do
-			if rscignorezone7[1][i]==GetCurrentMapAreaID() then
+	if #rscignorezone8[1]>0 then
+		for i=1,#rscignorezone8[1] do
+			if rscignorezone8[1][i]==GetCurrentMapAreaID() then
 				rrr=1
 				out ("|cff99ffffRaidSlackCheck|r - "..rsczonereport3.."|cffff0000"..GetMapNameByID(GetCurrentMapAreaID()).."|r")
-				table.remove(rscignorezone7[1],i)
-				table.remove(rscignorezone7[2],i)
+				table.remove(rscignorezone8[1],i)
+				table.remove(rscignorezone8[2],i)
 				i=1000
 			end
 		end
@@ -1453,15 +1453,15 @@ end
 --show
 if nn==3 then
 	local txt=""
-	if #rscignorezone7[2]>0 then
-		for i=1,#rscignorezone7[2] do
-			txt=txt.."|cff00ff00"..rscignorezone7[2][i].."|r"
-			if #rscignorezone7[2]>i then
+	if #rscignorezone8[2]>0 then
+		for i=1,#rscignorezone8[2] do
+			txt=txt.."|cff00ff00"..rscignorezone8[2][i].."|r"
+			if #rscignorezone8[2]>i then
 				txt=txt..", "
 			end
 		end
 	end
-	if #rscignorezone7[2]==0 then
+	if #rscignorezone8[2]==0 then
 		out ("|cff99ffffRaidSlackCheck|r - "..rsczonereport1.."|cffff0000"..rsczonereport6.."|r")
 	else
 		out ("|cff99ffffRaidSlackCheck|r - "..rsczonereport1..txt)
@@ -1473,8 +1473,8 @@ if nn==4 then
 if rscquickclicktimer and GetTime()<rscquickclicktimer+10 then
 --удаляю
 out ("|cff99ffffRaidSlackCheck|r - |cff00ff00 "..rsczonereport5.."|r")
-table.wipe(rscignorezone7[1])
-table.wipe(rscignorezone7[2])
+table.wipe(rscignorezone8[1])
+table.wipe(rscignorezone8[2])
 else
 --тыкни еще раз!
 rscquickclicktimer=GetTime()

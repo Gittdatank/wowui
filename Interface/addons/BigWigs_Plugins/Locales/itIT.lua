@@ -15,7 +15,22 @@ L["bars"] = "Barre"
 L["bestTimeBar"] = "Migliore"
 L["Beware"] = "Attenti! (Algalon)"
 L["bigWigsBarStyleName_Default"] = "Predefinito"
+L["blockEmotes"] = "Blocca gli emote a mezzo-schermo"
+L["blockEmotesDesc"] = [=[Alcuni boss mostrano delle emote per determinate abilità; questi messaggi sono sia troppo lunghi che troppo descrittivi. Cerchiamo di produrre messaggi più compatti e puliti che non interferiscono con lo svolgimento del gioco, e non dicono specificatamente cosa fare.
+
+Nota bene: gli emote dei Boss sono sempre visibili nella chat se vuoi leggerli.]=]
 L["blockGarrison"] = "Blocca i popup della Guarnigione"
+L["blockGarrisonDesc"] = [=[I popup della Guarnigione appaiono per certe attività, ma principalmente quando un seguace completa una missione.
+
+Questi popup possono coprire parti critiche o importanti della tua UI durante il combattimento contro un boss, raccomandiamo quindi di bloccarli.]=]
+L["blockGuildChallenge"] = "Blocca i popup delle sfide di Gilda"
+L["blockGuildChallengeDesc"] = [=[I popup delle Sfide di Gilda vengono mostrati per vari avvisi, principalmente quando la tua gilda completa una spedizione eroica o una spedizione in modalità sfida.
+
+Questi popup possono coprire parti critiche o importanti della tua UI durante il combattimento contro un boss, raccomandiamo quindi di bloccarli.]=]
+L["blockMovies"] = "Blocca filmati già visti"
+L["blockMoviesDesc"] = "I filmati dei boss (ove presenti) verranno fatti vedere solo la prima volta che si attivano per visualizzarli; dalle volte successive questi video verranno cancellati automaticamente."
+L["blockSpellErrors"] = "Blocca i messaggi di errore degli incantesimi"
+L["blockSpellErrorsDesc"] = "Messaggi tipo \"Questo incantesimo non è ancora pronto\" che in genere vengono mostrati in alto nello schermo verranno bloccati."
 L["bossBlock"] = "Blocco Boss"
 L["bossBlockDesc"] = "Configura le varie opzioni che puoi bloccare durante gli scontri con i boss."
 L["bossDefeatDurationPrint"] = "Sconfitto '%s' dopo %s."
@@ -44,8 +59,10 @@ L["closeProximityDesc"] = [=[Chiude il Monitor di Prossimità.
 Per disabilitarlo completamente per tutti gli incontri, devi andare nelle impostazioni dei singoli combattimenti e disabilitare l'opzione 'Prossimità]=]
 L["colors"] = "Colori"
 L["countDefeats"] = "Numero Uccisioni"
-L["countdown"] = "Conto alla Rovescia"
-L["countdownDesc"] = "Se un timer è maggiore di 5 secondi, un avviso vocale e un conto alla rovescia verrranno aggiunti negli ultimi 5 secondi. Immagina qualcuno che conta '5... 4... 3... 2... 1... ABILITÀ!' e dei grandi numeri in mezzo al tuo schermo."
+L["countdownAt"] = "Conto alla rovescia in... (secondi)"
+L["countdownColor"] = "Colore conto alla rovescia"
+L["countdownTest"] = "Test conto alla rovescia"
+L["countdownVoice"] = "Voce contro alla rovescia"
 L["countWipes"] = "Numero Fallimenti:"
 L["createTimeBar"] = "Mostra la barra 'Miglior Tempo'"
 L["customBarStarted"] = "Barra personalizzata '%s' creata da utente %s - %s."
@@ -59,8 +76,6 @@ L["disabledDisplayDesc"] = "Disattiva il monitor per tutti gli scontri che lo us
 L["disableDesc"] = "Disabilita in modo permanente l'abilità del boss che ha generato questa barra."
 L["displayTime"] = "Tempo di Visualizzazione"
 L["displayTimeDesc"] = "Per quanto tempo deve essere visualizzato il messaggio, in secondi"
-L["doubleSize"] = "Raddoppia la Dimensione"
-L["doubleSizeDesc"] = "Raddoppa la dimensione della barra e del messaggio"
 L["emphasize"] = "Enfatizza"
 L["emphasizeAt"] = "Enfatizza a... (secondi)"
 L["emphasized"] = "Enfatizzato"
@@ -113,6 +128,7 @@ L["normalMessages"] = "Messaggi Normali"
 L["outline"] = "Sottolineato"
 L["output"] = "Uscita"
 L["Personal"] = "Personale"
+L["positionDesc"] = "Scrivi nel riquadro o sposta l'indicatore se devi posizionare esattamente la barra dall'ancoraggio."
 L["positionExact"] = "Posizionamento Esatto"
 L["positionX"] = "Posizione X"
 L["positionY"] = "Posizione Y"
@@ -176,6 +192,8 @@ L["superEmphasizeDesc"] = [=[Aumenta la visualizzazione di un messaggio o di un 
 L["superEmphasizeDisableDesc"] = "Disabilita la Super Enfatizzazione per tutti i moduli che la usano."
 L["tempEmphasize"] = "SUPER ENFATIZZA temporaneamente la barra ed ogni messaggio associato alla sua durata."
 L["text"] = "Testo"
+L["textCountdown"] = "Testo conto alla rovescia"
+L["textCountdownDesc"] = "Mostra un conteggio visuale durante il conto alla rovescia."
 L["textShadow"] = "Ombra Testo"
 L["texture"] = "Texture"
 L["thick"] = "Spesso"
